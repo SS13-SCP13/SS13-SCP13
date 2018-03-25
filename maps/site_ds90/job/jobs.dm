@@ -45,7 +45,7 @@
 	access_sciencelvl4,
 	access_sciencelvl3,
 	access_sciencelvl2,
-	access_scienclvl1)
+	access_sciencelvl1)
 	minimal_access = list()
 
 
@@ -155,9 +155,7 @@
 	)
 
 
-	access = list(access_security, access_brig, access_maint_tunnels,
-						access_external_airlocks, access_emergency_storage,
-			            access_eva, access_sec_doors, access_solgov_crew)
+	access = list(access_mtflvl1)
 	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,

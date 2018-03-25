@@ -1,13 +1,13 @@
 /datum/map/torch
 	branch_types = list(
 		/datum/mil_branch/security,
-		/datum/mil_branch/mtf,
+//		/datum/mil_branch/mtf,
 		/datum/mil_branch/civilian
 	)
 
 	spawn_branch_types = list(
 		/datum/mil_branch/security,
-		/datum/mil_branch/mtf,
+//		/datum/mil_branch/mtf,
 		/datum/mil_branch/civilian
 	)
 
@@ -55,7 +55,7 @@
 	)
 
 	assistant_job = "Private"
-
+/*
 /datum/mil_branch/fleet
 	name = "Fleet"
 	name_short = "SCGF"
@@ -109,7 +109,7 @@
 		/datum/mil_rank/fleet/o4,
 		/datum/mil_rank/fleet/o5
 	)
-
+*/
 //	assistant_job = "Crewman"
 
 /datum/mil_branch/civilian
@@ -119,11 +119,11 @@
 
 	rank_types = list(
 		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/nt,
-		/datum/mil_rank/civ/contractor,
-		/datum/mil_rank/civ/offduty,
-		/datum/mil_rank/civ/marshal,
-		/datum/mil_rank/civ/synthetic
+		/datum/mil_rank/civ/scp,
+//		/datum/mil_rank/civ/contractor,
+//		/datum/mil_rank/civ/offduty,
+//		/datum/mil_rank/civ/marshal,
+//		/datum/mil_rank/civ/synthetic
 	)
 
 	spawn_rank_types = list(

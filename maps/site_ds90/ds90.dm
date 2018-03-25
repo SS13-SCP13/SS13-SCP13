@@ -1,20 +1,20 @@
 #if !defined(using_map_DATUM)
 
-	#include "torch_announcements.dm"
-	#include "torch_areas.dm"
+//	#include "torch_announcements.dm"
+	#include "../torch/torch_areas.dm"
 	#include "../site_ds90/ds90areas.dm"
 //	#include "torch_elevator.dm"
 	#include "../site_ds90/ds90elevators.dm"
-	#include "torch_holodecks.dm"
+//	#include "torch_holodecks.dm"
 //	#include "torch_overmap.dm"
 //	#include "torch_presets.dm"
 //	#include "torch_ranks.dm"
 	#include "../site_ds90/site_ds90_ranks.dm"
-	#include "torch_shuttles.dm"
+	#include "../torch/torch_shuttles.dm"
 //	#include "torch_unit_testing.dm"
 //	#include "torch_antagonism.dm"
-	#include "torch_npcs.dm"
-	#include "torch_security_state.dm"
+//	#include "torch_npcs.dm"
+//	#include "torch_security_state.dm"
 
 //	#include "datums/uniforms.dm"
 //	#include "datums/uniforms_expedition.dm"
@@ -49,17 +49,17 @@
 
 //	#include "structures/closets.dm"
 	#include "structures/signs.dm"
-	#include "structures/closets/command.dm"
-	#include "structures/closets/engineering.dm"
-	#include "structures/closets/medical.dm"
-	#include "structures/closets/misc.dm"
-	#include "structures/closets/research.dm"
+//	#include "structures/closets/command.dm"
+//	#include "structures/closets/engineering.dm"
+//	#include "structures/closets/medical.dm"
+//	#include "structures/closets/misc.dm"
+//	#include "structures/closets/research.dm"
 	#include "structures/closets/security.dm"
 	#include "structures/closets/services.dm"
 	#include "structures/closets/supply.dm"
-	#include "structures/closets/exploration.dm"*/
+//	#include "structures/closets/exploration.dm"*/
 
-	#include "loadout/_defines.dm"
+//	#include "loadout/_defines.dm"
 //	#include "loadout/loadout_accessories.dm"
 /*	#include "loadout/loadout_eyes.dm"
 	#include "loadout/loadout_gloves.dm"
@@ -68,7 +68,7 @@
 	#include "loadout/loadout_suit.dm"
 	#include "loadout/loadout_uniform.dm"
 	#include "loadout/loadout_xeno.dm"*/
-	#include "loadout/~defines.dm"
+//	#include "loadout/~defines.dm"
 
 	#include "../site_ds90/ds90-1.dmm"
 	#include "../site_ds90/ds90-2.dmm"
@@ -102,6 +102,6 @@
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn A map has already been included, ignoring Torch
+	#warn A map has already been included, ignoring Site DS90
 
 #endif
