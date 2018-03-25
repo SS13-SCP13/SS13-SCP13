@@ -26,6 +26,8 @@
 	if(.)
 		H.implant_loyalty(H)
 
+
+
 /datum/job/warden
 	title = "Warden"
 	department = "Security"

@@ -40,12 +40,9 @@
 	#include "items/clothing/solgov-suit.dm"
 	#include "items/clothing/solgov-under.dm"
 
-//	#include "job/access.dm"
-	#include "../site_ds90/job/access.dm"
-//	#include "job/jobs.dm"
-	#include "../site_ds90/job/jobs.dm"
-//	#include "job/outfits.dm"
-	#include "../site_ds90/job/outfits.dm"
+	#include "job/access.dm"
+	#include "job/jobs.dm"
+	#include "job/outfits.dm"
 
 //	#include "structures/closets.dm"
 	#include "structures/signs.dm"
@@ -98,7 +95,7 @@
 
 	#include "../../code/modules/lobby_music/Perdition.dm"
 
-	#define using_map_DATUM /datum/map/torch
+	#define using_map_DATUM /datum/map/ds90
 
 #elif !defined(MAP_OVERRIDE)
 
