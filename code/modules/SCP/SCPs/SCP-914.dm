@@ -1,0 +1,193 @@
+#define CLOCKMODE_ROUGH 1
+#define CLOCKMODE_COARSE 2
+#define CLOCKMODE_ONEONE 3
+#define CLOCKMODE_FINE 4
+#define CLOCKMODE_VERYFINE 5
+
+/* SCP 914 - Clockwork mechanism
+Put things into INTAKE booth, click on panel in the middle - take resulting product from OUTPUT booth
+TO ADD RECIPES:
+1. find an item you want to use.
+2. put following lists to item's definition:
+  rough = list(<list of items for that mode>)
+  (required) coarse = list(...)
+  (required) oneone = list(...)
+  (required) fine = list(...)
+  veryfine = list(...)
+You may use only one list, but then selected item would be transformed only on mode where corresponding list is defined.
+By default Rough/Very Fine will process item on Coarse/Fine twice, define coarse/veryfine lists to specify any desired transformation
+Proc /atom/scp914_act(var/mode) can be overriden to define any additional effects by your desire (for example, transfer mind from initial mob to processed one)
+*/
+/datum/scp/SCP_914
+  name = "SCP-914"
+  designation = "914"
+  classification = SAFE
+
+/obj/machinery/scp914
+  name = "clockwork machine"
+  desc = "Strange machinery with a lot of screw drives, belts, pulleys, gears, springs and other clockwork."
+  icon = 'icons/obj/scp914.dmi'
+  icon_state = "main"
+  var/switch_state = "switch-3"
+  anchored = 1
+  density = 1
+  var/obj/machinery/scp914/in/intake
+  var/obj/machinery/scp914/out/output
+  var/mode = CLOCKMODE_ONEONE
+  var/processing = FALSE
+  SCP = /datum/scp/SCP_914
+
+/obj/machinery/scp914/New()
+  input = new /obj/scp914/in(loc(x,y-1,z))
+  output = new /obj/scp914/out(loc(x,y+1,z))
+  change_switch_icon()
+
+/obj/machinery/scp914/switch_mode(var/switching_mode) //0 is counter-clockwise, 1 is clockwise
+  if(!switching_mode)
+    if(mode =< CLOCKMODE_ROUGH)
+      mode = CLOCKMODE_VERYFINE
+    else
+      mode--
+  else
+    if(mode => CLOCKMODE_VERYFINE)
+      mode = CLOCKMODE_ROUGH
+    else
+      mode++
+  change_switch_icon()
+
+/obj/machinery/scp914/change_switch_icon()
+  var/switch_state = "switch-[mode]"
+  overlays.Cut()
+  var/I = image(icon, switch_state)
+  overlays += I
+
+/obj/machinery/scp914/CtrlClick(var/mob/user)
+  decrease_mode(user)
+
+/obj/machinery/scp914/decrease_mode(var/mob/user)
+  switch_mode(FALSE)
+  user.visible_message("[user] turned knob counter-clockwise, switching mode to [get_mode()]", "You switched mode to [get_mode()]")
+
+/obj/machinery/scp914/AltClick(var/mob/user)
+  increase_mode(user)
+
+/obj/machinery/scp914/decrease_mode(var/mob/user)
+  switch_mode(TRUE)
+  user.visible_message("[user] turned knob clockwise, switching mode to [get_mode()]", "You switched mode to [get_mode()]")
+
+/obj/machinery/scp914/get_mode()
+  var/text = "NONE"
+  switch(mode)
+    if(CLOCKMODE_ROUGH)
+      text = "Rough"
+    if(CLOCKMODE_COARSE)
+      text = "Coarse"
+    if(CLOCKMODE_ONEONE)
+      text = "1:1"
+    if(CLOCKMODE_FINE)
+      text = "Fine"
+    if(CLOCKMODE_VERYFINE)
+      text = "Very Fine"
+  return text
+
+/obj/machinery/scp914/get_timer()
+  var/timer = 0
+  switch(mode)
+    if(CLOCKMODE_ROUGH && CLOCKMODE_VERYFINE)
+      timer = 60
+    if(CLOCKMODE_COARSE && CLOCKMODE_FINE)
+      timer = 30
+    if(CLOCKMODE_ONEONE)
+      timer = 15
+  return timer
+
+/obj/machinery/scp914/attack_hand(mob/user)
+  if(processing)
+    to_chat(user, "It's no use - machine is processing right now!")
+    return
+  start_processsing()
+
+/obj/machinery/scp914/start_processsing()
+  intake.close()
+  output.close()
+  var/time = get_timer()
+  sleep(time)
+  finish_processing()
+
+/obj/machinery/scp914/finish_processing()
+  for(var/atom/A in intake)
+    if(istype(A, /obj/machinery/scp914in))
+      continue
+    A.forceMove(output.loc)
+    var/obj/product = A.scp914_act(mode)
+    if(product)
+      product.forceMove(output.loc)
+      qdel(A)
+
+  intake.open()
+  output.open()
+
+/obj/machinery/scp914/ex_act(severity)
+  return
+
+/obj/machinery/scp914/emp_act(severity)
+  return
+
+/obj/machinery/scp914/emag_act(var/remaining_charges, var/mob/user, var/emag_source, var/visual_feedback = "", var/audible_feedback = "")
+  return
+
+/obj/machinery/scp914/bullet_act(var/obj/item/projectile/Proj)
+  return
+
+//Copper booth - functionally similar to lockers
+//You can't interact with them directly - only via panel
+
+/obj/structure/closet/scp914/ex_act(severity)
+  return
+
+/obj/structure/closet/scp914/emp_act(severity)
+  return
+
+/obj/structure/closet/scp914/emag_act(var/remaining_charges, var/mob/user, var/emag_source, var/visual_feedback = "", var/audible_feedback = "")
+  return
+
+/obj/structure/closet/scp914/bullet_act(var/obj/item/projectile/Proj)
+  return
+
+/obj/structure/closet/scp914/attackby(obj/item/weapon/W as obj, mob/user as mob)
+  return
+
+/obj/structure/closet/scp914/toggle(mob/user as mob)
+  return
+
+/obj/structure/closet/scp914/attack_ai(mob/user)
+	return
+
+/obj/structure/closet/scp914/relaymove(mob/user as mob)
+	return
+
+/obj/structure/closet/scp914/attack_hand(mob/user as mob)
+	return
+
+/obj/structure/closet/scp914/attack_self_tk(mob/user as mob)
+	return
+
+/obj/structure/closet/scp914/attack_ghost(mob/ghost)
+	return
+
+/obj/structure/closet/scp914/attack_generic(var/mob/user, var/damage, var/attack_message = "destroys", var/wallbreaker)
+  return
+
+/obj/structure/closet/scp914/mob_breakout(var/mob/living/escapee)
+  to_chat(escapee, "Looks like you can't break out from this place...")
+  return
+
+/obj/machinery/closet/scp914/in
+  name = "intake booth"
+  desc = "Large copper booth labeled INTAKE."
+  icon = 'icons/obj/scp914.dmi'
+
+/obj/machinery/closet/scp914/out
+  name = "output booth"
+  desc = "Large copper booth labeled OUTPUT."
+  icon = 'icons/obj/scp914.dmi'

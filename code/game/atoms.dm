@@ -12,6 +12,14 @@
 	var/fluorescent // Shows up under a UV light.
 	var/datum/scp/SCP //For SCP's
 
+	var/list/rough
+	var/list/coarse
+	var/list/oneone
+	var/list/fine
+	var/list/veryfine
+
+	var/list/modes_914 = list(rough, coarse, oneone, fine, veryfine)
+
 	///Chemistry.
 	var/datum/reagents/reagents = null
 
@@ -291,6 +299,15 @@ its easier to just keep the beam vertical.
 	return NO_EMAG_ACT
 
 /atom/proc/fire_act()
+	return
+
+/atom/proc/scp914_act(var/mode)
+	var/list/chosen_mode = modes_914[mode]
+	if(chosen_mode)
+		var/chosen = pick(chosen_mode)
+		var/obj/chosen_obj = new chosen(loc)
+		if(chosen_obj)
+			return chosen_obj
 	return
 
 /atom/proc/melt()

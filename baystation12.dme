@@ -2221,6 +2221,7 @@
 #include "code\modules\research\stock_parts.dm"
 #include "code\modules\SCP\scp.dm"
 #include "code\modules\SCP\SCPs\SCP-113.dm"
+#include "code\modules\SCP\SCPs\SCP-914.dm"
 #include "code\modules\scripting\Errors.dm"
 #include "code\modules\scripting\IDE.dm"
 #include "code\modules\scripting\Options.dm"
