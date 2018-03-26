@@ -133,13 +133,13 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/o6
+		/datum/mil_rank/security/o3
 	)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
 	minimal_access = list()
 
-/datum/job/securityprivate
+/datum/job/enlistedofficer
 	title = "Security Private"
 	department = "Security"
 	department_flag = SEC
@@ -147,6 +147,7 @@
 	spawn_positions = 6
 	supervisors = "the Chief of Security"
 	economic_modifier = 4
+	alt_titles = list("Junior Agent")
 	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
@@ -459,31 +460,20 @@
 	title = "Brig Officer"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Chief of Security"
+	supervisors = "the Security Commander"
 	economic_modifier = 5
 	minimal_player_age = 14
 	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/security/brig_officer
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/security/brig_officer/fleet
+		/datum/mil_rank/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e8,
-		/datum/mil_rank/ec/e7,
-		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e5
+		/datum/mil_rank/security/e5
 	)
 
-	access = list(access_security, access_brig, access_armory, access_forensics_lockers,
-			            access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_eva, access_sec_doors, access_solgov_crew, access_gun)
+	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
-							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/detective
 	title = "Forensic Technician"

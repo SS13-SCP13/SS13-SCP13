@@ -236,14 +236,13 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 /decl/hierarchy/outfit/job/torch/crew/security/New()
 	..()
 	BACKPACK_OVERRIDE_SECURITY
-
+*/
 /decl/hierarchy/outfit/job/torch/crew/security/brig_officer
 	name = OUTFIT_JOB_NAME("Brig Officer")
-	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/security
+	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/torch/crew/security/brigofficer
-	pda_type = /obj/item/device/pda/warden
-
+//	id_type = /obj/item/weapon/card/id/torch/crew/security/brigofficer
+/*
 /decl/hierarchy/outfit/job/torch/crew/security/brig_officer/fleet
 	name = OUTFIT_JOB_NAME("Brig Officer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
