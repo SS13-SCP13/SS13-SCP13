@@ -1,4 +1,4 @@
-/datum/map/torch
+/datum/map/ds90
 	branch_types = list(
 		/datum/mil_branch/security,
 		/datum/mil_branch/civilian
@@ -17,7 +17,7 @@
 
 /datum/mil_branch/security
 	name = "Site DS90 Security Branch"
-	name_short = "SD90SB"
+	name_short = "DS90SB"
 	email_domain = "security.siteds90.foundation"
 
 	rank_types = list(
