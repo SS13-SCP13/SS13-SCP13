@@ -181,7 +181,7 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e3
+		/datum/mil_rank/security/e4
 	)
 
 
