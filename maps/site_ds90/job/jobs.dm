@@ -164,6 +164,30 @@
 	access = list(access_mtflvl1)
 	minimal_access = list()
 
+/datum/job/corporalofficer
+	title = "Security Corporal"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Chief of Security"
+	economic_modifier = 4
+	alt_titles = list("Agent")
+	minimal_player_age = 5
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/site90/crew/security/enlistedofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e3
+	)
+
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
 
 
 /*

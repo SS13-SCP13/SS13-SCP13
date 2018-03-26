@@ -128,6 +128,12 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 //	id_type = /obj/item/weapon/card/id/torch/crew/security
+
+/decl/hierarchy/outfit/site90/crew/security/corporalofficer
+	name = OUTFIT_JOB_NAME("Security Corporal")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+//	id_type = /obj/item/weapon/card/id/torch/crew/security
 /*
 /decl/hierarchy/outfit/job/torch/crew/command/cos/fleet
 	name = OUTFIT_JOB_NAME("Chief of Security - Fleet")
