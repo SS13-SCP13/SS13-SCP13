@@ -90,3 +90,19 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
+
+/datum/job/corporalofficer
+	title = "Security Corporal"
+	department = "Security"
+	department_flag = SEC
+	alt_titles = list("Agent")
+
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Security Commander"
+	selection_color = "#601c1c"
+	economic_modifier = 4
+	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
+	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
+	minimal_player_age = 7
+	outfit_type = /decl/hierarchy/outfit/job/security/officer
