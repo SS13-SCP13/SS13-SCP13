@@ -20,3 +20,11 @@ __pycache__
 config/
 !config/*/
 sql/test_db
+config/access levels.txt
+config/admin_ranks.txt
+config/config.txt
+config/away_site_blacklist.txt
+config/dbconfig_docker.txt
+config/dbconfig.txt
+config/custom_sprites.txt
+config/custom_items.txt
