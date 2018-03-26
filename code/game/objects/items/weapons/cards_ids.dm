@@ -327,7 +327,7 @@ var/const/NO_EMAG_ACT = -50
 	desc = "A card which represents care and compassion."
 	icon_state = "medGold"
 	job_access_type = /datum/job/cmo
-
+/*
 /obj/item/weapon/card/id/security
 	name = "identification card"
 	desc = "A card issued to security staff."
@@ -339,7 +339,7 @@ var/const/NO_EMAG_ACT = -50
 
 /obj/item/weapon/card/id/security/detective
 	job_access_type = /datum/job/detective
-
+*/
 /obj/item/weapon/card/id/security/head
 	name = "identification card"
 	desc = "A card which represents honor and protection."

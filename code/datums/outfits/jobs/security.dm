@@ -17,7 +17,7 @@
 	id_type = /obj/item/weapon/card/id/security/head
 	pda_type = /obj/item/device/pda/heads/hos
 	backpack_contents = list(/obj/item/weapon/handcuffs = 1)
-
+/*
 /decl/hierarchy/outfit/job/security/warden
 	name = OUTFIT_JOB_NAME("Warden")
 	uniform = /obj/item/clothing/under/rank/warden
@@ -40,7 +40,7 @@
 /decl/hierarchy/outfit/job/security/detective/New()
 	..()
 	backpack_overrides.Cut()
-
+*/
 /decl/hierarchy/outfit/job/security/detective/forensic
 	name = OUTFIT_JOB_NAME("Forensic technician")
 	head = null

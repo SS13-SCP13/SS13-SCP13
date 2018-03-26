@@ -14,7 +14,7 @@
 	display_name = "webbing, security"
 	path = /obj/item/clothing/accessory/storage/black_vest
 	cost = 3
-	allowed_roles = list(/datum/job/hos, /datum/job/warden, /datum/job/detective, /datum/job/officer)
+	allowed_roles = list(/datum/job/hos)
 
 /datum/gear/storage/white_vest
 	display_name = "webbing, medical"
@@ -33,7 +33,7 @@
 	display_name = "drop pouches, security"
 	path = /obj/item/clothing/accessory/storage/drop_pouches/black
 	cost = 3
-	allowed_roles = list(/datum/job/hos, /datum/job/warden, /datum/job/detective, /datum/job/officer)
+	allowed_roles = list(/datum/job/hos)
 
 /datum/gear/storage/white_drop_pouches
 	display_name = "drop pouches, medical"

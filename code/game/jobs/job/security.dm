@@ -27,7 +27,7 @@
 		H.implant_loyalty(H)
 
 
-
+/*
 /datum/job/warden
 	title = "Warden"
 	department = "Security"
@@ -74,11 +74,12 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
-
+*/
 /datum/job/enlistedofficer
 	title = "Security Private"
 	department = "Security"
 	department_flag = SEC
+	alt_titles = list("Junior Agent")
 
 	total_positions = 6
 	spawn_positions = 6
