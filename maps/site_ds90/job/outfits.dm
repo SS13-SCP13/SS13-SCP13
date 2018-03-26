@@ -123,7 +123,7 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	BACKPACK_OVERRIDE_SECURITY
 
 
-/decl/hierarchy/outfit/site90/torch/crew/security/enlistedofficer
+/decl/hierarchy/outfit/site90/crew/security/enlistedofficer
 	name = OUTFIT_JOB_NAME("Security Private")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
