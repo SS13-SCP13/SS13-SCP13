@@ -116,24 +116,22 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	l_ear = /obj/item/device/radio/headset/heads/cos
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-//	id_type = /obj/item/weapon/card/id/torch/silver/security
+	id_type = /obj/item/weapon/card/id/seclvl5
 
-/decl/hierarchy/outfit/job/site90/crew/command/cos/New()
-	..()
-	BACKPACK_OVERRIDE_SECURITY
-
+/decl/hierarchy/outfit/site90/crew/security/corporalofficer
+	name = OUTFIT_JOB_NAME("Security Corporal")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	l_ear = /obj/item/device/radio/headset/heads/cos
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl1
 
 /decl/hierarchy/outfit/site90/crew/security/enlistedofficer
 	name = OUTFIT_JOB_NAME("Security Private")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-//	id_type = /obj/item/weapon/card/id/torch/crew/security
+	id_type = /obj/item/weapon/card/id/seclvl1
 
-/decl/hierarchy/outfit/site90/crew/security/corporalofficer
-	name = OUTFIT_JOB_NAME("Security Corporal")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
-	shoes = /obj/item/clothing/shoes/dutyboots
-//	id_type = /obj/item/weapon/card/id/torch/crew/security
+
 /*
 /decl/hierarchy/outfit/job/torch/crew/command/cos/fleet
 	name = OUTFIT_JOB_NAME("Chief of Security - Fleet")

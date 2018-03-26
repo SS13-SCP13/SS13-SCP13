@@ -30,7 +30,7 @@
 	access = get_all_station_access()
 	..()
 
-
+/*
 // SolGov Crew and Contractors
 /obj/item/weapon/card/id/torch/crew
 	desc = "An identification card issued to SolGov crewmembers aboard the SEV Torch."
@@ -180,7 +180,7 @@
 	desc = "An identification card issued to personnel aboard the SEV Torch. Looks like the photo fell off this one."
 	icon_state = "id"
 	job_access_type = /datum/job/crew
-
+*/
 /obj/item/weapon/card/id/torch/stowaway/New()
 	..()
 	var/species = SPECIES_HUMAN
@@ -201,3 +201,23 @@
 	icon_state = "gold"
 	item_state = "gold_id"
 	job_access_type = /datum/job/captain
+/*
+***************
+***SCP CARDS***
+***************
+*/
+// SECURITY
+/obj/item/weapon/card/id/seclvl1
+	name = "level one security keycard"
+	desc = "A light blue card. Seems almost as unimportant as the person itself."
+	icon_state = "securitylvl1"
+	item_state = "Sec_ID1"
+	job_access_type = /datum/job/enlistedofficer
+
+
+/obj/item/weapon/card/id/seclvl5
+	name = "level five security keycard"
+	desc = "A dark purple keycard. Looks important."
+	icon_state = "securitylvl5"
+	item_state = "Sec_ID5"
+	job_access_type = /datum/job/hos
