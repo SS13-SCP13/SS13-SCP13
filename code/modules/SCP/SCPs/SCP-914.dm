@@ -28,34 +28,36 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   desc = "Strange machinery with a lot of screw drives, belts, pulleys, gears, springs and other clockwork."
   icon = 'icons/obj/scp914.dmi'
   icon_state = "main"
-  var/switch_state = "switch-3"
+  var/switch_state = "switch-1"
   anchored = 1
   density = 1
-  var/obj/machinery/scp914/in/intake
-  var/obj/machinery/scp914/out/output
-  var/mode = CLOCKMODE_ONEONE
+  var/obj/structure/closet/scp914/int/intake
+  var/obj/structure/closet/scp914/out/outputter
+  var/mode = CLOCKMODE_ROUGH
   var/processing = FALSE
   SCP = /datum/scp/SCP_914
 
 /obj/machinery/scp914/New()
-  input = new /obj/scp914/in(loc(x,y-1,z))
-  output = new /obj/scp914/out(loc(x,y+1,z))
+  var/intake_loc = locate(x-1,y,z)
+  var/output_loc = locate(x+4,y,z)
+  intake = new /obj/structure/closet/scp914/int(intake_loc)
+  outputter = new /obj/structure/closet/scp914/out(output_loc)
   change_switch_icon()
 
-/obj/machinery/scp914/switch_mode(var/switching_mode) //0 is counter-clockwise, 1 is clockwise
+/obj/machinery/scp914/proc/switch_mode(var/switching_mode) //0 is counter-clockwise, 1 is clockwise
   if(!switching_mode)
-    if(mode =< CLOCKMODE_ROUGH)
+    if(mode <= CLOCKMODE_ROUGH)
       mode = CLOCKMODE_VERYFINE
     else
       mode--
   else
-    if(mode => CLOCKMODE_VERYFINE)
+    if(mode >= CLOCKMODE_VERYFINE)
       mode = CLOCKMODE_ROUGH
     else
       mode++
   change_switch_icon()
 
-/obj/machinery/scp914/change_switch_icon()
+/obj/machinery/scp914/proc/change_switch_icon()
   var/switch_state = "switch-[mode]"
   overlays.Cut()
   var/I = image(icon, switch_state)
@@ -64,18 +66,18 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
 /obj/machinery/scp914/CtrlClick(var/mob/user)
   decrease_mode(user)
 
-/obj/machinery/scp914/decrease_mode(var/mob/user)
+/obj/machinery/scp914/proc/decrease_mode(var/mob/user)
   switch_mode(FALSE)
   user.visible_message("[user] turned knob counter-clockwise, switching mode to [get_mode()]", "You switched mode to [get_mode()]")
 
 /obj/machinery/scp914/AltClick(var/mob/user)
   increase_mode(user)
 
-/obj/machinery/scp914/decrease_mode(var/mob/user)
+/obj/machinery/scp914/proc/increase_mode(var/mob/user)
   switch_mode(TRUE)
   user.visible_message("[user] turned knob clockwise, switching mode to [get_mode()]", "You switched mode to [get_mode()]")
 
-/obj/machinery/scp914/get_mode()
+/obj/machinery/scp914/proc/get_mode()
   var/text = "NONE"
   switch(mode)
     if(CLOCKMODE_ROUGH)
@@ -90,15 +92,15 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
       text = "Very Fine"
   return text
 
-/obj/machinery/scp914/get_timer()
+/obj/machinery/scp914/proc/get_timer()
   var/timer = 0
   switch(mode)
     if(CLOCKMODE_ROUGH && CLOCKMODE_VERYFINE)
-      timer = 60
+      timer = 600
     if(CLOCKMODE_COARSE && CLOCKMODE_FINE)
-      timer = 30
+      timer = 300
     if(CLOCKMODE_ONEONE)
-      timer = 15
+      timer = 150
   return timer
 
 /obj/machinery/scp914/attack_hand(mob/user)
@@ -107,25 +109,25 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
     return
   start_processsing()
 
-/obj/machinery/scp914/start_processsing()
+/obj/machinery/scp914/proc/start_processsing()
   intake.close()
-  output.close()
+  outputter.close()
   var/time = get_timer()
   sleep(time)
   finish_processing()
 
-/obj/machinery/scp914/finish_processing()
-  for(var/atom/A in intake)
-    if(istype(A, /obj/machinery/scp914in))
+/obj/machinery/scp914/proc/finish_processing()
+  for(var/atom/movable/AM in intake)
+    if(istype(AM, /obj/structure/closet/scp914/int))
       continue
-    A.forceMove(output.loc)
-    var/obj/product = A.scp914_act(mode)
+    AM.forceMove(outputter.loc)
+    var/obj/product = AM.scp914_act(mode)
     if(product)
-      product.forceMove(output.loc)
-      qdel(A)
+      product.forceMove(outputter.loc)
+      qdel(AM)
 
   intake.open()
-  output.open()
+  outputter.open()
 
 /obj/machinery/scp914/ex_act(severity)
   return
@@ -182,12 +184,24 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   to_chat(escapee, "Looks like you can't break out from this place...")
   return
 
-/obj/machinery/closet/scp914/in
+/obj/structure/closet/scp914/int
   name = "intake booth"
   desc = "Large copper booth labeled INTAKE."
-  icon = 'icons/obj/scp914.dmi'
+  icon = 'icons/obj/scp914booth.dmi'
+  icon_state = "intakeopen"
+  icon_closed = "intake"
+  icon_opened = "intakeopen"
 
-/obj/machinery/closet/scp914/out
+/obj/structure/closet/scp914/int/Initialize()
+  open()
+
+/obj/structure/closet/scp914/out
   name = "output booth"
   desc = "Large copper booth labeled OUTPUT."
-  icon = 'icons/obj/scp914.dmi'
+  icon = 'icons/obj/scp914booth.dmi'
+  icon_state = "outputopen"
+  icon_closed = "output"
+  icon_opened = "outputopen"
+
+/obj/structure/closet/scp914/out/Initialize()
+  open()

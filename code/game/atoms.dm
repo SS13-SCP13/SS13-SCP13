@@ -18,7 +18,7 @@
 	var/list/fine
 	var/list/veryfine
 
-	var/list/modes_914 = list(rough, coarse, oneone, fine, veryfine)
+	var/list/modes_914
 
 	///Chemistry.
 	var/datum/reagents/reagents = null
@@ -53,7 +53,7 @@
 
 	if(opacity)
 		updateVisibility(src)
-
+	modes_914 = list(rough, coarse, oneone, fine, veryfine)
 //Called after New if the map is being loaded. mapload = TRUE
 //Called from base of New if the map is not being loaded. mapload = FALSE
 //This base must be called or derivatives must set initialized to TRUE
@@ -305,7 +305,7 @@ its easier to just keep the beam vertical.
 	var/list/chosen_mode = modes_914[mode]
 	if(chosen_mode)
 		var/chosen = pick(chosen_mode)
-		var/obj/chosen_obj = new chosen(loc)
+		var/atom/chosen_obj = new chosen(loc)
 		if(chosen_obj)
 			return chosen_obj
 	return
