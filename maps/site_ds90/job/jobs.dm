@@ -123,6 +123,8 @@
 /datum/job/hos
 	title = "Security Commander"
 	supervisors = "The Facility Director"
+	department = "Security"
+	department_flag = SEC|COM
 	economic_modifier = 8
 	minimal_player_age = 21
 	ideal_character_age = 35
@@ -137,13 +139,15 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
 	minimal_access = list()
 
-/datum/job/enlistedofficer
+/datum/job/securityprivate
 	title = "Security Private"
+	department = "Security"
+	department_flag = SEC
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "the Chief of Security"
 	economic_modifier = 4
-	minimal_player_age = 10
+	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/site90/torch/crew/security/enlistedofficer
@@ -151,15 +155,13 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
+		/datum/mil_rank/security/e1,
 		/datum/mil_rank/security/e2
 	)
 
 
 	access = list(access_mtflvl1)
 	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
-							 /datum/computer_file/program/camera_monitor)
 
 
 

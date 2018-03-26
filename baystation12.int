@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1521922805
-DIR: code code\game code\game\area code\game\jobs code\game\objects code\game\objects\items code\game\objects\items\weapons code\game\objects\items\weapons\storage code\game\turfs code\game\turfs\simulated code\modules code\modules\library code\modules\modular_computers maps maps\site_ds90 maps\site_ds90\structures maps\site_ds90\structures\closets maps\torch 
+LAST_COMPILE_TIME: 1522007044
+DIR: code code\game code\game\antagonist code\game\antagonist\station code\game\area code\game\jobs code\game\jobs\job code\game\objects code\game\objects\items code\game\objects\items\weapons code\game\objects\items\weapons\storage code\game\turfs maps maps\site_ds90 maps\site_ds90\structures maps\site_ds90\structures\closets 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1411
-WINDOW: maps\site_ds90\structures\closets\security.dm;maps\site_ds90\ds90areas.dm;maps\site_ds90\ds90.dm;maps\site_ds90\..\site_ds90\site_ds90_ranks.dm;code\game\jobs\access_datum.dm;maps\site_ds90\..\site_ds90\job\jobs.dm;maps\site_ds90\ds90-1.dmm;maps\torch\torch_shuttles.dm;maps\site_ds90\ds90-8.dmm;maps\site_ds90\ds90-2.dmm
-FILE: maps\site_ds90\ds90-8.dmm
+WINDOW: maps\site_ds90\structures\closets\security.dm;maps\site_ds90\ds90areas.dm;maps\site_ds90\ds90.dm;maps\site_ds90\..\site_ds90\site_ds90_ranks.dm;code\game\jobs\access_datum.dm;maps\site_ds90\..\site_ds90\job\jobs.dm;maps\site_ds90\ds90-1.dmm;maps\site_ds90\ds90-2.dmm;maps\site_ds90\site_ds90_ranks.dm;maps\site_ds90\ds90_define.dm;maps\site_ds90\ds90elevators.dm
+FILE: maps\site_ds90\site_ds90_ranks.dm
 */
 // END_INTERNALS

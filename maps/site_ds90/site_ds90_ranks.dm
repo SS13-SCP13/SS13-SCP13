@@ -1,13 +1,11 @@
-/datum/map/torch
+/datum/map/ds90
 	branch_types = list(
 		/datum/mil_branch/security,
-//		/datum/mil_branch/mtf,
 		/datum/mil_branch/civilian
 	)
 
 	spawn_branch_types = list(
 		/datum/mil_branch/security,
-//		/datum/mil_branch/mtf,
 		/datum/mil_branch/civilian
 	)
 
@@ -19,7 +17,7 @@
 
 /datum/mil_branch/security
 	name = "Site DS90 Security Branch"
-	name_short = "SD90SB"
+	name_short = "DS90SB"
 	email_domain = "security.siteds90.foundation"
 
 	rank_types = list(
@@ -55,61 +53,7 @@
 	)
 
 	assistant_job = "Private"
-/*
-/datum/mil_branch/fleet
-	name = "Fleet"
-	name_short = "SCGF"
-	email_domain = "torch.fleet.mil"
 
-	rank_types = list(
-		/datum/mil_rank/fleet/e1,
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8,
-		/datum/mil_rank/fleet/e9,
-		/datum/mil_rank/fleet/e9_alt1,
-		/datum/mil_rank/fleet/e9_alt2,
-		/datum/mil_rank/fleet/e9_alt3,
-		/datum/mil_rank/fleet/e9_alt4,
-		/datum/mil_rank/fleet/w1,
-		/datum/mil_rank/fleet/w2,
-		/datum/mil_rank/fleet/w3,
-		/datum/mil_rank/fleet/w4,
-		/datum/mil_rank/fleet/w5,
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5,
-		/datum/mil_rank/fleet/o6,
-		/datum/mil_rank/fleet/o7,
-		/datum/mil_rank/fleet/o8,
-		/datum/mil_rank/fleet/o9,
-		/datum/mil_rank/fleet/o10,
-		/datum/mil_rank/fleet/o10_alt
-	)
-
-	spawn_rank_types = list(
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8,
-		/datum/mil_rank/fleet/e9,
-		/datum/mil_rank/fleet/e9_alt1,
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5
-	)
-*/
 //	assistant_job = "Crewman"
 
 /datum/mil_branch/civilian
@@ -119,20 +63,12 @@
 
 	rank_types = list(
 		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/scp,
-//		/datum/mil_rank/civ/contractor,
-//		/datum/mil_rank/civ/offduty,
-//		/datum/mil_rank/civ/marshal,
-//		/datum/mil_rank/civ/synthetic
+		/datum/mil_rank/civ/scp
 	)
 
 	spawn_rank_types = list(
 		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/scp,
-/*		/datum/mil_rank/civ/contractor,
-		/datum/mil_rank/civ/offduty,
-		/datum/mil_rank/civ/marshal,
-		/datum/mil_rank/civ/synthetic*/
+		/datum/mil_rank/civ/scp
 	)
 
 //	assistant_job = "Passenger"
@@ -145,8 +81,8 @@
 		return "E[sort_order]"
 	return "O[sort_order - 10]"
 /*
- *  Fleet
- *  =====
+ *  Security
+ *  ========
  */
 
 /datum/mil_rank/security/e1
@@ -376,17 +312,3 @@
 
 /datum/mil_rank/civ/scp
 	name = "Foundation Employee"
-/*
-/datum/mil_rank/civ/contractor
-	name = "Contractor"
-
-/datum/mil_rank/civ/offduty
-	name = "Off-Duty Personnel"
-
-/datum/mil_rank/civ/marshal
-	name = "Colonial Marshal"
-	name_short = "CMar"
-	accessory = list(/obj/item/clothing/accessory/badge/marshal)
-
-/datum/mil_rank/civ/synthetic
-	name = "Synthetic"*/

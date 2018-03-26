@@ -223,6 +223,23 @@
 							 /datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
+/datum/job/enlistedofficer
+	title = "Security Private"
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Chief of Security"
+	economic_modifier = 4
+	minimal_player_age = 10
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/site90/torch/crew/security/enlistedofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e2
+	)
+
 /datum/job/liaison
 	title = "NanoTrasen Liaison"
 	department = "Support"
