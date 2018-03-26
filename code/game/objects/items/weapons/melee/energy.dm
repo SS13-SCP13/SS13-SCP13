@@ -6,6 +6,8 @@
 	edge = 0
 	armor_penetration = 50
 	atom_flags = ATOM_FLAG_NO_BLOOD
+	var/soundon = 'sound/weapons/saberon.ogg'
+	var/soundoff = 'sound/weapons/saberoff.ogg'
 
 /obj/item/weapon/melee/energy/proc/activate(mob/living/user)
 	anchored = 1
@@ -17,13 +19,13 @@
 	sharp = 1
 	edge = 1
 	slot_flags |= SLOT_DENYPOCKET
-	playsound(user, 'sound/weapons/saberon.ogg', 50, 1)
+	playsound(user, soundon, 50, 1)
 
 /obj/item/weapon/melee/energy/proc/deactivate(mob/living/user)
 	anchored = 0
 	if(!active)
 		return
-	playsound(user, 'sound/weapons/saberoff.ogg', 50, 1)
+	playsound(user, soundoff, 50, 1)
 	active = 0
 	force = initial(force)
 	throwforce = initial(throwforce)
@@ -172,6 +174,42 @@
 /obj/item/weapon/melee/energy/sword/bogswrd/activate(mob/living/user)
 	..()
 	icon_state = "bog_sword"
+
+/obj/item/weapon/melee/energy/breach
+	name = "breaching saw"
+	desc = "A squeeze-trigger breaching saw."
+	icon_state = "saw0"
+	active_force = 65 //this thing will fuck you up
+	active_throwforce = 35
+	force = 35
+	throwforce = 20
+	throw_speed = 1
+	throw_range = 5
+	soundon = 'sound/weapons/revon.ogg'
+	soundoff = 'sound/weapons/revoff.ogg'
+	hitsound = 'sound/weapons/sawhit.ogg'
+	w_class = ITEM_SIZE_HUGE
+	//atom_flags = ATOM_FLAG_NO_BLOOD
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+	origin_tech = list(TECH_MAGNET = 3, TECH_COMBAT = 4)
+	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
+	sharp = 1
+	edge = 1
+
+/obj/item/weapon/melee/energy/breach/activate(mob/living/user)
+	..()
+	icon_state = "saw1"
+	to_chat(user, "<span class='notice'>\The [src] is now on.</span>")
+
+/obj/item/weapon/melee/energy/breach/deactivate(mob/living/user)
+	..()
+	icon_state = initial(icon_state)
+	to_chat(user, "<span class='notice'>\The [src] is turned off.</span>")
+
+/obj/item/weapon/melee/energy/breach/dropped(var/mob/user)
+	..()
+	if(!istype(loc,/mob))
+		deactivate(user)
 
 
 /*
