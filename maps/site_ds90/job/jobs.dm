@@ -151,7 +151,7 @@
 	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/site90/torch/crew/security/enlistedofficer
+	outfit_type = /decl/hierarchy/outfit/site90/crew/security/enlistedofficer
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -176,7 +176,7 @@
 	minimal_player_age = 5
 	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/site90/crew/security/enlistedofficer
+	outfit_type = /decl/hierarchy/outfit/site90/crew/security/corporalofficer
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)

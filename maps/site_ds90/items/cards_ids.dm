@@ -195,3 +195,9 @@
 	dna_hash = md5(fingerprint_hash)
 	blood_type = RANDOM_BLOOD_TYPE
 	update_name()
+
+/obj/item/weapon/card/id/scp13/
+	desc = "A golden identification card belonging to the Commanding Officer."
+	icon_state = "gold"
+	item_state = "gold_id"
+	job_access_type = /datum/job/captain
