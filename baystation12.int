@@ -5,7 +5,5 @@ DIR: code code\__defines code\datums code\datums\outfits code\datums\outfits\job
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 512.1416
-WINDOW: maps\site_ds90\job\jobs.dm
-FILE: maps\site_ds90\job\jobs.dm
 */
 // END_INTERNALS
