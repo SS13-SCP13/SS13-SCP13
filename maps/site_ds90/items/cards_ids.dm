@@ -214,6 +214,12 @@
 	item_state = "Sec_ID1"
 	job_access_type = /datum/job/enlistedofficer
 
+/obj/item/weapon/card/id/seclvl2
+	name = "level five security keycard"
+	desc = "A dark purple keycard. Looks important."
+	icon_state = "securitylvl2"
+	item_state = "Sec_ID2"
+	job_access_type = /decl/hierarchy/outfit/job/site90/crew/security/corporalofficer
 
 /obj/item/weapon/card/id/seclvl5
 	name = "level five security keycard"

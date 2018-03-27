@@ -123,7 +123,7 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	l_ear = /obj/item/device/radio/headset/heads/cos
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl1
+	id_type = /obj/item/weapon/card/id/seclvl2
 
 /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
 	name = OUTFIT_JOB_NAME("Security Private")
