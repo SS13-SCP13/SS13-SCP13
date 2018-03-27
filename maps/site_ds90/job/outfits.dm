@@ -118,6 +118,12 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl5
 
+/decl/hierarchy/outfit/job/site90/crew/security/ltofficer
+	name = OUTFIT_JOB_NAME("Brig Officer")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl4
+
 /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
 	name = OUTFIT_JOB_NAME("Brig Officer")
 	uniform = /obj/item/clothing/under/scp/whiteuniform

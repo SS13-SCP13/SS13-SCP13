@@ -139,6 +139,29 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
 	minimal_access = list()
 
+/datum/job/ltofficer
+	title = "Security Lieutenant"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = list("Senior Agent")
+	minimal_player_age = 10
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/o2
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
+
 /datum/job/brigofficer
 	title = "Brig Officer"
 	department = "Security"

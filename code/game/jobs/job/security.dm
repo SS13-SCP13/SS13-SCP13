@@ -76,6 +76,27 @@
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
 */
 
+/datum/job/ltofficer
+	title = "Security Lieutenant"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Chief of Security"
+	economic_modifier = 4
+	alt_titles = list("Senior Agent")
+	minimal_player_age = 10
+	ideal_character_age = 25
+	selection_color = "#601c1c"
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/o2
+	)
+
 /datum/job/brigofficer
 	title = "Brig Officer"
 	department = "Security"
@@ -89,7 +110,7 @@
 	ideal_character_age = 25
 	selection_color = "#601c1c"
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
