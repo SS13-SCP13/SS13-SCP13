@@ -219,7 +219,7 @@
 	desc = "A dark purple keycard. Looks important."
 	icon_state = "securitylvl2"
 	item_state = "Sec_ID2"
-	job_access_type = /decl/hierarchy/outfit/job/site90/crew/security/corporalofficer
+	job_access_type = /datum/job/ncoofficer
 
 /obj/item/weapon/card/id/seclvl5
 	name = "level five security keycard"

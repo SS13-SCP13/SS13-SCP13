@@ -139,13 +139,60 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
 	minimal_access = list()
 
-/datum/job/enlistedofficer
-	title = "Security Private"
+/datum/job/brigofficer
+	title = "Brig Officer"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 5
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8
+	)
+
+/datum/job/ncoofficer
+	title = "Security Officer"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Chief of Security"
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = list("Agent")
+	minimal_player_age = 5
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e4,
+		/datum/mil_rank/security/e5,
+		/datum/mil_rank/security/e6
+	)
+
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+/datum/job/enlistedofficer
+	title = "Junior Security Officer"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = list("Junior Agent")
 	minimal_player_age = 0
@@ -163,31 +210,6 @@
 
 	access = list(access_mtflvl1)
 	minimal_access = list()
-
-/datum/job/corporalofficer
-	title = "Security Corporal"
-	department = "Security"
-	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
-	supervisors = "the Chief of Security"
-	economic_modifier = 4
-	alt_titles = list("Agent")
-	minimal_player_age = 5
-	ideal_character_age = 25
-	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/corporalofficer
-	allowed_branches = list(
-		/datum/mil_branch/security
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/security/e4
-	)
-
-
-	access = list(access_mtflvl1, access_mtflvl2)
-	minimal_access = list()
-
 
 
 /*
