@@ -497,31 +497,31 @@ ranks - fleet
 	desc = "Insignia denoting the rank of Private First Class."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e3
-	name = "ranks (E-3 corporal)"
-	desc = "Insignia denoting the rank of Corporal."
+	name = "ranks (E-3 specialist)"
+	desc = "Insignia denoting the rank of Specialist."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e4
-	name = "ranks (E-4 sergeant)"
-	desc = "Insignia denoting the rank of Sergeant."
+	name = "ranks (E-4 corporal)"
+	desc = "Insignia denoting the rank of Corporal."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e5
-	name = "ranks (E-5 staff sergeant)"
-	desc = "Insignia denoting the rank of Staff Sergeant."
+	name = "ranks (E-5 sergeant)"
+	desc = "Insignia denoting the rank of Sergeant."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e6
-	name = "ranks (E-6 master sergeant)"
-	desc = "Insignia denoting the rank of Master Sergeant."
+	name = "ranks (E-6 staff sergeant)"
+	desc = "Insignia denoting the rank of Staff Sergeant."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e7
-	name = "ranks (E-7 chief petty officer)"
-	desc = "Insignia denoting the rank of Chief Petty Officer."
+	name = "ranks (E-7 sergeant first class)"
+	desc = "Insignia denoting the rank of Sergeant First Class."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e8
-	name = "ranks (E-8 senior first sergeant)"
+	name = "ranks (E-8 first sergeant)"
 	desc = "Insignia denoting the rank of First Sergeant."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e9
-	name = "ranks (E-8 senior sergeant major)"
+	name = "ranks (E-8 sergeant major)"
 	desc = "Insignia denoting the rank of Sergeant Major."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e9_alt1
@@ -529,7 +529,7 @@ ranks - fleet
 	desc = "Insignia denoting the rank of Command Sergeant Major."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e9_alt2
-	name = "ranks (E-9 fleet sergeant major of the division)"
+	name = "ranks (E-9 sergeant major of the division)"
 	desc = "Insignia denoting the rank of Sergeant Major of the Division."
 /*
 /obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e9_alt3
@@ -544,11 +544,7 @@ ranks - fleet
 	name = "ranks (O-1 second lieutenant)"
 	desc = "Insignia denoting the rank of Second Lieutenant."
 	icon_state = "fleetrank_officer"
-/*
-/obj/item/clothing/accessory/solgov/rank/fleet/officer/wo1_monkey
-	name = "makeshift ranks (WO-1 warrant officer 1)"
-	desc = "Insignia denoting the elusive rank of Warrant Officer. Too bad it's obviously fake."
-*/
+
 /obj/item/clothing/accessory/solgov/rank/fleet/officer/o2
 	name = "ranks (O-2 first lieutenant)"
 	desc = "Insignia denoting the rank of First Lieutenant."
