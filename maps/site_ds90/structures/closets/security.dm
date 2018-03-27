@@ -176,8 +176,7 @@
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
+		/obj/item/clothing/gloves/thick
 	)
 
 /obj/structure/closet/secure_closet/mtf/commander
@@ -200,8 +199,7 @@
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
+		/obj/item/clothing/gloves/thick
 	)
 
 /obj/structure/closet/secure_closet/mtf/nco
@@ -224,8 +222,7 @@
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
+		/obj/item/clothing/gloves/thick
 	)
 
 /obj/structure/closet/secure_closet/mtf/co
@@ -248,6 +245,5 @@
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
+		/obj/item/clothing/gloves/thick
 	)
