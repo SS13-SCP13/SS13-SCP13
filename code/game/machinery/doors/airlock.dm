@@ -152,6 +152,7 @@
 
 	open_sound_powered = 'sound/machines/windowdoor.ogg'
 	close_sound_powered = 'sound/machines/windowdoor.ogg'
+	open_failure_access_denied = 'sound/machines/keycardenied.ogg'
 
 	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
 	maxhealth = 300
@@ -166,6 +167,7 @@
 
 	open_sound_powered = 'sound/machines/AirlockOpen1.wav'
 	close_sound_powered = 'sound/machines/AirlockClose1.wav'
+	open_failure_access_denied = 'sound/machines/keycardenied.ogg'
 
 	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
 	maxhealth = 300
@@ -180,6 +182,7 @@
 
 	open_sound_powered = 'sound/machines/AirlockOpen1.wav'
 	close_sound_powered = 'sound/machines/AirlockClose1.wav'
+	open_failure_access_denied = 'sound/machines/keycardenied.ogg'
 
 	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
 	maxhealth = 300
