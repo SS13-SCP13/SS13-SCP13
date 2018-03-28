@@ -127,7 +127,7 @@
 	department_flag = SEC|COM
 	economic_modifier = 8
 	minimal_player_age = 21
-	ideal_character_age = 35
+	ideal_character_age = 55
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
 	allowed_branches = list(
 		/datum/mil_branch/security
@@ -149,7 +149,7 @@
 	economic_modifier = 4
 	alt_titles = list("Senior Agent")
 	minimal_player_age = 10
-	ideal_character_age = 25
+	ideal_character_age = 45
 	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
 	allowed_branches = list(
@@ -172,7 +172,7 @@
 	economic_modifier = 4
 	alt_titles = null
 	minimal_player_age = 5
-	ideal_character_age = 25
+	ideal_character_age = 30
 	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
 	allowed_branches = list(
@@ -193,7 +193,7 @@
 	economic_modifier = 4
 	alt_titles = list("Agent")
 	minimal_player_age = 5
-	ideal_character_age = 25
+	ideal_character_age = 30
 	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
 	allowed_branches = list(
@@ -234,6 +234,27 @@
 	access = list(access_mtflvl1)
 	minimal_access = list()
 
+// SCIENCE
+
+/datum/job/juniorscientist
+	title = "Junior Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Research Director"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 0
+	ideal_character_age = 22
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/scp)
+
+
+	access = list(access_sciencelvl1)
+	minimal_access = list()
 
 /*
 /datum/job/liaison

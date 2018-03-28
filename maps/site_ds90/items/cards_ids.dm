@@ -241,3 +241,12 @@
 	icon_state = "securitylvl5"
 	item_state = "Sec_ID5"
 	job_access_type = /datum/job/hos
+
+// SCIENCE
+
+/obj/item/weapon/card/id/sciencelvl1
+	name = "level one science keycard"
+	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	icon_state = "sciencelvl1"
+	item_state = "Science_ID1"
+	job_access_type = /datum/job/juniorscientist
