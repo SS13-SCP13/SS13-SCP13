@@ -24,7 +24,7 @@
 	log = do_log
 	newscast = do_newscast
 
-/datum/announcement/priority/command/New(var/do_log = 1, var/new_sound = 'sound/misc/notice2.ogg', var/do_newscast = 0)
+/datum/announcement/priority/command/New(var/do_log = 1, var/new_sound = 'sound/misc/notice3.ogg', var/do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
 	title = "[command_name()] Update"
 	announcement_type = "[command_name()] Update"
