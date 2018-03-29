@@ -1,6 +1,6 @@
 # baystation12
 
-[Website](http://baystation12.net/) - [Code](http://github.com/Baystation12/Baystation12/) - [IRC](irc://irc.sorcery.net/#codershuttle)
+[Website](https://www.scp13.site) - [Code](https://github.com/SS13-SCP13/SS13-SCP13)
 
 ---
 
