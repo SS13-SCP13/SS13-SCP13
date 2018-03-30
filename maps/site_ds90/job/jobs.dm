@@ -1,6 +1,20 @@
 /datum/map/site_ds90
 /datum/map/site_ds90/setup_map()
 
+/datum/job/assistant
+	title = "Class D"
+	department = "Civilian"
+
+	total_positions = -1
+	spawn_positions = -1
+	supervisors = "Foundation Personnel"
+	selection_color = "#E55700"
+	economic_modifier = 1
+	access = list()			//See /datum/job/assistant/get_access()
+	minimal_access = list()	//See /datum/job/assistant/get_access()
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/classd
+
+
 /datum/job/captain
 	title = "Facility Director"
 	supervisors = "the SCP Foundation and O5 Council"
@@ -9,7 +23,7 @@
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
 
 /datum/job/hop
 	title = "Head of Human Resources"
@@ -21,7 +35,7 @@
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
 
 
 	access = list(access_adminlvl4,
@@ -39,7 +53,7 @@
 	ideal_character_age = 60
 //	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/rd
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classb)
 
 	access = list(access_sciencelvl5,
 	access_sciencelvl4,
@@ -250,7 +264,7 @@
 	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
 	access = list(access_sciencelvl1)
