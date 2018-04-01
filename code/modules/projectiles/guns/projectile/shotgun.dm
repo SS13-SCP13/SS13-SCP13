@@ -91,6 +91,10 @@
 	wielded_item_state = "gun_wielded"
 
 	burst_delay = 0
+	firemodes = list(
+		list(mode_name="fire one barrel at a time", burst=1),
+		list(mode_name="fire both barrels at once", burst=2),
+		)
 
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel/pellet
 	ammo_type = /obj/item/ammo_casing/shotgun/pellet
