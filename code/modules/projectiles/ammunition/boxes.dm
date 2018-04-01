@@ -21,6 +21,16 @@
 	max_ammo = 6
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/tac50
+	name = "tactical speedloader"
+	desc = "a speedloader custom made for the tactical revolver."
+	icon_state = "50"
+	caliber = ".50"
+	ammo_type = /obj/item/ammo_casing/a50
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	max_ammo = 4
+	multiple_sprites = 1
+
 /obj/item/ammo_magazine/c38
 	name = "speed loader (.38)"
 	desc = "A speed loader for revolvers."
@@ -294,4 +304,14 @@
 	ammo_type = /obj/item/ammo_casing/cap
 	matter = list(DEFAULT_WALL_MATERIAL = 600)
 	max_ammo = 7
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/tac9mm
+	name = "toploader magazine (9mm)"
+	icon_state = "5.56s-30"
+	mag_type = MAGAZINE
+	caliber = "9mm"
+	matter = list(DEFAULT_WALL_MATERIAL = 1800)
+	ammo_type = /obj/item/ammo_casing/c9mm
+	max_ammo = 20
 	multiple_sprites = 1
