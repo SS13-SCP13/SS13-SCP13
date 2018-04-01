@@ -12,7 +12,7 @@
 	economic_modifier = 1
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/classd
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
 
 
 /datum/job/captain

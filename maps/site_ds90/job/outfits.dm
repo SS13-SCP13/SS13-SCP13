@@ -154,7 +154,7 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 
 // MISC OUTFITS
 
-/decl/hierarchy/outfit/job/site90/crew/science/classd
+/decl/hierarchy/outfit/job/site90/crew/civ/classd
 	name = OUTFIT_JOB_NAME("Class D")
 	uniform = /obj/item/clothing/under/scp/dclass
 	shoes = /obj/item/clothing/shoes/workboots
