@@ -37,6 +37,9 @@
 
 	var/hud_icon						  //icon used for Sec HUD overlay
 
+	var/has_email = FALSE				  //Does this job get an email account?
+	var/has_account = TRUE				  //Does this job have a bank account?
+
 /datum/job/New()
 	..()
 	if(prob(100-availablity_chance))	//Close positions, blah blah.

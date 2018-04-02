@@ -21,10 +21,10 @@
 	overlay_alarm = "alarm_green"
 	overlay_status_display = "status_display_green"
 
-	var/static/datum/announcement/priority/security/security_announcement_green = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/misc/notice2.ogg'))
+	var/static/datum/announcement/priority/security/security_announcement_green = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/misc/notice3.ogg'))
 
 /decl/security_level/default/torchdept/code_green/switching_down_to()
-	security_announcement_green.Announce("The situation has been resolved, and all crew are to return to their regular duties.", "Attention! Alert level lowered to code green.")
+	security_announcement_green.Announce("The situation has been resolved, and all personnel are to return to their regular duties.", "Attention! Alert level lowered to code green.")
 	notify_station()
 
 /decl/security_level/default/torchdept/code_violet

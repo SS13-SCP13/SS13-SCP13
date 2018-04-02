@@ -69,3 +69,26 @@
 	alt_titles = list("Biomechanical Engineer","Mechatronic Engineer")
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
+
+// SCP JOBS
+
+/datum/job/juniorscientist
+	title = "Junior Scientist"
+	department = "Science"
+	department_flag = SCI
+	selection_color = "#633d63"
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Research Director"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 0
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/scp)
+
+
+	access = list(access_sciencelvl1)
+	minimal_access = list()

@@ -116,18 +116,49 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	l_ear = /obj/item/device/radio/headset/heads/cos
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-//	id_type = /obj/item/weapon/card/id/torch/silver/security
+	id_type = /obj/item/weapon/card/id/seclvl5
 
-/decl/hierarchy/outfit/job/site90/crew/command/cos/New()
-	..()
-	BACKPACK_OVERRIDE_SECURITY
-
-
-/decl/hierarchy/outfit/site90/torch/crew/security/enlistedofficer
-	name = OUTFIT_JOB_NAME("Security Private")
+/decl/hierarchy/outfit/job/site90/crew/security/ltofficer
+	name = OUTFIT_JOB_NAME("Brig Officer")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-//	id_type = /obj/item/weapon/card/id/torch/crew/security
+	id_type = /obj/item/weapon/card/id/seclvl4
+
+/decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	name = OUTFIT_JOB_NAME("Brig Officer")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl2
+
+/decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
+	name = OUTFIT_JOB_NAME("Security Officer")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl2
+
+/decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
+	name = OUTFIT_JOB_NAME("Junior Security Officer")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl1
+
+// SCIENCE OUTFITS
+
+/decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	name = OUTFIT_JOB_NAME("Junior Scientist")
+	uniform = /obj/item/clothing/under/scp/suittie
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/coat
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/sciencelvl1
+
+
+// MISC OUTFITS
+
+/decl/hierarchy/outfit/job/site90/crew/civ/classd
+	name = OUTFIT_JOB_NAME("Class D")
+	uniform = /obj/item/clothing/under/scp/dclass
+	shoes = /obj/item/clothing/shoes/workboots
+
 /*
 /decl/hierarchy/outfit/job/torch/crew/command/cos/fleet
 	name = OUTFIT_JOB_NAME("Chief of Security - Fleet")
