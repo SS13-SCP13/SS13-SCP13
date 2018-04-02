@@ -21,7 +21,7 @@
 	minimal_player_age = 14
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
-
+/*
 /datum/job/scientist
 	title = "Scientist"
 	department = "Science"
@@ -69,8 +69,48 @@
 	alt_titles = list("Biomechanical Engineer","Mechatronic Engineer")
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
-
+*/
 // SCP JOBS
+
+/datum/job/seniorscientist
+	title = "Senior Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	minimal_player_age = 10
+	ideal_character_age = 22
+	alt_titles = null
+//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classb)
+
+
+	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	minimal_access = list()
+
+/datum/job/scientist
+	title = "Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	minimal_player_age = 5
+	ideal_character_age = 22
+	alt_titles = null
+//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classc)
+
+
+	access = list(access_sciencelvl1, access_sciencelvl2)
+	minimal_access = list()
 
 /datum/job/juniorscientist
 	title = "Junior Scientist"
@@ -87,8 +127,9 @@
 	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
 	access = list(access_sciencelvl1)
 	minimal_access = list()
+

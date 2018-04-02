@@ -13,6 +13,7 @@
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
+	allowed_ranks = list(/datum/mil_rank/civ/classd)
 
 
 /datum/job/captain
@@ -23,15 +24,11 @@
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
 	allowed_branches = list(/datum/mil_branch/civilian)
-<<<<<<< HEAD
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(7,10), rand(7,10), rand(12,16))
 		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
-=======
 	allowed_ranks = list(/datum/mil_rank/civ/classa)
->>>>>>> 87eef44570046f104c8e4d517b809a3d4530f4b6
 
 /datum/job/hop
 	title = "Head of Human Resources"
@@ -43,16 +40,11 @@
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	allowed_branches = list(/datum/mil_branch/civilian)
-<<<<<<< HEAD
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(7,10), rand(7,10), rand(11,14))
 		H.add_skills(rand(25,40), rand(25,40), rand(45,65), rand(40,60))
-
-=======
-	allowed_ranks = list(/datum/mil_rank/civ/classa)
->>>>>>> 87eef44570046f104c8e4d517b809a3d4530f4b6
 
 
 	access = list(access_adminlvl4,
@@ -70,15 +62,11 @@
 	ideal_character_age = 60
 //	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/rd
 	allowed_branches = list(/datum/mil_branch/civilian)
-<<<<<<< HEAD
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(6,8), rand(6,8), rand(14,17))
 		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
-=======
-	allowed_ranks = list(/datum/mil_rank/civ/classb)
->>>>>>> 87eef44570046f104c8e4d517b809a3d4530f4b6
 
 	access = list(access_sciencelvl5,
 	access_sciencelvl4,
@@ -289,9 +277,9 @@
 	department_flag = SCI
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Research Director"
+	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = null
+	alt_titles = list("Junior Xenobiologist", "Junior Xenoarcheologist")
 	minimal_player_age = 0
 	ideal_character_age = 22
 	alt_titles = null
@@ -301,6 +289,46 @@
 
 
 	access = list(access_sciencelvl1)
+	minimal_access = list()
+
+/datum/job/scientist
+	title = "Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	minimal_player_age = 5
+	ideal_character_age = 22
+	alt_titles = null
+//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classc)
+
+
+	access = list(access_sciencelvl1, access_sciencelvl2)
+	minimal_access = list()
+
+/datum/job/seniorscientist
+	title = "Senior Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	minimal_player_age = 10
+	ideal_character_age = 22
+	alt_titles = null
+//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classb)
+
+
+	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 
 /*
