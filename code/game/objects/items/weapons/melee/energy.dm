@@ -199,6 +199,7 @@
 /obj/item/weapon/melee/energy/breach/activate(mob/living/user)
 	..()
 	icon_state = "saw1"
+	item_state = "saw0"
 	to_chat(user, "<span class='notice'>\The [src] is now on.</span>")
 
 /obj/item/weapon/melee/energy/breach/deactivate(mob/living/user)
