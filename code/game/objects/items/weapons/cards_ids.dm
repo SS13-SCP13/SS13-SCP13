@@ -368,10 +368,10 @@ var/const/NO_EMAG_ACT = -50
 	job_access_type = /datum/job/scientist
 
 /obj/item/weapon/card/id/science/xenobiologist
-	job_access_type = /datum/job/xenobiologist
+//	job_access_type = /datum/job/xenobiologist
 
 /obj/item/weapon/card/id/science/roboticist
-	job_access_type = /datum/job/roboticist
+//	job_access_type = /datum/job/roboticist
 
 /obj/item/weapon/card/id/science/head
 	name = "identification card"
