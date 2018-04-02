@@ -10,6 +10,10 @@
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(7,10), rand(7,10), rand(12,16))
+		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
 
 /datum/job/hop
 	title = "Head of Human Resources"
@@ -22,6 +26,11 @@
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(7,10), rand(7,10), rand(11,14))
+		H.add_skills(rand(25,40), rand(25,40), rand(45,65), rand(40,60))
+
 
 
 	access = list(access_adminlvl4,
@@ -40,6 +49,10 @@
 //	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/rd
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(6,8), rand(6,8), rand(14,17))
+		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
 
 	access = list(access_sciencelvl5,
 	access_sciencelvl4,
@@ -138,6 +151,10 @@
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
 	minimal_access = list()
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(12,18), rand(12,16), rand(10,12))
+		H.add_skills(rand(60, 75), rand(60,75))
 
 /datum/job/enlistedofficer
 	title = "Security Private"
@@ -163,6 +180,10 @@
 
 	access = list(access_mtflvl1)
 	minimal_access = list()
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(11,16), rand(10,14), rand(7,10))
+		H.add_skills(rand(60, 75), rand(60,75))
 
 
 

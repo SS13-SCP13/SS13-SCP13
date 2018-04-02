@@ -191,9 +191,14 @@
 				*/
 				if(prob(80))
 					hit_zone = ran_zone(hit_zone)
-				if(prob(15) && hit_zone != BP_CHEST) // Missed!
+				var/misschance = H.lying ? 30 : 15
+				if(prob(misschance) && hit_zone != BP_CHEST) // Missed!
 					if(!src.lying)
-						attack_message = "[H] attempted to strike [src], but missed!"
+						if(H.skillcheck(H.melee_skill, 60, 0) == CRIT_FAILURE)
+							H.resolve_critical_miss()
+							attack_message = null
+						else
+							attack_message = "[H] attempted to strike [src], but missed!"
 					else
 						attack_message = "[H] attempted to strike [src], but \he rolled out of the way!"
 						src.set_dir(pick(GLOB.cardinal))
@@ -222,7 +227,7 @@
 			if(HULK in H.mutations)
 				real_damage *= 2 // Hulks do twice the damage
 				rand_damage *= 2
-			real_damage = max(1, real_damage)
+			real_damage = (max(1, real_damage) * strToDamageModifier(H.str, H.mod))
 
 			var/armour = run_armor_check(hit_zone, "melee")
 			// Apply additional unarmed effects.
@@ -232,6 +237,8 @@
 			apply_damage(real_damage, (attack.deal_halloss ? PAIN : BRUTE), hit_zone, armour, damage_flags=attack.damage_flags())
 
 		if(I_DISARM)
+			if(attempt_dodge())//Trying to dodge it before they even have the chance to miss us.
+				return
 			if(H.species)
 				admin_attack_log(M, src, "Disarmed their victim.", "Was disarmed.", "disarmed")
 				H.species.disarm_attackhand(H, src)

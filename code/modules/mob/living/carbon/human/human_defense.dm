@@ -158,10 +158,17 @@ meteor_act
 	if(user == src) // Attacking yourself can't miss
 		return target_zone
 
+	if(attempt_dodge())//Trying to dodge it before they even have the chance to miss us.
+		return null
+
 	var/hit_zone = get_zone_with_miss_chance(target_zone, src)
 
 	if(!hit_zone)
 		visible_message("<span class='danger'>\The [user] misses [src] with \the [I]!</span>")
+		return null
+
+	if(user.skillcheck(user.melee_skill, 60, 0) == CRIT_FAILURE)
+		user.resolve_critical_miss(I)
 		return null
 
 	if(check_shields(I.force, I, user, target_zone, "the [I.name]"))
@@ -190,6 +197,8 @@ meteor_act
 	var/obj/item/organ/external/affecting = get_organ(hit_zone)
 	if(!affecting)
 		return 0
+
+	effective_force *= strToDamageModifier(user.str, user.mod)
 
 	// Handle striking to cripple.
 	if(user.a_intent == I_DISARM)
@@ -220,6 +229,8 @@ meteor_act
 
 		//Apply blood
 		attack_bloody(I, user, effective_force, hit_zone)
+	if(user.skillcheck(user.melee_skill,0,0) == CRIT_SUCCESS)
+		resolve_critical_hit()
 
 	return 1
 
@@ -490,3 +501,47 @@ meteor_act
 		perm += perm_by_part[part]
 
 	return perm
+
+/mob/living/proc/resolve_critical_miss(var/obj/item/I)
+	var/result = rand(1,3)
+
+	if(!I)
+		visible_message("<span class='danger'>[src] punches themself in the face!</span>")
+		attack_hand(src)
+		return
+
+	switch(result)
+		if(1)//They drop their weapon.
+			visible_message("<span class='danger'><big>CRITICAL FAILURE! \The [I] flies out of [src]'s hand!</big></span>")
+			drop_from_inventory(I)
+			throw_at(get_edge_target_turf(I, pick(GLOB.alldirs)), rand(1,3), throw_speed)//Throw that sheesh away
+			return
+		if(2)
+			visible_message("<span class='danger'><big>CRITICAL FAILURE! [src] botches the attack, stumbles, and falls!</big></span>")
+			playsound(loc, 'sound/weapons/punchmiss.ogg', 50, 1)
+			Weaken(1)
+			Stun(3)
+			return
+		if(3)
+			visible_message("<span class='danger'><big>CRITICAL FAILURE! [src] botches the attack and hits themself!</big></span>")
+			attackby(I, src)
+
+/mob/living/proc/resolve_critical_hit()
+	var/result = rand(1,3)
+
+	switch(result)
+		if(1)
+			visible_message("<span class='danger'><big>CRITICAL HIT! IT MUST BE PAINFUL</big></span>")
+			apply_damage(rand(5,10), BRUTE)
+			return
+
+		if(2)
+			visible_message("<span class='danger'><big>CRITICAL HIT! [src] is stunned!</big></span>")
+			Weaken(1)
+			Stun(3)
+			return
+
+		if(3)
+			visible_message("<span class='danger'><big>CRITICAL HIT! [src] is knocked unconcious by the blow!</big></span>")
+			apply_effect(20, PARALYZE)
+			return

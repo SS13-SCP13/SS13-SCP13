@@ -326,6 +326,21 @@
 		//As opposed to no-delay pew pew
 		P.accuracy += 2
 
+	if(!user.skillcheck(user.ranged_skill, INFINITY, 80))
+		P.accuracy += 4
+
+	if(!user.skillcheck(user.ranged_skill, 79, 60))
+		P.accuracy += 2
+
+	if(!user.skillcheck(user.ranged_skill, 59, 40))//Being unskilled at guns decreased accuracy.
+		P.accuracy += 1
+
+	if(!user.skillcheck(user.ranged_skill, 39, 21))//Being unskilled at guns decreased accuracy.
+		P.accuracy -= 2
+
+	if(!user.skillcheck(user.ranged_skill, 20, 0))//Being unskilled at guns decreased accuracy.
+		P.accuracy -= 4
+
 //does the actual launching of the projectile
 /obj/item/weapon/gun/proc/process_projectile(obj/projectile, mob/user, atom/target, var/target_zone, var/params=null)
 	var/obj/item/projectile/P = projectile
