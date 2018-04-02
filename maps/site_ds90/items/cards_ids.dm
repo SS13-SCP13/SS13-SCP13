@@ -250,32 +250,31 @@
 	icon_state = "sciencelvl1"
 	item_state = "Science_ID1"
 	job_access_type = /datum/job/juniorscientist
-/* NOT YET READY FOR USE.
+
 /obj/item/weapon/card/id/sciencelvl2
 	name = "level two science keycard"
-	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	desc = "A bright yellow keycard. Looks ordinary?"
 	icon_state = "sciencelvl2"
 	item_state = "Science_ID2"
 //	job_access_type = /datum/job/juniorscientist
 
 /obj/item/weapon/card/id/sciencelvl3
 	name = "level three science keycard"
-	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	desc = "A dark yellow keycard. Looks cool, the person wearing it, not so much."
 	icon_state = "sciencelvl3"
 	item_state = "Science_ID3"
 //	job_access_type = /datum/job/juniorscientist
 
 /obj/item/weapon/card/id/sciencelvl4
 	name = "level four science keycard"
-	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	desc = "An orange keycard. Looks important."
 	icon_state = "sciencelvl4"
 	item_state = "Science_ID4"
 //	job_access_type = /datum/job/juniorscientist
 
 /obj/item/weapon/card/id/sciencelvl5
 	name = "level five science keycard"
-	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	desc = "A red keycard. Looks like the person wearing this won't give it up easy."
 	icon_state = "sciencelvl5"
 	item_state = "Science_ID5"
 //	job_access_type = /datum/job/juniorscientist
-	*/
