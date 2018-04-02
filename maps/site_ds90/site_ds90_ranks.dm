@@ -18,7 +18,7 @@
 /datum/mil_branch/security
 	name = "Site DS90 Security Branch"
 	name_short = "SD90SB"
-	email_domain = "security.siteds90.foundation"
+	email_domain = "security.siteds90"
 
 	rank_types = list(
 		/datum/mil_rank/security/e1,
@@ -72,16 +72,21 @@
 /datum/mil_branch/civilian
 	name = "Civilian"
 	name_short = "civ"
-	email_domain = "freemail.nt"
+	email_domain = "siteds90.foundation"
 
 	rank_types = list(
-		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/scp
+		/datum/mil_rank/civ/classa,
+		/datum/mil_rank/civ/classb,
+		/datum/mil_rank/civ/classc,
+		/datum/mil_rank/civ/classd,
+		/datum/mil_rank/civ/classe
 	)
 
 	spawn_rank_types = list(
-		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/scp
+		/datum/mil_rank/civ/classa,
+		/datum/mil_rank/civ/classb,
+		/datum/mil_rank/civ/classc,
+		/datum/mil_rank/civ/classd
 	)
 
 //	assistant_job = "Passenger"
@@ -342,7 +347,3 @@
 /datum/mil_rank/civ/classe
 	name = "Class E Foundation Personnel"
 	name_short = "Class E"
-
-
-/datum/mil_rank/civ/scp
-	name = "Foundation Employee"
