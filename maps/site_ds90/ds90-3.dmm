@@ -884,7 +884,7 @@
 "qZ" = (/obj/machinery/door/airlock/glass/scpvert{name = "East Cell Wing"; req_access = list(301)},/turf/simulated/floor/tiled/white,/area/security/prison{name = "\improper Brig - East Prison Wing"})
 "ra" = (/turf/simulated/wall/scp/r_wall/r_end{icon_state = "r_end"; dir = 6},/area/crew_quarters/cryolocker/general{name = "\improper Eastern Dormitories"})
 "rb" = (/turf/simulated/wall/scp/r_wall/r_t{icon_state = "r_t"; dir = 1},/area/space)
-"rc" = (/obj/effect/landmark/map_data{height = 2},/turf/space,/area/space)
+"rc" = (/obj/effect/landmark/map_data{height = 3},/turf/space,/area/space)
 "rd" = (/turf/simulated/wall/scp/r_wall/r_mid,/area/crew_quarters/cryolocker/general{name = "\improper Secondary General Cryogenic Storage"})
 "re" = (/turf/simulated/wall/scp/r_wall/r_end{icon_state = "r_end"; dir = 4},/area/crew_quarters/cryolocker/general{name = "\improper Secondary General Cryogenic Storage"})
 "rf" = (/obj/structure/cryofeed{icon_state = "cryo_rear"; dir = 4},/turf/simulated/floor/tiled/white,/area/crew_quarters/cryolocker/general{name = "\improper Secondary General Cryogenic Storage"})
