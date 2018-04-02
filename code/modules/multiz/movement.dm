@@ -229,7 +229,14 @@
 		return
 
 	..()
-	var/damage = 10
+
+	if(!istype(landing, /turf/simulated/open))
+		if(statscheck(dex, 25, 0, src) && !lying)
+			to_chat(src, "<span class = 'notice'>You land softly.</span>")
+			return
+
+	playsound(src.loc, 'sound/effects/trauma2.ogg', 75, 1)//Splat
+	var/damage = 25
 	apply_damage(rand(0, damage), BRUTE, BP_HEAD)
 	apply_damage(rand(0, damage), BRUTE, BP_CHEST)
 	apply_damage(rand(0, damage), BRUTE, BP_L_LEG)
