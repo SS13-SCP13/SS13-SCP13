@@ -43,7 +43,7 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   icon = 'icons/obj/scp914.dmi'
   icon_state = "main"
   var/switch_state = "switch-1"
-  var/process_time = 500
+  var/process_time = 50
   anchored = 1
   density = 1
   var/obj/structure/closet/scp914/int/intake
@@ -119,7 +119,11 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
       timer = process_time*3
     if(CLOCKMODE_FINE)
       timer = process_time*2
-    if(CLOCKMODE_ONEONE || CLOCKMODE_COARSE || CLOCKMODE_ROUGH)
+    if(CLOCKMODE_ONEONE)
+      timer = process_time
+    if(CLOCKMODE_COARSE)
+      timer = process_time
+    if(CLOCKMODE_ROUGH)
       timer = process_time
   return timer
 

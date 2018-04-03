@@ -303,7 +303,7 @@ its easier to just keep the beam vertical.
 
 /atom/proc/scp914_act(var/mode)
 	var/list/chosen_mode = modes_914[mode]
-	if(chosen_mode.len > 0)
+	if(chosen_mode && chosen_mode.len > 0)
 		var/chosen = pick(chosen_mode)
 		var/atom/chosen_obj = new chosen(loc)
 		if(chosen_obj)
@@ -311,11 +311,12 @@ its easier to just keep the beam vertical.
 	else
 		switch(mode)
 			if(1) //1 and 2 should be refactored to fit MATERIAL datums once they are ready
-				var/atom/choice = parent_type
+				var/atom/choice = new parent_type
 				if(choice)
 					var/atom/second_choice = choice.parent_type
 					if(second_choice)
 						var/atom/atombychoice = new second_choice(loc)
+						qdel(choice)
 						if(atombychoice)
 							return atombychoice
 			if(2)
@@ -325,25 +326,37 @@ its easier to just keep the beam vertical.
 					if(atombychoice)
 						return atombychoice
 			if(3)
-				var/choice = pick(subtypesof(parent_type))
-				if(choice)
-					var/atom/atombychoice = new choice(loc)
-					if(atombychoice)
-						return atombychoice
+				var/list/choices = subtypesof(parent_type)
+				if(choices && choices.len > 0)
+					for(var/atom/typo in choices)
+						var/atom/choico = new typo
+						if(choico.parent_type != parent_type)
+							choices -= typo
+						qdel(choico)
+					var/choice = pick(choices)
+					if(choice)
+						var/atom/atombychoice = new choice(loc)
+						if(atombychoice)
+							return atombychoice
 			if(4)
-				var/choice = pick(subtypesof(src))
-				if(choice)
-					var/atom/atombychoice = new choice(loc)
-					if(atombychoice)
-						return atombychoice
+				var/list/choices = subtypesof(parent_type)
+				if(choices && choices.len > 0)
+					for(var/atom/typo in choices)
+						var/atom/choico = new typo
+						if(choico.parent_type != src.parent_type)
+							choices -= typo
+						qdel(choico)
+					var/choice = pick(choices)
+					if(choice)
+						var/atom/atombychoice = new choice(loc)
+						if(atombychoice)
+							return atombychoice
 			if(5)
 				var/choice = pick(subtypesof(src))
 				if(choice)
-					var/second_choice = pick(subtypesof(choice))
-					if(second_choice)
-						var/atom/atombychoice = new second_choice(loc)
-						if(atombychoice)
-							return atombychoice
+					var/atom/atombychoice = new choice(loc)
+					if(atombychoice)
+						return atombychoice
 	return
 
 /atom/proc/melt()
