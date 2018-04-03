@@ -114,10 +114,10 @@ proc/strToSpeedModifier(var/strength, var/w_class)//Looks messy. Is messy. Is al
 proc/dexToAccuracy(var/dexterity) // i can do this better but lets take this for now
 	switch(dexterity)
 		if(1 to 3)
-			return -3
+			return -8
 
 		if(4 to 6)
-			return -2
+			return -4
 
 		if(7 to 10)
 			return 0

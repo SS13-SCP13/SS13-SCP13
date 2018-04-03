@@ -302,6 +302,26 @@
 				max_mult = G.point_blank_mult()
 	P.damage *= max_mult
 
+/obj/item/weapon/gun/proc/rangedToAccuracy(var/ranged_skill)
+	switch(ranged_skill)
+		if(80 to INFINITY)
+			return 4
+
+		if(60 to 79)
+			return 2
+
+		if(51 to 60)
+			return -1
+
+		if(40 to 50)
+			return -3
+
+		if(21 to 39)//Being unskilled at guns decreased accuracy.
+			return -6
+
+		if(0 to 20)//Being unskilled at guns decreased accuracy.
+			return -8
+
 /obj/item/weapon/gun/proc/process_accuracy(obj/projectile, mob/user, atom/target, var/burst, var/held_twohanded)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
@@ -319,6 +339,7 @@
 	P.accuracy = accuracy + acc_mod
 	P.dispersion = disp_mod
 	P.accuracy += dexToAccuracy(user.dex)
+	P.accuracy += rangedToAccuracy(user.ranged_skill)
 
 	//accuracy bonus from aiming
 	if (aim_targets && (target in aim_targets))
@@ -326,21 +347,6 @@
 		//Kinda balanced by fact you need like 2 seconds to aim
 		//As opposed to no-delay pew pew
 		P.accuracy += 2
-
-	if(!user.skillcheck(user.ranged_skill, INFINITY, 80))
-		P.accuracy += 4
-
-	if(!user.skillcheck(user.ranged_skill, 79, 60))
-		P.accuracy += 2
-
-	if(!user.skillcheck(user.ranged_skill, 59, 40))
-		P.accuracy += 1
-
-	if(!user.skillcheck(user.ranged_skill, 39, 21))//Being unskilled at guns decreased accuracy.
-		P.accuracy -= 2
-
-	if(!user.skillcheck(user.ranged_skill, 20, 0))//Being unskilled at guns decreased accuracy.
-		P.accuracy -= 4
 
 //does the actual launching of the projectile
 /obj/item/weapon/gun/proc/process_projectile(obj/projectile, mob/user, atom/target, var/target_zone, var/params=null)
