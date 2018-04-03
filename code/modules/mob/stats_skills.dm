@@ -24,6 +24,7 @@
 	var/mod = 0.1 //hidden modifier for later use
 
     //skills
+    // When you see the add_skills code in jobs.dm, the random variables are in this order. - Lion
 	var/melee_skill = 50
 	var/ranged_skill = 50
 	var/medical_skill = 20
@@ -135,6 +136,7 @@ proc/dexToAccuracy(var/dexterity) // i can do this better but lets take this for
 			return 4
 
 //Stats helpers.
+// When you look at add_stats, they will be in this order as displayed. -Lion
 /mob/proc/add_stats(var/stre, var/dexe, var/inti)//To make adding stats quicker.
 	if(stre)
 		str = stre
