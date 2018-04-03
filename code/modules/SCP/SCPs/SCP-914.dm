@@ -22,6 +22,20 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   name = "SCP-914"
   designation = "914"
   classification = SAFE
+  component = /datum/component/scp/SCP_914
+
+/datum/component/scp/SCP_914
+	signal_procs = list(COMSIG_PARENT_ATTACKBY = .proc/transform)
+	var/clockwork = FALSE
+
+/datum/component/scp/SCP_914/proc/transform(obj/item/W, mob/user, var/click_params)
+  if(!W || clockwork)
+    return
+  var/atom/movable/product = W.scp914_act(rand(CLOCKMODE_ROUGH,CLOCKMODE_VERYFINE))
+  to_chat(user, "Your [W] turned into [product]!")
+  qdel(W)
+  if(isitem(product))
+    user.put_in_active_hand(product)
 
 /obj/machinery/scp914
   name = "clockwork machine"
@@ -29,6 +43,7 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   icon = 'icons/obj/scp914.dmi'
   icon_state = "main"
   var/switch_state = "switch-1"
+  var/process_time = 500
   anchored = 1
   density = 1
   var/obj/structure/closet/scp914/int/intake
@@ -42,6 +57,7 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   var/output_loc = locate(x+4,y,z)
   intake = new /obj/structure/closet/scp914/int(intake_loc)
   outputter = new /obj/structure/closet/scp914/out(output_loc)
+  SCP.component.clockwork = TRUE
   change_switch_icon()
 
 /obj/machinery/scp914/proc/switch_mode(var/switching_mode) //0 is counter-clockwise, 1 is clockwise
@@ -95,12 +111,12 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
 /obj/machinery/scp914/proc/get_timer()
   var/timer = 0
   switch(mode)
-    if(CLOCKMODE_ROUGH && CLOCKMODE_VERYFINE)
-      timer = 600
-    if(CLOCKMODE_COARSE && CLOCKMODE_FINE)
-      timer = 300
-    if(CLOCKMODE_ONEONE)
-      timer = 150
+    if(CLOCKMODE_VERYFINE)
+      timer = process_time*3
+    if(CLOCKMODE_FINE)
+      timer = process_time*2
+    if(CLOCKMODE_ONEONE || CLOCKMODE_COARSE || CLOCKMODE_ROUGH)
+      timer = process_time
   return timer
 
 /obj/machinery/scp914/attack_hand(mob/user)
@@ -113,15 +129,15 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   intake.close()
   outputter.close()
   var/time = get_timer()
-  sleep(time)
-  finish_processing()
+  spawn(time)
+    finish_processing()
 
 /obj/machinery/scp914/proc/finish_processing()
   for(var/atom/movable/AM in intake)
     if(istype(AM, /obj/structure/closet/scp914/int))
       continue
     AM.forceMove(outputter.loc)
-    var/obj/product = AM.scp914_act(mode)
+    var/atom/movable/product = AM.scp914_act(mode)
     if(product)
       product.forceMove(outputter.loc)
       qdel(AM)

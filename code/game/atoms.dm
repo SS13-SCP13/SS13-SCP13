@@ -303,11 +303,47 @@ its easier to just keep the beam vertical.
 
 /atom/proc/scp914_act(var/mode)
 	var/list/chosen_mode = modes_914[mode]
-	if(chosen_mode)
+	if(chosen_mode.len > 0)
 		var/chosen = pick(chosen_mode)
 		var/atom/chosen_obj = new chosen(loc)
 		if(chosen_obj)
 			return chosen_obj
+	else
+		switch(mode)
+			if(1) //1 and 2 should be refactored to fit MATERIAL datums once they are ready
+				var/atom/choice = parent_type
+				if(choice)
+					var/atom/second_choice = choice.parent_type
+					if(second_choice)
+						var/atom/atombychoice = new second_choice(loc)
+						if(atombychoice)
+							return atombychoice
+			if(2)
+				var/choice = parent_type
+				if(choice)
+					var/atom/atombychoice = new choice(loc)
+					if(atombychoice)
+						return atombychoice
+			if(3)
+				var/choice = pick(subtypesof(parent_type))
+				if(choice)
+					var/atom/atombychoice = new choice(loc)
+					if(atombychoice)
+						return atombychoice
+			if(4)
+				var/choice = pick(subtypesof(src))
+				if(choice)
+					var/atom/atombychoice = new choice(loc)
+					if(atombychoice)
+						return atombychoice
+			if(5)
+				var/choice = pick(subtypesof(src))
+				if(choice)
+					var/second_choice = pick(subtypesof(choice))
+					if(second_choice)
+						var/atom/atombychoice = new second_choice(loc)
+						if(atombychoice)
+							return atombychoice
 	return
 
 /atom/proc/melt()
