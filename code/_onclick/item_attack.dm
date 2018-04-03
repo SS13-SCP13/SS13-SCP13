@@ -31,7 +31,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 
 // No comment
 /atom/proc/attackby(obj/item/W, mob/user, var/click_params)
-	if(SendSignal(COMSIG_PARENT_ATTACKBY, W, user, params) & COMPONENT_NO_AFTERATTACK)
+	if(SendSignal(COMSIG_PARENT_ATTACKBY, W, user, click_params) & COMPONENT_NO_AFTERATTACK)
 		return TRUE
 	return FALSE
 

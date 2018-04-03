@@ -57,7 +57,11 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   var/output_loc = locate(x+4,y,z)
   intake = new /obj/structure/closet/scp914/int(intake_loc)
   outputter = new /obj/structure/closet/scp914/out(output_loc)
-  SCP.component.clockwork = TRUE
+  var/datum/scp/iniSCP = new /datum/scp/SCP_914
+  var/datum/component/scp/SCP_914/inicomponent = new /datum/component/scp/SCP_914
+  inicomponent.clockwork = FALSE
+  iniSCP.component = inicomponent
+  SCP = iniSCP
   change_switch_icon()
 
 /obj/machinery/scp914/proc/switch_mode(var/switching_mode) //0 is counter-clockwise, 1 is clockwise
