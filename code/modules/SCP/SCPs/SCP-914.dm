@@ -207,6 +207,7 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   icon_state = "intakeopen"
   icon_closed = "intake"
   icon_opened = "intakeopen"
+  anchored = 1
 
 /obj/structure/closet/scp914/int/Initialize()
   open()
@@ -218,6 +219,7 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   icon_state = "outputopen"
   icon_closed = "output"
   icon_opened = "outputopen"
+  anchored = 1
 
 /obj/structure/closet/scp914/out/Initialize()
   open()

@@ -263,6 +263,11 @@
 	w_class = ITEM_SIZE_SMALL
 	attack_verb = list("attacked", "struck", "hit")
 
+	rough = list(/obj/effect/decal/cleanable/molten_item)
+	coarse = list(/obj/item/stack/material/plastic)
+	fine = list(/obj/item/weapon/material/sword/replica/officersword, /obj/item/weapon/material/sword/replica/officersword/marine, /obj/item/weapon/material/sword/replica/officersword/marineofficer, /obj/item/weapon/material/sword/replica/officersword/pettyofficer, /obj/item/weapon/melee/energy/breach)
+	veryfine = list(/obj/item/weapon/melee/energy/axe, /obj/item/weapon/melee/energy/sword, /obj/item/weapon/melee/energy/sword/pirate, /obj/item/weapon/melee/energy/sword/bogsword, /obj/item/weapon/melee/energy/blade)
+
 	attack_self(mob/user as mob)
 		src.active = !( src.active )
 		if (src.active)
