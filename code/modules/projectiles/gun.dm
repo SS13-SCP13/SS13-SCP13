@@ -318,6 +318,7 @@
 	//Accuracy modifiers
 	P.accuracy = accuracy + acc_mod
 	P.dispersion = disp_mod
+	P.accuracy += dexToAccuracy(user.dex)
 
 	//accuracy bonus from aiming
 	if (aim_targets && (target in aim_targets))
@@ -332,7 +333,7 @@
 	if(!user.skillcheck(user.ranged_skill, 79, 60))
 		P.accuracy += 2
 
-	if(!user.skillcheck(user.ranged_skill, 59, 40))//Being unskilled at guns decreased accuracy.
+	if(!user.skillcheck(user.ranged_skill, 59, 40))
 		P.accuracy += 1
 
 	if(!user.skillcheck(user.ranged_skill, 39, 21))//Being unskilled at guns decreased accuracy.
@@ -460,4 +461,5 @@
 	var/datum/firemode/new_mode = switch_firemodes(user)
 	if(new_mode)
 		to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
+
 

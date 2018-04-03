@@ -111,6 +111,29 @@ proc/strToSpeedModifier(var/strength, var/w_class)//Looks messy. Is messy. Is al
 			if(w_class > ITEM_SIZE_NORMAL)
 				return 5
 
+proc/dexToAccuracy(var/dexterity) // i can do this better but lets take this for now
+	switch(dexterity)
+		if(1 to 3)
+			return -3
+
+		if(4 to 6)
+			return -2
+
+		if(7 to 10)
+			return 0
+
+		if(11 to 13)
+			return 1
+
+		if(14 to 16)
+			return 2
+
+		if(17 to 20)
+			return 3
+
+		if(21 to INFINITY)
+			return 4
+
 //Stats helpers.
 /mob/proc/add_stats(var/stre, var/dexe, var/inti)//To make adding stats quicker.
 	if(stre)
