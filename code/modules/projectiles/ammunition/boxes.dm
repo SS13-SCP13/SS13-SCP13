@@ -25,10 +25,10 @@
 	name = "tactical speedloader"
 	desc = "a speedloader custom made for the tactical revolver."
 	icon_state = "50"
-	caliber = ".50"
-	ammo_type = /obj/item/ammo_casing/a50
+	caliber = ".500 Magnum"
+	ammo_type = /obj/item/ammo_casing/m500
 	matter = list(DEFAULT_WALL_MATERIAL = 1260)
-	max_ammo = 4
+	max_ammo = 5
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c38

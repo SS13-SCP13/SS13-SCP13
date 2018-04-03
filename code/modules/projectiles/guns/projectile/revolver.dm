@@ -49,11 +49,11 @@
 	name = "tactical revolver"
 	desc = "A semi automatic revolver chambered in .500 Magnum, useful if you want to tear an arm off by dislocating yours. This one has an orange stripe."
 	icon_state = "tac_revolver"
-	max_shells = 4
-	caliber = ".50"
+	max_shells = 5
+	caliber = ".500 Magnum"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	one_hand_penalty = 10
-	ammo_type = /obj/item/ammo_casing/a50
+	ammo_type = /obj/item/ammo_casing/m500
 
 /obj/item/weapon/gun/projectile/revolver/detective
 	name = "revolver"
