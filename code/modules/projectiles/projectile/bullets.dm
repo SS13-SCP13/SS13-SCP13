@@ -164,6 +164,11 @@
 	damage = 60 //.50AE
 	armor_penetration = 30
 
+/obj/item/projectile/bullet/pistol/vstrong //tacrevolver
+	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	damage = 70 //.500 S&W Magnum
+	armor_penetration = 35
+
 /obj/item/projectile/bullet/pistol/strong/revolver //revolvers
 	damage = 50 //Revolvers get snowflake bullets, to keep them relevant
 	armor_penetration = 20

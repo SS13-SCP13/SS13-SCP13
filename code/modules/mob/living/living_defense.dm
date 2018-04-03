@@ -158,10 +158,15 @@
 	if(HULK in user.mutations)
 		effective_force *= 2
 
+
 	//Apply weapon damage
 	var/damage_flags = I.damage_flags()
 	if(prob(blocked)) //armour provides a chance to turn sharp/edge weapon attacks into blunt ones
 		damage_flags &= ~(DAM_SHARP|DAM_EDGE)
+
+	//if(user.str)//If they have strength then add it.
+//		effective_force *= strToDamageModifier(user.str, user.mod)
+//	effective_force += 20
 
 	apply_damage(effective_force, I.damtype, hit_zone, blocked, damage_flags, used_weapon=I)
 

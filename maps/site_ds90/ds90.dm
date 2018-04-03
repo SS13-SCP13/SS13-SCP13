@@ -22,7 +22,7 @@
 //	#include "datums/supplypacks/security.dm"
 //	#include "datums/supplypacks/science.dm"
 
-//	#include "items/cards_ids.dm"
+	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
 	#include "items/headsets.dm"
 	#include "items/items.dm"
@@ -69,6 +69,7 @@
 
 	#include "../site_ds90/ds90-1.dmm"
 	#include "../site_ds90/ds90-2.dmm"
+	#include "../site_ds90/ds90-3.dmm"
 	#include "../site_ds90/ds90-8.dmm"
 //	#include "torch-3.dmm"
 //	#include "torch-4.dmm"

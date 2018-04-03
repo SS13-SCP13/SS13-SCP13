@@ -302,6 +302,26 @@
 				max_mult = G.point_blank_mult()
 	P.damage *= max_mult
 
+/obj/item/weapon/gun/proc/rangedToAccuracy(var/ranged_skill)
+	switch(ranged_skill)
+		if(80 to INFINITY)
+			return 4
+
+		if(60 to 79)
+			return 2
+
+		if(51 to 60)
+			return -1
+
+		if(40 to 50)
+			return -3
+
+		if(21 to 39)//Being unskilled at guns decreased accuracy.
+			return -6
+
+		if(0 to 20)//Being unskilled at guns decreased accuracy.
+			return -8
+
 /obj/item/weapon/gun/proc/process_accuracy(obj/projectile, mob/user, atom/target, var/burst, var/held_twohanded)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
@@ -318,6 +338,8 @@
 	//Accuracy modifiers
 	P.accuracy = accuracy + acc_mod
 	P.dispersion = disp_mod
+	P.accuracy += dexToAccuracy(user.dex)
+	P.accuracy += rangedToAccuracy(user.ranged_skill)
 
 	//accuracy bonus from aiming
 	if (aim_targets && (target in aim_targets))
@@ -445,4 +467,5 @@
 	var/datum/firemode/new_mode = switch_firemodes(user)
 	if(new_mode)
 		to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
+
 

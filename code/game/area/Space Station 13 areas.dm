@@ -176,6 +176,12 @@ area/space/atmosalert()
 	requires_power = 0
 	dynamic_lighting = 0
 
+/area/site90/evacshelter
+	name = "\improper Evacuation Shelter"
+	icon_state = "centcom"
+	requires_power = 0
+	dynamic_lighting = 1
+
 ////////////
 //SHUTTLES//
 ////////////

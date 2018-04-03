@@ -110,7 +110,7 @@ var/list/outfits_decls_by_type_
 	if(W)
 		rank = W.rank
 		assignment = W.assignment
-	equip_pda(H, rank, assignment, equip_adjustments)
+
 
 	for(var/path in backpack_contents)
 		var/number = backpack_contents[path]
@@ -205,15 +205,6 @@ var/list/outfits_decls_by_type_
 	if(H.equip_to_slot_or_store_or_drop(W, id_slot))
 		return W
 
-/decl/hierarchy/outfit/proc/equip_pda(var/mob/living/carbon/human/H, var/rank, var/assignment, var/equip_adjustments)
-	if(!pda_slot || !pda_type)
-		return
-	if(OUTFIT_ADJUSTMENT_SKIP_ID_PDA & equip_adjustments)
-		return
-	var/obj/item/device/pda/heads/pda = new pda_type(H)
-	pda.set_owner_rank_job(H.real_name, rank, assignment)
-	if(H.equip_to_slot_or_store_or_drop(pda, pda_slot))
-		return pda
 
 /decl/hierarchy/outfit/dd_SortValue()
 	return name

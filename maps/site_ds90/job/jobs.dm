@@ -1,6 +1,21 @@
 /datum/map/site_ds90
 /datum/map/site_ds90/setup_map()
 
+/datum/job/assistant
+	title = "Class D"
+	department = "Civilian"
+
+	total_positions = -1
+	spawn_positions = -1
+	supervisors = "Foundation Personnel"
+	selection_color = "#E55700"
+	economic_modifier = 1
+	access = list()			//See /datum/job/assistant/get_access()
+	minimal_access = list()	//See /datum/job/assistant/get_access()
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
+	allowed_ranks = list(/datum/mil_rank/civ/classd)
+
+
 /datum/job/captain
 	title = "Facility Director"
 	supervisors = "the SCP Foundation and O5 Council"
@@ -9,7 +24,11 @@
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(7,10), rand(7,10), rand(12,16))
+		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
 
 /datum/job/hop
 	title = "Head of Human Resources"
@@ -21,7 +40,11 @@
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(7,10), rand(7,10), rand(11,14))
+		H.add_skills(rand(25,40), rand(25,40), rand(45,65), rand(40,60))
 
 
 	access = list(access_adminlvl4,
@@ -39,7 +62,11 @@
 	ideal_character_age = 60
 //	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/rd
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(6,8), rand(6,8), rand(14,17))
+		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
 
 	access = list(access_sciencelvl5,
 	access_sciencelvl4,
@@ -127,7 +154,7 @@
 	department_flag = SEC|COM
 	economic_modifier = 8
 	minimal_player_age = 21
-	ideal_character_age = 35
+	ideal_character_age = 55
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
 	allowed_branches = list(
 		/datum/mil_branch/security
@@ -138,20 +165,94 @@
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
 	minimal_access = list()
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(12,18), rand(12,16), rand(10,12))
+		H.add_skills(rand(60, 75), rand(60,75))
 
-/datum/job/enlistedofficer
-	title = "Security Private"
+/datum/job/ltofficer
+	title = "Security Lieutenant"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Chief of Security"
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = list("Senior Agent")
+	minimal_player_age = 10
+	ideal_character_age = 45
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/o2
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
+
+/datum/job/brigofficer
+	title = "Brig Officer"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 5
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8
+	)
+
+/datum/job/ncoofficer
+	title = "Security Officer"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = list("Agent")
+	minimal_player_age = 5
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e4,
+		/datum/mil_rank/security/e5,
+		/datum/mil_rank/security/e6
+	)
+
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+/datum/job/enlistedofficer
+	title = "Junior Security Officer"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = list("Junior Agent")
 	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/site90/crew/security/enlistedofficer
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -163,32 +264,72 @@
 
 	access = list(access_mtflvl1)
 	minimal_access = list()
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(11,16), rand(10,14), rand(7,10))
+		H.add_skills(rand(60, 75), rand(60,75))
 
-/datum/job/corporalofficer
-	title = "Security Corporal"
-	department = "Security"
-	department_flag = SEC
+// SCIENCE
+
+/datum/job/juniorscientist
+	title = "Junior Scientist"
+	department = "Science"
+	department_flag = SCI
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Chief of Security"
+	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = list("Agent")
-	minimal_player_age = 5
-	ideal_character_age = 25
+	alt_titles = list("Junior Xenobiologist", "Junior Xenoarcheologist")
+	minimal_player_age = 0
+	ideal_character_age = 22
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/site90/crew/security/corporalofficer
-	allowed_branches = list(
-		/datum/mil_branch/security
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/security/e3
-	)
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_sciencelvl1)
 	minimal_access = list()
 
+/datum/job/scientist
+	title = "Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	minimal_player_age = 5
+	ideal_character_age = 22
+	alt_titles = null
+//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
+
+	access = list(access_sciencelvl1, access_sciencelvl2)
+	minimal_access = list()
+
+/datum/job/seniorscientist
+	title = "Senior Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 6
+	spawn_positions = 6
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	minimal_player_age = 10
+	ideal_character_age = 22
+	alt_titles = null
+//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classb)
+
+
+	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	minimal_access = list()
 
 /*
 /datum/job/liaison

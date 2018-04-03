@@ -210,6 +210,9 @@
 			to_chat(user, "<span class='warning'>\The [src] must be closed before you can repair it.</span>")
 			return
 
+		if(user.skillcheck(user.engineering_skill, 75, 1, "I have failed to fix the door."))//Skill cehck.
+			return
+
 		//figure out how much metal we need
 		var/amount_needed = (maxhealth - health) / DOOR_REPAIR_AMOUNT
 		amount_needed = ceil(amount_needed)
@@ -235,6 +238,8 @@
 	if(repairing && isWelder(I))
 		if(!density)
 			to_chat(user, "<span class='warning'>\The [src] must be closed before you can repair it.</span>")
+			return
+		if(!user.skillcheck(user.engineering_skill, 75, 1))//Skill check.
 			return
 
 		var/obj/item/weapon/weldingtool/welder = I

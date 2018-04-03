@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1522056491
-DIR: code code\__defines code\datums code\datums\outfits code\datums\outfits\jobs code\game code\game\antagonist code\game\antagonist\station code\game\area code\game\jobs code\game\jobs\job code\game\objects code\game\objects\items code\game\objects\items\weapons icons icons\obj maps maps\site_ds90 maps\site_ds90\icons maps\site_ds90\items maps\site_ds90\items\clothing maps\site_ds90\job maps\site_ds90\structures maps\torch maps\torch\icons maps\torch\icons\mob maps\torch\icons\obj maps\torch\items maps\torch\job 
+LAST_COMPILE_TIME: 1522724955
+DIR: code code\__defines code\datums code\datums\outfits code\datums\outfits\jobs code\datums\wires code\game code\game\antagonist code\game\antagonist\station code\game\area code\game\jobs code\game\jobs\job code\game\machinery code\game\machinery\doors code\modules code\modules\mob code\modules\multiz code\modules\projectiles code\modules\projectiles\ammunition code\modules\projectiles\guns code\modules\projectiles\guns\projectile code\modules\projectiles\projectile code\modules\spells code\modules\spells\targeted code\modules\spells\targeted\projectile icons icons\obj 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 512.1416
-WINDOW: maps\site_ds90\structures\closets\security.dm;maps\site_ds90\ds90areas.dm;maps\site_ds90\ds90.dm;maps\site_ds90\..\site_ds90\site_ds90_ranks.dm;code\game\jobs\access_datum.dm;maps\site_ds90\..\site_ds90\job\jobs.dm;maps\site_ds90\site_ds90_ranks.dm;maps\site_ds90\job\jobs.dm;maps\site_ds90\items\cards_ids.dm;icons\obj\card.dmi;maps\torch\icons\assignment_hud.dmi;icons\obj\catwalks.dmi;maps\torch\job\outfits.dm;maps\site_ds90\job\outfits.dm;maps\torch\torch_npcs.dm;maps\site_ds90\items\clothing\solgov-under.dm
-FILE: maps\site_ds90\items\clothing\solgov-under.dm
+LAST_COMPILE_VERSION: 511.1385
+WINDOW: code\modules\multiz\movement.dm;code\modules\projectiles\projectile.dm;code\modules\projectiles\guns\projectile.dm;code\modules\spells\targeted\projectile\projectile.dm;code\modules\mob\stats_skills.dm;code\modules\projectiles\gun.dm;code\modules\projectiles\ammunition\boxes.dm;code\modules\projectiles\projectile\bullets.dm;code\modules\projectiles\guns\projectile\revolver.dm;code\modules\projectiles\ammunition\bullets.dm
+FILE: code\modules\projectiles\guns\projectile\revolver.dm
 */
 // END_INTERNALS
