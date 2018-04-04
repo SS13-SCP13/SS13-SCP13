@@ -585,6 +585,10 @@ default behaviour is:
 
 	update_vision_cone()
 
+/mob/living/set_dir()
+	..()
+	update_vision_cone()
+
 /mob/living/verb/resist()
 	set name = "Resist"
 	set category = "IC"
