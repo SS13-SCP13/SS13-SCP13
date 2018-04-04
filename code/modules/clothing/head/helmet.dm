@@ -98,6 +98,18 @@
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.5
 
+/obj/item/clothing/head/helmet/chaos
+	name = "tactical hazmat helmet"
+	desc = "An armored hazmat helmet. Has a distinct orange hue."
+	icon_state = "tac_helmet"
+	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 100, rad = 60)
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
+	item_flags = ITEM_FLAG_THICKMATERIAL|ITEM_FLAG_AIRTIGHT
+	body_parts_covered = HEAD|FACE|EYES
+	siemens_coefficient = 0.5
+	permeability_coefficient = 0
+
 /obj/item/clothing/head/helmet/thunderdome
 	name = "\improper Thunderdome helmet"
 	desc = "<i>'Let the battle commence!'</i>"
