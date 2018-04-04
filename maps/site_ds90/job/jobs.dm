@@ -1,3 +1,8 @@
+/////////////
+//READ THIS//
+/////////////
+// WARNING: DO NOT ADD INTEGER VALUES ABOVE 20 FOR ANY STAT OR SKILL OTHER THAN INTELLIGENCE, MEDICAL AND ENGINEERING. - LION
+
 /datum/map/site_ds90
 /datum/map/site_ds90/setup_map()
 
