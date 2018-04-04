@@ -1,0 +1,11 @@
+// BEGIN_INTERNALS
+/*
+LAST_COMPILE_TIME: 1522740286
+DIR: code code\__defines code\datums code\datums\outfits code\datums\outfits\jobs code\datums\wires code\game code\game\antagonist code\game\antagonist\station code\game\area code\game\jobs code\game\jobs\job code\game\machinery code\game\machinery\doors code\modules code\modules\clothing code\modules\clothing\spacesuits code\modules\clothing\spacesuits\rig code\modules\clothing\spacesuits\rig\modules code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\human code\modules\multiz code\modules\projectiles code\modules\projectiles\ammunition code\modules\projectiles\guns code\modules\projectiles\guns\projectile code\modules\projectiles\projectile code\modules\spells code\modules\spells\targeted code\modules\spells\targeted\projectile icons icons\obj maps maps\site_ds90 maps\site_ds90\job 
+AUTO_FILE_DIR: OFF
+MAP_ICON_TYPE: 0
+LAST_COMPILE_VERSION: 511.1385
+WINDOW: code\modules\multiz\movement.dm;code\modules\projectiles\projectile.dm;code\modules\projectiles\guns\projectile.dm;code\modules\spells\targeted\projectile\projectile.dm;code\modules\mob\stats_skills.dm;code\modules\projectiles\gun.dm;code\modules\projectiles\ammunition\boxes.dm;code\modules\projectiles\projectile\bullets.dm;code\modules\projectiles\guns\projectile\revolver.dm;code\modules\projectiles\ammunition\bullets.dm;maps\site_ds90\job\jobs.dm;code\modules\clothing\spacesuits\rig\modules\vision.dm;code\modules\mob\living\carbon\human\vision_cone.dm;code\modules\mob\living\living.dm
+FILE: code\modules\mob\living\living.dm
+*/
+// END_INTERNALS
