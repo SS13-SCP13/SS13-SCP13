@@ -124,6 +124,16 @@
 	src.item_state = "reactiveoff"
 	..()
 
+/obj/item/clothing/suit/armor/chaos
+	name = "tactical hazmat suit"
+	desc = "An armored hazmat suit with a distinct orange appearance."
+	icon_state = "tac_hazmat"
+	item_state = "tac_hazmat"
+	permeability_coefficient = 0
+	gas_transfer_coefficient = 0
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	armor = list(melee = 80, bullet = 65, laser = 65, energy = 15, bomb = 80, bio = 100, rad = 60)
+
 /*
 /obj/item/clothing/suit/armor/tactical
 	name = "tactical armor"

@@ -447,3 +447,26 @@
 	icon_state = "radiationnew"
 	desc = "A warning sign which reads: CAUTION, RADIATION HAZARD."
 
+/obj/structure/sign/scp/electrical
+	icon_state = "electrical"
+	desc = "A warning sign which reads: CAUTION, ELECTRICAL HAZARD."
+
+/obj/structure/sign/scp/cryogenic
+	icon_state = "cryogenic"
+	desc = "A warning sign which reads: CAUTION, POTENTIAL CRYOGENIC HAZARD."
+
+/obj/structure/sign/scp/oxidizer
+	icon_state = "oxidizer"
+	desc = "A warning sign which reads: CAUTION, FLAMMABLE SUBSTANCE HAZARD."
+
+/obj/structure/sign/scp/memnetic
+	icon_state = "memnetic"
+	desc = "A warning sign which reads: CAUTION, MEMETIC HAZARD."
+
+/obj/structure/sign/scp/biohazardous
+	icon_state = "biohazardous"
+	desc = "A warning sign which reads: CAUTION, BIOHAZARD."
+
+/obj/structure/sign/scp/amnesiac
+	icon_state = "amnesiac"
+	desc = "A warning sign which reads: CAUTION, AMNESTIC HAZARD."
