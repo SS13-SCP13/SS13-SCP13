@@ -19,15 +19,15 @@
 	allowed_spawns = list("Cryogenic Storage", "Cyborg Storage")
 	default_spawn = "Cryogenic Storage"
 
-	station_name  = "SEV Torch"
-	station_short = "Torch"
+	station_name  = "Deep Space Site-90"
+	station_short = "Site DS-90"
 	dock_name     = "TBD"
-	boss_name     = "Expeditionary Command"
-	boss_short    = "Command"
-	company_name  = "Sol Central Government"
-	company_short = "SolGov"
+	boss_name     = "O5 Foundation Council"
+	boss_short    = "O5 Council"
+	company_name  = "SCP Foundation"
+	company_short = "Foundation"
 
-	map_admin_faxes = list("NanoTrasen Central Office")
+	map_admin_faxes = list("Foundation Central Office")
 
 	//These should probably be moved into the evac controller...
 	shuttle_docked_message = "Attention all hands: Jump preparation complete. The bluespace drive is now spooling up, secure all stations for departure. Time to jump: approximately %ETD%."
