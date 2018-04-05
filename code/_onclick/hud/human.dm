@@ -238,6 +238,13 @@
 		mymob.nutrition_icon.screen_loc = ui_nutrition
 		hud_elements |= mymob.nutrition_icon
 
+	mymob.fixeye = new /obj/screen()
+	mymob.fixeye.icon = ui_style
+	mymob.fixeye.icon_state = "fixeye"
+	mymob.fixeye.name = "fixeye"
+	mymob.fixeye.screen_loc = ui_fixeye
+	hud_elements |= mymob.fixeye
+
 
 	mymob.pain = new /obj/screen/fullscreen/pain( null )
 	hud_elements |= mymob.pain
