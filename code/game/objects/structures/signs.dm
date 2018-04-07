@@ -425,23 +425,23 @@
 
 /obj/structure/sign/scp/topside/SecureArealv1mtf
 	icon_state = "secure"
-	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 1+ CLEARANCE REQUIRED."
+	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 1+ SECURITY CLEARANCE REQUIRED."
 
 /obj/structure/sign/scp/topside/SecureArealv2mtf
 	icon_state = "secure"
-	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 2+ CLEARANCE REQUIRED."
+	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 2+ SECURITY CLEARANCE REQUIRED."
 
 /obj/structure/sign/scp/topside/SecureArealv3mtf
 	icon_state = "secure"
-	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 3+ CLEARANCE REQUIRED."
+	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 3+ SECURITY CLEARANCE REQUIRED."
 
 /obj/structure/sign/scp/topside/SecureArealv4mtf
 	icon_state = "secure"
-	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 4+ CLEARANCE REQUIRED."
+	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 4+ SECURITY CLEARANCE REQUIRED."
 
 /obj/structure/sign/scp/topside/SecureArealv5mtf
 	icon_state = "secure"
-	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 5+ CLEARANCE REQUIRED."
+	desc = "A warning sign which reads: CAUTION, SECURE AREA. LEVEL 5+ SECURITY CLEARANCE REQUIRED."
 
 /obj/structure/sign/scp/radiation
 	icon_state = "radiationnew"
@@ -470,3 +470,43 @@
 /obj/structure/sign/scp/amnesiac
 	icon_state = "amnesiac"
 	desc = "A warning sign which reads: CAUTION, AMNESTIC HAZARD."
+
+/obj/structure/sign/scp/containers
+	icon_state = "containers"
+	desc = "A warning sign which reads: CAUTION, PRESSURIZED GAS STORAGE."
+
+/obj/structure/sign/scp/corrosive
+	icon_state = "corrosive"
+	desc = "A warning sign which reads: CAUTION, CORROSIVE HAZARD."
+
+/obj/structure/sign/scp/explosive
+	icon_state = "explosive"
+	desc = "A warning sign which reads: CAUTION, EXPLOSIVE HAZARD."
+
+/obj/structure/sign/scp/flamable
+	icon_state = "flamable"
+	desc = "A warning sign which reads: CAUTION, FLAMABLE HAZARD."
+
+/obj/structure/sign/scp/lasers
+	icon_state = "lasers"
+	desc = "A warning sign which reads: CAUTION, LASER HAZARD."
+
+/obj/structure/sign/scp/poisonous
+	icon_state = "poisonous"
+	desc = "A warning sign which reads: CAUTION, POISONOUS HAZARD."
+
+/obj/structure/sign/scp/magnetic
+	icon_state = "magnetic"
+	desc = "A warning sign which reads: CAUTION, MAGNETICAL HAZARD. NO METAL OBJECTS BEYOND THIS SIGN."
+
+/obj/structure/sign/scp/optics
+	icon_state = "optics"
+	desc = "A warning sign which reads: CAUTION, OPTICS HAZARD."
+
+/obj/structure/sign/scp/look
+	icon_state = "look"
+	desc = "A warning sign which reads: CAUTION, LOOK AT ANOMALOUS OBJECT."
+
+/obj/structure/sign/scp/dontlook
+	icon_state = "dontlook"
+	desc = "A warning sign which reads: CAUTION, DO NOT LOOK AT ANOMALOUS OBJECT."
