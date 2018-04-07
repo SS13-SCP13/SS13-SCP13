@@ -5701,7 +5701,6 @@
 	dir = 2;
 	pixel_y = 24
 	},
-/obj/structure/closet/secure_closet/cos,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/cos)

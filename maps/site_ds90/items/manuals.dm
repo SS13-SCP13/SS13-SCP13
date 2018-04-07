@@ -137,7 +137,7 @@
 
 /obj/item/weapon/folder/envelope/rep
 	desc = "A thick envelope. The SCG crest is stamped in the corner, along with 'TOP SECRET - UMBRA'."
-	
+
 /obj/item/weapon/folder/envelope/rep/Initialize()
 	. = ..()
 	new/obj/item/weapon/paper/umbra(src)
@@ -165,4 +165,27 @@
 	While drastic, I assure you this is a simple precaution, lest any issues. Just keep the option open, and carry on with your normal duties.
 	<i>Regards, John.</i></tt>
 	<i>This paper has been stamped with the stamp of Office of the General Secretary of SCG.</i>
+	"}
+
+// SCP BOOKS
+
+/obj/item/weapon/paper/scp173
+	name = "SCP-173"
+	info = {"
+	<tt><center><b><font color='red'>EUCLID: SCP-173</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	<img src = scp173.png>
+	</center>
+
+<b>Item #:</b> SCP-173<br>
+
+<b>Object Class:</b> Euclid<br>
+
+<b>Special Containment Procedures:</b> Item SCP-173 is to be kept in a locked container at all times. When personnel must enter SCP-173's container, no fewer than 3 may enter at any time and the door is to be relocked behind them. At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.<br>
+
+<b>Description:</b> Moved to Site-19 1993. Origin is as of yet unknown. It is constructed from concrete and rebar with traces of Krylon brand spray paint. SCP-173 is animate and extremely hostile. The object cannot move while within a direct line of sight. Line of sight must not be broken at any time with SCP-173. Personnel assigned to enter container are instructed to alert one another before blinking. Object is reported to attack by snapping the neck at the base of the skull, or by strangulation. In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures.<br>
+
+Personnel report sounds of scraping stone originating from within the container when no one is present inside. This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty.<br>
+
+The reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.</tt>
 	"}

@@ -128,6 +128,14 @@
 		new /obj/item/weapon/book/manual/research_and_development(src)
 		update_icon()
 
+/obj/structure/bookcase/manuals/scp/scp1to999
+	name = "SCP Documentation, 1 to 999"
+/*
+	New()
+		..()
+		new /obj/item/weapon/book/manual/research_and_development(src)
+		update_icon()
+*/
 
 /*
  * Book
