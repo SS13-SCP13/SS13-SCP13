@@ -330,7 +330,7 @@ its easier to just keep the beam vertical.
 				if(choices && choices.len > 0)
 					for(var/atom/typo in choices)
 						var/atom/choico = new typo
-						if(choico.parent_type != parent_type)
+						if("[choico.parent_type]" != "[parent_type]")
 							choices -= typo
 						qdel(choico)
 					var/choice = pick(choices)
@@ -339,11 +339,11 @@ its easier to just keep the beam vertical.
 						if(atombychoice)
 							return atombychoice
 			if(4)
-				var/list/choices = subtypesof(parent_type)
+				var/list/choices = subtypesof(src)
 				if(choices && choices.len > 0)
 					for(var/atom/typo in choices)
 						var/atom/choico = new typo
-						if(choico.parent_type != src.parent_type)
+						if("[choico.parent_type]" != "[type]")
 							choices -= typo
 						qdel(choico)
 					var/choice = pick(choices)
