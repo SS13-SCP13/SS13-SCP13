@@ -333,11 +333,12 @@ its easier to just keep the beam vertical.
 						if("[choico.parent_type]" != "[parent_type]")
 							choices -= typo
 						qdel(choico)
-					var/choice = pick(choices)
-					if(choice)
-						var/atom/atombychoice = new choice(loc)
-						if(atombychoice)
-							return atombychoice
+					if(choices.len > 0)
+						var/choice = pick(choices)
+						if(choice)
+							var/atom/atombychoice = new choice(loc)
+							if(atombychoice)
+								return atombychoice
 			if(4)
 				var/list/choices = subtypesof(src)
 				if(choices && choices.len > 0)
@@ -346,11 +347,12 @@ its easier to just keep the beam vertical.
 						if("[choico.parent_type]" != "[type]")
 							choices -= typo
 						qdel(choico)
-					var/choice = pick(choices)
-					if(choice)
-						var/atom/atombychoice = new choice(loc)
-						if(atombychoice)
-							return atombychoice
+					if(choices.len > 0)
+						var/choice = pick(choices)
+						if(choice)
+							var/atom/atombychoice = new choice(loc)
+							if(atombychoice)
+								return atombychoice
 			if(5)
 				var/choice = pick(subtypesof(src))
 				if(choice)
