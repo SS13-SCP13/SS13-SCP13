@@ -301,16 +301,16 @@ its easier to just keep the beam vertical.
 /atom/proc/fire_act()
 	return
 
-/atom/proc/scp914_act(var/mode)
+/atom/proc/scp914_act(var/mode) //DON'T OVERRIDE, override scp914_act_on_type instead
 	var/list/chosen_mode = modes_914[mode]
 	if(chosen_mode && chosen_mode.len > 0)
 		var/chosen = pick(chosen_mode)
 		var/atom/chosen_obj = new chosen(loc)
 		if(chosen_obj)
-			return chosen_obj
+			return scp914_act_on_type(chosen_obj)
 	else
 		switch(mode)
-			if(1) //1 and 2 should be refactored to fit MATERIAL datums once they are ready
+			if(1) //TODO: 1 and 2 should be refactored to fit MATERIAL datums once they are ready
 				var/atom/choice = new parent_type
 				if(choice)
 					var/atom/second_choice = choice.parent_type
@@ -318,13 +318,13 @@ its easier to just keep the beam vertical.
 						var/atom/atombychoice = new second_choice(loc)
 						qdel(choice)
 						if(atombychoice)
-							return atombychoice
+							return scp914_act_on_type(atombychoice)
 			if(2)
 				var/choice = parent_type
 				if(choice)
 					var/atom/atombychoice = new choice(loc)
 					if(atombychoice)
-						return atombychoice
+						return scp914_act_on_type(atombychoice)
 			if(3)
 				var/list/choices = subtypesof(parent_type)
 				if(choices && choices.len > 0)
@@ -338,7 +338,7 @@ its easier to just keep the beam vertical.
 						if(choice)
 							var/atom/atombychoice = new choice(loc)
 							if(atombychoice)
-								return atombychoice
+								return scp914_act_on_type(atombychoice)
 			if(4)
 				var/list/choices = subtypesof(src)
 				if(choices && choices.len > 0)
@@ -352,14 +352,17 @@ its easier to just keep the beam vertical.
 						if(choice)
 							var/atom/atombychoice = new choice(loc)
 							if(atombychoice)
-								return atombychoice
-			if(5)
+								return scp914_act_on_type(atombychoice)
+			if(5) //TODO: Very Fine should give one SCP component to an output object
 				var/choice = pick(subtypesof(src))
 				if(choice)
 					var/atom/atombychoice = new choice(loc)
 					if(atombychoice)
-						return atombychoice
+						return scp914_act_on_type(atombychoice)
 	return
+
+/atom/proc/scp914_act_on_type(var/atom/output) //to get around various type requirements, input/intake is src so don't worry
+	return output
 
 /atom/proc/melt()
 	return
