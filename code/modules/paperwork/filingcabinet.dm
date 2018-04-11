@@ -40,6 +40,75 @@
 /obj/structure/filingcabinet/filingcabinet	//not changing the path to avoid unecessary map issues, but please don't name stuff like this in the future -Pete
 	icon_state = "tallcabinet"
 
+/////////////////
+// SCP DRAWERS //
+/////////////////
+
+// SAFE DRAWERS
+
+/obj/structure/filingcabinet/scp/safe/scp1to999
+	name = "SCP Documents - Safe - 1 to 999"
+	desc = "A large cabinet with drawers."
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "filingcabinet"
+	density = 1
+	anchored = 1
+	atom_flags = ATOM_FLAG_CLIMBABLE
+	obj_flags = OBJ_FLAG_ANCHORABLE
+
+	New()
+		..()
+		new /obj/item/weapon/paper/scp999(src)
+		update_icon()
+
+/obj/structure/filingcabinet/scp/safe/scp1to999
+	name = "SCP Documents - Safe - 1000 to 1999"
+	desc = "A large cabinet with drawers."
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "filingcabinet"
+	density = 1
+	anchored = 1
+	atom_flags = ATOM_FLAG_CLIMBABLE
+	obj_flags = OBJ_FLAG_ANCHORABLE
+
+/*	New()
+		..()
+		new /obj/item/weapon/paper/scp999(src)
+		update_icon()
+*/
+
+/obj/structure/filingcabinet/scp/safe/scp2000to2999
+	name = "SCP Documents - Safe - 2000 to 2999"
+	desc = "A large cabinet with drawers."
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "filingcabinet"
+	density = 1
+	anchored = 1
+	atom_flags = ATOM_FLAG_CLIMBABLE
+	obj_flags = OBJ_FLAG_ANCHORABLE
+
+/*	New()
+		..()
+		new /obj/item/weapon/paper/scp999(src)
+		update_icon()
+*/
+
+/obj/structure/filingcabinet/scp/safe/scp3000to3999
+	name = "SCP Documents - Safe - 3000 to 3999"
+	desc = "A large cabinet with drawers."
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "filingcabinet"
+	density = 1
+	anchored = 1
+	atom_flags = ATOM_FLAG_CLIMBABLE
+	obj_flags = OBJ_FLAG_ANCHORABLE
+
+/*	New()
+		..()
+		new /obj/item/weapon/paper/scp999(src)
+		update_icon()
+*/
+
 
 /obj/structure/filingcabinet/Initialize()
 	for(var/obj/item/I in loc)
