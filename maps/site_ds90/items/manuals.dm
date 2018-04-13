@@ -171,9 +171,9 @@
 //SCP BOOKS//
 /////////////
 
-/obj/item/weapon/book/manual/scp173
+/obj/item/weapon/paper/scp/scp173
 	name = "SCP-173"
-	dat = {"
+	info = {"
 	<tt><center><b><font color='orange'>EUCLID: SCP-173</font></b>
 	<h3>FOUNDATION RESEARCH DIVISION</h3>
 	</center>
@@ -191,7 +191,7 @@ Personnel report sounds of scraping stone originating from within the container 
 The reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.</tt>
 	"}
 
-/obj/item/weapon/paper/scp999
+/obj/item/weapon/paper/scp/scp999
 	name = "SCP-999"
 	info = {"
 	<tt><center><b><font color='green'>SAFE: SCP-999</font></b>
@@ -247,9 +247,9 @@ Despite the tragedy that SCP-682 had brought upon the facility, SCP-999 has not 
 
 "}
 
-/obj/item/weapon/book/manual/scp106
+/obj/item/weapon/paper/scp/scp106
 	name = "SCP-106"
-	dat = {"
+	info = {"
 	<tt><center><b><font color='red'>KETER: SCP-106</font></b>
 	<h3>FOUNDATION RESEARCH DIVISION</h3>
 	</center>
@@ -283,9 +283,9 @@ SCP-106 is capable of passing through solid matter, leaving behind a large patch
 Limited observation of this “pocket dimension” has shown it to be comprised mostly of halls and rooms, with -DATA EXPUNGED- entry. This activity can continue for days, with some subjected individuals being released for the express purpose of hunting, recapture, -DATA EXPUNGED-.
 "}
 
-/obj/item/weapon/book/manual/scp939
+/obj/item/weapon/paper/scp/scp939
 	name = "SCP-939"
-	dat = {"
+	info = {"
 	<tt><center><b><font color='red'>KETER: SCP-939</font></b>
 	<h3>FOUNDATION RESEARCH DIVISION</h3>
 	</center>
