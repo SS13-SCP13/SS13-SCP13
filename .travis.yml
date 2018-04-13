@@ -43,5 +43,3 @@ matrix:
       script:
         - shopt -s globstar
         - (! grep 'step_[xy]' _maps/map_files/**/*.dmm)
-        - md5sum -c - <<< "6dc1b6bf583f3bd4176b6df494caa5f1 *html/changelogs/example.yml"
-        - python tools/ss13_genchangelog.py html/changelog.html html/changelogs
