@@ -41,5 +41,3 @@ matrix:
         - pip install --user beautifulsoup4 -q
       before_script:
       script:
-        - shopt -s globstar
-        - (! grep 'step_[xy]' _maps/map_files/**/*.dmm)
