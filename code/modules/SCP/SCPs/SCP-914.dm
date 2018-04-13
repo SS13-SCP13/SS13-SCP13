@@ -83,19 +83,37 @@ Proc /atom/scp914_act(var/mode) can be overriden to define any additional effect
   var/I = image(icon, switch_state)
   overlays += I
 
-/obj/machinery/scp914/CtrlClick(var/mob/user)
-  decrease_mode(user)
+/obj/machinery/scp914/verb/turn_clockwise()
+	set category = "Object"
+	set name = "Turn Switch (Clockwise)"
+	set src in view(1)
 
-/obj/machinery/scp914/proc/decrease_mode(var/mob/user)
-  switch_mode(FALSE)
-  user.visible_message("[user] turned knob counter-clockwise, switching mode to [get_mode()]", "You switched mode to [get_mode()]")
+	if (usr.incapacitated() || usr.restrained())
+		return
+  increase_mode(usr)
+
+/obj/machinery/scp914/verb/turn_cclockwise()
+	set category = "Object"
+	set name = "Turn Switch (Counter - clockwise)"
+	set src in view(1)
+
+	if (usr.incapacitated() || usr.restrained())
+		return
+  decrease_mode(usr)
+
+/obj/machinery/scp914/CtrlClick(var/mob/user)
+  increase_mode(user)
 
 /obj/machinery/scp914/AltClick(var/mob/user)
-  increase_mode(user)
+  decrease_mode(user)
 
 /obj/machinery/scp914/proc/increase_mode(var/mob/user)
   switch_mode(TRUE)
   user.visible_message("[user] turned knob clockwise, switching mode to [get_mode()]", "You switched mode to [get_mode()]")
+
+/obj/machinery/scp914/proc/decrease_mode(var/mob/user)
+  switch_mode(FALSE)
+  user.visible_message("[user] turned knob counter-clockwise, switching mode to [get_mode()]", "You switched mode to [get_mode()]")
 
 /obj/machinery/scp914/proc/get_mode()
   var/text = "NONE"
