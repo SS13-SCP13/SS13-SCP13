@@ -1,4 +1,4 @@
-# SCP13
+# SCP13 Repository
 
 [Website](https://www.scp13.site) - [Code](https://github.com/SS13-SCP13/SS13-SCP13)
 
