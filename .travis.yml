@@ -11,10 +11,7 @@ env:
     - BYOND_MINOR="1385"
     - BYOND_MACRO_COUNT=2
   matrix:
-    - DM_MAPFILE="example"
-    - DM_MAPFILE="torch"
-    - DM_MAPFILE="overmap_example"
-    - DM_MAPFILE="away_sites_testing"
+    - DM_MAPFILE="_map_include"
 
 cache:
   directories:
