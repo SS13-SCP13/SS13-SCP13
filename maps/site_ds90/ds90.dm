@@ -67,10 +67,10 @@
 	#include "loadout/loadout_xeno.dm"*/
 //	#include "loadout/~defines.dm"
 
-	#include "../site_ds90/ds90-1.dmm"
-	#include "../site_ds90/ds90-2.dmm"
-	#include "../site_ds90/ds90-3.dmm"
-	#include "../site_ds90/ds90-8.dmm"
+	#include "ds90-1.dmm"
+	#include "ds90-2.dmm"
+	#include "ds90-3.dmm"
+	#include "ds90-8.dmm"
 //	#include "torch-3.dmm"
 //	#include "torch-4.dmm"
 //	#include "torch-5.dmm"
