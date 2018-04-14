@@ -2,6 +2,7 @@
 
 [Website](https://www.scp13.site) - [Code](https://github.com/SS13-SCP13/SS13-SCP13)
 
+[![Build Status](https://travis-ci.org/SS13-SCP13/SS13-SCP13.svg?branch=master)](https://travis-ci.org/SS13-SCP13/SS13-SCP13)
 ---
 
 ### LICENSE
