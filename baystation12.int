@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1522903634
-DIR: code code\__defines code\_onclick code\_onclick\hud code\datums code\datums\communication code\datums\components code\datums\extensions code\datums\observation code\datums\outfits code\datums\outfits\jobs code\datums\repositories code\datums\repositories\crew code\datums\uplink code\datums\uplink\deity code\datums\wires code\game code\game\antagonist code\game\antagonist\station code\game\area code\game\gamemodes code\game\gamemodes\cult code\game\gamemodes\cult\cultify code\game\jobs code\game\jobs\job code\game\machinery code\game\machinery\doors code\modules code\modules\client code\modules\client\preference_setup code\modules\client\preference_setup\loadout code\modules\clothing code\modules\clothing\spacesuits code\modules\clothing\spacesuits\rig code\modules\clothing\spacesuits\rig\modules code\modules\emotes code\modules\emotes\definitions code\modules\integrated_electronics code\modules\item_worth code\modules\item_worth\Value_procs code\modules\lobby_music code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\human code\modules\mob\living\deity code\modules\mob\living\deity\phenomena code\modules\mob\observer code\modules\mob\observer\virtual code\modules\multiz code\modules\overmap code\modules\projectiles code\modules\projectiles\ammunition code\modules\projectiles\guns code\modules\projectiles\guns\projectile code\modules\projectiles\projectile code\modules\prometheus_metrics code\modules\reagents code\modules\reagents\dispenser code\modules\SCP code\modules\SCP\SCPs code\modules\shuttles code\modules\spells code\modules\spells\targeted code\modules\spells\targeted\projectile code\modules\surgery icons icons\mob icons\obj maps maps\site_ds90 maps\site_ds90\job maps\torch maps\torch\loadout 
+LAST_COMPILE_TIME: 1524154222
+DIR: code code\__defines code\_onclick code\_onclick\hud code\datums code\datums\communication code\datums\components code\datums\extensions code\datums\observation code\datums\outfits code\datums\outfits\jobs code\datums\repositories code\game code\modules code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\human icons icons\obj maps maps\site_ds90 maps\torch 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 511.1385
-WINDOW: code\_onclick\hud\screen_objects.dm;code\modules\mob\living\carbon\human\human.dm;code\_onclick\hud\human.dm;code\_onclick\hud\_defines.dm;code\modules\mob\mob_defines.dm
-FILE: code\_onclick\hud\_defines.dm
+LAST_COMPILE_VERSION: 512.1416
+WINDOW: code\_onclick\hud\screen_objects.dm;code\modules\mob\living\carbon\human\human.dm;code\_onclick\hud\human.dm;code\_onclick\hud\_defines.dm;code\modules\mob\mob_defines.dm;maps\site_ds90\ds90-1.dmm;maps\site_ds90\ds90-2.dmm;maps\torch\torch-3.dmm;icons\obj\power.dmi
+FILE: maps\site_ds90\ds90-1.dmm
 */
 // END_INTERNALS
