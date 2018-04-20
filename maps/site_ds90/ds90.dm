@@ -11,6 +11,7 @@
 //	#include "torch_ranks.dm"
 	#include "../site_ds90/site_ds90_ranks.dm"
 	#include "../torch/torch_shuttles.dm"
+	#include "../torch/torch_presets.dm"
 //	#include "torch_unit_testing.dm"
 //	#include "torch_antagonism.dm"
 //	#include "torch_npcs.dm"
