@@ -7,7 +7,7 @@
 	#include "../site_ds90/ds90elevators.dm"
 //	#include "torch_holodecks.dm"
 //	#include "torch_overmap.dm"
-//	#include "torch_presets.dm"
+	#include "ds90_presets.dm"
 //	#include "torch_ranks.dm"
 	#include "../site_ds90/site_ds90_ranks.dm"
 	#include "../torch/torch_shuttles.dm"
