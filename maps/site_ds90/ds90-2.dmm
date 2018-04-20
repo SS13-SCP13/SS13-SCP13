@@ -122,7 +122,7 @@
 "cr" = (/obj/structure/cable{icon_state = "1-8"; dir = 4; d1 = 2; d2 = 4},/obj/effect/floor_decal/industrial/warning/corner{dir = 8},/turf/simulated/floor/plating,/area/engineering/auxpower{name = "\improper Entrance Zone Subgrid"})
 "cs" = (/obj/structure/ladder,/obj/machinery/light/small{dir = 1; pixel_y = 22},/turf/simulated/floor/plating,/area/engineering/auxpower{name = "\improper Entrance Zone Subgrid"})
 "ct" = (/turf/simulated/floor/plating,/area/engineering/auxpower{name = "\improper Entrance Zone Subgrid"})
-"cu" = (/obj/structure/cable{d1 = 32; d2 = 1; icon_state = "32-1"},/obj/structure/lattice,/turf/simulated/open,/area/engineering/auxpower{name = "\improper Entrance Zone Subgrid"})
+"cu" = (/obj/structure/lattice,/obj/structure/cable{d1 = 16; d2 = 0; icon_state = "16-0"; pixel_y = 0},/obj/structure/cable,/turf/simulated/open,/area/engineering/auxpower{name = "\improper Entrance Zone Subgrid"})
 "cv" = (/turf/simulated/wall/scp/wall/t{icon_state = "t-shape"; dir = 1},/area/hallway/primary/firstdeck/center{name = "\improper Entrance Zone Hallways"})
 "cw" = (/obj/structure/table/steel,/turf/simulated/floor/tiled/white,/area/space)
 "cx" = (/obj/structure/table/steel,/obj/item/modular_computer/laptop,/turf/simulated/floor/tiled/white,/area/space)
