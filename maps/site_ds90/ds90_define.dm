@@ -6,9 +6,9 @@
 
 	lobby_icon = 'maps/torch/icons/lobby.dmi'
 
-	station_levels = list(1,2)
-	contact_levels = list(1,2)
-	player_levels = list(1,2)
+	station_levels = list(1,2,3)
+	contact_levels = list(1,2,3)
+	player_levels = list(1,2,3)
 	admin_levels = list(8)
 	empty_levels = list()
 	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1,"5"=1,"8"=30)
