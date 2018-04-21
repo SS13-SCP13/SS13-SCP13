@@ -49,3 +49,17 @@
 	lift_floor_name = "Hangar Deck"
 	lift_announce_str = "Arriving at Hangar Deck: Shuttle Docks. Cargo Storage. Main Hangar. Supply Office. Expedition Preparation. Mineral Processing."
 	base_turf = /turf/simulated/floor
+
+/area/turbolift/upperentrance
+	name = "lift (upper entrance zone)"
+	lift_floor_label = "Upper Entrance Zone"
+	lift_floor_name = "Upper Entrance Zone"
+	lift_announce_str = "Arriving at Upper Entrance Zone: Offices. Conference Rooms. Gate B. Gate A."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/lowerentrance
+	name = "lift (lower entrance zone)"
+	lift_floor_label = "Lower Entrance Zone"
+	lift_floor_name = "Lower Entrance Zone"
+	lift_announce_str = "Arriving at Hangar Deck: Management Department. Medical Bay. Access to High Containment Zone."
+	base_turf = /turf/simulated/floor
