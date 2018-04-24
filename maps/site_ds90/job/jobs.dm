@@ -326,7 +326,7 @@
 	spawn_positions = 6
 	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	alt_titles = list("Senior Xenobiologist", "Senior Xenoarcheologist")
 	minimal_player_age = 10
 	ideal_character_age = 22
 	alt_titles = null
