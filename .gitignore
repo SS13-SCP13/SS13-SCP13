@@ -28,3 +28,6 @@ config/dbconfig_docker.txt
 config/dbconfig.txt
 config/custom_sprites.txt
 config/custom_items.txt
+baystation12.rsc
+baystation12.int
+baystation12.dyn.rsc
