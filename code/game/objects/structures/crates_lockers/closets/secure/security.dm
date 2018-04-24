@@ -296,8 +296,8 @@
 	)
 
 /obj/structure/closet/secure_closet/administration/facilityadmin
-	name = "captain's locker"
-	req_access = list(access_captain)
+	name = "facility director's locker"
+	req_access = list(access_adminlvl5)
 	icon_state = "flocked"
 	icon_closed = "funlocked"
 	icon_locked = "flocked"
