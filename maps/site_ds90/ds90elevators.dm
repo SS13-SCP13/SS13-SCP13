@@ -38,17 +38,6 @@
 	lift_size_y = 4
 
 	areas_to_use = list(
-		/area/turbolift/lowerentrance3,
-		/area/turbolift/hcz
-		)
-
-/obj/turbolift_map_holder/lowereztohcz2
-	name = "lower ez to hcz turbolift map placeholder2"
-	depth = 2
-	lift_size_x = 4
-	lift_size_y = 4
-
-	areas_to_use = list(
 		/area/turbolift/lowerentrance4,
-		/area/turbolift/hcz2
+		/area/turbolift/hcz
 		)

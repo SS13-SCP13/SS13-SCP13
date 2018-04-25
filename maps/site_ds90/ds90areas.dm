@@ -57,7 +57,7 @@
 	lift_announce_str = "Arriving at Upper Entrance Zone: Offices. Conference Rooms. Gate B. Gate A."
 	base_turf = /turf/simulated/floor
 
-/area/turbolift/lowerentrance3
+/area/turbolift/lowerentrance
 	name = "lift (lower entrance zone)"
 	lift_floor_label = "Lower Entrance Zone"
 	lift_floor_name = "Lower Entrance Zone"
