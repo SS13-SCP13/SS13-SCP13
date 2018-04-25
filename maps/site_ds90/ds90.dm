@@ -4,7 +4,7 @@
 	#include "../torch/torch_areas.dm"
 	#include "../site_ds90/ds90areas.dm"
 //	#include "torch_elevator.dm"
-	#include "../site_ds90/ds90elevators.dm"
+	#include "ds90elevators.dm"
 //	#include "torch_holodecks.dm"
 //	#include "torch_overmap.dm"
 	#include "ds90_presets.dm"
