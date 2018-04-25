@@ -5,12 +5,10 @@
 var/list/nuke_disks = list()
 
 /datum/game_mode/nuclear
-	name = "Mercenary"
-	round_description = "A mercenary strike force is approaching!"
-	extended_round_description = "The Company's majority control of phoron in Nyx has marked the \
-		station to be a highly valuable target for many competing organizations and individuals. Being a \
-		colony of sizable population and considerable wealth causes it to often be the target of various \
-		attempts of robbery, fraud and other malicious actions."
+	name = "Chaos Insurgency"
+	round_description = "A Chaos Insurgency strike force is approaching!"
+	extended_round_description = "The site's success and safety has attracted the prevasive eye  \
+		of the Chaos Insurgency, a heavily militarized organization in opposition to the Foundation."
 	config_tag = "mercenary"
 	required_players = 15
 	required_enemies = 1
@@ -41,43 +39,43 @@ var/list/nuke_disks = list()
 
 	if(!disk_rescued &&  station_was_nuked && !syndies_didnt_escape)
 		feedback_set_details("round_end_result","win - syndicate nuke")
-		to_world("<FONT size = 3><B>Mercenary Major Victory!</B></FONT>")
-		to_world("<B>[syndicate_name()] operatives have destroyed [station_name()]!</B>")
+		to_world("<FONT size = 3><B>Chaos Insurgency Major Victory!</B></FONT>")
+		to_world("<B>Chaos Insurgency operatives have destroyed [station_name()]!</B>")
 
 	else if (!disk_rescued &&  station_was_nuked && syndies_didnt_escape)
 		feedback_set_details("round_end_result","halfwin - syndicate nuke - did not evacuate in time")
 		to_world("<FONT size = 3><B>Total Annihilation</B></FONT>")
-		to_world("<B>[syndicate_name()] operatives destroyed [station_name()] but did not leave the area in time and got caught in the explosion.</B> Next time, don't lose the disk!")
+		to_world("<B>Chaos Insurgency operatives destroyed [station_name()] but did not leave the area in time and got caught in the explosion.</B> Next time, don't lose the disk!")
 
 	else if (!disk_rescued && !station_was_nuked &&  nuke_off_station && !syndies_didnt_escape)
 		feedback_set_details("round_end_result","halfwin - blew wrong station")
-		to_world("<FONT size = 3><B>Crew Minor Victory</B></FONT>")
-		to_world("<B>[syndicate_name()] operatives secured the authentication disk but blew up something that wasn't [station_name()].</B> Next time, don't lose the disk!")
+		to_world("<FONT size = 3><B>Site Minor Victory</B></FONT>")
+		to_world("<B>Chaos Insurgency operatives secured the authentication disk but blew up something that wasn't [station_name()].</B> Next time, don't lose the disk!")
 
 	else if (!disk_rescued && !station_was_nuked &&  nuke_off_station && syndies_didnt_escape)
 		feedback_set_details("round_end_result","halfwin - blew wrong station - did not evacuate in time")
-		to_world("<FONT size = 3><B>[syndicate_name()] operatives have earned Darwin Award!</B></FONT>")
-		to_world("<B>[syndicate_name()] operatives blew up something that wasn't [station_name()] and got caught in the explosion.</B> Next time, don't lose the disk!")
+		to_world("<FONT size = 3><B>Chaos Insurgency operatives have earned Darwin Award!</B></FONT>")
+		to_world("<B>Chaos Insurgency operatives blew up something that wasn't [station_name()] and got caught in the explosion.</B> Next time, don't lose the disk!")
 
 	else if (disk_rescued && mercs.antags_are_dead())
 		feedback_set_details("round_end_result","loss - evacuation - disk secured - syndi team dead")
-		to_world("<FONT size = 3><B>Crew Major Victory!</B></FONT>")
-		to_world("<B>The Research Staff has saved the disc and killed the [syndicate_name()] Operatives</B>")
+		to_world("<FONT size = 3><B>Site Major Victory!</B></FONT>")
+		to_world("<B>The Site Staff has saved the disc and killed the Chaos Insurgency Operatives</B>")
 
 	else if ( disk_rescued                                        )
 		feedback_set_details("round_end_result","loss - evacuation - disk secured")
-		to_world("<FONT size = 3><B>Crew Major Victory</B></FONT>")
-		to_world("<B>The Research Staff has saved the disc and stopped the [syndicate_name()] Operatives!</B>")
+		to_world("<FONT size = 3><B>Site Major Victory</B></FONT>")
+		to_world("<B>The Site Staff has saved the disc and stopped the [syndicate_name()] Operatives!</B>")
 
 	else if (!disk_rescued && mercs.antags_are_dead())
 		feedback_set_details("round_end_result","loss - evacuation - disk not secured")
-		to_world("<FONT size = 3><B>Mercenary Minor Victory!</B></FONT>")
-		to_world("<B>The Research Staff failed to secure the authentication disk but did manage to kill most of the [syndicate_name()] Operatives!</B>")
+		to_world("<FONT size = 3><B>Chaos InsurgencyMinor Victory!</B></FONT>")
+		to_world("<B>The Site Staff failed to secure the authentication disk but did manage to kill most of the Chaos Insurgency Operatives!</B>")
 
 	else if (!disk_rescued && crew_evacuated)
 		feedback_set_details("round_end_result","halfwin - detonation averted")
-		to_world("<FONT size = 3><B>Mercenary Minor Victory!</B></FONT>")
-		to_world("<B>[syndicate_name()] operatives recovered the abandoned authentication disk but detonation of [station_name()] was averted.</B> Next time, don't lose the disk!")
+		to_world("<FONT size = 3><B>Chaos Insurgency Minor Victory!</B></FONT>")
+		to_world("<B>Chaos Insurgency operatives recovered the abandoned authentication disk but detonation of [station_name()] was averted.</B> Next time, don't lose the disk!")
 
 	else if (!disk_rescued && !crew_evacuated)
 		feedback_set_details("round_end_result","halfwin - interrupted")
