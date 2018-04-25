@@ -702,12 +702,10 @@
 	desc = "A bright orange jumpsuit, indicative of Class D personnel."
 	icon_state = "d"
 
-/obj/item/clothing/under/syndicate
+/obj/item/clothing/under/ci
 	name = "tactical sweatshirt"
-	desc = "A white tactical shirt for tactical operations in tactics"
-	icon_state = "tac_jumpsuit"
-	item_state = "bl_suit"
-	worn_state = "tac_jumpsuit"
+	desc = "A white tactical shirt for tactical operations."
+	icon_state = "tac"
 	has_sensor = 0
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
