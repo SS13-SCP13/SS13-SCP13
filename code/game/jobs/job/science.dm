@@ -76,15 +76,15 @@
 	title = "Senior Scientist"
 	department = "Science"
 	department_flag = SCI
+	selection_color = "#633d63"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Research Director and anyone in a higher position than you"
+	supervisors = "the Research Director"
 	economic_modifier = 4
-	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	alt_titles = list("Senior Xenobiologist", "Senior Xenoarcheologist")
 	minimal_player_age = 10
-	ideal_character_age = 22
-	alt_titles = null
-//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	ideal_character_age = 40
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/seniorscientist
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classb)
 
@@ -96,15 +96,15 @@
 	title = "Scientist"
 	department = "Science"
 	department_flag = SCI
+	selection_color = "#633d63"
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
 	alt_titles = list("Xenobiologist", "Xenoarcheologist")
 	minimal_player_age = 5
-	ideal_character_age = 22
-	alt_titles = null
-//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	ideal_character_age = 32
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/scientist
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
@@ -119,12 +119,11 @@
 	selection_color = "#633d63"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Research Director"
+	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = null
+	alt_titles = list("Junior Xenobiologist", "Junior Xenoarcheologist")
 	minimal_player_age = 0
 	ideal_character_age = 25
-	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classc)

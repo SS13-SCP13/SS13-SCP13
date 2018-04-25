@@ -97,3 +97,38 @@
 	id = access_adminlvl5
 	desc = "Admin Level 5"
 	access_type = ACCESS_REGION_COMMAND
+
+// UTILITY
+/* AWAITING SPRITES */
+/*
+/var/const/access_utilitylvl1 = 600
+/datum/access/utilitylvl1
+	id = access_utilitylvl1
+	desc = "Utility Level 1"
+	access_type = ACCESS_REGION_GENERAL
+
+/var/const/access_utilitylvl2 = 601
+/datum/access/utilitylvl2
+	id = access_utilitylvl2
+	desc = "Utility Level 2"
+	access_type = ACCESS_REGION_GENERAL
+
+/var/const/access_utilitylvl3 = 602
+/datum/access/utilitylvl3
+	id = access_utilitylvl3
+	desc = "Utility Level 3"
+	access_type = ACCESS_REGION_GENERAL
+
+/var/const/access_utilitylvl4 = 603
+/datum/access/utilitylvl4
+	id = access_utilitylvl4
+	desc = "Utility Level 4"
+	access_type = ACCESS_REGION_GENERAL
+
+/var/const/access_utilitylvl5 = 604
+/datum/access/utilitylvl5
+	id = access_utilitylvl5
+	desc = "Utility Level 5"
+	access_type = ACCESS_REGION_GENERAL
+
+	*/

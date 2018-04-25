@@ -10,7 +10,7 @@ var/const/NETWORK_SUPPLY      = "Supply"
 var/const/NETWORK_HANGAR      = "Hangar"
 var/const/NETWORK_EXPLO       = "Exploration"
 var/const/NETWORK_THIRD_DECK  = "Third Deck"
-
+/*
 /datum/map/torch/get_network_access(var/network)
 	switch(network)
 		if(NETWORK_AQUILA)
@@ -28,7 +28,7 @@ var/const/NETWORK_THIRD_DECK  = "Third Deck"
 		if(NETWORK_EXPLO)
 			return access_explorer
 	return get_shared_network_access(network) || ..()
-
+*/
 /datum/map/torch
 	// Networks that will show up as options in the camera monitor program
 	station_networks = list(
@@ -217,5 +217,5 @@ var/const/NETWORK_ENGINEERING_OUTPOST = "Engineering Outpost"
 		num2text(SCI_FREQ)   = list(access_tox,access_robotics,access_xenobiology),
 		num2text(SUP_FREQ)   = list(access_cargo),
 		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
-		num2text(EXP_FREQ)   = list(access_explorer)
+//		num2text(EXP_FREQ)   = list(access_explorer)
 	)
