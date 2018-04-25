@@ -256,25 +256,61 @@
 	desc = "A bright yellow keycard. Looks ordinary?"
 	icon_state = "sciencelvl2"
 	item_state = "Science_ID2"
-//	job_access_type = /datum/job/juniorscientist
+	job_access_type = /datum/job/scientist
 
 /obj/item/weapon/card/id/sciencelvl3
 	name = "level three science keycard"
 	desc = "A dark yellow keycard. Looks cool, the person wearing it, not so much."
 	icon_state = "sciencelvl3"
 	item_state = "Science_ID3"
-//	job_access_type = /datum/job/juniorscientist
+	job_access_type = /datum/job/scientist
 
 /obj/item/weapon/card/id/sciencelvl4
 	name = "level four science keycard"
 	desc = "An orange keycard. Looks important."
 	icon_state = "sciencelvl4"
 	item_state = "Science_ID4"
-//	job_access_type = /datum/job/juniorscientist
+	job_access_type = /datum/job/seniorscientist
 
 /obj/item/weapon/card/id/sciencelvl5
 	name = "level five science keycard"
 	desc = "A red keycard. Looks like the person wearing this won't give it up easy."
 	icon_state = "sciencelvl5"
 	item_state = "Science_ID5"
-//	job_access_type = /datum/job/juniorscientist
+	job_access_type = /datum/job/rd
+
+// ADMIN
+/obj/item/weapon/card/id/adminlvl1
+	name = "level one administration keycard"
+	desc = "A black keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "adminlvl1"
+	item_state = "Admin_ID"
+//	job_access_type = /datum/job/rd
+
+/obj/item/weapon/card/id/adminlvl2
+	name = "level two administration keycard"
+	desc = "A black keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "adminlvl2"
+	item_state = "Admin_ID"
+//	job_access_type = /datum/job/rd
+
+/obj/item/weapon/card/id/adminlvl3
+	name = "level three administration keycard"
+	desc = "A black keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "adminlvl3"
+	item_state = "Admin_ID"
+//	job_access_type = /datum/job/rd
+
+/obj/item/weapon/card/id/adminlvl4
+	name = "level four administration keycard"
+	desc = "A black keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "adminlvl4"
+	item_state = "Admin_ID"
+	job_access_type = /datum/job/hop
+
+/obj/item/weapon/card/id/adminlvl5
+	name = "level five administration keycard"
+	desc = "A black keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "adminlvl5"
+	item_state = "Admin_ID"
+	job_access_type = /datum/job/captain

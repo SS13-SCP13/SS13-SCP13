@@ -35,6 +35,19 @@
 		H.add_stats(rand(7,10), rand(7,10), rand(12,16))
 		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
 
+	access = list(
+	access_adminlvl4,
+	access_adminlvl3,
+	access_adminlvl2,
+	access_adminlvl1,
+	access_utilitylvl1,
+	access_utilitylvl2,
+	access_utilitylvl3,
+	access_utilitylvl4,
+	access_utilitylvl5
+	)
+	minimal_access = list()
+
 
 /datum/job/hop
 	title = "Head of Personnel"
@@ -54,15 +67,21 @@
 		H.add_skills(rand(25,40), rand(25,40), rand(45,65), rand(40,60))
 
 
-	access = list(access_adminlvl4,
+	access = list(
+	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1)
+	access_adminlvl1,
+	access_utilitylvl1,
+	access_utilitylvl2,
+	access_utilitylvl3,
+	access_utilitylvl4
+	)
 	minimal_access = list()
 
 
 /datum/job/rd
-	title = "Director of Science"
+	title = "Research Director"
 	supervisors = "Facility Director and the Head of Human Resources"
 	economic_modifier = 20
 	minimal_player_age = 15
