@@ -42,16 +42,16 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
 	name = OUTFIT_JOB_NAME("Facility Director")
 	uniform = /obj/item/clothing/under/scp/suittie
-//	l_ear = /obj/item/device/radio/headset/heads/torchxo
 	shoes = /obj/item/clothing/shoes/dress
-//	id_type = /obj/item/weapon/card/id/torch/silver
+	suit = /obj/item/clothing/suit/storage/toggle/suit/black
+	id_type = /obj/item/weapon/card/id/adminlvl5
 
 /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	name = OUTFIT_JOB_NAME("Head of Human Resources")
 	uniform = /obj/item/clothing/under/scp/suittie
-//	l_ear = /obj/item/device/radio/headset/heads/torchxo
 	shoes = /obj/item/clothing/shoes/dress
-//	id_type = /obj/item/weapon/card/id/torch/silver
+	suit = /obj/item/clothing/suit/storage/toggle/suit/black
+	id_type = /obj/item/weapon/card/id/adminlvl4
 
 // END OF COMMAND OUTFITS
 

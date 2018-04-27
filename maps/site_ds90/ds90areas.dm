@@ -61,5 +61,26 @@
 	name = "lift (lower entrance zone)"
 	lift_floor_label = "Lower Entrance Zone"
 	lift_floor_name = "Lower Entrance Zone"
-	lift_announce_str = "Arriving at Hangar Deck: Management Department. Medical Bay. Access to High Containment Zone."
+	lift_announce_str = "Arriving at Lower Entrance Zone: Management Department. Medical Bay. Access to High Containment Zone."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/lowerentrance4
+	name = "lift (lower entrance zone)"
+	lift_floor_label = "Lower Entrance Zone"
+	lift_floor_name = "Lower Entrance Zone"
+	lift_announce_str = "Arriving at Lower Entrance Zone: Management Department. Medical Bay. Access to High Containment Zone."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/hcz
+	name = "lift (lower entrance zone)"
+	lift_floor_label = "Lower Entrance Zone"
+	lift_floor_name = "Lower Entrance Zone"
+	lift_announce_str = "Arriving at Lower Entrance Zone: Management Department. Medical Bay. Access to High Containment Zone."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/hcz2
+	name = "lift (lower entrance zone)"
+	lift_floor_label = "Lower Entrance Zone"
+	lift_floor_name = "Lower Entrance Zone"
+	lift_announce_str = "Arriving at Lower Entrance Zone: Management Department. Medical Bay. Access to High Containment Zone."
 	base_turf = /turf/simulated/floor
