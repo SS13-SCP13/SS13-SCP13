@@ -3,15 +3,15 @@
 	desc = "A painting depicting a rising wave."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "great_wave"
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	var/last_regen = 0
 	var/gen_time = 100 //how long we wait between hurting victims
 	var/list/victims = list()
 
 /obj/structure/scp151/proc/hurt_victims() //simulate drowning
-	for(mob/living/user in victims)
-		user.apply_damage(10, OXY)
+	for(var/mob/living/user in victims)
+		user.apply_damage(30, OXY)
 
 /obj/structure/scp151/Initialize()
 	. = ..()
@@ -25,8 +25,9 @@
 
 /obj/structure/scp151/examine(mob/living/user)
 	. = ..()
-	victims += user //on examine, adds user into victims list
-	spawn(200)
+	if(!(user in victims))
+		victims += user //on examine, adds user into victims list
+	spawn(2 SECONDS)
 		user.emote("cough")
-	spawn(400)
+	spawn(2 SECONDS)
 		to_chat(user, "<span class='warning'>Your lungs begin to feel tight, and the briny taste of seawater permeates your mouth.</span>")
