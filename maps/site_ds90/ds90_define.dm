@@ -6,15 +6,15 @@
 
 	lobby_icon = 'maps/torch/icons/lobby.dmi'
 
-	station_levels = list(1,2,3)
-	contact_levels = list(1,2,3)
-	player_levels = list(1,2,3)
+	station_levels = list(1,2,3,4)
+	contact_levels = list(1,2,3,4)
+	player_levels = list(1,2,3,4)
 	admin_levels = list(8)
 	empty_levels = list()
 	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1,"5"=1,"8"=30)
 	overmap_size = 35
 	overmap_event_areas = 0
-	usable_email_tlds = list("torch.ec.scg", "torch.fleet.mil", "torch.marine.mil", "freemail.nt")
+	usable_email_tlds = list("ds90.foundation", "security.ds90.foundation", "science.ds90.foundation", "utility.ds90.foundation")
 
 	allowed_spawns = list("Cryogenic Storage", "Cyborg Storage")
 	default_spawn = "Cryogenic Storage"
