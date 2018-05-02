@@ -12,6 +12,14 @@
 	var/fluorescent // Shows up under a UV light.
 	var/datum/scp/SCP //For SCP's
 
+	var/list/rough
+	var/list/coarse
+	var/list/oneone
+	var/list/fine
+	var/list/veryfine
+
+	var/list/modes_914
+
 	///Chemistry.
 	var/datum/reagents/reagents = null
 
@@ -45,7 +53,7 @@
 
 	if(opacity)
 		updateVisibility(src)
-
+	modes_914 = list(rough, coarse, oneone, fine, veryfine)
 //Called after New if the map is being loaded. mapload = TRUE
 //Called from base of New if the map is not being loaded. mapload = FALSE
 //This base must be called or derivatives must set initialized to TRUE
@@ -292,6 +300,69 @@ its easier to just keep the beam vertical.
 
 /atom/proc/fire_act()
 	return
+
+/atom/proc/scp914_act(var/mode) //DON'T OVERRIDE, override scp914_act_on_type instead
+	var/list/chosen_mode = modes_914[mode]
+	if(chosen_mode && chosen_mode.len > 0)
+		var/chosen = pick(chosen_mode)
+		var/atom/chosen_obj = new chosen(loc)
+		if(chosen_obj)
+			return scp914_act_on_type(chosen_obj)
+	else
+		switch(mode)
+			if(1) //TODO: 1 and 2 should be refactored to fit MATERIAL datums once they are ready
+				var/atom/choice = new parent_type
+				if(choice)
+					var/atom/second_choice = choice.parent_type
+					if(second_choice)
+						var/atom/atombychoice = new second_choice(loc)
+						qdel(choice)
+						if(atombychoice)
+							return scp914_act_on_type(atombychoice)
+			if(2)
+				var/choice = parent_type
+				if(choice)
+					var/atom/atombychoice = new choice(loc)
+					if(atombychoice)
+						return scp914_act_on_type(atombychoice)
+			if(3)
+				var/list/choices = subtypesof(parent_type)
+				if(choices && choices.len > 0)
+					for(var/atom/typo in choices)
+						var/atom/choico = new typo
+						if("[choico.parent_type]" != "[parent_type]")
+							choices -= typo
+						qdel(choico)
+					if(choices.len > 0)
+						var/choice = pick(choices)
+						if(choice)
+							var/atom/atombychoice = new choice(loc)
+							if(atombychoice)
+								return scp914_act_on_type(atombychoice)
+			if(4)
+				var/list/choices = subtypesof(src)
+				if(choices && choices.len > 0)
+					for(var/atom/typo in choices)
+						var/atom/choico = new typo
+						if("[choico.parent_type]" != "[type]")
+							choices -= typo
+						qdel(choico)
+					if(choices.len > 0)
+						var/choice = pick(choices)
+						if(choice)
+							var/atom/atombychoice = new choice(loc)
+							if(atombychoice)
+								return scp914_act_on_type(atombychoice)
+			if(5) //TODO: Very Fine should give one SCP component to an output object
+				var/choice = pick(subtypesof(src))
+				if(choice)
+					var/atom/atombychoice = new choice(loc)
+					if(atombychoice)
+						return scp914_act_on_type(atombychoice)
+	return
+
+/atom/proc/scp914_act_on_type(var/atom/output) //to get around various type requirements, input/intake is src so don't worry
+	return output
 
 /atom/proc/melt()
 	return

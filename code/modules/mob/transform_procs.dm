@@ -332,3 +332,11 @@
 		organ.min_broken_damage *= 5
 	verbs += /mob/living/proc/breath_death
 	verbs += /mob/living/proc/consume
+
+/mob/scp914_act_on_type(var/atom/output) //Example for special 914 act - transfer mind from one object to another
+	if(ismob(output))
+		var/mob/M = new output(loc)
+		qdel(output)
+		M.key = key
+		return M
+	return src

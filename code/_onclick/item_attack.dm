@@ -31,7 +31,9 @@ avoid code duplication. This includes items that may sometimes act as a standard
 
 // No comment
 /atom/proc/attackby(obj/item/W, mob/user, var/click_params)
-	return
+	if(SendSignal(COMSIG_PARENT_ATTACKBY, W, user, click_params) & COMPONENT_NO_AFTERATTACK)
+		return TRUE
+	return FALSE
 
 /atom/movable/attackby(obj/item/W, mob/user)
 	if(!(W.item_flags & ITEM_FLAG_NO_BLUDGEON))
@@ -92,4 +94,3 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	if(HULK in user.mutations)
 		power *= 2
 	return target.hit_with_weapon(src, user, power, hit_zone)
-
