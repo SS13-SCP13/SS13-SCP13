@@ -78,22 +78,22 @@
 				<body>
 
 				<h1>Science For Dummies</h1>
-				So you want to further SCIENCE? Good man/woman/thing! However, SCIENCE is a complicated process even though it's quite easy. For the most part, it's a three step process:
+				So you want to further SCIENCE? That's FANTASTIC! SCIENCE is a complicated process, but after reading this guide, it should become easy. For the most part, it's a three step process:
 				<ol>
 					<li><b>Deconstruct</b> items in the Destructive Analyzer to advance technology or improve the design.</li>
 					<li><b>Build</b> unlocked designs in the Protolathe and Circuit Imprinter.</li>
 					<li><b>Repeat</b>!</li>
 				</ol>
 
-				Those are the basic steps to furthering science. What do you do science with, however? Well, you have four major tools: R&D Console, the Destructive Analyzer, the Protolathe, and the Circuit Imprinter.
+				Those are the basic steps to furthering science. What do you do science with, however? Well, you have four major tools: the R&D Console, the Destructive Analyzer, the Protolathe, and the Circuit Imprinter.
 
 				<h2>The R&D Console</h2>
-				The R&D console is the cornerstone of any research lab. It is the central system from which the Destructive Analyzer, Protolathe, and Circuit Imprinter (your R&D systems) are controlled. More on those systems in their own sections.
-				On its own, the R&D console acts as a database for all your technological gains and new devices you discover. So long as the R&D console remains intact, you'll retain all that SCIENCE you've discovered. Protect it though,
+				The R&D console is the cornerstone of any research lab. It is the central system from which the Destructive Analyzer, Protolathe, and Circuit Imprinter (your R&D systems) are controlled. You can find more on those systems in their own sections.
+				On its own, the R&D console acts as a database for all your technological gains and new devices you discover. The R&D Console is connected to a server, which as long as it remains intact, you'll retain all that SCIENCE you've discovered. Protect it though,
 				because if it gets damaged, you'll lose your data!
 				In addition to this important purpose, the R&D console has a disk menu that lets you transfer data from the database onto disk or from the disk into the database.
 				It also has a settings menu that lets you re-sync with nearby R&D devices (if they've become disconnected), lock the console from the unworthy,
-				upload the data to all other R&D consoles in the network (all R&D consoles are networked by default), connect/disconnect from the network, and purge all data from the database.<br><br>
+				upload the data to all consoles connected to the server (all R&D consoles are networked by default), connect/disconnect from the network, and purge all data from the database.<br><br>
 
 				<b>NOTE:</b> The technology list screen, circuit imprinter, and protolathe menus are accessible by non-scientists. This is intended to allow 'public' systems for the plebians to utilize some new devices.
 
@@ -107,18 +107,18 @@
 				This machine, along with the Protolathe, is used to actually produce new devices. The Circuit Imprinter takes glass and various chemicals (depends on the design) to produce new circuit boards to build new machines or computers. It can even be used to print AI modules.
 
 				<h2>Protolathe</h2>
-				This machine is an advanced form of the Autolathe that produce non-circuit designs. Unlike the Autolathe, it can use processed metal, glass, solid phoron, silver, gold, and diamonds along with a variety of chemicals to produce devices.
-				The downside is that, again, not all devices you make are 100% reliable when you first discover them.
+				This machine is an advanced form of the Autolathe that can produce designs discovered from the R&D console. Unlike the Autolathe, it can use processed metal, glass, solid phoron, telekill alloy, silver, gold, and diamonds along with a variety of chemicals to produce devices.
+				However, it should be noted that, like the Autolathe, not all devices you make are 100% reliable when you first discover them.
 
 				<h2>Reliability and You</h2>
-				As it has been stated, many devices, when they're first discovered, do not have a 100% reliability. Instead,
-				the reliability of the device is dependent upon a base reliability value, whatever improvements to the design you've discovered through the Destructive Analyzer,
+				As it has been stated, many devices do not have a 100% reliability when they're first discovered, Instead,
+				the reliability of the device is dependent upon a base reliability value, the improvements to the design you've discovered through the Destructive Analyzer,
 				and any advancements you've made with the device's source technologies. To be able to improve the reliability of a device, you have to use the device until it breaks beyond repair. Once that happens, you can analyze it in a Destructive Analyzer.
-				Once the device reaches a certain minimum reliability, you'll gain technological advancements from it.
+				Once the device reaches a certain reliability, you can gain technological advancements from it by analyzing it further.
 
 				<h2>Building a Better Machine</h2>
-				Many machines produced from circuit boards inserted into a machine frames require a variety of parts to construct. These are parts like capacitors, batteries, matter bins, and so forth. As your knowledge of science improves, more advanced versions are unlocked.
-				If you use these parts when constructing something, its attributes may be improved.
+				Many machines produced from circuit boards inserted into a machine frames require a variety of parts to construct. These are parts like capacitors, batteries, matter bins, and so forth. As your knowledge of science improves, more advanced parts are unlocked.
+				If you replace the old parts with the new parts, or build another machine with them, it's attributes will be improved.
 				For example, if you use an advanced matter bin when constructing an autolathe (rather than a regular one), it'll hold more materials. Experiment around with stock parts of various qualities to see how they affect the end results! Be warned, however:
 				Tier 3 and higher stock parts don't have 100% reliability and their low reliability may affect the reliability of the end machine.
 				</body>

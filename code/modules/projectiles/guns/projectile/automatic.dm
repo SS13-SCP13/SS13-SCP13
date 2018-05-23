@@ -106,6 +106,36 @@
 	wielded_item_state = (ammo_magazine)? "arifle-wielded" : "arifle-wielded-empty"
 	..()
 
+/obj/item/weapon/gun/projectile/automatic/hcrifle
+	name = "HC Rifle"
+	desc = "An assault rifle chambered in 7.62. This one has an orange stripe."
+	icon_state = "tac_hcrifle"
+	item_state = "arifle"
+	w_class = ITEM_SIZE_HUGE
+	force = 10
+	caliber = "a762"
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 5)
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/a762
+	allowed_magazines = /obj/item/ammo_magazine/a762
+	auto_eject = 1
+	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+	one_hand_penalty = 3
+	wielded_item_state = "arifle-wielded"
+
+	//Assault rifle, burst fire degrades quicker than SMG, worse one-handing penalty, slightly increased move delay
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    one_hand_penalty=5, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",   burst=5, fire_delay=null, move_delay=6,    one_hand_penalty=6, burst_accuracy=list(0,-1,-2,-3,-3), dispersion=list(0.6, 1.0, 1.2, 1.2, 1.5)),
+		)
+
+/obj/item/weapon/gun/projectile/automatic/hcrifle/update_icon()
+	icon_state = (ammo_magazine)? "tac_hcrifle" : "tac_hcrifle-empty"
+	wielded_item_state = (ammo_magazine)? "arifle-wielded" : "arifle-wielded-empty"
+	..()
+
 /obj/item/weapon/gun/projectile/automatic/wt550
 	name = "9mm submachine gun"
 	desc = "The WT-550 Saber is a cheap self-defense weapon, mass-produced by Ward-Takahashi for paramilitary and private use. Uses 9mm rounds."
@@ -205,6 +235,39 @@
 		to_chat(user, "\The [launcher] has \a [launcher.chambered] loaded.")
 	else
 		to_chat(user, "\The [launcher] is empty.")
+
+
+/obj/item/weapon/gun/projectile/automatic/tactical
+	name = "tactical SMG"
+	desc = "A fully automatic sub-machine gun equipped with an overloaded top magazine. This one has an orange stripe"
+	icon_state = "tac_smg"
+	item_state = "z8carbine"
+	w_class = ITEM_SIZE_HUGE
+	force = 10
+	caliber = "9mm"
+	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 3)
+	ammo_type = /obj/item/ammo_casing/c9mm
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/tac9mm
+	allowed_magazines = /obj/item/ammo_magazine/tac9mm
+	wielded_item_state = "z8carbine-wielded"
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1,    fire_delay=0,    move_delay=null, use_launcher=null, one_hand_penalty=5, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3,    fire_delay=null, move_delay=6,    use_launcher=null, one_hand_penalty=6, burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0))
+		)
+
+
+/obj/item/weapon/gun/projectile/automatic/tactical/update_icon()
+	..()
+	if(ammo_magazine)
+		if(ammo_magazine.stored_ammo.len)
+			icon_state = "tac_smg-loaded"
+		else
+			icon_state = "tac_smg-empty"
+	else
+		icon_state = "tac_smg"
+	return
 
 /obj/item/weapon/gun/projectile/automatic/l6_saw
 	name = "light machine gun"

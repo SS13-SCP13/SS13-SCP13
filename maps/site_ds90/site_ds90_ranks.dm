@@ -1,13 +1,11 @@
-/datum/map/torch
+/datum/map/ds90
 	branch_types = list(
 		/datum/mil_branch/security,
-//		/datum/mil_branch/mtf,
 		/datum/mil_branch/civilian
 	)
 
 	spawn_branch_types = list(
 		/datum/mil_branch/security,
-//		/datum/mil_branch/mtf,
 		/datum/mil_branch/civilian
 	)
 
@@ -20,7 +18,7 @@
 /datum/mil_branch/security
 	name = "Site DS90 Security Branch"
 	name_short = "SD90SB"
-	email_domain = "security.siteds90.foundation"
+	email_domain = "security.siteds90"
 
 	rank_types = list(
 		/datum/mil_rank/security/e1,
@@ -34,6 +32,11 @@
 		/datum/mil_rank/security/e9,
 		/datum/mil_rank/security/e9_alt1,
 		/datum/mil_rank/security/e9_alt2,
+		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/w2,
+		/datum/mil_rank/security/w3,
+		/datum/mil_rank/security/w4,
+		/datum/mil_rank/security/w5,
 		/datum/mil_rank/security/o1,
 		/datum/mil_rank/security/o2,
 		/datum/mil_rank/security/o3,
@@ -46,93 +49,44 @@
 		/datum/mil_rank/security/e1,
 		/datum/mil_rank/security/e2,
 		/datum/mil_rank/security/e3,
+		/datum/mil_rank/security/e4,
 		/datum/mil_rank/security/e5,
+		/datum/mil_rank/security/e6,
 		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8,
+		/datum/mil_rank/security/e9,
+		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/w2,
+		/datum/mil_rank/security/w3,
+		/datum/mil_rank/security/w4,
+		/datum/mil_rank/security/w5,
 		/datum/mil_rank/security/o1,
-		/datum/mil_rank/security/o3,
-		/datum/mil_rank/security/o5,
-		/datum/mil_rank/security/o6
+		/datum/mil_rank/security/o2,
+		/datum/mil_rank/security/o3
 	)
 
 	assistant_job = "Private"
-/*
-/datum/mil_branch/fleet
-	name = "Fleet"
-	name_short = "SCGF"
-	email_domain = "torch.fleet.mil"
 
-	rank_types = list(
-		/datum/mil_rank/fleet/e1,
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8,
-		/datum/mil_rank/fleet/e9,
-		/datum/mil_rank/fleet/e9_alt1,
-		/datum/mil_rank/fleet/e9_alt2,
-		/datum/mil_rank/fleet/e9_alt3,
-		/datum/mil_rank/fleet/e9_alt4,
-		/datum/mil_rank/fleet/w1,
-		/datum/mil_rank/fleet/w2,
-		/datum/mil_rank/fleet/w3,
-		/datum/mil_rank/fleet/w4,
-		/datum/mil_rank/fleet/w5,
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5,
-		/datum/mil_rank/fleet/o6,
-		/datum/mil_rank/fleet/o7,
-		/datum/mil_rank/fleet/o8,
-		/datum/mil_rank/fleet/o9,
-		/datum/mil_rank/fleet/o10,
-		/datum/mil_rank/fleet/o10_alt
-	)
-
-	spawn_rank_types = list(
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8,
-		/datum/mil_rank/fleet/e9,
-		/datum/mil_rank/fleet/e9_alt1,
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5
-	)
-*/
 //	assistant_job = "Crewman"
 
 /datum/mil_branch/civilian
 	name = "Civilian"
 	name_short = "civ"
-	email_domain = "freemail.nt"
+	email_domain = "siteds90.foundation"
 
 	rank_types = list(
-		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/scp,
-//		/datum/mil_rank/civ/contractor,
-//		/datum/mil_rank/civ/offduty,
-//		/datum/mil_rank/civ/marshal,
-//		/datum/mil_rank/civ/synthetic
+		/datum/mil_rank/civ/classa,
+		/datum/mil_rank/civ/classb,
+		/datum/mil_rank/civ/classc,
+		/datum/mil_rank/civ/classd,
+		/datum/mil_rank/civ/classe
 	)
 
 	spawn_rank_types = list(
-		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/scp,
-/*		/datum/mil_rank/civ/contractor,
-		/datum/mil_rank/civ/offduty,
-		/datum/mil_rank/civ/marshal,
-		/datum/mil_rank/civ/synthetic*/
+		/datum/mil_rank/civ/classa,
+		/datum/mil_rank/civ/classb,
+		/datum/mil_rank/civ/classc,
+		/datum/mil_rank/civ/classd
 	)
 
 //	assistant_job = "Passenger"
@@ -145,8 +99,8 @@
 		return "E[sort_order]"
 	return "O[sort_order - 10]"
 /*
- *  Fleet
- *  =====
+ *  Security
+ *  ========
  */
 
 /datum/mil_rank/security/e1
@@ -374,19 +328,22 @@
 	name = "Civilian"
 	name_short = null
 
-/datum/mil_rank/civ/scp
-	name = "Foundation Employee"
-/*
-/datum/mil_rank/civ/contractor
-	name = "Contractor"
+/datum/mil_rank/civ/classa
+	name = "Class A Foundation Personnel"
+	name_short = "Class A"
 
-/datum/mil_rank/civ/offduty
-	name = "Off-Duty Personnel"
+/datum/mil_rank/civ/classb
+	name = "Class B Foundation Personnel"
+	name_short = "Class B"
 
-/datum/mil_rank/civ/marshal
-	name = "Colonial Marshal"
-	name_short = "CMar"
-	accessory = list(/obj/item/clothing/accessory/badge/marshal)
+/datum/mil_rank/civ/classc
+	name = "Class C Foundation Personnel"
+	name_short = "Class C"
 
-/datum/mil_rank/civ/synthetic
-	name = "Synthetic"*/
+/datum/mil_rank/civ/classd
+	name = "Class D Foundation Personnel"
+	name_short = "Class D"
+
+/datum/mil_rank/civ/classe
+	name = "Class E Foundation Personnel"
+	name_short = "Class E"

@@ -152,6 +152,7 @@
 
 	open_sound_powered = 'sound/machines/windowdoor.ogg'
 	close_sound_powered = 'sound/machines/windowdoor.ogg'
+	open_failure_access_denied = 'sound/machines/keycardenied.ogg'
 
 	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
 	maxhealth = 300
@@ -166,6 +167,7 @@
 
 	open_sound_powered = 'sound/machines/AirlockOpen1.wav'
 	close_sound_powered = 'sound/machines/AirlockClose1.wav'
+	open_failure_access_denied = 'sound/machines/keycardenied.ogg'
 
 	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
 	maxhealth = 300
@@ -180,6 +182,7 @@
 
 	open_sound_powered = 'sound/machines/AirlockOpen1.wav'
 	close_sound_powered = 'sound/machines/AirlockClose1.wav'
+	open_failure_access_denied = 'sound/machines/keycardenied.ogg'
 
 	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
 	maxhealth = 300
@@ -1027,7 +1030,7 @@ About the new airlock wires panel:
 			to_chat(user, "<span class='notice'>The airlock's bolts prevent it from being forced.</span>")
 		else if(brace)
 			to_chat(user, "<span class='notice'>The airlock's brace holds it firmly in place.</span>")
-		else
+		else if(user.statscheck(user.str, 20, 1, message = "Gah, I'm not strong enough to open the door. Maybe if I try again."))//Gotta be strong to get that there door open.
 			if(density)
 				spawn(0)	open(1)
 			else

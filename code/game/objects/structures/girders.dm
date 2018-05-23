@@ -204,6 +204,13 @@
 		return
 	return ..()
 
+/obj/structure/girder/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if (istype(W,/obj/item/weapon/melee/energy/breach))
+		visible_message("<span class='danger'>[user] slices [src] apart!</span>")
+		dismantle()
+		return
+	return ..()
+
 
 /obj/structure/girder/ex_act(severity)
 	switch(severity)

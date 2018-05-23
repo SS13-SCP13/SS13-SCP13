@@ -42,16 +42,16 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
 	name = OUTFIT_JOB_NAME("Facility Director")
 	uniform = /obj/item/clothing/under/scp/suittie
-//	l_ear = /obj/item/device/radio/headset/heads/torchxo
 	shoes = /obj/item/clothing/shoes/dress
-//	id_type = /obj/item/weapon/card/id/torch/silver
+	suit = /obj/item/clothing/suit/storage/toggle/suit/black
+	id_type = /obj/item/weapon/card/id/adminlvl5
 
 /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	name = OUTFIT_JOB_NAME("Head of Human Resources")
 	uniform = /obj/item/clothing/under/scp/suittie
-//	l_ear = /obj/item/device/radio/headset/heads/torchxo
 	shoes = /obj/item/clothing/shoes/dress
-//	id_type = /obj/item/weapon/card/id/torch/silver
+	suit = /obj/item/clothing/suit/storage/toggle/suit/black
+	id_type = /obj/item/weapon/card/id/adminlvl4
 
 // END OF COMMAND OUTFITS
 
@@ -61,15 +61,6 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	name = OUTFIT_JOB_NAME("Executive Officer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/command
 	shoes = /obj/item/clothing/shoes/dutyboots
-
-/decl/hierarchy/outfit/job/torch/passenger/research/rd
-	name = OUTFIT_JOB_NAME("Research Director - Torch")
-	l_ear = /obj/item/device/radio/headset/heads/torchntcommand
-	uniform = /obj/item/clothing/under/rank/research_director
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
-	shoes = /obj/item/clothing/shoes/brown
-	id_type = /obj/item/weapon/card/id/torch/silver/research
-	pda_type = /obj/item/device/pda/heads/rd
 
 /decl/hierarchy/outfit/job/torch/crew/command/cmo
 	name = OUTFIT_JOB_NAME("Chief Medical Officer - Torch")
@@ -116,18 +107,70 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	l_ear = /obj/item/device/radio/headset/heads/cos
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-//	id_type = /obj/item/weapon/card/id/torch/silver/security
+	id_type = /obj/item/weapon/card/id/seclvl5
 
-/decl/hierarchy/outfit/job/site90/crew/command/cos/New()
-	..()
-	BACKPACK_OVERRIDE_SECURITY
-
-
-/decl/hierarchy/outfit/site90/torch/crew/security/enlistedofficer
-	name = OUTFIT_JOB_NAME("Security Private")
+/decl/hierarchy/outfit/job/site90/crew/security/ltofficer
+	name = OUTFIT_JOB_NAME("Brig Officer")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-//	id_type = /obj/item/weapon/card/id/torch/crew/security
+	id_type = /obj/item/weapon/card/id/seclvl4
+
+/decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	name = OUTFIT_JOB_NAME("Brig Officer")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl2
+
+/decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
+	name = OUTFIT_JOB_NAME("Security Officer")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl2
+
+/decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
+	name = OUTFIT_JOB_NAME("Junior Security Officer")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl1
+
+// SCIENCE OUTFITS
+
+/decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	name = OUTFIT_JOB_NAME("Junior Scientist")
+	uniform = /obj/item/clothing/under/scp/suittie
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/sciencelvl1
+
+/decl/hierarchy/outfit/job/site90/crew/science/scientist
+	name = OUTFIT_JOB_NAME("Junior Scientist")
+	uniform = /obj/item/clothing/under/scp/suittie
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/sciencelvl2
+
+/decl/hierarchy/outfit/job/site90/crew/science/seniorscientist
+	name = OUTFIT_JOB_NAME("Junior Scientist")
+	uniform = /obj/item/clothing/under/scp/suittie
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/sciencelvl4
+
+/decl/hierarchy/outfit/job/site90/crew/science/researchdirector
+	name = OUTFIT_JOB_NAME("Research Director")
+	uniform = /obj/item/clothing/under/scp/suittie
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/rd
+	shoes = /obj/item/clothing/shoes/laceup
+	id_type = /obj/item/weapon/card/id/sciencelvl5
+
+
+// MISC OUTFITS
+
+/decl/hierarchy/outfit/job/site90/crew/civ/classd
+	name = OUTFIT_JOB_NAME("Class D")
+	uniform = /obj/item/clothing/under/scp/dclass
+	shoes = /obj/item/clothing/shoes/workboots
+
 /*
 /decl/hierarchy/outfit/job/torch/crew/command/cos/fleet
 	name = OUTFIT_JOB_NAME("Chief of Security - Fleet")
@@ -236,14 +279,13 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 /decl/hierarchy/outfit/job/torch/crew/security/New()
 	..()
 	BACKPACK_OVERRIDE_SECURITY
-
+*/
 /decl/hierarchy/outfit/job/torch/crew/security/brig_officer
 	name = OUTFIT_JOB_NAME("Brig Officer")
-	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/security
+	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/torch/crew/security/brigofficer
-	pda_type = /obj/item/device/pda/warden
-
+//	id_type = /obj/item/weapon/card/id/torch/crew/security/brigofficer
+/*
 /decl/hierarchy/outfit/job/torch/crew/security/brig_officer/fleet
 	name = OUTFIT_JOB_NAME("Brig Officer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security

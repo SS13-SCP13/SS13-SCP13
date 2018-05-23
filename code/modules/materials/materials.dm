@@ -133,6 +133,9 @@ var/list/name_to_material
 	if(used_stack.get_amount() < 1 || target_stack.get_amount() < 1)
 		to_chat(user, "<span class='warning'>You need one rod and one sheet of [display_name] to make anything useful.</span>")
 		return
+	if(!user.skillcheck(user.engineering_skill, 60, 1, message = "I have botched bulding what I'm building."))
+		return
+
 	used_stack.use(1)
 	target_stack.use(1)
 	var/obj/item/stack/S = new rod_product(get_turf(user))
@@ -145,6 +148,9 @@ var/list/name_to_material
 		return
 	if(used_stack.get_amount() < 5 || target_stack.get_amount() < 1)
 		to_chat(user, "<span class='warning'>You need five wires and one sheet of [display_name] to make anything useful.</span>")
+		return
+
+	if(!user.skillcheck(user.engineering_skill, 60, 1, message = "I have botched adding the wires."))
 		return
 
 	used_stack.use(5)
@@ -456,6 +462,9 @@ var/list/name_to_material
 
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>This task is too complex for your clumsy hands.</span>")
+		return 1
+
+	if(!user.skillcheck(user.engineering_skill, 60, 1, message = "I have failed to build a window."))
 		return 1
 
 	var/turf/T = user.loc

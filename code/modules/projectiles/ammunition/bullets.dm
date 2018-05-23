@@ -8,6 +8,11 @@
 	caliber = ".50"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
+/obj/item/ammo_casing/m500
+	desc = "A .500 S&W Magnum bullet casing."
+	caliber = ".500 Magnum"
+	projectile_type = /obj/item/projectile/bullet/pistol/vstrong
+
 /obj/item/ammo_casing/a75
 	desc = "A 20mm bullet casing."
 	caliber = "75"

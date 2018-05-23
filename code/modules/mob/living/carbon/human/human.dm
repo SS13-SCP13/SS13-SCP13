@@ -60,6 +60,9 @@
 	if(statpanel("Status"))
 		stat("Intent:", "[a_intent]")
 		stat("Move Mode:", "[m_intent]")
+		stat("ST:", "[str]")//Stats!
+		stat("DX:", "[dex]")
+		stat("IT:", "[int]")
 
 		if(evacuation_controller)
 			var/eta_status = evacuation_controller.get_status_panel_eta()

@@ -4,13 +4,14 @@
 	#include "../torch/torch_areas.dm"
 	#include "../site_ds90/ds90areas.dm"
 //	#include "torch_elevator.dm"
-	#include "../site_ds90/ds90elevators.dm"
+	#include "ds90elevators.dm"
 //	#include "torch_holodecks.dm"
 //	#include "torch_overmap.dm"
-//	#include "torch_presets.dm"
+	#include "ds90_presets.dm"
 //	#include "torch_ranks.dm"
 	#include "../site_ds90/site_ds90_ranks.dm"
 	#include "../torch/torch_shuttles.dm"
+	#include "../torch/torch_presets.dm"
 //	#include "torch_unit_testing.dm"
 //	#include "torch_antagonism.dm"
 //	#include "torch_npcs.dm"
@@ -22,7 +23,7 @@
 //	#include "datums/supplypacks/security.dm"
 //	#include "datums/supplypacks/science.dm"
 
-//	#include "items/cards_ids.dm"
+	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
 	#include "items/headsets.dm"
 	#include "items/items.dm"
@@ -40,12 +41,9 @@
 	#include "items/clothing/solgov-suit.dm"
 	#include "items/clothing/solgov-under.dm"
 
-//	#include "job/access.dm"
-	#include "../site_ds90/job/access.dm"
-//	#include "job/jobs.dm"
-	#include "../site_ds90/job/jobs.dm"
-//	#include "job/outfits.dm"
-	#include "../site_ds90/job/outfits.dm"
+	#include "job/access.dm"
+	#include "job/jobs.dm"
+	#include "job/outfits.dm"
 
 //	#include "structures/closets.dm"
 	#include "structures/signs.dm"
@@ -70,9 +68,11 @@
 	#include "loadout/loadout_xeno.dm"*/
 //	#include "loadout/~defines.dm"
 
-	#include "../site_ds90/ds90-1.dmm"
-	#include "../site_ds90/ds90-2.dmm"
-	#include "../site_ds90/ds90-8.dmm"
+	#include "ds90-1.dmm"
+	#include "ds90-2.dmm"
+	#include "ds90-3.dmm"
+	#include "ds90-4.dmm"
+	#include "ds90-8.dmm"
 //	#include "torch-3.dmm"
 //	#include "torch-4.dmm"
 //	#include "torch-5.dmm"
@@ -98,7 +98,7 @@
 
 	#include "../../code/modules/lobby_music/Perdition.dm"
 
-	#define using_map_DATUM /datum/map/torch
+	#define using_map_DATUM /datum/map/ds90
 
 #elif !defined(MAP_OVERRIDE)
 

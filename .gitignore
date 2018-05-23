@@ -17,6 +17,19 @@ atupdate
 __pycache__
 
 # ignore config, but not subdirs
+config/
 !config/*/
-config/*
 sql/test_db
+config/access levels.txt
+config/admin_ranks.txt
+config/config.txt
+config/away_site_blacklist.txt
+config/dbconfig_docker.txt
+config/dbconfig.txt
+config/custom_sprites.txt
+config/custom_items.txt
+baystation12.rsc
+baystation12.int
+baystation12.dyn.rsc
+baystation12.rsc.lk
+baystation12.rsc

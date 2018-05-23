@@ -333,6 +333,12 @@
 		if("drop")
 			if(usr.client)
 				usr.client.drop_item()
+		if("fixeye")
+			usr.face_direction()
+			if(usr.facing_dir)
+				usr.fixeye.icon_state = "fixeye_on"
+			else
+				usr.fixeye.icon_state = "fixeye"
 
 		if("module")
 			if(isrobot(usr))

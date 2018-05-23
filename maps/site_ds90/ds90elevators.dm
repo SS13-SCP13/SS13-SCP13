@@ -20,3 +20,24 @@
 		/area/turbolift/gatebsurf
 		)
 
+/obj/turbolift_map_holder/uppertolowerez
+	name = "entrance zone turbolift map placeholder"
+	depth = 2
+	lift_size_x = 4
+	lift_size_y = 4
+
+	areas_to_use = list(
+		/area/turbolift/lowerentrance,
+		/area/turbolift/upperentrance
+		)
+
+/obj/turbolift_map_holder/lowereztohcz
+	name = "lower ez to hcz turbolift map placeholder"
+	depth = 2
+	lift_size_x = 4
+	lift_size_y = 4
+
+	areas_to_use = list(
+		/area/turbolift/lowerentrance4,
+		/area/turbolift/hcz
+		)
