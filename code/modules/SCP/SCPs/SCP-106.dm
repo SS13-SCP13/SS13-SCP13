@@ -84,10 +84,10 @@ GLOBAL_LIST_EMPTY(scp106s)
 /mob/living/carbon/human/scp106/New()
 	..()
 	set_species("SCP-106")
-	scp106s += src
+	GLOB.scp106s += src
 
 /mob/living/carbon/human/scp106/Destroy()
-	scp106s -= src
+	GLOB.scp106s -= src
 	..()
 
 /mob/living/carbon/human/scp106/Life()
@@ -101,6 +101,6 @@ GLOBAL_LIST_EMPTY(scp106s)
 	..()
 	if (client)
 		return
-	for (var/mob/living/carbon/human/scp106/H in scp106s)
+	for (var/mob/living/carbon/human/scp106/H in GLOB.scp106s)
 		if (H.target == src && src in view(world.view, H))
 			H.pursueTarget()

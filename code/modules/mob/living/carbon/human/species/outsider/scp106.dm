@@ -22,4 +22,4 @@
 
 /datum/species/scp106/handle_npc(var/mob/living/carbon/human/H)
 	if (prob(50))
-		Move(get_step(H, pick(GLOB.alldirs)))
+		H.Move(get_step(H, pick(GLOB.alldirs)))
