@@ -2,7 +2,9 @@
 
 [Website](https://www.scp13.site) - [Code](https://github.com/SS13-SCP13/SS13-SCP13)
 
-[![Build Status](https://travis-ci.org/SS13-SCP13/SS13-SCP13.svg?branch=master)](https://travis-ci.org/SS13-SCP13/SS13-SCP13)
+[![Build Status](https://travis-ci.org/SS13-SCP13/SS13-SCP13.svg?branch=master)](https://travis-ci.org/SS13-SCP13/SS13-SCP13) [![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/no-ragrets.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com) 
+
+
 ---
 
 ### LICENSE
