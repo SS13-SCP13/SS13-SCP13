@@ -48,6 +48,9 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 /mob/living/carbon/human/scp106/proc/pursueTarget()
 
+	if (client)
+		return
+
 	getTarget()
 
 	if (!target)
