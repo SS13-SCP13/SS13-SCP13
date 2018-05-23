@@ -28,6 +28,10 @@ var/list/organ_cache = list()
 
 	var/death_time
 
+	// SCP-13
+
+	var/scp106_affected = FALSE
+
 /obj/item/organ/Destroy()
 
 	owner = null
@@ -104,7 +108,7 @@ var/list/organ_cache = list()
 		germ_level = 0
 		return
 
-	if(!owner && reagents)
+	if((!owner || scp106_affected) && reagents)
 		var/datum/reagent/blood/B = locate(/datum/reagent/blood) in reagents.reagent_list
 		if(B && prob(40))
 			reagents.remove_reagent(/datum/reagent/blood,0.1)
