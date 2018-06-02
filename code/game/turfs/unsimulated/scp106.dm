@@ -1,5 +1,6 @@
 /turf/unsimulated/floor/scp106
 	name = "strange corrosive void"
+	icon_state = "black"
 	
 /turf/unsimulated/floor/scp106/New()
 	..()
