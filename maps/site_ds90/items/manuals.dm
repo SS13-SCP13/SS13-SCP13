@@ -231,6 +231,36 @@ Despite the tragedy that SCP-682 had brought upon the facility, SCP-999 has not 
 
 // EUCLID
 
+/obj/item/weapon/paper/scp/euclid/scp096
+	name = "SCP-096"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-096</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+
+<b>Item $:</b> SCP-096<br>
+
+<b>Object Class:</b> Euclid<br>
+
+<b>Special Containment Procedures:</b> SCP-096 is to be contained in its cell, a 5 m x 5 m x 5 m airtight steel cube, at all times. Weekly checks for any cracks or holes are mandatory. There are to be absolutely no video surveillance or optical tools of any kind inside SCP-096's cell. Security personnel will use pre-installed pressure sensors and laser detectors to ensure SCP-096's presence inside the cell.
+
+Any and all photos, video, or recordings of SCP-096's likeness are strictly forbidden without approval from Dr. ¦¦¦ and O5-¦.
+
+<b>Description:</b> SCP-096 is a humanoid creature measuring approximately 2.38 meters in height. Subject shows very little muscle mass, with preliminary analysis of body mass suggesting mild malnutrition. Arms are grossly out of proportion with the rest of the subject's body, with an approximate length of 1.5 meters each. Skin is mostly devoid of pigmentation, with no sign of any body hair.
+
+SCP-096's jaw can open to four (4) times the norm of an average human. Other facial features remain similar to an average human, with the exception of the eyes, which are also devoid of pigmentation. It is not yet known whether SCP-096 is blind or not. It shows no signs of any higher brain functions, and is not considered to be sapient.
+
+SCP-096 is normally extremely docile, with pressure sensors inside its cell indicating it spends most of the day pacing by the eastern wall. However, when someone views SCP-096's face, whether it be directly, via video recording, or even a photograph, it will enter a stage of considerable emotional distress. SCP-096 will cover its face with its hands and begin screaming, crying, and babbling incoherently. Approximately one (1) to two (2) minutes after the first viewing, SCP-096 will begin running to the person who viewed its face (who will from this point on be referred to as SCP-096-1).
+
+Documented speeds have varied from thirty-five (35) km/h to ¦¦¦ km/h, and seems to depend on distance from SCP-096-1. At this point, no known material or method can impede SCP-096's progress. The actual position of SCP-096-1 does not seem to affect SCP-096's response; it seems to have an innate sense of SCP-096-1's location. Note: This reaction does not occur when viewing artistic depictions (see Document 096-1).
+
+Upon arriving at SCP-096-1's location, SCP-096 will proceed to kill and -DATA EXPUNGED- SCP-096-1. 100% of cases have left no traces of SCP-096-1. SCP-096 will then sit down for several minutes before regaining its composure and becoming docile once again. It will then attempt to make its way back to its natural habitat, -DATA REDACTED-
+
+Due to the possibility of a mass chain reaction, including breach of Foundation secrecy and large civilian loss of life, retrieval of subject should be considered Alpha priority.
+
+Dr. ¦¦¦ has also petitioned for immediate termination of SCP-096 (see Interview 096-1). <s>Order is awaiting approval.</s> Termination order has been approved, and is to be carried out by Dr. ¦¦¦ on -DATA REDACTED-. See Incident-096-1-A.
+	"}
+
 /obj/item/weapon/paper/scp/euclid/scp173
 	name = "SCP-173"
 	info = {"
@@ -285,6 +315,73 @@ Descriptions of SCP-513-1's appearance are largely unreliable. Test subjects are
 
 // EUCLID ADDENDUMS
 
+/obj/item/weapon/paper/scp/euclid/addendum/scp096addendum1
+
+	name = "SCP-096-ADD1"
+	info = {"<b>Audio log from Interview 096-1:
+
+Interviewer: Dr. ¦¦¦
+Interviewed: Captain (Ret.) ¦¦¦¦¦¦¦¦¦, former commander of retrieval team Zulu 9-A
+Retrieval Incident #096-1-A</b>
+
+<b><Begin Log></b>
+
+<b>*¦¦¦¦¦¦¦¦ ¦¦¦¦¦¦¦¦ Time, Research Area ¦¦*</b>
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> It always sucks ass to get Initial Retrieval duty. You have no idea what the damn thing is capable of besides what jacked up information the field techies can scrape up, and you're lucky if they even tell you the whole story. They told us to "bag and tag." Didn't tell us jackshit about not looking at the damn thing.
+
+<b>Dr. ¦¦¦:</b> Could you describe the mission, please?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> Yeah, sorry. We had two choppers, one with my team and one on backup with Zulu 9-B and Dr. ¦¦¦¦¦¦. We spotted the target about two clicks north of our patrol path. I'm guessing he wasn't facing our direction, else he would have taken us out then and there.
+
+<b>Dr. ¦¦¦:</b> Your report says SCP-096 didn't react to the cold? It was -¦¦o C.
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> Actually, it was -¦¦. And yes, it was butt naked and didn't so much as shiver. Anyway, we landed, approached the target, and Corporal ¦¦ got ready to bag it. That's when Dr. ¦¦¦¦¦¦ called. I turned to answer it, and that's what saved me. The target must have turned and my whole squad saw it.
+
+<b>Dr. ¦¦¦:</b> That's when SCP-096 entered an agitated emotional state?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> Yep. *Interviewed now pauses for a second before continuing* Sorry. Got the willies for a second.
+
+<b>Dr. ¦¦¦:</b> That's all right.
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> Yeah. Well, I never saw its face. My squad did, and they paid for it up the ass.
+
+<b>Dr. ¦¦¦:</b> Could you describe it a little more, please?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> *Pauses* Yeah, yeah. It started screaming at us, and crying. Not animal roaring though, sounded exactly like a person. Really fucking creepy. *Pauses again* We started firing when it picked up Corporal ¦¦ and ripped off his leg. God, he was screaming for our help… fuckin 'A… anyway, we were blowing chunks out of the target, round after round. Didn't do jackshit. I almost lost it when it started -DATA EXPUNGED- him.
+
+<b>Dr. ¦¦¦:</b> That's when you ordered the use of an *Papers are heard moving* AT-4 HEDT launcher?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> An anti-tank gun. Started carrying it ever since SCP-¦¦¦ got loose. I've seen those tear through tanks like tissue paper. Did the same thing to the target.
+
+<b>Dr. ¦¦¦:</b> There was significant damage to SCP-096?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> It didn't even fucking flinch. It kept tearing apart my squad, but with half of its torso gone. *He draws a large half-circle across his torso*
+
+<b>Dr. ¦¦¦:</b> But it was taking damage?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> If it was, it wasn't showing it. It must have lost all its organs, all its blood, but it didn't acknowledge any of it. Its bone structure wasn't hurt at all, though. It kept tearing my squad apart.
+
+<b>Dr. ¦¦¦:</b> So no actual structural damage. How many rounds would you say were fired at SCP-096?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> At the least? A thousand. Our door gunner kept his GAU-19 on it for at least twenty seconds. Twenty fucking seconds. That's six hundred .50 caliber rounds pumped into the thing. Might as well been spitting at it.
+
+<b>Dr. ¦¦¦:</b> This is when Zulu 9-B arrived?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> Yeah, and my squad was gone. Zulu 9-B managed to get the bag over its head, and it just sat down. We got it into the chopper and got it here. I don't know how I never saw its face. Maybe God or Buddha or whoever thought I should live. The jackass.
+
+<b>Dr. ¦¦¦:</b> We have obtained an artist's depiction of SCP-096's face. Would you like to view it?
+
+<b>Capt. ¦¦¦¦¦¦¦¦¦:</b> *Pauses* You know, after hearing that thing's screams, and the screams of my men, I don't think I want to put a face to what I heard. No. Just… no.
+
+<b>Dr. ¦¦¦:</b> All right, I believe we are done here. Thank you, Captain.
+
+<b>*Chairs are heard moving, and footsteps leave the room. Captain (Ret.) ¦¦¦¦¦¦¦¦¦ is confirmed to have left Interview Room 22.*</b>
+
+<b>Dr. ¦¦¦:</b> Let this be on record that I am formally requesting SCP-096 be terminated as soon as possible.
+
+<End log>
+"}
 /obj/item/weapon/paper/scp/euclid/addendum/scp153addendum1
 	name = "SCP-153-ADD1"
 	info = {"
@@ -295,7 +392,9 @@ Descriptions of SCP-513-1's appearance are largely unreliable. Test subjects are
 You’ve seen it. Now he can hear you.<br>
 You’ve touched it. Now he can see you.<br>
 <u>Never</u> ring it. If you hear it, he can touch you.
-"}
+	"}
+
+
 // KETER
 
 /obj/item/weapon/paper/scp/keter/scp106
