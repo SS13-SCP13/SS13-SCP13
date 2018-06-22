@@ -171,27 +171,9 @@
 //SCP BOOKS//
 /////////////
 
-/obj/item/weapon/paper/scp/scp173
-	name = "SCP-173"
-	info = {"
-	<tt><center><b><font color='orange'>EUCLID: SCP-173</font></b>
-	<h3>FOUNDATION RESEARCH DIVISION</h3>
-	</center>
+// SAFE
 
-<b>Item #:</b> SCP-173<br>
-
-<b>Object Class:</b> Euclid<br>
-
-<b>Special Containment Procedures:</b> Item SCP-173 is to be kept in a locked container at all times. When personnel must enter SCP-173's container, no fewer than 3 may enter at any time and the door is to be relocked behind them. At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.<br>
-
-<b>Description:</b> Moved to Site-19 1993. Origin is as of yet unknown. It is constructed from concrete and rebar with traces of Krylon brand spray paint. SCP-173 is animate and extremely hostile. The object cannot move while within a direct line of sight. Line of sight must not be broken at any time with SCP-173. Personnel assigned to enter container are instructed to alert one another before blinking. Object is reported to attack by snapping the neck at the base of the skull, or by strangulation. In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures.<br>
-
-Personnel report sounds of scraping stone originating from within the container when no one is present inside. This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty.<br>
-
-The reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.</tt>
-	"}
-
-/obj/item/weapon/paper/scp/scp999
+/obj/item/weapon/paper/scp/safe/scp999
 	name = "SCP-999"
 	info = {"
 	<tt><center><b><font color='green'>SAFE: SCP-999</font></b>
@@ -247,7 +229,76 @@ Despite the tragedy that SCP-682 had brought upon the facility, SCP-999 has not 
 
 "}
 
-/obj/item/weapon/paper/scp/scp106
+// EUCLID
+
+/obj/item/weapon/paper/scp/euclid/scp173
+	name = "SCP-173"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-173</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+
+<b>Item #:</b> SCP-173<br>
+
+<b>Object Class:</b> Euclid<br>
+
+<b>Special Containment Procedures:</b> Item SCP-173 is to be kept in a locked container at all times. When personnel must enter SCP-173's container, no fewer than 3 may enter at any time and the door is to be relocked behind them. At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.<br>
+
+<b>Description:</b> Moved to Site-19 1993. Origin is as of yet unknown. It is constructed from concrete and rebar with traces of Krylon brand spray paint. SCP-173 is animate and extremely hostile. The object cannot move while within a direct line of sight. Line of sight must not be broken at any time with SCP-173. Personnel assigned to enter container are instructed to alert one another before blinking. Object is reported to attack by snapping the neck at the base of the skull, or by strangulation. In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures.<br>
+
+Personnel report sounds of scraping stone originating from within the container when no one is present inside. This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty.<br>
+
+The reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.</tt>
+	"}
+
+/obj/item/weapon/paper/scp/euclid/scp153
+	name = "SCP-173"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-153</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+
+<b>Item #:</b> SCP-153<br>
+
+<b>Object Class:</b> Euclid<br>
+
+<b>Special Containment Procedures:</b> SCP-513 is to be suspended in a one cubic meter block of gelatin and contained within a soundproofed, climate-controlled cell. The gelatin must be inspected daily for any degradation or loss of integrity. An emergency inspection will be carried out immediately following any earthquake, explosion, or sonic event grade 2 or higher. Personnel performing the inspection are to wear earplugs and active noise-canceling earmuffs at all times while inside SCP-513’s cell.
+
+If the gelatin cube shows any signs of degradation (such as rips, tears, splits, liquefaction, or mold), SCP-513 is to be immediately removed and suspended within a replacement cube by a team of surgically deafened Class-D personnel. No other personnel are to enter the cell during this procedure.
+
+Any sentient beings exposed to SCP-513 are to be monitored by at least two security personnel at all times. Under absolutely no circumstances may exposure victims be administered sedatives or allowed to fall unconscious. Any victim who does fall unconscious is to be terminated immediately.
+
+Class-D personnel are to be terminated at the first sign of mental degradation. All other exposure victims may be terminated at their request.
+
+If possible, SCP-513-1 is to be apprehended on sight.<br>
+
+<b>Description:</b> Physically, SCP-513 is an unremarkable, rusty cowbell. No marks or engravings are visible on its surface due to the large amount of corrosion. Attempts to remove the rust chemically or mechanically have had no success.
+
+SCP-513 was recovered by Agent ¦¦¦¦¦¦ while carrying out Containment Reestablishment Procedure Mu at Site-¦¦. SCP-513’s clapper was firmly held in place by several strips of duct tape. A single scrap of paper was found along with SCP-513 (see Addendum).
+
+Any noise produced by SCP-513 immediately induces strong anxiety in all sentient beings who hear it, regardless of their previous mental status. Exposure victims report feelings of being watched by an unseen entity and present elevated heart rates and blood pressure. Roughly one hour after exposure, exposure victims begin to catch glimpses of SCP-513-1 when opening doors, walking past mirrors, turning their heads, or performing any other actions that result in a sudden change in visual perception. Upon being sighted, SCP-513-1 reportedly turns away and runs out of view before disappearing without a trace. Questioning of bystanders indicates that SCP-513-1 is invisible to those who have not been exposed to SCP-513.
+
+Sightings of SCP-513-1 reoccur every 14 to 237 minutes. This “stalking” behavior inevitably causes extreme sleep deprivation, as victims are frequently disturbed by SCP-513-1’s presence in their quarters. Victims able to fall asleep before SCP-513-1's appearance report being physically assaulted by it. Upon the victim's awakening, SCP-513-1 flees as usual (see Experiment Log 513). This sleep deprivation, along with the mental stress caused by SCP-513-1's behavior, invariably induces paranoia, aggression, hypervigilance, and depression. All test cases but one have ended with the test subject’s suicide.
+
+Descriptions of SCP-513-1's appearance are largely unreliable. Test subjects are unable to provide complete accounts of sightings due to their exhaustion, degraded mental health, and disruptive hypervigilance. However, all interrogations thus far indicate that SCP-513-1 is a tall, emaciated humanoid with abnormally large hands.</tt>
+	"}
+
+// EUCLID ADDENDUMS
+
+/obj/item/weapon/paper/scp/euclid/addendum/scp153addendum1
+	name = "SCP-153-ADD1"
+	info = {"
+	<tt><center><b><font color='orange'>SCP-153 ADDENDUM 1</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+
+You’ve seen it. Now he can hear you.<br>
+You’ve touched it. Now he can see you.<br>
+<u>Never</u> ring it. If you hear it, he can touch you.
+"}
+// KETER
+
+/obj/item/weapon/paper/scp/keter/scp106
 	name = "SCP-106"
 	info = {"
 	<tt><center><b><font color='red'>KETER: SCP-106</font></b>
@@ -283,7 +334,7 @@ SCP-106 is capable of passing through solid matter, leaving behind a large patch
 Limited observation of this “pocket dimension” has shown it to be comprised mostly of halls and rooms, with -DATA EXPUNGED- entry. This activity can continue for days, with some subjected individuals being released for the express purpose of hunting, recapture, -DATA EXPUNGED-.
 "}
 
-/obj/item/weapon/paper/scp/scp939
+/obj/item/weapon/paper/scp/keter/scp939
 	name = "SCP-939"
 	info = {"
 	<tt><center><b><font color='red'>KETER: SCP-939</font></b>

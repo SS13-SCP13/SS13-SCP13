@@ -58,7 +58,7 @@
 
 	New()
 		..()
-		new /obj/item/weapon/paper/scp/scp999(src)
+		new /obj/item/weapon/paper/scp/safe/scp999(src)
 		update_icon()
 
 /obj/structure/filingcabinet/scp/safe/scp1000to1999
@@ -123,7 +123,9 @@
 
 	New()
 		..()
-		new /obj/item/weapon/paper/scp/scp173(src)
+		new /obj/item/weapon/paper/scp/euclid/scp173(src)
+		new /obj/item/weapon/paper/scp/euclid/scp153(src)
+		new /obj/item/weapon/paper/scp/euclid/addendum/scp153addendum1(src)
 		update_icon()
 
 /obj/structure/filingcabinet/scp/euclid/scp1000to1999
@@ -188,8 +190,8 @@
 
 	New()
 		..()
-		new /obj/item/weapon/paper/scp/scp106(src)
-		new /obj/item/weapon/paper/scp/scp939(src)
+		new /obj/item/weapon/paper/scp/keter/scp106(src)
+		new /obj/item/weapon/paper/scp/keter/scp939(src)
 		update_icon()
 
 
