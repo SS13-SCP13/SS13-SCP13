@@ -58,6 +58,7 @@
 
 	New()
 		..()
+		new /obj/item/weapon/paper/scp/safe/scp113(src)
 		new /obj/item/weapon/paper/scp/safe/scp999(src)
 		update_icon()
 
