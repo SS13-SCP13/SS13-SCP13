@@ -84,3 +84,25 @@
 	lift_floor_name = "Lower Entrance Zone"
 	lift_announce_str = "Arriving at Lower Entrance Zone: Management Department. Medical Bay. Access to High Containment Zone."
 	base_turf = /turf/simulated/floor
+
+/area/turbolift/hcz2
+	name = "lift (lower entrance zone)"
+	lift_floor_label = "Lower Entrance Zone"
+	lift_floor_name = "Lower Entrance Zone"
+	lift_announce_str = "Arriving at Lower Entrance Zone: Management Department. Medical Bay. Access to High Containment Zone."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/plaguedoctor
+	name = "lift (SCP-049)"
+	lift_floor_label = "SCP-049 Containment"
+	lift_floor_name = "SCP-049 Containment Chamber"
+	lift_announce_str = "Arriving at SCP-049 Containment: Keter SCP's require caution at all times."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/hczplag
+	name = "lift (High Containment Zone)"
+	lift_floor_label = "SCP-049 Containment"
+	lift_floor_name = "SCP-049 Containment Chamber"
+	lift_announce_str = "Arriving at SCP-049 Containment: Keter SCP's require caution at all times."
+	base_turf = /turf/simulated/floor
+
