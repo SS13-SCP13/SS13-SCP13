@@ -72,6 +72,7 @@
 	#include "ds90-2.dmm"
 	#include "ds90-3.dmm"
 	#include "ds90-4.dmm"
+	#include "ds90-5.dmm"
 	#include "ds90-8.dmm"
 //	#include "torch-3.dmm"
 //	#include "torch-4.dmm"
