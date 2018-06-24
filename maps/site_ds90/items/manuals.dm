@@ -176,6 +176,11 @@
 /obj/item/weapon/paper/scp/safe/scp113
 	name = "SCP-113"
 	info = {"
+	<tt><center><b><font color='green'>SAFE: SCP-113</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+<br>
 <b>Item #:</b> SCP-113<br>
 
 <b>Object Class:</b> Safe<br>
@@ -271,6 +276,32 @@ Despite the tragedy that SCP-682 had brought upon the facility, SCP-999 has not 
 
 // EUCLID
 
+/obj/item/weapon/paper/scp/euclid/scp049
+	name = "SCP-049"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-049</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+<b>Item #:</b> SCP-049
+<br>
+<b>Object Class:</b> Euclid
+<br>
+<b>Special Containment Procedures:</b> SCP-049 is contained within a Standard Secure Humanoid Containment Cell in Research Sector-02 at Site-19. SCP-049 must be sedated before any attempts to transport it. During transport, SCP-049 must be secured within a Class III Humanoid Restriction Harness (including a locking collar and extension restraints) and monitored by no fewer than two armed guards.
+
+While SCP-049 is generally cooperative with most Foundation personnel, outbursts or sudden changes in behaviour are to be met with elevated force. Under no circumstances should any personnel come into direct contact with SCP-049 during these outbursts. In the event SCP-049 becomes aggressive, the application of lavender (L. multifida) has been shown to produce a calming effect on the entity. Once calmed, SCP-049 generally becomes compliant, and will return to containment with little resistance.
+
+In order to facilitate the ongoing containment of SCP-049, the entity is to be provided with the corpse of a recently deceased animal (typically a bovine or other large mammal) once every two weeks for study. Corpses that become instances of SCP-049-2 are to be removed from SCP-049's containment cell and incinerated. SCP-049 is no longer permitted to interact with human subjects, and requests for human subjects are to be denied.
+<br>
+<b>Description:</b> SCP-049 is a humanoid entity, roughly 1.9 meters in height, which bears the appearance of a medieval plague doctor. While SCP-049 appears to be wearing the thick robes and the ceramic mask indicative of that profession, the garments instead seem to have grown out of SCP-049's body over time1, and are now nearly indistinguishable from whatever form is beneath them. X-rays indicate that despite this, SCP-049 does have a humanoid skeletal structure beneath its outer layer.
+
+SCP-049 is capable of speech in a variety of languages, though tends to prefer English or medieval French2. While SCP-049 is generally cordial and cooperative with Foundation staff, it can become especially irritated or at times outright aggressive if it feels that it is in the presence of what it calls the "Pestilence". Although the exact nature of this Pestilence is currently unknown to Foundation researchers, it does seem to be an issue of immense concern to SCP-049.
+
+SCP-049 will become hostile with individuals it sees as being affected by the Pestilence, often having to be restrained should it encounter such. If left unchecked, SCP-049 will generally attempt to kill any such individual; SCP-049 is capable of causing all biological functions of an organism to cease through direct skin contact. How this occurs is currently unknown, and autopsies of SCP-049's victims have invariably been inconclusive. SCP-049 has expressed frustration or remorse after these killings, indicating that they have done little to kill "The Pestilence", though will usually seek to then perform a crude surgery on the corpse using the implements contained within a black doctor's bag it carries on its person at all times3. While these surgeries are not always "successful", they often result in the creation of instances of SCP-049-2.
+
+SCP-049-2 instances are reanimated corpses that have been operated on by SCP-049. These instances do not seem to retain any of their prior memories or mental functions, having only basic motor skills and response mechanisms. While these instances are generally inactive, moving very little and in a generally ambulatory fashion, they can become extremely aggressive if provoked, or if directed to by SCP-049. SCP-049-2 instances express active biological functions, though these are vastly different from currently understood human physiology. Despite these alterations, SCP-049 often remarks that the subjects have been "cured".
+"}
+
 /obj/item/weapon/paper/scp/euclid/scp096
 	name = "SCP-096"
 	info = {"
@@ -301,28 +332,8 @@ Due to the possibility of a mass chain reaction, including breach of Foundation 
 Dr. ¦¦¦ has also petitioned for immediate termination of SCP-096 (see Interview 096-1). <s>Order is awaiting approval.</s> Termination order has been approved, and is to be carried out by Dr. ¦¦¦ on -DATA REDACTED-. See Incident-096-1-A.
 	"}
 
-/obj/item/weapon/paper/scp/euclid/scp173
-	name = "SCP-173"
-	info = {"
-	<tt><center><b><font color='orange'>EUCLID: SCP-173</font></b>
-	<h3>FOUNDATION RESEARCH DIVISION</h3>
-	</center>
-
-<b>Item #:</b> SCP-173<br>
-
-<b>Object Class:</b> Euclid<br>
-
-<b>Special Containment Procedures:</b> Item SCP-173 is to be kept in a locked container at all times. When personnel must enter SCP-173's container, no fewer than 3 may enter at any time and the door is to be relocked behind them. At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.<br>
-
-<b>Description:</b> Moved to Site-19 1993. Origin is as of yet unknown. It is constructed from concrete and rebar with traces of Krylon brand spray paint. SCP-173 is animate and extremely hostile. The object cannot move while within a direct line of sight. Line of sight must not be broken at any time with SCP-173. Personnel assigned to enter container are instructed to alert one another before blinking. Object is reported to attack by snapping the neck at the base of the skull, or by strangulation. In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures.<br>
-
-Personnel report sounds of scraping stone originating from within the container when no one is present inside. This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty.<br>
-
-The reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.</tt>
-	"}
-
 /obj/item/weapon/paper/scp/euclid/scp153
-	name = "SCP-173"
+	name = "SCP-153"
 	info = {"
 	<tt><center><b><font color='orange'>EUCLID: SCP-153</font></b>
 	<h3>FOUNDATION RESEARCH DIVISION</h3>
@@ -353,9 +364,31 @@ Sightings of SCP-513-1 reoccur every 14 to 237 minutes. This “stalking” behavior
 Descriptions of SCP-513-1's appearance are largely unreliable. Test subjects are unable to provide complete accounts of sightings due to their exhaustion, degraded mental health, and disruptive hypervigilance. However, all interrogations thus far indicate that SCP-513-1 is a tall, emaciated humanoid with abnormally large hands.</tt>
 	"}
 
+/obj/item/weapon/paper/scp/euclid/scp173
+	name = "SCP-173"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-173</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+
+<b>Item #:</b> SCP-173<br>
+
+<b>Object Class:</b> Euclid<br>
+
+<b>Special Containment Procedures:</b> Item SCP-173 is to be kept in a locked container at all times. When personnel must enter SCP-173's container, no fewer than 3 may enter at any time and the door is to be relocked behind them. At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.<br>
+
+<b>Description:</b> Moved to Site-19 1993. Origin is as of yet unknown. It is constructed from concrete and rebar with traces of Krylon brand spray paint. SCP-173 is animate and extremely hostile. The object cannot move while within a direct line of sight. Line of sight must not be broken at any time with SCP-173. Personnel assigned to enter container are instructed to alert one another before blinking. Object is reported to attack by snapping the neck at the base of the skull, or by strangulation. In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures.<br>
+
+Personnel report sounds of scraping stone originating from within the container when no one is present inside. This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty.<br>
+
+The reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.</tt>
+	"}
+
+
+
 // EUCLID ADDENDUMS
 
-/obj/item/weapon/paper/scp/euclid/addendum/scp096addendum1
+/obj/item/weapon/paper/scp/euclid/scp096/addendum1
 
 	name = "SCP-096-ADD1"
 	info = {"<b>Audio log from Interview 096-1:
@@ -422,7 +455,7 @@ Retrieval Incident #096-1-A</b>
 
 <End log>
 "}
-/obj/item/weapon/paper/scp/euclid/addendum/scp153addendum1
+/obj/item/weapon/paper/scp/euclid/scp153/addendum1
 	name = "SCP-153-ADD1"
 	info = {"
 	<tt><center><b><font color='orange'>SCP-153 ADDENDUM 1</font></b>

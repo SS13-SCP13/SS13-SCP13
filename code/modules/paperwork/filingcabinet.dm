@@ -124,11 +124,12 @@
 
 	New()
 		..()
+		new /obj/item/weapon/paper/scp/euclid/scp049(src)
 		new /obj/item/weapon/paper/scp/euclid/scp096(src)
-		new /obj/item/weapon/paper/scp/euclid/addendum/scp096addendum1(src)
-		new /obj/item/weapon/paper/scp/euclid/scp173(src)
+		new /obj/item/weapon/paper/scp/euclid/scp096/addendum1(src)
 		new /obj/item/weapon/paper/scp/euclid/scp153(src)
-		new /obj/item/weapon/paper/scp/euclid/addendum/scp153addendum1(src)
+		new /obj/item/weapon/paper/scp/euclid/scp153/addendum1(src)
+		new /obj/item/weapon/paper/scp/euclid/scp173(src)
 		update_icon()
 
 /obj/structure/filingcabinet/scp/euclid/scp1000to1999
