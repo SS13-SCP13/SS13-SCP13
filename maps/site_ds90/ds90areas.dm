@@ -92,3 +92,16 @@
 	lift_announce_str = "Arriving at High Containment Zone: Keter SCP Containment. HCZ Maintenance. LCZ Access."
 	base_turf = /turf/simulated/floor
 
+/area/turbolift/hcz2dmh
+	name = "lift (Heavy Containment Zone)"
+	lift_floor_label = "Heavy Containment Zone"
+	lift_floor_name = "Heavy Containment Zone"
+	lift_announce_str = "Arriving at High Containment Zone: Keter SCP Containment. HCZ Maintenance. LCZ Access."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/dmh2hcz
+	name = "lift (SCP-106)"
+	lift_floor_label = "SCP-106 Containment"
+	lift_floor_name = "SCP-106 Containment Chamber"
+	lift_announce_str = "Arriving at SCP-106 Containment. Extreme caution necessary."
+	base_turf = /turf/simulated/floor

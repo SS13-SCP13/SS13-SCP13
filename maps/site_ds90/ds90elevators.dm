@@ -52,3 +52,14 @@
 		/area/turbolift/hcz2plag,
 		/area/turbolift/plag2hcz
 		)
+
+/obj/turbolift_map_holder/scp106
+	name = "hcz to scp106 turbolift map placeholder"
+	depth = 2
+	lift_size_x = 2
+	lift_size_y = 3
+
+	areas_to_use = list(
+		/area/turbolift/hcz2dmh,
+		/area/turbolift/dmh2hcz
+		)
