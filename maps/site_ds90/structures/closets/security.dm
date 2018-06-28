@@ -201,6 +201,7 @@
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/device/radio,
+		/obj/item/weapon/gun/projectile/automatic/tactical,
 		/obj/item/clothing/gloves/thick
 	)
 
@@ -249,6 +250,7 @@
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/device/radio,
+		/obj/item/weapon/gun/projectile/automatic/tactical,
 		/obj/item/clothing/gloves/thick
 	)
 
@@ -267,4 +269,51 @@
 		/obj/item/clothing/shoes/dress,
 		/obj/item/device/radio,
 		/obj/item/clothing/suit/storage/toggle/suit/black,
+	)
+
+/obj/structure/closet/secure_closet/mtf/breachautomatics
+	name = "automatic weapons locker"
+	req_access = list(access_mtflvl2)
+	icon_state = "sec1"
+	icon_closed = "sec"
+	icon_locked = "sec1"
+	icon_opened = "secopen"
+	icon_off = "secoff"
+
+/obj/structure/closet/secure_closet/mtf/breachautomatics/WillContain()
+	return list(
+		/obj/item/weapon/gun/projectile/automatic/z8,
+		/obj/item/weapon/gun/projectile/automatic/z8,
+		/obj/item/weapon/gun/projectile/automatic/z8,
+		/obj/item/ammo_magazine/a762,
+		/obj/item/ammo_magazine/a762,
+		/obj/item/ammo_magazine/a762,
+		/obj/item/ammo_magazine/a762,
+		/obj/item/ammo_magazine/a762,
+		/obj/item/ammo_magazine/a762,
+		/obj/item/ammo_magazine/a762,
+	)
+
+
+/obj/structure/closet/secure_closet/mtf/breachshotguns
+	name = "tactical shotgun locker"
+	req_access = list(access_mtflvl2)
+	icon_state = "sec1"
+	icon_closed = "sec"
+	icon_locked = "sec1"
+	icon_opened = "secopen"
+	icon_off = "secoff"
+
+/obj/structure/closet/secure_closet/mtf/breachshotguns/WillContain()
+	return list(
+		/obj/item/weapon/gun/projectile/shotgun/tactical,
+		/obj/item/weapon/gun/projectile/shotgun/tactical,
+		/obj/item/weapon/gun/projectile/shotgun/tactical,
+		/obj/item/weapon/storage/box/mtf/empammo,
+		/obj/item/weapon/storage/box/mtf/empammo,
+		/obj/item/weapon/storage/box/mtf/empammo,
+		/obj/item/weapon/storage/box/mtf/pelletammo,
+		/obj/item/weapon/storage/box/mtf/pelletammo,
+		/obj/item/weapon/storage/box/mtf/pelletammo,
+		/obj/item/weapon/storage/box/mtf/pelletammo,
 	)
