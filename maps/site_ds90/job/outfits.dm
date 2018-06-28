@@ -61,20 +61,14 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	name = OUTFIT_JOB_NAME("Executive Officer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/command
 	shoes = /obj/item/clothing/shoes/dutyboots
-
-/decl/hierarchy/outfit/job/torch/crew/command/cmo
-	name = OUTFIT_JOB_NAME("Chief Medical Officer - Torch")
-	l_ear  =/obj/item/device/radio/headset/heads/cmo
-	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/officer/medical
-	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/torch/silver/medical
-	pda_type = /obj/item/device/pda/heads/cmo
+*/
+/decl/hierarchy/outfit/job/ds90/crew/command/cmo
+	name = OUTFIT_JOB_NAME("Chief Medical Officer")
+	uniform = /obj/item/clothing/under/rank/medical/scrubs/purple
+	shoes = /obj/item/clothing/shoes/white
+	id_type = /obj/item/weapon/card/id/seclvl5
 	pda_slot = slot_l_store
-
-/decl/hierarchy/outfit/job/torch/crew/command/cmo/New()
-	..()
-	BACKPACK_OVERRIDE_MEDICAL
-
+/*
 /decl/hierarchy/outfit/job/torch/crew/command/cmo/fleet
 	name = OUTFIT_JOB_NAME("Chief Medical Officer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/medical
