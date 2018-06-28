@@ -105,3 +105,17 @@
 	lift_floor_name = "Heavy Containment Zone"
 	lift_announce_str = "Arriving at High Containment Zone: Keter SCP Containment. HCZ Maintenance. LCZ Access."
 	base_turf = /turf/simulated/floor
+
+/area/turbolift/lhcz2lcz
+	name = "lift (Lower Heavy Containment Zone)"
+	lift_floor_label = "Lower Heavy Containment Zone"
+	lift_floor_name = "Lower Heavy Containment Zone"
+	lift_announce_str = "Arriving at Lower Heavy Containment Zone. Keter SCP Containment. HCZ Maintenance. LCZ Access."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/lcz2lhcz
+	name = "lift (Light Containment Zone)"
+	lift_floor_label = "Light Containment Zone"
+	lift_floor_name = "Light Containment Zone"
+	lift_announce_str = "Arriving at Light Containment Zone. Euclid and Safe SCP Containment."
+	base_turf = /turf/simulated/floor
