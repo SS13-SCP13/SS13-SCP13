@@ -78,7 +78,7 @@
 			if(R_ADMIN & X.holder.rights)
 				if(is_stealthed() && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))		//Mentors can't see stealthmins
 					continue
-				adminwho += "\t[X] is a <b>[X.holder.rank]</b>"
+				adminwho += "[X] is a <b>[X.holder.rank]</b>"
 				if(is_stealthed())
 					adminwho += " <b><i>(as [is_stealthed()])</i></b>"
 				if(isobserver(X.mob))
@@ -89,10 +89,9 @@
 					adminwho += " - Playing"
 				if(X.is_afk())
 					adminwho += " (AFK)"
-				adminwho += "\n"
 				admin_count++
 			else if (R_MOD & X.holder.rights)
-				modwho += "\t[X] is a <i>[X.holder.rank]</i>"
+				modwho += "[X] is a <i>[X.holder.rank]</i>"
 				if(is_stealthed())
 					modwho += " <i>(as [is_stealthed()])</i>"
 				if(isobserver(X.mob))
@@ -103,10 +102,9 @@
 					modwho += " - Playing"
 				if(X.is_afk())
 					modwho += " (AFK)"
-				modwho += "\n"
 				mod_count++
 			else if (R_MENTOR & X.holder.rights)
-				mentwho += "/t [X] is a [X.holder.rank]"
+				mentwho += " [X] is a [X.holder.rank]"
 				if(is_stealthed())
 					mentwho += " <i>(as [is_stealthed()]</i>"
 				if(isobserver(X.mob))
@@ -117,7 +115,6 @@
 					mentwho += " - Playing"
 				if(X.is_afk())
 					mentwho += " (AFK)"
-				mentwho += "/n"
 				ment_count++
 			else if (R_VAREDIT & X.holder.rights)
 				devwho += "/t [X] is a [X.holder.rank]"
@@ -131,7 +128,6 @@
 					devwho += " - Playing"
 				if(X.is_afk())
 					devwho += " (AFK)"
-				devwho += "/n"
 				dev_count++
 
 
@@ -139,12 +135,12 @@
 		for(var/client/X in GLOB.admins)
 			if(R_ADMIN & X.holder.rights && !(R_MOD & X.holder.rights))
 				if(is_stealthed())
-					adminwho += "\t[X] is a [X.holder.rank]\n"
+					adminwho += "[X] is a [X.holder.rank]"
 					admin_count++
 			else if (R_MOD & X.holder.rights)
-				modwho += "\t[X] is a [X.holder.rank]\n"
+				modwho += "[X] is a [X.holder.rank]"
 				mod_count++
-
+	to_chat(src, "<b>Online staff:</b>")
 	to_chat(src, "<b>Current Admins ([admin_count]):</b>") +adminwho
 	to_chat(src, "")
 	to_chat(src, "<b>Current Moderators ([mod_count]):</b>") +modwho
