@@ -31,6 +31,7 @@ var/list/organ_cache = list()
 	// SCP-13
 
 	var/scp106_affected = FALSE
+	var/scp106_vulnerable = TRUE
 
 /obj/item/organ/Destroy()
 

@@ -64,16 +64,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 /mob/living/carbon/human/scp106/proc/scp106_attack(var/mob/living/target)
 	visible_message("<span class = 'danger'><i>[name] lunges at [target]!</i></danger>")
-	if (!iscarbon(target))
-		target.apply_damage(20, BRUTE)
-	else
-		var/mob/living/carbon/C = target
-		for (var/organ in C.organs)
-			var/obj/item/organ/I = organ
-			if (!(I.status & ORGAN_DEAD))
-				I.take_damage(20)
-				I.scp106_affected = TRUE
-				C.emote("scream")
+	target.forceMove(pick(GLOB.scp106_floors))
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
 	if (!istype(M, /mob/living/carbon/human/scp106))
