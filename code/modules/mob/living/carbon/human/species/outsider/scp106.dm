@@ -20,6 +20,6 @@
 
 	genders = list(MALE)
 
-/datum/species/scp106/handle_npc(var/mob/living/carbon/human/H)
+/datum/species/scp106/handle_npc(var/mob/living/carbon/human/scp106/H)
 	if (!H.client)
 		H.pursueTarget()
