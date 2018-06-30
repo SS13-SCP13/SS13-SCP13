@@ -32,18 +32,18 @@ GLOBAL_LIST_EMPTY(scp106s)
 							var/mob/living/carbon/human/H = L
 							if (H.age >= 10 && H.age <= 25)
 								target = H
-								attempts = 4
+								attempts = 3
 								break
 					if (2)
 						// pick any human target
 						if (ishuman(L))
 							target = L
-							attempts = 4
+							attempts = 3
 							break
 					if (3)
 						// pick any target
 						target = L
-						attempts = 4
+						attempts = 3
 						break
 	return target
 
