@@ -350,10 +350,10 @@ var/const/NO_EMAG_ACT = -50
 	name = "identification card"
 	desc = "A card issued to engineering staff."
 	icon_state = "eng"
-	job_access_type = /datum/job/engineer
+//	job_access_type = /datum/job/engineer
 
 /obj/item/weapon/card/id/engineering/atmos
-	job_access_type = /datum/job/atmos
+//	job_access_type = /datum/job/atmos
 
 /obj/item/weapon/card/id/engineering/head
 	name = "identification card"

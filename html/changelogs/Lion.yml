@@ -35,6 +35,8 @@ delete-after: True
 changes: 
   - rscadd: "Added SCP Documentation for SCP-153, 096, 113 and associated addendums."
   - rscadd: "Added containment chambers for SCP-096 and 153 in HCZ."
+  - rscadd: "Added CMO and CE to job selection properly."
   - maptweak: "Besides being found in the archive, SCP Documentation is now also found in a singular copy in the respective Containment Chamber."
   - maptweak: "Finalized grid-layout for main HCZ floor."
   - maptweak: "Added a security post to sub-EZ floor to guard SCP-294."
+  - maptweak: "Added in lighting for HCZ. "

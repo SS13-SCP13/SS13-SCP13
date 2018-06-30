@@ -1,30 +1,44 @@
 /datum/job/chief_engineer
 	title = "Chief Engineer"
-	head_position = 1
-	department = "Engineering"
-	department_flag = ENG|COM
+	supervisors = "the Security Commander and Facility Director"
+	economic_modifier = 9
+	ideal_character_age = 40
+	minimal_player_age = 21
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
+	allowed_branches = list(/datum/mil_branch/security)
+	allowed_ranks = list(/datum/mil_rank/security/o1)
 
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the captain"
-	selection_color = "#7f6e2c"
-	req_admin_notify = 1
-	economic_modifier = 10
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
 
-	ideal_character_age = 50
+/datum/job/juneng
+	title = "Junior Engineer"
+	total_positions = 4
+	spawn_positions = 4
+	department_flag = ENG
+	supervisors = "the Chief Engineer"
+	economic_modifier = 5
+	minimal_player_age = 7
+	ideal_character_age = 30
+	alt_titles = list(
+		"Junior Maintenance Technician",
+		"Junior Engine Technician",
+		"Junior Damage Control Technician",
+		"Junior Electrician",
+		"Junior Atmospheric Technician",
+		)
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e4
+	)
 
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
 
-	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
-			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
-			            access_heads, access_construction, access_sec_doors,
-			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload)
-	minimal_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
-			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
-			            access_heads, access_construction, access_sec_doors,
-			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload)
-	minimal_player_age = 14
-	outfit_type = /decl/hierarchy/outfit/job/engineering/chief_engineer
-
+/*
 /datum/job/engineer
 	title = "Engineer"
 	department = "Engineering"
@@ -56,3 +70,4 @@
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_emergency_storage)
 	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_emergency_storage)
 	outfit_type = /decl/hierarchy/outfit/job/engineering/atmos
+*/

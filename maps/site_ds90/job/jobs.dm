@@ -98,21 +98,7 @@
 	access = list(access_utilitylvl1, access_utilitylvl2, access_utilitylvl3, access_utilitylvl4, access_utilitylvl5)
 	minimal_access = list()
 
-/datum/job/chief_engineer
-	title = "Chief Engineer"
-	supervisors = "the Security Commander and Facility Director"
-	economic_modifier = 9
-	ideal_character_age = 40
-	minimal_player_age = 21
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
-	allowed_branches = list(/datum/mil_branch/security)
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/security/o1
-	)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
-	minimal_access = list()
 
 
 // SECURITY
@@ -541,6 +527,20 @@
 	)
 
 	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+
+/datum/job/chief_engineer
+	title = "Chief Engineer"
+	supervisors = "the Security Commander and Facility Director"
+	economic_modifier = 9
+	ideal_character_age = 40
+	minimal_player_age = 21
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
+	allowed_branches = list(/datum/mil_branch/security)
+	allowed_ranks = list(/datum/mil_rank/security/o1)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 /*
 /datum/job/engineer_contractor

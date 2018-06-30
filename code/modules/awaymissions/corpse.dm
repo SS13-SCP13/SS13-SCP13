@@ -123,15 +123,15 @@
 
 /obj/effect/landmark/corpse/engineer
 	name = "Engineer"
-	corpse_outfits = list(/decl/hierarchy/outfit/job/engineering/engineer)
+	corpse_outfits = list(/decl/hierarchy/outfit/job/ds90/crew/engineering/juneng)
 
 /obj/effect/landmark/corpse/scientist
 	name = "Scientist"
 	corpse_outfits = list(/decl/hierarchy/outfit/job/science/scientist)
-
+/*
 /obj/effect/landmark/corpse/engineer/rig
 	corpse_outfits = list(/decl/hierarchy/outfit/job/engineering/engineer/void)
-
+*/
 /obj/effect/landmark/corpse/clown
 	name = "Clown"
 	corpse_outfits = list(/decl/hierarchy/outfit/clown)
