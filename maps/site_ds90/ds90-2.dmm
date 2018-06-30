@@ -126,7 +126,7 @@
 "cv" = (/turf/simulated/wall/scp/r_wall/r_end{icon_state = "r_end"; dir = 9},/area/security/prison{name = "SCP-106 Containment"})
 "cw" = (/obj/machinery/door/airlock/security/scpheavver{name = "SCP-049-2 Containment"; req_one_access = list(402)},/turf/simulated/floor/plating,/area/security/brig{name = "SCP-049"})
 "cx" = (/turf/simulated/wall/scp/r_wall/r_t{icon_state = "r_t"; dir = 1},/area/security/brig{name = "SCP-049"})
-"cy" = (/obj/machinery/button/remote/blast_door{id = "049"; name = "049-2 Blast Door Control"; pixel_x = 0; pixel_y = 32; req_one_access = list(402)},/turf/simulated/floor/tiled/white,/area/security/brig{name = "SCP-049"})
+"cy" = (/obj/machinery/button/remote/blast_door{id = "049-2"; name = "049-2 Blast Door Control"; pixel_x = 0; pixel_y = 32; req_one_access = list(402)},/turf/simulated/floor/tiled/white,/area/security/brig{name = "SCP-049"})
 "cz" = (/turf/simulated/wall/scp/r_wall/r_mid{icon_state = "r_mid"; dir = 8},/area/security/prison{name = "SCP-106 Containment"})
 "cA" = (/turf/simulated/wall/scp/r_wall/r_end{icon_state = "r_end"; dir = 5},/area/security/prison{name = "SCP-106 Containment"})
 "cB" = (/turf/simulated/wall/scp/r_wall/r_mid,/area/security/prison{name = "SCP-106 Containment"})
