@@ -7,11 +7,11 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 /turf/unsimulated/floor/scp106/New()
 	..()
 	SSprocessing.processing += src
-	scp106_floors += src
+	GLOB.scp106_floors += src
 
 /turf/unsimulated/floor/scp106/Destroy()
 	SSprocessing.processing -= src
-	scp106_floors -= src
+	GLOB.scp106_floors -= src
 	..()
 
 /turf/unsimulated/floor/scp106/process()
