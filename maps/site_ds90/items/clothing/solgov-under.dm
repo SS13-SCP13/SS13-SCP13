@@ -118,8 +118,8 @@
 	starting_accessories = list(/obj/item/clothing/accessory/solgov/department/exploration)
 
 /obj/item/clothing/under/solgov/utility/fleet
-	name = "fleet coveralls"
-	desc = "The utility uniform of the SCG Fleet, made from an insulated material."
+	name = "utility coveralls"
+	desc = "The utility uniform of the SCP Foundation, made from an insulated material."
 	icon_state = "navyutility"
 	item_state = "jensensuit"
 	worn_state = "navyutility"

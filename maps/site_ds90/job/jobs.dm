@@ -80,28 +80,6 @@
 	minimal_access = list()
 
 
-/datum/job/rd
-	title = "Research Director"
-	supervisors = "Facility Director and the Head of Human Resources"
-	economic_modifier = 20
-	minimal_player_age = 15
-	ideal_character_age = 60
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/researchdirector
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/classa)
-	equip(var/mob/living/carbon/human/H)
-		..()
-		H.add_stats(rand(6,8), rand(6,8), rand(14,17))
-		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
-
-	access = list(access_sciencelvl5,
-	access_sciencelvl4,
-	access_sciencelvl3,
-	access_sciencelvl2,
-	access_sciencelvl1)
-	minimal_access = list()
-
-
 // AWAITING OVERHAUL
 
 /datum/job/cmo
@@ -119,45 +97,23 @@
 
 	access = list(access_utilitylvl1, access_utilitylvl2, access_utilitylvl3, access_utilitylvl4, access_utilitylvl5)
 	minimal_access = list()
-/*
+
 /datum/job/chief_engineer
 	title = "Chief Engineer"
-	supervisors = "the Commanding Officer and the Executive Officer"
+	supervisors = "the Security Commander and Facility Director"
 	economic_modifier = 9
 	ideal_character_age = 40
 	minimal_player_age = 21
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer/fleet
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
+	allowed_branches = list(/datum/mil_branch/security)
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ec/o3,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o2
+		/datum/mil_rank/security/o1
 	)
 
-	access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_ai_upload, access_teleporter, access_eva, access_heads,
-			            access_tech_storage, access_robotics, access_atmospherics, access_janitor, access_construction,
-			            access_network, access_ce, access_RC_announce, access_keycard_auth, access_tcomsat,
-			            access_solgov_crew, access_robotics_engineering, access_seneng, access_hangar, access_robotics)
-	minimal_access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_ai_upload, access_teleporter, access_eva, access_heads,
-			            access_tech_storage, access_atmospherics, access_janitor, access_construction,
-			            access_network, access_ce, access_RC_announce, access_keycard_auth, access_tcomsat,
-			            access_solgov_crew, access_robotics_engineering, access_seneng, access_hangar, access_robotics)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
 
-	software_on_spawn = list(/datum/computer_file/program/comm,
-							 /datum/computer_file/program/ntnetmonitor,
-							 /datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
-							 /datum/computer_file/program/alarm_monitor,
-							 /datum/computer_file/program/atmos_control,
-							 /datum/computer_file/program/rcon_console,
-							 /datum/computer_file/program/camera_monitor,
-							 /datum/computer_file/program/shields_monitor)
-*/
 
 // SECURITY
 /datum/job/hos
@@ -342,6 +298,27 @@
 
 
 	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	minimal_access = list()
+
+/datum/job/rd
+	title = "Research Director"
+	supervisors = "Facility Director and the Head of Human Resources"
+	economic_modifier = 20
+	minimal_player_age = 15
+	ideal_character_age = 60
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/researchdirector
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(6,8), rand(6,8), rand(14,17))
+		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
+
+	access = list(access_sciencelvl5,
+	access_sciencelvl4,
+	access_sciencelvl3,
+	access_sciencelvl2,
+	access_sciencelvl1)
 	minimal_access = list()
 
 /*
@@ -536,50 +513,36 @@
 							 /datum/computer_file/program/rcon_console,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)
+// ENGINEERING
+*/
 
-/datum/job/engineer
-	title = "Engineer"
+/datum/job/juneng
+	title = "Junior Engineer"
 	total_positions = 4
 	spawn_positions = 4
+	department_flag = ENG
 	supervisors = "the Chief Engineer"
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 30
 	alt_titles = list(
-		"Maintenance Technician",
-		"Engine Technician",
-		"Damage Control Technician",
-		"EVA Technician",
-		"Electrician",
-		"Atmospheric Technician",
+		"Junior Maintenance Technician",
+		"Junior Engine Technician",
+		"Junior Damage Control Technician",
+		"Junior Electrician",
+		"Junior Atmospheric Technician",
 		)
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/engineer
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/engineering/engineer/fleet
+		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e2
+		/datum/mil_rank/security/e4
 	)
 
-	access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_teleporter, access_eva, access_tech_storage, access_atmospherics, access_janitor, access_construction,
-			            access_solgov_crew, access_hangar)
+	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
-							 /datum/computer_file/program/alarm_monitor,
-							 /datum/computer_file/program/atmos_control,
-							 /datum/computer_file/program/rcon_console,
-							 /datum/computer_file/program/camera_monitor,
-							 /datum/computer_file/program/shields_monitor)
-
+/*
 /datum/job/engineer_contractor
 	title = "Engineering Contractor"
 	department = "Engineering"

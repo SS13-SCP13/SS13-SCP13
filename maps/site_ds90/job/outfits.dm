@@ -73,26 +73,14 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	name = OUTFIT_JOB_NAME("Chief Medical Officer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/medical
 	shoes = /obj/item/clothing/shoes/dutyboots
-
-/decl/hierarchy/outfit/job/torch/crew/command/chief_engineer
-	name = OUTFIT_JOB_NAME("Chief Engineer - Torch")
-	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/officer/engineering
-	shoes = /obj/item/clothing/shoes/dutyboots
-	l_ear = /obj/item/device/radio/headset/heads/ce
-	id_type = /obj/item/weapon/card/id/torch/silver/engineering
-	pda_type = /obj/item/device/pda/heads/ce
-	pda_slot = slot_l_store
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
-
-/decl/hierarchy/outfit/job/torch/crew/command/cos/New()
-	..()
-	BACKPACK_OVERRIDE_ENGINEERING
-
-/decl/hierarchy/outfit/job/torch/crew/command/chief_engineer/fleet
-	name = OUTFIT_JOB_NAME("Chief Engineer - Fleet")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
-	shoes = /obj/item/clothing/shoes/dutyboots
 */
+/decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
+	name = OUTFIT_JOB_NAME("Chief Engineer")
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
+	l_ear = /obj/item/device/radio/headset/heads/ce
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl4
+
 
 // SECURITY OUTFITS
 
@@ -235,19 +223,14 @@ Keeping them simple for now, just spawning with basic uniforms, and pretty much 
 	name = OUTFIT_JOB_NAME("Senior Engineer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
 	shoes = /obj/item/clothing/shoes/dutyboots
-
-/decl/hierarchy/outfit/job/torch/crew/engineering/engineer
-	name = OUTFIT_JOB_NAME("Engineer - Torch")
-	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/engineering
-	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/torch/crew/engineering
-	pda_type = /obj/item/device/pda/engineering
-
-/decl/hierarchy/outfit/job/torch/crew/engineering/engineer/fleet
-	name = OUTFIT_JOB_NAME("Engineer - Fleet")
+*/
+/decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	name = OUTFIT_JOB_NAME("Junior Engineer")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
 	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl2
 
+/*
 /decl/hierarchy/outfit/job/torch/crew/engineering/contractor
 	name = OUTFIT_JOB_NAME("Engineering Assistant")
 	uniform = /obj/item/clothing/under/rank/engineer
