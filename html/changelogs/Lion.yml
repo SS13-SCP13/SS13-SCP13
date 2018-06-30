@@ -39,4 +39,5 @@ changes:
   - maptweak: "Besides being found in the archive, SCP Documentation is now also found in a singular copy in the respective Containment Chamber."
   - maptweak: "Finalized grid-layout for main HCZ floor."
   - maptweak: "Added a security post to sub-EZ floor to guard SCP-294."
-  - maptweak: "Added in lighting for HCZ. "
+  - maptweak: "Added in lighting for HCZ."
+  - experiment: "Added in a new staffwho verb."
