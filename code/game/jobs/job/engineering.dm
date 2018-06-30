@@ -1,6 +1,7 @@
 /datum/job/chief_engineer
 	title = "Chief Engineer"
 	supervisors = "the Security Commander and Facility Director"
+	selection_color = "#5b4d20"
 	economic_modifier = 9
 	ideal_character_age = 40
 	minimal_player_age = 21
@@ -13,6 +14,7 @@
 
 /datum/job/juneng
 	title = "Junior Engineer"
+	selection_color = "#5b4d20"
 	total_positions = 4
 	spawn_positions = 4
 	department_flag = ENG
