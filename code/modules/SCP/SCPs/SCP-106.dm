@@ -80,11 +80,3 @@ GLOBAL_LIST_EMPTY(scp106s)
 /mob/living/carbon/human/scp106/Destroy()
 	GLOB.scp106s -= src
 	..()
-
-// human movement hook
-/mob/living/carbon/human/Move()
-	..()
-	for (var/mob/living/carbon/human/scp106/H in GLOB.scp106s)
-		if (!H.client)
-			if (H.target == src && src in view(world.view, H))
-				walk_to(H, src)
