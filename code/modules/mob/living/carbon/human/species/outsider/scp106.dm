@@ -21,5 +21,5 @@
 	genders = list(MALE)
 
 /datum/species/scp106/handle_npc(var/mob/living/carbon/human/H)
-	if (prob(50))
-		H.Move(get_step(H, pick(GLOB.alldirs)))
+	if (!H.client)
+		H.pursueTarget()

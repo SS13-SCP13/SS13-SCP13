@@ -11,6 +11,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 	designation = "106"
 	classification = KETER
 
+// NPC stuff
 /mob/living/carbon/human/scp106/proc/getTarget()
 	/* if we have no target, or our current target is a nonhuman, or our target is out of view,
 	 * try to find a better one. Failing to do so just makes us continue to go after the old target */
@@ -46,10 +47,8 @@ GLOBAL_LIST_EMPTY(scp106s)
 						break
 	return target
 
+// NPC stuff
 /mob/living/carbon/human/scp106/proc/pursueTarget()
-
-	if (client)
-		return
 
 	getTarget()
 
@@ -64,7 +63,8 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 /mob/living/carbon/human/scp106/proc/scp106_attack(var/mob/living/target)
 	visible_message("<span class = 'danger'><i>[name] lunges at [target]!</i></danger>")
-	target.forceMove(pick(GLOB.scp106_floors))
+	if (prob(70))
+		target.forceMove(pick(GLOB.scp106_floors))
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
 	if (!istype(M, /mob/living/carbon/human/scp106))
@@ -81,17 +81,10 @@ GLOBAL_LIST_EMPTY(scp106s)
 	GLOB.scp106s -= src
 	..()
 
-/mob/living/carbon/human/scp106/Life()
-	..()
-	if (client)
-		return
-	pursueTarget()
-
 // human movement hook
 /mob/living/carbon/human/Move()
 	..()
-	if (client)
-		return
-	for (var/mob/living/carbon/human/scp106/H in GLOB.scp106s)
-		if (H.target == src && src in view(world.view, H))
-			H.pursueTarget()
+	if (!client)
+		for (var/mob/living/carbon/human/scp106/H in GLOB.scp106s)
+			if (H.target == src && src in view(world.view, H))
+				walk_to(H, src)
