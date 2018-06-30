@@ -68,7 +68,7 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 
 // Select a category
 	var/msg
-	var/list/type = list ("Gameplay/Job Inquiries", "Rule Issue", "Development Issue / Bug Report", "Other")
+	var/list/type = list ("Gameplay/Job Inquiries", "Rule Issue", "Other")
 	var/selected_type = input("Pick a category.", "Admin Help", null, null) as null|anything in type
 	if(selected_type)
 		msg = input("Please enter your message:", "Admin Help", null, null) as text
@@ -175,12 +175,6 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 					if(X.get_preference_value(/datum/client_preference/staff/play_adminhelp_ping))
 						X << 'sound/effects/adminhelp_new.ogg'
 					X << msg
-		if("Development Issue / Bug Report")
-			if(debugholders.len)
-				for(var/client/X in debugholders) // Admins of course get everything in their helps
-					if(X.get_preference_value(/datum/client_preference/staff/play_adminhelp_ping))
-						X << 'sound/effects/adminhelp_new.ogg'
-					X << msg
 		if("Other")
 			if(mentorholders.len)
 				for(var/client/X in mentorholders) // Admins of course get everything in their helps
@@ -218,3 +212,11 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 	feedback_add_details("admin_verb","AH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
+client/verb/bugreport()
+	set category = "Admin"
+	set name ="Submit Bug Report/Suggestions"
+	var url = "https://scp13.site/index.php?/forums/forum/8-bugs-and-suggestions/"
+	if(url)
+		if(alert("This will open the SCP-13 Bug Report and Suggestions Forum Page in your Browser. Are you sure?",,"Yes","No")=="No")
+			return
+		src << link(url)
