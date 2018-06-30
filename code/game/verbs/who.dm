@@ -140,14 +140,14 @@
 			else if (R_MOD & X.holder.rights)
 				modwho += "[X] is a [X.holder.rank]"
 				mod_count++
-	to_chat(src, "<b>Online staff:</b>")
-	to_chat(src, "<b>Current Admins ([admin_count]):</b>") +adminwho
+	to_chat(src, "<b><big>Online staff:</big></b>")
+	to_chat(src, "<b>Current Admins ([admin_count]):</b><br>") +adminwho
 	to_chat(src, "")
-	to_chat(src, "<b>Current Moderators ([mod_count]):</b>") +modwho
+	to_chat(src, "<b>Current Moderators ([mod_count]):</b><br>") +modwho
 	to_chat(src, "")
-	to_chat(src, "<b>Current Mentors ([ment_count]):</b>") +mentwho
+	to_chat(src, "<b>Current Mentors ([ment_count]):</b><br>") +mentwho
 	to_chat(src, "")
-	to_chat(src, "<b>Current Developers ([dev_count]):</b>") +devwho
+	to_chat(src, "<b>Current Developers ([dev_count]):</b><br>") +devwho
 	src << msg
 
 
