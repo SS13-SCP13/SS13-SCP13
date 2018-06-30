@@ -1,4 +1,5 @@
 //Food
+/*
 /datum/job/bartender
 	title = "Bartender"
 	department = "Service"
@@ -124,3 +125,4 @@
 	. = ..()
 	if(.)
 		H.implant_loyalty(H)
+*/

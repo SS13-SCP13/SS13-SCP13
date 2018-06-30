@@ -4,9 +4,9 @@ var/datum/antagonist/godcultist/godcult
 	id = MODE_GODCULTIST
 	role_text = "God Cultist"
 	role_text_plural = "God Cultists"
-	restricted_jobs = list(/datum/job/lawyer, /datum/job/captain, /datum/job/hos)
+//	restricted_jobs = list(/datum/job/lawyer, /datum/job/captain, /datum/job/hos) // NEEDS UPDATE
 	protected_jobs = list()
-	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/chaplain)
+//	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/chaplain) // NEEDS UPDATE.
 	feedback_tag = "godcult_objective"
 	antag_indicator = "hudcultist"
 	faction_verb = /mob/living/proc/dpray

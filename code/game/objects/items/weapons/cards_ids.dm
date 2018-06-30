@@ -383,16 +383,16 @@ var/const/NO_EMAG_ACT = -50
 	name = "identification card"
 	desc = "A card issued to cargo staff."
 	icon_state = "cargo"
-	job_access_type = /datum/job/cargo_tech
+//	job_access_type = /datum/job/cargo_tech
 
 /obj/item/weapon/card/id/cargo/mining
-	job_access_type = /datum/job/mining
+//	job_access_type = /datum/job/mining
 
 /obj/item/weapon/card/id/cargo/head
 	name = "identification card"
 	desc = "A card which represents service and planning."
 	icon_state = "cargoGold"
-	job_access_type = /datum/job/qm
+//	job_access_type = /datum/job/qm
 
 /obj/item/weapon/card/id/civilian
 	name = "identification card"
@@ -401,25 +401,25 @@ var/const/NO_EMAG_ACT = -50
 	job_access_type = /datum/job/assistant
 
 /obj/item/weapon/card/id/civilian/bartender
-	job_access_type = /datum/job/bartender
+//	job_access_type = /datum/job/bartender
 
 /obj/item/weapon/card/id/civilian/chef
-	job_access_type = /datum/job/chef
+//	job_access_type = /datum/job/chef
 
 /obj/item/weapon/card/id/civilian/botanist
-	job_access_type = /datum/job/hydro
+//	job_access_type = /datum/job/hydro
 
 /obj/item/weapon/card/id/civilian/janitor
-	job_access_type = /datum/job/janitor
+//	job_access_type = /datum/job/janitor
 
 /obj/item/weapon/card/id/civilian/librarian
-	job_access_type = /datum/job/librarian
+//	job_access_type = /datum/job/librarian
 
 /obj/item/weapon/card/id/civilian/internal_affairs_agent
-	job_access_type = /datum/job/lawyer
+//	job_access_type = /datum/job/lawyer
 
 /obj/item/weapon/card/id/civilian/chaplain
-	job_access_type = /datum/job/chaplain
+//	job_access_type = /datum/job/chaplain
 
 /obj/item/weapon/card/id/civilian/head //This is not the HoP. There's no position that uses this right now.
 	name = "identification card"
