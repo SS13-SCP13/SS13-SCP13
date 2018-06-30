@@ -59,6 +59,103 @@
 	msg += "<b>Total Players: [length(Lines)]</b>"
 	to_chat(src, msg)
 
+//New SEXY Staffwho verb
+/client/verb/staffwho()
+	set category = "Admin"
+	set name = "StaffWho"
+	var/adminwho = ""
+	var/modwho = ""
+	var/mentwho = ""
+	var/devwho = ""
+	var/msg = ""
+	var/admin_count = 0
+	var/mod_count = 0
+	var/ment_count = 0
+	var/dev_count = 0
+
+	if(holder)
+		for(var/client/X in GLOB.admins)
+			if(R_ADMIN & X.holder.rights)
+				if(is_stealthed() && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))		//Mentors can't see stealthmins
+					continue
+				adminwho += "\t[X] is a <b>[X.holder.rank]</b>"
+				if(is_stealthed())
+					adminwho += " <b><i>(as [is_stealthed()])</i></b>"
+				if(isobserver(X.mob))
+					adminwho += " - Observing"
+				else if(istype(X.mob,/mob/new_player))
+					adminwho += " - Lobby"
+				else
+					adminwho += " - Playing"
+				if(X.is_afk())
+					adminwho += " (AFK)"
+				adminwho += "\n"
+				admin_count++
+			else if (R_MOD & X.holder.rights)
+				modwho += "\t[X] is a <i>[X.holder.rank]</i>"
+				if(is_stealthed())
+					modwho += " <i>(as [is_stealthed()])</i>"
+				if(isobserver(X.mob))
+					modwho += " - Observing"
+				else if(istype(X.mob,/mob/new_player))
+					modwho += " - Lobby"
+				else
+					modwho += " - Playing"
+				if(X.is_afk())
+					modwho += " (AFK)"
+				modwho += "\n"
+				mod_count++
+			else if (R_MENTOR & X.holder.rights)
+				mentwho += "/t [X] is a [X.holder.rank]"
+				if(is_stealthed())
+					mentwho += " <i>(as [is_stealthed()]</i>"
+				if(isobserver(X.mob))
+					mentwho += " - Observing"
+				else if(istype(X.mob,/mob/new_player))
+					mentwho += " - Lobby"
+				else
+					mentwho += " - Playing"
+				if(X.is_afk())
+					mentwho += " (AFK)"
+				mentwho += "/n"
+				ment_count++
+			else if (R_VAREDIT & X.holder.rights)
+				devwho += "/t [X] is a [X.holder.rank]"
+				if(is_stealthed())
+					devwho += " <i>(as [is_stealthed()]</i>"
+				if(isobserver(X.mob))
+					devwho += " - Observing"
+				else if(istype(X.mob,/mob/new_player))
+					devwho += " - Lobby"
+				else
+					devwho += " - Playing"
+				if(X.is_afk())
+					devwho += " (AFK)"
+				devwho += "/n"
+				dev_count++
+
+
+	else
+		for(var/client/X in GLOB.admins)
+			if(R_ADMIN & X.holder.rights && !(R_MOD & X.holder.rights))
+				if(is_stealthed())
+					adminwho += "\t[X] is a [X.holder.rank]\n"
+					admin_count++
+			else if (R_MOD & X.holder.rights)
+				modwho += "\t[X] is a [X.holder.rank]\n"
+				mod_count++
+
+	to_chat(src, "<b>Current Admins ([admin_count]):</b>") +adminwho
+	to_chat(src, "")
+	to_chat(src, "<b>Current Moderators ([mod_count]):</b>") +modwho
+	to_chat(src, "")
+	to_chat(src, "<b>Current Mentors ([ment_count]):</b>") +mentwho
+	to_chat(src, "")
+	to_chat(src, "<b>Current Developers ([dev_count]):</b>") +devwho
+	src << msg
+
+
+/* OLD STUFF.
 /client/verb/staffwho()
 	set category = "Admin"
 	set name = "Staffwho"
@@ -100,3 +197,5 @@
 		to_chat(src, "<span class='info'>Adminhelps are also sent to IRC. If no admins are available in game try anyway and an admin on IRC may see it and respond.</span>")
 	to_chat(src, "<b>Current Staff ([active_staff]/[total_staff]):</b>")
 	to_chat(src, jointext(msg,"\n"))
+
+*/
