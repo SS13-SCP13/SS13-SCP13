@@ -142,11 +142,11 @@
 				mod_count++
 	to_chat(src, "<b><big>Online staff:</big></b>")
 	to_chat(src, "<b>Current Admins ([admin_count]):</b><br>") +adminwho
-	to_chat(src, "")
+	to_chat(src, "<br>")
 	to_chat(src, "<b>Current Moderators ([mod_count]):</b><br>") +modwho
-	to_chat(src, "")
+	to_chat(src, "<br>")
 	to_chat(src, "<b>Current Mentors ([ment_count]):</b><br>") +mentwho
-	to_chat(src, "")
+	to_chat(src, "<br>")
 	to_chat(src, "<b>Current Developers ([dev_count]):</b><br>") +devwho
 	src << msg
 
