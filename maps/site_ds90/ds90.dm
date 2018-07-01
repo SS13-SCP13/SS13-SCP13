@@ -1,14 +1,15 @@
 #if !defined(using_map_DATUM)
 
 //	#include "torch_announcements.dm"
-	#include "site_ds90/ds90areas.dm"
+	#include "ds90areas.dm"
+	#include "../torch/torch_areas.dm"
 //	#include "torch_elevator.dm"
 	#include "ds90elevators.dm"
 //	#include "torch_holodecks.dm"
 //	#include "torch_overmap.dm"
 	#include "ds90_presets.dm"
 //	#include "torch_ranks.dm"
-	#include "/site_ds90_ranks.dm"
+	#include "site_ds90_ranks.dm"
 	#include "../torch/torch_shuttles.dm"
 	#include "../torch/torch_presets.dm"
 //	#include "torch_unit_testing.dm"
