@@ -9,7 +9,7 @@
 //	#include "torch_overmap.dm"
 	#include "ds90_presets.dm"
 //	#include "torch_ranks.dm"
-	#include "../site_ds90/site_ds90_ranks.dm"
+	#include "/site_ds90_ranks.dm"
 	#include "../torch/torch_shuttles.dm"
 	#include "../torch/torch_presets.dm"
 //	#include "torch_unit_testing.dm"
