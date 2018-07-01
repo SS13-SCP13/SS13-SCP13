@@ -1,8 +1,7 @@
 #if !defined(using_map_DATUM)
 
 //	#include "torch_announcements.dm"
-	#include "../torch/torch_areas.dm"
-	#include "../site_ds90/ds90areas.dm"
+	#include "site_ds90/ds90areas.dm"
 //	#include "torch_elevator.dm"
 	#include "ds90elevators.dm"
 //	#include "torch_holodecks.dm"
