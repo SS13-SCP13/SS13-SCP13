@@ -22,7 +22,7 @@
 
 
 /datum/job/captain
-	title = "Facility Director"
+	title = "Site Director"
 	supervisors = "the SCP Foundation and O5 Council"
 	minimal_player_age = 20
 	economic_modifier = 15
