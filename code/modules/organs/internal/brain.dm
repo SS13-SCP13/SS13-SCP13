@@ -16,6 +16,7 @@
 
 	var/can_use_mmi = TRUE
 	var/mob/living/carbon/brain/brainmob = null
+	var/list/datum/brain_trauma/traumas = list()
 	var/const/damage_threshold_count = 10
 	var/damage_threshold_value
 	var/healed_threshold = 1
@@ -92,6 +93,11 @@
 	if(name == initial(name))
 		name = "\the [owner.real_name]'s [initial(name)]"
 
+	for(var/X in traumas)
+		var/datum/brain_trauma/BT = X
+		BT.on_lose(TRUE)
+		BT.owner = null
+
 	var/mob/living/simple_animal/borer/borer = owner.has_brain_worms()
 
 	if(borer)
@@ -107,6 +113,11 @@
 
 	if(target.key)
 		target.ghostize()
+
+	for(var/X in traumas)
+		var/datum/brain_trauma/BT = X
+		BT.owner = owner
+		BT.on_gain()
 
 	if(brainmob)
 		if(brainmob.mind)
@@ -128,6 +139,45 @@
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll"
 
+/obj/item/organ/brain/proc/has_trauma_type(brain_trauma_type, consider_permanent = FALSE)
+	for(var/X in traumas)
+		var/datum/brain_trauma/BT = X
+		if(istype(BT, brain_trauma_type) && (consider_permanent || !BT.permanent))
+			return BT
+
+
+//Add a specific trauma
+/obj/item/organ/brain/proc/gain_trauma(datum/brain_trauma/trauma, permanent = FALSE, list/arguments)
+	var/trauma_type
+	if(ispath(trauma))
+		trauma_type = trauma
+		traumas += new trauma_type(arglist(list(src, permanent) + arguments))
+	else
+		traumas += trauma
+		trauma.permanent = permanent
+
+//Add a random trauma of a certain subtype
+/obj/item/organ/brain/proc/gain_trauma_type(brain_trauma_type = /datum/brain_trauma, permanent = FALSE)
+	var/list/datum/brain_trauma/possible_traumas = list()
+	for(var/T in subtypesof(brain_trauma_type))
+		var/datum/brain_trauma/BT = T
+		if(initial(BT.can_gain))
+			possible_traumas += BT
+
+	var/trauma_type = pick(possible_traumas)
+	traumas += new trauma_type(src, permanent)
+
+//Cure a random trauma of a certain subtype
+/obj/item/organ/brain/proc/cure_trauma_type(brain_trauma_type, cure_permanent = FALSE)
+	var/datum/brain_trauma/trauma = has_trauma_type(brain_trauma_type)
+	if(trauma && (cure_permanent || !trauma.permanent))
+		qdel(trauma)
+
+/obj/item/organ/brain/proc/cure_all_traumas(cure_permanent = FALSE)
+	for(var/X in traumas)
+		var/datum/brain_trauma/trauma = X
+		if(cure_permanent || !trauma.permanent)
+qdel(trauma)
 
 /obj/item/organ/internal/brain/proc/get_current_damage_threshold()
 	return round(damage / damage_threshold_value)
