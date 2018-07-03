@@ -33,7 +33,9 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - rscadd: "Added SCP Documentation for SCP-153, 096, 113 and associated addendums."
+  - rscadd: "Added SCP Documentation for SCP-153, 151, 096, 113 and associated addendums."
+  - rscadd: "Mapped in Light Containment Zone."
+  - rscadd: "Mapped in Scientist spawns in LCZ."
   - rscadd: "Added containment chambers for SCP-096 and 153 in HCZ."
   - rscadd: "Added CMO and CE to job selection properly."
   - maptweak: "Besides being found in the archive, SCP Documentation is now also found in a singular copy in the respective Containment Chamber."
