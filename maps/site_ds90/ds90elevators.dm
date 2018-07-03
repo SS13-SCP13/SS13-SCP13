@@ -74,3 +74,14 @@
 		/area/turbolift/lhcz2lcz,
 		/area/turbolift/lcz2lhcz
 		)
+
+/obj/turbolift_map_holder/ulcz2llcz
+	name = "ulcz to llcz turbolift map placeholder"
+	depth = 2
+	lift_size_x = 2
+	lift_size_y = 3
+
+	areas_to_use = list(
+		/area/turbolift/ulcz2llcz,
+		/area/turbolift/llcz2ulcz
+		)

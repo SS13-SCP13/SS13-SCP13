@@ -119,3 +119,17 @@
 	lift_floor_name = "Light Containment Zone"
 	lift_announce_str = "Arriving at Light Containment Zone. Euclid and Safe SCP Containment."
 	base_turf = /turf/simulated/floor
+
+/area/turbolift/ulcz2llcz
+	name = "lift (Lower Light Containment)"
+	lift_floor_label = "Upper LCZ"
+	lift_floor_name = "Upper Light Containment Zone"
+	lift_announce_str = "Arriving at Upper Light Containment Zone. Euclid and Safe SCP Containment."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/llcz2ulcz
+	name = "lift (Upper Low Containment)"
+	lift_floor_label = "Lower LCZ"
+	lift_floor_name = "Lower Light Containment Zone"
+	lift_announce_str = "Arriving at Lower Light Containment Zone. Euclid and Safe SCP Containment."
+	base_turf = /turf/simulated/floor
