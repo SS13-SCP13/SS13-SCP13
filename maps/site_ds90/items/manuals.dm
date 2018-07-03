@@ -332,6 +332,24 @@ Due to the possibility of a mass chain reaction, including breach of Foundation 
 Dr. ¦¦¦ has also petitioned for immediate termination of SCP-096 (see Interview 096-1). <s>Order is awaiting approval.</s> Termination order has been approved, and is to be carried out by Dr. ¦¦¦ on -DATA REDACTED-. See Incident-096-1-A.
 	"}
 
+/obj/item/weapon/paper/scp/euclid/scp151
+	name = "SCP-151"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-151</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center><br>
+<b>Item #:</b> SCP-151
+<br>
+Object Class: Euclid
+<br>
+Special Containment Procedures: SCP-151 should be kept in a locked storage compartment, covered by an opaque cloth. The keys to the compartment should be kept in the custody of the site commander when SCP-151 is not being researched. When research is being conducted, SCP-151 may be kept in a locked laboratory, provided it is always covered when not being used.
+<br>
+<b>Description:</b> SCP-151 is a 1 m x 1.3 m (3 ft x 4 ft) oil painting, apparently from the perspective of someone underwater. A subject who views the painting exhibits no initial effects. However, over a period of 24 hours, the subject's breathing becomes increasingly labored, culminating in the death of the subject. Autopsies reveal that subjects' lungs have filled with seawater. Attempts to halt the drowning process by medical intervention have proven successful in prolonging the life of the subject, but have not stopped nor reversed the condition.
+
+The painting is not signed, but several names are written on the back.
+
+"}
+
 /obj/item/weapon/paper/scp/euclid/scp153
 	name = "SCP-153"
 	info = {"
@@ -387,6 +405,9 @@ The reddish brown substance on the floor is a combination of feces and blood. Or
 
 
 // EUCLID ADDENDUMS
+
+
+
 
 /obj/item/weapon/paper/scp/euclid/scp096/addendum1
 
@@ -455,6 +476,18 @@ Retrieval Incident #096-1-A</b>
 
 <End log>
 "}
+
+/obj/item/weapon/paper/scp/euclid/scp151/addendum1
+	name = "SCP-151-ADD1"
+	info = {"
+	<tt><center><b><font color='orange'>SCP-151 ADDENDUM 1</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+Addendum: SCP-151 was found in an antique shop in ¦¦¦¦¦¦¦¦¦, ¦¦¦, after the Foundation began investigating a series of unexplained drowning deaths. As ¦¦¦ is landlocked, the Foundation dispatched a team of plainclothes agents after being informed of the nature of the water in the victims' lungs and that the victims had all been discovered on dry land. The agents discovered that the names written on the back belonged to a group of artistically inclined students, all of whom disappeared during a study abroad program in ¦¦¦¦¦¦¦. Investigation into their fate is ongoing, and may provide clues as to the nature and origin of SCP-151.
+"}
+
+
 /obj/item/weapon/paper/scp/euclid/scp153/addendum1
 	name = "SCP-153-ADD1"
 	info = {"
