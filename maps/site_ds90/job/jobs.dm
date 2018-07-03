@@ -293,6 +293,7 @@
 	economic_modifier = 20
 	minimal_player_age = 15
 	ideal_character_age = 60
+	spawn_positions = 6
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/researchdirector
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classa)
@@ -517,7 +518,7 @@
 		"Junior Engine Technician",
 		"Junior Damage Control Technician",
 		"Junior Electrician",
-		"Junior Atmospheric Technician",
+		"Junior Atmospheric Technician"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	allowed_branches = list(
