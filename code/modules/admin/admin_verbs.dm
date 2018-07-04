@@ -322,11 +322,42 @@ var/list/admin_verbs_mentor = list(
 	/datum/admins/proc/PlayerNotes,
 	/client/proc/admin_ghost,
 	/client/proc/cmd_mod_say,
+	/client/proc/cmd_dev_say,
 	/datum/admins/proc/show_player_info,
 //	/client/proc/dsay,
 	/client/proc/cmd_admin_subtle_message
 )
+/* NEW VARS
+var/list/admin_verbs_mentor = list(
+	/client/proc/cmd_mod_say,
 
+var/list/admin_verbs_trialmod = list(
+	/client/proc/cmd_mod_say,
+
+var/list/admin_verbs_mod = list(
+	/client/proc/cmd_mod_say,
+
+var/list/admin_verbs_trialadmin = list(
+	/client/proc/cmd_mod_say,
+
+var/list/admin_verbs_admin = list(
+	/client/proc/cmd_mod_say,
+
+var/list/admin_verbs_senstaff = list(
+	/client/proc/cmd_mod_say,
+
+var/list/admin_verbs_assdev = list(
+	/client/proc/cmd_dev_say
+)
+
+var/list/admin_verbs_dev = list(
+	/client/proc/cmd_dev_say
+)
+
+var/list/admin_verbs_sendev = list(
+	/client/proc/cmd_dev_say
+)
+*/
 /client/proc/add_admin_verbs()
 	if(holder)
 		verbs += admin_verbs_default
@@ -348,6 +379,30 @@ var/list/admin_verbs_mentor = list(
 		if(holder.rights & R_MOD)			verbs += admin_verbs_mod
 		if(holder.rights & R_MENTOR)		verbs += admin_verbs_mentor
 
+
+// NEW SYSTEM
+/*
+/client/proc/add_admin_verbs()
+	if(holder)
+		verbs += admin_verbs_default
+		if(holder.rights & R_MENTOR)		verbs += admin_verbs_mentor
+		if(holder.rights & R_TRIALMOD)			verbs += admin_verbs_trialmod
+		if(holder.rights & R_MOD)			verbs += admin_verbs_mod
+		if(holder.rights & R_TRIALADMIN)			verbs += admin_verbs_trialadmin
+		if(holder.rights & R_ADMIN)		verbs += admin_verbs_admin
+		if(holder.rights & R_DEBUG)
+			verbs += admin_verbs_debug
+			if(config.debugparanoid && !(holder.rights & R_ADMIN))
+				verbs.Remove(admin_verbs_paranoid_debug)			//Right now it's just callproc but we can easily add others later on.
+		if(holder.rights & R_SENSTAFF)		verbs += admin_verbs_possess
+		if(holder.rights & R_PERMISSIONS)	verbs += admin_verbs_permissions
+		if(holder.rights & R_STEALTH)		verbs += /client/proc/stealth
+		if(holder.rights & R_REJUVINATE)	verbs += admin_verbs_rejuv
+		if(holder.rights & R_SOUNDS)		verbs += admin_verbs_sounds
+		if(holder.rights & R_ASSDEV)			verbs += admin_verbs_assdev
+		if(holder.rights & R_DEV)			verbs += admin_verbs_dev
+		if(holder.rights & R_SENDEV)		verbs += admin_verbs_sendev
+*/
 /client/proc/remove_admin_verbs()
 	verbs.Remove(
 		admin_verbs_default,
