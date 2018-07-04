@@ -44,4 +44,6 @@ changes:
   - maptweak: "Added a security post to sub-EZ floor to guard SCP-294."
   - maptweak: "Added in lighting for HCZ."
   - experiment: "Added in a new staffwho verb."
+  - experiment: "Added in a new devsay channel attached to +MENTOR."
   - wip: "Added SCP-106 chase music ahead of time to the files."
+  - wip: "Laid ground work for complete overhaul of staff permissions."
