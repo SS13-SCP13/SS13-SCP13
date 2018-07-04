@@ -36,6 +36,7 @@ changes:
   - rscadd: "Added SCP Documentation for SCP-153, 151, 096, 113 and associated addendums."
   - rscadd: "Mapped in Light Containment Zone."
   - rscadd: "Mapped in Scientist spawns in LCZ."
+  - rscadd: "Mapped in RnD labs in LCZ."
   - rscadd: "Added containment chambers for SCP-096 and 153 in HCZ."
   - rscadd: "Added CMO and CE to job selection properly."
   - maptweak: "Besides being found in the archive, SCP Documentation is now also found in a singular copy in the respective Containment Chamber."
@@ -43,3 +44,4 @@ changes:
   - maptweak: "Added a security post to sub-EZ floor to guard SCP-294."
   - maptweak: "Added in lighting for HCZ."
   - experiment: "Added in a new staffwho verb."
+  - wip: "Added SCP-106 chase music ahead of time to the files."
