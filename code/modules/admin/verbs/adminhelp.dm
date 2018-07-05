@@ -217,6 +217,15 @@ client/verb/bugreport()
 	set name ="Submit Bug Report/Suggestions"
 	var url = "https://scp13.site/index.php?/forums/forum/8-bugs-and-suggestions/"
 	if(url)
-		if(alert("This will open the SCP-13 Bug Report and Suggestions Forum Page in your Browser. Are you sure?",,"Yes","No")=="No")
+		if(alert("This will open the SCP13 Bug Report and Suggestions Forum Page in your Browser. Are you sure?",,"Yes","No")=="No")
+			return
+		src << link(url)
+
+client/verb/bugreport()
+	set category = "Admin"
+	set name ="Report Player / Staff"
+	var url = "https://scp13.site/index.php?/forums/"
+	if(url)
+		if(alert("This will open the SCP13 Reports Forum Page in your Browser. This hasn't been made yet due to our Alpha stage. Are you sure?",,"Yes","No")=="No")
 			return
 		src << link(url)
