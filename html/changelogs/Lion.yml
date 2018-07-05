@@ -39,6 +39,7 @@ changes:
   - rscadd: "Mapped in RnD labs in LCZ."
   - rscadd: "Added containment chambers for SCP-096 and 153 in HCZ."
   - rscadd: "Added CMO and CE to job selection properly."
+  - bugfix: "Doors should now display properly when bolts are dropped. Further issues should be reported."
   - maptweak: "Besides being found in the archive, SCP Documentation is now also found in a singular copy in the respective Containment Chamber."
   - maptweak: "Finalized grid-layout for main HCZ floor."
   - maptweak: "Added a security post to sub-EZ floor to guard SCP-294."
@@ -46,4 +47,3 @@ changes:
   - experiment: "Added in a new staffwho verb."
   - experiment: "Added in a new devsay channel attached to +MENTOR."
   - wip: "Added SCP-106 chase music ahead of time to the files."
-  - wip: "Laid ground work for complete overhaul of staff permissions."
