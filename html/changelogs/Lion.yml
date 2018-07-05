@@ -41,7 +41,7 @@ changes:
   - rscadd: "Added CMO and CE to job selection properly."
   - rscdel: "Disabled IPC's from spawning."
   - rscdel: "Disabled borgs from spawning."
-  - rscdel: "Disabled maint drones from spawning."
+  - rscdel: "Removed spawnpoints for maint drones."
   - bugfix: "Doors should now display properly when bolts are dropped. Further issues should be reported."
   - bugfix: "Fixed being able to spawn as CC Actor."
   - maptweak: "Besides being found in the archive, SCP Documentation is now also found in a singular copy in the respective Containment Chamber."
