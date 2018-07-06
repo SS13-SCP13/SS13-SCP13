@@ -6,17 +6,26 @@ GLOBAL_LIST_EMPTY(scp106s)
 	SCP = /datum/scp/SCP_106
 	var/mob/living/target = null
 
-/mob/living/carbon/human/scp106/New()
-	..()
-	name = initial(name)
-	icon = 'icons/mob/scp106.dmi'
-	stand_icon = 'icons/mob/scp106.dmi'
-	icon_state = null
-
 /datum/scp/SCP_106
 	name = "SCP-106"
 	designation = "106"
 	classification = KETER
+
+/obj/scp106_helper
+	icon = 'icons/mob/scp106.dmi'
+	name = null
+
+/mob/living/carbon/human/scp106/New()
+	..()
+	update_icon = FALSE
+	name = initial(name)
+	vis_contents += new /obj/scp106_helper
+
+/mob/living/carbon/human/scp106/Move()
+	..()
+	for (var/obj/scp106_helper/O in vis_contents)
+		O.dir = dir
+		break
 
 // NPC stuff
 /mob/living/carbon/human/scp106/proc/getTarget()
