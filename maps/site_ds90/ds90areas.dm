@@ -72,15 +72,64 @@
 	base_turf = /turf/simulated/floor
 
 /area/turbolift/hcz
-	name = "lift (lower entrance zone)"
-	lift_floor_label = "Lower Entrance Zone"
-	lift_floor_name = "Lower Entrance Zone"
-	lift_announce_str = "Arriving at Lower Entrance Zone: Management Department. Medical Bay. Access to High Containment Zone."
+	name = "lift (high containment zone)"
+	lift_floor_label = "Heavy Containment Zone"
+	lift_floor_name = "Heavy Containment Zone"
+	lift_announce_str = "Arriving at High Containment Zone: Keter SCP Containment. HCZ Maintenance. LCZ Access."
 	base_turf = /turf/simulated/floor
 
-/area/turbolift/hcz2
-	name = "lift (lower entrance zone)"
-	lift_floor_label = "Lower Entrance Zone"
-	lift_floor_name = "Lower Entrance Zone"
-	lift_announce_str = "Arriving at Lower Entrance Zone: Management Department. Medical Bay. Access to High Containment Zone."
+/area/turbolift/plag2hcz
+	name = "lift (SCP-049)"
+	lift_floor_label = "SCP-049 Containment"
+	lift_floor_name = "SCP-049 Containment Chamber"
+	lift_announce_str = "Arriving at SCP-049 Containment. Extreme caution necessary."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/hcz2plag
+	name = "lift (Heavy Containment Zone)"
+	lift_floor_label = "Heavy Containment Zone"
+	lift_floor_name = "Heavy Containment Zone"
+	lift_announce_str = "Arriving at High Containment Zone: Keter SCP Containment. HCZ Maintenance. LCZ Access."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/hcz2dmh
+	name = "lift (SCP-106)"
+	lift_floor_label = "SCP-106 Containment"
+	lift_floor_name = "SCP-106 Containment Chamber"
+	lift_announce_str = "Arriving at SCP-106 Containment. Extreme caution necessary."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/dmh2hcz
+	name = "lift (Heavy Containment Zone)"
+	lift_floor_label = "Heavy Containment Zone"
+	lift_floor_name = "Heavy Containment Zone"
+	lift_announce_str = "Arriving at High Containment Zone: Keter SCP Containment. HCZ Maintenance. LCZ Access."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/lhcz2lcz
+	name = "lift (Lower Heavy Containment Zone)"
+	lift_floor_label = "Lower Heavy Containment Zone"
+	lift_floor_name = "Lower Heavy Containment Zone"
+	lift_announce_str = "Arriving at Lower Heavy Containment Zone. Keter SCP Containment. HCZ Maintenance. LCZ Access."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/lcz2lhcz
+	name = "lift (Light Containment Zone)"
+	lift_floor_label = "Light Containment Zone"
+	lift_floor_name = "Light Containment Zone"
+	lift_announce_str = "Arriving at Light Containment Zone. Euclid and Safe SCP Containment."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/ulcz2llcz
+	name = "lift (Lower Light Containment)"
+	lift_floor_label = "Upper LCZ"
+	lift_floor_name = "Upper Light Containment Zone"
+	lift_announce_str = "Arriving at Upper Light Containment Zone. Euclid and Safe SCP Containment."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/llcz2ulcz
+	name = "lift (Upper Low Containment)"
+	lift_floor_label = "Lower LCZ"
+	lift_floor_name = "Lower Light Containment Zone"
+	lift_announce_str = "Arriving at Lower Light Containment Zone. Euclid and Safe SCP Containment."
 	base_turf = /turf/simulated/floor

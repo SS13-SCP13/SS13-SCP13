@@ -35,11 +35,11 @@
 	var/secured_wires = 0
 	var/datum/wires/airlock/wires = null
 
-	var/open_sound_powered = 'sound/machines/airlock.ogg'
+	var/open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
 	var/open_sound_unpowered = 'sound/machines/airlock_creaking.ogg'
 	var/open_failure_access_denied = 'sound/machines/buzz-two.ogg'
 
-	var/close_sound_powered = 'sound/machines/AirlockClose.ogg'
+	var/close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
 	var/close_sound_unpowered = 'sound/machines/airlock_creaking.ogg'
 	var/close_failure_blocked = 'sound/machines/triple_beep.ogg'
 
@@ -85,21 +85,29 @@
 	name = "Airlock"
 	icon = 'icons/obj/doors/Doorsechor.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_sec
+	open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
+	close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
 
 /obj/machinery/door/airlock/security/scpver
 	name = "Airlock"
 	icon = 'icons/obj/doors/Doorsecvert.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_sec
+	open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
+	close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
 
 /obj/machinery/door/airlock/security/scpheavhor
 	name = "Airlock"
 	icon = 'icons/obj/doors/Doorsecheavhor.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_sec
+	open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
+	close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
 
 /obj/machinery/door/airlock/security/scpheavver
 	name = "Airlock"
 	icon = 'icons/obj/doors/Doorsecheavvert.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_sec
+	open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
+	close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
 
 /obj/machinery/door/airlock/engineering
 	name = "Airlock"
@@ -164,10 +172,8 @@
 	name = "Glass Airlock"
 	icon = 'icons/obj/doors/Doorglass.dmi'
 	hitsound = 'sound/effects/Glasshit.ogg'
-
-	open_sound_powered = 'sound/machines/AirlockOpen1.wav'
-	close_sound_powered = 'sound/machines/AirlockClose1.wav'
-	open_failure_access_denied = 'sound/machines/keycardenied.ogg'
+	open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
+	close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
 
 	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
 	maxhealth = 300
@@ -179,10 +185,9 @@
 	name = "Glass Airlock"
 	icon = 'icons/obj/doors/Doorglassvert.dmi'
 	hitsound = 'sound/effects/Glasshit.ogg'
+	open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
+	close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
 
-	open_sound_powered = 'sound/machines/AirlockOpen1.wav'
-	close_sound_powered = 'sound/machines/AirlockClose1.wav'
-	open_failure_access_denied = 'sound/machines/keycardenied.ogg'
 
 	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
 	maxhealth = 300

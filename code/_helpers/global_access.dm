@@ -94,7 +94,7 @@
 		if("account_hack_attempted")
 			return global.account_hack_attempted;
 		if("actor")
-			return global.actor;
+//			return global.actor;
 		if("additional_antag_types")
 			return global.additional_antag_types;
 		if("admin_datums")
@@ -1039,7 +1039,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-		
+
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ALL_ANTIGENS")
@@ -1135,7 +1135,7 @@
 		if("account_hack_attempted")
 			global.account_hack_attempted=newval;
 		if("actor")
-			global.actor=newval;
+//			global.actor=newval;
 		if("additional_antag_types")
 			global.additional_antag_types=newval;
 		if("admin_datums")
@@ -2080,7 +2080,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-		
+
 /var/list/_all_globals=list(
 	"ALL_ANTIGENS",
 	"ANTAG_FREQS",

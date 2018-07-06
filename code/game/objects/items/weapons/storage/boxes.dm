@@ -499,3 +499,13 @@
 		/obj/item/weapon/implantpad,
 		/obj/item/weapon/implantcase/imprinting = 3
 		)
+
+/obj/item/weapon/storage/box/mtf/pelletammo
+	name = "pellet ammunition"
+	desc = "Contains pellet ammunition for a shotgun."
+	startswith = list(/obj/item/ammo_casing/shotgun/pellet = 7)
+
+/obj/item/weapon/storage/box/mtf/empammo
+	name = "emp ammunition"
+	desc = "Contains EMP ammunition for a shotgun."
+	startswith = list(/obj/item/ammo_casing/shotgun/emp = 7)
