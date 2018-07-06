@@ -78,9 +78,9 @@ GLOBAL_LIST_EMPTY(scp106s)
 	scp106_attack(target)
 
 /mob/living/carbon/human/scp106/proc/scp106_attack(var/mob/living/target)
-	visible_message("<span class = 'danger'><i>[name] lunges at [target]!</i></danger>")
 	var/obj/item/grab/G = locate() in src
 	if (!G)
+		visible_message("<span class = 'danger'><i>[name] reaches towards [target]!</i></danger>")
 		make_grab(src, target)
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
