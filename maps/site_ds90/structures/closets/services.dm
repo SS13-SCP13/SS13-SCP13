@@ -39,6 +39,28 @@
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/hyd, 50)
 	)
 
+/obj/structure/closet/secure_closet/hydroponics_dclass //done so that it has no access reqs
+	name = "hydroponics locker"
+	req_access = list()
+	icon_state = "hydrosecure1"
+	icon_closed = "hydrosecure"
+	icon_locked = "hydrosecure1"
+	icon_opened = "hydrosecureopen"
+	icon_off = "hydrosecureoff"
+
+/obj/structure/closet/secure_closet/hydroponics_torch/WillContain()
+	return list(
+		/obj/item/clothing/suit/apron,
+		/obj/item/clothing/suit/apron/overalls,
+		/obj/item/weapon/storage/plants,
+		/obj/item/device/analyzer/plant_analyzer,
+		/obj/item/clothing/mask/bandana/botany,
+		/obj/item/clothing/head/bandana/green,
+		/obj/item/weapon/reagent_containers/spray/plantbgone,
+		new /datum/atom_creator/weighted(list(/obj/item/clothing/suit/apron, /obj/item/clothing/suit/apron/overalls)),
+	)
+
+
 /obj/structure/closet/jcloset_torch
 	name = "custodial closet"
 	desc = "It's a storage unit for janitorial equipment."

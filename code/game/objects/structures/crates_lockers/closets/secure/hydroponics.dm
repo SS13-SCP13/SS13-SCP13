@@ -21,14 +21,3 @@
 		/obj/item/weapon/wirecutters/clippers,
 		/obj/item/weapon/reagent_containers/spray/plantbgone,
 	)
-
-
-/obj/structure/closet/secure_closet/hydroponics/d-class/WillContain()
-	return list(
-		new /datum/atom_creator/weighted(list(/obj/item/clothing/suit/apron, /obj/item/clothing/suit/apron/overalls)),
-		/obj/item/weapon/storage/plants,
-		/obj/item/device/analyzer/plant_analyzer,
-		/obj/item/clothing/mask/bandana/botany,
-		/obj/item/clothing/head/bandana/green,
-		/obj/item/weapon/reagent_containers/spray/plantbgone,
-	)
