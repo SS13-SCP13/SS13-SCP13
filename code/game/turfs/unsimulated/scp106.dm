@@ -3,6 +3,7 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 /turf/unsimulated/floor/scp106
 	name = "strange corrosive void"
 	icon_state = "black"
+	color = "#000000" // because it's not black for some stupid reason
 
 /turf/unsimulated/floor/scp106/New()
 	..()
