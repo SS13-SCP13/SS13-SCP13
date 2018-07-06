@@ -86,7 +86,7 @@
 	if (client)
 		for (var/scp106 in GLOB.scp106s)
 			var/atom/A = scp106
-			if (abs(x - A.x) <= 5 && abs(y - A.y) <= 5)
+			if (A != src && abs(x - A.x) <= 5 && abs(y - A.y) <= 5)
 				if (world.time >= client.next_scp106_sound)
 					playsound_local(get_turf(src), 'sound/scp/chase/scp106chase.ogg', 100)
 					client.next_scp106_sound = world.time + 1500 // a bit longer than the ogg itself
