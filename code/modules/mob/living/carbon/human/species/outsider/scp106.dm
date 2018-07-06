@@ -9,7 +9,7 @@
 	blood_color = "#cccccc"
 	flesh_color = "#aaaaaa"
 
-	death_message = "dissolves into ash..."
+	death_message = "dies."
 
 	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_NO_SLIP | SPECIES_FLAG_NO_POISON | SPECIES_FLAG_NO_EMBED
 	spawn_flags = SPECIES_IS_RESTRICTED
