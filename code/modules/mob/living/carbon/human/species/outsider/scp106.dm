@@ -20,6 +20,10 @@
 
 	genders = list(MALE)
 
+/datum/species/scp106/handle_post_spawn(var/mob/living/carbon/human/scp106/H)
+	H.icon = 'icons/mob/scp106.dmi'
+	H.icon_state = null
+
 /datum/species/scp106/handle_npc(var/mob/living/carbon/human/scp106/H)
 	if (!H.client)
 		H.pursueTarget()
