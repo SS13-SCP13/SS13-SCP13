@@ -1031,6 +1031,7 @@
 #include "code\game\turfs\space\transit.dm"
 #include "code\game\turfs\unsimulated\beach.dm"
 #include "code\game\turfs\unsimulated\floor.dm"
+#include "code\game\turfs\unsimulated\scp106.dm"
 #include "code\game\turfs\unsimulated\walls.dm"
 #include "code\game\verbs\ignore.dm"
 #include "code\game\verbs\ooc.dm"
