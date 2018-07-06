@@ -221,7 +221,7 @@ client/verb/bugreport()
 			return
 		src << link(url)
 
-client/verb/bugreport()
+client/verb/reportplayer()
 	set category = "Admin"
 	set name ="Report Player / Staff"
 	var url = "https://scp13.site/index.php?/forums/"
