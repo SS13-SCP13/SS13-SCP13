@@ -67,7 +67,8 @@ GLOBAL_LIST_EMPTY(scp106s)
 	if (G)
 		G.upgrade()
 		target.forceMove(pick(GLOB.scp106_turfs))
-	make_grab(src, target)
+	else
+		make_grab(src, target)
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
 	if (!istype(M, /mob/living/carbon/human/scp106))
