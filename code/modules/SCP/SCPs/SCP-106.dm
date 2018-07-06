@@ -111,4 +111,4 @@ GLOBAL_LIST_EMPTY(scp106s)
 	. = ..(damage, damagetype, def_zone, blocked, damage_flags, used_weapon, given_organ)
 	if (getBruteLoss() + getFireLoss() + getToxLoss() + getCloneLoss() >= 100)
 		src << "<span class = 'danger'><i>You flee back to your pocket dimension!</i></danger>"
-		forceMove(pick(scp106_floors))
+		forceMove(pick(GLOB.scp106_floors))
