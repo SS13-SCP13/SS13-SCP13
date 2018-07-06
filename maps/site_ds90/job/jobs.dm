@@ -36,6 +36,7 @@
 		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
 
 	access = list(
+	access_adminlvl5,
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,

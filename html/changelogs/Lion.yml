@@ -46,6 +46,7 @@ changes:
   - imgageadd: "Added new main menu screen."
   - bugfix: "Doors should now display properly when bolts are dropped. Further issues should be reported."
   - bugfix: "Fixed being able to spawn as CC Actor."
+  - bugfix: "Fixed Site Director not having Level 5 Admin access."
   - maptweak: "Besides being found in the archive, SCP Documentation is now also found in a singular copy in the respective Containment Chamber."
   - maptweak: "Finalized grid-layout for main HCZ floor."
   - maptweak: "Added a security post to sub-EZ floor to guard SCP-294."
