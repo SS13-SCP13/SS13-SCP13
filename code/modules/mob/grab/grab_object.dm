@@ -162,6 +162,8 @@
 		adjust_position()
 		update_icons()
 		current_grab.enter_as_up(src)
+		if (istype(loc, /mob/living/carbon/human/scp106))
+			affecting.forceMove(pick(GLOB.scp106_floors))
 
 /obj/item/grab/proc/downgrade()
 	var/datum/grab/downgrab = current_grab.downgrade(src)

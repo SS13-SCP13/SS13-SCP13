@@ -8,7 +8,9 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 /mob/living/carbon/human/scp106/New()
 	..()
+	name = initial(name)
 	icon = 'icons/mob/scp106.dmi'
+	stand_icon = 'icons/mob/scp106.dmi'
 	icon_state = null
 
 /datum/scp/SCP_106
@@ -69,10 +71,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 /mob/living/carbon/human/scp106/proc/scp106_attack(var/mob/living/target)
 	visible_message("<span class = 'danger'><i>[name] lunges at [target]!</i></danger>")
 	var/obj/item/grab/G = locate() in src
-	if (G)
-		G.upgrade()
-		target.forceMove(pick(GLOB.scp106_floors))
-	else
+	if (!G)
 		make_grab(src, target)
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
