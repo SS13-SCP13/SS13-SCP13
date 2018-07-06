@@ -2,10 +2,6 @@
 	name = "SCP-106"
 	name_plural = "SCP-106"
 
-	// WIP
-	icobase = 'icons/mob/human_races/r_shadow.dmi'
-	deform = 'icons/mob/human_races/r_shadow.dmi'
-
 	darksight = 8
 	has_organ = list()
 	siemens_coefficient = 0
