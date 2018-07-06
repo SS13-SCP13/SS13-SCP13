@@ -106,3 +106,9 @@ GLOBAL_LIST_EMPTY(scp106s)
 	set desc = "Return to the area you last teleported from."
 	forceMove(locate(last_x, last_y, last_z))
 	verbs -= /mob/living/carbon/human/scp106/proc/go_back
+
+/mob/living/carbon/human/scp106/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/damage_flags = 0, var/obj/used_weapon = null, var/obj/item/organ/external/given_organ = null)
+	. = ..(damage, damagetype, def_zone, blocked, damage_flags, used_weapon, given_organ)
+	if (getBruteLoss() + getFireLoss() + getToxLoss() + getCloneLoss() >= 100)
+		src << "<span class = 'danger'><i>You flee back to your pocket dimension!</i></danger>")
+		forceMove(pick(scp106_floors))
