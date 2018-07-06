@@ -8,8 +8,8 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 /mob/living/carbon/human/scp106/New()
 	..()
-	H.icon = 'icons/mob/scp106.dmi'
-	H.icon_state = null
+	icon = 'icons/mob/scp106.dmi'
+	icon_state = null
 
 /datum/scp/SCP_106
 	name = "SCP-106"
