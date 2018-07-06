@@ -6,6 +6,11 @@ GLOBAL_LIST_EMPTY(scp106s)
 	SCP = /datum/scp/SCP_106
 	var/mob/living/target = null
 
+/mob/living/carbon/human/scp106/New()
+	..()
+	H.icon = 'icons/mob/scp106.dmi'
+	H.icon_state = null
+
 /datum/scp/SCP_106
 	name = "SCP-106"
 	designation = "106"
@@ -66,7 +71,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 	var/obj/item/grab/G = locate() in src
 	if (G)
 		G.upgrade()
-		target.forceMove(pick(GLOB.scp106_turfs))
+		target.forceMove(pick(GLOB.scp106_floors))
 	else
 		make_grab(src, target)
 
