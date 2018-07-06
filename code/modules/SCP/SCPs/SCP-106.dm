@@ -5,6 +5,9 @@ GLOBAL_LIST_EMPTY(scp106s)
 	desc = "A rotting, elderly humanoid."
 	SCP = /datum/scp/SCP_106
 	var/mob/living/target = null
+	var/last_x = -1
+	var/last_y = -1
+	var/last_z = -1
 
 /datum/scp/SCP_106
 	name = "SCP-106"
@@ -13,7 +16,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 /obj/scp106_helper
 	icon = 'icons/mob/scp106.dmi'
-	name = null
+	name = ""
 
 /mob/living/carbon/human/scp106/New()
 	..()
@@ -97,3 +100,9 @@ GLOBAL_LIST_EMPTY(scp106s)
 /mob/living/carbon/human/scp106/Destroy()
 	GLOB.scp106s -= src
 	..()
+
+/mob/living/carbon/human/scp106/proc/go_back()
+	set name = "Return"
+	set desc = "Return to the area you last teleported from."
+	forceMove(locate(last_x, last_y, last_z))
+	verbs -= /mob/living/carbon/human/scp106/proc/go_back
