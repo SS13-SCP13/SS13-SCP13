@@ -43,3 +43,4 @@ changes:
   - bugfix: "Fixed Sergeant ranks not having the correct shorthand."
   - bugfix: "Fixed an issue with d-cells not opening."
   - maptweak: "In order to fix the above point I had to add basic Security access requirements to all cell doors, but the master switch remains in the airlock oversight."
+  - wip: "Disabled Communications Officer from spawning while this job is being figured out behind the scenes. Manning just the comms station can be boring, right?"

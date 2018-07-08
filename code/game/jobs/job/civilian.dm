@@ -136,6 +136,7 @@
 	supervisors = "the Head of Personnel"
 	ideal_character_age = 24
 	alt_titles = list("Interior caretaker")
+	selection_color = "#515151"
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/janitor
 	allowed_branches = list(
 		/datum/mil_branch/civilian

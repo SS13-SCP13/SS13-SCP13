@@ -75,6 +75,7 @@
 	spawn_positions = 4
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
+	selection_color = "#5b4d20"
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 30
@@ -104,6 +105,7 @@
 	spawn_positions = 2
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
+	selection_color = "#5b4d20"
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 30
