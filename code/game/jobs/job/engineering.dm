@@ -12,61 +12,25 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
-/datum/job/juneng
-	title = "Junior Engineer"
-	selection_color = "#5b4d20"
-	total_positions = 4
-	spawn_positions = 4
+/datum/job/conteng
+	title = "Containment Engineer"
+	total_positions = 1
+	spawn_positions = 2
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
+	selection_color = "#5b4d20"
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 30
-	alt_titles = list(
-		"Junior Maintenance Technician",
-		"Junior Engine Technician",
-		"Junior Damage Control Technician",
-		"Junior Electrician",
-		"Junior Atmospheric Technician",
-		)
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/conteng
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e4
+		/datum/mil_rank/security/w1
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2)
-	minimal_access = list()
-
-/datum/job/eng
-	title = "Engineer"
-	selection_color = "#5b4d20"
-	total_positions = 4
-	spawn_positions = 4
-	department_flag = ENG
-	supervisors = "the Chief Engineer"
-	economic_modifier = 5
-	minimal_player_age = 7
-	ideal_character_age = 30
-	alt_titles = list(
-		"Junior Maintenance Technician",
-		"Junior Engine Technician",
-		"Junior Damage Control Technician",
-		"Junior Electrician",
-		"Junior Atmospheric Technician",
-		)
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/eng
-	allowed_branches = list(
-		/datum/mil_branch/security
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/security/e4,
-		/datum/mil_rank/security/e5
-	)
-
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 
 /datum/job/seneng
@@ -99,26 +63,67 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
-/datum/job/conteng
-	title = "Containment Engineer"
-	total_positions = 1
-	spawn_positions = 2
+/datum/job/eng
+	title = "Engineer"
+	selection_color = "#5b4d20"
+	total_positions = 4
+	spawn_positions = 4
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
-	selection_color = "#5b4d20"
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 30
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/conteng
+	alt_titles = list(
+		"Junior Maintenance Technician",
+		"Junior Engine Technician",
+		"Junior Damage Control Technician",
+		"Junior Electrician",
+		"Junior Atmospheric Technician",
+		)
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/eng
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/w1
+		/datum/mil_rank/security/e4,
+		/datum/mil_rank/security/e5
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
 	minimal_access = list()
+
+/datum/job/juneng
+	title = "Junior Engineer"
+	selection_color = "#5b4d20"
+	total_positions = 4
+	spawn_positions = 4
+	department_flag = ENG
+	supervisors = "the Chief Engineer"
+	economic_modifier = 5
+	minimal_player_age = 7
+	ideal_character_age = 30
+	alt_titles = list(
+		"Junior Maintenance Technician",
+		"Junior Engine Technician",
+		"Junior Damage Control Technician",
+		"Junior Electrician",
+		"Junior Atmospheric Technician",
+		)
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e4
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+
+
+
+
 
 /*
 /datum/job/engineer

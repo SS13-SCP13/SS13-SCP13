@@ -187,8 +187,8 @@
 	title = "Brig Officer"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = null
