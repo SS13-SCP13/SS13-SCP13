@@ -620,14 +620,13 @@
 	spawn_positions = 2
 	supervisors = "the Head of Personnel"
 	ideal_character_age = 24
-	alt_titles = list("Interior caretaker
-	"
+	alt_titles = list("Interior caretaker")
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/janitor
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
 	allowed_ranks = list(
-	/datum/mil_rank/civilian/classd
+	/datum/mil_rank/civ/classd
 	)
 
 	access = list(access_sciencelvl1)

@@ -308,19 +308,19 @@ var/const/NO_EMAG_ACT = -50
 	name = "identification card"
 	desc = "A card issued to medical staff."
 	icon_state = "med"
-	job_access_type = /datum/job/doctor
+//	job_access_type = /datum/job/doctor
 
 /obj/item/weapon/card/id/medical/chemist
 	job_access_type = /datum/job/chemist
 
 /obj/item/weapon/card/id/medical/geneticist
-	job_access_type = /datum/job/geneticist
+//	job_access_type = /datum/job/geneticist
 
 /obj/item/weapon/card/id/medical/psychiatrist
 	job_access_type = /datum/job/psychiatrist
 
 /obj/item/weapon/card/id/medical/paramedic
-	job_access_type = /datum/job/Paramedic
+//	job_access_type = /datum/job/Paramedic
 
 /obj/item/weapon/card/id/medical/head
 	name = "identification card"
