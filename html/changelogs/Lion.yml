@@ -50,3 +50,4 @@ changes:
   - maptweak: "In order to fix the above point I had to add basic Security access requirements to all cell doors, but the master switch remains in the airlock oversight."
   - maptweak: "Minor fixes in Engineering."
   - wip: "Disabled Communications Officer from spawning while this job is being figured out behind the scenes. Manning just the comms station can be boring, right?"
+  - experiment: "Hardcoded the facility self destruct at 15 minutes."
