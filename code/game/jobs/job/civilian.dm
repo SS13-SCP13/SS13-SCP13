@@ -126,3 +126,24 @@
 	if(.)
 		H.implant_loyalty(H)
 */
+
+/datum/job/janitor
+	title = "Janitor"
+	department = "Civilian"
+	department_flag = CIV
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the Head of Personnel"
+	ideal_character_age = 24
+	alt_titles = list("Interior caretaker")
+	selection_color = "#515151"
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/janitor
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+	)
+	allowed_ranks = list(
+	/datum/mil_rank/civ/classd
+	)
+
+	access = list(access_sciencelvl1)
+	minimal_access = list()
