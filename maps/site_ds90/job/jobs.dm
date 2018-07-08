@@ -85,6 +85,8 @@
 	supervisors = "the Security Commander and Site Director"
 	department = "Command"
 	department_flag = COM
+	total_positions = 0
+	spawn_positions = 0
 	minimal_player_age = 15
 	economic_modifier = 10
 	ideal_character_age = 45
@@ -185,8 +187,8 @@
 	title = "Brig Officer"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = null
@@ -454,6 +456,8 @@
 /datum/job/chief_engineer
 	title = "Chief Engineer"
 	supervisors = "the Security Commander and Facility Director"
+	total_positions = 1
+	spawn_positions = 1
 	economic_modifier = 9
 	ideal_character_age = 40
 	minimal_player_age = 21
@@ -574,6 +578,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Security Commander"
+	selection_color = "#515151"
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 35
@@ -596,6 +601,7 @@
 	department_flag = SUP
 	total_positions = 2
 	spawn_positions = 2
+	selection_color = "#515151"
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
 	ideal_character_age = 24
@@ -620,14 +626,13 @@
 	spawn_positions = 2
 	supervisors = "the Head of Personnel"
 	ideal_character_age = 24
-	alt_titles = list("Interior caretaker
-	"
+	alt_titles = list("Interior caretaker")
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/janitor
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
 	allowed_ranks = list(
-	/datum/mil_rank/civilian/classd
+	/datum/mil_rank/civ/classd
 	)
 
 	access = list(access_sciencelvl1)

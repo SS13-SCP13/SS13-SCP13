@@ -160,7 +160,7 @@
 	id_type = /obj/item/weapon/card/id/seclvl2
 
 // MEDICAL OUTFITS
-*/
+
 /decl/hierarchy/outfit/job/ds90/crew/command/cmo
 	name = OUTFIT_JOB_NAME("Chief Medical Officer")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/purple
@@ -207,7 +207,7 @@
 
 
 // LOGISTICS OUTFITS
-*/
+
 /decl/hierarchy/outfit/job/site90/crew/command/logisticspecialist
 	name = OUTFIT_JOB_NAME("Logistics Specialist")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
