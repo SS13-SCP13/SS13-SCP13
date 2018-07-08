@@ -112,3 +112,26 @@ GLOBAL_LIST_EMPTY(scp106s)
 	if (getBruteLoss() + getFireLoss() + getToxLoss() + getCloneLoss() >= 100)
 		src << "<span class = 'danger'><i>You flee back to your pocket dimension!</i></danger>"
 		forceMove(pick(GLOB.scp106_floors))
+
+// landmark
+/obj/effect/landmark/scp106/New()
+	invisibility = 100 // still accessible through verbs, unlike 101
+	spawn while (TRUE)
+		sleep (15 MINUTES)
+		if (!src)
+			break
+		forceMove(pick(GLOB.scp106_floors))
+
+/obj/effect/landmark/scp106/verb/pass_through_door()
+	set name = "Pass Through Door"
+	if (ishuman(usr))
+		var/mob/living/carbon/human/H = usr
+		if (GLOB.scp106s.len)
+			H.visible_message("<span class = 'notice'>[H] starts to pass through the door...</span>")
+			if (do_after(H, 50, get_turf(H)))
+				for (var/scp106 in GLOB.scp106s)
+					var/mob/living/carbon/human/scp106/HH = scp106
+					if (HH.last_x != -1) // this should never happen, but just in case
+						H.visible_message("<span class = 'notice'>[H] passes through the door.</span>")
+						H.forceMove(locate(HH.last_x, HH.last_y, HH.last_z))
+						break
