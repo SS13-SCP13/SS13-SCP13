@@ -490,7 +490,7 @@ var/bomb_set
 
 		var/time = text2num(href_list["time"])
 		timeleft += time
-		timeleft = Clamp(timeleft, 900)
+		timeleft = Clamp(timeleft, 900, 900)
 		return 1
 
 /obj/machinery/nuclearbomb/station/Destroy()
