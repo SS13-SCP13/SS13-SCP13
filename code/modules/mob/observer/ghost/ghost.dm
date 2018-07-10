@@ -286,7 +286,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/ghost/verb/become_scp()
 	set category = "Ghost"
-	set name = "Become a SCP"
+	set name = "Join as SCP"
 	set desc = "Take control of a clientless SCP."
 
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
