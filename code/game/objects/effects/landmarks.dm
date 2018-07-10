@@ -62,6 +62,11 @@
 			endgame_exits += loc
 			delete_me = 1
 			return
+		if ("beginning")
+			GLOB.beginning_landmarks += loc
+			delete_me = 1
+			return
+
 
 	landmarks_list += src
 	return 1

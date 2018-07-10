@@ -1,4 +1,5 @@
 GLOBAL_LIST_EMPTY(scp106s)
+GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106
 	name = "SCP-106"
@@ -114,24 +115,51 @@ GLOBAL_LIST_EMPTY(scp106s)
 		forceMove(pick(GLOB.scp106_floors))
 
 // landmark
+/obj/effect/landmark/scp106
+
 /obj/effect/landmark/scp106/New()
 	invisibility = 100 // still accessible through verbs, unlike 101
+	GLOB.scp106_landmarks += src
 	spawn while (TRUE)
 		sleep (15 MINUTES)
 		if (!src)
 			break
 		forceMove(pick(GLOB.scp106_floors))
 
-/obj/effect/landmark/scp106/verb/pass_through_door()
+/obj/effect/landmark/scp106/proc/pass_through_door()
 	set name = "Pass Through Door"
 	if (ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		if (GLOB.scp106s.len)
 			H.visible_message("<span class = 'notice'>[H] starts to pass through the door...</span>")
 			if (do_after(H, 50, get_turf(H)))
-				for (var/scp106 in GLOB.scp106s)
-					var/mob/living/carbon/human/scp106/HH = scp106
-					if (HH.last_x != -1) // this should never happen, but just in case
-						H.visible_message("<span class = 'notice'>[H] passes through the door.</span>")
-						H.forceMove(locate(HH.last_x, HH.last_y, HH.last_z))
-						break
+				H.visible_message("<span class = 'notice'>[H] passes through the door.</span>")
+				if (GLOB.scp106s.len)
+					for (var/scp106 in GLOB.scp106s)
+						var/mob/living/carbon/human/scp106/HH = scp106
+						if (HH.last_x != -1) // this should never happen, but just in case
+							H.forceMove(locate(HH.last_x, HH.last_y, HH.last_z))
+							break
+				else
+					H.forceMove(pick(GLOB.beginning_landmarks))
+
+/obj/effect/landmark/scp106/proc/pass_through_door_unsafe()
+	set name = "Leave"
+	if (ishuman(usr))
+		var/mob/living/carbon/human/H = usr
+		H.visible_message("<span class = 'notice'>[H] starts to pass through the door...</span>")
+		if (do_after(H, 50, get_turf(H)))
+			if (prob(50))
+				H.adjustBrainLoss(1000)
+			else
+				H.visible_message("<span class = 'notice'>[H] passes through the door.</span>")
+				H.forceMove(pick(GLOB.beginning_landmarks))
+
+/hook/roundstart/proc/setup_scp106_landmarks()
+	for (var/v in 1 to shuffle(GLOB.scp106_landmarks.len))
+		var/obj/effect/landmark/scp106/L = GLOB.scp106_landmarks[v]
+		switch (v)
+			if (1)
+				L.verbs += /obj/effect/landmark/scp106/proc/pass_through_door
+			if (2 to 8)
+				L.verbs += /obj/effect/landmark/scp106/proc/pass_through_door_unsafe
