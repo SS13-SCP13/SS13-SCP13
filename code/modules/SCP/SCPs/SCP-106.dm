@@ -116,7 +116,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		src << "<span class = 'danger'><i>You flee back to your pocket dimension!</i></danger>"
 		forceMove(pick(GLOB.scp106_floors))
 
-// landmark
+
+// landmark that handles pocket dimension stuff
 /obj/effect/landmark/scp106
 
 /obj/effect/landmark/scp106/New()
