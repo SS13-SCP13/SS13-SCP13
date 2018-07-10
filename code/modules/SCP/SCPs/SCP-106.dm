@@ -106,7 +106,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /mob/living/carbon/human/scp106/proc/go_back()
 	set name = "Return"
 	set desc = "Return to the area you last teleported from."
-	forceMove(locate(last_x, last_y, last_z))
+	if (last_x != -1) // shouldn't be possible but just in case
+		forceMove(locate(last_x, last_y, last_z))
 	verbs -= /mob/living/carbon/human/scp106/proc/go_back
 
 /mob/living/carbon/human/scp106/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/damage_flags = 0, var/obj/used_weapon = null, var/obj/item/organ/external/given_organ = null)
