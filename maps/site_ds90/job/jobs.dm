@@ -19,7 +19,13 @@
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
 	allowed_ranks = list(/datum/mil_rank/civ/classd)
+	var/static/list/used_numbers = list()
 
+/datum/job/assistant/equip(var/mob/living/carbon/human/H)
+	..()
+	used_numbers += rand(100,9000)
+	H.name = "D-[used_numbers[used_numbers.len]]"
+	H.real_name = H.name
 
 /datum/job/captain
 	title = "Site Director"
