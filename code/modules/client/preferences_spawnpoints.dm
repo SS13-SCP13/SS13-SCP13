@@ -56,11 +56,45 @@ GLOBAL_VAR(spawntypes)
 /datum/spawnpoint/cryo
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
-	disallow_job = list("Cyborg")
+	disallow_job = list("Cyborg", "Class D", "Assistant", "Class D")
 
 /datum/spawnpoint/cryo/New()
 	..()
 	turfs = GLOB.latejoin_cryo
+
+/datum/spawnpoint/dclass
+	display_name = "D-Cells"
+	msg = "has been delivered to the Class D Area"
+
+/datum/spawnpoint/dclass/New()
+	..()
+	turfs = GLOB.latejoin_dclass
+
+/datum/spawnpoint/lcz
+	display_name = "Light Containment Zone"
+	msg = "has entered the light containment zone"
+	disallow_job = list(
+	"Class D",
+	"Chief Engineer",
+	"Senior Engineer",
+	"Containment Engineer",
+	"Junior Engineer",
+	"Engineer",
+	"Security Commander",
+	"Security Lieutenant",
+	"Security Officer",
+	"Junior Security Officer",
+	"Chief Medical Officer",
+	"Surgeon",
+	"Virologist",
+	"Medical Doctor",
+	"Chemist"
+	)
+
+/datum/spawnpoint/lcz/New()
+	..()
+	turfs = GLOB.latejoin_lcz
+
 
 /datum/spawnpoint/cyborg
 	display_name = "Cyborg Storage"
@@ -70,8 +104,3 @@ GLOBAL_VAR(spawntypes)
 /datum/spawnpoint/cyborg/New()
 	..()
 	turfs = GLOB.latejoin_cyborg
-
-/datum/spawnpoint/default
-	display_name = DEFAULT_SPAWNPOINT_ID
-	msg = "has arrived on the station"
-	always_visible = TRUE
