@@ -18,6 +18,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /obj/scp106_helper
 	icon = 'icons/mob/scp106.dmi'
 	name = ""
+	desc = "" // I doubt this matters but just in case
 
 /mob/living/carbon/human/scp106/New()
 	..()
