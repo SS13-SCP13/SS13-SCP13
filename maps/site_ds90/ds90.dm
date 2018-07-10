@@ -15,7 +15,7 @@
 //	#include "torch_unit_testing.dm"
 //	#include "torch_antagonism.dm"
 //	#include "torch_npcs.dm"
-//	#include "torch_security_state.dm"
+	#include "ds90_securitystate.dm"
 
 //	#include "datums/uniforms.dm"
 //	#include "datums/uniforms_expedition.dm"

@@ -53,4 +53,7 @@ changes:
   - maptweak: "In order to fix the above point I had to add basic Security access requirements to all cell doors, but the master switch remains in the airlock oversight."
   - maptweak: "Minor fixes in Engineering."
   - maptweak: "Mapped in Engineer spawns."
+  - soundadd: "Added in a replacement sound for Delta alert."
+  - soundadd: "Added in a replacement sound for the power down random event."
+  - soundadd: "Added in a replacement sound for power up random event."
   - wip: "Disabled Communications Officer from spawning while this job is being figured out behind the scenes. Manning just the comms station can be boring, right?"
