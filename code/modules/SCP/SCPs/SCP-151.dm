@@ -10,7 +10,7 @@
 	var/list/victims = list()
 
 /obj/structure/scp151/proc/hurt_victims() //simulate drowning
-	for(var/mob/living/carbon in victims)
+	for(var/mob/living/carbon/user in victims)
 		user.apply_damage(30, OXY)
 
 /obj/structure/scp151/Initialize()
@@ -23,7 +23,7 @@
 		hurt_victims()
 		last_regen = world.time
 
-/obj/structure/scp151/examine(mob/living/carbon)
+/obj/structure/scp151/examine(mob/living/carbon/user)
 	. = ..()
 	if(!(user in victims))
 		victims += user //on examine, adds user into victims list
