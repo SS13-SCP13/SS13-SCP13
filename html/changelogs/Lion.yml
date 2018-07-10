@@ -35,6 +35,7 @@ delete-after: True
 changes: 
   - rscadd: "Added spawn point at the LCZ for Scientists."
   - rscadd: "Mapped in SCP-504's chamber."
+  - rscadd: "Coded and mapped in SCP-500."
   - bugfix: "Fixed bug with engineering lockers not opening."
   - bugfix: "Fixed bug with incorrect ID Tag in Beta Engine."
   - bugfix: "Fixed bug with developers appearing as Mentors."
