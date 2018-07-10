@@ -6,8 +6,8 @@
 	has_organ = list()
 	siemens_coefficient = 0
 
-	blood_color = "#cccccc"
-	flesh_color = "#aaaaaa"
+	blood_color = "#622a37"
+	flesh_color = "#442A37"
 
 	death_message = "dies."
 
