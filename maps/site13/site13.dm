@@ -1,21 +1,20 @@
 #if !defined(using_map_DATUM)
 
-	#include "ds90_announcements.dm"
-	#include "ds90areas.dm"
+//	#include "torch_announcements.dm"
 	#include "../torch/torch_areas.dm"
+	#include "../site_ds90/ds90areas.dm"
 //	#include "torch_elevator.dm"
-	#include "ds90elevators.dm"
+	#include "../site_ds90/ds90elevators.dm"
 //	#include "torch_holodecks.dm"
 //	#include "torch_overmap.dm"
-	#include "ds90_presets.dm"
+//	#include "torch_presets.dm"
 //	#include "torch_ranks.dm"
-	#include "site_ds90_ranks.dm"
+	#include "../site_ds90/site_ds90_ranks.dm"
 	#include "../torch/torch_shuttles.dm"
-	#include "../torch/torch_presets.dm"
 //	#include "torch_unit_testing.dm"
 //	#include "torch_antagonism.dm"
 //	#include "torch_npcs.dm"
-	#include "ds90_securitystate.dm"
+//	#include "torch_security_state.dm"
 
 //	#include "datums/uniforms.dm"
 //	#include "datums/uniforms_expedition.dm"
@@ -51,7 +50,7 @@
 //	#include "structures/closets/engineering.dm"
 //	#include "structures/closets/medical.dm"
 //	#include "structures/closets/misc.dm"
-	#include "structures/closets/research.dm"
+//	#include "structures/closets/research.dm"
 	#include "structures/closets/security.dm"
 	#include "structures/closets/services.dm"
 	#include "structures/closets/supply.dm"
@@ -68,18 +67,10 @@
 	#include "loadout/loadout_xeno.dm"*/
 //	#include "loadout/~defines.dm"
 
-	#include "ds90-1.dmm"
-	#include "ds90-2.dmm"
-	#include "ds90-3.dmm"
-	#include "ds90-4.dmm"
-	#include "ds90-5.dmm"
-	#include "ds90-6.dmm"
-	#include "ds90-8.dmm"
-//	#include "torch-3.dmm"
-//	#include "torch-4.dmm"
-//	#include "torch-5.dmm"
-//	#include "torch-6.dmm"
-//	#include "torch-7.dmm"
+	#include "site13-1.dmm"
+	#include "site13-2.dmm"
+	#include "site13-3.dmm"
+
 /*	#include "../away/empty.dmm"
 	#include "../away/mining/mining.dm"
 	#include "../away/derelict/derelict.dm"
@@ -99,14 +90,11 @@
 	#include "../away/lar_maria/lar_maria.dm"*/
 
 	#include "../../code/modules/lobby_music/Perdition.dm"
-	#include "../../code/modules/lobby_music/sm.dm"
-	#include "../../code/modules/lobby_music/std.dm"
 
-
-	#define using_map_DATUM /datum/map/ds90
+	#define using_map_DATUM /datum/map/site13
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn A map has already been included, ignoring Site DS90
+	#warn A map has already been included, ignoring Site 13
 
 #endif

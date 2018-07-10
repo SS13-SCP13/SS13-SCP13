@@ -324,6 +324,8 @@
 /datum/job/rd
 	title = "Research Director"
 	supervisors = "Facility Director and the Head of Human Resources"
+	total_positions = 1
+	spawn_positions = 1
 	economic_modifier = 20
 	minimal_player_age = 15
 	ideal_character_age = 60
@@ -434,7 +436,7 @@
 /datum/job/conteng
 	title = "Containment Engineer"
 	total_positions = 1
-	spawn_positions = 2
+	spawn_positions = 1
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
 	economic_modifier = 5
@@ -445,7 +447,11 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/w1
+		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/w2,
+		/datum/mil_rank/security/w3,
+		/datum/mil_rank/security/w4,
+		/datum/mil_rank/security/w5
 	)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
@@ -463,7 +469,7 @@
 	minimal_player_age = 21
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	allowed_branches = list(/datum/mil_branch/security)
-	allowed_ranks = list(/datum/mil_rank/security/o1)
+	allowed_ranks = list(/datum/mil_rank/security/o1, /datum/mil_rank/security/o2)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()

@@ -4,7 +4,7 @@
 
 /obj/structure/closet/secure_closet/RD_torch
 	name = "research director's locker"
-	req_access = list(access_rd)
+//	req_access = list(access_rd)
 	icon_state = "rdsecure1"
 	icon_closed = "rdsecure"
 	icon_locked = "rdsecure1"
@@ -47,7 +47,7 @@
 
 /obj/structure/closet/secure_closet/secure_closet/xenoarchaeologist_torch
 	name = "xenoarchaeologist's locker"
-	req_access = list(access_xenoarch)
+//	req_access = list(access_xenoarch)
 	icon_state = "secureres1"
 	icon_closed = "secureres"
 	icon_locked = "secureres1"
@@ -81,7 +81,7 @@
 
 /obj/structure/closet/secure_closet/scientist_torch
 	name = "researcher's locker"
-	req_one_access = list(access_research)
+//	req_one_access = list(access_research)
 	icon_state = "secureres1"
 	icon_closed = "secureres"
 	icon_locked = "secureres1"
@@ -113,7 +113,7 @@
 
 /obj/structure/closet/secure_closet/prospector
 	name = "prospector's locker"
-	req_access = list(access_mining)
+//	req_access = list(access_mining)
 	icon_state = "miningsec1"
 	icon_closed = "miningsec"
 	icon_locked = "miningsec1"
@@ -141,7 +141,7 @@
 
 /obj/structure/closet/secure_closet/guard
 	name = "security guard's locker"
-	req_access = list(access_sec_guard)
+//	req_access = list(access_sec_guard)
 	icon_state = "guard1"
 	icon_closed = "guard"
 	icon_locked = "guard1"
@@ -182,3 +182,34 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
 	)
+
+/obj/structure/closet/secure_closet/scpscience/directorofscience
+	name = "Research Director's Locker"
+	req_access = list(access_sciencelvl5)
+	icon_state = "dslocked"
+	icon_closed = "dsunlocked"
+	icon_locked = "dslocked"
+	icon_opened = "dsopen"
+	icon_broken = "dsbroken"
+	icon_off = "dsoff"
+/* AWAITING OVERHAUL
+/obj/structure/closet/secure_closet/xenoarchaeologist/New()
+	..()
+	if(prob(50))
+		new /obj/item/weapon/storage/backpack/toxins(src)
+	else
+		new /obj/item/weapon/storage/backpack/satchel_tox(src)
+	if(prob(50))
+		new /obj/item/weapon/storage/backpack/dufflebag(src)
+	new /obj/item/clothing/under/rank/scientist(src)
+	new /obj/item/clothing/suit/storage/toggle/labcoat(src)
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/glasses/science(src)
+	new /obj/item/device/radio/headset/headset_sci(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/weapon/clipboard(src)
+	new /obj/item/weapon/storage/belt/archaeology(src)
+	new /obj/item/weapon/storage/excavation(src)
+	new /obj/item/taperoll/research(src)
+
+	*/

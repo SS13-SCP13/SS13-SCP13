@@ -38,6 +38,14 @@
 			GLOB.latejoin_cryo += loc
 			delete_me = 1
 			return
+		if("JoinLateDclass")
+			GLOB.latejoin_dclass += loc
+			delete_me = 1
+			return
+		if("JoinLatelcz")
+			GLOB.latejoin_lcz += loc
+			delete_me = 1
+			return
 		if("JoinLateCyborg")
 			GLOB.latejoin_cyborg += loc
 			delete_me = 1
