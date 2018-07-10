@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106
 	name = "SCP-106"
-	desc = "A rotting, elderly humanoid."
+	desc = "A creature in the form of a rotting, elderly humanoid."
 	SCP = /datum/scp/SCP_106
 	var/mob/living/target = null
 	var/last_x = -1
