@@ -1,6 +1,6 @@
 /datum/species/scp106
 	name = "SCP-106"
-	name_plural = "SCP-106"
+	name_plural = "SCP-106s"
 
 	darksight = 8
 	has_organ = list()
@@ -8,8 +8,6 @@
 
 	blood_color = "#622a37"
 	flesh_color = "#442A37"
-
-	death_message = "dies."
 
 	species_flags = SPECIES_FLAG_NO_SLIP | SPECIES_FLAG_NO_POISON
 	spawn_flags = SPECIES_IS_RESTRICTED
