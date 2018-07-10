@@ -18,6 +18,10 @@
 			GLOB.monkeystart += loc
 			delete_me = 1
 			return
+		if ("scp106")
+			new /mob/living/carbon/human/scp106 (loc)
+			delete_me = 1
+			return
 		if("start")
 			GLOB.newplayer_start += loc
 			delete_me = 1
@@ -70,6 +74,11 @@
 			endgame_exits += loc
 			delete_me = 1
 			return
+		if ("beginning")
+			GLOB.beginning_landmarks += loc
+			delete_me = 1
+			return
+
 
 	landmarks_list += src
 	return 1
