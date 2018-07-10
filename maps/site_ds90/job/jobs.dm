@@ -23,7 +23,7 @@
 
 /datum/job/assistant/equip(var/mob/living/carbon/human/H)
 	..()
-	used_numbers += rand(100,9000)
+	used_numbers |= rand(100,9000)
 	H.name = "D-[used_numbers[used_numbers.len]]"
 	H.real_name = H.name
 
