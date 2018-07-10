@@ -29,7 +29,6 @@ var/list/organ_cache = list()
 	var/death_time
 
 	// SCP-13
-
 	var/scp106_affected = FALSE
 	var/scp106_vulnerable = TRUE
 
