@@ -118,10 +118,10 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		forceMove(pick(GLOB.scp106_floors))
 
 
-// landmark that handles pocket dimension stuff
-/obj/effect/landmark/scp106
+// object that handles pocket dimension stuff
+/obj/scp106_door
 
-/obj/effect/landmark/scp106/New()
+/obj/scp106_door/New()
 	invisibility = 100 // still accessible through verbs, unlike 101
 	GLOB.scp106_landmarks += src
 	spawn while (TRUE)
@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 			break
 		forceMove(pick(GLOB.scp106_floors))
 
-/obj/effect/landmark/scp106/proc/pass_through_door()
+/obj/scp106_door/proc/pass_through_door()
 	set name = "Pass Through Door"
 	set category = "Special"
 	if (ishuman(usr))
@@ -148,7 +148,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 				else
 					H.forceMove(pick(GLOB.beginning_landmarks))
 
-/obj/effect/landmark/scp106/proc/pass_through_door_unsafe()
+/obj/scp106_door/proc/pass_through_door_unsafe()
 	set name = "Leave"
 	set category = "Special"
 	if (ishuman(usr))
@@ -163,9 +163,9 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /hook/roundstart/proc/setup_scp106_landmarks()
 	for (var/v in 1 to shuffle(GLOB.scp106_landmarks.len))
-		var/obj/effect/landmark/scp106/L = GLOB.scp106_landmarks[v]
+		var/obj/scp106_door/L = GLOB.scp106_landmarks[v]
 		switch (v)
 			if (1)
-				L.verbs += /obj/effect/landmark/scp106/proc/pass_through_door
+				L.verbs += /obj/scp106_door/proc/pass_through_door
 			if (2 to 8)
-				L.verbs += /obj/effect/landmark/scp106/proc/pass_through_door_unsafe
+				L.verbs += /obj/scp106_door/proc/pass_through_door_unsafe
