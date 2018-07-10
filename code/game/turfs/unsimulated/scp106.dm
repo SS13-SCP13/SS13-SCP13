@@ -1,3 +1,4 @@
+// floors
 GLOBAL_LIST_EMPTY(scp106_floors)
 
 /turf/unsimulated/floor/scp106
@@ -29,3 +30,8 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 					I.scp106_affected = TRUE
 					break
 			C.adjustBruteLoss(5)
+
+// walls
+/turf/unsimulated/wall/scp106
+	name = "void wall"
+	color = "#000000"
