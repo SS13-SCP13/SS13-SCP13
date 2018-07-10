@@ -127,6 +127,7 @@ var/list/admin_verbs_fun = list(
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
 	/client/proc/create_dungeon,
+	/client/proc/add_traumas,
 	/datum/admins/proc/ai_hologram_set
 	)
 
@@ -293,6 +294,7 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/air_report,
 	/client/proc/enable_debug_verbs,
 	/client/proc/roll_dices,
+	/client/proc/add_traumas,
 	/proc/possess,
 	/proc/release
 	)
@@ -647,6 +649,37 @@ var/list/admin_verbs_sendev = list(
 			explosion(epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range)
 	log_and_message_admins("created an admin explosion at [epicenter.loc].")
 	feedback_add_details("admin_verb","DB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/proc/add_traumas(mob/T as mob in SSmobs.mob_list)
+	set category = "Fun"
+	set name = "Add Traumas"
+	set desc = "Induces retardations on a given mob."
+
+	if(!istype(T,/mob/living/carbon/human))
+		to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
+		return
+
+	var/mob/living/carbon/human/C = T
+
+	var/list/traumas = subtypesof(/datum/brain_trauma)
+	var/result = input(usr, "Choose the brain trauma to apply","Traumatize") as null|anything in traumas
+	var/permanent = alert("Do you want to make the trauma unhealable?", "Permanently Traumatize", "Yes", "No")
+	if(permanent == "Yes")
+		permanent = TRUE
+	else
+		permanent = FALSE
+	if(!usr)
+		return
+	if(!C)
+		to_chat(usr, "Mob doesn't exist anymore")
+		return
+
+	if(result)
+		C.gain_trauma(result, permanent)
+
+	log_and_message_admins("<span class='notice'>gave [key_name(C)] [result].</span>")
+	feedback_add_details("admin_verb","BT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
 
 /client/proc/give_disease2(mob/T as mob in SSmobs.mob_list) // -- Giacom
 	set category = "Fun"
