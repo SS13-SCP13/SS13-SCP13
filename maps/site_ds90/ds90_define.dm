@@ -16,7 +16,7 @@
 	overmap_event_areas = 0
 	usable_email_tlds = list("ds90.foundation", "security.ds90.foundation", "science.ds90.foundation", "utility.ds90.foundation")
 
-	allowed_spawns = list("Cryogenic Storage")
+	allowed_spawns = list("Cryogenic Storage", "D-Cells", "Light Containment Zone")
 	default_spawn = "Cryogenic Storage"
 
 	station_name  = "Deep Space Site-90"
