@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Baystation 12 Changelog</title>
+  <title>SCP13 Changelog</title>
   <link rel="stylesheet" type="text/css" href="changelog.css">
   <base target="_blank" />
   <script type='text/javascript'>
@@ -23,26 +23,25 @@
 <table align='center' class="top">
 	<tr>
 		<td valign='top'>
-			<div align='center'><font size='3'><b>Space Station 13</b></font></div>
+			<div align='center'><font size='3'><b>SCP13</b></font></div>
 			
-			<p><div align='center'><font size='3'><a href="http://wiki.baystation12.net/">Wiki</a> | <a href="https://github.com/Baystation12/Baystation12/">Source code</a></font></div></p>
+			<p><div align='center'><font size='3'><a href="https://scp13.site/wiki">Wiki</a> | <a href="https://github.com/SS13-SCP13/SS13-SCP13">Source code</a></font></div></p>
             <font size='2'>Code licensed under <a href="http://www.gnu.org/licenses/agpl.html">AGPLv3</a>. Content licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.<br><br>
-			<font size='2'><b>Visit our IRC channel:</b> #bs12 on irc.sorcery.net</font>
 			</td>
 	</tr>
 </table>
 
-<br><b>Baystation 12 Credit List</b>
+<br><b>SCP13 Credit List</b>
 <table align='center' class="top">
 	<tr>
 		<td valign='top'>
-            <font size='2'><b>Current Project Maintainers:</b> <a href='https://github.com/Baystation12?tab=members'>-Click Here-</a><br></font>
-			<font size='2'><b>Currently Active GitHub contributor list:</b> <a href='https://github.com/Baystation12/Baystation12/graphs/contributors'>-Click Here-</a><br></font>
-			<font size='2'><b>Code:</b> Abi79, Aryn, Cael_Aislinn, Ccomp5950, Chinsky, cib, CompactNinja, DopeGhoti, Erthilo, Hawk_v3, Head, Ispil, JoeyJo0, Lexusjjss, Melonstorm, Miniature, Mloc, NerdyBoy1104, PsiOmegaDelta, SkyMarshal, Snapshot, Spectre, Strumpetplaya, Sunfall, Tastyfish, Uristqwerty<br></font>
-			<font size='2'><b>Sprites:</b> Apple_Master, Arcalane, Chinsky, CompactNinja, Deus Dactyl, Erthilo, Flashkirby, JoeyJo0, Miniature, Searif, Xenone, faux<br></font>
-			<font size='2'><b>Sounds:</b> Aryn<br></font>
-            <font size='2'><b>Main Testers:</b> Anyone who has submitted a bug to the issue tracker<br></font>
-			<font size='2'><b>Thanks to:</b> /tg/ station, /vg/station, GoonStation devs, the original SpaceStation developers and Invisty for the title image.<br> Also a thanks to anybody who has contributed who is not listed here :( Ask to be added here on irc.</font>
+            <font size='2'><b>Current Project Maintainers:</b> <a href='https://github.com/orgs/SS13-SCP13/people'>-Click Here-</a><br></font>
+			<font size='2'><b>Currently Active GitHub contributor list:</b> <a href='https://github.com/SS13-SCP13/SS13-SCP13/graphs/contributors'>-Click Here-</a><br></font>
+			<font size='2'><b>Lead Project Developer:</b> TheLion1675<br></font>
+			<font size='2'><b>Programming Team:</b> TheLion1675, Affurrit, Kachnov, Caryl, memeopolis, drexample<br></font>
+			<font size='2'><b>Design:</b> TheLion1675, Wicker0, Glitterfart, m11, LYNXEMS<br></font>
+			<font size='2'><b>Sounds:</b> SKerrigan (Lead Female Voice Actor)<br></font>
+			<font size='2'><b>Thanks to:</b> The Baystation 12 Developers for their outstanding assistance in creating this.<br></font>
 			<font size='2' color='red'><b><br>Have a bug to report?</b> Visit our <a href="https://github.com/Baystation12/Baystation12/issues?labels=Bug&state=open">Issue Tracker</a>.<br></font>
 		</td>
 	</tr>
@@ -56,6 +55,35 @@
 		
 		-->
 		<div class="commit sansserif">
+			<h2 class="date">10 July 2018</h2>
+			<h3 class="author">TheLion1675 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added more jobs to the list, they should automatically appear. All jobs are now functional, but may not have spawnpoints yet.</li>
+				<li class="rscadd">All jobs now start with a handheld radio.</li>
+				<li class="rscadd">Added CE's office in Engineering.</li>
+				<li class="rscdel">Removed Brig Officer for the time being. This role is being evaluated.</li>
+				<li class="rscdel">Removed atmos control for upper EZ for the time being, while the atmos system is being sorted.</li>
+				<li class="tweak">Removed a lot of redundant code regarding jobs and outfits. Should help with compile time some.</li>
+				<li class="tweak">Gate B now requires level 4 Security clearance.</li>
+				<li class="bugfix">Fixed a bug with SCP-151 being visible through shutters.</li>
+				<li class="bugfix">Fixed an issue with Atmos in LCZ.</li>
+				<li class="bugfix">Fixed a bug with Servers windoor in Engineering.</li>
+				<li class="bugfix">Fix to Keycard auth devices. It now requires two level 4 Security clearance keycards to detonate.</li>
+				<li class="bugfix">Gate A can finally be opened.</li>
+				<li class="bugfix">Fixed an issue with D-Class cells not being powered properly.</li>
+				<li class="bugfix">Fixed RnD labs not being hooked up to power net.</li>
+				<li class="bugfix">Fixed a scrubber not having been mapped in near RnD.</li>
+				<li class="bugfix">Fixed Sergeant ranks not having the correct shorthand.</li>
+				<li class="bugfix">Fixed an issue with d-cells not opening.</li>
+				<li class="maptweak">In order to fix the above point I had to add basic Security access requirements to all cell doors, but the master switch remains in the airlock oversight.</li>
+				<li class="maptweak">Minor fixes in Engineering.</li>
+				<li class="maptweak">Mapped in Engineer spawns.</li>
+				<li class="soundadd">Added in a replacement sound for Delta alert.</li>
+				<li class="soundadd">Added in a replacement sound for the power down random event.</li>
+				<li class="soundadd">Added in a replacement sound for power up random event.</li>
+				<li class="wip">Disabled Communications Officer from spawning while this job is being figured out behind the scenes. Manning just the comms station can be boring, right?</li>
+			</ul>
+
 			<h2 class="date">06 July 2018</h2>
 			<h3 class="author">Caryl updated:</h3>
 			<ul class="changes bgimages16">

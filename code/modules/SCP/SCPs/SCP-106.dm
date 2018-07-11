@@ -105,7 +105,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/proc/go_back()
 	set name = "Return"
-	set category = "Special"
+	set category = "SCP"
 	set desc = "Return to the area you last teleported from."
 	if (last_x != -1) // shouldn't be possible but just in case
 		forceMove(locate(last_x, last_y, last_z))

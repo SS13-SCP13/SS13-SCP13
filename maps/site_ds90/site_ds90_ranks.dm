@@ -18,7 +18,7 @@
 /datum/mil_branch/security
 	name = "Site DS90 Security Branch"
 	name_short = "SD90SB"
-	email_domain = "security.siteds90"
+	email_domain = "ds90.foundation"
 
 	rank_types = list(
 		/datum/mil_rank/security/e1,
@@ -72,7 +72,7 @@
 /datum/mil_branch/civilian
 	name = "Civilian"
 	name_short = "civ"
-	email_domain = "siteds90.foundation"
+	email_domain = "ds90.foundation"
 
 	rank_types = list(
 		/datum/mil_rank/civ/classa,
