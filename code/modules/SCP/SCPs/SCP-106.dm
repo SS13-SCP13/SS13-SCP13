@@ -15,7 +15,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	designation = "106"
 	classification = KETER
 
-/obj/scp106_helper
+/obj/scp106_sprite_helper
 	icon = 'icons/mob/scp106.dmi'
 	name = ""
 	desc = "" // I doubt this matters but just in case
@@ -24,11 +24,11 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	..()
 	update_icon = FALSE
 	name = initial(name)
-	vis_contents += new /obj/scp106_helper
+	vis_contents += new /obj/scp106_sprite_helper
 
 /mob/living/carbon/human/scp106/Move()
 	..()
-	for (var/obj/scp106_helper/O in vis_contents)
+	for (var/obj/scp106_sprite_helper/O in vis_contents)
 		O.dir = dir
 		break
 
