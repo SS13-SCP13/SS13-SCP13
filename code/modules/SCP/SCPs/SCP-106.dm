@@ -26,6 +26,11 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	name = initial(name)
 	vis_contents += new /obj/scp106_sprite_helper
 	verbs += /mob/living/carbon/human/scp106/proc/phase_through_airlock
+	if (loc in GLOB.scp106_turfs)
+		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
+	else
+		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+
 
 /mob/living/carbon/human/scp106/Move()
 	..()
@@ -117,11 +122,29 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	set category = "SCP"
 	set desc = "Phase through an airlock in front of you."
 	for (var/obj/machinery/door/airlock/A in get_step(src, dir))
-		invisbility = 100
+		invisibility = 100
 		if (do_after(src, 30, A))
 			forceMove(get_step(src, dir))
 			forceMove(get_step(src, dir))
 		invisibility = 0
+
+/mob/living/carbon/human/scp106/proc/enter_pocket_dimension()
+	set name = "Enter Pocket Dimension"
+	set category = "SCP"
+	set desc = "Enter your pocket dimension."
+	if (do_after(src, 50, get_turf(src)))
+		forceMove(pick(GLOB.scp106_floors))
+		verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
+
+/mob/living/carbon/human/scp106/proc/exit_pocket_dimension()
+	set name = "Enter Pocket Dimension"
+	set category = "SCP"
+	set desc = "Exit your pocket dimension."
+	if (do_after(src, 50, get_turf(src)))
+		forceMove(pick(GLOB.simulated_turfs_scp106))
+		verbs -= /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
+		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 
 /mob/living/carbon/human/scp106/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/damage_flags = 0, var/obj/used_weapon = null, var/obj/item/organ/external/given_organ = null)
 	. = ..(damage, damagetype, def_zone, blocked, damage_flags, used_weapon, given_organ)
