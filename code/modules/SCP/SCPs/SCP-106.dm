@@ -25,6 +25,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	update_icon = FALSE
 	name = initial(name)
 	vis_contents += new /obj/scp106_sprite_helper
+	verbs += /mob/living/carbon/human/scp106/proc/phase_through_airlock
 
 /mob/living/carbon/human/scp106/Move()
 	..()
@@ -110,6 +111,17 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	if (last_x != -1) // shouldn't be possible but just in case
 		forceMove(locate(last_x, last_y, last_z))
 	verbs -= /mob/living/carbon/human/scp106/proc/go_back
+
+/mob/living/carbon/human/scp106/proc/phase_through_airlock()
+	set name = "Phase Through Airlock"
+	set category = "SCP"
+	set desc = "Phase through an airlock in front of you."
+	for (var/obj/machinery/door/airlock/A in get_step(src, dir))
+		invisbility = 100
+		if (do_after(src, 30, A))
+			forceMove(get_step(src, dir))
+			forceMove(get_step(src, dir))
+		invisibility = 0
 
 /mob/living/carbon/human/scp106/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/damage_flags = 0, var/obj/used_weapon = null, var/obj/item/organ/external/given_organ = null)
 	. = ..(damage, damagetype, def_zone, blocked, damage_flags, used_weapon, given_organ)
