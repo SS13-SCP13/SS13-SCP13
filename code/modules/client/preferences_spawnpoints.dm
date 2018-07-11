@@ -104,6 +104,10 @@ GLOBAL_VAR(spawntypes)
 	"Chemist"
 	)
 
+/datum/spawnpoint/lcz/New()
+	..()
+	turfs = GLOB.latejoin_lcz
+
 /datum/spawnpoint/security
 	display_name = "Security Base"
 	msg = "has started the shift in the Security Base dorms"
@@ -126,9 +130,9 @@ GLOBAL_VAR(spawntypes)
 	"Chemist"
 	)
 
-/datum/spawnpoint/lcz/New()
+/datum/spawnpoint/security/New()
 	..()
-	turfs = GLOB.latejoin_lcz
+	turfs = GLOB.latejoin_security
 
 
 /datum/spawnpoint/cyborg

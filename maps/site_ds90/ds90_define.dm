@@ -11,7 +11,7 @@
 	player_levels = list(1,2,3,4,5,6)
 	admin_levels = list(7,8)
 	empty_levels = list()
-	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1,"5"=1,"8"=30)
+	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1,"5"=1,"6"=1, "7"=30, "8"=30)
 	overmap_size = 35
 	overmap_event_areas = 0
 	usable_email_tlds = list("ds90.foundation", "security.ds90.foundation", "science.ds90.foundation", "utility.ds90.foundation")
