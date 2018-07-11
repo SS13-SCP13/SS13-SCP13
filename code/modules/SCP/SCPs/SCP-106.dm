@@ -105,7 +105,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/proc/go_back()
 	set name = "Return"
-	set category = "Special"
+	set category = "SCP"
 	set desc = "Return to the area you last teleported from."
 	if (last_x != -1) // shouldn't be possible but just in case
 		forceMove(locate(last_x, last_y, last_z))
@@ -132,7 +132,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /obj/scp106_door/proc/pass_through_door()
 	set name = "Pass Through Door"
-	set category = "Special"
+	set category = "SCP"
 	if (ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		if (GLOB.scp106s.len)
@@ -150,7 +150,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /obj/scp106_door/proc/pass_through_door_unsafe()
 	set name = "Leave"
-	set category = "Special"
+	set category = "SCP"
 	if (ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		H.visible_message("<span class = 'notice'>[H] starts to pass through the door...</span>")

@@ -38,6 +38,8 @@ changes:
   - rscadd: "Coded and mapped in SCP-500."
   - rscadd: "Re-added brig guard, but renamed it to Cell Guard, and they are now solely responsible for manning the D-Class Cells."
   - rscadd: "Mapped in spawnpoint for HoP."
+  - rscadd: "Added a chance of D-Class spawning with a small weapon. Thanks to Kachnov and Affie."
+  - rscdel: "Removed bunkrooms on the topside level."
   - bugfix: "Fixed bug with engineering lockers not opening."
   - bugfix: "Fixed bug with incorrect ID Tag in Beta Engine."
   - bugfix: "Fixed bug with developers appearing as Mentors."

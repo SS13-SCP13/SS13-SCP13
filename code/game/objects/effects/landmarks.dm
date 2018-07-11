@@ -46,6 +46,10 @@
 			GLOB.latejoin_lcz += loc
 			delete_me = 1
 			return
+		if("JoinLateSecurity")
+			GLOB.latejoin_lcz += loc
+			delete_me = 1
+			return
 		if("JoinLateCyborg")
 			GLOB.latejoin_cyborg += loc
 			delete_me = 1

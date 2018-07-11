@@ -16,7 +16,7 @@
 	overmap_event_areas = 0
 	usable_email_tlds = list("ds90.foundation", "security.ds90.foundation", "science.ds90.foundation", "utility.ds90.foundation")
 
-	allowed_spawns = list("Cryogenic Storage", "D-Cells", "Light Containment Zone")
+	allowed_spawns = list("Cryogenic Storage", "D-Cells", "Light Containment Zone", "Security Base")
 	default_spawn = "Cryogenic Storage"
 
 	station_name  = "Deep Space Site-90"
@@ -46,7 +46,7 @@
 
 	id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
 	lobby_screens = list("title","title2")
-
+/*
 /datum/map/torch/setup_map()
 	..()
 	system_name = generate_system_name()
@@ -80,3 +80,4 @@
 
 	post_comm_message("SEV Torch Sensor Readings", welcome_text)
 	minor_announcement.Announce(message = "New [GLOB.using_map.company_name] Update available at all communication consoles.")
+*/
