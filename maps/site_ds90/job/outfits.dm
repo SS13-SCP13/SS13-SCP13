@@ -67,7 +67,7 @@
 	l_pocket = /obj/item/device/radio
 
 /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
-	name = OUTFIT_JOB_NAME("Brig Officer")
+	name = OUTFIT_JOB_NAME("Cell Guard")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2

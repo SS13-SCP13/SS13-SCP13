@@ -193,11 +193,11 @@
 	minimal_access = list()
 
 /datum/job/brigofficer
-	title = "Brig Officer"
+	title = "Cell Guard"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = null
