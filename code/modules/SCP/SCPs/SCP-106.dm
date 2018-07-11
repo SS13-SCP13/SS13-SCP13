@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /obj/scp106_exit/Crossed(var/mob/living/L)
 	if (!istype(L) || istype(L, /mob/living/carbon/human/scp106))
 		return ..(L)
-	L.forceMove(pick(GLOB.simulated_turfs))
+	L.forceMove(pick(GLOB.simulated_turfs_scp106))
 
 /obj/scp106_teleport
 	icon = 'icons/mob/screen1.dmi'
