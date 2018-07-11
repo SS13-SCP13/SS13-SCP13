@@ -118,54 +118,32 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		forceMove(pick(GLOB.scp106_floors))
 
 
-// object that handles pocket dimension stuff
-/obj/scp106_door
+// special objects
+/obj/scp106_exit
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x2"
+	anchored = 1.0
+	unacidable = 1
+	simulated = 0
+	invisibility = 100
 
-/obj/scp106_door/New()
-	invisibility = 100 // still accessible through verbs, unlike 101
-	GLOB.scp106_landmarks += src
-	spawn while (TRUE)
-		sleep (15 MINUTES)
-		if (!src)
-			break
-		forceMove(pick(GLOB.scp106_floors))
+/obj/scp106_exit/Crossed(var/mob/living/L)
+	if (!istype(L) || istype(L, /mob/living/carbon/human/scp106))
+		return ..(L)
+	L.forceMove(pick(GLOB.simulated_turfs))
 
-/obj/scp106_door/proc/pass_through_door()
-	set name = "Pass Through Door"
-	set category = "Special"
-	if (ishuman(usr))
-		var/mob/living/carbon/human/H = usr
-		if (GLOB.scp106s.len)
-			H.visible_message("<span class = 'notice'>[H] starts to pass through the door...</span>")
-			if (do_after(H, 50, get_turf(H)))
-				H.visible_message("<span class = 'notice'>[H] passes through the door.</span>")
-				if (GLOB.scp106s.len)
-					for (var/scp106 in GLOB.scp106s)
-						var/mob/living/carbon/human/scp106/HH = scp106
-						if (HH.last_x != -1) // this should never happen, but just in case
-							H.forceMove(locate(HH.last_x, HH.last_y, HH.last_z))
-							break
-				else
-					H.forceMove(pick(GLOB.beginning_landmarks))
+/obj/scp106_teleport
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x2"
+	anchored = 1.0
+	unacidable = 1
+	simulated = 0
+	invisibility = 100
 
-/obj/scp106_door/proc/pass_through_door_unsafe()
-	set name = "Leave"
-	set category = "Special"
-	if (ishuman(usr))
-		var/mob/living/carbon/human/H = usr
-		H.visible_message("<span class = 'notice'>[H] starts to pass through the door...</span>")
-		if (do_after(H, 50, get_turf(H)))
-			if (prob(50))
-				H.adjustBrainLoss(1000)
-			else
-				H.visible_message("<span class = 'notice'>[H] passes through the door.</span>")
-				H.forceMove(pick(GLOB.beginning_landmarks))
-
-/hook/roundstart/proc/setup_scp106_landmarks()
-	for (var/v in 1 to shuffle(GLOB.scp106_landmarks.len))
-		var/obj/scp106_door/L = GLOB.scp106_landmarks[v]
-		switch (v)
-			if (1)
-				L.verbs += /obj/scp106_door/proc/pass_through_door
-			if (2 to 8)
-				L.verbs += /obj/scp106_door/proc/pass_through_door_unsafe
+/obj/scp106_teleport/Crossed(var/mob/living/L)
+	if (!istype(L) || istype(L, /mob/living/carbon/human/scp106))
+		return ..(L)
+	if (prob(50))
+		L.adjustBrainLoss(1000)
+	else
+		L.forceMove(pick(GLOB.scp106_floors))
