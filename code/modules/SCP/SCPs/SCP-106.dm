@@ -147,7 +147,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
 
 /mob/living/carbon/human/scp106/proc/exit_pocket_dimension()
-	set name = "Enter Pocket Dimension"
+	set name = "Exit Pocket Dimension"
 	set category = "SCP"
 	set desc = "Exit your pocket dimension."
 	if (do_after(src, 50, get_turf(src)))
