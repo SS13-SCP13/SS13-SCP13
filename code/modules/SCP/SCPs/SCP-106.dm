@@ -18,6 +18,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	icon = 'icons/mob/scp106.dmi'
 	name = ""
 	desc = "" // I doubt this matters but just in case
+	layer = MOB_LAYER+0.1
 
 /obj/scp106_sprite_helper/Click(location,control,params)
 	if (vis_locs.len)
@@ -32,8 +33,15 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /mob/living/carbon/human/scp106/New()
 	..()
 
-	update_icon = FALSE
-	vis_contents += new /obj/scp106_sprite_helper
+	spawn (20)
+		fix_icons()
+
+		// fix names
+		real_name = "SCP-106"
+		SetName(real_name)
+		if(mind)
+			mind.name = real_name
+
 	verbs += /mob/living/carbon/human/scp106/proc/phase_through_airlock
 	if (loc in GLOB.scp106_floors)
 		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
@@ -43,14 +51,14 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	set_species("SCP-106")
 	GLOB.scp106s += src
 
-	name = "SCP-106"
-
 /mob/living/carbon/human/scp106/Destroy()
 	GLOB.scp106s -= src
 	..()
 
 /mob/living/carbon/human/scp106/Move()
 	..()
+	// stand_icon tends to come back after movement
+	fix_icons()
 	for (var/obj/scp106_sprite_helper/O in vis_contents)
 		O.dir = dir
 		break
@@ -60,6 +68,16 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/handle_breath()
 	return 1
+
+/mob/living/carbon/human/scp106/proc/fix_icons()
+	icon = null
+	icon_state = null
+	stand_icon = null
+	lying_icon = null
+	update_icon = FALSE
+
+	if (!vis_contents.len)
+		vis_contents += new /obj/scp106_sprite_helper
 
 // NPC stuff
 /mob/living/carbon/human/scp106/proc/getTarget()
