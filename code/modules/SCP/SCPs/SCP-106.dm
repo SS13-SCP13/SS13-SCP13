@@ -2,7 +2,6 @@ GLOBAL_LIST_EMPTY(scp106s)
 GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106
-	name = "SCP-106"
 	desc = "A creature in the form of a rotting, elderly humanoid."
 	SCP = /datum/scp/SCP_106
 	var/mob/living/target = null
@@ -32,8 +31,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/New()
 	..()
+
 	update_icon = FALSE
-	name = initial(name)
 	vis_contents += new /obj/scp106_sprite_helper
 	verbs += /mob/living/carbon/human/scp106/proc/phase_through_airlock
 	if (loc in GLOB.scp106_floors)
@@ -43,6 +42,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 	set_species("SCP-106")
 	GLOB.scp106s += src
+
+	name = "SCP-106"
 
 /mob/living/carbon/human/scp106/Destroy()
 	GLOB.scp106s -= src
