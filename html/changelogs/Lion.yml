@@ -36,6 +36,7 @@ changes:
   - rscadd: "Added spawn point at the LCZ for Scientists."
   - rscadd: "Mapped in SCP-504's chamber."
   - rscadd: "Coded and mapped in SCP-500."
+  - rscadd: "Text tag for devsay."
   - rscadd: "Re-added brig guard, but renamed it to Cell Guard, and they are now solely responsible for manning the D-Class Cells."
   - rscadd: "Mapped in spawnpoint for HoP."
   - rscadd: "Added a chance of D-Class spawning with a small weapon. Thanks to Kachnov and Affie."
