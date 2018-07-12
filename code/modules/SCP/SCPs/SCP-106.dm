@@ -41,6 +41,13 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	else
 		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 
+	set_species("SCP-106")
+	GLOB.scp106s += src
+
+/mob/living/carbon/human/scp106/Destroy()
+	GLOB.scp106s -= src
+	..()
+
 /mob/living/carbon/human/scp106/Move()
 	..()
 	for (var/obj/scp106_sprite_helper/O in vis_contents)
@@ -108,15 +115,6 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		return ..(M)
 	var/mob/living/carbon/human/scp106/H = M
 	H.scp106_attack(src)
-
-/mob/living/carbon/human/scp106/New()
-	..()
-	set_species("SCP-106")
-	GLOB.scp106s += src
-
-/mob/living/carbon/human/scp106/Destroy()
-	GLOB.scp106s -= src
-	..()
 
 /mob/living/carbon/human/scp106/proc/go_back()
 	set name = "Return"
