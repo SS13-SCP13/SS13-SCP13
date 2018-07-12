@@ -212,7 +212,8 @@ var/list/admin_verbs_debug = list(
 var/list/admin_verbs_paranoid_debug = list(
 	/client/proc/callproc,
 	/client/proc/callproc_target,
-	/client/proc/debug_controller
+	/client/proc/debug_controller,
+	/client/proc/cmd_dev_say
 	)
 
 var/list/admin_verbs_possess = list(

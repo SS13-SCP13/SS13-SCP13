@@ -8,6 +8,17 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	var/last_x = -1
 	var/last_y = -1
 	var/last_z = -1
+	icon = null
+	icon_state = null
+	lying_icon = null
+	stand_icon = null
+
+// Icon overrides
+	icobase = null
+	deform = null
+	damage_overlays = null
+	damage_mask = null
+	blood_mask = null
 
 /datum/scp/SCP_106
 	name = "SCP-106"
