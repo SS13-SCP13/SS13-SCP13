@@ -78,7 +78,7 @@
 			if(R_ADMIN & X.holder.rights)
 				if(is_stealthed() && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))		//Mentors can't see stealthmins
 					continue
-				adminwho += "[X] is a <b>[X.holder.rank]</b>"
+				adminwho += "\t[X] is a <b>[X.holder.rank]</b>"
 				if(is_stealthed())
 					adminwho += " <b><i>(as [is_stealthed()])</i></b>"
 				if(isobserver(X.mob))
@@ -89,9 +89,10 @@
 					adminwho += " - Playing"
 				if(X.is_afk())
 					adminwho += " (AFK)"
+				adminwho += "\n"
 				admin_count++
 			else if (R_MOD & X.holder.rights)
-				modwho += "[X] is a <i>[X.holder.rank]</i>"
+				modwho += "\t[X] is a <i>[X.holder.rank]</i>"
 				if(is_stealthed())
 					modwho += " <i>(as [is_stealthed()])</i>"
 				if(isobserver(X.mob))
@@ -102,9 +103,10 @@
 					modwho += " - Playing"
 				if(X.is_afk())
 					modwho += " (AFK)"
+				modwho += "\n"
 				mod_count++
 			else if (R_MENTOR & X.holder.rights)
-				mentwho += " [X] is a [X.holder.rank]"
+				mentwho += "\t[X] is a [X.holder.rank]"
 				if(is_stealthed())
 					mentwho += " <i>(as [is_stealthed()]</i>"
 				if(isobserver(X.mob))
@@ -115,9 +117,10 @@
 					mentwho += " - Playing"
 				if(X.is_afk())
 					mentwho += " (AFK)"
+				mentwho += "\n"
 				ment_count++
 			else if (R_VAREDIT & X.holder.rights)
-				devwho += "/t [X] is a [X.holder.rank]"
+				devwho += "\t[X] is a [X.holder.rank]"
 				if(is_stealthed())
 					devwho += " <i>(as [is_stealthed()]</i>"
 				if(isobserver(X.mob))
@@ -128,6 +131,7 @@
 					devwho += " - Playing"
 				if(X.is_afk())
 					devwho += " (AFK)"
+				devwho += "\n"
 				dev_count++
 
 
@@ -135,11 +139,17 @@
 		for(var/client/X in GLOB.admins)
 			if(R_ADMIN & X.holder.rights && !(R_MOD & X.holder.rights))
 				if(is_stealthed())
-					adminwho += "[X] is a [X.holder.rank]"
+					adminwho += "\t[X] is a [X.holder.rank]\n"
 					admin_count++
 			else if (R_MOD & X.holder.rights)
-				modwho += "[X] is a [X.holder.rank]"
+				modwho += "\t[X] is a [X.holder.rank]\n"
 				mod_count++
+			else if (R_MENTOR & X.holder.rights)
+				mentwho += "\t[X] is a [X.holder.rank]\n"
+				ment_count++
+			else if (R_VAREDIT & X.holder.rights)
+				devwho += "\t[X] is a [X.holder.rank]\n"
+				dev_count++
 	to_chat(src, "<b><big>Online staff:</big></b>")
 	to_chat(src, "<b>Current Admins ([admin_count]):</b><br>") +adminwho
 	to_chat(src, "<br>")
