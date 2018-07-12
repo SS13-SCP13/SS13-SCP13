@@ -36,11 +36,10 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	name = initial(name)
 	vis_contents += new /obj/scp106_sprite_helper
 	verbs += /mob/living/carbon/human/scp106/proc/phase_through_airlock
-	if (loc in GLOB.scp106_turfs)
+	if (loc in GLOB.scp106_floors)
 		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
 	else
 		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
-
 
 /mob/living/carbon/human/scp106/Move()
 	..()
