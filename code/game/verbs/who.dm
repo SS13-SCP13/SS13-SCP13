@@ -78,7 +78,7 @@
 			if(R_ADMIN & X.holder.rights)
 				if(is_stealthed() && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))		//Mentors can't see stealthmins
 					continue
-				adminwho += "[X] is a <b>[X.holder.rank]</b>"
+				adminwho += "\t[X] is a <b>[X.holder.rank]\n</b>"
 				if(is_stealthed())
 					adminwho += " <b><i>(as [is_stealthed()])</i></b>"
 				if(isobserver(X.mob))
@@ -91,7 +91,7 @@
 					adminwho += " (AFK)"
 				admin_count++
 			else if (R_MOD & X.holder.rights)
-				modwho += "[X] is a <i>[X.holder.rank]</i>"
+				modwho += "\t[X] is a <i>[X.holder.rank]\n</i>"
 				if(is_stealthed())
 					modwho += " <i>(as [is_stealthed()])</i>"
 				if(isobserver(X.mob))
@@ -104,7 +104,7 @@
 					modwho += " (AFK)"
 				mod_count++
 			else if (R_MENTOR & X.holder.rights)
-				mentwho += " [X] is a [X.holder.rank]"
+				mentwho += "\t[X] is a [X.holder.rank]\n"
 				if(is_stealthed())
 					mentwho += " <i>(as [is_stealthed()]</i>"
 				if(isobserver(X.mob))
@@ -117,7 +117,7 @@
 					mentwho += " (AFK)"
 				ment_count++
 			else if (R_VAREDIT & X.holder.rights)
-				devwho += "/t [X] is a [X.holder.rank]"
+				devwho += "/t[X] is a [X.holder.rank]\n"
 				if(is_stealthed())
 					devwho += " <i>(as [is_stealthed()]</i>"
 				if(isobserver(X.mob))
@@ -135,10 +135,10 @@
 		for(var/client/X in GLOB.admins)
 			if(R_ADMIN & X.holder.rights && !(R_MOD & X.holder.rights))
 				if(is_stealthed())
-					adminwho += "[X] is a [X.holder.rank]"
+					adminwho += "\t[X] is a [X.holder.rank]\n"
 					admin_count++
 			else if (R_MOD & X.holder.rights)
-				modwho += "[X] is a [X.holder.rank]"
+				modwho += "\t[X] is a [X.holder.rank]\n"
 				mod_count++
 	to_chat(src, "<b><big>Online staff:</big></b>")
 	to_chat(src, "<b>Current Admins ([admin_count]):</b><br>") +adminwho
