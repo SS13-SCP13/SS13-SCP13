@@ -17,6 +17,15 @@
 	// immune to viruses
 	virus_immune = TRUE
 
+	// icon overrides
+	icobase = null
+	deform = null
+
+	// damage icon overrides
+	damage_overlays = null
+	damage_mask = null
+	blood_mask = null
+
 /datum/species/scp106/handle_npc(var/mob/living/carbon/human/scp106/H)
 	if (!H.client)
 		H.pursueTarget()
