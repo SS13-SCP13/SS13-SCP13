@@ -31,7 +31,6 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 					break
 			C.adjustBruteLoss(5)
 
-
 // walls
 /turf/unsimulated/wall/scp106
 	name = "void wall"
