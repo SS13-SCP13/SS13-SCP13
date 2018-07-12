@@ -24,12 +24,16 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 			C.adjustToxLoss(-5)
 			C.adjustCloneLoss(-5)
 		else
-			for (var/organ in shuffle(C.organs))
-				var/obj/item/organ/I = organ
-				if (I.scp106_vulnerable && !(I.status & ORGAN_DEAD) && prob(10))
-					I.scp106_affected = TRUE
-					break
-			C.adjustBruteLoss(5)
+			if (C.stat != DEAD)
+				for (var/organ in shuffle(C.organs))
+					var/obj/item/organ/I = organ
+					if (I.scp106_vulnerable && !(I.status & ORGAN_DEAD) && prob(10))
+						I.scp106_affected = TRUE
+						break
+				C.adjustBruteLoss(5)
+			else if (prob(2)) // about 100 seconds average
+				C.visible_message("<span class = 'danger'>[C]'s body melts away.</span>")
+				qdel(C)
 
 // walls
 /turf/unsimulated/wall/scp106
