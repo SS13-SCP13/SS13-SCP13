@@ -139,16 +139,16 @@
 		for(var/client/X in GLOB.admins)
 			if(R_ADMIN & X.holder.rights && !(R_MOD & X.holder.rights))
 				if(is_stealthed())
-					adminwho += "\t[X] is a [X.holder.rank]"
+					adminwho += "\t[X] is a [X.holder.rank]\n"
 					admin_count++
 			else if (R_MOD & X.holder.rights)
-				modwho += "\t[X] is a [X.holder.rank]"
+				modwho += "\t[X] is a [X.holder.rank]\n"
 				mod_count++
 			else if (R_MENTOR & X.holder.rights)
-				mentwho += "\t[X] is a [X.holder.rank]"
+				mentwho += "\t[X] is a [X.holder.rank]\n"
 				ment_count++
 			else if (R_VAREDIT & X.holder.rights)
-				devwho += "\t[X] is a [X.holder.rank]"
+				devwho += "\t[X] is a [X.holder.rank]\n"
 				dev_count++
 	to_chat(src, "<b><big>Online staff:</big></b>")
 	to_chat(src, "<b>Current Admins ([admin_count]):</b><br>") +adminwho
