@@ -20,6 +20,16 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	name = ""
 	desc = "" // I doubt this matters but just in case
 
+/obj/scp106_sprite_helper/Click(location,control,params)
+	if (vis_locs[1])
+		var/atom/A = vis_locs[1]
+		return A.Click(location, control, params)
+
+/obj/scp106_sprite_helper/DblClick(location,control,params)
+	if (vis_locs[1])
+		var/atom/A = vis_locs[1]
+		return A.DblClick(location, control, params)
+
 /mob/living/carbon/human/scp106/New()
 	..()
 	update_icon = FALSE
