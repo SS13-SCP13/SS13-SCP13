@@ -97,6 +97,7 @@
 
 		if (!scp106_music)
 			src << sound(null, channel = 106)
+			client.next_scp106_sound = -1
 
 
 	if(!handle_some_updates())
