@@ -13,6 +13,13 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	lying_icon = null
 	stand_icon = null
 
+// Icon overrides
+	icobase = null
+	deform = null
+	damage_overlays = null
+	damage_mask = null
+	blood_mask = null
+
 /datum/scp/SCP_106
 	name = "SCP-106"
 	designation = "106"
