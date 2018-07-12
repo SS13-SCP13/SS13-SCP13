@@ -144,6 +144,12 @@
 			else if (R_MOD & X.holder.rights)
 				modwho += "\t[X] is a [X.holder.rank]"
 				mod_count++
+			else if (R_MENTOR & X.holder.rights)
+				mentwho += "\t[X] is a [X.holder.rank]"
+				ment_count++
+			else if (R_VAREDIT & X.holder.rights)
+				devwho += "\t[X] is a [X.holder.rank]"
+				dev_count++
 	to_chat(src, "<b><big>Online staff:</big></b>")
 	to_chat(src, "<b>Current Admins ([admin_count]):</b><br>") +adminwho
 	to_chat(src, "<br>")
