@@ -55,6 +55,12 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		O.dir = dir
 		break
 
+/mob/living/carbon/human/scp106/get_pressure_weakness()
+	return 0
+
+/mob/living/carbon/human/scp106/handle_breath()
+	return 1
+
 // NPC stuff
 /mob/living/carbon/human/scp106/proc/getTarget()
 	/* if we have no target, or our current target is a nonhuman, or our target is out of view,
