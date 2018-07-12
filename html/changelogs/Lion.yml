@@ -49,6 +49,7 @@ changes:
   - bugfix: "Fixed a bug in Chief Engineer being Second Lieutenant only. Now accepts all Lieutenant ranks."
   - bugfix: "Fixed a bug in the wiring of both engines."
   - bugfix: "Fixed an issue with D-Class spawns."
+  - bugfix: "Fixed an issue where the Pocket Dimension was very dark."
   - bugfix: "Fixed an issue with incorrect wiring in Engineering. All area's should be powered and charging now. If not, please report it."
   - bugfix: "Fixed an issue with Containment Engineer spawn."
   - bugfix: "Fixed a bug where security with automatics spawned without magazines."
