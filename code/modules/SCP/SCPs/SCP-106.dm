@@ -2,7 +2,6 @@ GLOBAL_LIST_EMPTY(scp106s)
 GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106
-	name = "SCP-106"
 	desc = "A creature in the form of a rotting, elderly humanoid."
 	SCP = /datum/scp/SCP_106
 	var/mob/living/target = null
@@ -15,20 +14,44 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	designation = "106"
 	classification = KETER
 
-/obj/scp106_helper
+/obj/scp106_sprite_helper
 	icon = 'icons/mob/scp106.dmi'
 	name = ""
 	desc = "" // I doubt this matters but just in case
 
+/obj/scp106_sprite_helper/Click(location,control,params)
+	if (vis_locs.len)
+		var/atom/A = vis_locs[1]
+		return A.Click(location, control, params)
+
+/obj/scp106_sprite_helper/DblClick(location,control,params)
+	if (vis_locs.len)
+		var/atom/A = vis_locs[1]
+		return A.DblClick(location, control, params)
+
 /mob/living/carbon/human/scp106/New()
 	..()
+
 	update_icon = FALSE
-	name = initial(name)
-	vis_contents += new /obj/scp106_helper
+	vis_contents += new /obj/scp106_sprite_helper
+	verbs += /mob/living/carbon/human/scp106/proc/phase_through_airlock
+	if (loc in GLOB.scp106_floors)
+		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
+	else
+		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+
+	set_species("SCP-106")
+	GLOB.scp106s += src
+
+	name = "SCP-106"
+
+/mob/living/carbon/human/scp106/Destroy()
+	GLOB.scp106s -= src
+	..()
 
 /mob/living/carbon/human/scp106/Move()
 	..()
-	for (var/obj/scp106_helper/O in vis_contents)
+	for (var/obj/scp106_sprite_helper/O in vis_contents)
 		O.dir = dir
 		break
 
@@ -94,15 +117,6 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	var/mob/living/carbon/human/scp106/H = M
 	H.scp106_attack(src)
 
-/mob/living/carbon/human/scp106/New()
-	..()
-	set_species("SCP-106")
-	GLOB.scp106s += src
-
-/mob/living/carbon/human/scp106/Destroy()
-	GLOB.scp106s -= src
-	..()
-
 /mob/living/carbon/human/scp106/proc/go_back()
 	set name = "Return"
 	set category = "SCP"
@@ -110,6 +124,44 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	if (last_x != -1) // shouldn't be possible but just in case
 		forceMove(locate(last_x, last_y, last_z))
 	verbs -= /mob/living/carbon/human/scp106/proc/go_back
+
+/mob/living/carbon/human/scp106/proc/phase_through_airlock()
+	set name = "Phase Through Airlock"
+	set category = "SCP"
+	set desc = "Phase through an airlock in front of you."
+	for (var/obj/machinery/door/airlock/A in get_step(src, dir))
+
+		invisibility = 100
+		for (var/atom in vis_contents)
+			var/atom/a = atom
+			a.invisibility = 100
+
+		if (do_after(src, 30, A))
+			forceMove(get_step(src, dir))
+			forceMove(get_step(src, dir))
+
+		invisibility = 0
+		for (var/atom in vis_contents)
+			var/atom/a = atom
+			a.invisibility = 0
+
+/mob/living/carbon/human/scp106/proc/enter_pocket_dimension()
+	set name = "Enter Pocket Dimension"
+	set category = "SCP"
+	set desc = "Enter your pocket dimension."
+	if (do_after(src, 50, get_turf(src)))
+		forceMove(pick(GLOB.scp106_floors))
+		verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
+
+/mob/living/carbon/human/scp106/proc/exit_pocket_dimension()
+	set name = "Exit Pocket Dimension"
+	set category = "SCP"
+	set desc = "Exit your pocket dimension."
+	if (do_after(src, 50, get_turf(src)))
+		forceMove(pick(GLOB.simulated_turfs_scp106))
+		verbs -= /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
+		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 
 /mob/living/carbon/human/scp106/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/damage_flags = 0, var/obj/used_weapon = null, var/obj/item/organ/external/given_organ = null)
 	. = ..(damage, damagetype, def_zone, blocked, damage_flags, used_weapon, given_organ)
@@ -130,7 +182,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /obj/scp106_exit/Crossed(var/mob/living/L)
 	if (!istype(L) || istype(L, /mob/living/carbon/human/scp106))
 		return ..(L)
-	L.forceMove(pick(GLOB.simulated_turfs))
+	L.forceMove(pick(GLOB.simulated_turfs_scp106))
 
 /obj/scp106_teleport
 	icon = 'icons/mob/screen1.dmi'

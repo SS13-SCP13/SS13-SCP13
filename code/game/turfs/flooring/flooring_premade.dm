@@ -154,6 +154,12 @@
 	name = "dark floor"
 	icon_state = "dark"
 	initial_flooring = /decl/flooring/tiling/dark
+/turf/simulated/floor/tiled/dark/New()
+	..()
+	GLOB.simulated_turfs_scp106 += src
+/turf/simulated/floor/tiled/dark/Destroy()
+	GLOB.simulated_turfs_scp106 -= src
+	return ..()
 
 /turf/simulated/floor/tiled/dark/airless
 	initial_gas = null
@@ -162,6 +168,12 @@
 	name = "white floor"
 	icon_state = "white"
 	initial_flooring = /decl/flooring/tiling/white
+/turf/simulated/floor/tiled/white/New()
+	..()
+	GLOB.simulated_turfs_scp106 += src
+/turf/simulated/floor/tiled/white/Destroy()
+	GLOB.simulated_turfs_scp106 -= src
+	return ..()
 
 /turf/simulated/floor/tiled/freezer
 	name = "tiles"
