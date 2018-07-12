@@ -130,11 +130,20 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	set category = "SCP"
 	set desc = "Phase through an airlock in front of you."
 	for (var/obj/machinery/door/airlock/A in get_step(src, dir))
+
 		invisibility = 100
+		for (var/atom in vis_contents)
+			var/atom/a = atom
+			a.invisibility = 100
+
 		if (do_after(src, 30, A))
 			forceMove(get_step(src, dir))
 			forceMove(get_step(src, dir))
+
 		invisibility = 0
+		for (var/atom in vis_contents)
+			var/atom/a = atom
+			a.invisibility = 0
 
 /mob/living/carbon/human/scp106/proc/enter_pocket_dimension()
 	set name = "Enter Pocket Dimension"
