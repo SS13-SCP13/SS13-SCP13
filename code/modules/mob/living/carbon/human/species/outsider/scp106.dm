@@ -14,6 +14,10 @@
 
 	genders = list(MALE)
 
+	// we're immune to just about everything
+	virus_immune = TRUE
+	breath_pressure = 0
+
 /datum/species/scp106/handle_npc(var/mob/living/carbon/human/scp106/H)
 	if (!H.client)
 		H.pursueTarget()
