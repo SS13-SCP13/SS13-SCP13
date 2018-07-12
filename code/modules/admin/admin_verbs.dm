@@ -212,7 +212,8 @@ var/list/admin_verbs_debug = list(
 var/list/admin_verbs_paranoid_debug = list(
 	/client/proc/callproc,
 	/client/proc/callproc_target,
-	/client/proc/debug_controller
+	/client/proc/debug_controller,
+	/client/proc/cmd_dev_say
 	)
 
 var/list/admin_verbs_possess = list(
@@ -322,7 +323,6 @@ var/list/admin_verbs_mentor = list(
 	/client/proc/cmd_admin_pm_panel,
 	/datum/admins/proc/PlayerNotes,
 	/client/proc/admin_ghost,
-	/client/proc/cmd_dev_say,
 	/client/proc/cmd_mod_say,
 	/datum/admins/proc/show_player_info,
 //	/client/proc/dsay,
