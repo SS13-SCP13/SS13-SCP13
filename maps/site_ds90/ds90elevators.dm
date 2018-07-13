@@ -49,8 +49,8 @@
 	lift_size_y = 3
 
 	areas_to_use = list(
-		/area/turbolift/hcz2plag,
-		/area/turbolift/plag2hcz
+		/area/turbolift/plag2hcz,
+		/area/turbolift/hcz2plag
 		)
 
 /obj/turbolift_map_holder/scp106
