@@ -68,7 +68,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/ClickOn(var/atom/A, var/params)
 	for (var/obj/scp106_sprite_helper/O in vis_contents)
-		O.face_atom(A)
+		O.set_dir(get_dir(src, A))
 		break
 	return ..(A, params)
 
