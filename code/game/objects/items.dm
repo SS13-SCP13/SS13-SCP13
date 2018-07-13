@@ -415,7 +415,7 @@ var/list/global/slot_flags_enumeration = list(
 		return
 	if(!usr.canmove || usr.stat || usr.restrained() || !Adjacent(usr))
 		return
-	if((!istype(usr, /mob/living/carbon)) || (istype(usr, /mob/living/carbon/brain)))//Is humanoid, and is not a brain
+	if(!istype(usr, /mob/living/carbon) || istype(usr, /mob/living/carbon/brain) || istype(usr, /mob/living/carbon/human/scp106)) //Is humanoid, and is not a brain or scp106
 		to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
 		return
 	if( usr.stat || usr.restrained() )//Is not asleep/dead and is not restrained

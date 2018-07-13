@@ -9,6 +9,9 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	var/last_y = -1
 	var/last_z = -1
 
+/mob/living/carbon/human/scp106/IsAdvancedToolUser()
+	return FALSE
+
 /datum/scp/SCP_106
 	name = "SCP-106"
 	designation = "106"
@@ -62,6 +65,12 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	for (var/obj/scp106_sprite_helper/O in vis_contents)
 		O.dir = dir
 		break
+
+/mob/living/carbon/human/scp106/ClickOn(var/atom/A, var/params)
+	for (var/obj/scp106_sprite_helper/O in vis_contents)
+		O.face_atom(A)
+		break
+	return ..(A, params)
 
 /mob/living/carbon/human/scp106/get_pressure_weakness()
 	return 0
