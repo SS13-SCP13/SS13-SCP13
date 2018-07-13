@@ -88,7 +88,7 @@
 		var/scp106_music = FALSE
 		for (var/scp106 in GLOB.scp106s)
 			var/atom/A = scp106
-			if (A != src && abs(x - A.x) <= 5 && abs(y - A.y) <= 5)
+			if (A != src && abs(x - A.x) <= 5 && abs(y - A.y) <= 5 && !abs(z - A.z))
 				scp106_music = TRUE
 				if (world.time >= client.next_scp106_sound)
 					src << sound('sound/scp/chase/scp106chase.ogg', channel = 106, volume = 100)
