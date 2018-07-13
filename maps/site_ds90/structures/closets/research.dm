@@ -182,7 +182,7 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
 	)
-
+/*
 /obj/structure/closet/secure_closet/scpscience/directorofscience
 	name = "Research Director's Locker"
 	req_access = list(access_sciencelvl5)
@@ -200,7 +200,7 @@
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/weapon/clipboard(src)
 	new /obj/item/taperoll/research(src)
-
+*/
 
 
 /obj/structure/closet/secure_closet/scientist
