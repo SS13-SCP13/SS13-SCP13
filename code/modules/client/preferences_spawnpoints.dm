@@ -63,7 +63,12 @@ GLOBAL_VAR(spawntypes)
 	"Security Commander",
 	"Security Lieutenant",
 	"Security Officer",
-	"Junior Security Officer")
+	"Junior Security Officer",
+	"Senior Scientist",
+	"Junior Scientist",
+	"Scientist",
+	"Research Director",
+	"Cell Guard")
 
 /datum/spawnpoint/cryo/New()
 	..()
@@ -85,7 +90,8 @@ GLOBAL_VAR(spawntypes)
 	"Junior Scientist",
 	"Scientist",
 	"Senior Scientist",
-	"Research Director")
+	"Research Director",
+	"Cell Guard")
 	disallow_job = list(
 	"Class D",
 	"Chief Engineer",
@@ -118,6 +124,7 @@ GLOBAL_VAR(spawntypes)
 	"Junior Security Officer")
 	disallow_job = list(
 	"Class D",
+	"Cell Guard",
 	"Chief Engineer",
 	"Senior Engineer",
 	"Containment Engineer",
