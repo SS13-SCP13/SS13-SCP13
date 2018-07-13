@@ -1,5 +1,5 @@
 /obj/machinery/scp294
-	name = "Hot Drinks machine"
+	name = "SCP-294"
 	desc = "A standard coffee vending machine. This one seems to have a QWERTY keyboard."
 	icon = 'icons/obj/scp294.dmi'
 	icon_state = "coffee_294"
