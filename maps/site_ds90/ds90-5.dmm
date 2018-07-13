@@ -214,7 +214,7 @@
 "ef" = (/obj/machinery/door/airlock/glass/scp{name = "Airlock"},/turf/simulated/floor/tiled/white,/area/crew_quarters/lounge{name = "\improper Library"})
 "eg" = (/turf/simulated/wall/scp/r_wall/r_end{icon_state = "r_end"; dir = 9},/area/crew_quarters/lounge{name = "\improper Library"})
 "eh" = (/turf/simulated/wall/scp/r_wall/r_mid{icon_state = "r_mid"; dir = 8},/area/crew_quarters/lounge{name = "\improper Library"})
-"ei" = (/obj/machinery/door/airlock/security/scpheavhor{name = "/improper Thaumiel and Apollyon Archive"; req_one_access = list(304,404,504)},/turf/simulated/floor/tiled/white,/area/crew_quarters/lounge{name = "\improper Library"})
+"ei" = (/obj/machinery/door/airlock/security/scpheavhor{name = "Thaumiel and Apollyon Archive"; req_one_access = list(304,404,504)},/turf/simulated/floor/tiled/white,/area/crew_quarters/lounge{name = "\improper Library"})
 "ej" = (/turf/simulated/wall/scp/r_wall/r_end{icon_state = "r_end"; dir = 5},/area/crew_quarters/lounge{name = "\improper Library"})
 "ek" = (/turf/simulated/wall/scp/r_wall/r_mid{icon_state = "r_mid"; dir = 1},/area/crew_quarters/lounge{name = "\improper Library"})
 "el" = (/turf/simulated/wall/scp/r_wall/r_mid,/area/crew_quarters/lounge{name = "\improper Library"})
