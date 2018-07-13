@@ -182,7 +182,7 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
 	)
-/*
+
 /obj/structure/closet/secure_closet/scpscience/directorofscience
 	name = "Research Director's Locker"
 	req_access = list(access_sciencelvl5)
@@ -192,15 +192,17 @@
 	icon_opened = "dsopen"
 	icon_broken = "dsbroken"
 	icon_off = "dsoff"
+/obj/structure/closet/secure_closet/scpscience/directorofscience/WillContain()
+	return list(
+		/obj/item/weapon/storage/backpack/dufflebag,
+		/obj/item/clothing/under/rank/scientist,
+		/obj/item/clothing/suit/storage/toggle/labcoat/rd,
+		/obj/item/clothing/shoes/white,
+		/obj/item/clothing/mask/gas,
+		/obj/item/weapon/clipboard,
+		/obj/item/taperoll/research
+	)
 
-	new /obj/item/weapon/storage/backpack/dufflebag(src)
-	new /obj/item/clothing/under/rank/scientist(src)
-	new /obj/item/clothing/suit/storage/toggle/labcoat/rd(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/weapon/clipboard(src)
-	new /obj/item/taperoll/research(src)
-*/
 
 
 /obj/structure/closet/secure_closet/scientist
