@@ -28,4 +28,5 @@
 
 /datum/species/scp106/handle_npc(var/mob/living/carbon/human/scp106/H)
 	if (!H.client)
+		H.lying = FALSE
 		H.pursueTarget()
