@@ -192,24 +192,33 @@
 	icon_opened = "dsopen"
 	icon_broken = "dsbroken"
 	icon_off = "dsoff"
-/* AWAITING OVERHAUL
-/obj/structure/closet/secure_closet/xenoarchaeologist/New()
-	..()
-	if(prob(50))
-		new /obj/item/weapon/storage/backpack/toxins(src)
-	else
-		new /obj/item/weapon/storage/backpack/satchel_tox(src)
-	if(prob(50))
-		new /obj/item/weapon/storage/backpack/dufflebag(src)
+
+	new /obj/item/weapon/storage/backpack/dufflebag(src)
 	new /obj/item/clothing/under/rank/scientist(src)
-	new /obj/item/clothing/suit/storage/toggle/labcoat(src)
+	new /obj/item/clothing/suit/storage/toggle/labcoat/rd(src)
 	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/glasses/science(src)
-	new /obj/item/device/radio/headset/headset_sci(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/weapon/clipboard(src)
-	new /obj/item/weapon/storage/belt/archaeology(src)
-	new /obj/item/weapon/storage/excavation(src)
 	new /obj/item/taperoll/research(src)
 
-	*/
+
+
+/obj/structure/closet/secure_closet/scientist
+	name = "scientist's locker"
+	req_one_access = list(access_tox,access_tox_storage)
+	icon_state = "secureres1"
+	icon_closed = "secureres"
+	icon_locked = "secureres1"
+	icon_opened = "secureresopen"
+	icon_off = "secureresoff"
+
+/obj/structure/closet/secure_closet/scientist/WillContain()
+	return list(
+		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/messenger/tox, /obj/item/weapon/storage/backpack/satchel_tox)),
+		/obj/item/clothing/under/rank/scientist,
+		/obj/item/clothing/suit/storage/toggle/labcoat,
+		/obj/item/clothing/shoes/white,
+		/obj/item/device/radio/headset/headset_sci,
+		/obj/item/clothing/mask/gas,
+		/obj/item/weapon/clipboard
+	)
