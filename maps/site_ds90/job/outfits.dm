@@ -128,6 +128,7 @@
 	name = OUTFIT_JOB_NAME("Class D")
 	uniform = /obj/item/clothing/under/scp/dclass
 	shoes = /obj/item/clothing/shoes/workboots
+	l_ear = null
 
 /decl/hierarchy/outfit/job/site90/crew/civ/classd/post_equip(var/mob/living/carbon/human/H)
 	..()
