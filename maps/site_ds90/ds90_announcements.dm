@@ -1,4 +1,4 @@
-/datum/map/torch
+/datum/map/ds90
 	emergency_shuttle_docked_message = "Attention all hands: the escape pods are now unlocked. You have %ETD% to board the escape pods."
 	emergency_shuttle_leaving_dock = "Attention all hands: the escape pods have been launched, arriving at rendezvous point in %ETA%."
 
@@ -12,8 +12,8 @@
 	grid_check_message = "Abnormal activity detected in the site's power network. As a precaution, the site's power must be shut down for an indefinite duration."
 	grid_check_sound = sound('sound/AI/ds90/poweroff.ogg', volume = 45)
 
-	grid_restored_message = "Ship power to the %STATION_NAME% will be restored at this time"
-	grid_restored_sound = sound('sound/AI/torch/poweron.ogg', volume = 45)
+	grid_restored_message = "Site power will be restored at this time"
+	grid_restored_sound = sound('sound/AI/ds90/poweron.ogg', volume = 45)
 
 	meteor_detected_sound = sound('sound/AI/torch/meteors.ogg', volume = 45)
 

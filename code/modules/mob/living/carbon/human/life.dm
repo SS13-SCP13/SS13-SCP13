@@ -82,6 +82,24 @@
 			species.handle_npc(src)
 
 
+	// spooky SCP-106 music
+	if (client)
+
+		var/scp106_music = FALSE
+		for (var/scp106 in GLOB.scp106s)
+			var/atom/A = scp106
+			if (A != src && abs(x - A.x) <= 5 && abs(y - A.y) <= 5)
+				scp106_music = TRUE
+				if (world.time >= client.next_scp106_sound)
+					src << sound('sound/scp/chase/scp106chase.ogg', channel = 106, volume = 100)
+					client.next_scp106_sound = world.time + 1500 // a bit longer than the ogg itself
+					break
+
+		if (!scp106_music)
+			src << sound(null, channel = 106)
+			client.next_scp106_sound = -1
+
+
 	if(!handle_some_updates())
 		return											//We go ahead and process them 5 times for HUD images and other stuff though.
 

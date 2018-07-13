@@ -15,6 +15,20 @@
 	new /obj/item/weapon/reagent_containers/pill/happy( src )
 	new /obj/item/weapon/reagent_containers/pill/happy( src )
 
+/obj/item/weapon/storage/pill_bottle/scp500
+	name = "bottle of pills"
+	desc = "SCP-500. Supposedly cures everything."
+
+/obj/item/weapon/storage/pill_bottle/happy/New()
+	..()
+	new /obj/item/weapon/reagent_containers/pill/scp500( src )
+	new /obj/item/weapon/reagent_containers/pill/scp500( src )
+	new /obj/item/weapon/reagent_containers/pill/scp500( src )
+	new /obj/item/weapon/reagent_containers/pill/scp500( src )
+	new /obj/item/weapon/reagent_containers/pill/scp500( src )
+	new /obj/item/weapon/reagent_containers/pill/scp500( src )
+	new /obj/item/weapon/reagent_containers/pill/scp500( src )
+
 /obj/item/weapon/storage/pill_bottle/zoom
 	name = "bottle of Zoom pills"
 	desc = "Highly illegal drug. Trade brain for speed."
