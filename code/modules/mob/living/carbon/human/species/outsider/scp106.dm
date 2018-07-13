@@ -26,6 +26,14 @@
 	damage_mask = null
 	blood_mask = null
 
+	// damage overrides
+	brute_mod =      0.5                    // 50% physical damage
+	burn_mod =       0.5                    // 50% burn damage
+	oxy_mod =        0.0                    // No oxygen damage
+	toxins_mod =     0.0                    // No toxin damage
+	radiation_mod =  0.0                    // No radiation damage
+	flash_mod =      0.0                    // Unflashable
+
 /datum/species/scp106/handle_npc(var/mob/living/carbon/human/scp106/H)
 	if (!H.client)
 		H.lying = FALSE
