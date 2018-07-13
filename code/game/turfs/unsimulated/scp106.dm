@@ -8,28 +8,30 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 
 /turf/unsimulated/floor/scp106/New()
 	..()
-	SSprocessing.processing += src
+	START_PROCESSING(SSprocessing, src)
 	GLOB.scp106_floors += src
 
 /turf/unsimulated/floor/scp106/Destroy()
-	SSprocessing.processing -= src
+	STOP_PROCESSING(SSprocessing, src)
 	GLOB.scp106_floors -= src
-	..()
+	. = ..()
 
 /turf/unsimulated/floor/scp106/process()
-	for (var/mob/living/carbon/C in contents)
-		if (istype(C, /mob/living/carbon/human/scp106))
-			C.adjustBruteLoss(-5)
-			C.adjustFireLoss(-5)
-			C.adjustToxLoss(-5)
-			C.adjustCloneLoss(-5)
+	for (var/mob/living/L in contents)
+		if (istype(L, /mob/living/carbon/human/scp106))
+			L.adjustBruteLoss(-5)
+			L.adjustFireLoss(-5)
+			L.adjustToxLoss(-5)
+			L.adjustCloneLoss(-5)
 		else
-			for (var/organ in shuffle(C.organs))
-				var/obj/item/organ/I = organ
-				if (I.scp106_vulnerable && !(I.status & ORGAN_DEAD) && prob(10))
-					I.scp106_affected = TRUE
-					break
-			C.adjustBruteLoss(5)
+			if (iscarbon(L))
+				var/mob/living/carbon/C = L
+				for (var/organ in shuffle(C.organs))
+					var/obj/item/organ/I = organ
+					if (I.scp106_vulnerable && !(I.status & ORGAN_DEAD) && prob(10))
+						I.scp106_affected = TRUE
+						break
+			L.adjustFireLoss(5)
 
 // walls
 /turf/unsimulated/wall/scp106
