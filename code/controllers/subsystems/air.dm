@@ -158,7 +158,11 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 
 	..(timeofday)
 
+#define NO_ATMOSPHERICS
 /datum/controller/subsystem/air/fire(resumed = FALSE, no_mc_tick = FALSE)
+	#ifdef NO_ATMOSPHERICS
+	return
+	#endif
 	if (!resumed)
 		processing_edges = active_edges.Copy()
 		processing_fires = active_fire_zones.Copy()
