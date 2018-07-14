@@ -1410,7 +1410,8 @@
 
 /area/acting/stage
 	name = "\improper Stage"
-	dynamic_lighting = 1
+	requires_power = 0
+	dynamic_lighting = 0
 	icon_state = "yellow"
 
 // Thunderdome

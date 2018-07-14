@@ -7,6 +7,9 @@ GLOBAL_LIST_EMPTY(latejoin)
 GLOBAL_LIST_EMPTY(latejoin_gateway)
 GLOBAL_LIST_EMPTY(latejoin_cryo)
 GLOBAL_LIST_EMPTY(latejoin_cyborg)
+GLOBAL_LIST_EMPTY(latejoin_dclass)
+GLOBAL_LIST_EMPTY(latejoin_lcz)
+GLOBAL_LIST_EMPTY(latejoin_security)
 
 GLOBAL_LIST_EMPTY(prisonwarp) // Prisoners go to these
 GLOBAL_LIST_EMPTY(tdome1)
@@ -17,3 +20,5 @@ GLOBAL_LIST_EMPTY(prisonsecuritywarp) // Prison security goes to these.
 GLOBAL_LIST_EMPTY(prisonwarped) // List of players already warped.
 
 GLOBAL_LIST_EMPTY(awaydestinations) // Away missions. A list of landmarks that the warpgate can take you to.
+
+GLOBAL_LIST_EMPTY(beginning_landmarks)

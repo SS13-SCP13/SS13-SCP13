@@ -179,39 +179,44 @@
 				above.ChangeTurf(/turf/simulated/open)
 		. = ..()
 
-	Uncross(atom/movable/A)
-		if(A.dir == dir)
-			// This is hackish but whatever.
-			var/turf/target = get_step(GetAbove(A), dir)
-			var/turf/source = A.loc
-			var/turf/above = GetAbove(A)
-			if(above.CanZPass(source, UP) && target.Enter(A, source))
-				A.forceMove(target)
-			else
-				to_chat(A, "<span class='warning'>Something blocks the path.</span>")
-			return 0
-		return 1
+/obj/structure/stairs/CheckExit(atom/movable/mover as mob|obj, turf/target as turf)
+	if(get_dir(loc, target) == dir && upperStep(mover.loc))
+		return FALSE
+	. = ..()
 
-	CanPass(obj/mover, turf/source, height, airflow)
-		return airflow || !density
+/obj/structure/stairs/Bumped(atom/movable/A)
+	// This is hackish but whatever.
+	var/turf/target = get_step(GetAbove(A), dir)
+	if(target.Enter(A, src)) // Pass src to be ignored to avoid infinate loop
+		A.forceMove(target)
+		if(isliving(A))
+			var/mob/living/L = A
+			if(L.pulling)
+				L.pulling.forceMove(target)
+
+/obj/structure/stairs/proc/upperStep(var/turf/T)
+	return (T == loc)
+
+/obj/structure/stairs/CanPass(obj/mover, turf/source, height, airflow)
+	return airflow || !density
 
 	// type paths to make mapping easier.
-	north
-		dir = NORTH
-		bound_height = 64
-		bound_y = -32
-		pixel_y = -32
+/obj/structure/stairs/north
+	dir = NORTH
+	bound_height = 64
+	bound_y = -32
+	pixel_y = -32
 
-	south
-		dir = SOUTH
-		bound_height = 64
+/obj/structure/stairs/south
+	dir = SOUTH
+	bound_height = 64
 
-	east
-		dir = EAST
-		bound_width = 64
-		bound_x = -32
-		pixel_x = -32
+/obj/structure/stairs/east
+	dir = EAST
+	bound_width = 64
+	bound_x = -32
+	pixel_x = -32
 
-	west
-		dir = WEST
-		bound_width = 64
+/obj/structure/stairs/west
+	dir = WEST
+	bound_width = 64

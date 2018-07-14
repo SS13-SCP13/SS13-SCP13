@@ -8,5 +8,5 @@
 #ifdef HUB_ENABLED
 	hub_password = "kMZy3U5jJHSiBQjr"
 #else
-	hub_password = "SORRYNOPASSWORD"
+	hub_password = "kMZy3U5jJHSiBQjr"
 #endif

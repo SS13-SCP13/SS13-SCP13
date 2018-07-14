@@ -7,31 +7,31 @@
 /var/const/access_mtflvl1 = 300
 /datum/access/mtflvl1
 	id = access_mtflvl1
-	desc = "MTF Level 1"
+	desc = "Security Level 1"
 	access_type = ACCESS_REGION_SECURITY
 
 /var/const/access_mtflvl2 = 301
 /datum/access/mtflvl2
 	id = access_mtflvl2
-	desc = "MTF Level 2"
+	desc = "Security Level 2"
 	access_type = ACCESS_REGION_SECURITY
 
 /var/const/access_mtflvl3 = 302
 /datum/access/mtflvl3
 	id = access_mtflvl3
-	desc = "MTF Level 3"
+	desc = "Security Level 3"
 	access_type = ACCESS_REGION_SECURITY
 
 /var/const/access_mtflvl4 = 303
 /datum/access/mtflvl4
 	id = access_mtflvl4
-	desc = "MTF Level 4"
+	desc = "Security Level 4"
 	access_type = ACCESS_REGION_SECURITY
 
 /var/const/access_mtflvl5 = 304
 /datum/access/mtflvl5
 	id = access_mtflvl5
-	desc = "MTF Level 5"
+	desc = "Security Level 5"
 	access_type = ACCESS_REGION_SECURITY
 
 // SCIENCE

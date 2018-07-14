@@ -47,8 +47,33 @@
 		/datum/mil_rank/security/o2
 	)
 
+/datum/job/cellguardlieutenant
+	title = "Cell Guard Lieutenant"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Security Commander"
+	selection_color = "#601c1c"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 7
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
+
 /datum/job/brigofficer
-	title = "Brig Officer"
+	title = "Cell Guard"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -100,4 +125,3 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
-

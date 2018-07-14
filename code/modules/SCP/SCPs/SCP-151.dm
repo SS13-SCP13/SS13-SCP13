@@ -25,9 +25,10 @@
 
 /obj/structure/scp151/examine(mob/living/user)
 	. = ..()
-	if(!(user in victims))
+	if(!(user in victims) && istype(user))
 		victims += user //on examine, adds user into victims list
-	spawn(2 SECONDS)
-		user.emote("cough")
-	spawn(2 SECONDS)
-		to_chat(user, "<span class='warning'>Your lungs begin to feel tight, and the briny taste of seawater permeates your mouth.</span>")
+	if (user in victims)
+		spawn(2 SECONDS)
+			user.emote("cough")
+		spawn(2 SECONDS)
+			to_chat(user, "<span class='warning'>Your lungs begin to feel tight, and the briny taste of seawater permeates your mouth.</span>")

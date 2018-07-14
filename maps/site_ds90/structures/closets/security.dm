@@ -159,7 +159,7 @@
 
 /obj/structure/closet/secure_closet/mtf/enlisted
 	name = "MTF Enlisted Locker"
-//	req_access = list(access_forensics_lockers)
+	req_access = list(access_mtflvl1)
 	icon_state = "enlistedlocked"
 	icon_closed = "enlistedunlocked"
 	icon_locked = "enlistedlocked"
@@ -182,7 +182,7 @@
 
 /obj/structure/closet/secure_closet/mtf/commander
 	name = "MTF Commander Locker"
-//	req_access = list(access_forensics_lockers)
+	req_access = list(access_forensics_lockers)
 	icon_state = "cmlocked"
 	icon_closed = "cmunlocked"
 	icon_locked = "cmlocked"
@@ -197,17 +197,20 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/weapon/gun/projectile/pistol,
 		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/device/radio,
 		/obj/item/weapon/gun/projectile/automatic/tactical,
+		/obj/item/ammo_magazine/tac9mm,
+		/obj/item/ammo_magazine/tac9mm,
 		/obj/item/clothing/gloves/thick
 	)
 
 /obj/structure/closet/secure_closet/mtf/nco
 	name = "MTF NCO Locker"
-//	req_access = list(access_forensics_lockers)
+	req_access = list(access_mtflvl2)
 	icon_state = "nlocked"
 	icon_closed = "nunlocked"
 	icon_locked = "nlocked"
@@ -222,6 +225,7 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/weapon/gun/projectile/pistol,
 		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
@@ -231,7 +235,7 @@
 
 /obj/structure/closet/secure_closet/mtf/co
 	name = "MTF CO Locker"
-//	req_access = list(access_forensics_lockers)
+	req_access = list(access_mtflvl4)
 	icon_state = "colocked"
 	icon_closed = "counlocked"
 	icon_locked = "colocked"
@@ -246,11 +250,14 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/weapon/gun/projectile/pistol,
 		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/device/radio,
 		/obj/item/weapon/gun/projectile/automatic/tactical,
+		/obj/item/ammo_magazine/tac9mm,
+		/obj/item/ammo_magazine/tac9mm,
 		/obj/item/clothing/gloves/thick
 	)
 

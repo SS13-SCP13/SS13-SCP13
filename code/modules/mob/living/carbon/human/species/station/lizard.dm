@@ -78,11 +78,11 @@
 		slot_head_str =      list(NORTH = list("x" = 0, "y" = 2),   EAST = list("x" = 0, "y" = 2),   SOUTH = list("x" = 0, "y" = 2),   WEST = list("x" = 0, "y" = 2))
 			)
 
-*/
+*//*
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
-
+*/
 /datum/species/unathi/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.InStasis() || H.stat == DEAD)
 		return

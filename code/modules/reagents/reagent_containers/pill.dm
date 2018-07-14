@@ -101,9 +101,9 @@
 	reagents.add_reagent(/datum/reagent/toxin/cyanide, 50)
 
 
-/obj/item/weapon/reagent_containers/pill/adminordrazine
-	name = "Adminordrazine pill"
-	desc = "It's magic. We don't have to explain it."
+/obj/item/weapon/reagent_containers/pill/scp500
+	name = "SCP-500"
+	desc = "A pill supposedly curing everything."
 	icon_state = "pillA"
 /obj/item/weapon/reagent_containers/pill/adminordrazine/New()
 	..()

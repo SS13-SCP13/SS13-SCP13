@@ -1,3 +1,6 @@
+GLOBAL_LIST_EMPTY(simulated_turfs)
+GLOBAL_LIST_EMPTY(simulated_turfs_scp106)
+
 /turf/simulated
 	name = "station"
 	var/wet = 0
@@ -55,9 +58,11 @@
 	if(istype(loc, /area/chapel))
 		holy = 1
 	levelupdate()
+	GLOB.simulated_turfs += src
 
 /turf/simulated/Destroy()
 	deltimer(timer_id)
+	GLOB.simulated_turfs -= src
 	return ..()
 
 /turf/simulated/proc/AddTracks(var/typepath,var/bloodDNA,var/comingdir,var/goingdir,var/bloodcolor=COLOR_BLOOD_HUMAN)
