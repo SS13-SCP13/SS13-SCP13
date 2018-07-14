@@ -19,7 +19,8 @@
 		if(propname == "mode_name")
 			name = propvalue
 		else if(isnull(propvalue))
-			settings[propname] = gun.vars[propname] //better than initial() as it handles list vars like burst_accuracy
+			if (propname in gun.vars)
+				settings[propname] = gun.vars[propname] //better than initial() as it handles list vars like burst_accuracy
 		else
 			settings[propname] = propvalue
 
