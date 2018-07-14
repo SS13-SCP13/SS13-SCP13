@@ -9,8 +9,8 @@
 
 	command_report_sound = sound('sound/AI/torch/commandreport.ogg', volume = 45)
 
-	grid_check_message = "Abnormal activity detected in the %STATION_NAME%'s power network. As a precaution, the %STATION_NAME%'s power must be shut down for an indefinite duration."
-	grid_check_sound = sound('sound/AI/torch/poweroff.ogg', volume = 45)
+	grid_check_message = "Abnormal activity detected in the site's power network. As a precaution, the site's power must be shut down for an indefinite duration."
+	grid_check_sound = sound('sound/AI/ds90/poweroff.ogg', volume = 45)
 
 	grid_restored_message = "Ship power to the %STATION_NAME% will be restored at this time"
 	grid_restored_sound = sound('sound/AI/torch/poweron.ogg', volume = 45)

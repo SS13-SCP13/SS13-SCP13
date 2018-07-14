@@ -61,95 +61,53 @@
 
 //New SEXY Staffwho verb
 /client/verb/staffwho()
-	set category = "Admin"
-	set name = "StaffWho"
-	var/adminwho = ""
-	var/modwho = ""
-	var/mentwho = ""
-	var/devwho = ""
-	var/msg = ""
-	var/admin_count = 0
-	var/mod_count = 0
-	var/ment_count = 0
-	var/dev_count = 0
+    set category = "Admin"
+    set name = "StaffWho"
+    var/adminwho = ""
+    var/modwho = ""
+    var/mentwho = ""
+    var/devwho = ""
+    var/admin_count = 0
+    var/mod_count = 0
+    var/ment_count = 0
+    var/dev_count = 0
 
-	if(holder)
-		for(var/client/X in GLOB.admins)
-			if(R_ADMIN & X.holder.rights)
-				if(is_stealthed() && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))		//Mentors can't see stealthmins
-					continue
-				adminwho += "[X] is a <b>[X.holder.rank]</b>"
-				if(is_stealthed())
-					adminwho += " <b><i>(as [is_stealthed()])</i></b>"
-				if(isobserver(X.mob))
-					adminwho += " - Observing"
-				else if(istype(X.mob,/mob/new_player))
-					adminwho += " - Lobby"
-				else
-					adminwho += " - Playing"
-				if(X.is_afk())
-					adminwho += " (AFK)"
-				admin_count++
-			else if (R_MOD & X.holder.rights)
-				modwho += "[X] is a <i>[X.holder.rank]</i>"
-				if(is_stealthed())
-					modwho += " <i>(as [is_stealthed()])</i>"
-				if(isobserver(X.mob))
-					modwho += " - Observing"
-				else if(istype(X.mob,/mob/new_player))
-					modwho += " - Lobby"
-				else
-					modwho += " - Playing"
-				if(X.is_afk())
-					modwho += " (AFK)"
-				mod_count++
-			else if (R_MENTOR & X.holder.rights)
-				mentwho += " [X] is a [X.holder.rank]"
-				if(is_stealthed())
-					mentwho += " <i>(as [is_stealthed()]</i>"
-				if(isobserver(X.mob))
-					mentwho += " - Observing"
-				else if(istype(X.mob,/mob/new_player))
-					mentwho += " - Lobby"
-				else
-					mentwho += " - Playing"
-				if(X.is_afk())
-					mentwho += " (AFK)"
-				ment_count++
-			else if (R_VAREDIT & X.holder.rights)
-				devwho += "/t [X] is a [X.holder.rank]"
-				if(is_stealthed())
-					devwho += " <i>(as [is_stealthed()]</i>"
-				if(isobserver(X.mob))
-					devwho += " - Observing"
-				else if(istype(X.mob,/mob/new_player))
-					devwho += " - Lobby"
-				else
-					devwho += " - Playing"
-				if(X.is_afk())
-					devwho += " (AFK)"
-				dev_count++
+    for(var/client/X in GLOB.admins)
+        if(X.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
+            continue
 
+        var/extra = ""
+        if(holder)
+            if(X.is_stealthed())
+                extra += " (Stealthed)"
+            if(isobserver(X.mob))
+                extra += " - Observing"
+            else if(istype(X.mob,/mob/new_player))
+                extra += " - Lobby"
+            else
+                extra += " - Playing"
+            if(X.is_afk())
+                extra += " (AFK)"
 
-	else
-		for(var/client/X in GLOB.admins)
-			if(R_ADMIN & X.holder.rights && !(R_MOD & X.holder.rights))
-				if(is_stealthed())
-					adminwho += "[X] is a [X.holder.rank]"
-					admin_count++
-			else if (R_MOD & X.holder.rights)
-				modwho += "[X] is a [X.holder.rank]"
-				mod_count++
-	to_chat(src, "<b><big>Online staff:</big></b>")
-	to_chat(src, "<b>Current Admins ([admin_count]):</b><br>") +adminwho
-	to_chat(src, "<br>")
-	to_chat(src, "<b>Current Moderators ([mod_count]):</b><br>") +modwho
-	to_chat(src, "<br>")
-	to_chat(src, "<b>Current Mentors ([ment_count]):</b><br>") +mentwho
-	to_chat(src, "<br>")
-	to_chat(src, "<b>Current Developers ([dev_count]):</b><br>") +devwho
-	src << msg
+        if(R_ADMIN & X.holder.rights)
+            adminwho += "\t[X] is a <b>[X.holder.rank]</b>[extra]\n"
+            admin_count++
+        else if (R_MOD & X.holder.rights)
+            modwho += "\t[X] is a <i>[X.holder.rank]</i>[extra]\n"
+            mod_count++
+        else if (R_MENTOR & X.holder.rights)
+            mentwho += "\t[X] is a [X.holder.rank][extra]\n"
+            ment_count++
+        else if (R_DEBUG & X.holder.rights)
+            devwho += "\t[X] is a [X.holder.rank][extra]\n"
+            dev_count++
 
+    // TODO should be consistent between <br> and \n - one or the other, not both
+    to_chat(src, "<b><big>Online staff:</big></b>")
+    to_chat(src, "<b>Current Admins ([admin_count]):</b><br>[adminwho]<br>")
+    to_chat(src, "<b>Current Moderators ([mod_count]):</b><br>[modwho]<br>")
+    to_chat(src, "<b>Current Mentors ([ment_count]):</b><br>[mentwho]<br>")
+    to_chat(src, "<b>Current Developers ([dev_count]):</b><br>[devwho]<br>")
 
 /* OLD STUFF.
 /client/verb/staffwho()

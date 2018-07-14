@@ -284,6 +284,33 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!fh.show_entry()) return
 	ManualFollow(fh.followed_instance)
 
+/mob/observer/ghost/verb/become_scp()
+	set category = "Ghost"
+	set name = "Join as SCP"
+	set desc = "Take control of a clientless SCP."
+
+	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
+	if (security_state.current_security_level.name in list("code red", "code delta", "code black"))
+		var/list/scps = list()
+		for (var/scp106 in GLOB.scp106s)
+			var/mob/M = scp106
+			if (!M.client)
+				scps += M
+		// add new humanoid SCPs here or they won't be playable - Kachnov
+		if (scps.len)
+			var/mob/living/scp = input(src, "Which SCP do you want to take control of?") as null|anything in scps
+			if (scp)
+				if (!scp.client)
+					scp.do_possession(src)
+				else
+					src << "<span class = 'danger'>This SCP has already been taken by someone else.</span>"
+
+		else
+			src << "<span class = 'danger'>There are no available SCPs.</span>"
+	else
+		src << "<span class = 'danger'>You cannot take control of a SCP until the security level is Red, Delta, or Black.</span>"
+
+
 /mob/observer/ghost/proc/ghost_to_turf(var/turf/target_turf)
 	if(check_is_holy_turf(target_turf))
 		to_chat(src, "<span class='warning'>The target location is holy grounds!</span>")

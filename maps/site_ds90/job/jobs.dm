@@ -19,7 +19,16 @@
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
 	allowed_ranks = list(/datum/mil_rank/civ/classd)
+	var/static/list/used_numbers = list()
 
+/datum/job/assistant/equip(var/mob/living/carbon/human/H)
+	..()
+	var/r = rand(100,9000)
+	while (used_numbers.Find(r))
+		r = rand(100,9000)
+	used_numbers += r
+	H.name = "D-[used_numbers[used_numbers.len]]"
+	H.real_name = H.name
 
 /datum/job/captain
 	title = "Site Director"
@@ -133,11 +142,62 @@
 	minimal_access = list()
 
 
+// CELLS
 
+/datum/job/cellguardlieutenant
+	title = "Cell Guard Lieutenant"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 7
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
+
+/datum/job/brigofficer
+	title = "Cell Guard"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 4
+	spawn_positions = 4
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 5
+	ideal_character_age = 23
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/w2,
+		/datum/mil_rank/security/w3,
+		/datum/mil_rank/security/w4,
+		/datum/mil_rank/security/w5
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
 
 // SECURITY
 /datum/job/hos
-	title = "Security Commander"
+	title = "Guard Commander"
 	supervisors = "The Facility Director"
 	department = "Security"
 	department_flag = SEC|COM
@@ -160,7 +220,7 @@
 		H.add_skills(rand(60, 75), rand(60,75))
 
 /datum/job/ltofficer
-	title = "Security Lieutenant"
+	title = "Guard Lieutenant"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -183,29 +243,10 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
-/datum/job/brigofficer
-	title = "Brig Officer"
-	department = "Security"
-	department_flag = SEC
-	total_positions = 0
-	spawn_positions = 0
-	supervisors = "the Security Commander"
-	economic_modifier = 4
-	alt_titles = null
-	minimal_player_age = 5
-	ideal_character_age = 30
-	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
-	allowed_branches = list(
-		/datum/mil_branch/security
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/security/e7,
-		/datum/mil_rank/security/e8
-	)
+
 
 /datum/job/ncoofficer
-	title = "Security Officer"
+	title = "Guard"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -231,7 +272,7 @@
 	minimal_access = list()
 
 /datum/job/enlistedofficer
-	title = "Junior Security Officer"
+	title = "Junior Guard"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -324,6 +365,8 @@
 /datum/job/rd
 	title = "Research Director"
 	supervisors = "Facility Director and the Head of Human Resources"
+	total_positions = 1
+	spawn_positions = 1
 	economic_modifier = 20
 	minimal_player_age = 15
 	ideal_character_age = 60
@@ -434,7 +477,7 @@
 /datum/job/conteng
 	title = "Containment Engineer"
 	total_positions = 1
-	spawn_positions = 2
+	spawn_positions = 1
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
 	economic_modifier = 5
@@ -445,7 +488,11 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/w1
+		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/w2,
+		/datum/mil_rank/security/w3,
+		/datum/mil_rank/security/w4,
+		/datum/mil_rank/security/w5
 	)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
@@ -463,7 +510,7 @@
 	minimal_player_age = 21
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	allowed_branches = list(/datum/mil_branch/security)
-	allowed_ranks = list(/datum/mil_rank/security/o1)
+	allowed_ranks = list(/datum/mil_rank/security/o1, /datum/mil_rank/security/o2)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
@@ -575,8 +622,8 @@
 	title = "Logistics Officer"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "the Security Commander"
 	selection_color = "#515151"
 	economic_modifier = 5
@@ -599,8 +646,8 @@
 	title = "Logistics Specialist"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	selection_color = "#515151"
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
