@@ -49,10 +49,26 @@
 	l_pocket = /obj/item/device/radio
 
 
+// Cell Guards
+
+/decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
+	name = OUTFIT_JOB_NAME("Cell Guard Lieutenant")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl4
+	l_pocket = /obj/item/device/radio
+
+/decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	name = OUTFIT_JOB_NAME("Cell Guard")
+	uniform = /obj/item/clothing/under/scp/whiteuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl2
+	l_pocket = /obj/item/device/radio
+
 // SECURITY OUTFITS
 
 /decl/hierarchy/outfit/job/site90/crew/command/cos
-	name = OUTFIT_JOB_NAME("Security Commander")
+	name = OUTFIT_JOB_NAME("Guard Commander")
 	l_ear = /obj/item/device/radio/headset/heads/cos
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
@@ -60,28 +76,21 @@
 	l_pocket = /obj/item/device/radio
 
 /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
-	name = OUTFIT_JOB_NAME("Officer")
+	name = OUTFIT_JOB_NAME("Guard Lieutenant")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
 
-/decl/hierarchy/outfit/job/site90/crew/security/brigofficer
-	name = OUTFIT_JOB_NAME("Brig Officer")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
-	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl2
-	l_pocket = /obj/item/device/radio
-
 /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
-	name = OUTFIT_JOB_NAME("Security Officer")
+	name = OUTFIT_JOB_NAME("Guard")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
 
 /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
-	name = OUTFIT_JOB_NAME("Junior Security Officer")
+	name = OUTFIT_JOB_NAME("Junior Guard")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl1
@@ -128,19 +137,20 @@
 	name = OUTFIT_JOB_NAME("Class D")
 	uniform = /obj/item/clothing/under/scp/dclass
 	shoes = /obj/item/clothing/shoes/workboots
+	l_ear = null
+
+/decl/hierarchy/outfit/job/site90/crew/civ/classd/post_equip(var/mob/living/carbon/human/H)
+	..()
+	if(prob(15))
+		var/path = pick(/obj/item/weapon/material/kitchen/utensil/knife/boot, /obj/item/weapon/wrench, /obj/item/weapon/screwdriver)
+		H.equip_to_slot_or_del(new path (H), slot_l_store)
 
 /decl/hierarchy/outfit/job/site90/crew/civ/janitor
 	name = OUTFIT_JOB_NAME("Janitor")
 	uniform = /obj/item/clothing/under/rank/janitor
 	shoes = /obj/item/clothing/shoes/workboots
 	l_pocket = /obj/item/device/radio
-/*
-/decl/hierarchy/outfit/job/site90/crew/civ/classd/post_equip(var/mob/living/carbon/human/H)
-   ..()
-   if (prob(50))
-		var/path = pick(/obj/item/weapon/material/kitchen/utensil/knife/boot, /obj/item/weapon/wrench, /obj/item/weapon/screwdriver)
-		H.equip_to_slot_or_del(new path (H), slot_l_store)
-*/
+
 
 
 

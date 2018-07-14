@@ -68,7 +68,7 @@
 
 /obj/structure/closet/secure_closet/engineering_personal
 	name = "engineer's locker"
-	req_access = list(access_engine_equip)
+	req_access = list(access_mtflvl2)
 	icon_state = "secureeng1"
 	icon_closed = "secureeng"
 	icon_locked = "secureeng1"
