@@ -218,6 +218,21 @@ Failure rate can be affected by subjects not coming into contact with SCP-113 fo
 
 "}
 
+/obj/item/weapon/paper/scp/safe/scp500
+	name = "SCP-500"
+	info = {"
+	<tt><center><b><font color='green'>SAFE: SCP-500</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+
+<b>Item #:</b> SCP-500
+
+<b>Object Class:</b> Safe
+
+<b>Special Containment Procedures:</b> SCP-500 must be stored in a cool and dry place away from bright light. SCP-500 is only allowed to be accessed by personnel with level 4 security clearance to prevent misapplication.
+
+<b>Description:</b> SCP-500 is a small plastic can which at the time of writing contains forty-seven (47) red pills. One pill, when taken orally, effectively cures the subject of all diseases within two hours, exact time depending on the severity and amount of the subject's conditions. Despite extensive trials, all attempts at synthesizing more of what is thought to be the active ingredient of the pills have been unsuccessful.
+"}
+
 /obj/item/weapon/paper/scp/safe/scp999
 	name = "SCP-999"
 	info = {"

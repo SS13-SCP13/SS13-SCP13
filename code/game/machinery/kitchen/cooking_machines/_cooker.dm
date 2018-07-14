@@ -115,7 +115,7 @@
 		cook_path = /obj/item/weapon/reagent_containers/food/snacks/variable
 	var/obj/item/weapon/reagent_containers/food/snacks/result = new cook_path(src) //Holy typepaths, Batman.
 
-	if(cooking_obj.reagents && cooking_obj.reagents.total_volume)
+	if(cooking_obj && cooking_obj.reagents && cooking_obj.reagents.total_volume)
 		cooking_obj.reagents.trans_to(result, cooking_obj.reagents.total_volume)
 
 	// Set icon and appearance.
