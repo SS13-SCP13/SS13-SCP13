@@ -95,7 +95,7 @@
 					client.next_scp106_sound = world.time + 1500 // a bit longer than the ogg itself
 					break
 
-		if (!scp106_music)
+		if (!scp106_music && client.next_scp106_sound != -1)
 			src << sound(null, channel = 106)
 			client.next_scp106_sound = -1
 
