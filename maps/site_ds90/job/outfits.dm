@@ -132,7 +132,7 @@
 
 /decl/hierarchy/outfit/job/site90/crew/civ/classd/post_equip(var/mob/living/carbon/human/H)
 	..()
-	if(prob(50))
+	if(prob(15))
 		var/path = pick(/obj/item/weapon/material/kitchen/utensil/knife/boot, /obj/item/weapon/wrench, /obj/item/weapon/screwdriver)
 		H.equip_to_slot_or_del(new path (H), slot_l_store)
 
