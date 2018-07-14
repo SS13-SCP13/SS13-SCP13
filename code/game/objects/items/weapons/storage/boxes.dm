@@ -65,7 +65,7 @@
 /obj/item/weapon/storage/box/make_exact_fit()
 	..()
 	foldable = null //special form fitted boxes should not be foldable.
-
+/*
 /obj/item/weapon/storage/box/survival/
 	name = "crew survival kit"
 	desc = "A box decorated in warning colors that contains a limited supply of survival tools. The panel and white stripe indicate this one contains oxygen."
@@ -76,7 +76,7 @@
 					/obj/item/stack/medical/bruise_pack = 1,
 					/obj/item/device/flashlight/glowstick = 1,
 					/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar = 1)
-
+*/
 /obj/item/weapon/storage/box/vox/
 	name = "vox survival kit"
 	desc = "A box decorated in warning colors that contains a limited supply of survival tools. The panel and black stripe indicate this one contains nitrogen."

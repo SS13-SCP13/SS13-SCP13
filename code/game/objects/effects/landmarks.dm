@@ -22,6 +22,10 @@
 			GLOB.newplayer_start += loc
 			delete_me = 1
 			return
+		if ("scp106")
+			new /mob/living/carbon/human/scp106 (loc)
+			delete_me = 1
+			return
 		if("JoinLate")
 			GLOB.latejoin += loc
 			delete_me = 1
@@ -32,6 +36,18 @@
 			return
 		if("JoinLateCryo")
 			GLOB.latejoin_cryo += loc
+			delete_me = 1
+			return
+		if("JoinLateDclass")
+			GLOB.latejoin_dclass += loc
+			delete_me = 1
+			return
+		if("JoinLatelcz")
+			GLOB.latejoin_lcz += loc
+			delete_me = 1
+			return
+		if("JoinLateSecurity")
+			GLOB.latejoin_security += loc
 			delete_me = 1
 			return
 		if("JoinLateCyborg")

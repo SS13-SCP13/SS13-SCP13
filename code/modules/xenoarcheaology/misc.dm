@@ -110,37 +110,3 @@
 
 /obj/machinery/alarm/monitor/isolation
 	req_one_access = list(access_research, access_atmospherics, access_engine_equip)
-
-
-// SCIENCE LOCKER
-
-/obj/structure/closet/secure_closet/scpscience/directorofscience
-	name = "Xenoarchaeologist Locker"
-	req_access = list(access_xenoarch)
-	icon_state = "dslocked"
-	icon_closed = "dsunlocked"
-	icon_locked = "dslocked"
-	icon_opened = "dsopen"
-	icon_broken = "dsbroken"
-	icon_off = "dsoff"
-/* AWAITING OVERHAUL
-/obj/structure/closet/secure_closet/xenoarchaeologist/New()
-	..()
-	if(prob(50))
-		new /obj/item/weapon/storage/backpack/toxins(src)
-	else
-		new /obj/item/weapon/storage/backpack/satchel_tox(src)
-	if(prob(50))
-		new /obj/item/weapon/storage/backpack/dufflebag(src)
-	new /obj/item/clothing/under/rank/scientist(src)
-	new /obj/item/clothing/suit/storage/toggle/labcoat(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/glasses/science(src)
-	new /obj/item/device/radio/headset/headset_sci(src)
-	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/weapon/clipboard(src)
-	new /obj/item/weapon/storage/belt/archaeology(src)
-	new /obj/item/weapon/storage/excavation(src)
-	new /obj/item/taperoll/research(src)
-
-	*/
