@@ -60,8 +60,9 @@
 	lift_size_y = 3
 
 	areas_to_use = list(
-		/area/turbolift/hcz2dmh,
-		/area/turbolift/dmh2hcz
+		/area/turbolift/dmh2hcz,
+		/area/turbolift/hcz2dmh
+
 		)
 
 /obj/turbolift_map_holder/lhcz2lcz
