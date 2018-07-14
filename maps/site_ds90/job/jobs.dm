@@ -142,7 +142,55 @@
 	minimal_access = list()
 
 
+// CELLS
 
+/datum/job/cellguardlieutenant
+	title = "Cell Guard Lieutenant"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 7
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
+
+/datum/job/brigofficer
+	title = "Cell Guard"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 4
+	spawn_positions = 4
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 5
+	ideal_character_age = 23
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
 
 // SECURITY
 /datum/job/hos
@@ -192,26 +240,7 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
-/datum/job/brigofficer
-	title = "Cell Guard"
-	department = "Security"
-	department_flag = SEC
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "the Security Commander"
-	economic_modifier = 4
-	alt_titles = null
-	minimal_player_age = 5
-	ideal_character_age = 30
-	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
-	allowed_branches = list(
-		/datum/mil_branch/security
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/security/e7,
-		/datum/mil_rank/security/e8
-	)
+
 
 /datum/job/ncoofficer
 	title = "Security Officer"
