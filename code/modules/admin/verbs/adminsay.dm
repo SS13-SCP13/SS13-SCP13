@@ -42,7 +42,7 @@
 	set name = "Devsay"
 	set hidden = 1
 
-	if(!check_rights(R_VAREDIT))	return
+	if(!check_rights(R_DEBUG))	return
 
 	msg = sanitize(msg)
 	log_admin("DEV: [key_name(src)] : [msg]")
