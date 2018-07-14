@@ -179,6 +179,11 @@
 				above.ChangeTurf(/turf/simulated/open)
 		. = ..()
 
+/obj/structure/stairs/CheckExit(atom/movable/mover as mob|obj, turf/target as turf)
+	if(get_dir(loc, target) == dir && upperStep(mover.loc))
+		return FALSE
+	. = ..()
+
 /obj/structure/stairs/Bumped(atom/movable/A)
 	// This is hackish but whatever.
 	var/turf/target = get_step(GetAbove(A), dir)
