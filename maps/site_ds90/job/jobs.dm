@@ -185,8 +185,11 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e7,
-		/datum/mil_rank/security/e8
+		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/w2,
+		/datum/mil_rank/security/w3,
+		/datum/mil_rank/security/w4,
+		/datum/mil_rank/security/w5
 	)
 
 	access = list(access_mtflvl1, access_mtflvl2)
@@ -194,7 +197,7 @@
 
 // SECURITY
 /datum/job/hos
-	title = "Security Commander"
+	title = "Guard Commander"
 	supervisors = "The Facility Director"
 	department = "Security"
 	department_flag = SEC|COM
@@ -217,7 +220,7 @@
 		H.add_skills(rand(60, 75), rand(60,75))
 
 /datum/job/ltofficer
-	title = "Security Lieutenant"
+	title = "Guard Lieutenant"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -243,7 +246,7 @@
 
 
 /datum/job/ncoofficer
-	title = "Security Officer"
+	title = "Guard"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -269,7 +272,7 @@
 	minimal_access = list()
 
 /datum/job/enlistedofficer
-	title = "Junior Security Officer"
+	title = "Junior Guard"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
