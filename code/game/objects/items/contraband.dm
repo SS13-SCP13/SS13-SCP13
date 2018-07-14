@@ -19,7 +19,7 @@
 	name = "bottle of pills"
 	desc = "SCP-500. Supposedly cures everything."
 
-/obj/item/weapon/storage/pill_bottle/happy/New()
+/obj/item/weapon/storage/pill_bottle/scp500/New()
 	..()
 	new /obj/item/weapon/reagent_containers/pill/scp500( src )
 	new /obj/item/weapon/reagent_containers/pill/scp500( src )
