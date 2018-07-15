@@ -82,6 +82,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	return 0
 
 /mob/living/carbon/human/scp106/attack_hand(var/mob/living/L)
+	if (L == src)
+		return ..(L)
 	L.forceMove(pick(GLOB.scp106_floors))
 
 /mob/living/carbon/human/scp106/proc/fix_icons()
