@@ -60,6 +60,14 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/Move()
 	..()
+
+	if (loc in GLOB.scp106_floors)
+		species.brute_mod = 0.0
+		species.burn_mod = 0.0
+	else
+		species.brute_mod = 0.5
+		species.burn_mod = 0.5
+
 	// stand_icon tends to come back after movement
 	fix_icons()
 	for (var/obj/scp106_sprite_helper/O in vis_contents)
@@ -77,6 +85,16 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/handle_breath()
 	return 1
+
+/mob/living/carbon/human/scp106/say(var/message, var/datum/language/speaking = null, whispering)
+	src << "<span class = 'notice'>You cannot speak.</span>"
+	return 0
+
+/mob/living/carbon/human/scp106/attack_hand(var/mob/living/L)
+	if (L == src)
+		return ..(L)
+	visible_message("<span class = 'danger'>[L] is warped away!</span>")
+	L.forceMove(pick(GLOB.scp106_floors))
 
 /mob/living/carbon/human/scp106/proc/fix_icons()
 	icon = null
@@ -142,7 +160,9 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	var/obj/item/grab/G = locate() in src
 	if (!G)
 		visible_message("<span class = 'danger'><i>[name] reaches towards [target]!</i></danger>")
-		make_grab(src, target)
+		G = make_grab(src, target)
+		if (G)
+			G.upgrade(TRUE)
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
 	if (!istype(M, /mob/living/carbon/human/scp106))
@@ -164,25 +184,49 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	set desc = "Phase through an airlock in front of you."
 	for (var/obj/machinery/door/airlock/A in get_step(src, dir))
 
-		invisibility = 100
+		var/initial_loc = loc
+		var/atom/sprite = null
+
+		alpha = 128
 		for (var/atom in vis_contents)
 			var/atom/a = atom
-			a.invisibility = 100
+			a.alpha = 128
+			a.layer = 5.1
+			sprite = a
+
+		if (sprite)
+			for (var/v in 1 to 58)
+				spawn (round(v * 0.5, 0.1))
+					if (!src || !A || loc != initial_loc)
+						break
+					else
+						switch (get_dir(src, A))
+							if (NORTH, NORTHEAST, NORTHWEST)
+								++sprite.pixel_y
+							if (SOUTH, SOUTHEAST, SOUTHWEST)
+								--sprite.pixel_y
+							if (EAST)
+								++sprite.pixel_x
+							if (WEST)
+								--sprite.pixel_x
 
 		if (do_after(src, 30, A))
 			forceMove(get_step(src, dir))
 			forceMove(get_step(src, dir))
 
-		invisibility = 0
+		alpha = 255
 		for (var/atom in vis_contents)
 			var/atom/a = atom
-			a.invisibility = 0
+			a.alpha = 255
+			a.layer = MOB_LAYER + 0.1
+			a.pixel_x = 0
+			a.pixel_y = 0
 
 /mob/living/carbon/human/scp106/proc/enter_pocket_dimension()
 	set name = "Enter Pocket Dimension"
 	set category = "SCP"
 	set desc = "Enter your pocket dimension."
-	if (do_after(src, 50, get_turf(src)))
+	if (do_after(src, 30, get_turf(src)))
 		forceMove(pick(GLOB.scp106_floors))
 		verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
@@ -191,7 +235,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	set name = "Exit Pocket Dimension"
 	set category = "SCP"
 	set desc = "Exit your pocket dimension."
-	if (do_after(src, 50, get_turf(src)))
+	if (do_after(src, 30, get_turf(src)))
 		forceMove(pick(GLOB.simulated_turfs_scp106))
 		verbs -= /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
 		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
@@ -202,6 +246,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		if (!(loc in GLOB.scp106_floors))
 			src << "<span class = 'danger'><i>You flee back to your pocket dimension!</i></danger>"
 			forceMove(pick(GLOB.scp106_floors))
+			verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+			verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
 
 
 // special objects
@@ -216,6 +262,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /obj/scp106_exit/Crossed(var/mob/living/L)
 	if (!istype(L) || istype(L, /mob/living/carbon/human/scp106))
 		return ..(L)
+	visible_message("<span class = 'danger'>[L] is warped away!</span>")
 	L.forceMove(pick(GLOB.simulated_turfs_scp106))
 
 /obj/scp106_teleport
@@ -232,4 +279,5 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	if (prob(50))
 		L.adjustBrainLoss(1000)
 	else
+		visible_message("<span class = 'danger'>[L] is warped away!</span>")
 		L.forceMove(pick(GLOB.scp106_floors))
