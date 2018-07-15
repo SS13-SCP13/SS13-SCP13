@@ -8,11 +8,11 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 
 /turf/unsimulated/floor/scp106/New()
 	..()
-	START_PROCESSING(SSprocessing, src)
+	processing_turfs += src
 	GLOB.scp106_floors += src
 
 /turf/unsimulated/floor/scp106/Destroy()
-	STOP_PROCESSING(SSprocessing, src)
+	processing_turfs -= src
 	GLOB.scp106_floors -= src
 	. = ..()
 

@@ -135,7 +135,7 @@
 		return 0
 	if(!species)
 		return 0
-	
+
 	if(bodytemperature > species.cold_level_1)
 		return 0
 	else if(bodytemperature > species.cold_level_2)
@@ -232,7 +232,7 @@
 
 	if(G.can_grab())
 		G.init()
-		return 1
+		return G
 	else
 		qdel(G)
 		return 0
