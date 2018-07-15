@@ -78,6 +78,12 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /mob/living/carbon/human/scp106/handle_breath()
 	return 1
 
+/mob/living/carbon/human/scp106/say(var/message, var/datum/language/speaking = null, whispering)
+	return 0
+
+/mob/living/carbon/human/scp106/attack_hand(var/mob/living/L)
+	L.forceMove(pick(GLOB.scp106_floors))
+
 /mob/living/carbon/human/scp106/proc/fix_icons()
 	icon = null
 	icon_state = null
@@ -164,25 +170,47 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	set desc = "Phase through an airlock in front of you."
 	for (var/obj/machinery/door/airlock/A in get_step(src, dir))
 
-		invisibility = 100
+		var/initial_loc = loc
+		var/atom/sprite = null
+
+		alpha = 128
 		for (var/atom in vis_contents)
 			var/atom/a = atom
-			a.invisibility = 100
+			a.alpha = 128
+			sprite = a
+
+		if (sprite)
+			for (var/v in 1 to 58)
+				spawn (round(v * 0.5, 0.1))
+					if (!src || !A || loc != initial_loc)
+						break
+					else
+						switch (get_dir(src, A))
+							if (NORTH, NORTHEAST, NORTHWEST)
+								++sprite.pixel_y
+							if (SOUTH, SOUTHEAST, SOUTHWEST)
+								--sprite.pixel_y
+							if (EAST)
+								++sprite.pixel_x
+							if (WEST)
+								--sprite.pixel_x
 
 		if (do_after(src, 30, A))
 			forceMove(get_step(src, dir))
 			forceMove(get_step(src, dir))
 
-		invisibility = 0
+		alpha = 255
 		for (var/atom in vis_contents)
 			var/atom/a = atom
-			a.invisibility = 0
+			a.alpha = 255
+			a.pixel_x = 0
+			a.pixel_y = 0
 
 /mob/living/carbon/human/scp106/proc/enter_pocket_dimension()
 	set name = "Enter Pocket Dimension"
 	set category = "SCP"
 	set desc = "Enter your pocket dimension."
-	if (do_after(src, 50, get_turf(src)))
+	if (do_after(src, 30, get_turf(src)))
 		forceMove(pick(GLOB.scp106_floors))
 		verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
@@ -191,7 +219,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	set name = "Exit Pocket Dimension"
 	set category = "SCP"
 	set desc = "Exit your pocket dimension."
-	if (do_after(src, 50, get_turf(src)))
+	if (do_after(src, 30, get_turf(src)))
 		forceMove(pick(GLOB.simulated_turfs_scp106))
 		verbs -= /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
 		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
@@ -202,6 +230,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		if (!(loc in GLOB.scp106_floors))
 			src << "<span class = 'danger'><i>You flee back to your pocket dimension!</i></danger>"
 			forceMove(pick(GLOB.scp106_floors))
+			verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+			verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
 
 
 // special objects

@@ -171,6 +171,8 @@
 			H.last_z = H.z
 			H.forceMove(get_turf(affecting))
 			H.verbs += /mob/living/carbon/human/scp106/proc/go_back
+			H.verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+			H.verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
 			qdel(src)
 
 /obj/item/grab/proc/downgrade()
