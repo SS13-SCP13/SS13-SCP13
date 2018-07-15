@@ -163,8 +163,8 @@
 	title = "Cell Guard"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 7
+	spawn_positions = 7
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = null
