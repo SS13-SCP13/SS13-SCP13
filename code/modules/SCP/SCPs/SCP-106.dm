@@ -251,6 +251,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /obj/scp106_exit/Crossed(var/mob/living/L)
 	if (!istype(L) || istype(L, /mob/living/carbon/human/scp106))
 		return ..(L)
+	visible_message("<span class = 'danger'>[L] is warped away!</span>")
 	L.forceMove(pick(GLOB.simulated_turfs_scp106))
 
 /obj/scp106_teleport
@@ -267,4 +268,5 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	if (prob(50))
 		L.adjustBrainLoss(1000)
 	else
+		visible_message("<span class = 'danger'>[L] is warped away!</span>")
 		L.forceMove(pick(GLOB.scp106_floors))
