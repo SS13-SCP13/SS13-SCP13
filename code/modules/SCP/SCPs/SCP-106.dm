@@ -84,6 +84,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /mob/living/carbon/human/scp106/attack_hand(var/mob/living/L)
 	if (L == src)
 		return ..(L)
+	visible_message("<span class = 'danger'>[L] is warped away!</span>")
 	L.forceMove(pick(GLOB.scp106_floors))
 
 /mob/living/carbon/human/scp106/proc/fix_icons()
