@@ -100,7 +100,7 @@
 
 // UTILITY
 /* AWAITING SPRITES */
-
+/*
 /var/const/access_utilitylvl1 = 600
 /datum/access/utilitylvl1
 	id = access_utilitylvl1
@@ -130,3 +130,5 @@
 	id = access_utilitylvl5
 	desc = "Utility Level 5"
 	access_type = ACCESS_REGION_GENERAL
+
+*/

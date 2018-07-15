@@ -49,12 +49,7 @@
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1,
-	access_utilitylvl1,
-	access_utilitylvl2,
-	access_utilitylvl3,
-	access_utilitylvl4,
-	access_utilitylvl5
+	access_adminlvl1
 	)
 	minimal_access = list()
 
@@ -81,11 +76,7 @@
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1,
-	access_utilitylvl1,
-	access_utilitylvl2,
-	access_utilitylvl3,
-	access_utilitylvl4
+	access_adminlvl1
 	)
 	minimal_access = list()
 
@@ -138,7 +129,7 @@
 	/datum/mil_rank/security/w2,
 	/datum/mil_rank/security/w3)
 
-	access = list(access_utilitylvl1, access_utilitylvl2, access_utilitylvl3, access_utilitylvl4, access_utilitylvl5)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
 
@@ -161,8 +152,8 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e7,
-		/datum/mil_rank/security/e8
+		/datum/mil_rank/security/o1,
+		/datum/mil_rank/security/o2
 	)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
@@ -185,11 +176,9 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/w1,
-		/datum/mil_rank/security/w2,
-		/datum/mil_rank/security/w3,
-		/datum/mil_rank/security/w4,
-		/datum/mil_rank/security/w5
+	/datum/mil_rank/security/e7,
+	/datum/mil_rank/security/e8
+
 	)
 
 	access = list(access_mtflvl1, access_mtflvl2)
@@ -514,6 +503,8 @@
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
+
+// MEDICAL JOBS.
 
 /datum/job/chemist
 	title = "Chemist"
