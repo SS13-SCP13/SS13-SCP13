@@ -177,6 +177,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		for (var/atom in vis_contents)
 			var/atom/a = atom
 			a.alpha = 128
+			a.layer = 5.1
 			sprite = a
 
 		if (sprite)
@@ -203,6 +204,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		for (var/atom in vis_contents)
 			var/atom/a = atom
 			a.alpha = 255
+			a.layer = MOB_LAYER + 0.1
 			a.pixel_x = 0
 			a.pixel_y = 0
 
