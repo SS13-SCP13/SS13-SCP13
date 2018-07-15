@@ -79,6 +79,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	return 1
 
 /mob/living/carbon/human/scp106/say(var/message, var/datum/language/speaking = null, whispering)
+	src << "<span class = 'notice'>You cannot speak.</span>"
 	return 0
 
 /mob/living/carbon/human/scp106/attack_hand(var/mob/living/L)
