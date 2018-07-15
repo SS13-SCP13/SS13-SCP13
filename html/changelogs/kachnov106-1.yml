@@ -36,3 +36,5 @@ changes:
   - bugfix: "Fixed SCP-106 turfs."
   - tweak: "Made SCP-106 unable to speak."
   - tweak: "Buffed SCP-106 grabs."
+  - tweak: "Made SCP-106 invincible in the pocket dimension."
+  - imageadd: "Gave SCP-106's phasing through airlocks a nice animation."
