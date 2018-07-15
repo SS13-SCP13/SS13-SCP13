@@ -31,6 +31,7 @@
 	H.real_name = H.name
 
 /datum/job/captain
+	has_email = TRUE
 	title = "Site Director"
 	supervisors = "the SCP Foundation and O5 Council"
 	minimal_player_age = 20
@@ -55,6 +56,7 @@
 
 
 /datum/job/hop
+	has_email = TRUE
 	title = "Head of Personnel"
 	supervisors = "the Facility Director"
 	department = "Command"
@@ -81,6 +83,7 @@
 	minimal_access = list()
 
 /datum/job/commsofficer
+	has_email = TRUE
 	title = "Communications Officer"
 	supervisors = "the Security Commander and Site Director"
 	department = "Command"
@@ -117,6 +120,7 @@
 // AWAITING OVERHAUL
 
 /datum/job/cmo
+	has_email = TRUE
 	title = "Chief Medical Officer"
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_modifier = 10
@@ -136,6 +140,7 @@
 // CELLS
 
 /datum/job/cellguardlieutenant
+	has_email = TRUE
 	title = "Cell Guard Lieutenant"
 	department = "Security"
 	department_flag = SEC
@@ -160,6 +165,7 @@
 	minimal_access = list()
 
 /datum/job/brigofficer
+	has_email = TRUE
 	title = "Cell Guard"
 	department = "Security"
 	department_flag = SEC
@@ -186,6 +192,7 @@
 
 // SECURITY
 /datum/job/hos
+	has_email = TRUE
 	title = "Guard Commander"
 	supervisors = "The Facility Director"
 	department = "Security"
@@ -209,6 +216,7 @@
 		H.add_skills(rand(60, 75), rand(60,75))
 
 /datum/job/ltofficer
+	has_email = TRUE
 	title = "Guard Lieutenant"
 	department = "Security"
 	department_flag = SEC
@@ -235,6 +243,7 @@
 
 
 /datum/job/ncoofficer
+	has_email = TRUE
 	title = "Guard"
 	department = "Security"
 	department_flag = SEC
@@ -261,6 +270,7 @@
 	minimal_access = list()
 
 /datum/job/enlistedofficer
+	has_email = TRUE
 	title = "Junior Guard"
 	department = "Security"
 	department_flag = SEC
@@ -292,6 +302,7 @@
 // SCIENCE
 
 /datum/job/juniorscientist
+	has_email = TRUE
 	title = "Junior Scientist"
 	department = "Science"
 	department_flag = SCI
@@ -312,6 +323,7 @@
 	minimal_access = list()
 
 /datum/job/scientist
+	has_email = TRUE
 	title = "Scientist"
 	department = "Science"
 	department_flag = SCI
@@ -332,6 +344,7 @@
 	minimal_access = list()
 
 /datum/job/seniorscientist
+	has_email = TRUE
 	title = "Senior Scientist"
 	department = "Science"
 	department_flag = SCI
@@ -352,6 +365,7 @@
 	minimal_access = list()
 
 /datum/job/rd
+	has_email = TRUE
 	title = "Research Director"
 	supervisors = "Facility Director and the Head of Human Resources"
 	total_positions = 1
@@ -380,6 +394,7 @@
 
 
 /datum/job/juneng
+	has_email = TRUE
 	title = "Junior Engineer"
 	total_positions = 4
 	spawn_positions = 4
@@ -407,6 +422,7 @@
 	minimal_access = list()
 
 /datum/job/eng
+	has_email = TRUE
 	title = "Engineer"
 	total_positions = 3
 	spawn_positions = 3
@@ -435,6 +451,7 @@
 	minimal_access = list()
 
 /datum/job/seneng
+	has_email = TRUE
 	title = "Senior Engineer"
 	total_positions = 2
 	spawn_positions = 2
@@ -464,6 +481,7 @@
 	minimal_access = list()
 
 /datum/job/conteng
+	has_email = TRUE
 	title = "Containment Engineer"
 	total_positions = 1
 	spawn_positions = 1
@@ -490,6 +508,7 @@
 
 
 /datum/job/chief_engineer
+	has_email = TRUE
 	title = "Chief Engineer"
 	supervisors = "the Security Commander and Facility Director"
 	total_positions = 1
@@ -507,6 +526,7 @@
 // MEDICAL JOBS.
 
 /datum/job/chemist
+	has_email = TRUE
 	title = "Chemist"
 	department = "Medical"
 	department_flag = MED
@@ -525,6 +545,7 @@
 	minimal_access = list()
 
 /datum/job/psychiatrist
+	has_email = TRUE
 	title = "Psychiatrist"
 	department = "Medical"
 	department_flag = MED
@@ -546,6 +567,7 @@
 	minimal_access = list()
 
 /datum/job/medicaldoctor
+	has_email = TRUE
 	title = "Medical Doctor"
 	department = "Medical"
 	department_flag = MED
@@ -567,6 +589,7 @@
 	minimal_access = list()
 
 /datum/job/virologist
+	has_email = TRUE
 	title = "Virologist"
 	department = "Medical"
 	department_flag = MED
@@ -587,6 +610,7 @@
 	minimal_access = list()
 
 /datum/job/surgeon
+	has_email = TRUE
 	title = "Surgeon"
 	department = "Medical"
 	department_flag = MED
@@ -610,6 +634,7 @@
 //LOGISTICS
 
 /datum/job/qm
+	has_email = TRUE
 	title = "Logistics Officer"
 	department = "Logistics"
 	department_flag = SUP
@@ -634,6 +659,7 @@
 
 
 /datum/job/cargo_tech
+	has_email = TRUE
 	title = "Logistics Specialist"
 	department = "Logistics"
 	department_flag = SUP
@@ -657,6 +683,7 @@
 // MISC JOBS
 
 /datum/job/janitor
+	has_email = TRUE
 	title = "Janitor"
 	department = "Civilian"
 	department_flag = CIV
