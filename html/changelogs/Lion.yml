@@ -37,5 +37,6 @@ changes:
   - maptweak: "Replaced one of the shower blocks with a medical post."
   - rscadd: "Added a D-Class body disposal. Rudimentary, but works."
   - rscadd: "Added Force Rules for moderators."
+  - rscdel: "Removes replica pods from the seed vendors. This removes diona's permanently from an organic standpoint. Admin intervention may still spawn them in."
   - bugfix: "Fix to doctor lockers."
   - bugfix: "Fixed power issue with RnD checkpoint."
