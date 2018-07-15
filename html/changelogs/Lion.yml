@@ -22,7 +22,7 @@
 #################################
 
 # Your name.  
-author: Unknown
+author: TheLion1675
 
 # Optional: Remove this file after generating master changelog.  Useful for PR changelogs that won't get used again.
 delete-after: True
@@ -34,9 +34,35 @@ delete-after: True
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
   - maptweak: "Replaced ice with rock. Should help with air, a lot."
-  - maptweak: "Replaced one of the shower blocks with a medical post."
+  - maptweak: "Replaced one of the D-cell area shower blocks with a medical post."
+  - maptweak: "Added spare handcuff boxes in all sec. lockers."
+  - maptweak: "Replaced all cell doors with shutters to avoid having to push buttons every time."
+  - maptweak: "Major overhaul of the D-Class Area."
+  - tweak: "Buffed numbers of Cell Guards to 7, as opposed to 4."
   - rscadd: "Added a D-Class body disposal. Rudimentary, but works."
+  - rscadd: "Added new access datums for D-Class work assignments."
   - rscadd: "Added Force Rules for moderators."
+  - rscadd: "Added a new Custodial Closet in the Upper Entrance Zone, near the Canteen."
+  - rscadd: "Added a new cryogenics storage for D-Class. They can exit the round there, rather than ghosting."
   - rscdel: "Removes replica pods from the seed vendors. This removes diona's permanently from an organic standpoint. Admin intervention may still spawn them in."
-  - bugfix: "Fix to doctor lockers."
+  - rscadd: "Added NanoMed's to medbay."
+  - bugfix: "Fix to doctor lockers and medbay doors."
+  - bugfix: "Replaced empty medwall with a filled one in the Medbay."
+  - bugfix: "Fix issue with SCP-106 elevator."
+  - bugfix: "Fixed rank requirements for Cell Guard Lieutenant and Cell Guard respectively."
   - bugfix: "Fixed power issue with RnD checkpoint."
+  - bugfix: "Fix a glitched wall in D-Cells."
+  - bugfix: "Fixes SCP-106 containment doors to allow level 4 Security access. Should be Containment Engineer and Chief Engineer."
+  - bugfix: "Fixes the field for the RUST not appearing. Thanks to BayStation."
+  - bugfix: "Fix issue with e-mails not spawning."
+  - bugfix: "Fix wall glitch in Engineering."
+  - bugfix: "Fix SCP-106 elevator."
+  - bugfix: "Fix lights not having been mapped in in the connection hallway between Lower EZ and Engineering."
+  - bugfix: "Fixes critical bug in Engineering APC's being critical and their access requirements."
+  - bugfix: "Fixed bug with CMO's access."
+  - bugfix: "Fixed bug with cryogenics storage."
+  - bugfix: "Fix wrong ID Type for Janitors."
+  - bugfix: "Fixed an issue where power might go off in the upper EZ."
+  - wip: "Added CMO locker."
+  - experiment: "Buffing of SMG and pistol bullets."
+  - experiment: "Increased the volume of alert sounds."
