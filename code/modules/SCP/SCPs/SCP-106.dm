@@ -60,6 +60,14 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/Move()
 	..()
+
+	if (loc in GLOB.scp106_floors)
+		species.brute_mod = 0.0
+		species.burn_mod = 0.0
+	else
+		species.brute_mod = 0.5
+		species.burn_mod = 0.5
+
 	// stand_icon tends to come back after movement
 	fix_icons()
 	for (var/obj/scp106_sprite_helper/O in vis_contents)
