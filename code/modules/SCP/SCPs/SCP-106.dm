@@ -151,7 +151,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	var/obj/item/grab/G = locate() in src
 	if (!G)
 		visible_message("<span class = 'danger'><i>[name] reaches towards [target]!</i></danger>")
-		var/obj/item/grab/G = make_grab(src, target)
+		G = make_grab(src, target)
 		if (G)
 			G.upgrade(TRUE)
 
