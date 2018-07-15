@@ -589,3 +589,42 @@ SCP-939 exhale minute traces of an aerosolized Class C amnestic, designated AMN-
 "}
 
 
+// MISC.
+
+/obj/item/weapon/paper/dcell/assignment
+	name = "READ THIS FIRST!"
+	info = {"
+	<tt><center><b>
+	<h3>FOUNDATION SECURITY DIVISION</h3>
+	</center>
+<br>
+Congratulations, you're in charge of assignments today!
+<br>
+<b>Before assigning work detail to anyone, make sure to coordinate with your fellow cell guards and Lieutenant to see if all work places have at least one cell guard overlooking it!</b>
+<br>
+<br>
+<b>As an additional note, there is a maximum of work assignments, which is 6x mining and manual labor, 4 x botany, and 3x kitchen, making for 13 work places at current time.</b>
+<br>
+<b>DO NOT EXCEED THE MAXIMUM ALLOWED OF WORKSPACES UNDER THREAT OF IMMEDIATE EMPLOYMENT TERMINATION.</b>
+<br>
+<br>
+<b>Cell guards must not assign access other than the D-Class Work Zones. Doing this will result in immediate employment termination.</b>
+<br>
+Steps to assign someone to work duty;
+<br>
+1. D-Class are allowed to cite their preference. This does not mean you have to grant them at you.
+<br>
+2. Ask for the ID Card of the D-Class, and assign the appropriate access. Only one work assignment per D-Class.
+<br>
+3. Return ID Card to D-Class, and give them instructions on how to get to their area.
+<br>
+4. Inform guards at work stations of the D-Number that is coming their way, so they do not let in random people.
+<br>
+<br>
+<b>Once you are done with assigning D-Class, or the work assignments are full, close down the shutters and secure the Mastercard in the locker supplied next to your desk. The safe code is 15954. Failure to do this will result in immediate termination.</b>
+<br>
+<br>
+Good luck on your shift! For further questions, please defer to your Cell Lieutenant. Return this piece of paper to the Guard Lieutenant, or stash it in the safe if one is not around.
+"}
+
+
