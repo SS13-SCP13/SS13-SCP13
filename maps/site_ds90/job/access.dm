@@ -98,35 +98,28 @@
 	desc = "Admin Level 5"
 	access_type = ACCESS_REGION_COMMAND
 
-// UTILITY
-/* AWAITING SPRITES */
+// D-CLASS WORK
 
-/var/const/access_utilitylvl1 = 600
-/datum/access/utilitylvl1
-	id = access_utilitylvl1
-	desc = "Utility Level 1"
+/var/const/access_dclasskitchen = 901
+/datum/access/dclasskitchen
+	id = access_dclasskitchen
+	desc = "D-Class Kitchen"
 	access_type = ACCESS_REGION_GENERAL
 
-/var/const/access_utilitylvl2 = 601
-/datum/access/utilitylvl2
-	id = access_utilitylvl2
-	desc = "Utility Level 2"
+/var/const/access_dclassbotany = 902
+/datum/access/dclassbotany
+	id = access_dclassbotany
+	desc = "D-Class Botany"
 	access_type = ACCESS_REGION_GENERAL
 
-/var/const/access_utilitylvl3 = 602
-/datum/access/utilitylvl3
-	id = access_utilitylvl3
-	desc = "Utility Level 3"
+/var/const/access_dclassmining = 903
+/datum/access/dclassmining
+	id = access_dclassmining
+	desc = "D-Class Mining"
 	access_type = ACCESS_REGION_GENERAL
 
-/var/const/access_utilitylvl4 = 603
-/datum/access/utilitylvl4
-	id = access_utilitylvl4
-	desc = "Utility Level 4"
-	access_type = ACCESS_REGION_GENERAL
-
-/var/const/access_utilitylvl5 = 604
-/datum/access/utilitylvl5
-	id = access_utilitylvl5
-	desc = "Utility Level 5"
+/var/const/access_dclassjanitorial = 904
+/datum/access/dclassjanitorial
+	id = access_dclassjanitorial
+	desc = "D-Class Janitorial"
 	access_type = ACCESS_REGION_GENERAL

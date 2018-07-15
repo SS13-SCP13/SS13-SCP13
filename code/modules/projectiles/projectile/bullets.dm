@@ -137,8 +137,8 @@
 
 /obj/item/projectile/bullet/pistol/medium/smg
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
-	damage = 28 //10mm
-	armor_penetration = 18
+	damage = 40 //10mm
+	armor_penetration = 20
 
 /obj/item/projectile/bullet/pistol/medium/smg/hollowpoint
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'

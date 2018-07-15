@@ -150,6 +150,7 @@
 	uniform = /obj/item/clothing/under/rank/janitor
 	shoes = /obj/item/clothing/shoes/workboots
 	l_pocket = /obj/item/device/radio
+	id_type = /obj/item/weapon/card/id/sciencelvl1
 
 
 
