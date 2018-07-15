@@ -247,7 +247,7 @@
 
 /obj/structure/sign/dplaque
 	name = "\improper D-Class Work Assignment Sheet"
-	desc = "Kitchen Duty - 3x, Botany Duty - 4x, Mining & Manual Labor - 6x."
+	desc = "Kitchen Duty - 3x, Botany Duty - 4x, Mining & Manual Labor - 6x, Janitorial - 2x."
 	icon_state = "kiddieplaque"
 
 
