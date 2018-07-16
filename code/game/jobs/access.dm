@@ -38,7 +38,7 @@
 				return 1
 		return 0
 	return 1
-
+/
 /proc/get_centcom_access(job)
 	switch(job)
 		if("VIP Guest")
