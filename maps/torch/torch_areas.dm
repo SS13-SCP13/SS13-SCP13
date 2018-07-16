@@ -233,6 +233,7 @@
 /area/hallway/primary/firstdeck/center
 	name = "\improper First Deck Central Hallway"
 	icon_state = "hallC1"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/hallway/primary/firstdeck/aft
 	name = "\improper First Deck Aft Hallway"
