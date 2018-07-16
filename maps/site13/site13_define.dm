@@ -1,26 +1,26 @@
 /datum/map/ds90
-	name = "Torch"
-	full_name = "SEV Torch"
-	path = "torch"
+	name = "Site 13"
+	full_name = "Site 13"
+	path = "site13"
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 
-	lobby_icon = 'maps/torch/icons/lobby.dmi'
+	lobby_icon = 'icons/lobby.dmi'
 
-	station_levels = list(1,2)
-	contact_levels = list(1,2)
-	player_levels = list(1,2)
-	admin_levels = list(8)
+	station_levels = list(1,2,3,4,5,6)
+	contact_levels = list(1,2,3,4,5,6)
+	player_levels = list(1,2,3,4,5)
+	admin_levels = list(6)
 	empty_levels = list()
-	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1,"5"=1,"8"=30)
+	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1,"5"=1,"6"=30)
 	overmap_size = 35
 	overmap_event_areas = 0
-	usable_email_tlds = list("torch.ec.scg", "torch.fleet.mil", "torch.marine.mil", "freemail.nt")
+	usable_email_tlds = list("s13.foundation", "security.s13.foundation", "science.s13.foundation", "utility.s13.foundation")
 
-	allowed_spawns = list("Cryogenic Storage", "Cyborg Storage")
+	allowed_spawns = list("Cryogenic Storage")
 	default_spawn = "Cryogenic Storage"
 
-	station_name  = "Deep Space Site-90"
-	station_short = "Site DS-90"
+	station_name  = "Site 13"
+	station_short = "Site 13"
 	dock_name     = "TBD"
 	boss_name     = "O5 Foundation Council"
 	boss_short    = "O5 Council"

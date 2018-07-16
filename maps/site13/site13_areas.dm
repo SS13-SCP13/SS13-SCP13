@@ -17,6 +17,18 @@
 
 //Surface
 
+/area/storage/site13/surface/tech
+	name = "Technical Storage"
+	icon_state = "storage"
+
+/area/storage/site13/surface/medical
+	name = "Medical Storage"
+	icon_state = "exam_room"
+
+/area/rnd/site13/surface/officevac
+	name = "Vacant Offices"
+	icon_state = "devlab"
+
 /area/hallway/site13/surface/gatea
 	name = "\improper Gate A Hallway"
 	icon_state = "hallF"
@@ -178,24 +190,12 @@
 	icon_state = "shuttle"
 
 /area/security/site13/surface/headarmory
-	name = "\improper External Weapons Storage"
+	name = "\improper External Emergency Storage"
 	icon_state = "security"
 
 /area/security/site13/surface/headmedical
 	name = "\improper External Medical Storage"
 	icon_state = "security"
-
-/area/chapel/site13/surface/main
-	name = "\improper Chapel"
-	icon_state = "chapel"
-
-/area/chapel/site13/surface/living
-	name = "\improper Priest Quarters"
-	icon_state = "chapel"
-
-/area/chapel/site13/surface/cemetery
-	name = "\improper Cemetary"
-	icon_state = "chapel"
 
 /area/maintenance/site13/surface/battery
 	name = "\improper Surface Power Storage"
@@ -208,3 +208,261 @@
 /area/maintenance/site13/surface/cryoff
 	name = "\improper Surface Maintenance"
 	icon_state = "apmaint"
+
+/area/crew_quarters/site13/surface/sd
+	name = "\improper SD's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/surface/rd
+	name = "\improper RD's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/surface/sc
+	name = "\improper SC's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/surface/ce
+	name = "\improper CE's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/surface/clo
+	name = "\improper CLO's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/surface/cmo
+	name = "\improper CMO's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/surface/hop
+	name = "\improper HoP's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/surface/conference
+	name = "\improper Conference Room"
+	icon_state = "bridge"
+
+/area/security/site13/floor1/lczwo
+	name = "\improper LCZ Floor West Checkpoint Outside"
+	icon_state = "checkpoint"
+
+/area/security/site13/floor1/lczso
+	name = "\improper LCZ Floor South Checkpoint Outside"
+	icon_state = "checkpoint"
+
+/area/security/site13/floor1/lczno
+	name = "\improper LCZ Floor North Checkpoint Outside"
+	icon_state = "checkpoint"
+
+/area/security/site13/floor1/lczni
+	name = "\improper LCZ Floor North Checkpoint Inside"
+	icon_state = "checkpoint1"
+
+/area/security/site13/floor1/lczsi
+	name = "\improper LCZ Floor South Checkpoint Inside"
+	icon_state = "checkpoint1"
+
+/area/security/site13/floor1/lczwi
+	name = "\improper LCZ Floor West Checkpoint Inside"
+	icon_state = "checkpoint1"
+
+/area/hallway/site13/floor1/elevator
+	name = "\improper LCZ Floor Elevator Hallway"
+	icon_state = "hallC1"
+
+/area/hallway/site13/floor1/lczeast
+	name = "\improper Light Containment Zone East Hallway"
+	icon_state = "hallC1"
+
+/area/rnd/site13/floor1/lounge
+	name = "\improper Scientist Lounge"
+	icon_state = "researchbreak"
+
+/area/rnd/site13/floor1/archives
+	name = "\improper Archives"
+	icon_state = "research"
+
+/area/rnd/site13/floor1/briefing
+	name = "\improper Briefing Room"
+	icon_state = "research"
+
+/area/rnd/site13/floor1/scp173
+	name = "\improper Archives"
+	icon_state = "research"
+
+/area/rnd/site13/floor1/humanoid
+	name = "Humanoid Containment Chamber"
+	icon_state = "research"
+
+/area/rnd/site13/floor1/humanoid2
+	name = "Humanoid Containment Chamber"
+	icon_state = "research"
+
+/area/rnd/site13/floor1/scp151
+	name = "\improper SCP 151's Chamber"
+	icon_state = "research"
+
+/area/rnd/site13/floor1/securestorage
+	name = "\improper Secure Storage"
+	icon_state = "research"
+
+/area/crew_quarters/site13/floor1/rd
+	name = "\improper RD's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/floor1/sc
+	name = "\improper SC's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/floor2/ce
+	name = "\improper CE's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/site13/floor1/cmo
+	name = "\improper CMO's Office"
+	icon_state = "head_quarters"
+
+/area/medical/site13/floor1/sleeper
+	name = "\improper Acute Treatment Centre"
+	icon_state = "exam_room"
+
+/area/medical/site13/floor1/bed
+	name = "\improper Sub-Acute Treatment Centre"
+	icon_state = "medbay"
+
+/area/medical/site13/floor1/equipstorage
+	name = "\improper Locker Room"
+	icon_state = "medbay4"
+	ambience = list('sound/ambience/signal.ogg')
+
+/area/medical/site13/floor1/barracks
+	name = "\improper Barracks"
+	icon_state = "medbay"
+
+/area/medical/site13/floor1/mentalhealth
+	name = "\improper Mental Health"
+	icon_state = "medbay3"
+	ambience = list('sound/ambience/signal.ogg')
+
+/area/medical/site13/floor1/chemistry
+	name = "\improper Chemistry"
+	icon_state = "chem"
+
+/area/medical/site13/floor1/morgue
+	name = "\improper Morgue"
+	icon_state = "morgue"
+	ambience = list('sound/ambience/ambimo1.ogg','sound/ambience/ambimo2.ogg','sound/music/main.ogg')
+
+/area/medical/site13/floor1/infirmary
+	name = "\improper Infirmary Hallway"
+	icon_state = "medbay"
+
+/area/medical/site13/floor1/infirmreception
+	name = "\improper Infirmary Reception"
+	icon_state = "medbay2"
+	ambience = list('sound/ambience/signal.ogg')
+
+/area/security/site13/floor1/medical
+	name = "\improper LCZ Floor Infirmary Checkpoint"
+	icon_state = "checkpoint"
+
+/area/medical/site13/floor1/medkits
+	name = "\improper Medical Supplies Storage"
+	icon_state = "chem"
+
+/area/medical/site13/floor1/surgery
+	name = "\improper Operating Theatre"
+	icon_state = "surgery"
+
+/area/medical/site13/floor1/exam_room
+	name = "\improper Exam Room"
+	icon_state = "exam_room"
+
+/area/maintenance/site13/floor1/battery
+	name = "\improper LCZ Floor Power Storage"
+	icon_state = "apmaint"
+
+/area/medical/site13/floor1/toilets
+	name = "\improper Toilets"
+	icon_state = "toilet"
+
+/area/security/site13/floor1/toilets
+	name = "\improper Toilets"
+	icon_state = "toilet"
+
+/area/security/site13/floor1/armoury
+	name = "\improper Armory"
+	icon_state = "Warden"
+
+/area/security/site13/floor1/dwest
+	name = "\improper Class D Cells - West"
+	icon_state = "brig"
+
+/area/security/site13/floor1/deast
+	name = "\improper Class D Cells - East"
+	icon_state = "sec_prison"
+
+/area/security/site13/floor1/process
+	name = "\improper Processing Cells"
+	icon_state = "sec_prison"
+
+/area/security/site13/floor1/interrogation
+	name = "\improper Interrogation Chamber"
+	icon_state = "brig"
+
+/area/security/site13/floor1/wing
+	name = "\improper Security Wing"
+	icon_state = "security"
+
+/area/security/site13/floor1/ops
+	name = "\improper Security Briefing Room"
+	icon_state = "checkpoint"
+
+/area/security/site13/floor1/exec
+	name = "\improper Disposal Room"
+	icon_state = "checkpoint"
+
+/area/security/site13/floor1/range
+	name = "\improper Firing Range"
+	icon_state = "nuke_storage"
+
+/area/security/site13/floor1/lockers
+	name = "\improper Security Locker Room"
+	icon_state = "brig"
+
+/area/security/site13/floor1/schleep
+	name = "\improper Sleeping Quaters"
+	icon_state = "sec_prison"
+
+/area/hydroponics/site13/floor1/prison
+	name = "\improper Class D Garden"
+
+/area/crew_quarters/site13/floor1/gym
+	name = "\improper Class D Recreational Area"
+	icon_state = "fitness"
+
+/area/security/site13/floor1/dshowers
+	name = "\improper Class D Shower Room"
+	icon_state = "toilet"
+
+/area/crew_quarters/site13/floor1/mess
+	name = "\improper Class D Cafeteria"
+	icon_state = "cafeteria"
+
+/area/crew_quarters/site13/floor1/kitchen
+	name = "\improper Class D Kitchen"
+	icon_state = "kitchen"
+
+/area/janitor/site13/floor1/closet
+	name = "\improper Class D Custodial Closet"
+	icon_state = "janitor"
+
+/area/rnd/site13/floor1/library
+	name = "\improper Class D Library"
+	icon_state = "research"
+
+/area/security/site13/floor1/delivery
+	name = "\improper Class D Deliveries"
+	icon_state = "sec_prison"
+
+
+
