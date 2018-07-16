@@ -23,6 +23,9 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	desc = "" // I doubt this matters but just in case
 	layer = MOB_LAYER+0.1
 
+/obj/scp106_sprite_helper/CanMoveOnto(atom/movable/mover, turf/target, height=1.5, direction = 0)
+	return TRUE
+
 /obj/scp106_sprite_helper/Click(location,control,params)
 	if (vis_locs.len)
 		var/atom/A = vis_locs[1]
@@ -60,6 +63,14 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106/Move()
 	..()
+	update_stuff_PD()
+
+
+/mob/living/carbon/human/scp106/forceMove(destination)
+	. = ..(destination)
+	update_stuff_PD()
+
+/mob/living/carbon/human/scp106/proc/update_stuff_PD()
 
 	if (loc in GLOB.scp106_floors)
 		species.brute_mod = 0.0
@@ -236,7 +247,14 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	set category = "SCP"
 	set desc = "Exit your pocket dimension."
 	if (do_after(src, 30, get_turf(src)))
-		forceMove(pick(GLOB.simulated_turfs_scp106))
+		if (last_x != -1)
+			forceMove(locate(last_x, last_y, last_z))
+			last_x = -1
+			last_y = -1
+			last_z = -1
+		else
+			forceMove(pick(GLOB.simulated_turfs_scp106))
+		verbs -= /mob/living/carbon/human/scp106/proc/go_back
 		verbs -= /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
 		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 
