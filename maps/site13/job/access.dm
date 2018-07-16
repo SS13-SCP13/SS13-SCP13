@@ -7,31 +7,31 @@
 /var/const/access_mtflvl1 = 300
 /datum/access/mtflvl1
 	id = access_mtflvl1
-	desc = "Security Level 1"
+	desc = "MTF Level 1"
 	access_type = ACCESS_REGION_SECURITY
 
 /var/const/access_mtflvl2 = 301
 /datum/access/mtflvl2
 	id = access_mtflvl2
-	desc = "Security Level 2"
+	desc = "MTF Level 2"
 	access_type = ACCESS_REGION_SECURITY
 
 /var/const/access_mtflvl3 = 302
 /datum/access/mtflvl3
 	id = access_mtflvl3
-	desc = "Security Level 3"
+	desc = "MTF Level 3"
 	access_type = ACCESS_REGION_SECURITY
 
 /var/const/access_mtflvl4 = 303
 /datum/access/mtflvl4
 	id = access_mtflvl4
-	desc = "Security Level 4"
+	desc = "MTF Level 4"
 	access_type = ACCESS_REGION_SECURITY
 
 /var/const/access_mtflvl5 = 304
 /datum/access/mtflvl5
 	id = access_mtflvl5
-	desc = "Security Level 5"
+	desc = "MTF Level 5"
 	access_type = ACCESS_REGION_SECURITY
 
 // SCIENCE
@@ -97,3 +97,36 @@
 	id = access_adminlvl5
 	desc = "Admin Level 5"
 	access_type = ACCESS_REGION_COMMAND
+
+// UTILITY
+/* AWAITING SPRITES */
+
+/var/const/access_utilitylvl1 = 600
+/datum/access/utilitylvl1
+	id = access_utilitylvl1
+	desc = "Utility Level 1"
+	access_type = ACCESS_REGION_GENERAL
+
+/var/const/access_utilitylvl2 = 601
+/datum/access/utilitylvl2
+	id = access_utilitylvl2
+	desc = "Utility Level 2"
+	access_type = ACCESS_REGION_GENERAL
+
+/var/const/access_utilitylvl3 = 602
+/datum/access/utilitylvl3
+	id = access_utilitylvl3
+	desc = "Utility Level 3"
+	access_type = ACCESS_REGION_GENERAL
+
+/var/const/access_utilitylvl4 = 603
+/datum/access/utilitylvl4
+	id = access_utilitylvl4
+	desc = "Utility Level 4"
+	access_type = ACCESS_REGION_GENERAL
+
+/var/const/access_utilitylvl5 = 604
+/datum/access/utilitylvl5
+	id = access_utilitylvl5
+	desc = "Utility Level 5"
+	access_type = ACCESS_REGION_GENERAL

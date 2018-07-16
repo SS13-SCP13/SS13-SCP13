@@ -163,3 +163,26 @@
 	lift_floor_name = "Lower Light Containment Zone"
 	lift_announce_str = "Arriving at Lower Light Containment Zone. Euclid and Safe SCP Containment."
 	base_turf = /turf/simulated/floor
+
+
+// NEW AREA'S.
+
+/area/ds90/uez/hallways
+	name = "\improper Upper Entrance Zone Hallways"
+	icon_state = "hallC1"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+
+/area/ds90/uez/aircloset
+	name = "\improper Air Closet"
+	icon_state = "firingrange"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+/area/ds90/uez/firecloset
+	name = "\improper Fire Closet"
+	icon_state = "firingrange"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+/area/ds90/uez/auxmonitoring
+	name = "\improper Auxiliary Monitoring Room"
+	icon_state = "checkpoint1"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
