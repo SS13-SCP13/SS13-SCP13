@@ -186,3 +186,53 @@
 	name = "\improper Auxiliary Monitoring Room"
 	icon_state = "checkpoint1"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+/area/ds90/uez/gatea
+	name = "\improper Gate A Elevator"
+	icon_state = "shuttlered"
+	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
+
+/area/ds90/uez/gatebsecuritypost
+	name = "\improper Gate B Security Post"
+	icon_state = "checkpoint1"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+/area/ds90/uez/gateb
+	name = "\improper Gate B"
+	icon_state = "shuttlered"
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
+
+/area/ds90/uez/gatebbunker
+	name = "\improper Gate B Bunker"
+	icon_state = "checkpoint1"
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
+
+/area/ds90/uez/uezlift2lez
+	name = "\improper Entrance Zone Elevator"
+	icon_state = "shuttlered"
+	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
+
+/area/ds90/uez/mcr
+	name = "\improper Main Control Room"
+	icon_state = "bridge"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
+/area/ds90/uez/armory
+	name = "\improper Entrance Zone Armory"
+	icon_state = "checkpoint1"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+/area/ds90/uez/maintenance
+	name = "Maintenance"
+	icon_state = "pmaint"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/ds90/uez/substation
+	name = "\improper Entrance Zone Substation"
+	icon_state = "hallF"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/ds90/uez/engineeringentry
+	name = "\improper Engineering Entrance"
+	icon_state = "engineering_foyer"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
