@@ -16,9 +16,8 @@
 					|| istype(tile, /turf/unsimulated/floor) \
 					|| (locate(/obj/structure/catwalk) in tile))
 
-/var/datum/controller/subsystem/minimap/SSminimap
 
-/datum/controller/subsystem/minimap
+SUBSYSTEM_DEF(minimap)
 	name = "Holomap"
 	flags = SS_NO_FIRE
 	init_order = INIT_ORDER_HOLOMAP
