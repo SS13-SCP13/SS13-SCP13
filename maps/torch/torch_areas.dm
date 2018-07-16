@@ -994,6 +994,7 @@
 /area/bridge
 	name = "\improper Bridge"
 	icon_state = "bridge"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/bridge/meeting_room
 	name = "\improper Heads of Staff Meeting Room"
