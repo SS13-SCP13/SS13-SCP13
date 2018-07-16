@@ -233,6 +233,7 @@
 /area/hallway/primary/firstdeck/center
 	name = "\improper First Deck Central Hallway"
 	icon_state = "hallC1"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/hallway/primary/firstdeck/aft
 	name = "\improper First Deck Aft Hallway"
@@ -993,6 +994,7 @@
 /area/bridge
 	name = "\improper Bridge"
 	icon_state = "bridge"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/bridge/meeting_room
 	name = "\improper Heads of Staff Meeting Room"
