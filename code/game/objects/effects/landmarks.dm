@@ -10,6 +10,8 @@
 
 /obj/effect/landmark/New()
 	..()
+	
+	GLOB.landmarks += src
 	tag = "landmark*[name]"
 
 	//TODO clean up this mess
@@ -79,7 +81,6 @@
 			delete_me = 1
 			return
 
-	GLOB.landmarks += src
 	return 1
 
 /obj/effect/landmark/proc/delete()
