@@ -74,7 +74,7 @@
 		client.hidden_mobs.Cut()
 		fov.dir = dir
 		if(fov.alpha)
-			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), viewers(10, src)))
+			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), oviewers(10, src)))
 				I = image("split", L)
 				I.override = TRUE
 				client.images += I
