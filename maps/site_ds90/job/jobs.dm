@@ -161,7 +161,7 @@
 		/datum/mil_rank/security/o2
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
 	minimal_access = list()
 
 /datum/job/brigofficer
@@ -187,7 +187,7 @@
 
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
 	minimal_access = list()
 
 // SECURITY
