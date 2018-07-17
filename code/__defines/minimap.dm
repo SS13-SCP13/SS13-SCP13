@@ -22,7 +22,7 @@
 #define HOLOMAP_AREACOLOR_ESCAPE      "#FF0000CC"
 #define HOLOMAP_AREACOLOR_DORMS       "#5bc1c199"
 // If someone can come up with a non-conflicting color for the lifts, please update this.
-#define HOLOMAP_AREACOLOR_LIFTS       null
+#define HOLOMAP_AREACOLOR_LIFTS       "	#FF8C00"
 
 // Handy defines to lookup the pixel offsets for this Z-level.  Cache these if you use them in a loop tho.
 //	 	Commenting these out for now. Replace if we ever datumize our maps.

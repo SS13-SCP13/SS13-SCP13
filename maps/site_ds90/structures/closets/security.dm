@@ -177,7 +177,8 @@
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/device/radio,
-		/obj/item/clothing/gloves/thick
+		/obj/item/clothing/gloves/thick,
+		/obj/item/weapon/storage/box/handcuffs
 	)
 
 /obj/structure/closet/secure_closet/mtf/commander
@@ -205,7 +206,8 @@
 		/obj/item/weapon/gun/projectile/automatic/tactical,
 		/obj/item/ammo_magazine/tac9mm,
 		/obj/item/ammo_magazine/tac9mm,
-		/obj/item/clothing/gloves/thick
+		/obj/item/clothing/gloves/thick,
+		/obj/item/weapon/storage/box/handcuffs
 	)
 
 /obj/structure/closet/secure_closet/mtf/nco
@@ -230,7 +232,8 @@
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/device/radio,
-		/obj/item/clothing/gloves/thick
+		/obj/item/clothing/gloves/thick,
+		/obj/item/weapon/storage/box/handcuffs
 	)
 
 /obj/structure/closet/secure_closet/mtf/co
@@ -258,7 +261,8 @@
 		/obj/item/weapon/gun/projectile/automatic/tactical,
 		/obj/item/ammo_magazine/tac9mm,
 		/obj/item/ammo_magazine/tac9mm,
-		/obj/item/clothing/gloves/thick
+		/obj/item/clothing/gloves/thick,
+		/obj/item/weapon/storage/box/handcuffs
 	)
 
 /obj/structure/closet/secure_closet/administration/facilityadmin

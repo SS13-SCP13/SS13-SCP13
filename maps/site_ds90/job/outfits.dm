@@ -138,6 +138,7 @@
 	uniform = /obj/item/clothing/under/scp/dclass
 	shoes = /obj/item/clothing/shoes/workboots
 	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/civ/classd/post_equip(var/mob/living/carbon/human/H)
 	..()
@@ -150,6 +151,7 @@
 	uniform = /obj/item/clothing/under/rank/janitor
 	shoes = /obj/item/clothing/shoes/workboots
 	l_pocket = /obj/item/device/radio
+	id_type = /obj/item/weapon/card/id/sciencelvl1
 
 
 
