@@ -89,7 +89,7 @@
 							from_objs += m
 
 				else if(text_starts_with(f, "/turf/space"))
-					for(var/m in GLOB.space_turfs)
+					for(var/turf/space/m in GLOB.turfs)
 						if(istype(m, f2))
 							from_objs += m
 

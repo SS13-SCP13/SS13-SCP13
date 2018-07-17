@@ -21,6 +21,8 @@ GLOBAL_LIST_EMPTY(lighting_corners)
 GLOBAL_LIST_EMPTY(lighting_overlays)
 GLOBAL_LIST_EMPTY(nano_modules)
 GLOBAL_LIST_EMPTY(singularities)
+GLOBAL_LIST_EMPTY(admin_datums)
+GLOBAL_LIST_EMPTY(cleanables)
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER)
 #define all_genders_text_list list("Male","Female","Plural","Neuter")
