@@ -43,8 +43,9 @@
 /mob/living/InCone(mob/center, dir = NORTH)
 	. = ..()
 
-	for (var/M in grabbed_by)
-		if (M == center)
+	for (var/grab in grabbed_by)
+		var/obj/item/grab/G = grab
+		if (G.assailant == center)
 			return FALSE
 	return .
 
