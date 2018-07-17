@@ -595,7 +595,7 @@ SCP-939 exhale minute traces of an aerosolized Class C amnestic, designated AMN-
 	name = "READ THIS FIRST!"
 	info = {"
 	<tt><center><b>
-	<h3>FOUNDATION SECURITY DIVISION</h3>
+	<h3>FOUNDATION SECURITY DIVISION</h3></b>
 	</center>
 <br>
 Congratulations, you're in charge of assignments today!
@@ -612,6 +612,8 @@ Congratulations, you're in charge of assignments today!
 <br>
 Steps to assign someone to work duty;
 <br>
+0. Remind all guards that work duty assignment requires them to update their access as well. Ask the Lieutenant to hand out assignments ASAP. Guard assignments go first. D-Cells may be unlocked after.
+<br>
 1. D-Class are allowed to cite their preference. This does not mean you have to grant them at you.
 <br>
 2. Ask for the ID Card of the D-Class, and assign the appropriate access. Only one work assignment per D-Class.
@@ -622,6 +624,9 @@ Steps to assign someone to work duty;
 <br>
 <br>
 <b>Once you are done with assigning D-Class, or the work assignments are full, close down the shutters and secure the Mastercard in the locker supplied next to your desk. The safe code is 15954. Failure to do this will result in immediate termination.</b>
+<br>
+<br>
+<b>Assigning additional access to yourself besides the Class D work assignments is noted, and logged in the secure logging system of this terminal. Termination will be instant.</b>
 <br>
 <br>
 Good luck on your shift! For further questions, please defer to your Cell Lieutenant. Return this piece of paper to the Guard Lieutenant, or stash it in the safe if one is not around.
