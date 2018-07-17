@@ -104,22 +104,22 @@
 /datum/access/dclasskitchen
 	id = access_dclasskitchen
 	desc = "D-Class Kitchen"
-	access_type = ACCESS_REGION_GENERAL
+	access_type = ACCESS_REGION_NONE
 
 /var/const/access_dclassbotany = 902
 /datum/access/dclassbotany
 	id = access_dclassbotany
 	desc = "D-Class Botany"
-	access_type = ACCESS_REGION_GENERAL
+	access_type = ACCESS_REGION_NONE
 
 /var/const/access_dclassmining = 903
 /datum/access/dclassmining
 	id = access_dclassmining
 	desc = "D-Class Mining"
-	access_type = ACCESS_REGION_GENERAL
+	access_type = ACCESS_REGION_NONE
 
 /var/const/access_dclassjanitorial = 904
 /datum/access/dclassjanitorial
 	id = access_dclassjanitorial
 	desc = "D-Class Janitorial"
-	access_type = ACCESS_REGION_GENERAL
+	access_type = ACCESS_REGION_NONE
