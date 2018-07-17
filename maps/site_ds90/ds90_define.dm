@@ -44,7 +44,7 @@
 
 	away_site_budget = 3
 
-	id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
+	id_hud_icons = 'maps/site_ds90/icons/assignment_hud.dmi'
 	lobby_screens = list("title","title2")
 /*
 /datum/map/torch/setup_map()
