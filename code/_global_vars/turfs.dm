@@ -1,0 +1,3 @@
+GLOBAL_LIST_EMPTY(turfs)
+GLOBAL_LIST_EMPTY(unsimulated_turfs)
+GLOBAL_LIST_EMPTY(simulated_turfs)

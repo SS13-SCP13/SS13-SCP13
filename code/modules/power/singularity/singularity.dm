@@ -45,8 +45,11 @@
 		if(singubeacon.active)
 			target = singubeacon
 			break
+			
+	GLOB.singularities += src 
 
 /obj/singularity/Destroy()
+	GLOB.singularities -= src 
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

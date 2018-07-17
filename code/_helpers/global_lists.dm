@@ -2,9 +2,13 @@
 //This is for procs to replace all the goddamn 'in world's that are chilling around the code
 
 GLOBAL_LIST_EMPTY(objs)
+GLOBAL_LIST_EMPTY(zones)
+GLOBAL_LIST_EMPTY(structures)
+GLOBAL_LIST_EMPTY(flora)
 GLOBAL_LIST_EMPTY(effects)
 GLOBAL_LIST_EMPTY(items)
 GLOBAL_LIST_EMPTY(devices)
+GLOBAL_LIST_EMPTY(cameras)
 GLOBAL_LIST_EMPTY(cables) // Index for all cables, so that powernets don't have to look through the entire world all the time
 GLOBAL_LIST_EMPTY(chemical_reactions) // list of all /datum/chemical_reaction datums. Used during chemical reactions
 GLOBAL_LIST_EMPTY(chemical_reagents) // list of all /datum/reagent datums indexed by reagent id. Used by chemistry stuff
@@ -15,6 +19,8 @@ GLOBAL_LIST_EMPTY(mechas) // list of all mechs. Used by hostile mobs target trac
 GLOBAL_LIST_EMPTY(jobs) // list of all jobstypes, minus borg and AI
 GLOBAL_LIST_EMPTY(lighting_corners)
 GLOBAL_LIST_EMPTY(lighting_overlays)
+GLOBAL_LIST_EMPTY(nano_modules)
+GLOBAL_LIST_EMPTY(singularities)
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER)
 #define all_genders_text_list list("Male","Female","Plural","Neuter")

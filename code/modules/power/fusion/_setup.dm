@@ -17,7 +17,7 @@
 		to_chat(usr, "Error: you are not an admin!")
 		return
 
-	if(!(locate(/obj/machinery/power/fusion_core/mapped) in SSmachines.machines))
+	if(!(locate(/obj/machinery/power/fusion_core/mapped) in SSmachines.machinery))
 		to_chat(usr, "This map is not appropriate for this verb.")
 		return
 

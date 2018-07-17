@@ -1070,7 +1070,7 @@ datum
 							for(var/mob/living/silicon/ai/M in C)
 								if(istype(M, /mob/living/silicon/ai) && M.stat != 2)
 									return 1
-						for(var/mob/living/silicon/ai/M in GLOB.silicons)
+						for(var/mob/living/silicon/ai/M in GLOB.silicon_mob_list)
 							if(istype(M.loc, /turf))
 								if(istype(get_area(M), /area/shuttle/escape))
 									return 1
@@ -1290,7 +1290,7 @@ datum
 							if(P.client && P.ready && P.mind!=owner)
 								n_p ++
 					else if (ticker.current_state == GAME_STATE_PLAYING)
-						for(var/mob/living/carbon/human/P in GLOB.humans)
+						for(var/mob/living/carbon/human/P in GLOB.human_mob_list)
 							if(P.client && !(P.mind in ticker.mode.changelings) && P.mind!=owner)
 								n_p ++
 					target_amount = min(target_amount, n_p)

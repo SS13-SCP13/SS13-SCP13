@@ -25,7 +25,7 @@ datum/unit_test/roundstart_cable_connectivity/start_test()
 	for(var/cable in GLOB.cables)
 		if(cable in found_cables)
 			continue
-		var/list/to_search = list(C)
+		var/list/to_search = list(cable)
 		var/list/searched = list()
 		while(to_search.len)
 			var/obj/structure/cable/next = to_search[to_search.len]

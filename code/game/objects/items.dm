@@ -108,7 +108,7 @@
 	GLOB.devices += src 
 	
 /obj/item/device/Destroy()
-	global.devices -= src 
+	GLOB.devices -= src 
 	return ..()
 
 //Checks if the item is being held by a mob, and if so, updates the held icons

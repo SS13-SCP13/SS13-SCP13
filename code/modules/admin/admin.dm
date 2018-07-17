@@ -29,7 +29,14 @@ var/global/floorIsLava = 0
 		if(check_rights(rights, 0, M))
 			to_chat(M, message)
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
-
+/datum/admins/New()
+	..()
+	GLOB.admin_datums += src 
+	
+/datum/admins/Destroy()
+	GLOB.admin_datums -= src 
+	return ..()
+	
 /datum/admins/proc/show_player_panel(var/mob/M in SSmobs.mob_list)
 	set category = "Admin"
 	set name = "Show Player Panel"

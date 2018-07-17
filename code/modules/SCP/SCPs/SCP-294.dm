@@ -33,7 +33,7 @@
 	var/product = null
 	var/mob/living/carbon/victim = null
 	var/input_reagent = lowertext(input("Enter the name of any liquid", "What would you like to drink?") as text)
-	for(var/mob/living/carbon/M in GLOB.carbons)
+	for(var/mob/living/carbon/M in GLOB.living_mob_list_)
 		if (lowertext(M.name) == input_reagent)
 			if (istype(M, /mob/living/carbon/))
 				victim = M

@@ -79,13 +79,14 @@
 	var/list/dirs_checked = list()
 
 	for(var/cable in GLOB.cables)
-		T = get_turf(C)
+		T = get_turf(cable)
 		cable_turfs |= T
 
 	for(T in cable_turfs)
 		var/bad_msg = "[ascii_red]--------------- [T.name] \[[T.x] / [T.y] / [T.z]\]"
 		dirs_checked.Cut()
-		for(C in T)
+		for(var/cable in T)
+			var/obj/structure/cable/C = cable 
 			wire_test_count++
 			var/combined_dir = "[C.d1]-[C.d2]"
 			if(combined_dir in dirs_checked)

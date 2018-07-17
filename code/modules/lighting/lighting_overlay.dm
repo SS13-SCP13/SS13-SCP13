@@ -35,7 +35,7 @@
 		if(no_update)
 			return
 		update_overlay()
-		GLOBAL.lighting_overlays += src 
+		GLOB.lighting_overlays += src 
 	else
 		qdel(src)
 

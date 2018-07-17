@@ -1,3 +1,11 @@
+/obj/structure/flora/New()
+	..()
+	GLOB.flora += src 
+	
+/obj/structure/flora/Destroy()
+	GLOB.flora -= src 
+	return ..()
+
 //trees
 /obj/structure/flora/tree
 	name = "tree"

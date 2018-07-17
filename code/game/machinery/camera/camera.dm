@@ -83,6 +83,8 @@
 			error("[src.name] in [get_area(src)]has errored. [src.network?"Empty network list":"Null network list"]")
 		ASSERT(src.network)
 		ASSERT(src.network.len > 0)
+		
+	GLOB.cameras += src 
 	..()
 
 /obj/machinery/camera/Initialize()
@@ -100,6 +102,7 @@
 
 
 /obj/machinery/camera/Destroy()
+	GLOB.cameras -= src 
 	deactivate(null, 0) //kick anyone viewing out
 	if(assembly)
 		qdel(assembly)

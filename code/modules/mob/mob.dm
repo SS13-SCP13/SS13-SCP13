@@ -1,5 +1,6 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
 	STOP_PROCESSING(SSmobs, src)
+	GLOB.mob_list -= src
 	GLOB.dead_mob_list_ -= src
 	GLOB.living_mob_list_ -= src
 	unset_machine()
@@ -45,6 +46,7 @@
 /mob/Initialize()
 	. = ..()
 	START_PROCESSING(SSmobs, src)
+	GLOB.mob_list += src 
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	if(!client)	return
