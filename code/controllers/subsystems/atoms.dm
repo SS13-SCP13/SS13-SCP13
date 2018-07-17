@@ -42,7 +42,8 @@ SUBSYSTEM_DEF(atoms)
 				CHECK_TICK
 	else
 		count = 0
-		for(var/atom/A in world)
+		for(var/atom in world)
+			var/atom/A = atom
 			if(!A.initialized)
 				InitAtom(A, mapload_arg)
 				++count

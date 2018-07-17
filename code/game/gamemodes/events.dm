@@ -67,7 +67,7 @@ var/hadevent    = 0
 /proc/high_radiation_event()
 
 /* // Haha, this is way too laggy. I'll keep the prison break though.
-	for(var/obj/machinery/light/L in world)
+	for(var/obj/machinery/light/L in SSmachines.machinery)
 		if(isNotStationLevel(L.z)) continue
 		L.flicker(50)
 
@@ -100,7 +100,7 @@ var/hadevent    = 0
 
 
 	var/list/area/areas = list()
-	for(var/area/A in world)
+	for(var/area/A in GLOB.areas)
 		if(istype(A, /area/security/prison) || istype(A, /area/security/brig))
 			areas += A
 
@@ -135,7 +135,7 @@ var/hadevent    = 0
 		world.log << "ERROR: Could not initate grey-tide. Unable find prison or brig area."
 
 /proc/carp_migration() // -- Darem
-	for(var/obj/effect/landmark/C in landmarks_list)
+	for(var/obj/effect/landmark/C in GLOB.landmarks)
 		if(C.name == "carpspawn")
 			new /mob/living/simple_animal/hostile/carp(C.loc)
 	//sleep(100)
@@ -151,7 +151,7 @@ var/hadevent    = 0
 
 		for(var/i=1,i<=lightsoutAmount,i++)
 			var/list/possibleEpicentres = list()
-			for(var/obj/effect/landmark/newEpicentre in landmarks_list)
+			for(var/obj/effect/landmark/newEpicentre in GLOB.landmarks)
 				if(newEpicentre.name == "lightsout" && !(newEpicentre in epicentreList))
 					possibleEpicentres += newEpicentre
 			if(possibleEpicentres.len)
@@ -295,7 +295,7 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 	spawn(0)
 		log_debug("Started processing APCs")
 
-		for (var/obj/machinery/power/apc/APC in world)
+		for (var/obj/machinery/power/apc/APC in SSmachines.machinery)
 			if(APC.z in station_levels)
 				APC.ion_act()
 				apcnum++
@@ -304,7 +304,7 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 	spawn(0)
 		log_debug("Started processing SMES")
 
-		for (var/obj/machinery/power/smes/SMES in world)
+		for (var/obj/machinery/power/smes/SMES in SSmachines.machinery)
 			if(SMES.z in station_levels)
 				SMES.ion_act()
 				smesnum++
@@ -313,7 +313,7 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 	spawn(0)
 		log_debug("Started processing AIRLOCKS")
 
-		for (var/obj/machinery/door/airlock/D in world)
+		for (var/obj/machinery/door/airlock/D in SSmachines.machinery)
 			if(D.z in station_levels)
 				//if(length(D.req_access) > 0 && !(12 in D.req_access)) //not counting general access and maintenance airlocks
 				airlocknum++
@@ -324,7 +324,7 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 	spawn(0)
 		log_debug("Started processing FIREDOORS")
 
-		for (var/obj/machinery/door/firedoor/D in world)
+		for (var/obj/machinery/door/firedoor/D in SSmachines.machinery)
 			if(D.z in station_levels)
 				firedoornum++;
 				spawn(0)

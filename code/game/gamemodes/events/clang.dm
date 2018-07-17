@@ -45,6 +45,7 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		walk(src, 0) // Because we might have called walk_towards, we must stop the walk loop or BYOND keeps an internal reference to us forever.
 		return ..()
 
+var/immovablerod_ref = null
 /proc/immovablerod()
 	var/startx = 0
 	var/starty = 0
@@ -88,7 +89,8 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		if(immrod.loc == end)
 			qdel(immrod)
 		sleep(10)
-	for(var/obj/effect/immovablerod/imm in world)
+	if (immovablerod_ref)
 		return
+	immovablerod_ref = immrod
 	sleep(50)
 	command_announcement.Announce("What the fuck was that?!", "General Alert")

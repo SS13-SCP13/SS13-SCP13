@@ -611,7 +611,7 @@ proc/GaussRandRound(var/sigma,var/roundto)
 		areatype = areatemp.type
 
 	var/list/areas = new/list()
-	for(var/area/N in world)
+	for(var/area/N in GLOB.areas)
 		if(istype(N, areatype)) areas += N
 	return areas
 
@@ -625,7 +625,7 @@ proc/GaussRandRound(var/sigma,var/roundto)
 		areatype = areatemp.type
 
 	var/list/atoms = new/list()
-	for(var/area/N in world)
+	for(var/area/N in GLOB.areas)
 		if(istype(N, areatype))
 			for(var/atom/A in N)
 				atoms += A

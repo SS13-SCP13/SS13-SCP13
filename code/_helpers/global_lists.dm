@@ -1,14 +1,17 @@
 //Since it didn't really belong in any other category, I'm putting this here
 //This is for procs to replace all the goddamn 'in world's that are chilling around the code
 
-var/global/list/cable_list = list()					//Index for all cables, so that powernets don't have to look through the entire world all the time
-var/global/list/chemical_reactions_list				//list of all /datum/chemical_reaction datums. Used during chemical reactions
-var/global/list/chemical_reagents_list				//list of all /datum/reagent datums indexed by reagent id. Used by chemistry stuff
-var/global/list/landmarks_list = list()				//list of all landmarks created
-var/global/list/surgery_steps = list()				//list of all surgery steps  |BS12
-var/global/list/side_effects = list()				//list of all medical sideeffects types by thier names |BS12
-var/global/list/mechas_list = list()				//list of all mechs. Used by hostile mobs target tracking.
-var/global/list/joblist = list()					//list of all jobstypes, minus borg and AI
+GLOBAL_LIST_EMPTY(items)
+GLOBAL_LIST_EMPTY(cables) // Index for all cables, so that powernets don't have to look through the entire world all the time
+GLOBAL_LIST_EMPTY(chemical_reactions) // list of all /datum/chemical_reaction datums. Used during chemical reactions
+GLOBAL_LIST_EMPTY(chemical_reagents) // list of all /datum/reagent datums indexed by reagent id. Used by chemistry stuff
+GLOBAL_LIST_EMPTY(landmarks) // list of all landmarks created
+GLOBAL_LIST_EMPTY(surgery_steps) // list of all surgery steps
+GLOBAL_LIST_EMPTY(side_effects) // list of all medical side effects types by their names
+GLOBAL_LIST_EMPTY(mechas) // list of all mechs. Used by hostile mobs target tracking.
+GLOBAL_LIST_EMPTY(jobs) // list of all jobstypes, minus borg and AI
+GLOBAL_LIST_EMPTY(lighting_corners)
+GLOBAL_LIST_EMPTY(lighting_overlays)
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER)
 #define all_genders_text_list list("Male","Female","Plural","Neuter")
@@ -135,7 +138,7 @@ var/global/list/string_slot_flags = list(
 	paths = typesof(/datum/surgery_step)-/datum/surgery_step
 	for(var/T in paths)
 		var/datum/surgery_step/S = new T
-		surgery_steps += S
+		GLOB.surgery_steps += S
 	sort_surgeries()
 
 	//List of job. I can't believe this was calculated multiple times per tick!
@@ -143,7 +146,7 @@ var/global/list/string_slot_flags = list(
 	paths -= exclude_jobs
 	for(var/T in paths)
 		var/datum/job/J = new T
-		joblist[J.title] = J
+		GLOB.jobs[J.title] = J
 
 	//Languages and species.
 	paths = typesof(/datum/language)-/datum/language
@@ -202,10 +205,10 @@ var/global/list/string_slot_flags = list(
 /* // Uncomment to debug chemical reaction list.
 /client/verb/debug_chemical_list()
 
-	for (var/reaction in chemical_reactions_list)
-		. += "chemical_reactions_list\[\"[reaction]\"\] = \"[chemical_reactions_list[reaction]]\"\n"
-		if(islist(chemical_reactions_list[reaction]))
-			var/list/L = chemical_reactions_list[reaction]
+	for (var/reaction in GLOB.chemical_reactions)
+		. += "GLOB.chemical_reactions\[\"[reaction]\"\] = \"[GLOB.chemical_reactions[reaction]]\"\n"
+		if(islist(GLOB.chemical_reactions[reaction]))
+			var/list/L = GLOB.chemical_reactions[reaction]
 			for(var/t in L)
 				. += "    has: [t]\n"
 	log_debug(.)

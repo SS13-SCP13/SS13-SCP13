@@ -21,7 +21,7 @@
 
 /obj/machinery/power/breakerbox/Destroy()
 	..()
-	for(var/datum/nano_module/rcon/R in world)
+	for(var/datum/nano_module/rcon/R in GLOB.nano_modules)
 		R.FindDevices()
 
 /obj/machinery/power/breakerbox/activated

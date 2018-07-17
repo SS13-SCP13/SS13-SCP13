@@ -39,7 +39,7 @@ Small, little HP, poisonous.
 				continue
 		L += a
 
-	for (var/obj/mecha/M in mechas_list)
+	for (var/obj/mecha/M in GLOB.mechas)
 		if (M.z == src.z && get_dist(src, M) <= dist)
 			L += M
 

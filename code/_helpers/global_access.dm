@@ -53,6 +53,8 @@
 			return global.SSmachines;
 		if("SSmapping")
 			return global.SSmapping;
+		if("SSminimap")
+			return global.SSminimap;
 		if("SSmobs")
 			return global.SSmobs;
 		if("SSobj")
@@ -93,8 +95,6 @@
 			return global._client_preferences_by_type;
 		if("account_hack_attempted")
 			return global.account_hack_attempted;
-		if("actor")
-//			return global.actor;
 		if("additional_antag_types")
 			return global.additional_antag_types;
 		if("admin_datums")
@@ -233,8 +233,6 @@
 			return global.bomb_set;
 		if("borers")
 			return global.borers;
-		if("cable_list")
-			return global.cable_list;
 		if("cached_icons")
 			return global.cached_icons;
 		if("cached_space")
@@ -265,8 +263,6 @@
 			return global.checked_for_inactives;
 		if("chemical_reaction_logs")
 			return global.chemical_reaction_logs;
-		if("chemical_reactions_list")
-			return global.chemical_reactions_list;
 		if("chicken_count")
 			return global.chicken_count;
 		if("church_name")
@@ -501,12 +497,8 @@
 			return global.jobban_keylist;
 		if("jobban_runonce")
 			return global.jobban_runonce;
-		if("joblist")
-			return global.joblist;
 		if("join_motd")
 			return global.join_motd;
-		if("landmarks_list")
-			return global.landmarks_list;
 		if("language_keys")
 			return global.language_keys;
 		if("last_chew")
@@ -581,8 +573,6 @@
 			return global.matchmaker;
 		if("maze_cell_count")
 			return global.maze_cell_count;
-		if("mechas_list")
-			return global.mechas_list;
 		if("mechtoys")
 			return global.mechtoys;
 		if("mercs")
@@ -823,8 +813,6 @@
 			return global.ship_engines;
 		if("shuttle_controller")
 			return global.shuttle_controller;
-		if("side_effects")
-			return global.side_effects;
 		if("skin_styles_female_list")
 			return global.skin_styles_female_list;
 		if("skipped_unit_tests")
@@ -887,8 +875,6 @@
 			return global.supply_drop;
 		if("supply_methods_")
 			return global.supply_methods_;
-		if("surgery_steps")
-			return global.surgery_steps;
 		if("swapmaps_byname")
 			return global.swapmaps_byname;
 		if("swapmaps_compiled_maxx")
@@ -1039,7 +1025,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-
+		
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ALL_ANTIGENS")
@@ -1094,6 +1080,8 @@
 			global.SSmachines=newval;
 		if("SSmapping")
 			global.SSmapping=newval;
+		if("SSminimap")
+			global.SSminimap=newval;
 		if("SSmobs")
 			global.SSmobs=newval;
 		if("SSobj")
@@ -1134,8 +1122,6 @@
 			global._client_preferences_by_type=newval;
 		if("account_hack_attempted")
 			global.account_hack_attempted=newval;
-		if("actor")
-//			global.actor=newval;
 		if("additional_antag_types")
 			global.additional_antag_types=newval;
 		if("admin_datums")
@@ -1274,8 +1260,6 @@
 			global.bomb_set=newval;
 		if("borers")
 			global.borers=newval;
-		if("cable_list")
-			global.cable_list=newval;
 		if("cached_icons")
 			global.cached_icons=newval;
 		if("cached_space")
@@ -1306,8 +1290,6 @@
 			global.checked_for_inactives=newval;
 		if("chemical_reaction_logs")
 			global.chemical_reaction_logs=newval;
-		if("chemical_reactions_list")
-			global.chemical_reactions_list=newval;
 		if("chicken_count")
 			global.chicken_count=newval;
 		if("church_name")
@@ -1542,12 +1524,8 @@
 			global.jobban_keylist=newval;
 		if("jobban_runonce")
 			global.jobban_runonce=newval;
-		if("joblist")
-			global.joblist=newval;
 		if("join_motd")
 			global.join_motd=newval;
-		if("landmarks_list")
-			global.landmarks_list=newval;
 		if("language_keys")
 			global.language_keys=newval;
 		if("last_chew")
@@ -1622,8 +1600,6 @@
 			global.matchmaker=newval;
 		if("maze_cell_count")
 			global.maze_cell_count=newval;
-		if("mechas_list")
-			global.mechas_list=newval;
 		if("mechtoys")
 			global.mechtoys=newval;
 		if("mercs")
@@ -1864,8 +1840,6 @@
 			global.ship_engines=newval;
 		if("shuttle_controller")
 			global.shuttle_controller=newval;
-		if("side_effects")
-			global.side_effects=newval;
 		if("skin_styles_female_list")
 			global.skin_styles_female_list=newval;
 		if("skipped_unit_tests")
@@ -1928,8 +1902,6 @@
 			global.supply_drop=newval;
 		if("supply_methods_")
 			global.supply_methods_=newval;
-		if("surgery_steps")
-			global.surgery_steps=newval;
 		if("swapmaps_byname")
 			global.swapmaps_byname=newval;
 		if("swapmaps_compiled_maxx")
@@ -2080,7 +2052,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-
+		
 /var/list/_all_globals=list(
 	"ALL_ANTIGENS",
 	"ANTAG_FREQS",
@@ -2108,6 +2080,7 @@
 	"SSlegacy",
 	"SSmachines",
 	"SSmapping",
+	"SSminimap",
 	"SSmobs",
 	"SSobj",
 	"SSopen_space",
@@ -2128,7 +2101,6 @@
 	"_client_preferences_by_key",
 	"_client_preferences_by_type",
 	"account_hack_attempted",
-	"actor",
 	"additional_antag_types",
 	"admin_datums",
 	"admin_pm_repository",
@@ -2198,7 +2170,6 @@
 	"blocked",
 	"bomb_set",
 	"borers",
-	"cable_list",
 	"cached_icons",
 	"cached_space",
 	"camera_alarm",
@@ -2214,7 +2185,6 @@
 	"chargen_robolimbs",
 	"checked_for_inactives",
 	"chemical_reaction_logs",
-	"chemical_reactions_list",
 	"chicken_count",
 	"church_name",
 	"client_preference_stats_",
@@ -2332,9 +2302,7 @@
 	"job_master",
 	"jobban_keylist",
 	"jobban_runonce",
-	"joblist",
 	"join_motd",
-	"landmarks_list",
 	"language_keys",
 	"last_chew",
 	"last_message_id",
@@ -2372,7 +2340,6 @@
 	"master_mode",
 	"matchmaker",
 	"maze_cell_count",
-	"mechas_list",
 	"mechtoys",
 	"mercs",
 	"merged",
@@ -2493,7 +2460,6 @@
 	"severity_to_string",
 	"ship_engines",
 	"shuttle_controller",
-	"side_effects",
 	"skin_styles_female_list",
 	"skipped_unit_tests",
 	"slot_equipment_priority",
@@ -2525,7 +2491,6 @@
 	"supply_controller",
 	"supply_drop",
 	"supply_methods_",
-	"surgery_steps",
 	"swapmaps_byname",
 	"swapmaps_compiled_maxx",
 	"swapmaps_compiled_maxy",

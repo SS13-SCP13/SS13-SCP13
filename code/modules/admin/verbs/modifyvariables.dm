@@ -42,7 +42,7 @@
 			var_value = input("Select reference:","Reference") as null|mob|obj|turf|area in world
 
 		if("mob reference")
-			var_value = input("Select reference:","Reference") as null|mob in world
+			var_value = input("Select reference:","Reference") as null|mob in GLOB.mobs
 
 		if("file")
 			var_value = input("Pick file:","File") as null|file
@@ -95,7 +95,7 @@
 			var_value = input("Select reference:","Reference") as mob|obj|turf|area in world
 
 		if("mob reference")
-			var_value = input("Select reference:","Reference") as mob in world
+			var_value = input("Select reference:","Reference") as mob in GLOB.mobs
 
 		if("file")
 			var_value = input("Pick file:","File") as file
@@ -300,7 +300,7 @@
 				L[L.Find(variable)] = new_var
 
 		if("mob reference")
-			new_var = input("Select reference:","Reference") as mob in world
+			new_var = input("Select reference:","Reference") as mob in GLOB.mobs
 			if(assoc)
 				L[assoc_key] = new_var
 			else
@@ -543,7 +543,7 @@
 			var_value = var_new
 
 		if("mob reference")
-			var/var_new = input("Select reference:","Reference",O.get_variable_value(variable)) as null|mob in world
+			var/var_new = input("Select reference:","Reference",O.get_variable_value(variable)) as null|mob in GLOB.mobs
 			if(var_new==null) return
 			var_value = var_new
 

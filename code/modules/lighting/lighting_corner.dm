@@ -80,6 +80,12 @@
 		T.corners[i] = src
 
 	update_active()
+	
+	GLOB.lighting_corners += src
+	
+/datum/lighting_corner/Destroy()
+	GLOB.lighting_corners -= src 
+	return ..()
 
 /datum/lighting_corner/proc/update_active()
 	active = FALSE

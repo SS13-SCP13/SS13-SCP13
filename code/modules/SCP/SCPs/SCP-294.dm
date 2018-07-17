@@ -33,7 +33,7 @@
 	var/product = null
 	var/mob/living/carbon/victim = null
 	var/input_reagent = lowertext(input("Enter the name of any liquid", "What would you like to drink?") as text)
-	for(var/mob/living/carbon/M in world)
+	for(var/mob/living/carbon/M in GLOB.carbons)
 		if (lowertext(M.name) == input_reagent)
 			if (istype(M, /mob/living/carbon/))
 				victim = M
@@ -60,17 +60,15 @@
 	else
 		visible_message("<span class='notice'>[src]'s OUT OF RANGE light flashes rapidly.</span>")
 
-
-
 /obj/machinery/scp294/proc/find_reagent(input)
 	. = FALSE
-	if(chemical_reagents_list[input])
-		var/datum/reagent/R = chemical_reagents_list[input]
+	if(GLOB.chemical_reagents[input])
+		var/datum/reagent/R = GLOB.chemical_reagents[input]
 		if(R)
 			return R.type
 	else
-		for(var/X in chemical_reagents_list)
-			var/datum/reagent/R = chemical_reagents_list[X]
+		for(var/X in GLOB.chemical_reagents)
+			var/datum/reagent/R = GLOB.chemical_reagents[X]
 			if(R && input == replacetext(lowertext(R.name), " ", ""))
 				return R.type
 			else if(R && input == replacetext(capitalize(R.name), " ", ""))

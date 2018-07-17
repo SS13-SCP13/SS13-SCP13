@@ -86,8 +86,10 @@
 	if(randpixel && (!pixel_x && !pixel_y) && isturf(loc)) //hopefully this will prevent us from messing with mapper-set pixel_x/y
 		pixel_x = rand(-randpixel, randpixel)
 		pixel_y = rand(-randpixel, randpixel)
+	GLOB.items += src 
 
 /obj/item/Destroy()
+	GLOB.items -= src 
 	qdel(hidden_uplink)
 	hidden_uplink = null
 	if(ismob(loc))
@@ -572,7 +574,7 @@ var/list/global/slot_flags_enumeration = list(
 	I.Blend(new /icon('icons/effects/blood.dmi', "itemblood"),ICON_MULTIPLY) //adds blood and the remaining white areas become transparant
 
 	//not sure if this is worth it. It attaches the blood_overlay to every item of the same type if they don't have one already made.
-	for(var/obj/item/A in world)
+	for(var/obj/item/A in GLOB.items)
 		if(A.type == type && !A.blood_overlay)
 			A.blood_overlay = image(I)
 

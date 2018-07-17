@@ -1070,11 +1070,11 @@ datum
 							for(var/mob/living/silicon/ai/M in C)
 								if(istype(M, /mob/living/silicon/ai) && M.stat != 2)
 									return 1
-						for(var/mob/living/silicon/ai/M in world)
+						for(var/mob/living/silicon/ai/M in GLOB.silicons)
 							if(istype(M.loc, /turf))
 								if(istype(get_area(M), /area/shuttle/escape))
 									return 1
-						for(var/obj/structure/AIcore/M in world)
+						for(var/obj/structure/AIcore/M in GLOB.structures)
 							if(istype(M.loc, /turf) && M.state == 4)
 								if(istype(get_area(M), /area/shuttle/escape))
 									return 1
@@ -1236,7 +1236,7 @@ datum
 					return 0
 				var/area/shuttle = locate(/area/shuttle/escape/centcom)
 				var/protected_mobs[] = list(/mob/living/silicon/ai, /mob/living/silicon/pai, /mob/living/silicon/robot)
-				for(var/mob/living/player in world)
+				for(var/mob/living/player in GLOB.living_mobs)
 					if(player.type in protected_mobs)	continue
 					if (player.mind)
 						if (player.stat != 2)
@@ -1286,11 +1286,11 @@ datum
 				if (ticker)
 					var/n_p = 1 //autowin
 					if (ticker.current_state == GAME_STATE_SETTING_UP)
-						for(var/mob/new_player/P in world)
+						for(var/mob/new_player/P in GLOB.new_players)
 							if(P.client && P.ready && P.mind!=owner)
 								n_p ++
 					else if (ticker.current_state == GAME_STATE_PLAYING)
-						for(var/mob/living/carbon/human/P in world)
+						for(var/mob/living/carbon/human/P in GLOB.humans)
 							if(P.client && !(P.mind in ticker.mode.changelings) && P.mind!=owner)
 								n_p ++
 					target_amount = min(target_amount, n_p)
@@ -1464,7 +1464,7 @@ datum/objective/silence
 		var/area/pod3 =    locate(/area/shuttle/escape_pod3/centcom)
 		var/area/pod4 =    locate(/area/shuttle/escape_pod5/centcom)
 
-		for(var/mob/living/player in world)
+		for(var/mob/living/player in GLOB.living_mobs)
 			if (player == owner.current)
 				continue
 			if (player.mind)

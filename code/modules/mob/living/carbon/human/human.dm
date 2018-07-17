@@ -780,10 +780,8 @@
 	if(!(mRemotetalk in src.mutations))
 		src.verbs -= /mob/living/carbon/human/proc/remotesay
 		return
-	var/list/creatures = list()
-	for(var/mob/living/carbon/h in world)
-		creatures += h
-	var/mob/target = input("Who do you want to project your mind to ?") as null|anything in creatures
+
+	var/mob/target = input("Who do you want to project your mind to?") as null|anything in GLOB.humans
 	if (isnull(target))
 		return
 
@@ -794,7 +792,7 @@
 		target.show_message("<span class='notice'>You hear a voice that seems to echo around the room: [say]</span>")
 	usr.show_message("<span class='notice'>You project your mind into [target.real_name]: [say]</span>")
 	log_say("[key_name(usr)] sent a telepathic message to [key_name(target)]: [say]")
-	for(var/mob/observer/ghost/G in world)
+	for(var/mob/observer/ghost/G in GLOB.observers)
 		G.show_message("<i>Telepathic message from <b>[src]</b> to <b>[target]</b>: [say]</i>")
 
 /mob/living/carbon/human/proc/remoteobserve()
@@ -819,11 +817,11 @@
 
 	var/list/mob/creatures = list()
 
-	for(var/mob/living/carbon/h in world)
-		var/turf/temp_turf = get_turf(h)
-		if((temp_turf.z != 1 && temp_turf.z != 5) || h.stat!=CONSCIOUS) //Not on mining or the station. Or dead
+	for(var/H in GLOB.humans)
+		var/turf/temp_turf = get_turf(H)
+		if(!temp_turf || (temp_turf.z != 1 && temp_turf.z != 5) || H.stat != CONSCIOUS) //Not on mining or the station. Or dead
 			continue
-		creatures += h
+		creatures += H
 
 	var/mob/target = input ("Who do you want to project your mind to ?") as mob in creatures
 
@@ -858,7 +856,7 @@
 	restore_all_organs()       // Reapply robotics/amputated status from preferences.
 
 	if(!client || !key) //Don't boot out anyone already in the mob.
-		for (var/obj/item/organ/internal/brain/H in world)
+		for (var/obj/item/organ/internal/brain/H in GLOB.items)
 			if(H.brainmob)
 				if(H.brainmob.real_name == src.real_name)
 					if(H.brainmob.mind)

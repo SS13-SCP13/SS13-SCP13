@@ -22,8 +22,8 @@ datum/unit_test/roundstart_cable_connectivity/start_test()
 	var/list/found_cables = list()
 
 	//there is a cable list, but for testing purposes we search every cable in the world
-	for(var/obj/structure/cable/C in world)
-		if(C in found_cables)
+	for(var/cable in GLOB.cables)
+		if(cable in found_cables)
 			continue
 		var/list/to_search = list(C)
 		var/list/searched = list()
@@ -54,7 +54,7 @@ datum/unit_test/roundstart_cable_connectivity/start_test()
 
 /datum/unit_test/areas_apc_uniqueness/start_test()
 	var/failure = ""
-	for(var/area/A in world)
+	for(var/area/A in GLOB.areas)
 		var/obj/machinery/power/apc/found_apc = null
 		for(var/obj/machinery/power/apc/APC in A)
 			if(!found_apc)

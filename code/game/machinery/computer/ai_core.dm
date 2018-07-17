@@ -272,7 +272,7 @@
 	set category = "Admin"
 
 	var/list/cores = list()
-	for(var/obj/structure/AIcore/deactivated/D in world)
+	for(var/obj/structure/AIcore/deactivated/D in GLOB.structures)
 		cores["[D] ([D.loc.loc])"] = D
 
 	var/id = input("Which core?", "Toggle AI Core Latejoin", null) as null|anything in cores

@@ -13,13 +13,12 @@ GLOBAL_DATUM_INIT(temp_reagents_holder, /obj, new)
 	src.my_atom = my_atom
 	src.maximum_volume = maximum_volume
 	//I dislike having these here but map-objects are initialised before world/New() is called. >_>
-	if(!chemical_reagents_list)
+	if(!GLOB.chemical_reagents.len)
 		//Chemical Reagents - Initialises all /datum/reagent into a list indexed by reagent id
 		var/paths = typesof(/datum/reagent) - /datum/reagent
-		chemical_reagents_list = list()
 		for(var/path in paths)
 			var/datum/reagent/D = new path()
-			chemical_reagents_list[D.name] = D
+			GLOB.chemical_reagents[D.name] = D
 
 /datum/reagents/Destroy()
 	. = ..()
@@ -85,7 +84,7 @@ GLOBAL_DATUM_INIT(temp_reagents_holder, /obj, new)
 	var/list/datum/chemical_reaction/eligible_reactions = list()
 
 	for(var/datum/reagent/R in reagent_list)
-		eligible_reactions |= chemical_reactions_list[R.type]
+		eligible_reactions |= GLOB.chemical_reactions[R.type]
 
 	var/list/datum/chemical_reaction/active_reactions = list()
 

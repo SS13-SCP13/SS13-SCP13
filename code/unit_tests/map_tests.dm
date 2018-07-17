@@ -18,7 +18,7 @@
 	var/list/bad_areas = list()
 	var/area_test_count = 0
 
-	for(var/area/A in world)
+	for(var/area/A in GLOB.areas)
 		if(!A.z)
 			continue
 		if(!isPlayerLevel(A.z))
@@ -75,13 +75,12 @@
 	var/wire_test_count = 0
 	var/bad_tests = 0
 	var/turf/T = null
-	var/obj/structure/cable/C = null
 	var/list/cable_turfs = list()
 	var/list/dirs_checked = list()
 
-	for(C in world)
+	for(var/cable in GLOB.cables)
 		T = get_turf(C)
-		cable_turfs |= get_turf(C)
+		cable_turfs |= T
 
 	for(T in cable_turfs)
 		var/bad_msg = "[ascii_red]--------------- [T.name] \[[T.x] / [T.y] / [T.z]\]"
@@ -109,7 +108,8 @@
 /datum/unit_test/wire_dir_and_icon_stat/start_test()
 	var/list/bad_cables = list()
 
-	for(var/obj/structure/cable/C in world)
+	for(var/cable in GLOB.cables)
+		var/obj/structure/cable/C = cable
 		var/expected_icon_state = "[C.d1]-[C.d2]"
 		if(C.icon_state != expected_icon_state)
 			bad_cables |= C
@@ -133,7 +133,7 @@
 /datum/unit_test/closet_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/structure/closet/C in world)
+	for(var/obj/structure/closet/C in GLOB.structures)
 		if(!C.opened && isPlayerLevel(C.z))
 			var/total_content_size = 0
 			for(var/atom/movable/AM in C.contents)
@@ -157,7 +157,7 @@
 /datum/unit_test/closet_containment_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/structure/closet/C in world)
+	for(var/obj/structure/closet/C in GLOB.structures)
 		if(!C.opened && isPlayerLevel(C.z))
 			var/contents_pre_open = C.contents.Copy()
 			C.dump_contents()
@@ -186,7 +186,7 @@
 /datum/unit_test/storage_map_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/item/weapon/storage/S in world)
+	for(var/obj/item/weapon/storage/S in GLOB.items)
 		if(isPlayerLevel(S.z))
 			var/bad_msg = "[ascii_red]--------------- [S.name] \[[S.type]\] \[[S.x] / [S.y] / [S.z]\]"
 			bad_tests += test_storage_capacity(S, bad_msg)
@@ -300,7 +300,7 @@ datum/unit_test/ladder_check/start_test()
 	var/safe_landmarks = 0
 	var/space_landmarks = 0
 
-	for(var/lm in landmarks_list)
+	for(var/lm in GLOB.landmarks)
 		var/obj/effect/landmark/landmark = lm
 		if(istype(landmark, /obj/effect/landmark/test/safe_turf))
 			log_debug("Safe landmark found: [log_info_line(landmark)]")
@@ -355,7 +355,7 @@ datum/unit_test/ladder_check/start_test()
 /datum/unit_test/camera_nil_c_tag_check/start_test()
 	var/pass = TRUE
 
-	for(var/obj/machinery/camera/C in world)
+	for(var/obj/machinery/camera/C in GLOB.cameras)
 		if(!C.c_tag)
 			log_bad("Following camera does not have a c_tag set: [log_info_line(C)]")
 			pass = FALSE
@@ -376,7 +376,7 @@ datum/unit_test/ladder_check/start_test()
 	var/cameras_by_ctag = list()
 	var/checked_cameras = 0
 
-	for(var/obj/machinery/camera/C in world)
+	for(var/obj/machinery/camera/C in GLOB.cameras)
 		if(!C.c_tag)
 			continue
 		checked_cameras++
@@ -411,7 +411,7 @@ datum/unit_test/ladder_check/start_test()
 		num2text(SOUTH) = list(list(SOUTH, list(NORTH, WEST)), list(EAST,  list(NORTH, EAST))),
 		num2text(WEST)  = list(list(EAST,  list(NORTH, EAST)), list(SOUTH, list(SOUTH, EAST))))
 
-	for(var/obj/structure/disposalpipe/segment/D in world)
+	for(var/obj/structure/disposalpipe/segment/D in GLOB.structures)
 		if(D.icon_state == "pipe-s")
 			if(!(D.dir == SOUTH || D.dir == EAST))
 				log_bad("Following disposal pipe has an invalid direction set: [log_info_line(D)]")

@@ -19,7 +19,7 @@
 	var/datum/shuttle/S = shuttle_controller.shuttles[shuttle_tag]
 
 	var/list/destinations = list()
-	for(var/obj/effect/shuttle_landmark/WP in world)
+	for(var/obj/effect/shuttle_landmark/WP in GLOB.effects)
 		destinations += WP
 
 	var/obj/effect/shuttle_landmark/destination = input(user, "Select the destination.") as null|anything in destinations

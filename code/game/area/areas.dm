@@ -1,5 +1,5 @@
 // Areas.dm
-
+GLOBAL_LIST_EMPTY(areas)
 
 
 // ===
@@ -22,6 +22,8 @@
 		luminosity = 0
 	else
 		luminosity = 1
+		
+	GLOB.areas += src
 
 	..()
 

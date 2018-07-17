@@ -94,7 +94,7 @@ datum/unit_test/proc/check_result()
 
 datum/unit_test/proc/get_safe_turf()
 	if(!safe_landmark)
-		for(var/landmark in landmarks_list)
+		for(var/landmark in GLOB.landmarks)
 			if(istype(landmark, /obj/effect/landmark/test/safe_turf))
 				safe_landmark = landmark
 				break
@@ -102,7 +102,7 @@ datum/unit_test/proc/get_safe_turf()
 
 datum/unit_test/proc/get_space_turf()
 	if(!space_landmark)
-		for(var/landmark in landmarks_list)
+		for(var/landmark in GLOB.landmarks)
 			if(istype(landmark, /obj/effect/landmark/test/space_turf))
 				space_landmark = landmark
 				break
