@@ -103,6 +103,14 @@
 /obj/item/device
 	icon = 'icons/obj/device.dmi'
 
+/obj/item/device/New()
+	..()
+	GLOB.devices += src 
+	
+/obj/item/device/Destroy()
+	global.devices -= src 
+	return ..()
+
 //Checks if the item is being held by a mob, and if so, updates the held icons
 /obj/item/proc/update_twohanding()
 	update_held_icon()

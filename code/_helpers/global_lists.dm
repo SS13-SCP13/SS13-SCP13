@@ -1,7 +1,10 @@
 //Since it didn't really belong in any other category, I'm putting this here
 //This is for procs to replace all the goddamn 'in world's that are chilling around the code
 
+GLOBAL_LIST_EMPTY(objs)
+GLOBAL_LIST_EMPTY(effects)
 GLOBAL_LIST_EMPTY(items)
+GLOBAL_LIST_EMPTY(devices)
 GLOBAL_LIST_EMPTY(cables) // Index for all cables, so that powernets don't have to look through the entire world all the time
 GLOBAL_LIST_EMPTY(chemical_reactions) // list of all /datum/chemical_reaction datums. Used during chemical reactions
 GLOBAL_LIST_EMPTY(chemical_reagents) // list of all /datum/reagent datums indexed by reagent id. Used by chemistry stuff

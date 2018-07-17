@@ -5,6 +5,13 @@ it needs to create more trails.A beaker could have a steam_trail_follow system s
 would spawn and follow the beaker, even if it is carried or thrown.
 */
 
+/obj/effect/New()
+	..()
+	GLOB.effects += src 
+	
+/obj/effect/Destroy()
+	GLOB.effects -= src 
+	return ..()
 
 /obj/effect/effect
 	name = "effect"
@@ -12,7 +19,7 @@ would spawn and follow the beaker, even if it is carried or thrown.
 	mouse_opacity = 0
 	unacidable = 1//So effect are not targeted by alien acid.
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GRILLE
-
+	
 /datum/effect/effect/system
 	var/number = 3
 	var/cardinals = 0

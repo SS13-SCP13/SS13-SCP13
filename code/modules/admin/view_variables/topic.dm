@@ -184,10 +184,10 @@
 			if("Strict type")
 				var/i = 0
 				for(var/obj in GLOB.objs)
-					var/obj/O = obj
-					if(O.type == O_type)
+					var/obj/A = obj
+					if(A.type == O_type)
 						i++
-						qdel(O)
+						qdel(A)
 				if(!i)
 					to_chat(usr, "No objects of this type exist")
 					return
