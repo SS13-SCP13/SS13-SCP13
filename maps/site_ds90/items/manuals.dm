@@ -43,14 +43,14 @@
 
 		"}
 
-/obj/item/weapon/book/manual/sol_sop
-	name = "Standard Operating Procedure"
-	desc = "SOP aboard the SEV Torch."
+/obj/item/weapon/book/manual/mil_sop
+	name = "Military Operating Procedure"
+	desc = "SOP in Site DS90."
 	icon_state = "booksolregs"
-	author = "The Sol Central Government"
+	author = "The Foundation"
 	title = "Standard Operating Procedure"
 
-/obj/item/weapon/book/manual/sol_sop/Initialize()
+/obj/item/weapon/book/manual/mil_sop/Initialize()
 	. = ..()
 	dat = {"
 
@@ -58,7 +58,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Standard_Operating_Procedure&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="http://wiki.scp13.site/index.php?title=Security/Military&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
