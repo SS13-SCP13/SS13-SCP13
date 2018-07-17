@@ -60,6 +60,7 @@ changes:
   - bugfix: "Fixed rank requirements for Cell Guard Lieutenant and Cell Guard respectively."
   - bugfix: "Fixed power issue with RnD checkpoint."
   - bugfix: "Fix a glitched wall in D-Cells."
+  - bugfix: "Fixed an issue in ore generation."
   - bugfix: "Fixes SCP-106 containment doors to allow level 4 Security access. Should be Containment Engineer and Chief Engineer."
   - bugfix: "Fixes the field for the RUST not appearing. Thanks to BayStation."
   - bugfix: "Fix issue with e-mails not spawning."
