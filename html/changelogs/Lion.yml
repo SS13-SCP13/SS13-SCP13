@@ -46,6 +46,7 @@ changes:
   - maptweak: "Added a small supply closet under the D-Class checkpoint."
   - maptweak: "Added shutters to D-Class work area's to avoid theft easier."
   - maptweak: "Added pepperspray and refillers to lockers."
+  - maptweak: "Added some more floor detail to the Upper EZ."
   - tweak: "Buffed numbers of Cell Guards to 7, as opposed to 4."
   - tweak: "Removed all old accesses from the ID Modification console. Replaced it with our own."
   - rscadd: "Added a D-Class body disposal. Rudimentary, but works."
