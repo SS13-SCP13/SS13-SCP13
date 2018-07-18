@@ -100,9 +100,9 @@ var/hadevent    = 0
 
 
 	var/list/area/areas = list()
-	for(var/area/A in GLOB.areas)
-		if(istype(A, /area/security/prison) || istype(A, /area/security/brig))
-			areas += A
+	for(var/area in GLOB.areas)
+		if(istype(area, /area/security/prison) || istype(area, /area/security/brig))
+			areas += area
 
 	if(areas && areas.len > 0)
 
@@ -135,7 +135,8 @@ var/hadevent    = 0
 		world.log << "ERROR: Could not initate grey-tide. Unable find prison or brig area."
 
 /proc/carp_migration() // -- Darem
-	for(var/obj/effect/landmark/C in GLOB.landmarks)
+	for(var/landmark in GLOB.landmarks)
+		var/obj/effect/landmark/C = landmark
 		if(C.name == "carpspawn")
 			new /mob/living/simple_animal/hostile/carp(C.loc)
 	//sleep(100)

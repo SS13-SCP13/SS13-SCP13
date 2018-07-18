@@ -13,7 +13,7 @@
 	GLOB.structures -= src
 	if(parts)
 		new parts(loc)
-	return ..()
+	. = ..()
 
 /obj/structure/attack_hand(mob/user)
 	..()

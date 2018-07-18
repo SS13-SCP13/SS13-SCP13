@@ -41,7 +41,8 @@
 
 
 /datum/event/prison_break/start()
-	for(var/area/A in GLOB.areas)
+	for(var/area in GLOB.areas)
+		var/area/A = area
 		if(is_type_in_list(A,areaType) && !is_type_in_list(A,areaNotType))
 			areas += A
 

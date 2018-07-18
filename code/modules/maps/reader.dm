@@ -333,7 +333,8 @@ GLOBAL_DATUM_INIT(_preloader, /dmm_suite/preloader, new)
 			GLOB._preloader.setup(attr)//preloader for assigning  set variables on atom creation
 		var/atype = members[index]
 		var/atom/instance
-		for(var/area/A in GLOB.areas)
+		for(var/area in GLOB.areas)
+			var/area/A = area
 			if(A.type == atype)
 				instance = A
 				break

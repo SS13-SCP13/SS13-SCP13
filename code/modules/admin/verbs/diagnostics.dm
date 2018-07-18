@@ -9,16 +9,15 @@
 	var/active_groups = SSair.active_zones
 	var/inactive_groups = SSair.zones.len - active_groups
 
-	var/hotspots = 0
-	for(var/obj/fire/hotspot in SSair.active_hotspots)
-		hotspots++
+	var/hotspots = SSair.active_hotspots.len
 
 	var/active_on_main_station = 0
 	var/inactive_on_main_station = 0
-	for(var/zone/zone in SSair.zones)
-		var/turf/simulated/turf = locate() in zone.contents
+	for(var/zone in SSair.zones)
+		var/zone/Z = zone
+		var/turf/simulated/turf = locate() in Z.contents
 		if(turf && turf.z in GLOB.using_map.station_levels)
-			if(zone.needs_update)
+			if(Z.needs_update)
 				active_on_main_station++
 			else
 				inactive_on_main_station++
@@ -48,7 +47,8 @@
 	var/largest_click_time = 0
 	var/mob/largest_move_mob = null
 	var/mob/largest_click_mob = null
-	for(var/mob/M in GLOB.mob_list)
+	for(var/mob in GLOB.mob_list)
+		var/mob/M = mob
 		if(!M.client)
 			continue
 		if(M.next_move >= largest_move_time)

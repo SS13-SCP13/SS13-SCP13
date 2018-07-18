@@ -54,7 +54,8 @@ datum/unit_test/roundstart_cable_connectivity/start_test()
 
 /datum/unit_test/areas_apc_uniqueness/start_test()
 	var/failure = ""
-	for(var/area/A in GLOB.areas)
+	for(var/area in GLOB.areas)
+		var/area/A = area
 		var/obj/machinery/power/apc/found_apc = null
 		for(var/obj/machinery/power/apc/APC in A)
 			if(!found_apc)

@@ -18,7 +18,8 @@
 	var/list/bad_areas = list()
 	var/area_test_count = 0
 
-	for(var/area/A in GLOB.areas)
+	for(var/area in GLOB.areas)
+		var/area/A = area
 		if(!A.z)
 			continue
 		if(!isPlayerLevel(A.z))
@@ -356,7 +357,8 @@ datum/unit_test/ladder_check/start_test()
 /datum/unit_test/camera_nil_c_tag_check/start_test()
 	var/pass = TRUE
 
-	for(var/obj/machinery/camera/C in GLOB.cameras)
+	for(var/camera in GLOB.cameras)
+		var/obj/machinery/camera/C = camera
 		if(!C.c_tag)
 			log_bad("Following camera does not have a c_tag set: [log_info_line(C)]")
 			pass = FALSE
@@ -377,7 +379,8 @@ datum/unit_test/ladder_check/start_test()
 	var/cameras_by_ctag = list()
 	var/checked_cameras = 0
 
-	for(var/obj/machinery/camera/C in GLOB.cameras)
+	for(var/camera in GLOB.cameras)
+		var/obj/machinery/camera/C = camera
 		if(!C.c_tag)
 			continue
 		checked_cameras++

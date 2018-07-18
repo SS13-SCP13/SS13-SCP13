@@ -87,7 +87,8 @@
 				continue
 			loc_landmark = sloc
 		if (!loc_landmark)
-			for(var/obj/effect/landmark/tripai in GLOB.landmarks)
+			for(var/landmark in GLOB.landmarks)
+				var/obj/effect/landmark/tripai = landmark
 				if (tripai.name == "tripai")
 					if((locate(/mob/living) in tripai.loc) || (locate(/obj/structure/AIcore) in tripai.loc))
 						continue

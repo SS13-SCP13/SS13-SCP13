@@ -121,7 +121,8 @@ var/global/list/additional_antag_types = list()
 
 	// I am very sure there's a better way to do this, but I'm not sure what it might be. ~Z
 	spawn(1)
-		for(var/datum/admins/admin in GLOB.admin_datums)
+		for(var/AD in GLOB.admin_datums)
+			var/datum/admins/admin = AD
 			if(usr.client == admin.owner)
 				admin.show_game_mode(usr)
 				return

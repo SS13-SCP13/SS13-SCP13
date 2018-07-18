@@ -42,11 +42,14 @@
 	gun_setting_icon = null
 	ability_master = null
 	zone_sel = null
+	
+/mob/New()
+	..()
+	GLOB.mob_list += src 
 
 /mob/Initialize()
 	. = ..()
 	START_PROCESSING(SSmobs, src)
-	GLOB.mob_list += src 
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	if(!client)	return

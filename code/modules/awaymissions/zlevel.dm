@@ -46,7 +46,8 @@ proc/createRandomZlevel()
 			load_new_z_level(file, "Away mission")
 			log_debug("away mission loaded: [map]")
 
-		for(var/obj/effect/landmark/L in GLOB.landmarks)
+		for(var/landmark in GLOB.landmarks)
+			var/obj/effect/landmark/L = landmark
 			if (L.name != "awaystart")
 				continue
 			GLOB.awaydestinations.Add(L)
