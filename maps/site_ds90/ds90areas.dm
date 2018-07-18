@@ -236,3 +236,7 @@
 	name = "\improper Engineering Entrance"
 	icon_state = "engineering_foyer"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/ds90/uez/janitor
+	name = "\improper Custodial Closet"
+	icon_state = "janitor"
