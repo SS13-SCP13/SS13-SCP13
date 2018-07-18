@@ -35,4 +35,4 @@ delete-after: True
 changes: 
   - maptweak: "Fixed CE blast doors, CE atmos, fixed the missing pipe in engineering, fixed missing atmos controller in nuke room."
   - maptweak: "Full Rework of the Entrance Zone map."
-  
+  - rscadd: "Added lockdown button and a key system"
