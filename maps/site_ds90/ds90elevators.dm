@@ -38,8 +38,9 @@
 	lift_size_y = 4
 
 	areas_to_use = list(
-		/area/turbolift/lowerentrance4,
-		/area/turbolift/hcz
+		/area/turbolift/hcz,
+		/area/turbolift/lowerentrance4
+
 		)
 
 /obj/turbolift_map_holder/scp049
