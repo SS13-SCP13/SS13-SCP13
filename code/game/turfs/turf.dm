@@ -41,10 +41,10 @@
 	else
 		luminosity = 1
 		
-	GLOB.turfs += src 
+	global.turf_list += src 
 
 /turf/Destroy()
-	GLOB.turfs -= src 
+	global.turf_list -= src 
 	remove_cleanables()
 	..()
 	return QDEL_HINT_IWILLGC

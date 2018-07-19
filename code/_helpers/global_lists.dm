@@ -1,7 +1,7 @@
 //Since it didn't really belong in any other category, I'm putting this here
 //This is for procs to replace all the goddamn 'in world's that are chilling around the code
 
-// New objects, mostly created at startup, get added to these lists. GLOB isn't used because it isn't available at startup.
+// New objects, mostly created at startup, get added to these lists. GLOB isn't used because it isn't always available at startup.
 var/global/list/obj_list = list()
 var/global/list/structure_list = list() 
 var/global/list/flora_list = list() 
@@ -23,6 +23,9 @@ var/global/list/nano_module_list = list()
 var/global/list/singularity_list = list() 
 var/global/list/admin_datums_by_value = list() // "admin_datums" is an associative list of "key" = /datum. This is just a list of datums.
 var/global/list/cleanable_decals_list = list() 
+var/global/list/turf_list = list()
+var/global/list/unsimulated_turf_list = list()
+var/global/list/simulated_turf_list = list()
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER)
 #define all_genders_text_list list("Male","Female","Plural","Neuter")

@@ -4,8 +4,8 @@
 	
 /turf/unsimulated/New()
 	..()
-	GLOB.unsimulated_turfs += src 
+	global.unsimulated_turf_list += src 
 	
 /turf/unsimulated/Destroy()
-	GLOB.unsimulated_turfs -= src 
+	global.unsimulated_turf_list -= src 
 	return ..()

@@ -89,7 +89,7 @@
 	log_ability_use(user, "reset camera", target)
 
 
-/datum/game_mode/malfunction/verb/emergency_forcefield(var/turf/T in GLOB.turfs)
+/datum/game_mode/malfunction/verb/emergency_forcefield(var/turf/T in global.turf_list)
 	set name = "Emergency Forcefield"
 	set desc = "275 CPU - Uses the emergency shielding system to create temporary barrier which lasts for few minutes, but won't resist gunfire."
 	set category = "Software"
