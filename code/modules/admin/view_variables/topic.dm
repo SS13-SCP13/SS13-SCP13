@@ -183,10 +183,11 @@
 		switch(action_type)
 			if("Strict type")
 				var/i = 0
-				for(var/obj/Obj in world)
-					if(Obj.type == O_type)
+				for(var/obj in global.obj_list)
+					var/obj/A = obj
+					if(A.type == O_type)
 						i++
-						qdel(Obj)
+						qdel(A)
 				if(!i)
 					to_chat(usr, "No objects of this type exist")
 					return
@@ -194,10 +195,10 @@
 				message_admins("<span class='notice'>[key_name(usr)] deleted all objects of type [O_type] ([i] objects deleted)</span>")
 			if("Type and subtypes")
 				var/i = 0
-				for(var/obj/Obj in world)
-					if(istype(Obj,O_type))
+				for(var/obj in global.obj_list)
+					if(istype(obj,O_type))
 						i++
-						qdel(Obj)
+						qdel(obj)
 				if(!i)
 					to_chat(usr, "No objects of this type exist")
 					return

@@ -4,8 +4,13 @@
 
 	var/breakable
 	var/parts
+	
+/obj/structure/New()
+	..()
+	global.structure_list += src 
 
 /obj/structure/Destroy()
+	global.structure_list -= src
 	if(parts)
 		new parts(loc)
 	. = ..()

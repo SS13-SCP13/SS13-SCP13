@@ -86,7 +86,7 @@
 	*/
 
 /obj/machinery/button/remote/airlock/trigger()
-	for(var/obj/machinery/door/airlock/D in world)
+	for(var/obj/machinery/door/airlock/D in SSmachines.machinery)
 		if(D.id_tag == src.id)
 			if(specialfunctions & OPEN)
 				if (D.density)
@@ -131,7 +131,7 @@
 	icon_state = "blastctrl"
 
 /obj/machinery/button/remote/blast_door/trigger()
-	for(var/obj/machinery/door/blast/M in world)
+	for(var/obj/machinery/door/blast/M in SSmachines.machinery)
 		if(M.id == src.id)
 			if(M.density)
 				spawn(0)
@@ -142,6 +142,143 @@
 					M.close()
 					return
 
+
+/*
+	Lockdown Control
+*/
+
+/obj/machinery/button/remote/blast_door/lockdown_blast_door
+	name = "remote lockdown control"
+	desc = "It controls the lockdown of zones, remotely."
+	icon_state = "lockctrl"
+	var/state = 0
+	var/zone ="put the zone name here"
+	var/antispam = 0
+	var/glass = 1
+	var/id2 = "none"
+/obj/machinery/button/remote/blast_door/lockdown_blast_door/trigger(mob/user as mob)
+	if(!glass)
+		if(!antispam)
+			for(var/obj/machinery/door/blast/M in world)
+				if(M.id == src.id)
+					if(M.density)
+						spawn(0)
+							M.open()
+							return
+					else
+						spawn(0)
+							M.close()
+							return
+			if(state == 0)
+				priority_announcement.Announce("Attention all personnel, [zone] has entered lockdown procedures. All security personnel are to enact security protocols.","Facility Alert, Lockdown Underway!",'sound/Ai/lockdown.ogg')
+				state = 1
+				antispam = 1
+				return
+
+
+			else
+				priority_announcement.Announce("Attention, [zone] has left lockdown procedures. All security personnel are to return to standard protocols.","Facility Alert, Lockdown Underway!")
+				state = 0
+				antispam = 1
+				return
+		else
+			to_chat(user, "<span class='warning'>Please wait a minute, system is rebooting!</span>")
+			spawn(600)
+				antispam = 0
+	else
+		to_chat(user, "<span class='warning'>Unlock the button first!</span>")
+obj/machinery/button/remote/blast_door/lockdown_blast_door/proc/glassremover()
+	glass = 0
+	return
+obj/machinery/button/remote/blast_door/lockdown_blast_door/proc/glassadder()
+	glass = 1
+	return
+/*
+	KEYHOLE FOR LOCKDOWN
+*/
+/obj/machinery/lockdownkeyhole/
+	name= "Lockdown Keyhole"
+	desc = "This is a hole for the lockdown key, this machine is used to open the lockdown button"
+	icon = 'icons/obj/stationobjs.dmi'
+	icon_state = "lockdownhole"
+	anchored = 1.0
+	use_power = 1
+	idle_power_usage = 2
+	active_power_usage = 4
+	var/obj/item/weapon/lockdownkey/rkey = 0
+	var/stateic = 0
+	var/ready = 0
+	var/id2 = "none"
+	var/undo = 0
+
+/obj/machinery/lockdownkeyhole/attackby(var/obj/item/W, var/mob/user)
+    if(istype(W, /obj/item/weapon/lockdownkey))
+        if(!rkey)
+            if(!user.unEquip(W))
+                to_chat(user, "<span class='warning'>You can't seem to drop \the [W]!</span>")
+                return
+            rkey = W
+            W.forceMove(src)
+            to_chat(user, "<span class='notice'>You insert \the [W] into \the [src].</span>")
+            update_holeicon()
+        else
+            to_chat(user, "<span class='warning'>\The [src] already has a key inserted.</span>")
+        return
+
+    return ..()
+
+/obj/machinery/lockdownkeyhole/AltClick(var/mob/user)
+    if(rkey)
+        rkey.dropInto(loc)
+        if(user)
+            to_chat(user, "<span class='notice'>You remove \the [rkey] from \the [src].</span>")
+            user.put_in_hands(rkey)
+        rkey = null
+        update_holeicon()
+
+/obj/machinery/lockdownkeyhole/attack_hand(var/mob/user)
+    if(rkey)
+        to_chat(user, "<span class='notice'>You turn the key!</span>")
+        icon_state = "lockdownholekr"
+        for(var/obj/machinery/button/remote/blast_door/lockdown_blast_door/M in SSmachines.machinery)
+            if(M.id2 == src.id2)
+                if(undo == 0)
+                    M.glassremover()
+                    undo = 1
+                    playsound(src.loc,'sound/effects/caution.ogg',50,1,5)
+                else
+                    M.glassadder()
+                    icon_state = "lockdownholek"
+                    undo = 0
+    else
+        to_chat(user, "<span class='warning'>There is no key in \the [src]!</span>")
+
+
+/obj/machinery/lockdownkeyhole/proc/update_holeicon()
+	if (stateic == 0)
+		icon_state = "lockdownholek"
+		stateic = 1
+	else
+		icon_state = "lockdownhole"
+		stateic = 0
+
+
+/*
+	KEYS FOR LOCKDOWN
+*/
+/obj/item/weapon/lockdownkey
+	desc = "This is a lockdown key used to open the lockdown button."
+	name = "Lockdown Key"
+	icon = 'icons/obj/items.dmi'
+	icon_state = "lockkey"
+	force = 2
+	throwforce = 5
+	throw_speed = 8
+	throw_range = 15
+	w_class = ITEM_SIZE_SMALL
+	attack_verb = list("cut", "pirced")
+
+
 /*
 	Emitter remote control
 */
@@ -150,7 +287,7 @@
 	desc = "It controls emitters, remotely."
 
 /obj/machinery/button/remote/emitter/trigger(mob/user as mob)
-	for(var/obj/machinery/power/emitter/E in world)
+	for(var/obj/machinery/power/emitter/E in SSmachines.machinery)
 		if(E.id == src.id)
 			spawn(0)
 				E.activate(user)

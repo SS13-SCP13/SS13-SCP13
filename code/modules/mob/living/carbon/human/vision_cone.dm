@@ -17,7 +17,7 @@
 	var/list/hidden_mobs = list()
 
 /atom/proc/InCone(atom/center, dir = NORTH)
-	if(get_dist(center, src) == 0)
+	if(!get_dist(center, src))
 		return FALSE
 
 	var/d = get_dir(center, src)
