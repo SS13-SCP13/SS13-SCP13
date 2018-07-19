@@ -34,7 +34,7 @@
 		log_debug("\The [src] given an unepxected req_one_access: [req_one_access]")
 
 	if(monitored_alarm_ids)
-		for(var/obj/machinery/alarm/alarm in SSmachines.machinery)
+		for(var/obj/machinery/alarm/alarm in SSmachines.all_machinery)
 			if(alarm.alarm_id && alarm.alarm_id in monitored_alarm_ids)
 				monitored_alarms += alarm
 		// machines may not yet be ordered at this point

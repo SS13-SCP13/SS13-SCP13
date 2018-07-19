@@ -200,11 +200,11 @@
 
 /obj/machinery/computer/turbine_computer/Initialize()
 	. = ..()
-	for(var/obj/machinery/compressor/C in SSmachines.machinery)
+	for(var/obj/machinery/compressor/C in SSmachines.all_machinery)
 		if(id == C.comp_id)
 			compressor = C
 	doors = new /list()
-	for(var/obj/machinery/door/blast/P in SSmachines.machinery)
+	for(var/obj/machinery/door/blast/P in SSmachines.all_machinery)
 		if(P.id == id)
 			doors += P
 
