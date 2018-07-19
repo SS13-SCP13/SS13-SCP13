@@ -50,6 +50,7 @@ SUBSYSTEM_DEF(machines)
 	var/list/machinery     = list()
 	var/list/powernets     = list()
 	var/list/power_objects = list()
+	var/list/all_machinery = list()
 
 	var/list/processing
 	var/list/current_run = list()

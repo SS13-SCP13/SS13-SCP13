@@ -86,7 +86,7 @@
 	*/
 
 /obj/machinery/button/remote/airlock/trigger()
-	for(var/obj/machinery/door/airlock/D in SSmachines.machinery)
+	for(var/obj/machinery/door/airlock/D in SSmachines.all_machinery)
 		if(D.id_tag == src.id)
 			if(specialfunctions & OPEN)
 				if (D.density)
@@ -131,7 +131,7 @@
 	icon_state = "blastctrl"
 
 /obj/machinery/button/remote/blast_door/trigger()
-	for(var/obj/machinery/door/blast/M in SSmachines.machinery)
+	for(var/obj/machinery/door/blast/M in SSmachines.all_machinery)
 		if(M.id == src.id)
 			if(M.density)
 				spawn(0)
@@ -240,7 +240,7 @@ obj/machinery/button/remote/blast_door/lockdown_blast_door/proc/glassadder()
     if(rkey)
         to_chat(user, "<span class='notice'>You turn the key!</span>")
         icon_state = "lockdownholekr"
-        for(var/obj/machinery/button/remote/blast_door/lockdown_blast_door/M in SSmachines.machinery)
+        for(var/obj/machinery/button/remote/blast_door/lockdown_blast_door/M in SSmachines.all_machinery)
             if(M.id2 == src.id2)
                 if(undo == 0)
                     M.glassremover()
@@ -287,7 +287,7 @@ obj/machinery/button/remote/blast_door/lockdown_blast_door/proc/glassadder()
 	desc = "It controls emitters, remotely."
 
 /obj/machinery/button/remote/emitter/trigger(mob/user as mob)
-	for(var/obj/machinery/power/emitter/E in SSmachines.machinery)
+	for(var/obj/machinery/power/emitter/E in SSmachines.all_machinery)
 		if(E.id == src.id)
 			spawn(0)
 				E.activate(user)
@@ -307,7 +307,7 @@ obj/machinery/button/remote/blast_door/lockdown_blast_door/proc/glassadder()
 	active = 1
 	update_icon()
 
-	for(var/obj/machinery/door/blast/M in SSmachines.machinery)
+	for(var/obj/machinery/door/blast/M in SSmachines.all_machinery)
 		if (M.id == src.id)
 			spawn( 0 )
 				M.open()
@@ -315,13 +315,13 @@ obj/machinery/button/remote/blast_door/lockdown_blast_door/proc/glassadder()
 
 	sleep(20)
 
-	for(var/obj/machinery/mass_driver/M in SSmachines.machinery)
+	for(var/obj/machinery/mass_driver/M in SSmachines.all_machinery)
 		if(M.id == src.id)
 			M.drive()
 
 	sleep(50)
 
-	for(var/obj/machinery/door/blast/M in SSmachines.machinery)
+	for(var/obj/machinery/door/blast/M in SSmachines.all_machinery)
 		if (M.id == src.id)
 			spawn(0)
 				M.close()
