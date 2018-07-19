@@ -31,10 +31,10 @@ var/global/floorIsLava = 0
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
 /datum/admins/New()
 	..()
-	GLOB.admin_datums += src 
+	global.admin_datums_by_value += src 
 	
 /datum/admins/Destroy()
-	GLOB.admin_datums -= src 
+	global.admin_datums_by_value -= src 
 	return ..()
 	
 /datum/admins/proc/show_player_panel(var/mob/M in SSmobs.mob_list)

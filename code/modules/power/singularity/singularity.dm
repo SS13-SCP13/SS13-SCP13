@@ -46,10 +46,10 @@
 			target = singubeacon
 			break
 			
-	GLOB.singularities += src 
+	global.singularity_list += src 
 
 /obj/singularity/Destroy()
-	GLOB.singularities -= src 
+	global.singularity_list -= src 
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

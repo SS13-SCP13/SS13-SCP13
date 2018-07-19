@@ -117,7 +117,7 @@
 	if(zone in M.op_stage.in_progress) //Can't operate on someone repeatedly.
 		to_chat(user, "<span class='warning'>You can't operate on this area while surgery is already in progress.</span>")
 		return 1
-	for(var/datum/surgery_step/S in GLOB.surgery_steps)
+	for(var/datum/surgery_step/S in global.surgery_step_list)
 		//check if tool is right or close enough and if this step is possible
 		if(S.tool_quality(src))
 			var/step_is_valid = S.can_use(user, M, zone, src)
@@ -143,7 +143,7 @@
 	return 0
 
 /proc/sort_surgeries()
-	var/gap = GLOB.surgery_steps.len
+	var/gap = global.surgery_step_list.len
 	var/swapped = 1
 	while (gap > 1 || swapped)
 		swapped = 0
@@ -151,11 +151,11 @@
 			gap = round(gap / 1.247330950103979)
 		if(gap < 1)
 			gap = 1
-		for(var/i = 1; gap + i <= GLOB.surgery_steps.len; i++)
-			var/datum/surgery_step/l = GLOB.surgery_steps[i]		//Fucking hate
-			var/datum/surgery_step/r = GLOB.surgery_steps[gap+i]	//how lists work here
+		for(var/i = 1; gap + i <= global.surgery_step_list.len; i++)
+			var/datum/surgery_step/l = global.surgery_step_list[i]		//Fucking hate
+			var/datum/surgery_step/r = global.surgery_step_list[gap+i]	//how lists work here
 			if(l.priority < r.priority)
-				GLOB.surgery_steps.Swap(i, gap + i)
+				global.surgery_step_list.Swap(i, gap + i)
 				swapped = 1
 
 /datum/surgery_status/

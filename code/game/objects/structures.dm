@@ -7,10 +7,10 @@
 	
 /obj/structure/New()
 	..()
-	GLOB.structures += src 
+	global.structure_list += src 
 
 /obj/structure/Destroy()
-	GLOB.structures -= src
+	global.structure_list -= src
 	if(parts)
 		new parts(loc)
 	. = ..()

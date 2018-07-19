@@ -18,10 +18,10 @@
 	
 /obj/New()
 	..()
-	GLOB.objs += src
+	global.obj_list += src
 
 /obj/Destroy()
-	GLOB.objs -= src 
+	global.obj_list -= src 
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

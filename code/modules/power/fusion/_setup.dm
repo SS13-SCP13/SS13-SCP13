@@ -40,7 +40,7 @@
 		var/list/delayed_objects = list()
 
 		// SETUP PHASE
-		for(var/obj/effect/engine_setup/S in GLOB.effects)
+		for(var/obj/effect/engine_setup/S in global.effect_list)
 			var/result = S.activate(0)
 			switch(result)
 				if(SETUP_OK)

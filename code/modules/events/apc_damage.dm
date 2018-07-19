@@ -22,7 +22,7 @@
 	var/list/possibleEpicentres = list()
 	var/list/apcs = list()
 
-	for(var/newEpicentre in GLOB.landmarks)
+	for(var/newEpicentre in global.landmark_list)
 		var/obj/effect/landmark/L = newEpicentre
 		if(L.name == "lightsout")
 			possibleEpicentres += L

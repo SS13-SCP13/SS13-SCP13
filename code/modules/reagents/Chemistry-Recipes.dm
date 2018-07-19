@@ -11,9 +11,9 @@
 		var/datum/chemical_reaction/D = new path()
 		if(D.required_reagents && D.required_reagents.len)
 			var/reagent_id = D.required_reagents[1]
-			if(!GLOB.chemical_reactions[reagent_id])
-				GLOB.chemical_reactions[reagent_id] = list()
-			GLOB.chemical_reactions[reagent_id] += D
+			if(!global.chemical_reaction_list[reagent_id])
+				global.chemical_reaction_list[reagent_id] = list()
+			global.chemical_reaction_list[reagent_id] += D
 
 /datum/chemical_reaction
 	var/name = null

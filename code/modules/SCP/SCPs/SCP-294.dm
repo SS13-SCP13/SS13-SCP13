@@ -62,13 +62,13 @@
 
 /obj/machinery/scp294/proc/find_reagent(input)
 	. = FALSE
-	if(GLOB.chemical_reagents[input])
-		var/datum/reagent/R = GLOB.chemical_reagents[input]
+	if(global.chemical_reagent_list[input])
+		var/datum/reagent/R = global.chemical_reagent_list[input]
 		if(R)
 			return R.type
 	else
-		for(var/X in GLOB.chemical_reagents)
-			var/datum/reagent/R = GLOB.chemical_reagents[X]
+		for(var/X in global.chemical_reagent_list)
+			var/datum/reagent/R = global.chemical_reagent_list[X]
 			if(R && input == replacetext(lowertext(R.name), " ", ""))
 				return R.type
 			else if(R && input == replacetext(capitalize(R.name), " ", ""))

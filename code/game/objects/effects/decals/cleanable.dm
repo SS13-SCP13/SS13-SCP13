@@ -8,11 +8,11 @@
 	..()
 
 /obj/effect/decal/cleanable/Initialize()
-	GLOB.cleanables += src
+	global.cleanable_decals_list += src
 	if (random_icon_states && length(src.random_icon_states) > 0)
 		src.icon_state = pick(src.random_icon_states)
 	. = ..()
 	
 /obj/effect/decal/cleanable/Destroy()
-	GLOB.cleanables -= src 
+	global.cleanable_decals_list -= src 
 	return ..()

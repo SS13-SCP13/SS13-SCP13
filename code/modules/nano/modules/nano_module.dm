@@ -7,12 +7,12 @@
 
 /datum/nano_module/New(var/datum/host, var/topic_manager)
 	..()
-	GLOB.nano_modules += src 
+	global.nano_module_list += src 
 	src.host = host.nano_host()
 	src.topic_manager = topic_manager
 	
 /datum/nano_module/Destroy()
-	GLOB.nano_modules -= src 
+	global.nano_module_list -= src 
 	return ..()
 
 /datum/nano_module/nano_host()

@@ -1,9 +1,9 @@
 /obj/structure/flora/New()
 	..()
-	GLOB.flora += src 
+	global.flora_list += src 
 	
 /obj/structure/flora/Destroy()
-	GLOB.flora -= src 
+	global.flora_list -= src 
 	return ..()
 
 //trees

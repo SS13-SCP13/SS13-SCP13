@@ -3,7 +3,7 @@ var/global/list/empty_playable_ai_cores = list()
 /hook/roundstart/proc/spawn_empty_ai()
 	if("AI" in ticker.mode.disabled_jobs)
 		return 1	// Don't make empty AI's if you can't have them (also applies to Malf)
-	for(var/obj/effect/landmark/start/S in GLOB.landmarks)
+	for(var/obj/effect/landmark/start/S in global.landmark_list)
 		if(S.name != "AI")
 			continue
 		if(locate(/mob/living) in S.loc)

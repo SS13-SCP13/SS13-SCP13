@@ -41,7 +41,7 @@
 			return
 
 
-	var/T = GLOB.side_effects[name]
+	var/T = global.side_effect_list[name]
 	if (!T)
 		return
 

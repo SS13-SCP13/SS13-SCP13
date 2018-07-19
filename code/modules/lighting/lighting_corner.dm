@@ -81,10 +81,10 @@
 
 	update_active()
 	
-	GLOB.lighting_corners += src
+	global.lighting_corner_list += src
 	
 /datum/lighting_corner/Destroy()
-	GLOB.lighting_corners -= src 
+	global.lighting_corner_list -= src 
 	return ..()
 
 /datum/lighting_corner/proc/update_active()

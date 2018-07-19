@@ -1,7 +1,7 @@
 /datum/antagonist/proc/get_starting_locations()
 	if(landmark_id)
 		starting_locations = list()
-		for(var/landmark in GLOB.landmarks)
+		for(var/landmark in global.landmark_list)
 			var/obj/effect/landmark/L = landmark
 			if(L.name == landmark_id)
 				starting_locations |= get_turf(L)

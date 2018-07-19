@@ -183,7 +183,7 @@
 		switch(action_type)
 			if("Strict type")
 				var/i = 0
-				for(var/obj in GLOB.objs)
+				for(var/obj in global.obj_list)
 					var/obj/A = obj
 					if(A.type == O_type)
 						i++
@@ -195,7 +195,7 @@
 				message_admins("<span class='notice'>[key_name(usr)] deleted all objects of type [O_type] ([i] objects deleted)</span>")
 			if("Type and subtypes")
 				var/i = 0
-				for(var/obj in GLOB.objs)
+				for(var/obj in global.obj_list)
 					if(istype(obj,O_type))
 						i++
 						qdel(obj)

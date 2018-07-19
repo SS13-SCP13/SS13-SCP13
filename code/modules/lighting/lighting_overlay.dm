@@ -35,7 +35,7 @@
 		if(no_update)
 			return
 		update_overlay()
-		GLOB.lighting_overlays += src 
+		global.lighting_overlay_list += src 
 	else
 		qdel(src)
 
@@ -123,7 +123,7 @@
 
 /atom/movable/lighting_overlay/Destroy()
 	total_lighting_overlays--
-	GLOB.lighting_overlays -= src
+	global.lighting_overlay_list -= src
 	global.lighting_update_overlays     -= src
 	global.lighting_update_overlays_old -= src
 

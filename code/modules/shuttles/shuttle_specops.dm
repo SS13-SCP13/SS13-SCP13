@@ -152,11 +152,11 @@
 		sleep(10)
 
 		var/spawn_marauder[] = new()
-		for(var/landmark in GLOB.landmarks)
+		for(var/landmark in global.landmark_list)
 			var/obj/effect/landmark/L = landmark
 			if(L.name == "Marauder Entry")
 				spawn_marauder.Add(L)
-		for(var/landmark in GLOB.landmarks)
+		for(var/landmark in global.landmark_list)
 			var/obj/effect/landmark/L = landmark
 			if(L.name == "Marauder Exit")
 				var/obj/effect/portal/P = new(L.loc)

@@ -18,7 +18,7 @@
 
 /datum/event/carp_migration/start()
 	if(severity == EVENT_LEVEL_MAJOR)
-		spawn_fish(GLOB.landmarks.len)
+		spawn_fish(global.landmark_list.len)
 	else if(severity == EVENT_LEVEL_MODERATE)
 		spawn_fish(rand(4, 6)) 			//12 to 30 carp, in small groups
 	else
@@ -27,7 +27,7 @@
 /datum/event/carp_migration/proc/spawn_fish(var/num_groups, var/group_size_min=3, var/group_size_max=5)
 	var/list/spawn_locations = list()
 
-	for(var/landmark in GLOB.landmarks)
+	for(var/landmark in global.landmark_list)
 		var/obj/effect/landmark/L = landmark
 		if(L.name == "carpspawn")
 			spawn_locations.Add(L.loc)

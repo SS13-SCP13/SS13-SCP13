@@ -114,7 +114,7 @@
 							from_objs += m
 
 				else if(text_starts_with(f, "/obj/item"))
-					for(var/m in GLOB.items)
+					for(var/m in global.item_list)
 						if(istype(m, f2))
 							from_objs += m
 
@@ -124,7 +124,7 @@
 							from_objs += m
 
 				else if(text_starts_with(f, "/obj"))
-					for(var/m in GLOB.objs)
+					for(var/m in global.obj_list)
 						if(istype(m, f2))
 							from_objs += m
 

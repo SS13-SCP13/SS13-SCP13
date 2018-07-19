@@ -109,7 +109,7 @@
 	radio_connection.post_signal(src, signal)
 	return
 /*
-	for(var/obj/item/device/assembly/signaler/S in GLOB.items)
+	for(var/obj/item/device/assembly/signaler/S in global.device_list)
 		if(!S)	continue
 		if(S == src)	continue
 		if((S.frequency == src.frequency) && (S.code == src.code))

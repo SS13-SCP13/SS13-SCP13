@@ -423,7 +423,7 @@
 	var/list/namecounts = list()
 	var/list/creatures = list()
 
-	for(var/obj in GLOB.objs)
+	for(var/obj in global.obj_list)
 		var/obj/O = obj 
 		if(!O.loc)
 			continue

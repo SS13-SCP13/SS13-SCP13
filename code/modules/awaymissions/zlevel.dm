@@ -46,7 +46,7 @@ proc/createRandomZlevel()
 			load_new_z_level(file, "Away mission")
 			log_debug("away mission loaded: [map]")
 
-		for(var/landmark in GLOB.landmarks)
+		for(var/landmark in global.landmark_list)
 			var/obj/effect/landmark/L = landmark
 			if (L.name != "awaystart")
 				continue

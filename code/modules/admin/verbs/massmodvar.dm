@@ -140,7 +140,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj 
 						if ( istype(A , O.type) )
 							A.vars[variable] = O.vars[variable]
@@ -159,7 +159,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if (A.type == O.type)
 							A.vars[variable] = O.vars[variable]
@@ -186,7 +186,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if ( istype(A , O.type) )
 							A.vars[variable] = O.vars[variable]
@@ -204,7 +204,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj 
 						if (A.type == O.type)
 							A.vars[variable] = O.vars[variable]
@@ -236,7 +236,7 @@
 								M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if ( istype(A , O.type) )
 							if(variable=="light_range")
@@ -264,7 +264,7 @@
 								M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if (A.type == O.type)
 							if(variable=="light_range")
@@ -294,7 +294,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if ( istype(A , O.type) )
 							A.vars[variable] = O.vars[variable]
@@ -312,7 +312,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if (A.type == O.type)
 							A.vars[variable] = O.vars[variable]
@@ -336,7 +336,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O.type, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if ( istype(A , O.type) )
 							A.vars[variable] = O.vars[variable]
@@ -354,7 +354,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O.type, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if (A.type == O.type)
 							A.vars[variable] = O.vars[variable]
@@ -377,7 +377,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if ( istype(A , O.type) )
 							A.vars[variable] = O.vars[variable]
@@ -396,7 +396,7 @@
 							M.vars[variable] = O.vars[variable]
 
 				else if(istype(O, /obj))
-					for(var/obj in GLOB.objs)
+					for(var/obj in global.obj_list)
 						var/obj/A = obj
 						if (A.type == O.type)
 							A.vars[variable] = O.vars[variable]

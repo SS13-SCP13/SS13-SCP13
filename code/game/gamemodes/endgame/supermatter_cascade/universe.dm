@@ -87,7 +87,7 @@ AUTOMATED ALERT: Link to [command_name()] lost.
 
 /datum/universal_state/supermatter_cascade/OverlayAndAmbientSet()
 	spawn(0)
-		for(var/corner in GLOB.lighting_corners)	
+		for(var/corner in global.lighting_corner_list)	
 			var/datum/lighting_corner/L = corner
 			if(L.z in GLOB.using_map.admin_levels)
 				L.update_lumcount(1,1,1)

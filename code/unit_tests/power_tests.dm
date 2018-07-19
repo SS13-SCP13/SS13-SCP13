@@ -22,7 +22,7 @@ datum/unit_test/roundstart_cable_connectivity/start_test()
 	var/list/found_cables = list()
 
 	//there is a cable list, but for testing purposes we search every cable in the world
-	for(var/cable in GLOB.cables)
+	for(var/cable in global.cable_list)
 		if(cable in found_cables)
 			continue
 		var/list/to_search = list(cable)

@@ -11,7 +11,7 @@
 /obj/effect/landmark/New()
 	..()
 	
-	GLOB.landmarks += src
+	global.landmark_list += src
 	tag = "landmark*[name]"
 
 	//TODO clean up this mess
@@ -92,7 +92,7 @@
 		return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/Destroy()
-	GLOB.landmarks -= src
+	global.landmark_list -= src
 	return ..()
 
 /obj/effect/landmark/start

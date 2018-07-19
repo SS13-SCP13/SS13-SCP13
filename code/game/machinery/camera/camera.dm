@@ -84,7 +84,7 @@
 		ASSERT(src.network)
 		ASSERT(src.network.len > 0)
 		
-	GLOB.cameras += src 
+	global.camera_list += src 
 	..()
 
 /obj/machinery/camera/Initialize()
@@ -102,7 +102,7 @@
 
 
 /obj/machinery/camera/Destroy()
-	GLOB.cameras -= src 
+	global.camera_list -= src 
 	deactivate(null, 0) //kick anyone viewing out
 	if(assembly)
 		qdel(assembly)

@@ -1074,7 +1074,7 @@ datum
 							if(istype(M.loc, /turf))
 								if(istype(get_area(M), /area/shuttle/escape))
 									return 1
-						for(var/obj/structure/AIcore/M in GLOB.structures)
+						for(var/obj/structure/AIcore/M in global.structure_list)
 							if(istype(M.loc, /turf) && M.state == 4)
 								if(istype(get_area(M), /area/shuttle/escape))
 									return 1

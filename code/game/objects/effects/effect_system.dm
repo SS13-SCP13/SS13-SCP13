@@ -7,10 +7,10 @@ would spawn and follow the beaker, even if it is carried or thrown.
 
 /obj/effect/New()
 	..()
-	GLOB.effects += src 
+	global.effect_list += src 
 	
 /obj/effect/Destroy()
-	GLOB.effects -= src 
+	global.effect_list -= src 
 	return ..()
 
 /obj/effect/effect

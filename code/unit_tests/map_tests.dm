@@ -79,7 +79,7 @@
 	var/list/cable_turfs = list()
 	var/list/dirs_checked = list()
 
-	for(var/cable in GLOB.cables)
+	for(var/cable in global.cable_list)
 		T = get_turf(cable)
 		cable_turfs |= T
 
@@ -110,7 +110,7 @@
 /datum/unit_test/wire_dir_and_icon_stat/start_test()
 	var/list/bad_cables = list()
 
-	for(var/cable in GLOB.cables)
+	for(var/cable in global.cable_list)
 		var/obj/structure/cable/C = cable
 		var/expected_icon_state = "[C.d1]-[C.d2]"
 		if(C.icon_state != expected_icon_state)
@@ -135,7 +135,7 @@
 /datum/unit_test/closet_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/structure/closet/C in GLOB.structures)
+	for(var/obj/structure/closet/C in global.structure_list)
 		if(!C.opened && isPlayerLevel(C.z))
 			var/total_content_size = 0
 			for(var/atom/movable/AM in C.contents)
@@ -159,7 +159,7 @@
 /datum/unit_test/closet_containment_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/structure/closet/C in GLOB.structures)
+	for(var/obj/structure/closet/C in global.structure_list)
 		if(!C.opened && isPlayerLevel(C.z))
 			var/contents_pre_open = C.contents.Copy()
 			C.dump_contents()
@@ -188,7 +188,7 @@
 /datum/unit_test/storage_map_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/item/weapon/storage/S in GLOB.items)
+	for(var/obj/item/weapon/storage/S in global.item_list)
 		if(isPlayerLevel(S.z))
 			var/bad_msg = "[ascii_red]--------------- [S.name] \[[S.type]\] \[[S.x] / [S.y] / [S.z]\]"
 			bad_tests += test_storage_capacity(S, bad_msg)
@@ -302,7 +302,7 @@ datum/unit_test/ladder_check/start_test()
 	var/safe_landmarks = 0
 	var/space_landmarks = 0
 
-	for(var/lm in GLOB.landmarks)
+	for(var/lm in global.landmark_list)
 		var/obj/effect/landmark/landmark = lm
 		if(istype(landmark, /obj/effect/landmark/test/safe_turf))
 			log_debug("Safe landmark found: [log_info_line(landmark)]")
@@ -357,7 +357,7 @@ datum/unit_test/ladder_check/start_test()
 /datum/unit_test/camera_nil_c_tag_check/start_test()
 	var/pass = TRUE
 
-	for(var/camera in GLOB.cameras)
+	for(var/camera in global.camera_list)
 		var/obj/machinery/camera/C = camera
 		if(!C.c_tag)
 			log_bad("Following camera does not have a c_tag set: [log_info_line(C)]")
@@ -379,7 +379,7 @@ datum/unit_test/ladder_check/start_test()
 	var/cameras_by_ctag = list()
 	var/checked_cameras = 0
 
-	for(var/camera in GLOB.cameras)
+	for(var/camera in global.camera_list)
 		var/obj/machinery/camera/C = camera
 		if(!C.c_tag)
 			continue
@@ -415,7 +415,7 @@ datum/unit_test/ladder_check/start_test()
 		num2text(SOUTH) = list(list(SOUTH, list(NORTH, WEST)), list(EAST,  list(NORTH, EAST))),
 		num2text(WEST)  = list(list(EAST,  list(NORTH, EAST)), list(SOUTH, list(SOUTH, EAST))))
 
-	for(var/obj/structure/disposalpipe/segment/D in GLOB.structures)
+	for(var/obj/structure/disposalpipe/segment/D in global.structure_list)
 		if(D.icon_state == "pipe-s")
 			if(!(D.dir == SOUTH || D.dir == EAST))
 				log_bad("Following disposal pipe has an invalid direction set: [log_info_line(D)]")

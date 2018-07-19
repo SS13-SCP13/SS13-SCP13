@@ -124,7 +124,7 @@
 /mob/living/simple_animal/hostile/proc/ListTargets(var/dist = 7)
 	var/list/L = hearers(src, dist)
 
-	for (var/obj/mecha/M in GLOB.mechas)
+	for (var/obj/mecha/M in global.mecha_list)
 		if (M.z == src.z && get_dist(src, M) <= dist)
 			L += M
 

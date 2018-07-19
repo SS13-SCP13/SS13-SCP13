@@ -962,7 +962,7 @@
 
 // *** TEST verb
 //client/verb/dispstop()
-//	for(var/obj/structure/disposalholder/H in GLOB.structures)
+//	for(var/obj/structure/disposalholder/H in global.structure_list)
 //		H.active = 0
 
 // a straight or bent segment
@@ -1197,7 +1197,7 @@
 		id_tag = newid
 
 /obj/machinery/disposal_switch/Initialize()
-	for(var/obj/structure/disposalpipe/diversion_junction/D in GLOB.structures)
+	for(var/obj/structure/disposalpipe/diversion_junction/D in global.structure_list)
 		if(D.id_tag && !D.linked && D.id_tag == src.id_tag)
 			junctions += D
 			D.linked = src
@@ -1249,7 +1249,7 @@
 	if(!proximity || !istype(A, /turf/simulated/floor) || istype(A, /area/shuttle) || user.incapacitated() || !id_tag)
 		return
 	var/found = 0
-	for(var/obj/structure/disposalpipe/diversion_junction/D in GLOB.structures)
+	for(var/obj/structure/disposalpipe/diversion_junction/D in global.structure_list)
 		if(D.id_tag == src.id_tag)
 			found = 1
 			break
