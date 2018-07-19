@@ -64,6 +64,7 @@ changes:
   - rscdel: "Removed Code Violet and Orange from the alert levels list."
   - bugfix: "Fix to doctor lockers and medbay doors."
   - bugfix: "Replaced empty medwall with a filled one in the Medbay."
+  - bugfix: "Fixed an issue with elevator to HCZ being incorrectly labeled."
   - bugfix: "Fix some windows not being area'd properly in Engineering."
   - bugfix: "Fix issue with SCP-106 elevator."
   - bugfix: "ID Card modification program on consoles should now use level 4 admin clearance."
