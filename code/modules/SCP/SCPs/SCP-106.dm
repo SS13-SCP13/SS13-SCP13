@@ -176,7 +176,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 			G.upgrade(TRUE)
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
-	if (!istype(M, /mob/living/carbon/human/scp106))
+	if (!isscp106(M))
 		return ..(M)
 	var/mob/living/carbon/human/scp106/H = M
 	H.scp106_attack(src)
@@ -282,7 +282,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	invisibility = 100
 
 /obj/scp106_exit/Crossed(var/mob/living/L)
-	if (!istype(L) || istype(L, /mob/living/carbon/human/scp106))
+	if (!istype(L) || isscp106(L))
 		return ..(L)
 	visible_message("<span class = 'danger'>[L] is warped away!</span>")
 	L.forceMove(pick(GLOB.simulated_turfs_scp106))
@@ -296,7 +296,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	invisibility = 100
 
 /obj/scp106_teleport/Crossed(var/mob/living/L)
-	if (!istype(L) || istype(L, /mob/living/carbon/human/scp106))
+	if (!istype(L) || isscp106(L))
 		return ..(L)
 	if (prob(50))
 		L.adjustBrainLoss(1000)

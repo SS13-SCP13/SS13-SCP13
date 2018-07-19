@@ -18,7 +18,7 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 
 /turf/unsimulated/floor/scp106/process()
 	for (var/mob/living/L in contents)
-		if (istype(L, /mob/living/carbon/human/scp106))
+		if (isscp106(L))
 			L.adjustBruteLoss(-5)
 			L.adjustFireLoss(-5)
 			L.adjustToxLoss(-5)
