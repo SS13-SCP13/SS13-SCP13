@@ -119,7 +119,7 @@
 							from_objs += m
 
 				else if(text_starts_with(f, "/obj/machinery"))
-					for(var/m in SSmachines.machinery)
+					for(var/m in SSmachines.all_machinery)
 						if (istype(m, f2))
 							from_objs += m
 

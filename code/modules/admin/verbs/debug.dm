@@ -313,37 +313,37 @@
 		if(!(A.type in areas_all))
 			areas_all.Add(A.type)
 
-	for(var/obj/machinery/power/apc/APC in SSmachines.machinery)
+	for(var/obj/machinery/power/apc/APC in SSmachines.all_machinery)
 		var/area/A = get_area(APC)
 		if(!(A.type in areas_with_APC))
 			areas_with_APC.Add(A.type)
 
-	for(var/obj/machinery/alarm/alarm in SSmachines.machinery)
+	for(var/obj/machinery/alarm/alarm in SSmachines.all_machinery)
 		var/area/A = get_area(alarm)
 		if(!(A.type in areas_with_air_alarm))
 			areas_with_air_alarm.Add(A.type)
 
-	for(var/obj/machinery/requests_console/RC in SSmachines.machinery)
+	for(var/obj/machinery/requests_console/RC in SSmachines.all_machinery)
 		var/area/A = get_area(RC)
 		if(!(A.type in areas_with_RC))
 			areas_with_RC.Add(A.type)
 
-	for(var/obj/machinery/light/L in SSmachines.machinery)
+	for(var/obj/machinery/light/L in SSmachines.all_machinery)
 		var/area/A = get_area(L)
 		if(!(A.type in areas_with_light))
 			areas_with_light.Add(A.type)
 
-	for(var/obj/machinery/light_switch/LS in SSmachines.machinery)
+	for(var/obj/machinery/light_switch/LS in SSmachines.all_machinery)
 		var/area/A = get_area(LS)
 		if(!(A.type in areas_with_LS))
 			areas_with_LS.Add(A.type)
 
-	for(var/obj/item/device/radio/intercom/I in SSmachines.machinery)
+	for(var/obj/item/device/radio/intercom/I in SSmachines.all_machinery)
 		var/area/A = get_area(I)
 		if(!(A.type in areas_with_intercom))
 			areas_with_intercom.Add(A.type)
 
-	for(var/obj/machinery/camera/C in SSmachines.machinery)
+	for(var/obj/machinery/camera/C in SSmachines.all_machinery)
 		var/area/A = get_area(C)
 		if(!(A.type in areas_with_camera))
 			areas_with_camera.Add(A.type)
@@ -422,15 +422,15 @@
 	if(alert("Are you sure? This will start up the engine. Should only be used during debug!",,"Yes","No") != "Yes")
 		return
 
-	for(var/obj/machinery/power/emitter/E in SSmachines.machinery)
+	for(var/obj/machinery/power/emitter/E in SSmachines.all_machinery)
 		if(E.anchored)
 			E.active = 1
 
-	for(var/obj/machinery/field_generator/F in SSmachines.machinery)
+	for(var/obj/machinery/field_generator/F in SSmachines.all_machinery)
 		if(F.anchored)
 			F.Varedit_start = 1
 	spawn(30)
-		for(var/obj/machinery/the_singularitygen/G in SSmachines.machinery)
+		for(var/obj/machinery/the_singularitygen/G in SSmachines.all_machinery)
 			if(G.anchored)
 				var/obj/singularity/S = new /obj/singularity(get_turf(G), 50)
 				spawn(0)
@@ -448,7 +448,7 @@
 				//S.dissipate_track = 0
 				//S.dissipate_strength = 10
 
-	for(var/obj/machinery/power/rad_collector/Rad in SSmachines.machinery)
+	for(var/obj/machinery/power/rad_collector/Rad in SSmachines.all_machinery)
 		if(Rad.anchored)
 			if(!Rad.P)
 				var/obj/item/weapon/tank/phoron/Phoron = new/obj/item/weapon/tank/phoron(Rad)
@@ -460,7 +460,7 @@
 			if(!Rad.active)
 				Rad.toggle_power()
 
-	for(var/obj/machinery/power/smes/SMES in SSmachines.machinery)
+	for(var/obj/machinery/power/smes/SMES in SSmachines.all_machinery)
 		if(SMES.anchored)
 			SMES.input_attempt = 1
 
