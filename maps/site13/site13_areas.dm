@@ -17,452 +17,477 @@
 
 //Surface
 
-/area/storage/site13/surface/tech
+/area/site13/surface/storage/tech
 	name = "Technical Storage"
 	icon_state = "storage"
 
-/area/storage/site13/surface/medical
+/area/site13/surface/storage/medical
 	name = "Medical Storage"
 	icon_state = "exam_room"
 
-/area/rnd/site13/surface/officevac
+/area/site13/surface/rnd/officevac
 	name = "Vacant Offices"
 	icon_state = "devlab"
 
-/area/hallway/site13/surface/gatea
+/area/site13/surface/hallway/gatea
 	name = "\improper Gate A Hallway"
 	icon_state = "hallF"
 
-/area/hallway/site13/surface/gatec
+/area/site13/surface/hallway/gatec
 	name = "\improper Gate C Hallway"
 	icon_state = "hallF"
 
-/area/hallway/site13/surface/elevator
+/area/site13/surface/hallway/elevator
 	name = "\improper Surface Elevator Hallway"
 	icon_state = "hallC1"
 
-/area/hallway/site13/surface/office
+/area/site13/surface/hallway/office
 	name = "\improper Office Hallway"
 	icon_state = "hallA"
 
-/area/hallway/site13/surface/headsleft
+/area/site13/surface/hallway/headsleft
 	name = "\improper Staff Heads Hallway - West"
 	icon_state = "hallC1"
 
-/area/hallway/site13/surface/headsright
+/area/site13/surface/hallway/headsright
 	name = "\improper Staff Heads Hallway - East"
 	icon_state = "hallC1"
 
-/area/hallway/site13/surface/ogatea
+/area/site13/surface/hallway/ogatea
 	name = "Outside Gate A"
 	icon_state = "hallF"
 
-/area/hallway/site13/surface/ogateb
+/area/site13/surface/hallway/ogateb
 	name = "Outside Gate B"
 	icon_state = "hallF"
 
-/area/hallway/site13/surface/ogatec
+/area/site13/surface/hallway/ogatec
 	name = "Outside Gate C"
 	icon_state = "hallF"
 
-/area/rnd/site13/surface/officestorage
+/area/site13/surface/rnd/officestorage
 	name = "\improper Office Storage"
 	icon_state = "toxstorage"
 
-/area/rnd/site13/surface/office
+/area/site13/surface/rnd/office
 	name = "\improper Office"
 	icon_state = "devlab"
 
-/area/rnd/site13/surface/checkpoint
+/area/site13/surface/rnd/checkpoint
 	name = "\improper Office Security Checkpoint"
 	icon_state = "checkpoint1"
 
-/area/janitor/site13/surface/closet
+/area/site13/surface/janitor/closet
 	name = "\improper Surface Custodial Closet"
 	icon_state = "janitor"
 
-/area/crew_quarters/site13/surface/sleep
+/area/site13/surface/crew_quaters/schleep
 	name = "\improper Bunk Room"
 	icon_state = "Sleep"
-	sound_env = SMALL_SOFTFLOOR
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
-/area/crew_quarters/site13/surface/cryo2
+/area/site13/surface/crew_quaters/cryo2
 	name = "\improper Auxiliary Cryogenic Storage"
 	icon_state = "Sleep"
 
-/area/crew_quarters/site13/surface/cryo1
+/area/site13/surface/crew_quaters/cryo1
 	name = "\improper Cryogenic Storage"
 	icon_state = "Sleep"
 
-/area/crew_quarters/site13/surface/toilets
+/area/site13/surface/crew_quaters/toilets
 	name = "\improper Toilets"
 	icon_state = "toilet"
 
-/area/crew_quarters/site13/surface/washing
+/area/site13/surface/crew_quaters/washing
 	name = "\improper Washing Machine Room"
 	icon_state = "toilet"
 
-/area/crew_quarters/site13/surface/mess
+/area/site13/surface/crew_quaters/mess
 	name = "\improper Main Cafeteria"
 	icon_state = "cafeteria"
 
-/area/crew_quarters/site13/surface/kitchen
+/area/site13/surface/crew_quaters/kitchen
 	name = "\improper Kitchen"
 	icon_state = "kitchen"
 
-/area/crew_quarters/site13/surface/kitchenbackroom
+/area/site13/surface/crew_quaters/kitchenbackroom
 	name = "\improper Kitchen Cold Storage"
 	icon_state = "kitchen"
 
-/area/quartermaster/site13/surface/storage
+/area/site13/surface/quatermaster/storage
 	name = "\improper Cargonia"
 	icon_state = "hangar"
 	sound_env = LARGE_ENCLOSED
 
-/area/quartermaster/site13/surface/secstorage
+/area/site13/surface/quatermaster/secstorage
 	name = "\improper Cargo Secure Storage"
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
 
-/area/quartermaster/site13/surface/quarters
+/area/site13/surface/quatermaster/quarters
 	name = "\improper Cargo Bunk Room"
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
 
-/area/quartermaster/site13/surface/storagedepot
+/area/site13/surface/quatermaster/storagedepot
 	name = "\improper Cargo Depot"
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
 
-/area/security/site13/surface/gateco
+/area/site13/surface/security/gateco
 	name = "\improper Gate C Outside"
 	icon_state = "checkpoint"
 
-/area/security/site13/surface/gatebo
+/area/site13/surface/security/gatebo
 	name = "\improper Gate B Outside"
 	icon_state = "checkpoint"
 
-/area/security/site13/surface/gateao
+/area/site13/surface/security/gateao
 	name = "\improper Gate A Outside"
 	icon_state = "checkpoint"
 
-/area/security/site13/surface/gateci
+/area/site13/surface/security/gateci
 	name = "\improper Gate C Inside"
 	icon_state = "checkpoint1"
 
-/area/security/site13/surface/gatebi
+/area/site13/surface/security/gatebi
 	name = "\improper Gate B Inside"
 	icon_state = "checkpoint1"
 
-/area/security/site13/surface/gateai
+/area/site13/surface/security/gateai
 	name = "\improper Gate A Inside"
 	icon_state = "checkpoint1"
 
-/area/acting/site13/surface/backstage
+/area/site13/surface/acting/backstage
 	name = "\improper Surface Common Room Storage"
+	icon_state = "red"
 
-/area/acting/site13/surface/stage
+/area/site13/surface/acting/stage
 	name = "\improper Surface Common Room"
-	dynamic_lighting = 1
 	icon_state = "yellow"
 
-/area/chapel/site13/surface/main
-	name = "\improper Priest Quarters"
-	icon_state = "chapel"
-	ambience = list('sound/ambience/ambicha1.ogg','sound/ambience/ambicha2.ogg','sound/ambience/ambicha3.ogg','sound/ambience/ambicha4.ogg','sound/music/traitor.ogg')
-	sound_env = LARGE_ENCLOSED
+/area/site13/surface/desert
+	dynamic_lighting = 0
+	icon_state = "yellow"
 
-/area/tcommsat/site13/surface/main
+/area/site13/surface/tcommsat/main
 	name = "\improper Telecoms"
 	icon_state = "tcomsatcomp"
 
-/area/shuttle/site13/surface/helipad1
+/area/site13/surface/shuttle/helipad1
 	icon_state = "shuttle"
 
-/area/shuttle/site13/surface/helipad2
+/area/site13/surface/shuttle/helipad2
 	icon_state = "shuttle"
 
-/area/shuttle/site13/surface/helipad3
+/area/site13/surface/shuttle/helipad3
 	icon_state = "shuttle"
 
-/area/shuttle/site13/surface/helipad4
+/area/site13/surface/shuttle/helipad4
 	icon_state = "shuttle"
 
-/area/security/site13/surface/headarmory
+/area/site13/surface/security/headarmory
 	name = "\improper External Emergency Storage"
 	icon_state = "security"
 
-/area/security/site13/surface/headmedical
+/area/site13/surface/security/headmedical
 	name = "\improper External Medical Storage"
 	icon_state = "security"
 
-/area/maintenance/site13/surface/battery
+/area/site13/surface/maintenance/battery
 	name = "\improper Surface Power Storage"
 	icon_state = "apmaint"
 
-/area/maintenance/site13/surface/kitchapcom
+/area/site13/surface/maintenance/kitchapcom
 	name = "\improper Surface Maintenance"
 	icon_state = "apmaint"
 
-/area/maintenance/site13/surface/cryoff
+/area/site13/surface/maintenance/cryoff
 	name = "\improper Surface Maintenance"
 	icon_state = "apmaint"
 
-/area/crew_quarters/site13/surface/sd
+/area/site13/surface/maintenance/cargo
+	name = "\improper Surface Maintenance"
+	icon_state = "apmaint"
+
+/area/site13/surface/crew_quaters/sd
 	name = "\improper SD's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/surface/rd
+/area/site13/surface/crew_quaters/rd
 	name = "\improper RD's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/surface/sc
+/area/site13/surface/crew_quaters/sc
 	name = "\improper SC's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/surface/ce
+/area/site13/surface/crew_quaters/ce
 	name = "\improper CE's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/surface/clo
+/area/site13/surface/crew_quaters/clo
 	name = "\improper CLO's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/surface/cmo
+/area/site13/surface/crew_quaters/cmo
 	name = "\improper CMO's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/surface/hop
+/area/site13/surface/crew_quaters/hop
 	name = "\improper HoP's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/surface/conference
+/area/site13/surface/crew_quaters/conference
 	name = "\improper Conference Room"
 	icon_state = "bridge"
 
-/area/security/site13/floor1/lczwo
+/area/site13/surface/crew_quaters/bunker
+	name = "\improper Evacuation Shelter"
+	icon_state = "bridge"
+
+/area/site13/surface/engineering/solars
+	name = "\improper Solar Farm"
+	icon_state = "engine_smes"
+
+/area/site13/floor1/security/lczwo
 	name = "\improper LCZ Floor West Checkpoint Outside"
 	icon_state = "checkpoint"
 
-/area/security/site13/floor1/lczso
+/area/site13/floor1/security/lczso
 	name = "\improper LCZ Floor South Checkpoint Outside"
 	icon_state = "checkpoint"
 
-/area/security/site13/floor1/lczno
+/area/site13/floor1/security/lczno
 	name = "\improper LCZ Floor North Checkpoint Outside"
 	icon_state = "checkpoint"
 
-/area/security/site13/floor1/lczni
+/area/site13/floor1/security/lczni
 	name = "\improper LCZ Floor North Checkpoint Inside"
 	icon_state = "checkpoint1"
 
-/area/security/site13/floor1/lczsi
+/area/site13/floor1/security/lczsi
 	name = "\improper LCZ Floor South Checkpoint Inside"
 	icon_state = "checkpoint1"
 
-/area/security/site13/floor1/lczwi
+/area/site13/floor1/security/lczwi
 	name = "\improper LCZ Floor West Checkpoint Inside"
 	icon_state = "checkpoint1"
 
-/area/hallway/site13/floor1/elevator
+/area/site13/floor1/hallway/elevator
 	name = "\improper LCZ Floor Elevator Hallway"
 	icon_state = "hallC1"
 
-/area/hallway/site13/floor1/lczeast
+/area/site13/floor1/hallway/lczeast
 	name = "\improper Light Containment Zone East Hallway"
 	icon_state = "hallC1"
 
-/area/rnd/site13/floor1/lounge
+/area/site13/floor1/rnd/lounge
 	name = "\improper Scientist Lounge"
 	icon_state = "researchbreak"
 
-/area/rnd/site13/floor1/archives
+/area/site13/floor1/rnd/archives
 	name = "\improper Archives"
 	icon_state = "research"
 
-/area/rnd/site13/floor1/briefing
+/area/site13/floor1/rnd/briefing
 	name = "\improper Briefing Room"
 	icon_state = "research"
 
-/area/rnd/site13/floor1/scp173
+/area/site13/floor1/rnd/scp173
 	name = "\improper Archives"
 	icon_state = "research"
 
-/area/rnd/site13/floor1/humanoid
+/area/site13/floor1/rnd/humanoid
 	name = "Humanoid Containment Chamber"
 	icon_state = "research"
 
-/area/rnd/site13/floor1/humanoid2
+/area/site13/floor1/rnd/humanoid2
 	name = "Humanoid Containment Chamber"
 	icon_state = "research"
 
-/area/rnd/site13/floor1/scp151
+/area/site13/floor1/rnd/scp151
 	name = "\improper SCP 151's Chamber"
 	icon_state = "research"
 
-/area/rnd/site13/floor1/securestorage
+/area/site13/floor1/rnd/securestorage
 	name = "\improper Secure Storage"
 	icon_state = "research"
 
-/area/crew_quarters/site13/floor1/rd
+/area/site13/floor1/crew_quarters/rd
 	name = "\improper RD's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/floor1/sc
+/area/site13/floor1/crew_quarters/sc
 	name = "\improper SC's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/floor2/ce
+/area/site13/floor2/crew_quarters/ce
 	name = "\improper CE's Office"
 	icon_state = "head_quarters"
 
-/area/crew_quarters/site13/floor1/cmo
+/area/site13/floor1/crew_quarters/cmo
 	name = "\improper CMO's Office"
 	icon_state = "head_quarters"
 
-/area/medical/site13/floor1/sleeper
+/area/site13/floor1/medical/sleeper
 	name = "\improper Acute Treatment Centre"
 	icon_state = "exam_room"
 
-/area/medical/site13/floor1/bed
+/area/site13/floor1/medical/bed
 	name = "\improper Sub-Acute Treatment Centre"
 	icon_state = "medbay"
 
-/area/medical/site13/floor1/equipstorage
+/area/site13/floor1/medical/equipstorage
 	name = "\improper Locker Room"
 	icon_state = "medbay4"
 	ambience = list('sound/ambience/signal.ogg')
 
-/area/medical/site13/floor1/barracks
+/area/site13/floor1/medical/barracks
 	name = "\improper Barracks"
 	icon_state = "medbay"
 
-/area/medical/site13/floor1/mentalhealth
+/area/site13/floor1/medical/mentalhealth
 	name = "\improper Mental Health"
 	icon_state = "medbay3"
 	ambience = list('sound/ambience/signal.ogg')
 
-/area/medical/site13/floor1/chemistry
+/area/site13/floor1/medical/chemistry
 	name = "\improper Chemistry"
 	icon_state = "chem"
 
-/area/medical/site13/floor1/morgue
+/area/site13/floor1/medical/morgue
 	name = "\improper Morgue"
 	icon_state = "morgue"
 	ambience = list('sound/ambience/ambimo1.ogg','sound/ambience/ambimo2.ogg','sound/music/main.ogg')
 
-/area/medical/site13/floor1/infirmary
+/area/site13/floor1/medical/infirmary
 	name = "\improper Infirmary Hallway"
 	icon_state = "medbay"
 
-/area/medical/site13/floor1/infirmreception
+/area/site13/floor1/medical/infirmreception
 	name = "\improper Infirmary Reception"
 	icon_state = "medbay2"
 	ambience = list('sound/ambience/signal.ogg')
 
-/area/security/site13/floor1/medical
+/area/site13/floor1/security/medical
 	name = "\improper LCZ Floor Infirmary Checkpoint"
 	icon_state = "checkpoint"
 
-/area/medical/site13/floor1/medkits
+/area/site13/floor1/medical/medkits
 	name = "\improper Medical Supplies Storage"
 	icon_state = "chem"
 
-/area/medical/site13/floor1/surgery
+/area/site13/floor1/medical/surgery
 	name = "\improper Operating Theatre"
 	icon_state = "surgery"
 
-/area/medical/site13/floor1/exam_room
+/area/site13/floor1/medical/exam_room
 	name = "\improper Exam Room"
 	icon_state = "exam_room"
 
-/area/maintenance/site13/floor1/battery
+/area/site13/floor1/maintenance/battery
 	name = "\improper LCZ Floor Power Storage"
 	icon_state = "apmaint"
 
-/area/medical/site13/floor1/toilets
+/area/site13/floor1/medical/toilets
 	name = "\improper Toilets"
 	icon_state = "toilet"
 
-/area/security/site13/floor1/toilets
+/area/site13/floor1/security/toilets
 	name = "\improper Toilets"
 	icon_state = "toilet"
 
-/area/security/site13/floor1/armoury
+/area/site13/floor1/security/armoury
 	name = "\improper Armory"
 	icon_state = "Warden"
 
-/area/security/site13/floor1/dwest
+/area/site13/floor1/security/dwest
 	name = "\improper Class D Cells - West"
 	icon_state = "brig"
 
-/area/security/site13/floor1/deast
+/area/site13/floor1/security/deast
 	name = "\improper Class D Cells - East"
 	icon_state = "sec_prison"
 
-/area/security/site13/floor1/process
+/area/site13/floor1/security/process
 	name = "\improper Processing Cells"
 	icon_state = "sec_prison"
 
-/area/security/site13/floor1/interrogation
+/area/site13/floor1/security/interrogation
 	name = "\improper Interrogation Chamber"
 	icon_state = "brig"
 
-/area/security/site13/floor1/wing
+/area/site13/floor1/security/wing
 	name = "\improper Security Wing"
 	icon_state = "security"
 
-/area/security/site13/floor1/ops
+/area/site13/floor1/security/ops
 	name = "\improper Security Briefing Room"
 	icon_state = "checkpoint"
 
-/area/security/site13/floor1/exec
+/area/site13/floor1/security/exec
 	name = "\improper Disposal Room"
 	icon_state = "checkpoint"
 
-/area/security/site13/floor1/range
+/area/site13/floor1/security/range
 	name = "\improper Firing Range"
 	icon_state = "nuke_storage"
 
-/area/security/site13/floor1/lockers
+/area/site13/floor1/security/lockers
 	name = "\improper Security Locker Room"
 	icon_state = "brig"
 
-/area/security/site13/floor1/schleep
+/area/site13/floor1/security/schleep
 	name = "\improper Sleeping Quaters"
 	icon_state = "sec_prison"
 
-/area/hydroponics/site13/floor1/prison
+/area/site13/floor1/hydroponics/prison
 	name = "\improper Class D Garden"
 
-/area/crew_quarters/site13/floor1/gym
+/area/site13/floor1/crew_quarters/gym
 	name = "\improper Class D Recreational Area"
 	icon_state = "fitness"
 
-/area/security/site13/floor1/dshowers
+/area/site13/floor1/security/dshowers
 	name = "\improper Class D Shower Room"
 	icon_state = "toilet"
 
-/area/crew_quarters/site13/floor1/mess
+/area/site13/floor1/crew_quarters/mess
 	name = "\improper Class D Cafeteria"
 	icon_state = "cafeteria"
 
-/area/crew_quarters/site13/floor1/kitchen
+/area/site13/floor1/crew_quarters/kitchen
 	name = "\improper Class D Kitchen"
 	icon_state = "kitchen"
 
-/area/janitor/site13/floor1/closet
+/area/site13/floor1/janitor/closet
 	name = "\improper Class D Custodial Closet"
 	icon_state = "janitor"
 
-/area/rnd/site13/floor1/library
+/area/site13/floor1/rnd/library
 	name = "\improper Class D Library"
 	icon_state = "research"
 
-/area/security/site13/floor1/delivery
+/area/site13/floor1/security/delivery
 	name = "\improper Class D Deliveries"
 	icon_state = "sec_prison"
+
+/area/site13/floor1/security/brigcontrol
+	name = "\improper Cell Guard Quaters"
+	icon_state = "sec_prison"
+
+/area/site13/floor1/maintenance/science
+	name = "\improper LCZ Floor Maintenance"
+	icon_state = "apmaint"
+
+/area/site13/floor1/maintenance/dbois
+	name = "\improper LCZ Floor Maintenance"
+	icon_state = "apmaint"
+
+/area/site13/floor1/maintenance/lczsec
+	name = "\improper LCZ Floor Maintenance"
+	icon_state = "apmaint"
 
 
 
