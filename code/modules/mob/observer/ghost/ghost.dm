@@ -302,6 +302,39 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			if (scp)
 				if (!scp.client)
 					scp.do_possession(src)
+					if (ishuman(scp))
+						scp.verbs -= list(
+							/mob/living/carbon/human/verb/blink_t,
+							/mob/living/carbon/human/verb/bow,
+							/mob/living/carbon/human/verb/salute,
+							/mob/living/carbon/human/verb/hem,
+							/mob/living/carbon/human/verb/clap,
+							/mob/living/carbon/human/verb/eyebrow,
+							/mob/living/carbon/human/verb/cough,
+							/mob/living/carbon/human/verb/frown,
+							/mob/living/carbon/human/verb/nod,
+							/mob/living/carbon/human/verb/blush,
+							/mob/living/carbon/human/verb/wave,
+							/mob/living/carbon/human/verb/giggle,
+							/mob/living/carbon/human/verb/look,
+							/mob/living/carbon/human/verb/grin,
+							/mob/living/carbon/human/verb/cry,
+							/mob/living/carbon/human/verb/sigh,
+							/mob/living/carbon/human/verb/laugh,
+							/mob/living/carbon/human/verb/grumble,
+							/mob/living/carbon/human/verb/groan,
+							/mob/living/carbon/human/verb/mmoan,
+							/mob/living/carbon/human/verb/raise,
+							/mob/living/carbon/human/verb/shake,
+							/mob/living/carbon/human/verb/shrug,
+							/mob/living/carbon/human/verb/smile,
+							/mob/living/carbon/human/verb/whimper,
+							/mob/living/carbon/human/verb/wink,
+							/mob/living/carbon/human/verb/yawn,
+							/mob/living/carbon/human/verb/hug,
+							/mob/living/carbon/human/verb/scream,
+							/mob/living/carbon/human/verb/emoteclearthroat
+						)
 				else
 					src << "<span class = 'danger'>This SCP has already been taken by someone else.</span>"
 
