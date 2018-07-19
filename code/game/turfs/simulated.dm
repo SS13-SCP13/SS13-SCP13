@@ -1,4 +1,3 @@
-GLOBAL_LIST_EMPTY(simulated_turfs)
 GLOBAL_LIST_EMPTY(simulated_turfs_scp106)
 
 /turf/simulated
@@ -58,11 +57,11 @@ GLOBAL_LIST_EMPTY(simulated_turfs_scp106)
 	if(istype(loc, /area/chapel))
 		holy = 1
 	levelupdate()
-	GLOB.simulated_turfs += src
+	global.simulated_turf_list += src
 
 /turf/simulated/Destroy()
 	deltimer(timer_id)
-	GLOB.simulated_turfs -= src
+	global.simulated_turf_list -= src
 	return ..()
 
 /turf/simulated/proc/AddTracks(var/typepath,var/bloodDNA,var/comingdir,var/goingdir,var/bloodcolor=COLOR_BLOOD_HUMAN)

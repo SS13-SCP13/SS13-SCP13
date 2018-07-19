@@ -41,7 +41,7 @@
 			return
 
 
-	var/T = side_effects[name]
+	var/T = global.side_effect_list[name]
 	if (!T)
 		return
 
@@ -49,7 +49,7 @@
 	if(M.name == name)
 		M.strength = strength
 		M.start = life_tick
-		side_effects += M
+		src.side_effects += M
 
 /mob/living/carbon/human/proc/handle_medical_side_effects()
 	//Going to handle those things only every few ticks.

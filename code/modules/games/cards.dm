@@ -313,7 +313,7 @@
 	. = ..()
 
 	var/list/deck_list = list()
-	for(var/obj/item/weapon/deck/D in world)
+	for(var/obj/item/weapon/deck/D in global.item_list)
 		if(isturf(D.loc))		//Decks hiding in inventories are safe. Respect the sanctity of loadout items.
 			deck_list += D
 

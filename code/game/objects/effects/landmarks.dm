@@ -10,6 +10,8 @@
 
 /obj/effect/landmark/New()
 	..()
+	
+	global.landmark_list += src
 	tag = "landmark*[name]"
 
 	//TODO clean up this mess
@@ -79,7 +81,6 @@
 			delete_me = 1
 			return
 
-	landmarks_list += src
 	return 1
 
 /obj/effect/landmark/proc/delete()
@@ -91,7 +92,7 @@
 		return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/Destroy()
-	landmarks_list -= src
+	global.landmark_list -= src
 	return ..()
 
 /obj/effect/landmark/start

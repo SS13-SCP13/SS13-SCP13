@@ -45,8 +45,11 @@
 		if(singubeacon.active)
 			target = singubeacon
 			break
+			
+	global.singularity_list += src 
 
 /obj/singularity/Destroy()
+	global.singularity_list -= src 
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

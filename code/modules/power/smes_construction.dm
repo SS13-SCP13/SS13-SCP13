@@ -100,7 +100,7 @@
 	for(var/obj/machinery/power/terminal/T in terminals)
 		T.master = null
 	terminals = null
-	for(var/datum/nano_module/rcon/R in world)
+	for(var/datum/nano_module/rcon/R in global.nano_module_list)
 		R.FindDevices()
 	return ..()
 

@@ -240,7 +240,7 @@
 	var/turf/T = get_turf(src)
 	var/zlevels = GetConnectedZlevels(T.z)
 	var/cur_dist = world.maxx+world.maxy
-	for(var/obj/item/device/radio/beacon/R in world)
+	for(var/obj/item/device/radio/beacon/R in global.device_list)
 		if((R.z in zlevels) && R.frequency == tracking_freq)
 			var/check_dist = get_dist(src,R)
 			if(check_dist < cur_dist)
