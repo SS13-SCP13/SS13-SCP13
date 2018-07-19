@@ -1,28 +1,28 @@
 //Since it didn't really belong in any other category, I'm putting this here
 //This is for procs to replace all the goddamn 'in world's that are chilling around the code
 
-GLOBAL_LIST_EMPTY(objs)
-GLOBAL_LIST_EMPTY(zones)
-GLOBAL_LIST_EMPTY(structures)
-GLOBAL_LIST_EMPTY(flora)
-GLOBAL_LIST_EMPTY(effects)
-GLOBAL_LIST_EMPTY(items)
-GLOBAL_LIST_EMPTY(devices)
-GLOBAL_LIST_EMPTY(cameras)
-GLOBAL_LIST_EMPTY(cables) // Index for all cables, so that powernets don't have to look through the entire world all the time
-GLOBAL_LIST_EMPTY(chemical_reactions) // list of all /datum/chemical_reaction datums. Used during chemical reactions
-GLOBAL_LIST_EMPTY(chemical_reagents) // list of all /datum/reagent datums indexed by reagent id. Used by chemistry stuff
-GLOBAL_LIST_EMPTY(landmarks) // list of all landmarks created
-GLOBAL_LIST_EMPTY(surgery_steps) // list of all surgery steps
-GLOBAL_LIST_EMPTY(side_effects) // list of all medical side effects types by their names
-GLOBAL_LIST_EMPTY(mechas) // list of all mechs. Used by hostile mobs target tracking.
-GLOBAL_LIST_EMPTY(jobs) // list of all jobstypes, minus borg and AI
-GLOBAL_LIST_EMPTY(lighting_corners)
-GLOBAL_LIST_EMPTY(lighting_overlays)
-GLOBAL_LIST_EMPTY(nano_modules)
-GLOBAL_LIST_EMPTY(singularities)
-GLOBAL_LIST_EMPTY(admin_datums)
-GLOBAL_LIST_EMPTY(cleanables)
+// New objects, mostly created at startup, get added to these lists. GLOB isn't used because it isn't available at startup.
+var/global/list/objs = list()
+var/global/list/structures = list() 
+var/global/list/flora = list() 
+var/global/list/effects = list() 
+var/global/list/items = list()
+var/global/list/devices = list() 
+var/global/list/cameras = list()
+var/global/list/cables = list()
+var/global/list/chemical_reactions = list() 
+var/global/list/chemical_reagents = list() 
+var/global/list/landmarks = list() 
+var/global/list/surgery_steps = list()
+var/global/list/side_effects = list() 
+var/global/list/mechas = list() 
+var/global/list/jobs = list() 
+var/global/list/lighting_corners = list()
+var/global/list/lighting_overlays = list() 
+var/global/list/nano_modules = list() 
+var/global/list/singularities = list() 
+var/global/list/admin_datums = list()
+var/global/list/cleanables = list() 
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER)
 #define all_genders_text_list list("Male","Female","Plural","Neuter")
