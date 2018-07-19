@@ -99,6 +99,8 @@
 			return global.additional_antag_types;
 		if("admin_datums")
 			return global.admin_datums;
+		if("admin_datums_by_value")
+			return global.admin_datums_by_value;
 		if("admin_pm_repository")
 			return global.admin_pm_repository;
 		if("admin_ranks")
@@ -233,12 +235,16 @@
 			return global.bomb_set;
 		if("borers")
 			return global.borers;
+		if("cable_list")
+			return global.cable_list;
 		if("cached_icons")
 			return global.cached_icons;
 		if("cached_space")
 			return global.cached_space;
 		if("camera_alarm")
 			return global.camera_alarm;
+		if("camera_list")
+			return global.camera_list;
 		if("camera_range_display_status")
 			return global.camera_range_display_status;
 		if("camera_repository")
@@ -261,12 +267,18 @@
 			return global.chargen_robolimbs;
 		if("checked_for_inactives")
 			return global.checked_for_inactives;
+		if("chemical_reaction_list")
+			return global.chemical_reaction_list;
 		if("chemical_reaction_logs")
 			return global.chemical_reaction_logs;
+		if("chemical_reagent_list")
+			return global.chemical_reagent_list;
 		if("chicken_count")
 			return global.chicken_count;
 		if("church_name")
 			return global.church_name;
+		if("cleanable_decals_list")
+			return global.cleanable_decals_list;
 		if("client_preference_stats_")
 			return global.client_preference_stats_;
 		if("client_repository")
@@ -341,6 +353,8 @@
 			return global.department_radio_keys;
 		if("description_icons")
 			return global.description_icons;
+		if("device_list")
+			return global.device_list;
 		if("diary")
 			return global.diary;
 		if("dna_activity_bounds")
@@ -355,6 +369,8 @@
 			return global.dummy_lighting_corner;
 		if("economic_species_modifier")
 			return global.economic_species_modifier;
+		if("effect_list")
+			return global.effect_list;
 		if("empty_playable_ai_cores")
 			return global.empty_playable_ai_cores;
 		if("endgame_exits")
@@ -407,6 +423,8 @@
 			return global.flooring_cache;
 		if("flooring_types")
 			return global.flooring_types;
+		if("flora_list")
+			return global.flora_list;
 		if("fluidtrack_cache")
 			return global.fluidtrack_cache;
 		if("follow_repository")
@@ -475,6 +493,8 @@
 			return global.id_card_states;
 		if("image_repository")
 			return global.image_repository;
+		if("immovablerod_ref")
+			return global.immovablerod_ref;
 		if("inactive_keys")
 			return global.inactive_keys;
 		if("init")
@@ -489,8 +509,12 @@
 			return global.intercom_range_display_status;
 		if("invalid_zone")
 			return global.invalid_zone;
+		if("item_list")
+			return global.item_list;
 		if("jobMax")
 			return global.jobMax;
+		if("job_list")
+			return global.job_list;
 		if("job_master")
 			return global.job_master;
 		if("jobban_keylist")
@@ -499,6 +523,8 @@
 			return global.jobban_runonce;
 		if("join_motd")
 			return global.join_motd;
+		if("landmark_list")
+			return global.landmark_list;
 		if("language_keys")
 			return global.language_keys;
 		if("last_chew")
@@ -513,6 +539,10 @@
 			return global.license_to_url;
 		if("light_overlay_cache")
 			return global.light_overlay_cache;
+		if("lighting_corner_list")
+			return global.lighting_corner_list;
+		if("lighting_overlay_list")
+			return global.lighting_overlay_list;
 		if("lighting_overlays_initialised")
 			return global.lighting_overlays_initialised;
 		if("lighting_update_corners")
@@ -573,6 +603,8 @@
 			return global.matchmaker;
 		if("maze_cell_count")
 			return global.maze_cell_count;
+		if("mecha_list")
+			return global.mecha_list;
 		if("mechtoys")
 			return global.mechtoys;
 		if("mercs")
@@ -623,6 +655,8 @@
 			return global.multi_point_spawns;
 		if("name_to_material")
 			return global.name_to_material;
+		if("nano_module_list")
+			return global.nano_module_list;
 		if("narsie_behaviour")
 			return global.narsie_behaviour;
 		if("narsie_cometh")
@@ -659,6 +693,8 @@
 			return global.nuke_disks;
 		if("num_financial_terminals")
 			return global.num_financial_terminals;
+		if("obj_list")
+			return global.obj_list;
 		if("ore_data")
 			return global.ore_data;
 		if("ores_by_type")
@@ -813,6 +849,10 @@
 			return global.ship_engines;
 		if("shuttle_controller")
 			return global.shuttle_controller;
+		if("side_effect_list")
+			return global.side_effect_list;
+		if("singularity_list")
+			return global.singularity_list;
 		if("skin_styles_female_list")
 			return global.skin_styles_female_list;
 		if("skipped_unit_tests")
@@ -869,12 +909,16 @@
 			return global.string_part_flags;
 		if("string_slot_flags")
 			return global.string_slot_flags;
+		if("structure_list")
+			return global.structure_list;
 		if("supply_controller")
 			return global.supply_controller;
 		if("supply_drop")
 			return global.supply_drop;
 		if("supply_methods_")
 			return global.supply_methods_;
+		if("surgery_step_list")
+			return global.surgery_step_list;
 		if("swapmaps_byname")
 			return global.swapmaps_byname;
 		if("swapmaps_compiled_maxx")
@@ -1126,6 +1170,8 @@
 			global.additional_antag_types=newval;
 		if("admin_datums")
 			global.admin_datums=newval;
+		if("admin_datums_by_value")
+			global.admin_datums_by_value=newval;
 		if("admin_pm_repository")
 			global.admin_pm_repository=newval;
 		if("admin_ranks")
@@ -1260,12 +1306,16 @@
 			global.bomb_set=newval;
 		if("borers")
 			global.borers=newval;
+		if("cable_list")
+			global.cable_list=newval;
 		if("cached_icons")
 			global.cached_icons=newval;
 		if("cached_space")
 			global.cached_space=newval;
 		if("camera_alarm")
 			global.camera_alarm=newval;
+		if("camera_list")
+			global.camera_list=newval;
 		if("camera_range_display_status")
 			global.camera_range_display_status=newval;
 		if("camera_repository")
@@ -1288,12 +1338,18 @@
 			global.chargen_robolimbs=newval;
 		if("checked_for_inactives")
 			global.checked_for_inactives=newval;
+		if("chemical_reaction_list")
+			global.chemical_reaction_list=newval;
 		if("chemical_reaction_logs")
 			global.chemical_reaction_logs=newval;
+		if("chemical_reagent_list")
+			global.chemical_reagent_list=newval;
 		if("chicken_count")
 			global.chicken_count=newval;
 		if("church_name")
 			global.church_name=newval;
+		if("cleanable_decals_list")
+			global.cleanable_decals_list=newval;
 		if("client_preference_stats_")
 			global.client_preference_stats_=newval;
 		if("client_repository")
@@ -1368,6 +1424,8 @@
 			global.department_radio_keys=newval;
 		if("description_icons")
 			global.description_icons=newval;
+		if("device_list")
+			global.device_list=newval;
 		if("diary")
 			global.diary=newval;
 		if("dna_activity_bounds")
@@ -1382,6 +1440,8 @@
 			global.dummy_lighting_corner=newval;
 		if("economic_species_modifier")
 			global.economic_species_modifier=newval;
+		if("effect_list")
+			global.effect_list=newval;
 		if("empty_playable_ai_cores")
 			global.empty_playable_ai_cores=newval;
 		if("endgame_exits")
@@ -1434,6 +1494,8 @@
 			global.flooring_cache=newval;
 		if("flooring_types")
 			global.flooring_types=newval;
+		if("flora_list")
+			global.flora_list=newval;
 		if("fluidtrack_cache")
 			global.fluidtrack_cache=newval;
 		if("follow_repository")
@@ -1502,6 +1564,8 @@
 			global.id_card_states=newval;
 		if("image_repository")
 			global.image_repository=newval;
+		if("immovablerod_ref")
+			global.immovablerod_ref=newval;
 		if("inactive_keys")
 			global.inactive_keys=newval;
 		if("init")
@@ -1516,8 +1580,12 @@
 			global.intercom_range_display_status=newval;
 		if("invalid_zone")
 			global.invalid_zone=newval;
+		if("item_list")
+			global.item_list=newval;
 		if("jobMax")
 			global.jobMax=newval;
+		if("job_list")
+			global.job_list=newval;
 		if("job_master")
 			global.job_master=newval;
 		if("jobban_keylist")
@@ -1526,6 +1594,8 @@
 			global.jobban_runonce=newval;
 		if("join_motd")
 			global.join_motd=newval;
+		if("landmark_list")
+			global.landmark_list=newval;
 		if("language_keys")
 			global.language_keys=newval;
 		if("last_chew")
@@ -1540,6 +1610,10 @@
 			global.license_to_url=newval;
 		if("light_overlay_cache")
 			global.light_overlay_cache=newval;
+		if("lighting_corner_list")
+			global.lighting_corner_list=newval;
+		if("lighting_overlay_list")
+			global.lighting_overlay_list=newval;
 		if("lighting_overlays_initialised")
 			global.lighting_overlays_initialised=newval;
 		if("lighting_update_corners")
@@ -1600,6 +1674,8 @@
 			global.matchmaker=newval;
 		if("maze_cell_count")
 			global.maze_cell_count=newval;
+		if("mecha_list")
+			global.mecha_list=newval;
 		if("mechtoys")
 			global.mechtoys=newval;
 		if("mercs")
@@ -1650,6 +1726,8 @@
 			global.multi_point_spawns=newval;
 		if("name_to_material")
 			global.name_to_material=newval;
+		if("nano_module_list")
+			global.nano_module_list=newval;
 		if("narsie_behaviour")
 			global.narsie_behaviour=newval;
 		if("narsie_cometh")
@@ -1686,6 +1764,8 @@
 			global.nuke_disks=newval;
 		if("num_financial_terminals")
 			global.num_financial_terminals=newval;
+		if("obj_list")
+			global.obj_list=newval;
 		if("ore_data")
 			global.ore_data=newval;
 		if("ores_by_type")
@@ -1840,6 +1920,10 @@
 			global.ship_engines=newval;
 		if("shuttle_controller")
 			global.shuttle_controller=newval;
+		if("side_effect_list")
+			global.side_effect_list=newval;
+		if("singularity_list")
+			global.singularity_list=newval;
 		if("skin_styles_female_list")
 			global.skin_styles_female_list=newval;
 		if("skipped_unit_tests")
@@ -1896,12 +1980,16 @@
 			global.string_part_flags=newval;
 		if("string_slot_flags")
 			global.string_slot_flags=newval;
+		if("structure_list")
+			global.structure_list=newval;
 		if("supply_controller")
 			global.supply_controller=newval;
 		if("supply_drop")
 			global.supply_drop=newval;
 		if("supply_methods_")
 			global.supply_methods_=newval;
+		if("surgery_step_list")
+			global.surgery_step_list=newval;
 		if("swapmaps_byname")
 			global.swapmaps_byname=newval;
 		if("swapmaps_compiled_maxx")
@@ -2103,6 +2191,7 @@
 	"account_hack_attempted",
 	"additional_antag_types",
 	"admin_datums",
+	"admin_datums_by_value",
 	"admin_pm_repository",
 	"admin_ranks",
 	"admin_secrets",
@@ -2170,9 +2259,11 @@
 	"blocked",
 	"bomb_set",
 	"borers",
+	"cable_list",
 	"cached_icons",
 	"cached_space",
 	"camera_alarm",
+	"camera_list",
 	"camera_range_display_status",
 	"camera_repository",
 	"cameranet",
@@ -2184,9 +2275,12 @@
 	"channel_to_radio_key",
 	"chargen_robolimbs",
 	"checked_for_inactives",
+	"chemical_reaction_list",
 	"chemical_reaction_logs",
+	"chemical_reagent_list",
 	"chicken_count",
 	"church_name",
+	"cleanable_decals_list",
 	"client_preference_stats_",
 	"client_repository",
 	"combatlog",
@@ -2224,6 +2318,7 @@
 	"department_accounts",
 	"department_radio_keys",
 	"description_icons",
+	"device_list",
 	"diary",
 	"dna_activity_bounds",
 	"dna_genes",
@@ -2231,6 +2326,7 @@
 	"dreams",
 	"dummy_lighting_corner",
 	"economic_species_modifier",
+	"effect_list",
 	"empty_playable_ai_cores",
 	"endgame_exits",
 	"endgame_safespawns",
@@ -2257,6 +2353,7 @@
 	"floor_light_cache",
 	"flooring_cache",
 	"flooring_types",
+	"flora_list",
 	"fluidtrack_cache",
 	"follow_repository",
 	"forced_ambiance_list",
@@ -2291,6 +2388,7 @@
 	"human_icon_cache",
 	"id_card_states",
 	"image_repository",
+	"immovablerod_ref",
 	"inactive_keys",
 	"init",
 	"initialization_stage",
@@ -2298,11 +2396,14 @@
 	"intents",
 	"intercom_range_display_status",
 	"invalid_zone",
+	"item_list",
 	"jobMax",
+	"job_list",
 	"job_master",
 	"jobban_keylist",
 	"jobban_runonce",
 	"join_motd",
+	"landmark_list",
 	"language_keys",
 	"last_chew",
 	"last_message_id",
@@ -2310,6 +2411,8 @@
 	"last_tick_duration",
 	"license_to_url",
 	"light_overlay_cache",
+	"lighting_corner_list",
+	"lighting_overlay_list",
 	"lighting_overlays_initialised",
 	"lighting_update_corners",
 	"lighting_update_corners_old",
@@ -2340,6 +2443,7 @@
 	"master_mode",
 	"matchmaker",
 	"maze_cell_count",
+	"mecha_list",
 	"mechtoys",
 	"mercs",
 	"merged",
@@ -2365,6 +2469,7 @@
 	"moving_levels",
 	"multi_point_spawns",
 	"name_to_material",
+	"nano_module_list",
 	"narsie_behaviour",
 	"narsie_cometh",
 	"narsie_list",
@@ -2383,6 +2488,7 @@
 	"nttransfer_uid",
 	"nuke_disks",
 	"num_financial_terminals",
+	"obj_list",
 	"ore_data",
 	"ores_by_type",
 	"organ_cache",
@@ -2460,6 +2566,8 @@
 	"severity_to_string",
 	"ship_engines",
 	"shuttle_controller",
+	"side_effect_list",
+	"singularity_list",
 	"skin_styles_female_list",
 	"skipped_unit_tests",
 	"slot_equipment_priority",
@@ -2488,9 +2596,11 @@
 	"stored_shock_by_ref",
 	"string_part_flags",
 	"string_slot_flags",
+	"structure_list",
 	"supply_controller",
 	"supply_drop",
 	"supply_methods_",
+	"surgery_step_list",
 	"swapmaps_byname",
 	"swapmaps_compiled_maxx",
 	"swapmaps_compiled_maxy",
