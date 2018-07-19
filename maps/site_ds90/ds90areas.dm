@@ -240,3 +240,8 @@
 /area/ds90/uez/janitor
 	name = "\improper Custodial Closet"
 	icon_state = "janitor"
+
+/area/ds90/uez/cryo
+	name = "\improper General Cryogenic Storage"
+	icon_state = "locker"
+	requires_power = 0
