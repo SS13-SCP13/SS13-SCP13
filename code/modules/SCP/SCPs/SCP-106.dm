@@ -209,7 +209,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 			for (var/v in 1 to 58)
 				spawn (round(v * 0.5, 0.1))
 					if (!src || !A || loc != initial_loc)
-						break
+						goto __fixsprite__
 					else
 						switch (get_dir(src, A))
 							if (NORTH, NORTHEAST, NORTHWEST)
@@ -224,6 +224,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		if (do_after(src, 30, A))
 			forceMove(get_step(src, dir))
 			forceMove(get_step(src, dir))
+			
+		__fixsprite__
 
 		alpha = 255
 		for (var/atom in vis_contents)
@@ -232,6 +234,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 			a.layer = MOB_LAYER + 0.1
 			a.pixel_x = 0
 			a.pixel_y = 0
+			
+		break
 
 /mob/living/carbon/human/scp106/proc/enter_pocket_dimension()
 	set name = "Enter Pocket Dimension"
