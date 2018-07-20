@@ -6,5 +6,5 @@
 	if(!.)
 		return
 
-	for(var/obj/machinery/light/L in SSmachines.machinery)
+	for(var/obj/machinery/light/L in SSmachines.all_machinery)
 		L.fix()

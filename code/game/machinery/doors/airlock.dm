@@ -1265,7 +1265,7 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/Initialize()
 	if(src.closeOtherId != null)
-		for (var/obj/machinery/door/airlock/A in SSmachines.machinery)
+		for (var/obj/machinery/door/airlock/A in SSmachines.all_machinery)
 			if(A.closeOtherId == src.closeOtherId && A != src)
 				src.closeOther = A
 				break

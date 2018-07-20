@@ -784,7 +784,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 		if("Toggle Door")
 			if(cartridge && cartridge.access_remote_door)
-				for(var/obj/machinery/door/blast/M in SSmachines.machinery)
+				for(var/obj/machinery/door/blast/M in SSmachines.all_machinery)
 					if(M.id == cartridge.remote_door_id)
 						if(M.density)
 							M.open()
