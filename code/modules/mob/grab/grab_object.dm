@@ -163,7 +163,7 @@
 		update_icons()
 		current_grab.enter_as_up(src)
 
-		if (!bypass_cooldown && istype(loc, /mob/living/carbon/human/scp106) && !(loc.loc in GLOB.scp106_floors))
+		if (!bypass_cooldown && isscp106(loc) && !(loc.loc in GLOB.scp106_floors))
 			var/mob/living/carbon/human/scp106/H = loc
 			affecting.forceMove(pick(GLOB.scp106_floors))
 			H.last_x = H.x
