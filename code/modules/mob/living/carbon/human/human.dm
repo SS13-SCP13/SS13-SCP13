@@ -1427,7 +1427,7 @@
 	return (species && species.has_organ[organ_check])
 
 /mob/living/carbon/human/can_feel_pain(var/obj/item/organ/check_organ)
-	if(isscp106())
+	if(isscp106(src))
 		return 0
 	if(isSynthetic())
 		return 0
