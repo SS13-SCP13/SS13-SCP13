@@ -73,8 +73,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /mob/living/carbon/human/scp106/proc/update_stuff_PD()
 
 	if (loc in GLOB.scp106_floors)
-		species.brute_mod = 0.0
-		species.burn_mod = 0.0
+		species.brute_mod = 0.1
+		species.burn_mod = 0.1
 	else
 		species.brute_mod = 0.5
 		species.burn_mod = 0.5
