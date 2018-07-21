@@ -19,11 +19,10 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 /turf/unsimulated/floor/scp106/process()
 	for (var/mob/living/L in contents)
 		if (istype(L, /mob/living/carbon/human/scp106))
-			// since we "take" 0.1x damage in the PD, these actually become -5
-			L.adjustBruteLoss(-50)
-			L.adjustFireLoss(-50)
-			L.adjustToxLoss(-50)
-			L.adjustCloneLoss(-50)
+			L.adjustBruteLoss(-5)
+			L.adjustFireLoss(-5)
+			L.adjustToxLoss(-5)
+			L.adjustCloneLoss(-5)
 		else
 			if (iscarbon(L))
 				var/mob/living/carbon/C = L
