@@ -73,8 +73,8 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 /mob/living/carbon/human/scp106/proc/update_stuff_PD()
 
 	if (loc in GLOB.scp106_floors)
-		species.brute_mod = 0.0
-		species.burn_mod = 0.0
+		species.brute_mod = 0.1
+		species.burn_mod = 0.1
 	else
 		species.brute_mod = 0.5
 		species.burn_mod = 0.5
@@ -224,7 +224,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 		if (do_after(src, 30, A))
 			forceMove(get_step(src, dir))
 			forceMove(get_step(src, dir))
-			
+
 		__fixsprite__
 
 		alpha = 255
@@ -234,7 +234,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 			a.layer = MOB_LAYER + 0.1
 			a.pixel_x = 0
 			a.pixel_y = 0
-			
+
 		break
 
 /mob/living/carbon/human/scp106/proc/enter_pocket_dimension()
