@@ -185,7 +185,7 @@
 
 /obj/item/attack_hand(mob/user as mob)
 	if (!user) return
-	if (anchored || istype(user, /mob/living/carbon/human/scp106))
+	if (anchored || isscp106(user))
 		return ..()
 	if (hasorgans(user))
 		var/mob/living/carbon/human/H = user
