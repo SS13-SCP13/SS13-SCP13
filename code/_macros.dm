@@ -65,6 +65,8 @@
 
 #define isslime(A) istype(A, /mob/living/carbon/slime)
 
+#define isscp106(A) istype(A, /mob/living/carbon/human/scp106)
+
 #define isunderwear(A) istype(A, /obj/item/underwear)
 
 #define isvirtualmob(A) istype(A, /mob/observer/virtual)
