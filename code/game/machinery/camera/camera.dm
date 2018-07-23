@@ -300,6 +300,20 @@
 	return 0
 
 /obj/machinery/camera/update_icon()
+	pixel_x = 0
+	pixel_y = 0
+
+	var/turf/T = get_step(get_turf(src), turn(dir, 180))
+	
+	if(istype(T, /turf/simulated/wall))
+		switch (dir)
+			if (NORTH)
+				pixel_y = 21
+			if (EAST)
+				pixel_x = 10
+			if (WEST)
+				pixel_x = -10
+
 	if (!status || (stat & BROKEN))
 		icon_state = "[initial(icon_state)]1"
 	else if (stat & EMPED)

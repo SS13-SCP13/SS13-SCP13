@@ -12,9 +12,17 @@
 
 /turf/simulated/wall/cult
 	icon_state = "cult"
+	blend_turfs = list(/turf/simulated/wall)
 
 /turf/simulated/wall/cult/New(var/newloc, var/reinforce = 0)
 	..(newloc,"cult",reinforce ? "cult2" : null)
+
+/turf/simulated/wall/cult/can_join_with(var/turf/simulated/wall/W)
+	if(material && W.material && material.icon_base == W.material.icon_base)
+		return 1
+	else if(istype(W, /turf/simulated/wall))
+		return 1
+	return 0
 
 /turf/simulated/wall/cult/reinf/New(var/newloc)
 	..(newloc, 1)
@@ -66,6 +74,7 @@
 /turf/simulated/wall/alium
 	icon_state = "jaggy"
 	floor_type = /turf/simulated/floor/fixed/alium
+	list/blend_objects = newlist()
 
 /turf/simulated/wall/alium/New(var/newloc)
 	..(newloc,"alien alloy")
