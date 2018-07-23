@@ -230,6 +230,20 @@
 		set_light(0)
 
 	active_power_usage = ((light_range * light_power) * LIGHTING_POWER_FACTOR)
+	
+	pixel_x = 0
+	pixel_y = 0
+
+	var/turf/T = get_step(get_turf(src), turn(dir, 180))
+	
+	if(istype(T, /turf/simulated/wall))
+		switch (dir)
+			if (NORTH)
+				pixel_y = 21
+			if (EAST)
+				pixel_x = 10
+			if (WEST)
+				pixel_x = -10
 
 /obj/machinery/light/proc/get_status()
 	if(!lightbulb)
