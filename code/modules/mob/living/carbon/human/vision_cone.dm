@@ -106,7 +106,7 @@
 
 /mob/living/carbon/human/proc/check_fov()
 
-	if(resting || lying || client.eye != client.mob)
+	if(resting || lying || (client.eye != client.mob && client.eye != client.mob.loc))
 		fov.alpha = 0
 		return
 
