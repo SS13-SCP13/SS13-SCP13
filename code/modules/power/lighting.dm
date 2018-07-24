@@ -200,6 +200,19 @@
 	. = ..()
 
 /obj/machinery/light/update_icon(var/trigger = 1)
+	overlays = overlays.Cut()
+	icon_state = "[base_state]_empty" //Never use the initial state. That'll just reset it to the mapping icon.
+	pixel_y = 0
+	pixel_x = 0
+	var/turf/T = get_step(get_turf(src), src.dir)
+	if(istype(T) && T.density)
+		if(src.dir == NORTH)
+			pixel_y = 21
+		else if(src.dir == EAST)
+			pixel_x = 10
+		else if(src.dir == WEST)
+			pixel_x = -10
+
 
 	switch(get_status())		// set icon_states
 		if(LIGHT_OK)
@@ -230,20 +243,6 @@
 		set_light(0)
 
 	active_power_usage = ((light_range * light_power) * LIGHTING_POWER_FACTOR)
-	
-	pixel_x = 0
-	pixel_y = 0
-
-	var/turf/T = get_step(get_turf(src), turn(dir, 180))
-	
-	if(istype(T, /turf/simulated/wall))
-		switch (dir)
-			if (NORTH)
-				pixel_y = 21
-			if (EAST)
-				pixel_x = 10
-			if (WEST)
-				pixel_x = -10
 
 /obj/machinery/light/proc/get_status()
 	if(!lightbulb)
