@@ -8,11 +8,11 @@
 #define AIRLOCK_OPENING	4
 #define AIRLOCK_DENY	5
 #define AIRLOCK_EMAG	6
- 
+
 #define AIRLOCK_PAINTABLE 1
 #define AIRLOCK_STRIPABLE 2
 #define AIRLOCK_DETAILABLE 4
- 
+
 var/list/airlock_overlays = list()
 
 /obj/machinery/door/airlock
@@ -65,7 +65,7 @@ var/list/airlock_overlays = list()
 	var/_wifi_id
 	var/datum/wifi/receiver/button/door/wifi_receiver
 	var/obj/item/weapon/airlock_brace/brace = null
-	
+
 	//Airlock 2.0 Aesthetics Properties
 	//The variables below determine what color the airlock and decorative stripes will be -Cakey
 	var/airlock_type = "Standard"
@@ -74,7 +74,7 @@ var/list/airlock_overlays = list()
 	var/door_color = null
 	var/stripe_color = null
 	var/symbol_color = null
- 
+
 	var/fill_file = 'icons/obj/doors/station/fill_steel.dmi'
 	var/color_file = 'icons/obj/doors/station/color.dmi'
 	var/color_fill_file = 'icons/obj/doors/station/fill_color.dmi'
@@ -159,7 +159,7 @@ var/list/airlock_overlays = list()
 /obj/machinery/door/airlock/maintenance
 	name = "Maintenance Access"
 	stripe_color = COLOR_AMBER
- 
+
 //Glass airlock presets
 
 /obj/machinery/door/airlock/glass
@@ -359,34 +359,6 @@ var/list/airlock_overlays = list()
 /obj/machinery/door/airlock/vault/bolted
 	locked = 1
 
-// scp airlocks
-/obj/machinery/door/airlock/glass/scp
-	name = "Glass Airlock"
-	icon = 'icons/obj/doors/Doorglass.dmi'
-	hitsound = 'sound/effects/Glasshit.ogg'
-	open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
-	close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
-
-	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
-	maxhealth = 300
-	explosion_resistance = 5
-	opacity = 0
-	glass = 1
-
-/obj/machinery/door/airlock/glass/scpvert
-	name = "Glass Airlock"
-	icon = 'icons/obj/doors/Doorglassvert.dmi'
-	hitsound = 'sound/effects/Glasshit.ogg'
-	open_sound_powered = list('sound/machines/DoorOpen1.ogg', 'sound/machines/DoorOpen2.ogg')
-	close_sound_powered = list('sound/machines/DoorClose1.ogg', 'sound/machines/DoorClose2.ogg')
-
-
-	door_crush_damage = DOOR_CRUSH_DAMAGE*0.75
-	maxhealth = 300
-	explosion_resistance = 5
-	opacity = 0
-	glass = 1
-
 /obj/machinery/door/airlock/Process()
 	if(main_power_lost_until > 0 && world.time >= main_power_lost_until)
 		regainMainPower()
@@ -405,12 +377,6 @@ var/list/airlock_overlays = list()
 			radiation_repository.radiate(src, rad_power)
 		last_event = world.time
 	..()
-
-/obj/machinery/door/airlock/phoron
-	name = "Phoron Airlock"
-	desc = "No way this can end badly."
-	icon = 'icons/obj/doors/Doorphoron.dmi'
-	mineral = "phoron"
 
 /obj/machinery/door/airlock/phoron/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(exposed_temperature > 300)
