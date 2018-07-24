@@ -265,6 +265,9 @@ var/list/floor_decals = list()
 /obj/effect/floor_decal/corner/white/three_quarters
 	icon_state = "corner_white_three_quarters"
 
+/obj/effect/floor_decal/corner/white/full
+	icon_state = "corner_white_full"
+
 /obj/effect/floor_decal/corner/grey
 	name = "grey corner"
 	color = "#8d8c8c"

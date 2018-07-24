@@ -150,10 +150,16 @@
 /turf/simulated/floor/cult/cultify()
 	return
 
+/turf/simulated/floor/tiled/grey
+	name = "grey floor"
+	icon_state = "dark"
+	initial_flooring = /decl/flooring/tiling/grey
+
 /turf/simulated/floor/tiled/dark
 	name = "dark floor"
 	icon_state = "dark"
 	initial_flooring = /decl/flooring/tiling/dark
+
 /turf/simulated/floor/tiled/dark/New()
 	..()
 	GLOB.simulated_turfs_scp106 += src
