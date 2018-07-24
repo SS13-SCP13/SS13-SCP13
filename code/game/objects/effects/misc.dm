@@ -71,6 +71,9 @@
 /obj/effect/paint_stripe/green
 	color = COLOR_GREEN_GRAY
 
+/obj/effect/paint_stripe/gray
+	color = COLOR_GRAY
+
 /obj/effect/paint_stripe/red
 	color = COLOR_RED_GRAY
 
