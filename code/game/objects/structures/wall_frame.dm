@@ -16,6 +16,7 @@
 
 	var/maxhealth = 10
 	var/health = 10
+	var/stripe_color
 
 	blend_objects = list(/obj/machinery/door) // Objects which to blend with
 	noblend_objects = list(/obj/machinery/door/window)
@@ -123,6 +124,15 @@
 			I = image('icons/obj/wall_frame.dmi', "frame[connections[i]]", dir = 1<<(i-1))
 		overlays += I
 	return
+
+	if(stripe_color)
+		for(var/i = 1 to 4)
+			if(other_connections[i] != "0")
+				I = image('icons/obj/wall_frame.dmi', "stripe_other[connections[i]]", dir = 1<<(i-1))
+			else
+				I = image('icons/obj/wall_frame.dmi', "stripe[connections[i]]", dir = 1<<(i-1))
+			I.color = stripe_color
+			overlays += I
 
 /obj/structure/wall_frame/titanium
 	color = COLOR_TITANIUM

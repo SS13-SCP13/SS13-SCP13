@@ -76,6 +76,16 @@
 				I.color = reinf_color
 				overlays += I
 
+	if(stripe_color)
+		for(var/i = 1 to 4)
+			if(other_connections[i] != "0")
+				I = image('icons/turf/wall_masks.dmi', "stripe_other[wall_connections[i]]", dir = 1<<(i-1))
+			else
+				I = image('icons/turf/wall_masks.dmi', "stripe[wall_connections[i]]", dir = 1<<(i-1))
+			I.color = stripe_color
+			overlays += I
+
+
 	if(damage != 0)
 		var/integrity = material.integrity
 		if(reinf_material)
