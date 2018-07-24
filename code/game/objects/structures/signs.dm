@@ -386,6 +386,10 @@
 	name = "\improper Exam Room"
 	icon_state = "examroom"
 
+/obj/structure/sign/directions/site53/mcr
+	name = "\improper MCR"
+	icon_state = "mcr"
+
 /obj/structure/sign/deck/bridge
 	name = "\improper Bridge Deck"
 	icon_state = "deck-b"
