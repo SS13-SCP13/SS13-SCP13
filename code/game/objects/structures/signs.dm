@@ -387,8 +387,12 @@
 	icon_state = "examroom"
 
 /obj/structure/sign/directions/site53/mcr
-	name = "\improper MCR"
+	name = "\improper Main Control Room"
 	icon_state = "mcr"
+
+/obj/structure/sign/directions/site53/ez
+	name = "\improper Entrance Zone"
+	icon_state = "ez"
 
 /obj/structure/sign/deck/bridge
 	name = "\improper Bridge Deck"
