@@ -165,83 +165,38 @@
 	base_turf = /turf/simulated/floor
 
 
-// NEW AREA'S.
+// SITE 53 SURFACE AREA'S
 
-/area/ds90/uez/hallways
-	name = "\improper Upper Entrance Zone Hallways"
+/area/site53/surface/surface
+	name = "Surface"
+	requires_power = 0
+	dynamic_lighting = 0
+
+/area/site53/surface/cryogenicsprimary
+	name = "\improper Primary Cryogenic Storage"
+	icon_state = "Sleep"
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/site53/surface/cryogenicsaux
+	name = "\improper Auxiliary Cryogenic Storage"
+	icon_state = "Sleep"
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/site53/surface/tramhubhallwayentry
+	name = "\improper Tram Hub"
 	icon_state = "hallC1"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
-/area/ds90/uez/aircloset
-	name = "\improper Air Closet"
-	icon_state = "firingrange"
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+// Site 53 upper surface area's
 
-/area/ds90/uez/firecloset
-	name = "\improper Fire Closet"
-	icon_state = "firingrange"
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-
-/area/ds90/uez/auxmonitoring
-	name = "\improper Auxiliary Monitoring Room"
-	icon_state = "checkpoint1"
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-
-/area/ds90/uez/gatea
-	name = "\improper Gate A Elevator"
-	icon_state = "shuttlered"
-	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
-
-/area/ds90/uez/gatebsecuritypost
-	name = "\improper Gate B Security Post"
-	icon_state = "checkpoint1"
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-
-/area/ds90/uez/gateb
-	name = "\improper Gate B"
-	icon_state = "shuttlered"
-	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
-
-/area/ds90/uez/gatebbunker
-	name = "\improper Gate B Bunker"
-	icon_state = "checkpoint1"
-	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
-
-/area/ds90/uez/uezlift2lez
-	name = "\improper Entrance Zone Elevator"
-	icon_state = "shuttlered"
-	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
-
-/area/ds90/uez/mcr
+/area/site53/upper_surface/maincontrolroom
 	name = "\improper Main Control Room"
 	icon_state = "bridge"
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
-/area/ds90/uez/armory
-	name = "\improper Entrance Zone Armory"
-	icon_state = "checkpoint1"
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-
-/area/ds90/uez/maintenance
-	name = "Maintenance"
-	icon_state = "pmaint"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/ds90/uez/substation
-	name = "\improper Entrance Zone Substation"
-	icon_state = "hallF"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/ds90/uez/engineeringentry
-	name = "\improper Engineering Entrance"
-	icon_state = "engineering_foyer"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/ds90/uez/janitor
-	name = "\improper Custodial Closet"
-	icon_state = "janitor"
-
-/area/ds90/uez/cryo
-	name = "\improper General Cryogenic Storage"
-	icon_state = "locker"
-	requires_power = 0
+/area/site53/upper_surface/maincontrolroomstairs
+	name = "\improper Main Control Room Stairs"
+	icon_state = "bridge"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND

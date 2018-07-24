@@ -1,4 +1,4 @@
-/datum/map/ds90
+/datum/map/site53
 	branch_types = list(
 		/datum/mil_branch/security,
 		/datum/mil_branch/civilian
