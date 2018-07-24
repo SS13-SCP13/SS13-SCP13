@@ -307,6 +307,20 @@
 		status_overlays_environ[POWERCHAN_ON + 1] = image(icon, "apco2-2")
 		status_overlays_environ[POWERCHAN_ON_AUTO + 1] = image(icon, "apco2-3")
 
+	if(update_state < 0)
+		pixel_x = 0
+		pixel_y = 0
+		var/turf/T = get_step(get_turf(src), dir)
+		if(istype(T) && T.density)
+			if(dir == SOUTH)
+				pixel_y = -22
+			else if(dir == NORTH)
+				pixel_y = 22
+			else if(dir == EAST)
+				pixel_x = 22
+			else if(dir == WEST)
+				pixel_x = -22
+
 	var/update = check_updates() 		//returns 0 if no need to update icons.
 						// 1 if we need to update the icon_state
 						// 2 if we need to update the overlays
