@@ -54,6 +54,20 @@
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+/area/site53/tram/lcz
+	name = "Light Containment Tram"
+	icon_state = "Sleep"
+	requires_power = 0
+	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/tram/hcz
+	name = "Heavy Containment Tram"
+	icon_state = "Sleep"
+	requires_power = 0
+	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
 // SITE 53 SURFACE AREA'S
 
 /area/site53/surface/surface
@@ -112,6 +126,13 @@
 	name = "\improper Communications Tower"
 	icon_state = "checkpoint1"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+/area/site53/lowertram/archive
+	name = "\improper Archive"
+	icon_state = "crew_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+
 
 
 // Site 53 upper surface area's
