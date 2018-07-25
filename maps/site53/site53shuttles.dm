@@ -226,3 +226,52 @@
 /obj/effect/shuttle_landmark/lcz/out
 	name = "Light Containment Zone"
 	landmark_tag = "nav_lcz_out"
+
+/datum/shuttle/autodock/multi/antag/rescue
+	name = "Rescue"
+	warmup_time = 0
+	destination_tags = list(
+		"nav_ert_deck1",
+		"nav_ert_deck2",
+		"nav_ert_deck3",
+		"nav_ert_deck4",
+		"nav_ert_deck5",
+		"nav_away_4",
+		"nav_derelict_4",
+		"nav_cluster_4",
+		"nav_ert_dock",
+		"nav_ert_start",
+		"nav_lost_supply_base_antag",
+		"nav_marooned_antag",
+		"nav_smugglers_antag",
+		"nav_magshield_antag",
+		"nav_casino_antag",
+		"nav_yacht_antag",
+		"nav_slavers_base_antag",
+		)
+	shuttle_area = /area/rescue_base/start
+	dock_target = "rescue_shuttle"
+	current_location = "nav_ert_start"
+	landmark_transition = "nav_ert_transition"
+	home_waypoint = "nav_ert_start"
+	announcer = "SEV Torch Sensor Array"
+	arrival_message = "Attention, vessel detected entering vessel proximity."
+	departure_message = "Attention, vessel detected leaving vessel proximity."
+
+/obj/effect/shuttle_landmark/ert/start
+	name = "Response Team Base"
+	landmark_tag = "nav_ert_start"
+	docking_controller = "rescue_base"
+
+/obj/effect/shuttle_landmark/ert/internim
+	name = "In transit"
+	landmark_tag = "nav_ert_transition"
+
+/obj/effect/shuttle_landmark/ert/dock
+	name = "Docking Port"
+	landmark_tag = "nav_ert_dock"
+	docking_controller = "rescue_shuttle_dock_airlock"
+
+/obj/effect/shuttle_landmark/ert/deck1
+	name =  "Southwest of Fourth deck"
+	landmark_tag = "nav_ert_deck1"
