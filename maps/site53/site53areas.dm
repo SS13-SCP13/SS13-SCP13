@@ -105,3 +105,28 @@
 	name = "\improper Communications Tower"
 	icon_state = "checkpoint1"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+// Site 53 upper surface area's
+/area/site53/lowertrams/brownline
+	name = "\improper Brown Line"
+	icon_state = "hallA"
+
+/area/site53/lowertrams/orangeline
+	name = "\improper Orange Line"
+	icon_state = "hallF"
+
+/area/site53/lowertrams/redline
+	name = "\improper Red Line"
+	icon_state = "hallC1"
+
+/area/site53/lowertrams/restaurant
+	name = "\improper Restaurant"
+	icon_state = "cafeteria"
+
+/area/site53/lowertrams/restaurantkitchenarea
+	name = "\improper Restaurant Kitchen Area"
+	icon_state = "cafeteria"
+
+/area/site53/lowertrams/hub
+	name = "\improper Tram Hub"
+	icon_state = "hallC1"
