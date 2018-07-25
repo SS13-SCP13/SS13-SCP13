@@ -48,10 +48,11 @@
 // SITE 53 TRAM AREA'S
 
 /area/site53/tram/engineering
-	name = "lift (Communications Tower)"
+	name = "Engineering Tram"
 	icon_state = "Sleep"
 	requires_power = 0
 	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 // SITE 53 SURFACE AREA'S
 
@@ -65,23 +66,27 @@
 	icon_state = "Sleep"
 	requires_power = 0
 	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/surface/cryogenicsaux
 	name = "\improper Auxiliary Cryogenic Storage"
 	icon_state = "Sleep"
 	requires_power = 0
 	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/surface/tramhubhallwayentry
 	name = "\improper Tram Hub"
 	icon_state = "hallC1"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/surface/bunker
 	name = "\improper Secure Bunker"
 	icon_state = "centcom"
 	requires_power = 0
 	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 
 // Site 53 upper surface area's
@@ -90,11 +95,13 @@
 	name = "\improper Main Control Room"
 	icon_state = "bridge"
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/upper_surface/maincontrolroomstairs
 	name = "\improper Main Control Room Stairs"
 	icon_state = "bridge"
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/upper_surface/commstower
 	name = "\improper Communications Tower"
@@ -106,27 +113,38 @@
 	icon_state = "checkpoint1"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
+
 // Site 53 upper surface area's
 /area/site53/lowertrams/brownline
 	name = "\improper Brown Line"
 	icon_state = "hallA"
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/lowertrams/orangeline
 	name = "\improper Orange Line"
 	icon_state = "hallF"
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/lowertrams/redline
 	name = "\improper Red Line"
 	icon_state = "hallC1"
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/lowertrams/restaurant
 	name = "\improper Restaurant"
 	icon_state = "cafeteria"
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/lowertrams/restaurantkitchenarea
 	name = "\improper Restaurant Kitchen Area"
 	icon_state = "cafeteria"
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/site53/lowertrams/hub
 	name = "\improper Tram Hub"
 	icon_state = "hallC1"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/maintenance/surface
+	name = "\improper Tram Hub Maintenance"
+	area_flags = AREA_FLAG_RAD_SHIELDED
