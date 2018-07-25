@@ -394,6 +394,14 @@
 	name = "\improper Entrance Zone"
 	icon_state = "ez"
 
+/obj/structure/sign/directions/site53/hcz
+	name = "\improper Heavy Containment Zone"
+	icon_state = "hcz"
+
+/obj/structure/sign/directions/site53/lcz
+	name = "\improper Light Containment Zone"
+	icon_state = "lcz"
+
 /obj/structure/sign/deck/bridge
 	name = "\improper Bridge Deck"
 	icon_state = "deck-b"
