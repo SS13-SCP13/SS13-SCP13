@@ -394,6 +394,10 @@
 	name = "\improper Entrance Zone"
 	icon_state = "ez"
 
+/obj/structure/sign/directions/site53/bunker
+	name = "\improper Secure Bunker"
+	icon_state = "bunker"
+
 /obj/structure/sign/directions/site53/hcz
 	name = "\improper Heavy Containment Zone"
 	icon_state = "hcz"
