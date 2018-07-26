@@ -16,7 +16,7 @@
 	overmap_event_areas = 0
 	usable_email_tlds = list("s13.foundation", "security.s13.foundation", "science.s13.foundation", "administration.s13.foundation")
 
-	allowed_spawns = list("Cryogenic Storage")
+	allowed_spawns = list("Cryogenic Storage", "D-Cells")
 	default_spawn = "Cryogenic Storage"
 
 	station_name  = "Site 13"
@@ -33,7 +33,7 @@
 	shuttle_docked_message = "Attention Site Personnel, Means of Evacuation have arrived and will leave in %ETD%."
 	shuttle_leaving_dock = "Attention Site Personnel, Means of Evacuation have left the Area %ETA%."
 	shuttle_called_message = "Attention Site Personnel, Means of Evacuation have been called and will arrive in %ETA%."
-	shuttle_recall_message = "Attention Site PErsonnel, Evacuation aborted, return to normal operating conditions."
+	shuttle_recall_message = "Attention Site Peronnel, Evacuation aborted, return to normal operating conditions."
 
 	evac_controller_type = /datum/evacuation_controller/starship
 
@@ -42,7 +42,7 @@
 	num_exoplanets = 0
 	planet_size = list(129,129)
 
-	away_site_budget = 3
+	away_site_budget = 0
 
 	id_hud_icons = 'maps/site13/icons/assignment_hud.dmi'
 	lobby_screens = list("title","title2")
