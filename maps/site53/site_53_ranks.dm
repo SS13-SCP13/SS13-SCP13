@@ -16,8 +16,8 @@
  */
 
 /datum/mil_branch/security
-	name = "Site DS90 Security Branch"
-	name_short = "SD90SB"
+	name = "Security Branch"
+	name_short = "SB"
 	email_domain = "ds90.foundation"
 
 	rank_types = list(
