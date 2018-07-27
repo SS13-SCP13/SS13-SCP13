@@ -1,4 +1,4 @@
-/datum/map/site13
+/datum/map/site53
 	branch_types = list(
 		/datum/mil_branch/security,
 		/datum/mil_branch/civilian
@@ -16,9 +16,9 @@
  */
 
 /datum/mil_branch/security
-	name = "Site 13 Security Branch"
-	name_short = "S13SB"
-	email_domain = "s13.foundation"
+	name = "Security Branch"
+	name_short = "SB"
+	email_domain = "ds90.foundation"
 
 	rank_types = list(
 		/datum/mil_rank/security/e1,
@@ -65,11 +65,14 @@
 		/datum/mil_rank/security/o3
 	)
 
+//	assistant_job = "Private"
+
+//	assistant_job = "Crewman"
 
 /datum/mil_branch/civilian
 	name = "Civilian"
 	name_short = "civ"
-	email_domain = "s13.foundation"
+	email_domain = "ds90.foundation"
 
 	rank_types = list(
 		/datum/mil_rank/civ/classa,
@@ -85,6 +88,8 @@
 		/datum/mil_rank/civ/classc,
 		/datum/mil_rank/civ/classd
 	)
+
+//	assistant_job = "Passenger"
 
 /datum/mil_rank/grade()
 	. = ..()
@@ -255,6 +260,65 @@
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o10_alt, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 20
 
+/* AWAITING OVERHAUL
+/*
+ *  EC
+ *  =====
+ */
+/datum/mil_rank/ec/e1
+	name = "Apprentice Explorer"
+	name_short = "AXPL"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/enlisted)
+	sort_order = 1
+
+/datum/mil_rank/ec/e3
+	name = "Explorer"
+	name_short = "XPL"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/enlisted/e3)
+	sort_order = 3
+
+/datum/mil_rank/ec/e5
+	name = "Senior Explorer"
+	name_short = "SXPL"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/enlisted/e5)
+	sort_order = 5
+
+/datum/mil_rank/ec/e7
+	name = "Chief Explorer"
+	name_short = "CXPL"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/enlisted/e7)
+	sort_order = 7
+
+/datum/mil_rank/ec/o1
+	name = "Ensign"
+	name_short = "ENS"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/officer)
+	sort_order = 11
+
+/datum/mil_rank/ec/o3
+	name = "Lieutenant"
+	name_short = "LT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/officer/o3)
+	sort_order = 13
+
+/datum/mil_rank/ec/o5
+	name = "Commander"
+	name_short = "CDR"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/officer/o5)
+	sort_order = 15
+
+/datum/mil_rank/ec/o6
+	name = "Captain"
+	name_short = "CAPT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/officer/o6)
+	sort_order = 16
+
+/datum/mil_rank/ec/o8
+	name = "Admiral"
+	name_short = "ADM"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/officer/o8)
+	sort_order = 16
+*/
 /*
  *  Civilians
  *  =========
