@@ -1,24 +1,22 @@
 //Job Outfits
 
 
-//SITE DS90 OUTFITS
+//SITE13 OUTFITS
 //Keeping them simple for now, just spawning with basic uniforms, and pretty much no gear. Gear instead goes in lockers. Keep this in mind if editing.
 
 
 // SCP COMMAND OUTFITS
 /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
 	name = OUTFIT_JOB_NAME("Facility Director")
-	uniform = /obj/item/clothing/under/scp/suittie
+	uniform = /obj/item/clothing/under/suit_jacket/charcoal
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/toggle/suit/black
 	id_type = /obj/item/weapon/card/id/adminlvl5
 	l_pocket = /obj/item/device/radio
 
 /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	name = OUTFIT_JOB_NAME("Head of Human Resources")
-	uniform = /obj/item/clothing/under/scp/suittie
+	uniform = /obj/item/clothing/under/suit_jacket/checkered
 	shoes = /obj/item/clothing/shoes/dress
-	suit = /obj/item/clothing/suit/storage/toggle/suit/black
 	id_type = /obj/item/weapon/card/id/adminlvl4
 	l_pocket = /obj/item/device/radio
 
@@ -28,16 +26,6 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
-
-/decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer
-	name = OUTFIT_JOB_NAME("Logistics Officer")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
-	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl3
-	l_pocket = /obj/item/device/radio
-
-// END OF COMMAND OUTFITS
-
 
 /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	name = OUTFIT_JOB_NAME("Chief Engineer")
@@ -49,7 +37,7 @@
 	l_pocket = /obj/item/device/radio
 
 
-// Cell Guards
+// SCP CELL GUARDS
 
 /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
 	name = OUTFIT_JOB_NAME("Cell Guard Lieutenant")
@@ -153,8 +141,7 @@
 	l_pocket = /obj/item/device/radio
 	id_type = /obj/item/weapon/card/id/sciencelvl1
 
-
-
+// ENGI OUTFITS
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	name = OUTFIT_JOB_NAME("Junior Engineer")
@@ -188,19 +175,12 @@
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_pocket = /obj/item/device/radio
 
-// BRIG OFFICER
-/decl/hierarchy/outfit/job/torch/crew/security/brig_officer
-	name = OUTFIT_JOB_NAME("Brig Officer")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
-	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl2
-
 // MEDICAL OUTFITS
 
 /decl/hierarchy/outfit/job/ds90/crew/command/cmo
 	name = OUTFIT_JOB_NAME("Chief Medical Officer")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/purple
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/cmo
 	shoes = /obj/item/clothing/shoes/white
 	id_type = /obj/item/weapon/card/id/seclvl5
 	l_pocket = /obj/item/device/radio
@@ -222,7 +202,7 @@
 	l_pocket = /obj/item/device/radio
 
 /decl/hierarchy/outfit/job/ds90/medical/medicaldoctor
-	name = OUTFIT_JOB_NAME("Chemist")
+	name = OUTFIT_JOB_NAME("Medical Doctor")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/blue
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
@@ -233,12 +213,12 @@
 	name = OUTFIT_JOB_NAME("Virologist")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/teal
 	shoes = /obj/item/clothing/shoes/white
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/virologist
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
 
 /decl/hierarchy/outfit/job/ds90/medical/surgeon
-	name = OUTFIT_JOB_NAME("Virologist")
+	name = OUTFIT_JOB_NAME("Surgeon")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/green
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
@@ -250,9 +230,16 @@
 
 // LOGISTICS OUTFITS
 
+/decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer
+	name = OUTFIT_JOB_NAME("Logistics Officer")
+	uniform = /obj/item/clothing/under/scp/greyuniform
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl3
+	l_pocket = /obj/item/device/radio
+
 /decl/hierarchy/outfit/job/site90/crew/command/logisticspecialist
 	name = OUTFIT_JOB_NAME("Logistics Specialist")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/scp/greyuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
