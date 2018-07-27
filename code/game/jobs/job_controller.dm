@@ -415,7 +415,8 @@ var/global/datum/controller/occupations/job_master
 				H.forceMove(S.loc)
 			else
 				var/datum/spawnpoint/spawnpoint = get_spawnpoint_for(H.client, rank)
-				H.forceMove(pick(spawnpoint.turfs))
+				if (spawnpoint.turfs.len)
+					H.forceMove(pick(spawnpoint.turfs))
 
 			// Moving wheelchair if they have one
 			if(H.buckled && istype(H.buckled, /obj/structure/bed/chair/wheelchair))
