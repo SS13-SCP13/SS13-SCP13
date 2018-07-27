@@ -34,7 +34,7 @@
 	shuttle_leaving_dock = "Attention Site Personnel, Means of Evacuation have left the Area %ETA%."
 	shuttle_called_message = "Attention Site Personnel, Means of Evacuation have been called and will arrive in %ETA%."
 	shuttle_recall_message = "Attention Site Peronnel, Evacuation aborted, return to normal operating conditions."
-
+/*
 	evac_controller_type = /datum/evacuation_controller/starship
 
 	default_law_type = /datum/ai_laws/solgov
@@ -43,6 +43,6 @@
 	planet_size = list(129,129)
 
 	away_site_budget = 0
-
+*/
 	id_hud_icons = 'maps/site13/icons/assignment_hud.dmi'
 	lobby_screens = list("title","title2")
