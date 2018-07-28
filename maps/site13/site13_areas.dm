@@ -414,6 +414,11 @@
 	icon_state = "head_quarters"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+/area/site13/floor1/medical/cages
+	name = "\improper Animal Cages"
+	icon_state = "exam_room"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
 /area/site13/floor1/medical/sleeper
 	name = "\improper Acute Treatment Centre"
 	icon_state = "exam_room"
