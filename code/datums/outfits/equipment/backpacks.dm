@@ -169,6 +169,9 @@
 * Helpers *
 **********/
 /proc/get_default_outfit_backpack()
+	#ifdef NO_BACKPACKS
+	return null
+	#endif
 	var backpacks = decls_repository.get_decls_of_subtype(/decl/backpack_outfit)
 	for(var/backpack in backpacks)
 		var/decl/backpack_outfit/bo = backpacks[backpack]

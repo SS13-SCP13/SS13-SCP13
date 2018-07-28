@@ -175,15 +175,16 @@ var/list/outfits_decls_by_type_
 		else
 			bo = get_default_outfit_backpack()
 
-		var/override_type = backpack_overrides[bo.type]
-		var/backpack = bo.spawn_backpack(H, metadata, override_type)
+		if (bo)
+			var/override_type = backpack_overrides[bo.type]
+			var/backpack = bo.spawn_backpack(H, metadata, override_type)
 
-		if(backpack)
-			if(back)
-				if(!H.put_in_hands(backpack))
-					H.equip_to_appropriate_slot(backpack)
-			else
-				H.equip_to_slot_or_del(backpack, slot_back)
+			if(backpack)
+				if(back)
+					if(!H.put_in_hands(backpack))
+						H.equip_to_appropriate_slot(backpack)
+				else
+					H.equip_to_slot_or_del(backpack, slot_back)
 /*
 	if(H.species && !(OUTFIT_ADJUSTMENT_SKIP_SURVIVAL_GEAR & equip_adjustments))
 		H.species.equip_survival_gear(H, flags&OUTFIT_EXTENDED_SURVIVAL)
