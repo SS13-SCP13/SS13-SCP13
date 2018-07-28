@@ -2,39 +2,52 @@
 	var/list/all_underwear
 	var/list/all_underwear_metadata
 
+	#ifndef NO_BACKPACKS
 	var/decl/backpack_outfit/backpack
 	var/list/backpack_metadata
+	#endif
 
 /datum/category_item/player_setup_item/general/equipment
 	name = "Clothing"
 	sort_order = 4
 
+	#ifndef NO_BACKPACKS
 	var/static/list/backpacks_by_name
+	#endif
 
 /datum/category_item/player_setup_item/general/equipment/New()
 	..()
+	#ifndef NO_BACKPACKS
 	if(!backpacks_by_name)
 		backpacks_by_name = list()
 		var/bos = decls_repository.get_decls_of_subtype(/decl/backpack_outfit)
 		for(var/bo in bos)
 			var/decl/backpack_outfit/backpack_outfit = bos[bo]
 			backpacks_by_name[backpack_outfit.name] = backpack_outfit
+	#endif
 
 /datum/category_item/player_setup_item/general/equipment/load_character(var/savefile/S)
+	#ifndef NO_BACKPACKS
 	var/load_backbag
+	#endif
 
 	from_file(S["all_underwear"], pref.all_underwear)
 	from_file(S["all_underwear_metadata"], pref.all_underwear_metadata)
+
+	#ifndef NO_BACKPACKS
 	from_file(S["backpack"], load_backbag)
 	from_file(S["backpack_metadata"], pref.backpack_metadata)
 
 	pref.backpack = backpacks_by_name[load_backbag] || get_default_outfit_backpack()
+	#endif
 
 /datum/category_item/player_setup_item/general/equipment/save_character(var/savefile/S)
 	to_file(S["all_underwear"], pref.all_underwear)
 	to_file(S["all_underwear_metadata"], pref.all_underwear_metadata)
+	#ifndef NO_BACKPACKS
 	to_file(S["backpack"], pref.backpack.name)
 	to_file(S["backpack_metadata"], pref.backpack_metadata)
+	#endif
 
 /datum/category_item/player_setup_item/general/equipment/sanitize_character()
 	if(!istype(pref.all_underwear))
@@ -62,6 +75,7 @@
 		if(!(underwear_metadata in pref.all_underwear))
 			pref.all_underwear_metadata -= underwear_metadata
 
+	#ifndef NO_BACKPACKS
 	if(!pref.backpack || !(pref.backpack.name in backpacks_by_name))
 		pref.backpack = get_default_outfit_backpack()
 
@@ -80,6 +94,7 @@
 				var/datum/backpack_tweak/tweak = tw
 				var/list/metadata = tweak_metadata["[tweak]"]
 				tweak_metadata["[tweak]"] = tweak.validate_metadata(metadata)
+	#endif
 
 
 /datum/category_item/player_setup_item/general/equipment/content()
@@ -95,9 +110,13 @@
 				. += " <a href='?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_underwear_metadata(UWC.name, gt))]</a>"
 
 		. += "<br>"
+
+	#ifndef NO_BACKPACKS
 	. += "Backpack Type: <a href='?src=\ref[src];change_backpack=1'><b>[pref.backpack.name]</b></a>"
 	for(var/datum/backpack_tweak/bt in pref.backpack.tweaks)
 		. += " <a href='?src=\ref[src];backpack=[pref.backpack.name];tweak=\ref[bt]'>[bt.get_ui_content(get_backpack_metadata(pref.backpack, bt))]</a>"
+	#endif
+
 	. += "<br>"
 	return jointext(.,null)
 
@@ -113,6 +132,7 @@
 		metadata["[gt]"] = tweak_data
 	return tweak_data
 
+#ifndef NO_BACKPACKS
 /datum/category_item/player_setup_item/general/equipment/proc/get_backpack_metadata(var/decl/backpack_outfit/backpack_outfit, var/datum/backpack_tweak/bt)
 	var/metadata = pref.backpack_metadata[backpack_outfit.name]
 	if(!metadata)
@@ -124,14 +144,17 @@
 		tweak_data = bt.get_default_metadata()
 		metadata["[bt]"] = tweak_data
 	return tweak_data
+#endif
 
 /datum/category_item/player_setup_item/general/equipment/proc/set_underwear_metadata(var/underwear_category, var/datum/gear_tweak/gt, var/new_metadata)
 	var/list/metadata = pref.all_underwear_metadata[underwear_category]
 	metadata["[gt]"] = new_metadata
 
+#ifndef NO_BACKPACKS
 /datum/category_item/player_setup_item/general/equipment/proc/set_backpack_metadata(var/decl/backpack_outfit/backpack_outfit, var/datum/backpack_tweak/bt, var/new_metadata)
 	var/metadata = pref.backpack_metadata[backpack_outfit.name]
 	metadata["[bt]"] = new_metadata
+#endif
 
 /datum/category_item/player_setup_item/general/equipment/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["change_underwear"])
@@ -153,6 +176,7 @@
 		if(new_metadata)
 			set_underwear_metadata(underwear, gt, new_metadata)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
+	#ifndef NO_BACKPACKS
 	else if(href_list["change_backpack"])
 		var/new_backpack = input(user, "Choose backpack style:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.backpack) as null|anything in backpacks_by_name
 		if(!isnull(new_backpack) && CanUseTopic(user))
@@ -170,10 +194,12 @@
 		if(new_metadata)
 			set_backpack_metadata(bo, bt, new_metadata)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
+	#endif
 
 	return ..()
 
 /datum/category_item/player_setup_item/general/equipment/update_setup(var/savefile/preferences, var/savefile/character)
+	#ifndef NO_BACKPACKS
 	if(preferences["version"]  <= 16)
 		var/list/old_index_to_backpack_type = list(
 			/decl/backpack_outfit/nothing,
@@ -195,3 +221,4 @@
 
 		to_file(character["backpack"], pref.backpack.name)
 		return 1
+	#endif
