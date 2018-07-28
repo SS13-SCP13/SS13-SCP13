@@ -207,7 +207,7 @@ badges
 	desc = "Plain identification tags made from a durable metal. Stamped with a variety of informational details."
 	gender = PLURAL
 	icon_state = "tags"
-	badge_string = "Sol Central Government"
+	badge_string = "SCP Foundation"
 	slot_flags = SLOT_MASK | SLOT_TIE
 
 /obj/item/clothing/accessory/badge/solgov/representative
