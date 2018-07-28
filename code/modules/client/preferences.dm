@@ -285,7 +285,9 @@ datum/preferences
 		else
 			all_underwear -= underwear_category_name
 
+	#ifndef NO_BACKPACKS
 	character.backpack_setup = new(backpack, backpack_metadata["[backpack]"])
+	#endif
 
 	for(var/N in character.organs_by_name)
 		var/obj/item/organ/external/O = character.organs_by_name[N]

@@ -6,7 +6,9 @@ var/list/gear_datums = list()
 	var/gear_slot = 1  //The current gear save slot
 
 /datum/preferences/proc/Gear()
-	return gear_list[gear_slot]
+	if (gear_list && gear_list.len)
+		return gear_list[gear_slot]
+	return null
 
 /datum/loadout_category
 	var/category = ""
@@ -311,7 +313,7 @@ var/list/gear_datums = list()
 		gear_tweaks += new/datum/gear_tweak/path/type(path)
 	if(flags & GEAR_HAS_SUBTYPE_SELECTION)
 		gear_tweaks += new/datum/gear_tweak/path/subtype(path)
-		
+
 /datum/gear/proc/get_description(var/metadata)
 	. = description
 	for(var/datum/gear_tweak/gt in gear_tweaks)
