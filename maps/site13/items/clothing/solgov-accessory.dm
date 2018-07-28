@@ -207,15 +207,22 @@ badges
 	desc = "Plain identification tags made from a durable metal. Stamped with a variety of informational details."
 	gender = PLURAL
 	icon_state = "tags"
-	badge_string = "Sol Central Government"
+	badge_string = "The SCP Foundation"
 	slot_flags = SLOT_MASK | SLOT_TIE
 
-/obj/item/clothing/accessory/badge/solgov/representative
+/obj/item/clothing/accessory/badge/solgov/o5
 	name = "representative's badge"
-	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a representative of the Sol Central Government."
+	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a representative of the O5 Council."
 	icon_state = "solbadge"
 	slot_flags = SLOT_TIE
-	badge_string = "Sol Central Government"
+	badge_string = "The SCP Foundation"
+
+/obj/item/clothing/accessory/badge/solgov/ethics
+	name = "representative's badge"
+	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a representative of the Ethics Commitee."
+	icon_state = "solbadge"
+	slot_flags = SLOT_TIE
+	badge_string = "The SCP Foundation"
 
 /*******
 armbands
@@ -258,18 +265,18 @@ armour attachments
 	icon_state = "ecflag"
 
 /obj/item/clothing/accessory/armor/tag/solgov/sec
-	name = "\improper POLICE tag"
-	desc = "An armor tag with the word POLICE printed in silver lettering on it."
+	name = "\improper SECURITY tag"
+	desc = "An armor tag with the word SECURITY printed in silver lettering on it."
 	icon_state = "sectag"
 
 /obj/item/clothing/accessory/armor/tag/solgov/com
-	name = "\improper SCG tag"
-	desc = "An armor tag with the words SOL CENTRAL GOVERNMENT printed in gold lettering on it."
+	name = "\improper golden ADMINISTRATION tag"
+	desc = "An armor tag with the words SECURITY printed in gold lettering on it."
 	icon_state = "comtag"
 
 /obj/item/clothing/accessory/armor/tag/solgov/com/sec
-	name = "\improper POLICE tag"
-	desc = "An armor tag with the words POLICE printed in gold lettering on it."
+	name = "\improper golden SECURITY tag"
+	desc = "An armor tag with the words SECURITY printed in gold lettering on it."
 
 /obj/item/clothing/accessory/armor/helmcover/blue/sol
 	name = "peacekeeper helmet cover"
