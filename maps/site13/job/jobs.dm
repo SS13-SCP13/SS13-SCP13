@@ -9,7 +9,6 @@
 /datum/job/assistant
 	title = "Class D"
 	department = "Civilian"
-
 	total_positions = -1
 	spawn_positions = -1
 	supervisors = "Foundation Personnel"
@@ -88,8 +87,6 @@
 	supervisors = "the Security Commander and Site Director"
 	department = "Command"
 	department_flag = COM
-	total_positions = 0
-	spawn_positions = 0
 	minimal_player_age = 15
 	economic_modifier = 10
 	ideal_character_age = 45
@@ -144,8 +141,6 @@
 	title = "Cell Guard Lieutenant"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 1
-	spawn_positions = 1
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = null
@@ -169,8 +164,8 @@
 	title = "Cell Guard"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 7
-	spawn_positions = 7
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = null
@@ -220,8 +215,8 @@
 	title = "Guard Lieutenant"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = list("Senior Agent")
@@ -247,8 +242,8 @@
 	title = "Guard"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 8
+	spawn_positions = 8
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = list("Agent")
@@ -266,7 +261,7 @@
 	)
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
 	minimal_access = list()
 
 /datum/job/enlistedofficer
@@ -274,8 +269,8 @@
 	title = "Junior Guard"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 11
+	spawn_positions = 11
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = list("Junior Agent")
@@ -292,7 +287,7 @@
 	)
 
 
-	access = list(access_mtflvl1)
+	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -306,11 +301,11 @@
 	title = "Junior Scientist"
 	department = "Science"
 	department_flag = SCI
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 7
+	spawn_positions = 7
 	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = list("Junior Xenobiologist", "Junior Xenoarcheologist")
+	alt_titles = list("Junior Researcher")
 	minimal_player_age = 0
 	ideal_character_age = 22
 	alt_titles = null
@@ -319,7 +314,7 @@
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
-	access = list(access_sciencelvl1)
+	access = list(access_sciencelvl1, access_sciencelvl2)
 	minimal_access = list()
 
 /datum/job/scientist
@@ -327,11 +322,11 @@
 	title = "Scientist"
 	department = "Science"
 	department_flag = SCI
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 5
+	spawn_positions = 5
 	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = list("Xenobiologist", "Xenoarcheologist")
+	alt_titles = list("Researcher")
 	minimal_player_age = 5
 	ideal_character_age = 22
 	alt_titles = null
@@ -340,7 +335,7 @@
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
-	access = list(access_sciencelvl1, access_sciencelvl2)
+	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
 /datum/job/seniorscientist
@@ -348,11 +343,11 @@
 	title = "Senior Scientist"
 	department = "Science"
 	department_flag = SCI
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = list("Senior Xenobiologist", "Senior Xenoarcheologist")
+	alt_titles = list("Senior Researcher")
 	minimal_player_age = 10
 	ideal_character_age = 22
 	alt_titles = null
@@ -483,8 +478,6 @@
 /datum/job/conteng
 	has_email = TRUE
 	title = "Containment Engineer"
-	total_positions = 1
-	spawn_positions = 1
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
 	economic_modifier = 5
@@ -511,8 +504,6 @@
 	has_email = TRUE
 	title = "Chief Engineer"
 	supervisors = "the Security Commander and Facility Director"
-	total_positions = 1
-	spawn_positions = 1
 	economic_modifier = 9
 	ideal_character_age = 40
 	minimal_player_age = 21
@@ -531,8 +522,8 @@
 	department = "Medical"
 	department_flag = MED
 
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the Chief Medical Officer"
 	selection_color = "#013d3b"
 	economic_modifier = 4
@@ -550,8 +541,6 @@
 	department = "Medical"
 	department_flag = MED
 	selection_color = "#013d3b"
-	total_positions = 1
-	spawn_positions = 1
 	ideal_character_age = 40
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
@@ -560,7 +549,7 @@
 	allowed_branches = list(
 	/datum/mil_branch/civilian)
 	allowed_ranks = list(
-		/datum/mil_rank/civ/classa)
+		/datum/mil_rank/civ/classb)
 
 
 	access = list(access_mtflvl1)
@@ -594,8 +583,8 @@
 	department = "Medical"
 	department_flag = MED
 	selection_color = "#013d3b"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	ideal_character_age = 40
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
