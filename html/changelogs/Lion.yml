@@ -33,15 +33,4 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - rscadd: "Added more jobs to the list, they should automatically appear. All jobs are now functional, but may not have spawnpoints yet."
-  - rscdel: "Removed Brig Officer for the time being. This role is being evaluated."
-  - tweak: "Removed a lot of redundant code regarding jobs and outfits. Should help with compile time some."
-  - bugfix: "Fixed a bug with SCP-151 being visible through shutters."
-  - bugfix: "Fixed an issue with Atmos in LCZ."
-  - bugfix: "Fixed an issue with D-Class cells not being powered properly."
-  - bugfix: "Fixed RnD labs not being hooked up to power net."
-  - bugfix: "Fixed a scrubber not having been mapped in near RnD."
-  - bugfix: "Fixed Sergeant ranks not having the correct shorthand."
-  - bugfix: "Fixed an issue with d-cells not opening."
-  - maptweak: "In order to fix the above point I had to add basic Security access requirements to all cell doors, but the master switch remains in the airlock oversight."
-  - wip: "Disabled Communications Officer from spawning while this job is being figured out behind the scenes. Manning just the comms station can be boring, right?"
+  - tweak: "Altered in-game date."

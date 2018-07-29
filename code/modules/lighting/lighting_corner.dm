@@ -80,6 +80,12 @@
 		T.corners[i] = src
 
 	update_active()
+	
+	global.lighting_corner_list += src
+	
+/datum/lighting_corner/Destroy()
+	global.lighting_corner_list -= src 
+	return ..()
 
 /datum/lighting_corner/proc/update_active()
 	active = FALSE

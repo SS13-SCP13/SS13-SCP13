@@ -19,7 +19,7 @@
 	. = ..()
 
 /obj/machinery/computer/sensors/proc/find_sensors()
-	for(var/obj/machinery/shipsensors/S in SSmachines.machinery)
+	for(var/obj/machinery/shipsensors/S in SSmachines.all_machinery)
 		if (S.z in GetConnectedZlevels(z))
 			sensors = S
 			break

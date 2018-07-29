@@ -1,5 +1,5 @@
 // Areas.dm
-
+GLOBAL_LIST_EMPTY(areas)
 
 
 // ===
@@ -7,6 +7,7 @@
 	var/global/global_uid = 0
 	var/uid
 	var/area_flags
+	var/holomap_color
 
 /area/New()
 	icon_state = ""
@@ -21,6 +22,8 @@
 		luminosity = 0
 	else
 		luminosity = 1
+		
+	GLOB.areas += src
 
 	..()
 

@@ -46,7 +46,7 @@
 		.= res
 
 /proc/get_area_name(N) //get area by its name
-	for(var/area/A in world)
+	for(var/area/A in GLOB.areas)
 		if(A.name == N)
 			return A
 	return 0

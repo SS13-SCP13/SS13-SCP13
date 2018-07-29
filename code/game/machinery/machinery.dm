@@ -121,6 +121,7 @@ Class Procs:
 	if(d)
 		set_dir(d)
 	START_PROCESSING(SSmachines, src)
+	SSmachines.all_machinery += src
 
 /obj/machinery/Destroy()
 	STOP_PROCESSING(SSmachines, src)
@@ -130,6 +131,7 @@ Class Procs:
 				qdel(A)
 			else // Otherwise we assume they were dropped to the ground during deconstruction, and were not removed from the component_parts list by deconstruction code.
 				component_parts -= A
+	SSmachines.all_machinery -= src 
 	. = ..()
 
 /obj/machinery/Process()//If you dont use process or power why are you here

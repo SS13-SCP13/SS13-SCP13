@@ -415,7 +415,8 @@ var/global/datum/controller/occupations/job_master
 				H.forceMove(S.loc)
 			else
 				var/datum/spawnpoint/spawnpoint = get_spawnpoint_for(H.client, rank)
-				H.forceMove(pick(spawnpoint.turfs))
+				if (spawnpoint.turfs.len)
+					H.forceMove(pick(spawnpoint.turfs))
 
 			// Moving wheelchair if they have one
 			if(H.buckled && istype(H.buckled, /obj/structure/bed/chair/wheelchair))
@@ -463,7 +464,10 @@ var/global/datum/controller/occupations/job_master
 				W.buckled_mob = H
 				W.add_fingerprint(H)
 
-		to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
+		to_chat(H, "<b>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</b>")
+
+		if(job.duties != "")
+			to_chat(H, "<span class = 'notice'>[job.duties]</span>")
 
 		if(job.supervisors)
 			to_chat(H, "<b>As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
@@ -480,7 +484,7 @@ var/global/datum/controller/occupations/job_master
 			if(H.char_branch && H.char_branch.email_domain)
 				domain = H.char_branch.email_domain
 			else
-				domain = "freemail.nt"
+				domain = "foundation.ds90"
 			var/sanitized_name = sanitize(replacetext(replacetext(lowertext(H.real_name), " ", "."), "'", ""))
 			var/complete_login = "[sanitized_name]@[domain]"
 
@@ -631,7 +635,7 @@ var/global/datum/controller/occupations/job_master
 
 /datum/controller/occupations/proc/get_roundstart_spawnpoint(var/rank)
 	var/list/loc_list = list()
-	for(var/obj/effect/landmark/start/sloc in landmarks_list)
+	for(var/obj/effect/landmark/start/sloc in global.landmark_list)
 		if(sloc.name != rank)	continue
 		if(locate(/mob/living) in sloc.loc)	continue
 		loc_list += sloc
