@@ -1,3 +1,21 @@
+/hook/roundstart/proc/bundle_loose_papers()
+	var/list/tile2paper = list()
+	for (var/obj/item/weapon/paper in global.item_list)
+		if (paper.type == /obj/item/weapon/paper && isturf(paper.loc) && !tile2paper[paper.loc])
+			tile2paper[paper.loc] = list()
+		if (tile2paper[paper.loc])
+			tile2paper[paper.loc] += paper 
+		
+	for (var/turf in tile2paper)
+		var/list = tile2paper[turf]
+		if (length(list) > 1)
+			var/obj/item/weapon/paper_bundle/PB = new /obj/item/weapon/paper_bundle (turf)
+			for (var/paper in list)
+				var/obj/item/weapon/paper/P = paper 
+				PB.insert_sheet_at(null, PB.pages.len+1, P)
+			PB.update_icon()
+	return TRUE
+
 /*
  * Paper
  * also scraps of paper
