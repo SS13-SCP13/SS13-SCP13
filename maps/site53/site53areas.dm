@@ -169,3 +169,8 @@
 /area/site53/maintenance/surface
 	name = "\improper Tram Hub Maintenance"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/ulcz
+	name = "\improper SCP-151"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
