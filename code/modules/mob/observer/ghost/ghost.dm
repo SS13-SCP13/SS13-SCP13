@@ -283,24 +283,45 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	if(!fh.show_entry()) return
 	ManualFollow(fh.followed_instance)
-
+	
+/mob/observer/ghost/verb/become_classd()
+	set category = "Ghost"
+	set name = "Become D-Class"
+	set desc = "Spawn in as a new D-Class."
+	if (world.time - timeofdeath >= 5 MINUTES)
+		if (ticker.current_state == GAME_STATE_PLAYING)
+			// create and possess a new mob
+			var/mob/living/carbon/human/H = new
+			job_master.EquipRank(H, "Class D", TRUE)
+			H.do_possession(src)
+			// send us to the spawnpoint 
+			var/datum/spawnpoint/spawnpoint = job_master.get_spawnpoint_for(H.client, "Class D")
+			H.loc = pick(spawnpoint.turfs)
+			// we failed to spawn
+			if (istype(H.loc, /turf/space))
+				H.loc = get_turf(job_master.get_roundstart_spawnpoint("Class D"))
+		else 
+			to_chat(src, "<span class = 'danger'>The game has not started yet, or has already ended.</span>")
+	else 
+		to_chat(src, "<span class = 'danger'>You cannot spawn as a D-Class for [round(((5 MINUTES) - (world.time - timeofdeath))/600)] more minutes.</span>")
+				
 /mob/observer/ghost/verb/become_scp()
 	set category = "Ghost"
-	set name = "Join as SCP"
+	set name = "Become SCP"
 	set desc = "Take control of a clientless SCP."
 
-	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
-	if (security_state.current_security_level.name in list("code red", "code delta", "code black"))
-		var/list/scps = list()
-		for (var/scp106 in GLOB.scp106s)
-			var/mob/M = scp106
-			if (!M.client)
-				scps += M
-		// add new humanoid SCPs here or they won't be playable - Kachnov
-		if (scps.len)
-			var/mob/living/scp = input(src, "Which SCP do you want to take control of?") as null|anything in scps
-			if (scp)
-				if (!scp.client)
+	if (world.time - timeofdeath >= 5 MINUTES)
+		var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
+		if (security_state.current_security_level.name in list("code red", "code delta", "code black"))
+			var/list/scps = list()
+			for (var/scp106 in GLOB.scp106s)
+				var/mob/M = scp106
+				if (!M.client)
+					scps += M
+			// add new humanoid SCPs here or they won't be playable - Kachnov
+			if (scps.len)
+				var/mob/living/scp = input(src, "Which SCP do you want to take control of?") as null|anything in scps
+				if (scp && !scp.client)
 					scp.do_possession(src)
 					if (ishuman(scp))
 						scp.verbs -= list(
@@ -337,11 +358,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 						)
 				else
 					src << "<span class = 'danger'>This SCP has already been taken by someone else.</span>"
-
+			else
+				src << "<span class = 'danger'>There are no available SCPs.</span>"
 		else
-			src << "<span class = 'danger'>There are no available SCPs.</span>"
+			src << "<span class = 'danger'>You cannot take control of a SCP until the security level is Red, Delta, or Black.</span>"
 	else
-		src << "<span class = 'danger'>You cannot take control of a SCP until the security level is Red, Delta, or Black.</span>"
+		src << "<span class = 'danger'>You cannot spawn as a SCP for [round(((5 MINUTES) - (world.time - timeofdeath))/600)] more minutes.</span>"
 
 
 /mob/observer/ghost/proc/ghost_to_turf(var/turf/target_turf)
