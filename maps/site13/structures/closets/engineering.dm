@@ -14,7 +14,7 @@
 /obj/structure/closet/secure_closet/engineering_chief_site13/WillContain()
 	return list(
 		/obj/item/clothing/under/hazard,
-		/obj/item/clothing/under/solgov/utility/fleet/engineering,
+		/obj/item/clothing/under/hazard,
 		/obj/item/clothing/accessory/storage/brown_vest,
 		/obj/item/blueprints,
 		/obj/item/clothing/head/hardhat/white,
@@ -51,7 +51,7 @@
 /obj/structure/closet/secure_closet/engineering_site13/WillContain()
 	return list(
 		/obj/item/clothing/under/hazard,
-		/obj/item/clothing/under/solgov/utility/fleet/engineering,
+		/obj/item/clothing/under/hazard,
 		/obj/item/clothing/accessory/storage/brown_vest,
 		/obj/item/weapon/storage/belt/utility/full,
 		/obj/item/clothing/suit/storage/hazardvest,
@@ -76,7 +76,7 @@
 
 /obj/structure/closet/secure_closet/engineering_contractor/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/fleet/engineering,
+		/obj/item/clothing/under/hazard,
 		/obj/item/clothing/accessory/storage/webbing,
 		/obj/item/weapon/storage/belt/utility/full,
 		/obj/item/clothing/suit/storage/hazardvest,
@@ -99,7 +99,7 @@
 /obj/structure/closet/secure_closet/engineering_senior/WillContain()
 	return list(
 		/obj/item/clothing/under/hazard,
-		/obj/item/clothing/under/solgov/utility/fleet/engineering,
+		/obj/item/clothing/under/hazard,
 		/obj/item/clothing/accessory/storage/brown_vest,
 		/obj/item/clothing/suit/storage/hazardvest,
 		/obj/item/clothing/mask/gas,

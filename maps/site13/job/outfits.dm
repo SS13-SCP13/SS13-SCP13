@@ -29,7 +29,7 @@
 
 /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	name = OUTFIT_JOB_NAME("Chief Engineer")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
+	uniform = /obj/item/clothing/under/hazard
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	belt = /obj/item/weapon/storage/belt/utility/full
@@ -180,7 +180,7 @@
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	name = OUTFIT_JOB_NAME("Junior Engineer")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
+	uniform = /obj/item/clothing/under/hazard
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2
 	belt = /obj/item/weapon/storage/belt/utility/full
@@ -188,7 +188,7 @@
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/eng
 	name = OUTFIT_JOB_NAME("Engineer")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
+	uniform = /obj/item/clothing/under/hazard
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl3
 	belt = /obj/item/weapon/storage/belt/utility/full
@@ -196,7 +196,7 @@
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/seneng
 	name = OUTFIT_JOB_NAME("Senior Engineer")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
+	uniform = /obj/item/clothing/under/hazard
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	belt = /obj/item/weapon/storage/belt/utility/full
@@ -204,7 +204,7 @@
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/conteng
 	name = OUTFIT_JOB_NAME("Containment Engineer")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
+	uniform = /obj/item/clothing/under/hazard
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	belt = /obj/item/weapon/storage/belt/utility/full
