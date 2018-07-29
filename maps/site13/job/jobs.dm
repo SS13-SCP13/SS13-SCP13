@@ -314,7 +314,7 @@
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
-	access = list(access_sciencelvl1)
+	access = list(access_sciencelvl1, access_sciencelvl2)
 	minimal_access = list()
 
 /datum/job/scientist
@@ -335,7 +335,7 @@
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
-	access = list(access_sciencelvl1, access_sciencelvl2)
+	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
 /datum/job/seniorscientist

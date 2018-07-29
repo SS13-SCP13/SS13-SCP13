@@ -27,6 +27,7 @@
 		/obj/item/clothing/gloves/thick,
 		/obj/item/weapon/storage/box/handcuffs,
 		/obj/item/clothing/accessory/kneepads,
+		/obj/item/device/flashlight/maglight,
 	)
 
 /obj/structure/closet/secure_closet/mtf/commander
@@ -57,6 +58,7 @@
 		/obj/item/clothing/gloves/thick,
 		/obj/item/weapon/storage/box/handcuffs,
 		/obj/item/clothing/accessory/kneepads,
+		/obj/item/device/flashlight/maglight,
 	)
 
 /obj/structure/closet/secure_closet/mtf/nco
@@ -84,6 +86,7 @@
 		/obj/item/clothing/gloves/thick,
 		/obj/item/weapon/storage/box/handcuffs,
 		/obj/item/clothing/accessory/kneepads,
+		/obj/item/device/flashlight/maglight,
 	)
 
 /obj/structure/closet/secure_closet/mtf/co
@@ -114,6 +117,7 @@
 		/obj/item/clothing/gloves/thick,
 		/obj/item/weapon/storage/box/handcuffs,
 		/obj/item/clothing/accessory/kneepads,
+		/obj/item/device/flashlight/maglight,
 	)
 
 /obj/structure/closet/secure_closet/mtf/breachautomatics
