@@ -1,17 +1,3 @@
-//Shouldn't be a lot in here, only torch versions of existing machines that need a different access req or something along those lines.
-
-/obj/machinery/vending/medical/torch
-	req_access = list(access_medical)
-
-/obj/machinery/drone_fabricator/torch
-	fabricator_tag = "SEV Torch Maintenance"
-
-/obj/machinery/drone_fabricator/torch/adv
-	name = "advanced drone fabricator"
-	fabricator_tag = "SFV Arrow Maintenance"
-	drone_type = /mob/living/silicon/robot/drone/construction
-
-//telecommunications gubbins for torch-specific networks
 
 /obj/machinery/telecomms/hub/preset
 	id = "Hub"
@@ -36,24 +22,6 @@
 	id = "Utility Server"
 	freq_listening = list(EXP_FREQ)
 	autolinkers = list("Exploration")
-
-// Suit cyclers and storage
-/obj/machinery/suit_cycler/exploration
-	name = "Exploration suit cycler"
-	model_text = "Exploration"
-	req_access = list(access_explorer)
-	departments = list("Exploration")
-	species = list(SPECIES_HUMAN,SPECIES_TAJARA,SPECIES_SKRELL)
-
-/obj/machinery/suit_storage_unit/explorer
-	name = "Exploration Voidsuit Storage Unit"
-	suit_type = /obj/item/clothing/suit/space/void/exploration
-	helmet_type = /obj/item/clothing/head/helmet/space/void/exploration
-	boots_type = /obj/item/clothing/shoes/magboots
-	tank_type = /obj/item/weapon/tank/oxygen
-	mask_type = /obj/item/clothing/mask/breath
-	req_access = list(access_explorer)
-	islocked = 1
 
 /obj/machinery/vending/security
 	name = "SecTech"

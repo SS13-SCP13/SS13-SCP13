@@ -9,8 +9,6 @@
 	#include "site13_shuttles.dm"
 	#include "items/clothing.dm"
 	#include "items/cards_ids.dm"
-	#include "items/encryption_keys.dm"
-	#include "items/headsets.dm"
 	#include "items/items.dm"
 	#include "items/manuals.dm"
 	#include "items/stamps.dm"

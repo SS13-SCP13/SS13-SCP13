@@ -30,7 +30,6 @@
 /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	name = OUTFIT_JOB_NAME("Chief Engineer")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
-	l_ear = /obj/item/device/radio/headset/heads/ce
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	belt = /obj/item/weapon/storage/belt/utility/full
@@ -57,7 +56,6 @@
 
 /decl/hierarchy/outfit/job/site90/crew/command/cos
 	name = OUTFIT_JOB_NAME("Guard Commander")
-	l_ear = /obj/item/device/radio/headset/heads/cos
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl5
