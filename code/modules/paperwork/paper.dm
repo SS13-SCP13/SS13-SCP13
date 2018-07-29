@@ -1,7 +1,7 @@
 /hook/roundstart/proc/bundle_loose_papers()
 	var/list/tile2paper = list()
 	for (var/obj/item/weapon/paper in global.item_list)
-		if (paper.type == /obj/item/weapon/paper && isturf(paper.loc) && !tile2paper[paper.loc])
+		if (isturf(paper.loc) && !tile2paper[paper.loc])
 			tile2paper[paper.loc] = list()
 		if (tile2paper[paper.loc])
 			tile2paper[paper.loc] += paper 
