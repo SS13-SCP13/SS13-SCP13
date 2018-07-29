@@ -261,7 +261,7 @@
 	)
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
 	minimal_access = list()
 
 /datum/job/enlistedofficer
@@ -287,7 +287,7 @@
 	)
 
 
-	access = list(access_mtflvl1)
+	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
