@@ -7,6 +7,7 @@
 	#include "site13_ranks.dm"
 	#include "site13_securitystate.dm"
 	#include "site13_shuttles.dm"
+	#include "items/clothing.dm"
 	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
 	#include "items/headsets.dm"

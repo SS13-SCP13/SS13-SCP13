@@ -261,7 +261,7 @@
 	)
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
 	minimal_access = list()
 
 /datum/job/enlistedofficer
@@ -287,7 +287,7 @@
 	)
 
 
-	access = list(access_mtflvl1)
+	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -314,7 +314,7 @@
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
-	access = list(access_sciencelvl1)
+	access = list(access_sciencelvl1, access_sciencelvl2)
 	minimal_access = list()
 
 /datum/job/scientist
@@ -335,7 +335,7 @@
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 
 
-	access = list(access_sciencelvl1, access_sciencelvl2)
+	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
 /datum/job/seniorscientist

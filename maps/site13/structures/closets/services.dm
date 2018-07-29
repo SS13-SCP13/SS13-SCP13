@@ -20,7 +20,7 @@
 		/obj/item/clothing/mask/bandana/botany,
 		/obj/item/clothing/head/bandana/green,
 		/obj/item/weapon/reagent_containers/spray/plantbgone,
-		new /datum/atom_creator/weighted(list(/obj/item/clothing/suit/apron, /obj/item/clothing/suit/apron/overalls)),
+		/obj/item/clothing/suit/apron,
 	)
 
 
@@ -32,6 +32,7 @@
 
 /obj/structure/closet/jcloset/site13/WillContain()
 	return list(
+		/obj/item/clothing/suit/apron/overalls,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/caution = 4,

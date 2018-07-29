@@ -45,21 +45,21 @@
 		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
 	)
 
-/obj/structure/closet/secure_closet/scientist_torch
-	name = "researcher's locker"
-//	req_one_access = list(access_research)
+/obj/structure/closet/secure_closet/scientist/site13
+	name = "scientist's locker"
+	req_access = list(access_sciencelvl2)
 	icon_state = "secureres1"
 	icon_closed = "secureres"
 	icon_locked = "secureres1"
 	icon_opened = "secureresopen"
 	icon_off = "secureresoff"
 
-/obj/structure/closet/secure_closet/scientist_torch/WillContain()
+/obj/structure/closet/secure_closet/scientist/site13/WillContain()
 	return list(
-		/obj/item/clothing/under/rank/scientist,
+
 		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
-		/obj/item/clothing/shoes/white,
+		/obj/item/clothing/shoes/laceup,
 		/obj/item/weapon/cartridge/signal/science,
 		/obj/item/device/radio/headset/torchnanotrasen,
 		/obj/item/clothing/mask/gas/half,
@@ -86,13 +86,29 @@
 	icon_opened = "dsopen"
 	icon_broken = "dsbroken"
 	icon_off = "dsoff"
+
 /obj/structure/closet/secure_closet/scpscience/directorofscience/WillContain()
 	return list(
-		/obj/item/weapon/storage/backpack/dufflebag,
-		/obj/item/clothing/under/rank/scientist,
+		/obj/item/clothing/suit/bio_suit/scientist,
+		/obj/item/clothing/head/bio_hood/scientist,
+
+		/obj/item/clothing/suit/storage/toggle/labcoat,
+		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/clothing/suit/storage/toggle/labcoat/rd,
-		/obj/item/clothing/shoes/white,
+		/obj/item/clothing/shoes/laceup,
+		/obj/item/clothing/gloves/latex,
+		/obj/item/clothing/glasses/science,
+		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/clothing/mask/gas,
+		/obj/item/device/megaphone,
 		/obj/item/weapon/clipboard,
-		/obj/item/taperoll/research
+		/obj/item/weapon/folder,
+		/obj/item/device/taperecorder,
+		/obj/item/device/tape/random = 3,
+		/obj/item/device/camera,
+		/obj/item/taperoll/research,
+		/obj/item/clothing/glasses/welding/superior,
+		/obj/item/weapon/storage/box/secret_project_disks/science,
+		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel_tox)),
+		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
 	)

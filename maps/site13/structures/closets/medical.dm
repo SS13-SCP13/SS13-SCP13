@@ -140,5 +140,5 @@
 		/obj/item/weapon/storage/pill_bottle/methylphenidate,
 		/obj/item/weapon/storage/pill_bottle/paroxetine,
 		/obj/item/clothing/under/rank/psych/turtleneck,
-		/obj/item/clothing/under/rank/psych,
+		/obj/item/clothing/under/rank/psych/turtleneck/sweater,
 	)

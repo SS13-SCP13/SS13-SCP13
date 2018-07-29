@@ -786,7 +786,7 @@
 "aph" = (/obj/structure/bed/chair,/obj/effect/landmark{name = "endgame_exit"},/turf/unsimulated/beach/sand,/area/beach)
 "api" = (/mob/living/simple_animal/crab/Coffee,/turf/unsimulated/beach/sand,/area/beach)
 "apj" = (/obj/machinery/door/unpowered/simple/silver,/turf/unsimulated/floor{dir = 8; icon_state = "wood"},/area/wizard_station)
-"apk" = (/turf/unsimulated/wall{desc = "A secure airlock. Doesn't look like you can get through easily."; icon = 'icons/obj/doors/Doorele.dmi'; icon_state = "door_locked"; name = "Outer Gate"},/area/ninja_dojo/dojo)
+"apk" = (/turf/unsimulated/wall{desc = "A secure airlock. Doesn't look like you can get through easily."; name = "Outer Gate"},/area/ninja_dojo/dojo)
 "apl" = (/obj/effect/floor_decal/carpet{dir = 8},/turf/unsimulated/floor{dir = 2; icon_state = "carpet"},/area/ninja_dojo/dojo)
 "apm" = (/turf/unsimulated/floor{dir = 2; icon_state = "carpet"},/area/ninja_dojo/dojo)
 "apn" = (/obj/effect/floor_decal/carpet{dir = 4},/turf/unsimulated/floor{dir = 2; icon_state = "carpet"},/area/ninja_dojo/dojo)
