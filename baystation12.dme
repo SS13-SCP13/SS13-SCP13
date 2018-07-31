@@ -2233,6 +2233,7 @@
 #include "code\modules\SCP\SCPs\SCP-113.dm"
 #include "code\modules\SCP\SCPs\SCP-151.dm"
 #include "code\modules\SCP\SCPs\SCP-294.dm"
+#include "code\modules\SCP\SCPs\SCP-513.dm"
 #include "code\modules\scripting\Errors.dm"
 #include "code\modules\scripting\IDE.dm"
 #include "code\modules\scripting\Options.dm"
