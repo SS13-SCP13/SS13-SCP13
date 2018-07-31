@@ -41,7 +41,7 @@
 		var/next_scare = victims[M]
 		var/next_brainhurt = brain_damage_timing[M]
 		if (M.sleeping > 4) //
-			to_chat(M, "<span class='userdanger'>[pick(assault_messages)]</span>")
+			to_chat(M, "<span class='danger'>[pick(assault_messages)]</span>")
 			M.sleeping = 0
 			M.adjustBruteLoss(rand(1,7))
 		else if (world.time >= next_scare)
