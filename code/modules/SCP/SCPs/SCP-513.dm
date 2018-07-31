@@ -14,7 +14,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/scp513/attack_self(var/mob/user)
+/obj/item/scp513/proc/ring(mob/living/user)
 	if(user in victims)
 		to_chat(user, "<span class='notice'>I rung it once, and I felt terrible. Why the hell would I that again?!</span>")
 		return
@@ -24,6 +24,15 @@
 		if(!(M in victims))
 			victims += M
 			brain_damage_timing[M] = world.time + rand(3000, 6500)
+
+/obj/item/scp513/pickup(mob/living/user)
+	. = ..()
+	if(user.a_intent == I_HURT)
+		to_chat(user, "<span class='danger'><b><i>You accidentaly ring \the [src]!</i></b></span>")
+		ring(user)
+
+/obj/item/scp513/attack_self(mob/living/user)
+	ring(user)
 
 /obj/item/scp513/Process()
 	for(var/mob/living/carbon/M in victims)
