@@ -30,15 +30,8 @@
 	badge_string = "The SCP Foundation"
 	slot_flags = SLOT_MASK | SLOT_TIE
 
-/obj/item/clothing/accessory/badge/solgov/o5
-	name = "representative's badge"
-	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a representative of the O5 Council."
-	icon_state = "solbadge"
-	slot_flags = SLOT_TIE
-	badge_string = "The SCP Foundation"
-
 /obj/item/clothing/accessory/badge/solgov/ethics
-	name = "representative's badge"
+	name = "Ethics Commitee Badge"
 	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a representative of the Ethics Commitee."
 	icon_state = "solbadge"
 	slot_flags = SLOT_TIE

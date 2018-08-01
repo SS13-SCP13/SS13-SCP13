@@ -266,22 +266,22 @@
 /area/site13/surface/shuttle/helipad1
 	icon_state = "shuttle"
 	dynamic_lighting = 0
-	area_flags = HIDE_FROM_HOLOMAP
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
 
 /area/site13/surface/shuttle/helipad2
 	icon_state = "shuttle"
 	dynamic_lighting = 0
-	area_flags = HIDE_FROM_HOLOMAP
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
 
 /area/site13/surface/shuttle/helipad3
 	icon_state = "shuttle"
 	dynamic_lighting = 0
-	area_flags = HIDE_FROM_HOLOMAP
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
 
 /area/site13/surface/shuttle/helipad4
 	icon_state = "shuttle"
 	dynamic_lighting = 0
-	area_flags = HIDE_FROM_HOLOMAP
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
 
 /area/site13/surface/security/headarmory
 	name = "\improper External Emergency Storage"
