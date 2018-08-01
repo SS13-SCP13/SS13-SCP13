@@ -28,7 +28,7 @@
 /obj/item/scp513/pickup(mob/living/user)
 	. = ..()
 	if(user.a_intent == I_HURT)
-		to_chat(user, "<span class='danger'><b><i>You accidentaly ring \the [src]!</i></b></span>")
+		to_chat(user, "<span class='danger'><b><i>You accidentally ring \the [src]!</i></b></span>")
 		ring(user)
 
 /obj/item/scp513/attack_self(mob/living/user)
@@ -36,7 +36,7 @@
 
 /obj/item/scp513/Process()
 	for(var/mob/living/carbon/M in victims)
-		if(prob(0.5))
+		if(prob(2.5))
 			to_chat(M, "<span class='warning'><i>[pick(paranoia_messages)]</i></span>")
 		var/next_scare = victims[M]
 		var/next_brainhurt = brain_damage_timing[M]
