@@ -107,6 +107,7 @@
 		/obj/item/weapon/hand_labeler,
 		/obj/item/device/holowarrant,
 		/obj/item/clothing/gloves/thick,
+		/obj/item/clothing/accessory/kneepads,
 		/obj/item/device/flashlight/maglight,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
@@ -178,6 +179,7 @@
 		/obj/item/weapon/handcuffs,
 		/obj/item/device/radio,
 		/obj/item/clothing/gloves/thick,
+		/obj/item/clothing/accessory/kneepads,
 		/obj/item/weapon/storage/box/handcuffs
 	)
 
@@ -205,6 +207,7 @@
 		/obj/item/device/radio,
 		/obj/item/weapon/gun/projectile/automatic/tactical,
 		/obj/item/ammo_magazine/tac9mm,
+		/obj/item/clothing/accessory/kneepads,
 		/obj/item/ammo_magazine/tac9mm,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/weapon/storage/box/handcuffs
@@ -231,6 +234,7 @@
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
+		/obj/item/clothing/accessory/kneepads,
 		/obj/item/device/radio,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/weapon/storage/box/handcuffs
@@ -261,6 +265,7 @@
 		/obj/item/weapon/gun/projectile/automatic/tactical,
 		/obj/item/ammo_magazine/tac9mm,
 		/obj/item/ammo_magazine/tac9mm,
+		/obj/item/clothing/accessory/kneepads,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/weapon/storage/box/handcuffs
 	)

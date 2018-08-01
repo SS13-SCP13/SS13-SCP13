@@ -35,3 +35,4 @@ delete-after: True
 changes: 
   - tweak: "Altered in-game date."
   - soundadd: "Altered sound for the vote panel to be less startling."
+  - rscadd: "Adds kneepads to the Security lockers."
