@@ -44,11 +44,35 @@
 			to_chat(M, "<span class='danger'>[pick(assault_messages)]</span>")
 			M.sleeping = 0
 			M.adjustBruteLoss(rand(1,7))
+			display_513_1(get_step(get_turf(src), pick(GLOB.cardinal)), M, 17)
 		else if (world.time >= next_scare)
 			victims[M] = world.time + rand(100,1200)
+			display_513_1(find_safe_spot(get_turf(M), M.client.view), M, 17)
 			to_chat(M, "<span class='warning'><i>[pick(spook_messages)]</i></span>")
 		else if (world.time >= next_brainhurt)
 			brain_damage_timing[M] = world.time + 5
 			var/obj/item/organ/internal/brain = M.internal_organs_by_name[BP_BRAIN]
 			if(brain)
 				brain.take_damage(rand(4,6))
+
+/obj/item/scp513/proc/display_513_1(turf/spot, mob/living/target, length = 20, fade=TRUE)
+	var/image/top_img = image('icons/obj/scp.dmi', spot, "scp_513_top")
+	top_img.pixel_y = 32
+	var/image/bottom_img = image('icons/obj/scp.dmi', spot, "scp_513_bottom")
+	target.client.images |= top_img
+	target.client.images |= bottom_img
+	if(fade)
+		animate(top_img, alpha = 0, time = length, 1, LINEAR_EASING)
+		animate(bottom_img, alpha = 0, time = length, 1, LINEAR_EASING)
+	spawn(length)
+		target.client.images -= top_img
+		target.client.images -= bottom_img
+		qdel(top_img)
+		qdel(bottom_img)
+
+/obj/item/scp513/proc/find_safe_spot(turf/spot, range=7, min_dist = 3)
+	var/list/valid_turfs = list()
+	for(var/turf/T in view(spot, range))
+		if(isfloor(T) && get_dist(spot, T) >= min_dist)
+			valid_turfs += T
+	return pick(valid_turfs)
