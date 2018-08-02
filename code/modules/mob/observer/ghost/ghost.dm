@@ -292,14 +292,18 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if (ticker.current_state == GAME_STATE_PLAYING)
 			// create and possess a new mob
 			var/mob/living/carbon/human/H = new
-			job_master.EquipRank(H, "Class D", TRUE)
-			H.do_possession(src)
-			// send us to the spawnpoint 
-			var/datum/spawnpoint/spawnpoint = job_master.get_spawnpoint_for(H.client, "Class D")
-			H.loc = pick(spawnpoint.turfs)
-			// we failed to spawn
-			if (istype(H.loc, /turf/space))
-				H.loc = get_turf(job_master.get_roundstart_spawnpoint("Class D"))
+			var/datum/job/ref = job_master.occupations_by_type[/datum/job/assistant]
+			if (ref && ref.is_position_available())
+				job_master.EquipRank(H, "Class D", TRUE)
+				H.do_possession(src)
+				// send us to the spawnpoint 
+				var/datum/spawnpoint/spawnpoint = job_master.get_spawnpoint_for(H.client, "Class D")
+				H.loc = pick(spawnpoint.turfs)
+				// we failed to spawn
+				if (istype(H.loc, /turf/space))
+					H.loc = get_turf(job_master.get_roundstart_spawnpoint("Class D"))
+			else 
+				to_chat(src, "<span class = 'danger'>This position is not available right now. Wait for another Class-D to die.</span>")
 		else 
 			to_chat(src, "<span class = 'danger'>The game has not started yet, or has already ended.</span>")
 	else 

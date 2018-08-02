@@ -9,9 +9,6 @@
 /datum/job/assistant
 	title = "Class D"
 	department = "Civilian"
-
-	total_positions = -1
-	spawn_positions = -1
 	supervisors = "Foundation Personnel"
 	selection_color = "#E55700"
 	economic_modifier = 1
