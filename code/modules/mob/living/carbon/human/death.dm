@@ -29,7 +29,12 @@
 	BITSET(hud_updateflag, HEALTH_HUD)
 	BITSET(hud_updateflag, STATUS_HUD)
 	BITSET(hud_updateflag, LIFE_HUD)
-
+	
+	// open up a D-Class slot if we're D-Class 
+	if (mind && mind.assigned_role == "Class D")
+		var/datum/job/J = job_master.occupations_by_type[/datum/job/assistant]
+		++J.total_positions
+		
 	//backs up lace if available.
 	var/obj/item/organ/internal/stack/s = get_organ(BP_STACK)
 	if(s)

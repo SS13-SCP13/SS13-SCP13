@@ -18,7 +18,8 @@
 	var/list/bad_areas = list()
 	var/area_test_count = 0
 
-	for(var/area/A in world)
+	for(var/area in GLOB.areas)
+		var/area/A = area
 		if(!A.z)
 			continue
 		if(!isPlayerLevel(A.z))
@@ -75,18 +76,18 @@
 	var/wire_test_count = 0
 	var/bad_tests = 0
 	var/turf/T = null
-	var/obj/structure/cable/C = null
 	var/list/cable_turfs = list()
 	var/list/dirs_checked = list()
 
-	for(C in world)
-		T = get_turf(C)
-		cable_turfs |= get_turf(C)
+	for(var/cable in global.cable_list)
+		T = get_turf(cable)
+		cable_turfs |= T
 
 	for(T in cable_turfs)
 		var/bad_msg = "[ascii_red]--------------- [T.name] \[[T.x] / [T.y] / [T.z]\]"
 		dirs_checked.Cut()
-		for(C in T)
+		for(var/cable in T)
+			var/obj/structure/cable/C = cable 
 			wire_test_count++
 			var/combined_dir = "[C.d1]-[C.d2]"
 			if(combined_dir in dirs_checked)
@@ -109,7 +110,8 @@
 /datum/unit_test/wire_dir_and_icon_stat/start_test()
 	var/list/bad_cables = list()
 
-	for(var/obj/structure/cable/C in world)
+	for(var/cable in global.cable_list)
+		var/obj/structure/cable/C = cable
 		var/expected_icon_state = "[C.d1]-[C.d2]"
 		if(C.icon_state != expected_icon_state)
 			bad_cables |= C
@@ -133,7 +135,7 @@
 /datum/unit_test/closet_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/structure/closet/C in world)
+	for(var/obj/structure/closet/C in global.structure_list)
 		if(!C.opened && isPlayerLevel(C.z))
 			var/total_content_size = 0
 			for(var/atom/movable/AM in C.contents)
@@ -157,7 +159,7 @@
 /datum/unit_test/closet_containment_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/structure/closet/C in world)
+	for(var/obj/structure/closet/C in global.structure_list)
 		if(!C.opened && isPlayerLevel(C.z))
 			var/contents_pre_open = C.contents.Copy()
 			C.dump_contents()
@@ -186,7 +188,7 @@
 /datum/unit_test/storage_map_test/start_test()
 	var/bad_tests = 0
 
-	for(var/obj/item/weapon/storage/S in world)
+	for(var/obj/item/weapon/storage/S in global.item_list)
 		if(isPlayerLevel(S.z))
 			var/bad_msg = "[ascii_red]--------------- [S.name] \[[S.type]\] \[[S.x] / [S.y] / [S.z]\]"
 			bad_tests += test_storage_capacity(S, bad_msg)
@@ -300,7 +302,7 @@ datum/unit_test/ladder_check/start_test()
 	var/safe_landmarks = 0
 	var/space_landmarks = 0
 
-	for(var/lm in landmarks_list)
+	for(var/lm in global.landmark_list)
 		var/obj/effect/landmark/landmark = lm
 		if(istype(landmark, /obj/effect/landmark/test/safe_turf))
 			log_debug("Safe landmark found: [log_info_line(landmark)]")
@@ -330,12 +332,12 @@ datum/unit_test/ladder_check/start_test()
 /datum/unit_test/cryopod_comp_check/start_test()
 	var/pass = TRUE
 
-	for(var/obj/machinery/cryopod/C in SSmachines.machinery)
+	for(var/obj/machinery/cryopod/C in SSmachines.all_machinery)
 		if(!C.control_computer)
 			log_bad("[get_area(C)] lacks a cryopod control computer while holding a cryopod.")
 			pass = FALSE
 
-	for(var/obj/machinery/computer/cryopod/C in SSmachines.machinery)
+	for(var/obj/machinery/computer/cryopod/C in SSmachines.all_machinery)
 		if(!(locate(/obj/machinery/cryopod) in get_area(C)))
 			log_bad("[get_area(C)] lacks a cryopod while holding a control computer.")
 			pass = FALSE
@@ -355,7 +357,8 @@ datum/unit_test/ladder_check/start_test()
 /datum/unit_test/camera_nil_c_tag_check/start_test()
 	var/pass = TRUE
 
-	for(var/obj/machinery/camera/C in world)
+	for(var/camera in global.camera_list)
+		var/obj/machinery/camera/C = camera
 		if(!C.c_tag)
 			log_bad("Following camera does not have a c_tag set: [log_info_line(C)]")
 			pass = FALSE
@@ -376,7 +379,8 @@ datum/unit_test/ladder_check/start_test()
 	var/cameras_by_ctag = list()
 	var/checked_cameras = 0
 
-	for(var/obj/machinery/camera/C in world)
+	for(var/camera in global.camera_list)
+		var/obj/machinery/camera/C = camera
 		if(!C.c_tag)
 			continue
 		checked_cameras++
@@ -411,7 +415,7 @@ datum/unit_test/ladder_check/start_test()
 		num2text(SOUTH) = list(list(SOUTH, list(NORTH, WEST)), list(EAST,  list(NORTH, EAST))),
 		num2text(WEST)  = list(list(EAST,  list(NORTH, EAST)), list(SOUTH, list(SOUTH, EAST))))
 
-	for(var/obj/structure/disposalpipe/segment/D in world)
+	for(var/obj/structure/disposalpipe/segment/D in global.structure_list)
 		if(D.icon_state == "pipe-s")
 			if(!(D.dir == SOUTH || D.dir == EAST))
 				log_bad("Following disposal pipe has an invalid direction set: [log_info_line(D)]")
@@ -466,7 +470,7 @@ datum/unit_test/ladder_check/start_test()
 
 /datum/unit_test/simple_pipes_shall_not_face_north_or_west/start_test()
 	var/failures = 0
-	for(var/obj/machinery/atmospherics/pipe/simple/pipe in SSmachines.machinery)
+	for(var/obj/machinery/atmospherics/pipe/simple/pipe in SSmachines.all_machinery)
 		if(!istype(pipe, /obj/machinery/atmospherics/pipe/simple/hidden) && !istype(pipe, /obj/machinery/atmospherics/pipe/simple/visible))
 			continue
 		if(pipe.dir == NORTH || pipe.dir == WEST)
@@ -486,9 +490,9 @@ datum/unit_test/ladder_check/start_test()
 
 /datum/unit_test/shutoff_valves_shall_connect_to_two_different_pipe_networks/start_test()
 	var/failures = 0
-	for(var/obj/machinery/atmospherics/valve/shutoff/SV in SSmachines.machinery)
+	for(var/obj/machinery/atmospherics/valve/shutoff/SV in SSmachines.all_machinery)
 		SV.close()
-	for(var/obj/machinery/atmospherics/valve/shutoff/SV in SSmachines.machinery)
+	for(var/obj/machinery/atmospherics/valve/shutoff/SV in SSmachines.all_machinery)
 		if(SV.network_node1 == SV.network_node2)
 			log_bad("Following shutoff valve does not connect to two different pipe networks: [log_info_line(SV)]")
 			failures++

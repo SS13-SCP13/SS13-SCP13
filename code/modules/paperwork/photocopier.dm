@@ -147,6 +147,10 @@
 
 /obj/machinery/photocopier/proc/copy(var/obj/item/weapon/paper/copy, var/need_toner=1)
 	var/obj/item/weapon/paper/c = new /obj/item/weapon/paper (loc)
+	
+	// writing
+	c.icon_state = copy.icon_state 
+		
 	if(toner > 10)	//lots of toner, make it dark
 		c.info = "<font color = #101010>"
 	else			//no toner? shitty copies for you!

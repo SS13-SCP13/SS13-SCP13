@@ -1,3 +1,4 @@
+GLOBAL_LIST_EMPTY(mineral_turfs)
 var/list/mining_walls = list()
 var/list/mining_floors = list()
 
@@ -41,6 +42,7 @@ var/list/mining_floors = list()
 	if (!mining_walls["[src.z]"])
 		mining_walls["[src.z]"] = list()
 	mining_walls["[src.z]"] += src
+	GLOB.mineral_turfs += src
 	spawn(0)
 		MineralSpread()
 	spawn(2)
@@ -49,6 +51,7 @@ var/list/mining_floors = list()
 /turf/simulated/mineral/Destroy()
 	if (mining_walls["[src.z]"])
 		mining_walls["[src.z]"] -= src
+	GLOB.mineral_turfs -= src
 	return ..()
 
 /turf/simulated/mineral/can_build_cable()

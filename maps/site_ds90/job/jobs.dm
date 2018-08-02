@@ -19,9 +19,19 @@
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
 	allowed_ranks = list(/datum/mil_rank/civ/classd)
+	var/static/list/used_numbers = list()
 
+/datum/job/assistant/equip(var/mob/living/carbon/human/H)
+	..()
+	var/r = rand(100,9000)
+	while (used_numbers.Find(r))
+		r = rand(100,9000)
+	used_numbers += r
+	H.name = "D-[used_numbers[used_numbers.len]]"
+	H.real_name = H.name
 
 /datum/job/captain
+	has_email = TRUE
 	title = "Site Director"
 	supervisors = "the SCP Foundation and O5 Council"
 	minimal_player_age = 20
@@ -40,17 +50,13 @@
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1,
-	access_utilitylvl1,
-	access_utilitylvl2,
-	access_utilitylvl3,
-	access_utilitylvl4,
-	access_utilitylvl5
+	access_adminlvl1
 	)
 	minimal_access = list()
 
 
 /datum/job/hop
+	has_email = TRUE
 	title = "Head of Personnel"
 	supervisors = "the Facility Director"
 	department = "Command"
@@ -72,15 +78,12 @@
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1,
-	access_utilitylvl1,
-	access_utilitylvl2,
-	access_utilitylvl3,
-	access_utilitylvl4
+	access_adminlvl1
 	)
 	minimal_access = list()
 
 /datum/job/commsofficer
+	has_email = TRUE
 	title = "Communications Officer"
 	supervisors = "the Security Commander and Site Director"
 	department = "Command"
@@ -117,6 +120,7 @@
 // AWAITING OVERHAUL
 
 /datum/job/cmo
+	has_email = TRUE
 	title = "Chief Medical Officer"
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_modifier = 10
@@ -129,15 +133,67 @@
 	/datum/mil_rank/security/w2,
 	/datum/mil_rank/security/w3)
 
-	access = list(access_utilitylvl1, access_utilitylvl2, access_utilitylvl3, access_utilitylvl4, access_utilitylvl5)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
 
+// CELLS
 
+/datum/job/cellguardlieutenant
+	has_email = TRUE
+	title = "Cell Guard Lieutenant"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 7
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/o1,
+		/datum/mil_rank/security/o2
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
+	minimal_access = list()
+
+/datum/job/brigofficer
+	has_email = TRUE
+	title = "Cell Guard"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 7
+	spawn_positions = 7
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 5
+	ideal_character_age = 23
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+	/datum/mil_rank/security/e7,
+	/datum/mil_rank/security/e8
+
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
+	minimal_access = list()
 
 // SECURITY
 /datum/job/hos
-	title = "Security Commander"
+	has_email = TRUE
+	title = "Guard Commander"
 	supervisors = "The Facility Director"
 	department = "Security"
 	department_flag = SEC|COM
@@ -160,7 +216,8 @@
 		H.add_skills(rand(60, 75), rand(60,75))
 
 /datum/job/ltofficer
-	title = "Security Lieutenant"
+	has_email = TRUE
+	title = "Guard Lieutenant"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -183,29 +240,11 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
-/datum/job/brigofficer
-	title = "Brig Officer"
-	department = "Security"
-	department_flag = SEC
-	total_positions = 0
-	spawn_positions = 0
-	supervisors = "the Security Commander"
-	economic_modifier = 4
-	alt_titles = null
-	minimal_player_age = 5
-	ideal_character_age = 30
-	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
-	allowed_branches = list(
-		/datum/mil_branch/security
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/security/e7,
-		/datum/mil_rank/security/e8
-	)
+
 
 /datum/job/ncoofficer
-	title = "Security Officer"
+	has_email = TRUE
+	title = "Guard"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -231,7 +270,8 @@
 	minimal_access = list()
 
 /datum/job/enlistedofficer
-	title = "Junior Security Officer"
+	has_email = TRUE
+	title = "Junior Guard"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 6
@@ -262,6 +302,7 @@
 // SCIENCE
 
 /datum/job/juniorscientist
+	has_email = TRUE
 	title = "Junior Scientist"
 	department = "Science"
 	department_flag = SCI
@@ -282,6 +323,7 @@
 	minimal_access = list()
 
 /datum/job/scientist
+	has_email = TRUE
 	title = "Scientist"
 	department = "Science"
 	department_flag = SCI
@@ -302,6 +344,7 @@
 	minimal_access = list()
 
 /datum/job/seniorscientist
+	has_email = TRUE
 	title = "Senior Scientist"
 	department = "Science"
 	department_flag = SCI
@@ -322,8 +365,11 @@
 	minimal_access = list()
 
 /datum/job/rd
+	has_email = TRUE
 	title = "Research Director"
 	supervisors = "Facility Director and the Head of Human Resources"
+	total_positions = 1
+	spawn_positions = 1
 	economic_modifier = 20
 	minimal_player_age = 15
 	ideal_character_age = 60
@@ -348,6 +394,7 @@
 
 
 /datum/job/juneng
+	has_email = TRUE
 	title = "Junior Engineer"
 	total_positions = 4
 	spawn_positions = 4
@@ -375,6 +422,7 @@
 	minimal_access = list()
 
 /datum/job/eng
+	has_email = TRUE
 	title = "Engineer"
 	total_positions = 3
 	spawn_positions = 3
@@ -403,6 +451,7 @@
 	minimal_access = list()
 
 /datum/job/seneng
+	has_email = TRUE
 	title = "Senior Engineer"
 	total_positions = 2
 	spawn_positions = 2
@@ -432,9 +481,10 @@
 	minimal_access = list()
 
 /datum/job/conteng
+	has_email = TRUE
 	title = "Containment Engineer"
 	total_positions = 1
-	spawn_positions = 2
+	spawn_positions = 1
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
 	economic_modifier = 5
@@ -445,7 +495,11 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/w1
+		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/w2,
+		/datum/mil_rank/security/w3,
+		/datum/mil_rank/security/w4,
+		/datum/mil_rank/security/w5
 	)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
@@ -454,6 +508,7 @@
 
 
 /datum/job/chief_engineer
+	has_email = TRUE
 	title = "Chief Engineer"
 	supervisors = "the Security Commander and Facility Director"
 	total_positions = 1
@@ -463,12 +518,15 @@
 	minimal_player_age = 21
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	allowed_branches = list(/datum/mil_branch/security)
-	allowed_ranks = list(/datum/mil_rank/security/o1)
+	allowed_ranks = list(/datum/mil_rank/security/o1, /datum/mil_rank/security/o2)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
+// MEDICAL JOBS.
+
 /datum/job/chemist
+	has_email = TRUE
 	title = "Chemist"
 	department = "Medical"
 	department_flag = MED
@@ -487,6 +545,7 @@
 	minimal_access = list()
 
 /datum/job/psychiatrist
+	has_email = TRUE
 	title = "Psychiatrist"
 	department = "Medical"
 	department_flag = MED
@@ -508,6 +567,7 @@
 	minimal_access = list()
 
 /datum/job/medicaldoctor
+	has_email = TRUE
 	title = "Medical Doctor"
 	department = "Medical"
 	department_flag = MED
@@ -529,6 +589,7 @@
 	minimal_access = list()
 
 /datum/job/virologist
+	has_email = TRUE
 	title = "Virologist"
 	department = "Medical"
 	department_flag = MED
@@ -549,6 +610,7 @@
 	minimal_access = list()
 
 /datum/job/surgeon
+	has_email = TRUE
 	title = "Surgeon"
 	department = "Medical"
 	department_flag = MED
@@ -572,11 +634,12 @@
 //LOGISTICS
 
 /datum/job/qm
+	has_email = TRUE
 	title = "Logistics Officer"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "the Security Commander"
 	selection_color = "#515151"
 	economic_modifier = 5
@@ -596,11 +659,12 @@
 
 
 /datum/job/cargo_tech
+	has_email = TRUE
 	title = "Logistics Specialist"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	selection_color = "#515151"
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
@@ -619,6 +683,7 @@
 // MISC JOBS
 
 /datum/job/janitor
+	has_email = TRUE
 	title = "Janitor"
 	department = "Civilian"
 	department_flag = CIV

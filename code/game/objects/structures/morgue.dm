@@ -425,7 +425,7 @@
 	if(..())
 		return
 	if(src.allowed(user))
-		for (var/obj/structure/crematorium/C in world)
+		for (var/obj/structure/crematorium/C in global.structure_list)
 			if (C.id == id)
 				if (!C.cremating)
 					C.cremate(user)

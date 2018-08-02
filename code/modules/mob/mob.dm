@@ -1,5 +1,6 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
 	STOP_PROCESSING(SSmobs, src)
+	GLOB.mob_list -= src
 	GLOB.dead_mob_list_ -= src
 	GLOB.living_mob_list_ -= src
 	unset_machine()
@@ -41,6 +42,10 @@
 	gun_setting_icon = null
 	ability_master = null
 	zone_sel = null
+	
+/mob/New()
+	..()
+	GLOB.mob_list += src 
 
 /mob/Initialize()
 	. = ..()
@@ -418,7 +423,8 @@
 	var/list/namecounts = list()
 	var/list/creatures = list()
 
-	for(var/obj/O in world)				//EWWWWWWWWWWWWWWWWWWWWWWWW ~needs to be optimised
+	for(var/obj in global.obj_list)
+		var/obj/O = obj 
 		if(!O.loc)
 			continue
 		if(istype(O, /obj/item/weapon/disk/nuclear))
@@ -716,6 +722,9 @@
 
 		if(G.force_stand())
 			lying = 0
+			
+	if (isscp106(src) && !incapacitated(INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_BUCKLED_PARTIALLY))
+		lying = 0
 
 	//Temporarily moved here from the various life() procs
 	//I'm fixing stuff incrementally so this will likely find a better home.

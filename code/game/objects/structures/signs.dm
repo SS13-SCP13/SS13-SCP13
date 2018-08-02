@@ -245,6 +245,12 @@
 	desc = "An extremely long list of names and job titles and a picture of the design team responsible for building this AI Core."
 	icon_state = "kiddieplaque"
 
+/obj/structure/sign/dplaque
+	name = "\improper D-Class Work Assignment Sheet"
+	desc = "Kitchen Duty - 3x, Botany Duty - 4x, Mining & Manual Labor - 6x, Janitorial - 2x."
+	icon_state = "kiddieplaque"
+
+
 /obj/structure/sign/atmosplaque
 	name = "\improper engineering memorial plaque"
 	desc = "This plaque memorializes those engineers and technicians who made the ultimate sacrifice to save their vessel and its crew."
@@ -379,6 +385,26 @@
 /obj/structure/sign/directions/examroom
 	name = "\improper Exam Room"
 	icon_state = "examroom"
+
+/obj/structure/sign/directions/site53/mcr
+	name = "\improper Main Control Room"
+	icon_state = "mcr"
+
+/obj/structure/sign/directions/site53/ez
+	name = "\improper Entrance Zone"
+	icon_state = "ez"
+
+/obj/structure/sign/directions/site53/bunker
+	name = "\improper Secure Bunker"
+	icon_state = "bunker"
+
+/obj/structure/sign/directions/site53/hcz
+	name = "\improper Heavy Containment Zone"
+	icon_state = "hcz"
+
+/obj/structure/sign/directions/site53/lcz
+	name = "\improper Light Containment Zone"
+	icon_state = "lcz"
 
 /obj/structure/sign/deck/bridge
 	name = "\improper Bridge Deck"

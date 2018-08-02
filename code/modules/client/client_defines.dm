@@ -26,6 +26,7 @@
 		///////////////
 	var/ambience_playing= null
 	var/played			= 0
+	var/next_scp106_sound = -1
 
 		////////////
 		//SECURITY//

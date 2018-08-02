@@ -22,9 +22,10 @@
 	var/list/possibleEpicentres = list()
 	var/list/apcs = list()
 
-	for(var/obj/effect/landmark/newEpicentre in landmarks_list)
-		if(newEpicentre.name == "lightsout")
-			possibleEpicentres += newEpicentre
+	for(var/newEpicentre in global.landmark_list)
+		var/obj/effect/landmark/L = newEpicentre
+		if(L.name == "lightsout")
+			possibleEpicentres += L
 
 	if(!possibleEpicentres.len)
 		return
