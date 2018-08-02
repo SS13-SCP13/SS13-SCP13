@@ -263,6 +263,12 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
+/area/site13/surface/tcommsat/office
+	name = "\improper Telecoms Office"
+	icon_state = "red"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
 /area/site13/surface/shuttle/helipad1
 	icon_state = "shuttle"
 	dynamic_lighting = 0
@@ -424,6 +430,12 @@
 
 /area/site13/floor1/rnd/archives
 	name = "\improper Archives"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
+/area/site13/floor1/rnd/flora
+	name = "\improper Flora Lab"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
@@ -726,6 +738,12 @@
 
 /area/site13/floor2/rnd/scp106
 	name = "\improper SCP 106 Containment Chamber"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
+/area/site13/floor2/rnd/servers
+	name = "\improper Server Room"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE

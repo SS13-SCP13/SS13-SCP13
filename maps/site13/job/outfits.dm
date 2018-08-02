@@ -80,7 +80,7 @@
 	name = OUTFIT_JOB_NAME("Guard")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl3
+	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 
@@ -88,7 +88,7 @@
 	name = OUTFIT_JOB_NAME("Junior Guard")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/seclvl1
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 
@@ -99,23 +99,23 @@
 	uniform = /obj/item/clothing/under/suit_jacket/tan
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/laceup
-	id_type = /obj/item/weapon/card/id/sciencelvl2
+	id_type = /obj/item/weapon/card/id/sciencelvl1
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/scientist
 	name = OUTFIT_JOB_NAME("Scientist")
 	uniform = /obj/item/clothing/under/suit_jacket/tan
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
 	shoes = /obj/item/clothing/shoes/laceup
-	id_type = /obj/item/weapon/card/id/sciencelvl3
+	id_type = /obj/item/weapon/card/id/sciencelvl2
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/seniorscientist
 	name = OUTFIT_JOB_NAME("Senior Scientist")
 	uniform = /obj/item/clothing/under/suit_jacket/tan
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/blue
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl4
 	l_pocket = /obj/item/device/radio
@@ -159,7 +159,7 @@
 	name = OUTFIT_JOB_NAME("Guard")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl3
+	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
 	suit = /obj/item/clothing/suit/armor/vest/bgguard
 	head = /obj/item/clothing/head/helmet/bgtactical
@@ -179,7 +179,7 @@
 	name = OUTFIT_JOB_NAME("Junior Guard")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/seclvl1
 	l_pocket = /obj/item/device/radio
 	suit = /obj/item/clothing/suit/armor/vest/bgguard
 	head = /obj/item/clothing/head/helmet/bgtactical
