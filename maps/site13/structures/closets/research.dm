@@ -26,9 +26,7 @@
 		/obj/item/device/analyzer,
 		/obj/item/taperoll/research,
 		/obj/item/clothing/gloves/latex,
-		/obj/item/clothing/glasses/science,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel_tox)),
-		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
+		/obj/item/clothing/glasses/science
 	)
 
 /obj/structure/closet/secure_closet/scpscience/directorofscience
@@ -45,7 +43,6 @@
 	return list(
 		/obj/item/clothing/suit/bio_suit/scientist,
 		/obj/item/clothing/head/bio_hood/scientist,
-
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/clothing/suit/storage/toggle/labcoat/rd,
@@ -62,7 +59,5 @@
 		/obj/item/device/camera,
 		/obj/item/taperoll/research,
 		/obj/item/clothing/glasses/welding/superior,
-		/obj/item/weapon/storage/box/secret_project_disks/science,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/toxins, /obj/item/weapon/storage/backpack/satchel_tox)),
-		new /datum/atom_creator/simple(/obj/item/weapon/storage/backpack/messenger/tox, 50)
+		/obj/item/weapon/storage/box/secret_project_disks/science
 	)

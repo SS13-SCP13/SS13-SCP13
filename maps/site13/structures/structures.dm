@@ -17,6 +17,18 @@
 		/obj/item/weapon/storage/box/handcuffs,
 		/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
 	)
+
+/obj/structure/closet/secure_closet/personal/cabinet/site13
+	icon_state = "cabinetdetective"
+	icon_closed = "cabinetdetective"
+	icon_locked = "cabinetdetective_locked"
+	icon_opened = "cabinetdetective_open"
+	icon_broken = "cabinetdetective_sparks"
+	icon_off = "cabinetdetective_broken"
+
+/obj/structure/closet/secure_closet/personal/cabinet/site13/WillContain()
+	return list(/obj/item/weapon/storage/backpack/satchel/grey/withwallet)
+
 //the ROCK!
 
 /turf/simulated/mineral/random/site13
