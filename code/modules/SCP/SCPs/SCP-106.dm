@@ -9,9 +9,6 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	var/last_y = -1
 	var/last_z = -1
 
-/mob/living/carbon/human/scp106/IsAdvancedToolUser()
-	return FALSE
-
 /datum/scp/SCP_106
 	name = "SCP-106"
 	designation = "106"
@@ -35,6 +32,9 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	if (vis_locs.len)
 		var/atom/A = vis_locs[1]
 		return A.DblClick(location, control, params)
+
+/mob/living/carbon/human/scp106/IsAdvancedToolUser()
+	return FALSE
 
 /mob/living/carbon/human/scp106/New()
 	..()
@@ -124,7 +124,7 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	if (!target || !ishuman(target) || !(src in viewers(world.view, target)))
 
 		var/list/possible_targets = list()
-		for (var/mob/living/L in view())
+		for (var/mob/living/L in oview(world.view, src))
 			possible_targets += L
 
 		var/attempts = 0
@@ -159,13 +159,14 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	getTarget()
 
 	if (!target)
-		return
+		return FALSE
 
-	if (!target in orange(1, src))
+	if (!(target in orange(1, src)))
 		walk_to(src, target)
-		return
+		return TRUE
 
 	scp106_attack(target)
+	return TRUE
 
 /mob/living/carbon/human/scp106/proc/scp106_attack(var/mob/living/target)
 	var/obj/item/grab/G = locate() in src
