@@ -159,11 +159,15 @@ GLOBAL_LIST_EMPTY(scp106_landmarks)
 	getTarget()
 
 	if (!target)
+		walk(src, null)
 		return FALSE
 
 	if (!(target in orange(1, src)))
-		walk_to(src, target)
+		// moves slightly slower than humans
+		walk_to(src, target, 1, 2+config.run_speed)
 		return TRUE
+		
+	walk(src, null)
 
 	scp106_attack(target)
 	return TRUE
