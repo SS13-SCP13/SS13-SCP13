@@ -35,6 +35,6 @@
 	flash_mod =      0.0                    // Unflashable
 
 /datum/species/scp106/handle_npc(var/mob/living/carbon/human/scp106/H)
-	if (!H.client)
-		H.lying = FALSE
-		H.pursueTarget()
+	if (H.loc in GLOB.scp106_floors || !H.pursueTarget())
+		var/turf/T = step_rand(H)
+		H.Move(get_dir(H, T))

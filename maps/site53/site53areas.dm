@@ -170,7 +170,22 @@
 	name = "\improper Tram Hub Maintenance"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
-/area/site53/ulcz
+/area/site53/ulcz/scp151
 	name = "\improper SCP-151"
 	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/llcz/scp500
+	name = "\improper SCP-500"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/llcz/genstorage1
+	name = "\improper General Storage #1"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/llcz/hallways
+	name = "\improper Lower Light Containment Hallway"
+	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
