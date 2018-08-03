@@ -28,6 +28,12 @@
 	name = "intercom (Private)"
 	frequency = AI_FREQ
 
+/obj/item/device/radio/intercom/tram/trams
+	name = "intercom (Tram Control)"
+	broadcasting = 1
+	listening = 1
+	locked_frequency = 1017
+
 /obj/item/device/radio/intercom/specops
 	name = "\improper Spec Ops intercom"
 	frequency = ERT_FREQ
