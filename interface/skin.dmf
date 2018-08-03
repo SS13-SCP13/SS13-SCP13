@@ -1,63 +1,63 @@
 macro "borghotkeymode"
 	elem 
-		name = "TAB"
-		command = ".winset \"mainwindow.macro=borgmacro hotkey_toggle.is-checked=false input.focus=true input.background-color=#D3B5B5\""
+		name = "Tab"
+		command = ".winset \"mainwindow.macro=borgmacro hotkey_toggle.is-checked=false input.focus=true input.background-color=#e0e0e0\""
 	elem 
-		name = "CENTER+REP"
+		name = "Center+REP"
 		command = ".center"
 	elem 
-		name = "NORTHEAST"
+		name = "Northeast"
 		command = ".northeast"
 	elem 
-		name = "SOUTHEAST"
+		name = "Southeast"
 		command = ".southeast"
 	elem 
-		name = "SOUTHWEST"
+		name = "Southwest"
 		command = ".southwest"
 	elem 
-		name = "NORTHWEST"
+		name = "Northwest"
 		command = ".northwest"
 	elem 
-		name = "ALT+WEST"
+		name = "ALT+West"
 		command = "westfaceperm"
 	elem 
-		name = "CTRL+WEST"
+		name = "CTRL+West"
 		command = "westface"
 	elem 
-		name = "WEST+REP"
+		name = "West+REP"
 		command = ".moveleft"
 	elem 
-		name = "ALT+NORTH"
+		name = "ALT+North"
 		command = "northfaceperm"
 	elem 
-		name = "CTRL+NORTH"
+		name = "CTRL+North"
 		command = "northface"
 	elem 
-		name = "NORTH+REP"
+		name = "North+REP"
 		command = ".moveup"
 	elem 
-		name = "ALT+EAST"
+		name = "ALT+East"
 		command = "eastfaceperm"
 	elem 
-		name = "CTRL+EAST"
+		name = "CTRL+East"
 		command = "eastface"
 	elem 
-		name = "EAST+REP"
+		name = "East+REP"
 		command = ".moveright"
 	elem 
-		name = "ALT+SOUTH"
+		name = "ALT+South"
 		command = "southfaceperm"
 	elem 
-		name = "CTRL+SOUTH"
+		name = "CTRL+South"
 		command = "southface"
 	elem 
-		name = "SOUTH+REP"
+		name = "South+REP"
 		command = ".movedown"
 	elem 
-		name = "INSERT"
+		name = "Insert"
 		command = "a-intent right"
 	elem 
-		name = "DELETE"
+		name = "Delete"
 		command = "delete-key-pressed"
 	elem 
 		name = "1"
@@ -162,6 +162,27 @@ macro "borghotkeymode"
 		name = "CTRL+Z"
 		command = "Activate-Held-Object"
 	elem 
+		name = "Numpad1"
+		command = "body-r-leg"
+	elem 
+		name = "Numpad2"
+		command = "body-groin"
+	elem 
+		name = "Numpad3"
+		command = "body-l-leg"
+	elem 
+		name = "Numpad4"
+		command = "body-r-arm"
+	elem 
+		name = "Numpad5"
+		command = "body-chest"
+	elem 
+		name = "Numpad6"
+		command = "body-l-arm"
+	elem 
+		name = "Numpad8"
+		command = "body-toggle-head"
+	elem 
 		name = "F1"
 		command = "adminhelp"
 	elem 
@@ -197,27 +218,6 @@ macro "borghotkeymode"
 	elem 
 		name = "F12"
 		command = "F12"
-	elem 
-		name = "NUMPAD8"
-		command = "body-toggle-head"
-	elem 
-		name = "NUMPAD5"
-		command = "body-chest"
-	elem 
-		name = "NUMPAD4"
-		command = "body-r-arm"
-	elem 
-		name = "NUMPAD6"
-		command = "body-l-arm"
-	elem 
-		name = "NUMPAD2"
-		command = "body-groin"
-	elem 
-		name = "NUMPAD1"
-		command = "body-r-leg"
-	elem 
-		name = "NUMPAD3"
-		command = "body-l-leg"
 
 macro "macro"
 	elem 
@@ -631,7 +631,7 @@ macro "hotkeymode"
 macro "borgmacro"
 	elem 
 		name = "TAB"
-		command = ".winset \"mainwindow.macro=borghotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true input.background-color=#F0F0F0\""
+		command = ".winset \"mainwindow.macro=borghotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true input.background-color=#272727\""
 	elem 
 		name = "CENTER+REP"
 		command = ".center"
@@ -1096,6 +1096,7 @@ window "mainwindow"
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
+		background-color = #272727
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-maximized = true
@@ -1108,6 +1109,7 @@ window "mainwindow"
 		size = 1x1
 		anchor1 = none
 		anchor2 = none
+		background-color = #272727
 		is-visible = false
 		saved-params = ""
 	elem "hotkey_toggle"
@@ -1116,6 +1118,8 @@ window "mainwindow"
 		size = 80x20
 		anchor1 = 100,100
 		anchor2 = none
+		text-color = #ffffff
+		background-color = #272727
 		saved-params = ""
 		text = "Hotkey Toggle"
 		command = ".winset \"mainwindow.macro!=macro ? mainwindow.macro=macro hotkey_toggle.is-checked=false input.focus=true : mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true\""
@@ -1126,6 +1130,7 @@ window "mainwindow"
 		size = 634x416
 		anchor1 = 0,0
 		anchor2 = 100,100
+		background-color = #272727
 		saved-params = "splitter"
 		right = "rpane"
 		is-vert = true
@@ -1145,6 +1150,8 @@ window "mainwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
+		text-color = #ffffff
+		background-color = #272727
 		saved-params = "is-checked"
 		text = "Chat"
 		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
@@ -1157,6 +1164,7 @@ window "mapwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
+		background-color = #272727
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1172,7 +1180,7 @@ window "mapwindow"
 		anchor2 = 100,100
 		font-family = "Arial Rounded MT Bold,Arial Black,Arial,sans-serif"
 		font-size = 7
-		text-color = none
+		background-color = #272727
 		is-default = true
 		saved-params = "icon-size"
 		on-show = ".winset\"mainwindow.mainvsplit.left=mapwindow\""
@@ -1185,6 +1193,7 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
+		background-color = #272727
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1210,6 +1219,7 @@ window "rpane"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
+		background-color = #272727
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
 	elem "rpanewindow"
@@ -1218,6 +1228,7 @@ window "rpane"
 		size = 640x499
 		anchor1 = 0,0
 		anchor2 = 100,100
+		background-color = none
 		saved-params = "splitter"
 		right = "outputwindow"
 		is-vert = false
@@ -1227,6 +1238,10 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
+		font-family = "Verdana"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #40628a
 		saved-params = "is-checked"
 		text = "Rules"
 		command = "rules"
@@ -1237,6 +1252,10 @@ window "rpane"
 		size = 67x16
 		anchor1 = none
 		anchor2 = none
+		font-family = "Verdana"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #40628a
 		saved-params = "is-checked"
 		text = "Changelog"
 		command = "Changelog"
@@ -1247,6 +1266,10 @@ window "rpane"
 		size = 67x16
 		anchor1 = none
 		anchor2 = none
+		font-family = "Verdana"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #40628a
 		saved-params = "is-checked"
 		text = "Lore"
 		command = "Lore"
@@ -1257,6 +1280,10 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
+		font-family = "Verdana"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #40628a
 		saved-params = "is-checked"
 		text = "Forum"
 		command = "forum"
@@ -1267,6 +1294,10 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
+		font-family = "Verdana"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #40628a
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
@@ -1277,6 +1308,10 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
+		font-family = "Verdana"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #40628a
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Text"
@@ -1290,6 +1325,10 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
+		font-family = "Verdana"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #40628a
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Browser"
@@ -1302,6 +1341,10 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
+		font-family = "Verdana"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #40628a
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Info"
@@ -1316,6 +1359,7 @@ window "browserwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Browser"
 		is-pane = true
@@ -1338,6 +1382,8 @@ window "infowindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
+		text-color = #ffffff
+		background-color = #272727
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Info"
 		is-pane = true
@@ -1347,9 +1393,13 @@ window "infowindow"
 		size = 638x477
 		anchor1 = 0,0
 		anchor2 = 100,100
+		text-color = #ffffff
+		background-color = #272727
 		is-default = true
 		saved-params = ""
-		highlight-color = #00aa00
+		tab-text-color = #ffffff
+		tab-background-color = #272727
+		tab-font-family = "Verdana"
 		on-show = ".winset\"rpane.infob.is-visible=true;rpane.browseb.is-visible=true?rpane.infob.pos=130,0:rpane.infob.pos=65,0 rpane.textb.is-visible=true rpane.infob.is-checked=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=infowindow\""
 		on-hide = ".winset\"rpane.infob.is-visible=false;rpane.browseb.is-visible=true?rpane.browseb.is-checked=true rpane.rpanewindow.left=browserwindow:rpane.textb.is-visible=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=\""
 
@@ -1360,6 +1410,7 @@ window "text_editor"
 		size = 360x488
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		is-visible = false
 		border = sunken
 		saved-params = "pos;size;is-minimized;is-maximized"
@@ -1372,6 +1423,7 @@ window "text_editor"
 		size = 104x24
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		saved-params = "is-checked"
 		text = "Exit without saving"
 		command = ""
@@ -1381,6 +1433,7 @@ window "text_editor"
 		size = 104x24
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		saved-params = "is-checked"
 		text = "Save"
 		command = ""
@@ -1390,6 +1443,7 @@ window "text_editor"
 		size = 104x24
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		saved-params = "is-checked"
 		text = "Save + Exit"
 		command = ""
