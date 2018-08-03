@@ -34,6 +34,8 @@
 	if (mind && mind.assigned_role == "Class D")
 		var/datum/job/J = job_master.occupations_by_type[/datum/job/assistant]
 		++J.total_positions
+		for (var/M in GLOB.ghost_mob_list)
+			M << "<span style = 'color:green'><big>A new D-Class slot has been opened. Use the \"Become D-Class\" verb in the Ghost tab to become one.</big></span>"
 		
 	//backs up lace if available.
 	var/obj/item/organ/internal/stack/s = get_organ(BP_STACK)

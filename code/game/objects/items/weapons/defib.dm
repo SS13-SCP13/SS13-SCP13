@@ -264,7 +264,8 @@
 		return "buzzes, \"Patient's chest is obstructed. Operation aborted.\""
 
 /obj/item/weapon/shockpaddles/proc/can_revive(mob/living/carbon/human/H) //This is checked right before attempting to revive
-	if(H.stat == DEAD)
+	// dead or SSD
+	if(H.stat == DEAD || (!H.client && !H.teleop))
 		return "buzzes, \"Resuscitation failed - Severe neurological decay makes recovery of patient impossible. Further attempts futile.\""
 
 /obj/item/weapon/shockpaddles/proc/check_contact(mob/living/carbon/human/H)
