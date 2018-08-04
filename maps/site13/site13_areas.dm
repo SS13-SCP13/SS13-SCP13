@@ -470,8 +470,14 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
-/area/site13/floor1/rnd/securestorage
-	name = "\improper Secure Storage"
+/area/site13/floor1/rnd/securestorage1
+	name = "\improper Secure Storage 1 - SCP 113, SCP 500"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
+/area/site13/floor1/rnd/lowstorage
+	name = "\improper Lesser Anomalous Object Storage"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
@@ -503,6 +509,36 @@
 /area/site13/floor1/medical/cages
 	name = "\improper Animal Cages"
 	icon_state = "exam_room"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/site13/floor1/medical/dboiexam
+	name = "\improper Class D Exam Room"
+	icon_state = "exam_room"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/site13/floor1/medical/dequipstorage
+	name = "\improper Class D Medical Storage"
+	icon_state = "medbay4"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/site13/floor1/medical/dsleeper
+	name = "\improper Class D Treatment Centre"
+	icon_state = "exam_room"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/site13/floor1/medical/dentrance
+	name = "\improper Class D Medical Reception"
+	icon_state = "medbay3"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/site13/floor1/medical/dsurgery
+	name = "\improper Class D Operating Theatre"
+	icon_state = "surgery"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
