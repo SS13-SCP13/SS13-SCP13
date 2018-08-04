@@ -377,4 +377,43 @@
 	..()
 	reagents.add_reagent(/datum/reagent/adrenaline, 5)
 	reagents.add_reagent(/datum/reagent/hyperzine, 10)
+	
+/obj/item/weapon/reagent_containers/syringe/amnestics_a
+	name = "Syringe (Amnestics-A)"
+	desc = "Makes the subject forget memories since before their last experiment today."
 
+/obj/item/weapon/reagent_containers/syringe/amnestics/a/New()
+	..()
+	reagents.add_reagent(/datum/reagent/amnestics/a, 1)
+	mode = SYRINGE_INJECT
+	update_icon()
+	
+/obj/item/weapon/reagent_containers/syringe/amnestics/b
+	name = "Syringe (Amnestics-B)"
+	desc = "Makes the subject forget memories since before they woke up today."
+
+/obj/item/weapon/reagent_containers/syringe/amnestics_b/New()
+	..()
+	reagents.add_reagent(/datum/reagent/amnestics/b, 1)
+	mode = SYRINGE_INJECT
+	update_icon()
+	
+/obj/item/weapon/reagent_containers/syringe/amnestics/c
+	name = "Syringe (Amnestics-C)"
+	desc = "Makes the subject forget memories since before they arrived at the foundation."
+
+/obj/item/weapon/reagent_containers/syringe/amnestics_c/New()
+	..()
+	reagents.add_reagent(/datum/reagent/amnestics/c, 1)
+	mode = SYRINGE_INJECT
+	update_icon()
+	
+/obj/item/weapon/reagent_containers/syringe/amnestics/e
+	name = "Syringe (Amnestics-E)"
+	desc = "Makes the subject a blank slate to be molded however you wish."
+
+/obj/item/weapon/reagent_containers/syringe/amnestics/e/New()
+	..()
+	reagents.add_reagent(/datum/reagent/amnestics/e, 1)
+	mode = SYRINGE_INJECT
+	update_icon()
