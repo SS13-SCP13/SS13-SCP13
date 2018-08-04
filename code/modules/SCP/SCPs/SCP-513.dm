@@ -1,8 +1,14 @@
+/datum/scp/SCP_513
+	name = "SCP-513"
+	designation = "513"
+	classification = EUCLID
+
 /obj/item/scp513
 	name = "rusty cowbell"
 	desc = "An old cowbell, covered in immense amounts of rust."
 	icon = 'icons/SCP/item.dmi'
 	icon_state = "mindfuckcowbell"
+	SCP = /datum/scp/SCP_513
 	var/global/mob/living/carbon/list/victims = list()
 	var/global/mob/living/carbon/list/brain_damage_timing = list()
 	var/static/list/paranoia_messages = list("You feel as if something is watching you...", "It feels as if something is stalking you")
