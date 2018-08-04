@@ -1940,7 +1940,7 @@
 	result = /datum/reagent/nanoblood
 	required_reagents = list(/datum/reagent/dexalinp = 1, /datum/reagent/iron = 1, /datum/reagent/blood = 1)
 	result_amount = 3
-
+/*
 /datum/chemical_reaction/amnestics/a
 	name = "Amnestics-A"
 	result = /datum/reagent/amnestics/a
@@ -1964,3 +1964,4 @@
 	result = /datum/reagent/amnestics/e
 	required_reagents = list(/datum/reagent/ethanol = 80, /datum/reagent/lithium = 10, /datum/reagent/mercury = 10)
 	result_amount = 1
+*/

@@ -313,7 +313,7 @@ obj/item/weapon/reagent_containers/pill/noexcutite/New()
 	..()
 	reagents.add_reagent(/datum/reagent/paroxetine, 10)
 	color = reagents.get_color()
-	
+/*
 /obj/item/weapon/reagent_containers/pill/amnestics/a
 	name = "Amnestics_A (1u)"
 	desc = "Removes all memory up until the last experiment."
@@ -322,7 +322,7 @@ obj/item/weapon/reagent_containers/pill/noexcutite/New()
 	..()
 	reagents.add_reagent(/datum/reagent/amnestics/a, 1)
 	color = reagents.get_color()
-	
+
 /obj/item/weapon/reagent_containers/pill/amnestics/b
 	name = "Amnestics_B (1u)"
 	desc = "Removes all memory up until the subject woke up."
@@ -331,7 +331,7 @@ obj/item/weapon/reagent_containers/pill/noexcutite/New()
 	..()
 	reagents.add_reagent(/datum/reagent/amnestics/b, 1)
 	color = reagents.get_color()
-	
+
 /obj/item/weapon/reagent_containers/pill/amnestics/c
 	name = "Amnestics_C (1u)"
 	desc = "Removes all memory up until the subject arrived at the foundation."
@@ -340,7 +340,7 @@ obj/item/weapon/reagent_containers/pill/noexcutite/New()
 	..()
 	reagents.add_reagent(/datum/reagent/amnestics/c, 1)
 	color = reagents.get_color()
-	
+
 /obj/item/weapon/reagent_containers/pill/amnestics/e
 	name = "Amnestics_E (1u)"
 	desc = "Removes all memories and personality, turning the subject into a blank slate to mold."
@@ -349,3 +349,4 @@ obj/item/weapon/reagent_containers/pill/noexcutite/New()
 	..()
 	reagents.add_reagent(/datum/reagent/amnestics/e, 1)
 	color = reagents.get_color()
+*/
