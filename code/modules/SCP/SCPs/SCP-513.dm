@@ -1,7 +1,7 @@
 /obj/item/scp513
 	name = "rusty cowbell"
 	desc = "An old cowbell, covered in immense amounts of rust."
-	icon = 'icons/obj/scp.dmi'
+	icon = 'icons/SCP/item.dmi'
 	icon_state = "mindfuckcowbell"
 	var/global/mob/living/carbon/list/victims = list()
 	var/global/mob/living/carbon/list/brain_damage_timing = list()
@@ -15,9 +15,6 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/item/scp513/proc/ring(mob/living/user)
-	if(user in victims)
-		to_chat(user, "<span class='notice'>I rung it once, and I felt terrible. Why the hell would I that again?!</span>")
-		return
 	for(var/mob/living/carbon/M in hear(7, get_turf(src)))
 		to_chat(M, "<span class='danger'><i>\The [src] rings, sending chills to your very bone.</i></span>")
 		M << pick('sound/scp/spook/Bell2.ogg', 'sound/scp/spook/Bell3.ogg')
@@ -32,6 +29,9 @@
 		ring(user)
 
 /obj/item/scp513/attack_self(mob/living/user)
+	if(user in victims)
+		to_chat(user, "<span class='notice'>I rang it once, and I felt terrible. Why the hell would I that again?!</span>")
+		return
 	ring(user)
 
 /obj/item/scp513/Process()
@@ -56,19 +56,13 @@
 				brain.take_damage(rand(4,6))
 
 /obj/item/scp513/proc/display_513_1(turf/spot, mob/living/target, length = 20, fade=TRUE)
-	var/image/top_img = image('icons/obj/scp.dmi', spot, "scp_513_top")
-	top_img.pixel_y = 32
-	var/image/bottom_img = image('icons/obj/scp.dmi', spot, "scp_513_bottom")
-	target.client.images |= top_img
-	target.client.images |= bottom_img
-	if(fade)
-		animate(top_img, alpha = 0, time = length, 1, LINEAR_EASING)
-		animate(bottom_img, alpha = 0, time = length, 1, LINEAR_EASING)
+	var/image/img = image('icons/SCP/32x64.dmi', spot, "scp_513_1")
+	img.layer = ABOVE_OBJ_LAYER + 0.1
+	img.plane = OBJ_PLANE
+	target.client.images |= img
 	spawn(length)
-		target.client.images -= top_img
-		target.client.images -= bottom_img
-		qdel(top_img)
-		qdel(bottom_img)
+		target.client.images -= img
+		qdel(img)
 
 /obj/item/scp513/proc/find_safe_spot(turf/spot, range=7, min_dist = 3)
 	var/list/valid_turfs = list()
