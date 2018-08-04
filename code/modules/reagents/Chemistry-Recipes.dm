@@ -1940,25 +1940,25 @@
 	result = /datum/reagent/nanoblood
 	required_reagents = list(/datum/reagent/dexalinp = 1, /datum/reagent/iron = 1, /datum/reagent/blood = 1)
 	result_amount = 3
-	
+
 /datum/chemical_reaction/amnestics/a
 	name = "Amnestics-A"
 	result = /datum/reagent/amnestics/a
 	required_reagents = list(/datum/reagent/ethanol = 20, /datum/reagent/water = 10, /datum/reagent/mindbreaker = 10)
 	result_amount = 1
-	
+
 /datum/chemical_reaction/amnestics/b
 	name = "Amnestics-B"
 	result = /datum/reagent/amnestics/b
 	required_reagents = list(/datum/reagent/mercury = 40, /datum/reagent/mindbreaker = 10, /datum/reagent/amnestics/a = 1)
 	result_amount = 1
-	
+
 /datum/chemical_reaction/amnestics/c
 	name = "Amnestics-C"
 	result = /datum/reagent/amnestics/c
 	required_reagents = list(/datum/reagent/mercury = 60, /datum/reagent/mindbreaker = 10, /datum/reagent/amnestics/b = 1)
 	result_amount = 1
-	
+
 /datum/chemical_reaction/amnestics/e
 	name = "Amnestics-E"
 	result = /datum/reagent/amnestics/e
