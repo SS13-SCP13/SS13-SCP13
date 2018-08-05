@@ -35,6 +35,7 @@ delete-after: True
 changes: 
   - tweak: "Altered in-game date."
   - tweak: "Updated SCP-500's icon to be more canonical."
+  - tweak: "Replaced Delta alert sound with revised sound."
   - soundadd: "Altered sound for the vote panel to be less startling."
   - rscadd: "Adds kneepads to the Security lockers."
   - sounddel: "Removed Supermarine from lobby music."
