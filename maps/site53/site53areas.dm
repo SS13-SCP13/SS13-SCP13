@@ -194,3 +194,30 @@
 	name = "\improper Upper Light Containment Hallway"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/ulcz/tram
+	name = "\improper Upper Light Containment Tram Station"
+	icon_state = "hallC1"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/ulcz/office
+	name = "\improper Upper Light Containment Office"
+	icon_state = "conference"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/lowertrams/maintenance
+	name = "\improper Lower Tram Hub Maintenance"
+	icon_state = "conference"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/site53/llcz/scp513
+	name = "\improper SCP-513"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/llcz/maintenance
+	name = "\improper SCP-513"
+	icon_state = "pmaint"
+	area_flags = AREA_FLAG_RAD_SHIELDED
