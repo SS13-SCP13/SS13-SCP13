@@ -41,7 +41,8 @@
 		if(bloodstr.total_volume)
 			var/chem_share = round(0.3 * amt * (bloodstr.total_volume/vessel.total_volume), 0.01)
 			bloodstr.remove_any(chem_share * bloodstr.total_volume)
-		blood_splatter(tar, src, (ddir && ddir>0), spray_dir = ddir)
+		if (!istype(loc, /obj/structure/disposalpipe))
+			blood_splatter(tar, src, (ddir && ddir>0), spray_dir = ddir)
 		return amt
 	return 0
 
