@@ -189,3 +189,8 @@
 	name = "\improper Lower Light Containment Hallway"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/ulcz/hallways
+	name = "\improper Upper Light Containment Hallway"
+	icon_state = "hallC1"
+	area_flags = AREA_FLAG_RAD_SHIELDED
