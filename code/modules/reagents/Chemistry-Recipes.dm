@@ -1964,29 +1964,3 @@
 	result = /datum/reagent/amnestics/classe
 	required_reagents = list(/datum/reagent/ethanol = 80, /datum/reagent/mindbreaker, /datum/reagent/amnestics/classc = 1)
 	result_amount = 1
-=======
-/*
-/datum/chemical_reaction/amnestics/a
-	name = "Amnestics-A"
-	result = /datum/reagent/amnestics/a
-	required_reagents = list(/datum/reagent/ethanol = 20, /datum/reagent/water = 10, /datum/reagent/sugar = 10)
-	result_amount = 1
-
-/datum/chemical_reaction/amnestics/b
-	name = "Amnestics-B"
-	result = /datum/reagent/amnestics/b
-	required_reagents = list(/datum/reagent/mercury = 40, /datum/reagent/water = 10, /datum/reagent/sugar = 10)
-	result_amount = 1
-
-/datum/chemical_reaction/amnestics/c
-	name = "Amnestics-C"
-	result = /datum/reagent/amnestics/c
-	required_reagents = list(/datum/reagent/mercury = 60, /datum/reagent/lithium = 10, /datum/reagent/ethanol = 10)
-	result_amount = 1
-
-/datum/chemical_reaction/amnestics/e
-	name = "Amnestics-E"
-	result = /datum/reagent/amnestics/e
-	required_reagents = list(/datum/reagent/ethanol = 80, /datum/reagent/lithium = 10, /datum/reagent/mercury = 10)
-	result_amount = 1
-*/
