@@ -40,3 +40,4 @@ changes:
   - rscadd: "Adds kneepads to the Security lockers."
   - sounddel: "Removed Supermarine from lobby music."
   - soundadd: "Added new lobby track."
+  - imageadd: "Adds new medical decals."
