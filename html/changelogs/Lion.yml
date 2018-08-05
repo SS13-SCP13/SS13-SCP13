@@ -37,3 +37,5 @@ changes:
   - tweak: "Updated SCP-500's icon to be more canonical."
   - soundadd: "Altered sound for the vote panel to be less startling."
   - rscadd: "Adds kneepads to the Security lockers."
+  - sounddel: "Removed Supermarine from lobby music."
+  - soundadd: "Added new lobby track."
