@@ -10,6 +10,7 @@
 	var/tmp/next_blood_squirt = 0
 	relative_size = 15
 	max_damage = 45
+	scp106_vulnerable = FALSE
 	var/open
 
 /obj/item/organ/internal/heart/die()
@@ -52,7 +53,7 @@
 	if(owner.status_flags & FAKEDEATH || owner.chem_effects[CE_NOPULSE])
 		pulse = Clamp(PULSE_NONE + pulse_mod, PULSE_NONE, PULSE_2FAST) //pretend that we're dead. unlike actual death, can be inflienced by meds
 		return
-	
+
 	//If heart is stopped, it isn't going to restart itself randomly.
 	if(pulse == PULSE_NONE)
 		return

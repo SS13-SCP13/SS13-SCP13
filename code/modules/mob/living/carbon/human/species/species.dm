@@ -162,6 +162,7 @@
 		BP_APPENDIX = /obj/item/organ/internal/appendix,
 		BP_EYES =     /obj/item/organ/internal/eyes
 		)
+
 	var/vision_organ              // If set, this organ is required for vision. Defaults to "eyes" if the species has them.
 	var/breathing_organ           // If set, this organ is required for breathing. Defaults to "lungs" if the species has them.
 
@@ -246,7 +247,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 
 /datum/species/proc/sanitize_name(var/name)
 	return sanitizeName(name)
-
+/*
 /datum/species/proc/equip_survival_gear(var/mob/living/carbon/human/H,var/extendedtank = 1)
 	if(istype(H.get_equipped_item(slot_back), /obj/item/weapon/storage/backpack))
 		if (extendedtank)	H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/engineer(H.back), slot_in_backpack)
@@ -254,7 +255,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 	else
 		if (extendedtank)	H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/engineer(H), slot_r_hand)
 		else	H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H), slot_r_hand)
-
+*/
 /datum/species/proc/create_organs(var/mob/living/carbon/human/H) //Handles creation of mob organs.
 
 	H.mob_size = mob_size
