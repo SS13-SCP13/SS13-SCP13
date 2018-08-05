@@ -176,7 +176,7 @@
 	notify_station()
 
 /decl/security_level/default/proc/notify_station()
-	for(var/obj/machinery/firealarm/FA in SSmachines.machinery)
+	for(var/obj/machinery/firealarm/FA in SSmachines.all_machinery)
 		if(FA.z in GLOB.using_map.contact_levels)
 			FA.update_icon()
 	post_status("alert")
@@ -234,8 +234,8 @@
 	overlay_alarm = "alarm_delta"
 	overlay_status_display = "status_display_delta"
 
-	var/static/datum/announcement/priority/security/security_announcement_delta = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/effects/siren.ogg'))
+	var/static/datum/announcement/priority/security/security_announcement_delta = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/ds90/delta.ogg'))
 
 /decl/security_level/default/code_delta/switching_up_to()
-	security_announcement_delta.Announce("The self-destruct mechanism has been engaged. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.", "Attention! Delta security level reached!")
+	security_announcement_delta.Announce("Attention all personnel, security level Delta has been reached. The omega warhead is now armed, primed for detonation. All personnel are instructed to obey any and all instructions given by Foundation security personnel, or the respective heads of their department. Any violation of these orders will result in immediate termination of employment. Lethal force has been authorized. This is not a drill. Omega warhead detonation in T minus 15 minutes.", "Attention! Omega Warhead now live! This is not a drill!")
 	notify_station()

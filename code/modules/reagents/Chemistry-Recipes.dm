@@ -6,15 +6,14 @@
 // more than one chemical it will still only appear in only one of the sublists.
 /proc/initialize_chemical_reactions()
 	var/paths = typesof(/datum/chemical_reaction) - /datum/chemical_reaction
-	chemical_reactions_list = list()
 
 	for(var/path in paths)
 		var/datum/chemical_reaction/D = new path()
 		if(D.required_reagents && D.required_reagents.len)
 			var/reagent_id = D.required_reagents[1]
-			if(!chemical_reactions_list[reagent_id])
-				chemical_reactions_list[reagent_id] = list()
-			chemical_reactions_list[reagent_id] += D
+			if(!global.chemical_reaction_list[reagent_id])
+				global.chemical_reaction_list[reagent_id] = list()
+			global.chemical_reaction_list[reagent_id] += D
 
 /datum/chemical_reaction
 	var/name = null
@@ -1965,3 +1964,29 @@
 	result = /datum/reagent/amnestics/classe
 	required_reagents = list(/datum/reagent/ethanol = 80, /datum/reagent/mindbreaker, /datum/reagent/amnestics/classc = 1)
 	result_amount = 1
+=======
+/*
+/datum/chemical_reaction/amnestics/a
+	name = "Amnestics-A"
+	result = /datum/reagent/amnestics/a
+	required_reagents = list(/datum/reagent/ethanol = 20, /datum/reagent/water = 10, /datum/reagent/sugar = 10)
+	result_amount = 1
+
+/datum/chemical_reaction/amnestics/b
+	name = "Amnestics-B"
+	result = /datum/reagent/amnestics/b
+	required_reagents = list(/datum/reagent/mercury = 40, /datum/reagent/water = 10, /datum/reagent/sugar = 10)
+	result_amount = 1
+
+/datum/chemical_reaction/amnestics/c
+	name = "Amnestics-C"
+	result = /datum/reagent/amnestics/c
+	required_reagents = list(/datum/reagent/mercury = 60, /datum/reagent/lithium = 10, /datum/reagent/ethanol = 10)
+	result_amount = 1
+
+/datum/chemical_reaction/amnestics/e
+	name = "Amnestics-E"
+	result = /datum/reagent/amnestics/e
+	required_reagents = list(/datum/reagent/ethanol = 80, /datum/reagent/lithium = 10, /datum/reagent/mercury = 10)
+	result_amount = 1
+*/

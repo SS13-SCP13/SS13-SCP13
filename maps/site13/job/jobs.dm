@@ -1,347 +1,427 @@
-/datum/map/site_ds90
-/datum/map/site_ds90/setup_map()
+/////////////
+//READ THIS//
+/////////////
+// WARNING: DO NOT ADD INTEGER VALUES ABOVE 20 FOR ANY STAT OR SKILL OTHER THAN INTELLIGENCE, MEDICAL AND ENGINEERING. - LION
+
+/datum/map/site13
+/datum/map/site13/setup_map()
+
+/datum/job/assistant
+	title = "Class D"
+	department = "Civilian"
+	total_positions = -1
+	spawn_positions = -1
+	supervisors = "Foundation Personnel"
+	selection_color = "#E55700"
+	economic_modifier = 1
+	access = list()			//See /datum/job/assistant/get_access()
+	minimal_access = list()	//See /datum/job/assistant/get_access()
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
+	allowed_ranks = list(/datum/mil_rank/civ/classd)
+	var/static/list/used_numbers = list()
+
+/datum/job/assistant/equip(var/mob/living/carbon/human/H)
+	..()
+	var/r = rand(100,9000)
+	while (used_numbers.Find(r))
+		r = rand(100,9000)
+	used_numbers += r
+	H.name = "D-[used_numbers[used_numbers.len]]"
+	H.real_name = H.name
 
 /datum/job/captain
-	title = "Facility Director"
+	has_email = TRUE
+	title = "Site Director"
 	supervisors = "the SCP Foundation and O5 Council"
 	minimal_player_age = 20
 	economic_modifier = 15
 	ideal_character_age = 50
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/facilitydir
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(7,10), rand(7,10), rand(12,16))
+		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
+
+	access = list(
+	access_adminlvl5,
+	access_adminlvl4,
+	access_adminlvl3,
+	access_adminlvl2,
+	access_adminlvl1
+	)
+	minimal_access = list()
+
 
 /datum/job/hop
-	title = "Head of Human Resources"
+	has_email = TRUE
+	title = "Head of Personnel"
 	supervisors = "the Facility Director"
 	department = "Command"
 	department_flag = COM
 	minimal_player_age = 15
 	economic_modifier = 10
 	ideal_character_age = 45
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/headofhr
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
+	alt_titles = list("Personnel Director")
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(7,10), rand(7,10), rand(11,14))
+		H.add_skills(rand(25,40), rand(25,40), rand(45,65), rand(40,60))
 
 
-	access = list(access_adminlvl4,
+	access = list(
+	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1)
+	access_adminlvl1
+	)
 	minimal_access = list()
 
-
-/datum/job/rd
-	title = "Director of Science"
-	supervisors = "Facility Director and the Head of Human Resources"
-	economic_modifier = 20
+/datum/job/commsofficer
+	has_email = TRUE
+	title = "Communications Officer"
+	supervisors = "the Security Commander and Site Director"
+	department = "Command"
+	department_flag = COM
 	minimal_player_age = 15
-	ideal_character_age = 60
-//	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/rd
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/scp)
+	economic_modifier = 10
+	ideal_character_age = 45
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/commsofficer
+	allowed_branches = list(/datum/mil_branch/security)
+	allowed_ranks = list(
+	/datum/mil_rank/security/w1,
+	/datum/mil_rank/security/w2,
+	/datum/mil_rank/security/w3,
+	/datum/mil_rank/security/w4,
+	/datum/mil_rank/security/w5
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(7,10), rand(7,10), rand(11,14))
+		H.add_skills(rand(25,40), rand(25,40), rand(45,65), rand(40,60))
 
-	access = list(access_sciencelvl5,
-	access_sciencelvl4,
-	access_sciencelvl3,
-	access_sciencelvl2,
-	access_scienclvl1)
+
+	access = list(
+	access_mtflvl1,
+	access_mtflvl2,
+	access_mtflvl3,
+	access_mtflvl4
+	)
 	minimal_access = list()
 
 
 // AWAITING OVERHAUL
-/*
+
 /datum/job/cmo
+	has_email = TRUE
 	title = "Chief Medical Officer"
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_modifier = 10
 	minimal_player_age = 21
 	ideal_character_age = 48
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/cmo
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/cmo/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/ec/o3,
-		/datum/mil_rank/fleet/o2
-	)
+	alt_titles = list("Medical Director")
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/cmo
+	allowed_branches = list(/datum/mil_branch/security)
+	allowed_ranks = list(/datum/mil_rank/security/w1,
+	/datum/mil_rank/security/w2,
+	/datum/mil_rank/security/w3)
 
-	access = list(access_medical, access_morgue, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_teleporter, access_eva, access_heads,
-			            access_chapel_office, access_crematorium, access_chemistry, access_virology,
-			            access_cmo, access_surgery, access_RC_announce, access_keycard_auth, access_psychiatrist,
-			            access_medical_equip, access_solgov_crew, access_senmed, access_hangar)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
-	software_on_spawn = list(/datum/computer_file/program/comm,
-							 /datum/computer_file/program/suit_sensors,
-							 /datum/computer_file/program/camera_monitor)
 
-/datum/job/chief_engineer
-	title = "Chief Engineer"
-	supervisors = "the Commanding Officer and the Executive Officer"
-	economic_modifier = 9
-	ideal_character_age = 40
-	minimal_player_age = 21
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/o3,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o2
-	)
+// CELLS
 
-	access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_ai_upload, access_teleporter, access_eva, access_heads,
-			            access_tech_storage, access_robotics, access_atmospherics, access_janitor, access_construction,
-			            access_network, access_ce, access_RC_announce, access_keycard_auth, access_tcomsat,
-			            access_solgov_crew, access_robotics_engineering, access_seneng, access_hangar, access_robotics)
-	minimal_access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_ai_upload, access_teleporter, access_eva, access_heads,
-			            access_tech_storage, access_atmospherics, access_janitor, access_construction,
-			            access_network, access_ce, access_RC_announce, access_keycard_auth, access_tcomsat,
-			            access_solgov_crew, access_robotics_engineering, access_seneng, access_hangar, access_robotics)
-
-	software_on_spawn = list(/datum/computer_file/program/comm,
-							 /datum/computer_file/program/ntnetmonitor,
-							 /datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
-							 /datum/computer_file/program/alarm_monitor,
-							 /datum/computer_file/program/atmos_control,
-							 /datum/computer_file/program/rcon_console,
-							 /datum/computer_file/program/camera_monitor,
-							 /datum/computer_file/program/shields_monitor)
-
-/datum/job/hos
-	title = "Chief of Security"
-	supervisors = "the Commanding Officer and the Executive Officer"
-	economic_modifier = 8
-	minimal_player_age = 21
-	ideal_character_age = 35
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/cos
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/cos/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/o3,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o2
-	)
-
-	access = list(access_security, access_brig, access_armory, access_forensics_lockers,
-			            access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_teleporter, access_eva, access_heads,
-			            access_hos, access_RC_announce, access_keycard_auth, access_sec_doors,
-			            access_solgov_crew, access_gun, access_emergency_armory)
-	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/comm,
-							 /datum/computer_file/program/digitalwarrant,
-							 /datum/computer_file/program/camera_monitor)
-
-/datum/job/liaison
-	title = "NanoTrasen Liaison"
-	department = "Support"
-	department_flag = SPT
-
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "NanoTrasen and Corporate Regulations"
-	selection_color = "#2f2f7f"
-	economic_modifier = 15
-	minimal_player_age = 10
-	alt_titles = list(
-		"NanoTrasen Representative",
-		"NanoTrasen Executive"
-		)
-	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/cl
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/nt)
-
-	access = list(access_liaison, access_tox, access_tox_storage, access_heads, access_research,
-						access_mining, access_mining_office, access_mining_station, access_xenobiology,
-						access_xenoarch, access_nanotrasen, access_sec_guard,
-						access_hangar, access_petrov, access_petrov_helm)
-
-/datum/job/representative
-	title = "SolGov Representative"
-	department = "Support"
-	department_flag = SPT
-
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Sol Central Government and the SCG Charter"
-	selection_color = "#2f2f7f"
-	economic_modifier = 15
-	minimal_player_age = 10
-	alt_titles = list(
-		"Inspector General"
-		)
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/representative
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/civ)
-
-	access = list(access_representative, access_security,access_medical, access_engine,
-			            access_heads, access_cargo, access_solgov_crew, access_hangar)
-
-
-/datum/job/sea
-	title = "Senior Enlisted Advisor"
-	department = "Support"
-	department_flag = SPT
-
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Commanding Officer and the Executive Officer"
-	selection_color = "#2f2f7f"
-	minimal_player_age = 21
-	economic_modifier = 8
-	ideal_character_age = 45
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/sea/fleet
-	allowed_branches = list(
-		/datum/mil_branch/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/fleet/e9,
-		/datum/mil_rank/fleet/e9_alt1,
-		/datum/mil_rank/fleet/e8
-	)
-
-
-	access = list(access_security, access_medical, access_engine, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_teleporter, access_eva, access_heads, access_all_personal_lockers, access_janitor,
-			            access_kitchen, access_cargo, access_RC_announce, access_keycard_auth, access_guppy_helm,
-			            access_solgov_crew, access_gun, access_expedition_shuttle, access_guppy, access_senadv, access_hangar, access_emergency_armory)
-
-	software_on_spawn = list(/datum/computer_file/program/camera_monitor)
-
-/datum/job/bridgeofficer
-	title = "Bridge Officer"
-	department = "Support"
-	department_flag = SPT
-
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Commanding Officer and heads of staff"
-	selection_color = "#2f2f7f"
-	minimal_player_age = 18
-	economic_modifier = 7
-	ideal_character_age = 24
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/bridgeofficer
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/bridgeofficer/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/o1,
-		/datum/mil_rank/fleet/o1
-	)
-
-
-	access = list(access_security, access_medical, access_engine, access_maint_tunnels, access_emergency_storage,
-			            access_heads, access_janitor, access_kitchen, access_cargo, access_RC_announce, access_keycard_auth,
-			            access_solgov_crew, access_aquila, access_aquila_helm, access_guppy, access_guppy_helm, access_external_airlocks,
-			            access_eva, access_hangar, access_cent_creed, access_explorer)
-
-	software_on_spawn = list(/datum/computer_file/program/comm,
-							 /datum/computer_file/program/suit_sensors,
-							 /datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
-							 /datum/computer_file/program/alarm_monitor,
-							 /datum/computer_file/program/camera_monitor,
-							 /datum/computer_file/program/shields_monitor)
-
-/datum/job/pathfinder
-	title = "Pathfinder"
-	department = "Exploration"
-	department_flag = EXP
-
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Commanding Officer and the Executive Officer"
-	selection_color = "#68099e"
+/datum/job/cellguardlieutenant
+	has_email = TRUE
+	title = "Cell Guard Lieutenant"
+	department = "Security"
+	department_flag = SEC
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
 	minimal_player_age = 7
-	economic_modifier = 7
-	ideal_character_age = 35
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/exploration/pathfinder
-	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/o3,
-		/datum/mil_rank/ec/o1
-	)
-
-
-	access = list(access_pathfinder, access_explorer, access_eva, access_maint_tunnels, access_heads, access_emergency_storage, access_tech_storage, access_guppy_helm, access_solgov_crew, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar, access_cent_creed)
-
-/datum/job/explorer
-	title = "Explorer"
-	department = "Exploration"
-	department_flag = EXP
-	total_positions = 3
-	spawn_positions = 3
-	supervisors = "the Commanding Officer, Executive Officer, and Pathfinder"
-	selection_color = "#68099e"
-	minimal_player_age = 4
-	ideal_character_age = 20
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/exploration/explorer
-	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
-
-	allowed_ranks = list(
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/ec/e5
-	)
-
-	access = list(access_explorer, access_maint_tunnels, access_eva, access_emergency_storage, access_guppy_helm, access_solgov_crew, access_expedition_shuttle, access_guppy, access_hangar, access_cent_creed)
-
-/datum/job/senior_engineer
-	title = "Senior Engineer"
-	department = "Engineering"
-	department_flag = ENG
-
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Chief Engineer"
-	selection_color = "#5b4d20"
-	economic_modifier = 6
-	minimal_player_age = 14
-	ideal_character_age = 40
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/senior_engineer
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/engineering/senior_engineer/fleet
+		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e8,
-		/datum/mil_rank/ec/e7,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/ec/e5
+		/datum/mil_rank/security/o1,
+		/datum/mil_rank/security/o2
 	)
 
-	access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_teleporter, access_eva, access_tech_storage, access_atmospherics, access_janitor, access_construction,
-			            access_tcomsat, access_solgov_crew, access_seneng, access_hangar)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
+	minimal_access = list()
 
-	software_on_spawn = list(/datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
-							 /datum/computer_file/program/alarm_monitor,
-							 /datum/computer_file/program/atmos_control,
-							 /datum/computer_file/program/rcon_console,
-							 /datum/computer_file/program/camera_monitor,
-							 /datum/computer_file/program/shields_monitor)
-
-/datum/job/engineer
-	title = "Engineer"
+/datum/job/brigofficer
+	has_email = TRUE
+	title = "Cell Guard"
+	department = "Security"
+	department_flag = SEC
 	total_positions = 4
 	spawn_positions = 4
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = null
+	minimal_player_age = 5
+	ideal_character_age = 23
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+	/datum/mil_rank/security/e7,
+	/datum/mil_rank/security/e8
+
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
+	minimal_access = list()
+
+// SECURITY
+/datum/job/hos
+	has_email = TRUE
+	title = "Guard Commander"
+	supervisors = "The Facility Director"
+	department = "Security"
+	department_flag = SEC|COM
+	economic_modifier = 8
+	minimal_player_age = 21
+	ideal_character_age = 55
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/o3
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
+	minimal_access = list()
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(12,18), rand(12,16), rand(10,12))
+		H.add_skills(rand(60, 75), rand(60,75))
+
+/datum/job/ltofficer
+	has_email = TRUE
+	title = "Guard Lieutenant"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 3
+	spawn_positions = 3
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = list("Senior Agent")
+	minimal_player_age = 10
+	ideal_character_age = 45
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/o1,
+		/datum/mil_rank/security/o2
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
+
+
+
+/datum/job/ncoofficer
+	has_email = TRUE
+	title = "Guard"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 8
+	spawn_positions = 8
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = list("Agent")
+	minimal_player_age = 5
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e4,
+		/datum/mil_rank/security/e5,
+		/datum/mil_rank/security/e6
+	)
+
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+/datum/job/enlistedofficer
+	has_email = TRUE
+	title = "Junior Guard"
+	department = "Security"
+	department_flag = SEC
+	total_positions = 11
+	spawn_positions = 11
+	supervisors = "the Security Commander"
+	economic_modifier = 4
+	alt_titles = list("Junior Agent")
+	minimal_player_age = 0
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e1,
+		/datum/mil_rank/security/e2
+	)
+
+
+	access = list(access_mtflvl1)
+	minimal_access = list()
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(11,16), rand(10,14), rand(7,10))
+		H.add_skills(rand(60, 75), rand(60,75))
+
+// SCIENCE
+
+/datum/job/juniorscientist
+	has_email = TRUE
+	title = "Junior Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 7
+	spawn_positions = 7
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Junior Researcher")
+	minimal_player_age = 0
+	ideal_character_age = 22
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classc)
+
+
+	access = list(access_sciencelvl1)
+	minimal_access = list()
+
+/datum/job/scientist
+	has_email = TRUE
+	title = "Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 5
+	spawn_positions = 5
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Researcher")
+	minimal_player_age = 5
+	ideal_character_age = 22
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/scientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classc)
+
+
+	access = list(access_sciencelvl1, access_sciencelvl2)
+	minimal_access = list()
+
+/datum/job/seniorscientist
+	has_email = TRUE
+	title = "Senior Scientist"
+	department = "Science"
+	department_flag = SCI
+	total_positions = 3
+	spawn_positions = 3
+	supervisors = "the Research Director and anyone in a higher position than you"
+	economic_modifier = 4
+	alt_titles = list("Senior Researcher")
+	minimal_player_age = 10
+	ideal_character_age = 22
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/seniorscientist
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classb)
+
+
+	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	minimal_access = list()
+
+/datum/job/rd
+	has_email = TRUE
+	title = "Research Director"
+	supervisors = "Facility Director and the Head of Human Resources"
+	total_positions = 1
+	spawn_positions = 1
+	economic_modifier = 20
+	minimal_player_age = 15
+	ideal_character_age = 60
+	spawn_positions = 6
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/researchdirector
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(6,8), rand(6,8), rand(14,17))
+		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
+
+	access = list(access_sciencelvl5,
+	access_sciencelvl4,
+	access_sciencelvl3,
+	access_sciencelvl2,
+	access_sciencelvl1)
+	minimal_access = list()
+
+
+// ENGINEERING
+
+
+/datum/job/juneng
+	has_email = TRUE
+	title = "Junior Engineer"
+	total_positions = 4
+	spawn_positions = 4
+	department_flag = ENG
+	supervisors = "the Chief Engineer"
+	economic_modifier = 5
+	minimal_player_age = 7
+	ideal_character_age = 30
+	alt_titles = list(
+		"Junior Maintenance Technician",
+		"Junior Engine Technician",
+		"Junior Damage Control Technician",
+		"Junior Electrician",
+		"Junior Atmospheric Technician"
+		)
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e4
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+/datum/job/eng
+	has_email = TRUE
+	title = "Engineer"
+	total_positions = 3
+	spawn_positions = 3
+	department_flag = ENG
 	supervisors = "the Chief Engineer"
 	economic_modifier = 5
 	minimal_player_age = 7
@@ -350,708 +430,264 @@
 		"Maintenance Technician",
 		"Engine Technician",
 		"Damage Control Technician",
-		"EVA Technician",
 		"Electrician",
-		"Atmospheric Technician",
+		"Atmospheric Technician"
 		)
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/engineer
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/engineering/engineer/fleet
+		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e2
+		/datum/mil_rank/security/e5,
+		/datum/mil_rank/security/e6
 	)
 
-	access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_teleporter, access_eva, access_tech_storage, access_atmospherics, access_janitor, access_construction,
-			            access_solgov_crew, access_hangar)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
 	minimal_access = list()
 
-	software_on_spawn = list(/datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
-							 /datum/computer_file/program/alarm_monitor,
-							 /datum/computer_file/program/atmos_control,
-							 /datum/computer_file/program/rcon_console,
-							 /datum/computer_file/program/camera_monitor,
-							 /datum/computer_file/program/shields_monitor)
-
-/datum/job/engineer_contractor
-	title = "Engineering Contractor"
-	department = "Engineering"
-	department_flag = ENG
-
+/datum/job/seneng
+	has_email = TRUE
+	title = "Senior Engineer"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Chief Engineer and Engineering Personnel"
-	minimal_player_age = 7
-	selection_color = "#5b4d20"
-	alt_titles = list(
-		"Maintenance Assistant",
-		"Structural Integrity Specialist",
-		"Electrical Systems Specialist",
-		"Information Systems Technician",
-		"Reactor Technician",
-		"Life Support Systems Specialist")
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/contractor
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/contractor)
-
-	access = list(access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_teleporter, access_eva, access_tech_storage, access_atmospherics, access_janitor, access_construction,
-			            access_solgov_crew, access_hangar)
-
-	software_on_spawn = list(/datum/computer_file/program/power_monitor,
-							 /datum/computer_file/program/supermatter_monitor,
-							 /datum/computer_file/program/alarm_monitor,
-							 /datum/computer_file/program/atmos_control,
-							 /datum/computer_file/program/rcon_console,
-							 /datum/computer_file/program/camera_monitor,
-							 /datum/computer_file/program/shields_monitor)
-
-/datum/job/roboticist
-	title = "Roboticist"
-	department = "Engineering"
 	department_flag = ENG
-
-	total_positions = 1
-	spawn_positions = 1
 	supervisors = "the Chief Engineer"
-	selection_color = "#5b4d20"
-	economic_modifier = 6
-	alt_titles = list(
-		"Biomechanical Engineer",
-		"Mechsuit Technician")
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/roboticist
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/contractor)
-
-	access = list(access_robotics, access_robotics_engineering, access_tech_storage, access_morgue, access_medical, access_robotics_engineering, access_solgov_crew)
-	minimal_access = list()
-
-
-/datum/job/warden
-	title = "Brig Officer"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Chief of Security"
-	economic_modifier = 5
-	minimal_player_age = 14
-	ideal_character_age = 35
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/security/brig_officer
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/security/brig_officer/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/fleet/e8,
-		/datum/mil_rank/ec/e7,
-		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e5
-	)
-
-	access = list(access_security, access_brig, access_armory, access_forensics_lockers,
-			            access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_eva, access_sec_doors, access_solgov_crew, access_gun)
-	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
-							 /datum/computer_file/program/camera_monitor)
-
-/datum/job/detective
-	title = "Forensic Technician"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Chief of Security"
 	economic_modifier = 5
 	minimal_player_age = 7
-	ideal_character_age = 35
-	alt_titles = list("Criminal Investigator")
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/security/forensic_tech
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/security/forensic_tech/fleet,
-		/datum/mil_branch/civilian = /decl/hierarchy/outfit/job/torch/crew/security/forensic_tech/civ
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/civ/marshal
-	)
-
-	access = list(access_security, access_brig, access_forensics_lockers,
-			            access_maint_tunnels, access_emergency_storage,
-			            access_sec_doors, access_solgov_crew, access_morgue)
-	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
-							 /datum/computer_file/program/camera_monitor)
-
-/datum/job/officer
-	title = "Master at Arms"
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "the Chief of Security"
-	economic_modifier = 4
-	minimal_player_age = 10
-	ideal_character_age = 25
-	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/security/maa
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/security/maa/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4
-	)
-
-
-	access = list(access_security, access_brig, access_maint_tunnels,
-						access_external_airlocks, access_emergency_storage,
-			            access_eva, access_sec_doors, access_solgov_crew)
-	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
-							 /datum/computer_file/program/camera_monitor)
-
-/datum/job/senior_doctor
-	title = "Physician"
-	department = "Medical"
-	department_flag = MED
-
-	minimal_player_age = 14
-	ideal_character_age = 45
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Chief Medical Officer"
-	selection_color = "#013d3b"
-	economic_modifier = 8
-	alt_titles = list(
-		"Surgeon",
-		"Trauma Surgeon")
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/medical/senior/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/o1,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o1
-	)
-
-	access = list(access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
-			            access_crematorium, access_chemistry, access_surgery,
-			            access_medical_equip, access_solgov_crew, access_senmed)
-
-	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
-							 /datum/computer_file/program/camera_monitor)
-
-/datum/job/doctor
-	title = "Corpsman"
-	minimal_player_age = 7
-	total_positions = 3
-	spawn_positions = 3
-	supervisors = "the Chief Medical Officer"
-	economic_modifier = 7
-	ideal_character_age = 40
-	alt_titles = list(
-		"Field Medic" = /decl/hierarchy/outfit/job/torch/crew/medical/doctor/medic,
-		"Medical Technician",
-		"Nurse")
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/doctor/fleet
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/medical/doctor,
-		/datum/mil_branch/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e6
-	)
-
-	access = list(access_medical, access_morgue, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-			            access_eva, access_surgery, access_medical_equip, access_solgov_crew, access_hangar)
-	minimal_access = list()
-
-	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
-							 /datum/computer_file/program/camera_monitor)
-
-/datum/job/doctor_contractor
-	title = "Medical Contractor"
-	department = "Medical"
-	department_flag = MED
-
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Chief Medical Officer and Medical Personnel"
-	selection_color = "#013d3b"
-	economic_modifier = 3
 	ideal_character_age = 30
 	alt_titles = list(
-		"Orderly" = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/orderly,
-		"Virologist" = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/virologist,
-		"Xenosurgeon" = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/xenosurgeon,
-		"Paramedic" = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/paramedic)
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/contractor
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/contractor)
+		"Senior Maintenance Technician",
+		"Senior Engine Technician",
+		"Senior Damage Control Technician",
+		"Senior Electrician",
+		"Senior Atmospheric Technician"
+		)
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/seneng
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8,
+		/datum/mil_rank/security/e9
+	)
 
-	access = list(access_medical, access_morgue, access_crematorium, access_virology, access_surgery, access_medical_equip, access_solgov_crew,
-		            access_eva, access_maint_tunnels, access_emergency_storage, access_external_airlocks, access_hangar)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
 
-	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
-							 /datum/computer_file/program/camera_monitor)
+/datum/job/conteng
+	has_email = TRUE
+	title = "Containment Engineer"
+	department_flag = ENG
+	supervisors = "the Chief Engineer"
+	economic_modifier = 5
+	minimal_player_age = 7
+	ideal_character_age = 30
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/conteng
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/w2,
+		/datum/mil_rank/security/w3,
+		/datum/mil_rank/security/w4,
+		/datum/mil_rank/security/w5
+	)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	minimal_access = list()
+
+
+
+/datum/job/chief_engineer
+	has_email = TRUE
+	title = "Chief Engineer"
+	supervisors = "the Security Commander and Facility Director"
+	economic_modifier = 9
+	ideal_character_age = 40
+	minimal_player_age = 21
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
+	allowed_branches = list(/datum/mil_branch/security)
+	allowed_ranks = list(/datum/mil_rank/security/o1, /datum/mil_rank/security/o2)
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	minimal_access = list()
+
+// MEDICAL JOBS.
 
 /datum/job/chemist
+	has_email = TRUE
 	title = "Chemist"
 	department = "Medical"
 	department_flag = MED
 
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Chief Medical Officer and Medical Personnel"
+	supervisors = "the Chief Medical Officer"
 	selection_color = "#013d3b"
 	economic_modifier = 4
 	ideal_character_age = 30
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/chemist
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/contractor)
+	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/chemist
+	allowed_branches = list(/datum/mil_branch/security)
+	allowed_ranks = list(/datum/mil_rank/security/e3)
 
-	access = list(access_medical, access_maint_tunnels, access_emergency_storage, access_medical_equip, access_solgov_crew, access_chemistry)
+	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 
 /datum/job/psychiatrist
-	title = "Counselor"
+	has_email = TRUE
+	title = "Psychiatrist"
+	department = "Medical"
+	department_flag = MED
+	selection_color = "#013d3b"
+	ideal_character_age = 40
+	economic_modifier = 5
+	supervisors = "the Chief Medical Officer"
+	alt_titles = list("Counselor")
+	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/psychiatrist
+	allowed_branches = list(
+	/datum/mil_branch/civilian)
+	allowed_ranks = list(
+		/datum/mil_rank/civ/classb)
+
+
+	access = list(access_mtflvl1)
+	minimal_access = list()
+
+/datum/job/medicaldoctor
+	has_email = TRUE
+	title = "Medical Doctor"
+	department = "Medical"
+	department_flag = MED
+	selection_color = "#013d3b"
+	total_positions = 3
+	spawn_positions = 3
+	ideal_character_age = 40
+	economic_modifier = 5
+	supervisors = "the Chief Medical Officer"
+	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/medicaldoctor
+	allowed_branches = list(
+	/datum/mil_branch/security)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e1,
+		/datum/mil_rank/security/e2)
+
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+/datum/job/virologist
+	has_email = TRUE
+	title = "Virologist"
+	department = "Medical"
+	department_flag = MED
+	selection_color = "#013d3b"
 	total_positions = 1
 	spawn_positions = 1
 	ideal_character_age = 40
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
-	alt_titles = list(
-		"Psychiatrist" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/psychiatrist,
-		"Chaplain" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/chaplain,
-	)
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/counselor
+	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/virologist
 	allowed_branches = list(
-		/datum/mil_branch/civilian,
-		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/ec,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/fleet)
+	/datum/mil_branch/security)
 	allowed_ranks = list(
-		/datum/mil_rank/civ/contractor,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/ec/o1)
+		/datum/mil_rank/security/e3)
 
 
-	access = list(access_medical, access_morgue, access_chapel_office, access_crematorium, access_psychiatrist, access_solgov_crew)
+	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 
-	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
-							 /datum/computer_file/program/camera_monitor)
+/datum/job/surgeon
+	has_email = TRUE
+	title = "Surgeon"
+	department = "Medical"
+	department_flag = MED
+	selection_color = "#013d3b"
+	total_positions = 2
+	spawn_positions = 2
+	ideal_character_age = 40
+	economic_modifier = 5
+	supervisors = "the Chief Medical Officer"
+	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/surgeon
+	allowed_branches = list(
+	/datum/mil_branch/security)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e4)
+
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+
+//LOGISTICS
 
 /datum/job/qm
-	title = "Deck Officer"
-	department = "Supply"
+	has_email = TRUE
+	title = "Logistics Officer"
+	department = "Logistics"
 	department_flag = SUP
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Executive Officer"
+	total_positions = 0
+	spawn_positions = 0
+	supervisors = "the Security Commander"
+	selection_color = "#515151"
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 35
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer/fleet
+		/datum/mil_branch/security,
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ec/o1 = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer/comissioned,
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/ec/e7,
-		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8
+		/datum/mil_rank/security/w1
+
 	)
 
-	access = list(access_maint_tunnels, access_heads, access_emergency_storage, access_tech_storage,  access_cargo, access_guppy_helm,
-						access_cargo_bot, access_qm, access_mailsorting, access_solgov_crew, access_expedition_shuttle, access_guppy, access_hangar)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
 	minimal_access = list()
 
-	software_on_spawn = list(/datum/computer_file/program/supply)
 
 /datum/job/cargo_tech
-	title = "Deck Technician"
-	department = "Supply"
+	has_email = TRUE
+	title = "Logistics Specialist"
+	department = "Logistics"
 	department_flag = SUP
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Deck Officer and Executive Officer"
+	total_positions = 0
+	spawn_positions = 0
+	selection_color = "#515151"
+	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
 	ideal_character_age = 24
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/supply/tech
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/logisticspecialist
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/supply/tech/fleet
+		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4
+	/datum/mil_rank/security/e3
 	)
 
-	access = list(access_maint_tunnels, access_emergency_storage, access_cargo, access_guppy_helm,
-						access_cargo_bot, access_mailsorting, access_solgov_crew, access_expedition_shuttle, access_guppy, access_hangar)
+	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 
-	software_on_spawn = list(/datum/computer_file/program/supply)
-
-/datum/job/cargo_contractor
-	title = "Supply Assistant"
-	department = "Supply"
-	department_flag = SUP
-
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Deck Officer and Supply Personnel"
-	ideal_character_age = 20
-	selection_color = "#515151"
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/supply/contractor
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/contractor)
-
-	access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting, access_hangar, access_guppy, access_guppy_helm, access_solgov_crew)
-
-	software_on_spawn = list(/datum/computer_file/program/supply)
+// MISC JOBS
 
 /datum/job/janitor
-	title = "Sanitation Technician"
-	department = "Service"
-	department_flag = SRV
-
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Executive Officer"
-	ideal_character_age = 20
-	alt_titles = list(
-		"Janitor")
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/janitor
-	allowed_branches = list(
-		/datum/mil_branch/civilian,
-		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/service/janitor/ec,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/service/janitor/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/civ/contractor,
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4
-	)
-
-	access = list(access_maint_tunnels, access_emergency_storage, access_janitor, access_solgov_crew)
-	minimal_access = list()
-
-/datum/job/chef
-	title = "Cook"
-	department = "Service"
-	department_flag = SRV
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Executive Officer"
-	alt_titles = list(
-		"Chef",
-		"Culinary Specialist"
-		)
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/cook
-	allowed_branches = list(
-		/datum/mil_branch/civilian,
-		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/service/cook/ec,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/service/cook/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/civ/contractor,
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4
-	)
-
-	access = list(access_maint_tunnels, access_hydroponics, access_kitchen, access_solgov_crew, access_bar)
-	minimal_access = list()
-
-/datum/job/bartender
-	department = "Service"
-	department_flag = SRV
-	supervisors = "the Executive Officer"
-	ideal_character_age = 30
-	selection_color = "#515151"
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/bartender
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/contractor)
-
-	access = list(access_hydroponics, access_bar, access_solgov_crew, access_kitchen)
-	minimal_access = list()
-
-
-/datum/job/crew
-	title = "Crewman"
-	department = "Service"
-	department_flag = SRV
-
-	total_positions = 5
-	spawn_positions = 5
-	supervisors = "the Executive Officer and SolGov Personnel"
-	selection_color = "#515151"
-	ideal_character_age = 20
-	alt_titles = list(
-		"Engineer Trainee",
-		"Corpsman Trainee",
-		)
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/crewman
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/service/crewman/fleet
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4
-	)
-
-
-	access = list(access_maint_tunnels, access_emergency_storage, access_solgov_crew)
-
-/datum/job/senior_scientist
-	title = "Senior Researcher"
-	department = "Science"
-	department_flag = SCI
-
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Research Director"
-	selection_color = "#633d63"
-	economic_modifier = 12
-	minimal_player_age = 10
-	ideal_character_age = 50
-	alt_titles = list(
-		"Research Supervisor")
-	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/senior_scientist
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/nt)
-
-	access = list(access_tox, access_tox_storage, access_research, access_mining, access_mining_office,
-						access_mining_station, access_xenobiology, access_xenoarch, access_nanotrasen,
-						access_expedition_shuttle, access_guppy, access_hangar, access_petrov, access_petrov_helm, access_guppy_helm)
-
-/datum/job/nt_pilot
-	title = "NanoTrasen Pilot"
-	supervisors = "the Research Director"
-	department = "Science"
-	department_flag = SCI
-
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Research Director and NanoTrasen Personnel"
-	selection_color = "#633d63"
-	economic_modifier = 10
-	minimal_player_age = 5
-	ideal_character_age = 40
-	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/nt_pilot
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/nt)
-
-	access = list(access_research, access_mining_office,
-						access_mining_station, access_nanotrasen, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy,
-						access_hangar, access_petrov, access_petrov_helm, access_guppy_helm, access_mining)
-/datum/job/scientist
-	title = "Scientist"
-	total_positions = 6
-	spawn_positions = 6
-	supervisors = "the Research Director"
-	economic_modifier = 10
-	minimal_player_age = 7
-	ideal_character_age = 45
-	alt_titles = list(
-		"Xenoarcheologist",
-		"Anomalist",
-		"Researcher",
-		"Xenobiologist",
-		"Xenobotanist",
-		"Psychologist" = /decl/hierarchy/outfit/job/torch/passenger/research/scientist/psych)
-
-	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/scientist
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/nt)
-
-	access = list(access_tox, access_tox_storage, access_research, access_petrov, access_petrov_helm,
-						access_mining_office, access_mining_station, access_xenobiology, access_guppy_helm,
-						access_xenoarch, access_nanotrasen, access_expedition_shuttle, access_guppy, access_hangar)
-	minimal_access = list()
-
-
-/datum/job/mining
-	title = "Prospector"
-	department = "Science"
-	department_flag = SCI
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "the Research Director"
-	selection_color = "#633d63"
-	economic_modifier = 7
-	ideal_character_age = 25
-	alt_titles = list(
-		"Drill Technician",
-		"Shaft Miner",
-		"Salvage Technician")
-
-	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/prospector
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/nt)
-
-	access = list(access_research, access_mining, access_mining_office, access_mining_station, access_nanotrasen,
-						access_expedition_shuttle, access_guppy, access_hangar, access_petrov, access_guppy_helm)
-	minimal_access = list()
-
-
-/datum/job/guard
-	title = "Security Guard"
-	department = "Science"
-	department_flag = SCI
-
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Research Director and NanoTrasen Personnel"
-	selection_color = "#633d63"
-	economic_modifier = 6
-	minimal_player_age = 3
-	ideal_character_age = 25
-	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/guard
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/nt, /datum/mil_rank/civ/contractor)
-
-	access = list(access_tox, access_tox_storage,access_research, access_mining, access_mining_office, access_mining_station, access_xenobiology,
-						access_xenoarch, access_nanotrasen, access_sec_guard, access_hangar, access_petrov, access_expedition_shuttle, access_guppy)
-
-
-/datum/job/scientist_assistant
-	title = "Research Assistant"
-	department = "Science"
-	department_flag = SCI
-
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "the Research Director and NanoTrasen Personnel"
-	selection_color = "#633d63"
-	economic_modifier = 3
-	ideal_character_age = 30
-	alt_titles = list(
-		"Custodian" = /decl/hierarchy/outfit/job/torch/passenger/research/assist/janitor,
-		"Testing Assistant" = /decl/hierarchy/outfit/job/torch/passenger/research/assist/testsubject,
-		"Laboratory Technician",
-		"Intern",
-		"Clerk",
-		"Field Assistant")
-
-	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/assist
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/nt)
-
-	access = list(access_research, access_mining_office, access_nanotrasen, access_petrov, access_expedition_shuttle, access_guppy, access_hangar)
-
-
-/datum/job/assistant
-	title = "Passenger"
-	total_positions = 12
-	spawn_positions = 12
-	supervisors = "the Executive Officer"
-	selection_color = "#515151"
-	economic_modifier = 6
-	alt_titles = list(
-		"Private Investigator" = /decl/hierarchy/outfit/job/torch/passenger/passenger/PI,
-		"Journalist" = /decl/hierarchy/outfit/job/torch/passenger/passenger/journalist,
-		"Historian",
-		"Botanist",
-		"Investor" = /decl/hierarchy/outfit/job/torch/passenger/passenger/investor,
-		"Naturalist",
-		"Ecologist",
-		"Entertainer",
-		"Independent Observer",
-		"Sociologist",
-		"Trainer",
-		"Off-Duty")
-	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/passenger
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(
-		/datum/mil_rank/civ/civ,
-		/datum/mil_rank/civ/offduty,
-		/datum/mil_rank/civ/nt
-	)
-
-/datum/job/cyborg
-	total_positions = 3
-	spawn_positions = 3
-	supervisors = "your laws"
-
-
-/datum/job/merchant
-	title = "Merchant"
+	has_email = TRUE
+	title = "Janitor"
 	department = "Civilian"
 	department_flag = CIV
-
 	total_positions = 2
 	spawn_positions = 2
-	availablity_chance = 30
-	supervisors = "the invisible hand of the market"
-	selection_color = "#515151"
-	ideal_character_age = 30
-	minimal_player_age = 7
-	create_record = 0
-	outfit_type = /decl/hierarchy/outfit/job/torch/merchant
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/civ)
-	latejoin_at_spawnpoints = 1
-	access = list(access_merchant)
-	announced = FALSE
+	supervisors = "the Head of Personnel"
+	ideal_character_age = 24
+	alt_titles = list("Interior caretaker")
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/janitor
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+	)
+	allowed_ranks = list(
+	/datum/mil_rank/civ/classd
+	)
 
-/datum/job/stowaway
-	title = "Stowaway"
-	department = "Civilian"
-	department_flag = CIV
-
-	total_positions = 1
-	spawn_positions = 1
-	availablity_chance = 20
-	supervisors = "yourself"
-	selection_color = "#515151"
-	ideal_character_age = 30
-	minimal_player_age = 7
-	create_record = 0
-	account_allowed = 0
-	outfit_type = /decl/hierarchy/outfit/job/torch/stowaway
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/civ)
-	latejoin_at_spawnpoints = 1
-	announced = FALSE
-*/
+	access = list(access_sciencelvl1)
+	minimal_access = list()

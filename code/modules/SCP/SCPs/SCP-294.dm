@@ -1,5 +1,5 @@
 /obj/machinery/scp294
-	name = "Hot Drinks machine"
+	name = "SCP-294"
 	desc = "A standard coffee vending machine. This one seems to have a QWERTY keyboard."
 	icon = 'icons/obj/scp294.dmi'
 	icon_state = "coffee_294"
@@ -33,7 +33,7 @@
 	var/product = null
 	var/mob/living/carbon/victim = null
 	var/input_reagent = lowertext(input("Enter the name of any liquid", "What would you like to drink?") as text)
-	for(var/mob/living/carbon/M in world)
+	for(var/mob/living/carbon/M in GLOB.living_mob_list_)
 		if (lowertext(M.name) == input_reagent)
 			if (istype(M, /mob/living/carbon/))
 				victim = M
@@ -60,17 +60,15 @@
 	else
 		visible_message("<span class='notice'>[src]'s OUT OF RANGE light flashes rapidly.</span>")
 
-
-
 /obj/machinery/scp294/proc/find_reagent(input)
 	. = FALSE
-	if(chemical_reagents_list[input])
-		var/datum/reagent/R = chemical_reagents_list[input]
+	if(global.chemical_reagent_list[input])
+		var/datum/reagent/R = global.chemical_reagent_list[input]
 		if(R)
 			return R.type
 	else
-		for(var/X in chemical_reagents_list)
-			var/datum/reagent/R = chemical_reagents_list[X]
+		for(var/X in global.chemical_reagent_list)
+			var/datum/reagent/R = global.chemical_reagent_list[X]
 			if(R && input == replacetext(lowertext(R.name), " ", ""))
 				return R.type
 			else if(R && input == replacetext(capitalize(R.name), " ", ""))

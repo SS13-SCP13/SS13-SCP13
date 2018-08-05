@@ -12,7 +12,7 @@ var/bomb_set
 	var/deployable = 0
 	var/extended = 0
 	var/lighthack = 0
-	var/timeleft = 120
+	var/timeleft = 900
 	var/timing = 0
 	var/r_code = "ADMIN"
 	var/code = ""
@@ -267,7 +267,7 @@ var/bomb_set
 
 				var/time = text2num(href_list["time"])
 				timeleft += time
-				timeleft = Clamp(timeleft, 120, 600)
+				timeleft = 900
 			if(href_list["timer"])
 				if(timing == -1)
 					return 1
@@ -490,7 +490,7 @@ var/bomb_set
 
 		var/time = text2num(href_list["time"])
 		timeleft += time
-		timeleft = Clamp(timeleft, 300, 900)
+		timeleft = 900
 		return 1
 
 /obj/machinery/nuclearbomb/station/Destroy()

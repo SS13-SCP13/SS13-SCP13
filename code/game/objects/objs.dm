@@ -15,8 +15,13 @@
 	var/damtype = "brute"
 	var/armor_penetration = 0
 	var/anchor_fall = FALSE
+	
+/obj/New()
+	..()
+	global.obj_list += src
 
 /obj/Destroy()
+	global.obj_list -= src 
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

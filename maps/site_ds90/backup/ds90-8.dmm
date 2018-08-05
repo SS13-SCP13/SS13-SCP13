@@ -3427,6 +3427,17 @@
 	icon_state = "floor4"
 	},
 /area/centcom/evac)
+"ahW" = (
+/turf/simulated/floor/plating,
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/shuttle/wall{
+	dir = 1;
+	icon_state = "diagonalWall3"
+	},
+/area/supply/dock)
 "ahX" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -5969,6 +5980,17 @@
 	dir = 2
 	},
 /area/wizard_station)
+"anv" = (
+/turf/simulated/floor/plating,
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/shuttle/wall{
+	dir = 8;
+	icon_state = "diagonalWall3"
+	},
+/area/supply/dock)
 "anw" = (
 /obj/structure/bed/chair/wood/wings{
 	icon_state = "wooden_chair_wings";
@@ -9382,17 +9404,6 @@
 	icon_state = "white"
 	},
 /area/centcom/living)
-"avA" = (
-/turf/simulated/floor/plating,
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/turf/simulated/shuttle/wall{
-	dir = 1;
-	icon_state = "diagonalWall3"
-	},
-/area/supply/dock)
 "avB" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -9405,17 +9416,6 @@
 	},
 /obj/machinery/light/spot,
 /turf/simulated/floor/plating,
-/area/supply/dock)
-"avC" = (
-/turf/simulated/floor/plating,
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/turf/simulated/shuttle/wall{
-	dir = 8;
-	icon_state = "diagonalWall3"
-	},
 /area/supply/dock)
 "avD" = (
 /obj/structure/lattice,
@@ -12875,12 +12875,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/specops)
-"aCs" = (
-/turf/unsimulated/floor{
-	name = "plating";
-	icon_state = "cult"
-	},
-/area/centcom/holding)
 "aCt" = (
 /obj/item/weapon/stool/padded,
 /obj/item/weapon/stool/padded,
@@ -12901,11 +12895,6 @@
 /turf/unsimulated/floor{
 	name = "plating";
 	icon_state = "cult"
-	},
-/area/centcom/holding)
-"aCx" = (
-/turf/unsimulated/floor{
-	icon_state = "steel"
 	},
 /area/centcom/holding)
 "aCy" = (
@@ -13443,10 +13432,6 @@
 	},
 /area/centcom/specops)
 "aDC" = (
-/obj/machinery/camera/network/crescent{
-	c_tag = "Crescent Arrivals - Holding Cell";
-	dir = 4
-	},
 /turf/unsimulated/floor{
 	name = "plating";
 	icon_state = "cult"
@@ -14155,17 +14140,6 @@
 	name = "grass"
 	},
 /area/centcom/holding)
-"aFd" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/green{
-	dir = 9
-	},
-/turf/unsimulated/floor{
-	icon_state = "steel"
-	},
-/area/centcom/holding)
 "aFe" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/unsimulated/floor{
@@ -14653,11 +14627,6 @@
 	icon_state = "carpet"
 	},
 /area/centcom/holding)
-"aGd" = (
-/turf/unsimulated/floor{
-	icon_state = "wood"
-	},
-/area/centcom/holding)
 "aGe" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -14678,9 +14647,6 @@
 	},
 /area/centcom/holding)
 "aGg" = (
-/obj/machinery/camera/network/crescent{
-	c_tag = "Crescent Arrivals East"
-	},
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -14967,24 +14933,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
 /area/syndicate_station/start)
-"aGO" = (
-/obj/structure/table/woodentable{
-	dir = 5
-	},
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/weapon/storage/fancy/cigarettes,
-/obj/item/weapon/material/ashtray/bronze{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/machinery/camera/network/crescent{
-	c_tag = "Crescent Bar East";
-	dir = 4
-	},
-/turf/unsimulated/floor{
-	icon_state = "wood"
-	},
-/area/centcom/holding)
 "aGP" = (
 /obj/structure/table/woodentable{
 	dir = 5
@@ -15052,9 +15000,6 @@
 /turf/space,
 /area/syndicate_station/start)
 "aHb" = (
-/obj/machinery/camera/network/crescent{
-	c_tag = "Crescent Bar Center"
-	},
 /turf/unsimulated/floor{
 	icon_state = "wood"
 	},
@@ -15067,10 +15012,6 @@
 /area/centcom/holding)
 "aHd" = (
 /obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/machinery/camera/network/crescent{
-	c_tag = "Crescent Arrivals South";
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/green{
@@ -15270,11 +15211,6 @@
 /turf/unsimulated/floor{
 	icon_state = "vault";
 	dir = 5
-	},
-/area/centcom/holding)
-"aHD" = (
-/turf/unsimulated/beach/sand{
-	icon_state = "desert1"
 	},
 /area/centcom/holding)
 "aHF" = (
@@ -22801,10 +22737,6 @@
 	},
 /area/centcom/holding)
 "bob" = (
-/obj/machinery/camera/network/crescent{
-	c_tag = "Crescent Bar West";
-	dir = 4
-	},
 /turf/unsimulated/beach/sand{
 	icon_state = "desert1"
 	},
@@ -22866,10 +22798,6 @@
 /area/centcom/holding)
 "bxb" = (
 /obj/item/modular_computer/console/preset/security,
-/obj/machinery/camera/network/crescent{
-	c_tag = "Crescent Arrivals North";
-	dir = 8
-	},
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -29138,15 +29066,15 @@ aab
 aab
 aEE
 bgb
-aHD
-aHD
-aHD
-aHD
+bob
+bob
+bob
+bob
 bmb
 bob
-aHD
+bob
 bjb
-aHD
+bob
 aHp
 aIt
 aCz
@@ -29340,15 +29268,15 @@ aab
 aab
 aEE
 bhb
-aHD
+bob
 aHp
 bkb
-aHD
-aHD
+bob
+bob
 aHp
 bqb
-aHD
-aHD
+bob
+bob
 aIt
 aIF
 aCz
@@ -29542,14 +29470,14 @@ aab
 aab
 aEE
 bhb
-aHD
+bob
 aHp
 aHp
-aHD
-aHD
+bob
+bob
 aHp
 brb
-aHD
+bob
 aIt
 aIF
 aIG
@@ -29744,9 +29672,9 @@ aab
 aab
 aEE
 bhb
-aHD
+bob
 aHp
-aHD
+bob
 aHp
 bnb
 aHp
@@ -29946,9 +29874,9 @@ aab
 aab
 aEE
 bib
-aHD
+bob
 bjb
-aHD
+bob
 blb
 aHp
 aHp
@@ -30149,9 +30077,9 @@ aab
 aEE
 bib
 aHp
-aHD
-aHD
-aHD
+bob
+bob
+bob
 aHp
 bpb
 aIu
@@ -30349,13 +30277,13 @@ aDQ
 aFX
 aab
 aEE
-aGd
+aHb
 aHg
 aHg
-aGd
+aHb
 aHg
 aHg
-aGd
+aHb
 aIv
 aIG
 aIG
@@ -30551,13 +30479,13 @@ aFY
 aGq
 aab
 aEE
-aGd
+aHb
 aHh
 aHq
-aGd
+aHb
 aHF
 aHV
-aGd
+aHb
 aIw
 aIG
 aIG
@@ -30753,13 +30681,13 @@ aDQ
 aFZ
 aab
 aEE
-aGd
+aHb
 aHi
 aHr
-aGd
+aHb
 aHG
 aHW
-aGd
+aHb
 aIw
 aIG
 aIG
@@ -30955,13 +30883,13 @@ aFZ
 aab
 aab
 aEE
-aGd
+aHb
 aHj
 aHj
-aGd
+aHb
 aHj
 aHj
-aGd
+aHb
 aIw
 aIG
 aIG
@@ -31158,12 +31086,12 @@ aab
 aab
 aEE
 aHb
-aGd
-aGd
+aHb
+aHb
 aHc
-aGd
-aGd
-aGd
+aHb
+aHb
+aHb
 aIx
 aIx
 aIx
@@ -31359,13 +31287,13 @@ aab
 aab
 aab
 aEE
-aGd
+aHb
 aHg
 aHg
-aGd
+aHb
 aHg
 aHg
-aGd
+aHb
 aIx
 aIH
 aII
@@ -31561,13 +31489,13 @@ aab
 aab
 aab
 aEE
-aGd
+aHb
 aHk
 aHs
-aGd
+aHb
 aHH
 aHX
-aGd
+aHb
 aIx
 aII
 aIR
@@ -31763,13 +31691,13 @@ aab
 aab
 aab
 aEE
-aGd
+aHb
 aHl
 aHt
-aGd
+aHb
 aHk
 aHY
-aGd
+aHb
 aIy
 aIy
 aIS
@@ -31965,13 +31893,13 @@ aab
 aab
 aab
 aEE
-aGd
+aHb
 aHj
 aHj
-aGd
+aHb
 aHj
 aHj
-aGd
+aHb
 aIy
 aII
 aII
@@ -32167,13 +32095,13 @@ aab
 aab
 aab
 aEE
-aGd
-aGd
-aGd
-aGd
-aGd
-aGd
-aGd
+aHb
+aHb
+aHb
+aHb
+aHb
+aHb
+aHb
 aIz
 aII
 aII
@@ -32369,13 +32297,13 @@ aab
 aab
 aab
 aEE
-aGd
-aGd
-aGd
-aGd
-aGd
-aGd
-aGd
+aHb
+aHb
+aHb
+aHb
+aHb
+aHb
+aHb
 aIy
 aII
 aII
@@ -32555,13 +32483,13 @@ axH
 axH
 aBK
 avY
-aCs
-aCs
-aCs
 aDC
-aCs
-aCs
-aCs
+aDC
+aDC
+aDC
+aDC
+aDC
+aDC
 aEE
 aEY
 aFp
@@ -32571,8 +32499,8 @@ aEE
 aEE
 aEE
 aEE
-aGd
-aGd
+aHb
+aHb
 aHu
 aHy
 aHI
@@ -32760,7 +32688,7 @@ avY
 aCt
 aCQ
 aCu
-aCs
+aDC
 aDS
 aDS
 aDS
@@ -32772,9 +32700,9 @@ aEE
 aGa
 aGr
 aGB
-aGO
-aGd
-aGd
+aGP
+aHb
+aHb
 aHu
 aHy
 aHJ
@@ -32962,10 +32890,10 @@ avY
 aCu
 aCQ
 aCu
-aCs
-aCs
-aCs
-aCs
+aDC
+aDC
+aDC
+aDC
 aEF
 aFa
 aED
@@ -32975,8 +32903,8 @@ aGb
 aGs
 aGC
 aGP
-aGd
-aGd
+aHb
+aHb
 aHu
 aHy
 aHJ
@@ -33161,10 +33089,10 @@ avY
 avY
 avY
 avY
-aCs
-aCs
-aCs
-aCs
+aDC
+aDC
+aDC
+aDC
 aDS
 aDS
 aDS
@@ -33177,8 +33105,8 @@ aGc
 aGt
 aGD
 aGP
-aGd
-aGd
+aHb
+aHb
 aHu
 aHy
 aHJ
@@ -33375,12 +33303,12 @@ aFb
 aFb
 aFb
 aEE
-aGd
-aGd
-aGd
-aGd
+aHb
+aHb
+aHb
+aHb
 aHc
-aGd
+aHb
 aHu
 aHy
 aHJ
@@ -33577,12 +33505,12 @@ aFb
 aFb
 aFb
 aEE
-aGd
-aGd
-aGd
-aGd
-aGd
-aGd
+aHb
+aHb
+aHb
+aHb
+aHb
+aHb
 aHu
 aHy
 aHJ
@@ -33767,12 +33695,12 @@ ayr
 ayr
 aBN
 aCa
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
 aEu
 aEE
 aEE
@@ -33982,8 +33910,8 @@ aFc
 aFc
 aFc
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aFc
 aFc
@@ -34377,17 +34305,17 @@ awa
 aCS
 aDl
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aEG
-aFd
-aFd
-aFd
-aFd
+aHd
+aHd
+aHd
+aHd
 aGe
-aCx
-aCx
+aGg
+aGg
 aGQ
 aHd
 aHm
@@ -34577,22 +34505,22 @@ awC
 awG
 axJ
 aCT
-aCx
+aGg
 aDF
-aCx
-aCx
+aGg
+aGg
 aEw
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
 aHw
 aHz
 aHL
@@ -34779,23 +34707,23 @@ awC
 axK
 aCA
 aCU
-aCx
+aGg
 aDE
 aDU
 aEg
 byb
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
 aGR
-aCx
-aCx
-aCx
+aGg
+aGg
+aGg
 aHA
 aHM
 aHM
@@ -34981,23 +34909,23 @@ awC
 awG
 aCb
 aCV
-aCx
+aGg
 aDG
-aCx
+aGg
 aEh
 aEy
 aEH
 aFe
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
 aHA
 aHM
 aHM
@@ -35193,13 +35121,13 @@ aDm
 aDm
 aFD
 aFM
-aCx
-aCx
+aGg
+aGg
 aGE
 aFD
 aFM
-aCx
-aCx
+aGg
+aGg
 aCz
 aHN
 aHM
@@ -35597,13 +35525,13 @@ aFc
 aFc
 aFc
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aFc
 aDE
-aCx
-aCx
+aGg
+aGg
 aCz
 aHO
 aHO
@@ -35799,13 +35727,13 @@ aCz
 aCz
 aFc
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aGS
 aDE
-aCx
-aCx
+aGg
+aGg
 aCz
 aCz
 aCz
@@ -36002,12 +35930,12 @@ aCz
 aFc
 aDE
 aGg
-aCx
-aCx
-aCx
-aCx
-aCx
-aCx
+aGg
+aGg
+aGg
+aGg
+aGg
+aGg
 aDE
 aFc
 aCz
@@ -36203,13 +36131,13 @@ aab
 aCz
 aFc
 aDE
-aCx
-aCx
+aGg
+aGg
 aGF
 aGT
 aHe
-aCx
-aCx
+aGg
+aGg
 aDE
 aFc
 aCz
@@ -36405,13 +36333,13 @@ aab
 aCz
 aFc
 aDE
-aCx
-aCx
+aGg
+aGg
 aGG
 axK
 aCU
-aCx
-aCx
+aGg
+aGg
 aDE
 aFc
 aCz
@@ -36607,13 +36535,13 @@ aab
 aCz
 aCz
 aCz
-aCx
-aCx
+aGg
+aGg
 aCz
 aCz
 aCz
-aCx
-aCx
+aGg
+aGg
 aCz
 aCz
 aCz
@@ -36809,13 +36737,13 @@ aab
 aFq
 aFq
 aDE
-aCx
-aCx
+aGg
+aGg
 aCz
 aFq
 aCz
-aCx
-aCx
+aGg
+aGg
 aDE
 aFq
 aFq
@@ -37011,13 +36939,13 @@ aab
 aab
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aab
 aab
@@ -37213,13 +37141,13 @@ aab
 aab
 aab
 aCz
-aCx
-aCx
+aGg
+aGg
 aDE
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aHB
 aHP
 aIc
@@ -37415,13 +37343,13 @@ aab
 aab
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aHQ
 aId
@@ -37617,13 +37545,13 @@ aab
 aab
 aab
 aFN
-aCx
-aCx
+aGg
+aGg
 aDE
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aHC
 aHR
 aIe
@@ -37786,7 +37714,7 @@ auz
 auz
 auz
 auz
-avA
+ahW
 aup
 atR
 atR
@@ -37819,13 +37747,13 @@ aab
 aab
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aDE
 aHQ
 aIf
@@ -38021,13 +37949,13 @@ aab
 aab
 aab
 aCz
-aCx
-aCx
+aGg
+aGg
 aDE
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aHB
 aHS
 aIc
@@ -38190,7 +38118,7 @@ auz
 auz
 auz
 auz
-avC
+anv
 aup
 atR
 atR
@@ -38223,13 +38151,13 @@ aab
 aab
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aCz
 aab
 aCz
 aHn
-aCx
+aGg
 aDE
 aab
 aab
@@ -38425,13 +38353,13 @@ aab
 aab
 aab
 aDE
-aCx
-aCx
+aGg
+aGg
 aCz
 aab
 aCz
 aHo
-aCx
+aGg
 aDE
 aab
 aab

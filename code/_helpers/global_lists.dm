@@ -1,14 +1,31 @@
 //Since it didn't really belong in any other category, I'm putting this here
 //This is for procs to replace all the goddamn 'in world's that are chilling around the code
 
-var/global/list/cable_list = list()					//Index for all cables, so that powernets don't have to look through the entire world all the time
-var/global/list/chemical_reactions_list				//list of all /datum/chemical_reaction datums. Used during chemical reactions
-var/global/list/chemical_reagents_list				//list of all /datum/reagent datums indexed by reagent id. Used by chemistry stuff
-var/global/list/landmarks_list = list()				//list of all landmarks created
-var/global/list/surgery_steps = list()				//list of all surgery steps  |BS12
-var/global/list/side_effects = list()				//list of all medical sideeffects types by thier names |BS12
-var/global/list/mechas_list = list()				//list of all mechs. Used by hostile mobs target tracking.
-var/global/list/joblist = list()					//list of all jobstypes, minus borg and AI
+// New objects, mostly created at startup, get added to these lists. GLOB isn't used because it isn't always available at startup.
+var/global/list/obj_list = list()
+var/global/list/structure_list = list() 
+var/global/list/flora_list = list() 
+var/global/list/effect_list = list() 
+var/global/list/item_list = list()
+var/global/list/device_list = list() 
+var/global/list/camera_list = list()
+var/global/list/cable_list = list()
+var/global/list/chemical_reaction_list = list() 
+var/global/list/chemical_reagent_list = list() 
+var/global/list/landmark_list = list() 
+var/global/list/surgery_step_list = list()
+var/global/list/side_effect_list = list() 
+var/global/list/mecha_list = list() 
+var/global/list/job_list = list() 
+var/global/list/lighting_corner_list = list()
+var/global/list/lighting_overlay_list = list() 
+var/global/list/nano_module_list = list() 
+var/global/list/singularity_list = list() 
+var/global/list/admin_datums_by_value = list() // "admin_datums" is an associative list of "key" = /datum. This is just a list of datums.
+var/global/list/cleanable_decals_list = list() 
+var/global/list/turf_list = list()
+var/global/list/unsimulated_turf_list = list()
+var/global/list/simulated_turf_list = list()
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER)
 #define all_genders_text_list list("Male","Female","Plural","Neuter")
@@ -135,7 +152,7 @@ var/global/list/string_slot_flags = list(
 	paths = typesof(/datum/surgery_step)-/datum/surgery_step
 	for(var/T in paths)
 		var/datum/surgery_step/S = new T
-		surgery_steps += S
+		global.surgery_step_list += S
 	sort_surgeries()
 
 	//List of job. I can't believe this was calculated multiple times per tick!
@@ -143,7 +160,7 @@ var/global/list/string_slot_flags = list(
 	paths -= exclude_jobs
 	for(var/T in paths)
 		var/datum/job/J = new T
-		joblist[J.title] = J
+		global.job_list[J.title] = J
 
 	//Languages and species.
 	paths = typesof(/datum/language)-/datum/language
@@ -202,10 +219,10 @@ var/global/list/string_slot_flags = list(
 /* // Uncomment to debug chemical reaction list.
 /client/verb/debug_chemical_list()
 
-	for (var/reaction in chemical_reactions_list)
-		. += "chemical_reactions_list\[\"[reaction]\"\] = \"[chemical_reactions_list[reaction]]\"\n"
-		if(islist(chemical_reactions_list[reaction]))
-			var/list/L = chemical_reactions_list[reaction]
+	for (var/reaction in global.chemical_reaction_list)
+		. += "global.chemical_reaction_list\[\"[reaction]\"\] = \"[global.chemical_reaction_list[reaction]]\"\n"
+		if(islist(global.chemical_reaction_list[reaction]))
+			var/list/L = global.chemical_reaction_list[reaction]
 			for(var/t in L)
 				. += "    has: [t]\n"
 	log_debug(.)

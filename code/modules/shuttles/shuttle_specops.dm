@@ -152,10 +152,12 @@
 		sleep(10)
 
 		var/spawn_marauder[] = new()
-		for(var/obj/effect/landmark/L in world)
+		for(var/landmark in global.landmark_list)
+			var/obj/effect/landmark/L = landmark
 			if(L.name == "Marauder Entry")
 				spawn_marauder.Add(L)
-		for(var/obj/effect/landmark/L in world)
+		for(var/landmark in global.landmark_list)
+			var/obj/effect/landmark/L = landmark
 			if(L.name == "Marauder Exit")
 				var/obj/effect/portal/P = new(L.loc)
 				P.set_invisibility(101)//So it is not seen by anyone.
