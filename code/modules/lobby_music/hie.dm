@@ -2,4 +2,4 @@
 	artist = "Atli Örvarsson"
 	title = "How It Ends"
 	album = "SCP13 OST"
-	song = 'sound/music/supermarine.ogg'
+	song = 'sound/music/howitends.ogg'
