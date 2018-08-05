@@ -38,6 +38,7 @@ changes:
   - tweak: "Replaced Delta alert sound with revised sound."
   - soundadd: "Altered sound for the vote panel to be less startling."
   - rscadd: "Adds kneepads to the Security lockers."
+  - rscadd: "Adds documentation for SCP-513."
   - sounddel: "Removed Supermarine from lobby music."
   - soundadd: "Added new lobby track."
   - imageadd: "Adds new medical decals."
