@@ -53,25 +53,25 @@ var/list/possible_cable_coil_colours
 	return PN.draw_power(amount)
 
 /obj/structure/cable/yellow
-	color = COLOR_AMBER
+	color = COLOR_YELLOW
 
 /obj/structure/cable/green
-	color = COLOR_GREEN
+	color = COLOR_LIME
 
 /obj/structure/cable/blue
-	color = COLOR_CYAN_BLUE
+	color = COLOR_BLUE
 
 /obj/structure/cable/pink
-	color = COLOR_PURPLE
+	color = COLOR_PINK
 
 /obj/structure/cable/orange
 	color = COLOR_ORANGE
 
 /obj/structure/cable/cyan
-	color = COLOR_SKY_BLUE
+	color = COLOR_CYAN
 
 /obj/structure/cable/white
-	color = COLOR_SILVER
+	color = COLOR_WHITE
 
 /obj/structure/cable/New()
 	..()
