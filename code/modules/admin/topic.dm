@@ -9,13 +9,13 @@
 	if(ticker.mode && ticker.mode.check_antagonists_topic(href, href_list))
 		check_antagonists()
 		return
-		
+
 	if(href_list["autoresponse"]) // new verb on the Ahelp.  Will tell the person their message was received, and they probably won't get a response
 		var/mob/ref_person = locate(href_list["autoresponse"])
 		if(!ref_person || !istype(ref_person) || !ref_person.client)
 			usr << "\blue Looks like that person stopped existing!"
 			return
-			
+
 		var/datum/ticket/ticket = get_open_ticket_by_client(ref_person.client)
 		if(ticket && ticket.assigned_admins.len)
 			usr << "<b>This adminhelp is already being handled, but continue if you wish.</b>"
@@ -25,17 +25,31 @@
 			usr << "<b>This ticket no longer exists.</b>"
 			return
 
-		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed", "Thanks", "Guilty", "L: Xeno Quickstart Guide", "L: Marine quickstart guide", "L: Current Map", "A: No plasma regen", "A: Devour as Xeno", "J: Job bans", "E: Event in progress", "R: Radios", "D: Joining disabled", "M: Macros")
+//		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed", "Thanks", "Guilty", "L: Xeno Quickstart Guide", "L: Marine quickstart guide", "L: Current Map", "A: No plasma regen", "A: Devour as Xeno", "J: Job bans", "E: Event in progress", "R: Radios", "D: Joining disabled", "M: Macros")
+		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed","Thanks!", "A: RUST Engine", "A: D-Class Riot", "A: D-Class Cells", "A: Directions/Lost", "A: Character setup")
+
 
 		var/msgplayer
 		switch(choice)
 			if("IC Issue")
-				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. This issue has been deemed an IC (In-Character) issue, and will not be handled by staff. In case it's relevant, you may wish to ask your <a href='http://cm-ss13.com/wiki/Rank'>Chain Of Command</a> about your issue if you believe <a href='http://cm-ss13.com/wiki/Marine_Law'>Marine Law</a> has been broken.</b>"
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. This issue has been deemed an IC (In-Character) issue, and will not be handled by staff. In case it's relevant, you may wish to ask your <a href='http://wiki.scp13.site/index.php?title=Rank'>Chain Of Command</a> about your issue if you believe <a href='http://wiki.scp13.site/index.php?title=Foundation_Law'>Foundation Law</a> has been broken.</b>"
 			if("Being Handled")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. The issue is already being dealt with.</b>"
 			if("Fixed")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. The issue is already fixed.</b>"
-			if("Thanks")
+			if("Thanks!")
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. Have a SCP day!</b>"
+			if("A: RUST Engine")
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. The RUST Engine can be set up by finding the placed manual in the chamber area's, or alternatively you can visit <a href='http://wiki.scp13.site/index.php?title=RUST_MK.3_Engine'>the wiki guide on this engine</a>.</b>"
+			if("A: D-Class Riot")
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. D-Class may only riot with permission from a member of staff, and needs a good reason. If you wish to start a riot, you are to adminhelp again, outlining your reason. A member of staff will take your request under advisement.</b>"
+			if("A: D-Class Cells")
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. You can only get out if the on-duty guards feel like releasing you. It's best to wait and watch a YouTube video until such time.</b>"
+			if("A: Directions/Lost")
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. If you are lost, it is best to keep an eye on directional signs, ask a fellow player or find Holomaps, if they have been added to the current map.</b>"
+			if("A: Character setup")
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. In order to join the game, you are required to select a branch and rank, found in the top area of the character set up. Once you have done this, you can join the jobs that are allowed for that rank. It is best to experiment for a moment to see which rank suits you best, since some jobs allow multiple.</b>"
+/*			if("Thanks")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>! Have a CM day!</b>"
 			if("Guilty")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. You broke Marine Law.</b>"
@@ -59,6 +73,7 @@
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. A staff member has disabled joining for new players as the current round is coming to an end, you can observe while it ends and wait for a new round to start.</b>"
 			if("M: Macros")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. To set a macro right click the title bar, select Client->Macros. Binding unique-action to a key is useful for pumping shotguns etc; Binding load-from-attachment will activate any scopes etc; Binding resist and give to seperate keys is also handy. For more information on macros, head over to our guide, at: http://cm-ss13.com/wiki/Macros</b>"
+				*/
 			else return
 
 		message_staff("[usr.key] is autoresponding to [ref_person] with <font color='#009900'>'[choice]'</font>. They have been shown the following:\n[msgplayer]", 1)

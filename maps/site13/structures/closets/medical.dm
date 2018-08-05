@@ -19,7 +19,6 @@
 		/obj/item/clothing/shoes/white,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
-		/obj/item/device/radio/headset/heads/cmo,
 		/obj/item/device/megaphone,
 		/obj/item/weapon/reagent_containers/hypospray/vial,
 		/obj/item/weapon/storage/fancy/vials,
@@ -32,12 +31,12 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/med, /obj/item/weapon/storage/backpack/messenger/med)),
 	)
 
-/obj/structure/closet/wardrobe/medic_site13
+/obj/structure/closet/wardrobe/medic/site13
 	name = "medical wardrobe"
 	icon_state = "white"
 	icon_closed = "white"
 
-/obj/structure/closet/wardrobe/medic_site13/WillContain()
+/obj/structure/closet/wardrobe/medic/site13/WillContain()
 	return list(
 		/obj/item/clothing/under/sterile = 2,
 		RANDOM_SCRUBS = 4,
@@ -114,7 +113,7 @@
 	icon_off = "medicaloff"
 	req_access = list(access_mtflvl2)
 
-/obj/structure/closet/secure_closet/chemical/WillContain()
+/obj/structure/closet/secure_closet/chemical/site13/WillContain()
 	return list(
 		/obj/item/weapon/storage/box/pillbottles = 2,
 		/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone,

@@ -104,7 +104,7 @@
 /obj/item/weapon/reagent_containers/pill/scp500
 	name = "SCP-500"
 	desc = "A pill supposedly curing everything."
-	icon_state = "pillA"
+	icon_state = "pill9"
 /obj/item/weapon/reagent_containers/pill/adminordrazine/New()
 	..()
 	reagents.add_reagent(/datum/reagent/adminordrazine, 50)

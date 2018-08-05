@@ -80,7 +80,7 @@
 /area/site13/surface/hallway/elevator
 	name = "\improper Surface Elevator Hallway"
 	icon_state = "hallC1"
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/site13/surface/hallway/office
 	name = "\improper Office Hallway"
@@ -263,25 +263,31 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
+/area/site13/surface/tcommsat/office
+	name = "\improper Telecoms Office"
+	icon_state = "red"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
 /area/site13/surface/shuttle/helipad1
 	icon_state = "shuttle"
 	dynamic_lighting = 0
-	area_flags = HIDE_FROM_HOLOMAP
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
 
 /area/site13/surface/shuttle/helipad2
 	icon_state = "shuttle"
 	dynamic_lighting = 0
-	area_flags = HIDE_FROM_HOLOMAP
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
 
 /area/site13/surface/shuttle/helipad3
 	icon_state = "shuttle"
 	dynamic_lighting = 0
-	area_flags = HIDE_FROM_HOLOMAP
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
 
 /area/site13/surface/shuttle/helipad4
 	icon_state = "shuttle"
 	dynamic_lighting = 0
-	area_flags = HIDE_FROM_HOLOMAP
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
 
 /area/site13/surface/security/headarmory
 	name = "\improper External Emergency Storage"
@@ -408,7 +414,7 @@
 	name = "\improper LCZ Floor Elevator Hallway"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/site13/floor1/hallway/lczeast
 	name = "\improper Light Containment Zone East Hallway"
@@ -424,6 +430,12 @@
 
 /area/site13/floor1/rnd/archives
 	name = "\improper Archives"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
+/area/site13/floor1/rnd/flora
+	name = "\improper Flora Lab"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
@@ -730,6 +742,12 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
+/area/site13/floor2/rnd/servers
+	name = "\improper Server Room"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
 /area/site13/floor2/rnd/vac1
 	name = "\improper Vacant High Security Chamber"
 	icon_state = "research"
@@ -782,7 +800,7 @@
 	name = "\improper HCZ Floor Elevator Hallway"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/site13/floor2/hallway/hcz
 	name = "\improper Heavy Containment Zone East Hallway"
@@ -879,7 +897,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_hcz_2
 	name = "lift (hcz)"
@@ -889,7 +907,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_hcz_c
 	name = "lift (hcz)"
@@ -899,7 +917,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_maint2_1
 	name = "lift (hcz)"
@@ -909,7 +927,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_maint2_2
 	name = "lift (hcz)"
@@ -919,7 +937,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_maint2_c
 	name = "lift (hcz)"
@@ -929,7 +947,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_lcz_1
 	name = "lift (hcz)"
@@ -939,7 +957,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_lcz_2
 	name = "lift (hcz)"
@@ -949,7 +967,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_lcz_c
 	name = "lift (hcz)"
@@ -959,7 +977,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_maint4_1
 	name = "lift (hcz)"
@@ -969,7 +987,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_maint4_2
 	name = "lift (hcz)"
@@ -979,7 +997,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_maint4_c
 	name = "lift (hcz)"
@@ -989,7 +1007,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_surf_1
 	name = "lift (hcz)"
@@ -999,7 +1017,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_surf_2
 	name = "lift (hcz)"
@@ -1009,7 +1027,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/turbolift/site13_surf_c
 	name = "lift (hcz)"
@@ -1019,7 +1037,7 @@
 	requires_power = 0
 	dynamic_lighting = 0
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/acting/stage
 	name = "Pocket Dimension"
