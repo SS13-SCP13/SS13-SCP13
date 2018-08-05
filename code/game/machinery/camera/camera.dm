@@ -90,6 +90,8 @@
 			error("[src.name] in [get_area(src)]has errored. [src.network?"Empty network list":"Null network list"]")
 		ASSERT(src.network)
 		ASSERT(src.network.len > 0)
+				
+	global.camera_list += src 
 	..()
 
 /obj/machinery/camera/Initialize()
@@ -107,6 +109,7 @@
 
 
 /obj/machinery/camera/Destroy()
+	global.camera_list -= src 
 	deactivate(null, 0) //kick anyone viewing out
 	if(assembly)
 		qdel(assembly)
