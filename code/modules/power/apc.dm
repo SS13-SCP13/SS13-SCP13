@@ -69,8 +69,8 @@
 /obj/machinery/power/apc
 	name = "area power controller"
 	desc = "A control terminal for the area electrical systems."
-
 	icon_state = "apc0"
+	icon = 'icons/obj/apc.dmi'
 	anchored = 1
 	use_power = 0
 	req_access = list(access_mtflvl2)

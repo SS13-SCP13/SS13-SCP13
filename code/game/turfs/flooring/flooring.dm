@@ -122,6 +122,7 @@ var/list/flooring_types
 
 /decl/flooring/tiling/mono
 	icon_base = "monotile"
+	build_type = /obj/item/stack/tile/mono
 
 /decl/flooring/tiling/white
 	desc = "How sterile."
@@ -130,11 +131,6 @@ var/list/flooring_types
 
 /decl/flooring/tiling/white/mono
 	icon_base = "monotile"
-
-/decl/flooring/tiling/grey
-	desc = "How ominous."
-	color = COLOR_GRAY
-	build_type = /obj/item/stack/tile/floor
 
 /decl/flooring/tiling/dark
 	desc = "How ominous."
@@ -151,6 +147,44 @@ var/list/flooring_types
 	has_damage_range = null
 	flags = TURF_REMOVE_CROWBAR
 	build_type = /obj/item/stack/tile/floor_freezer
+
+/decl/flooring/tiling/tech
+	icon = 'icons/turf/flooring/techfloor.dmi'
+	icon_base = "techfloor_gray"
+	build_type = /obj/item/stack/tile/techgrey
+	color = null
+
+/decl/flooring/tiling/tech/grid
+	icon_base = "techfloor_grid"
+	build_type = /obj/item/stack/tile/techgrid
+
+/decl/flooring/tiling/new_tile
+	icon_base = "tile_full"
+	color = null
+
+/decl/flooring/tiling/new_tile/cargo_one
+	icon_base = "cargo_one_full"
+
+/decl/flooring/tiling/new_tile/kafel
+	icon_base = "kafel_full"
+
+/decl/flooring/tiling/new_tile/techmaint
+	icon_base = "techmaint"
+	build_type = /obj/item/stack/tile/techmaint
+
+/decl/flooring/tiling/new_tile/monofloor
+	icon_base = "monofloor"
+	color = COLOR_GUNMETAL
+
+/decl/flooring/tiling/new_tile/steel_grid
+	icon_base = "grid"
+	color = COLOR_GUNMETAL
+	build_type = /obj/item/stack/tile/grid
+
+/decl/flooring/tiling/new_tile/steel_ridged
+	icon_base = "ridged"
+	color = COLOR_GUNMETAL
+	build_type = /obj/item/stack/tile/ridge
 
 /decl/flooring/wood
 	name = "wooden floor"
@@ -201,9 +235,6 @@ var/list/flooring_types
 	has_damage_range = 6
 	flags = TURF_ACID_IMMUNE | TURF_CAN_BREAK | TURF_REMOVE_WRENCH
 	can_paint = null
-
-/decl/flooring/reinforced/cult/on_remove()
-	cult.remove_cultiness(CULTINESS_PER_TURF)
 
 /decl/flooring/reinforced/shuttle
 	name = "floor"
