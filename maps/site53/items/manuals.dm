@@ -436,35 +436,35 @@ The reddish brown substance on the floor is a combination of feces and blood. Or
 <b>Note From Dr. Klein:</b> SCP personnel below Level 3 are now banned from handling SCP-500. This is not to be used to cure a hangover. Get AIDS and then ask permission.
 <br>
 <br>
-<b>Request 500-1774-k</b> Dr. --REDACTED-- has requested one (1) SCP-500 pill for testing with [[[SCP-038]]]. Request has been approved.
+<b>Request 500-1774-k</b> Dr. --REDACTED-- has requested one (1) SCP-500 pill for testing with --REDACTED--. Request has been approved.
 <br>
-<b>Request 500-1862-b</b> Dr. Gears has requested one (1) SCP-500 pill for testing in [[[SCP-914]]]. Request has been approved.
+<b>Request 500-1862-b</b> Dr. Gears has requested one (1) SCP-500 pill for testing in --REDACTED--. Request has been approved.
 <br>
-<b>Request 500-2354-f</b> Dr. ¦¦¦¦¦¦¦¦¦ has requested one (1) SCP-500 pill for testing with [[[SCP-253]]]. Request denied.
+<b>Request 500-2354-f</b> Dr. ¦¦¦¦¦¦¦¦¦ has requested one (1) SCP-500 pill for testing with --REDACTED--. Request denied.
 <br>
 <b>Request 500-5667-e</b> Dr. Gibbons has requested two (2) pills of SCP-500 for his personal medkit. Request denied.
 <br>
-<b>Addendum 500-1:</b> Two (2) pills have been authorized for use with [[[SCP-008]]]. As a result of conducting a series of tests on Class D subjects infected with SCP-008, it appears that even in the most advanced stages of the disease one whole pill will accomplish full recovery. Number of pills is fifty-seven (57) at the time of writing. - Dr. [500-0021D]
+<b>Addendum 500-1:</b> Two (2) pills have been authorized for use with --REDACTED--. As a result of conducting a series of tests on Class D subjects infected with SCP-008, it appears that even in the most advanced stages of the disease one whole pill will accomplish full recovery. Number of pills is fifty-seven (57) at the time of writing. - Dr. --REDACTED--
 <br>
-<b>Addendum 500-2:</b> One (1) pill has been authorized for use with [[[SCP-409]]]. SCP-500 was tested on Subject 409-D5 who was exposed to the effects of [[[SCP-409]]]. Complete recovery accomplished. See Addendum 409-1. Number of pills is fifty-six (56) at the time of writing. - Dr. [500-0021D]
+<b>Addendum 500-2:</b> One (1) pill has been authorized for use with --REDACTED--. SCP-500 was tested on Subject 409-D5 who was exposed to the effects of --REDACTED--. Complete recovery accomplished. See Addendum 409-1. Number of pills is fifty-six (56) at the time of writing. - Dr. --REDACTED--
 <br>
-<b>Addendum 500-4:</b> Request 500-1774-k approved. Five (5) pills have been used in experimentation with [[[SCP-038]]]. It has been determined that SCP-038 is capable of duplicating SCP-500; however, the success of the duplicated pills is limited. The duplicated pills are only effective in curing the subject 30% of the time, with chance of successful healing dropping as time since cloned increases. In 60% of the cases where the infection is permanent, symptoms of infection remain, though further infestation is neutralized. Repeated dosing with SCP-038 cloned pills is recommended for all personnel suffering from incurable conditions, as supply of SCP-500 remains extremely limited. All five (5) used samples of SCP-500 were returned. Number of pills is fifty-six (56) at the time of writing.
+<b>Addendum 500-4:</b> Request 500-1774-k approved. Five (5) pills have been used in experimentation with --REDACTED--. It has been determined that SCP-038 is capable of duplicating SCP-500; however, the success of the duplicated pills is limited. The duplicated pills are only effective in curing the subject 30% of the time, with chance of successful healing dropping as time since cloned increases. In 60% of the cases where the infection is permanent, symptoms of infection remain, though further infestation is neutralized. Repeated dosing with SCP-038 cloned pills is recommended for all personnel suffering from incurable conditions, as supply of SCP-500 remains extremely limited. All five (5) used samples of SCP-500 were returned. Number of pills is fifty-six (56) at the time of writing.
 <br>
 <b>Addendum 500-5:</b> During experiments with SCP-038, one (1) pill was stolen by personnel D-¦¦¦¦¦¦ to, reportedly, "cure a hangover". Stricter controls for samples of SCP-500 given to other projects is suggested. Personnel D-¦¦¦¦¦¦ has been terminated. Number of pills is fifty-five (55) at the time of writing.
 <br>
-<b>Addendum 500-6:</b> One (1) pill has been used with [[[SCP-231|SCP-231-4]]]. Number of pills is fifty-four (54) at the time of writing.
+<b>Addendum 500-6:</b> One (1) pill has been used with --REDACTED--. Number of pills is fifty-four (54) at the time of writing.
 <br>
-<b>Addendum 500-7:</b> One (1) pill has been used for [[[ experiment-log-447-a | Experiment 447-a]]]. Number of pills is fifty-three (53) at the time of writing.
+<b>Addendum 500-7:</b> One (1) pill has been used for --REDACTED--. Number of pills is fifty-three (53) at the time of writing.
 <br>
-<b>Addendum 500-8:</b> One (1) pill has been used with [[[SCP-208]]]. Number of pills is fifty-two (52) at the time of writing.
+<b>Addendum 500-8:</b> One (1) pill has been used with --REDACTED--. Number of pills is fifty-two (52) at the time of writing.
 <br>
-<b>Addendum 500-9:</b> Request 500-1862-b approved. One (1) pill of SCP-500 is placed within [[[SCP-914]]] with the setting at "Fine". Resulting object classified as [[[SCP-427]]]. Number of pills is fifty-one (51) at the time of writing.
+<b>Addendum 500-9:</b> Request 500-1862-b approved. One (1) pill of SCP-500 is placed within --REDACTED-- with the setting at "Fine". Resulting object classified as --REDACTED--. Number of pills is fifty-one (51) at the time of writing.
 <br>
-<b>Addendum 500-10:</b> Five (5) pills have been taken for the [[[Olympia Project]]] although only two (2) were used. The remaining three (3) will be returned shortly. Upon return, number of pills will be forty-nine (49).
+<b>Addendum 500-10:</b> Five (5) pills have been taken for the --REDACTED-- although only two (2) were used. The remaining three (3) will be returned shortly. Upon return, number of pills will be forty-nine (49).
 <br>
 <b>Addendum 500-11:</b> Two (2) pills have been used for Experiment 217-¦¦¦¦¦-¦¦¦¦¦. Number of pills is forty-seven (47) at the time of writing.
 <br>
-<b>Addendum 500-12:</b> Request to have SCP-500 investigated for mental compulsion leading to obsessive fixation denied for triviality."}
+<b>Addendum 500-12:</b> Request to have SCP-500 investigated for mental compulsion leading to obsessive fixation denied for triviality.
 "}
 // EUCLID ADDENDUMS
 
