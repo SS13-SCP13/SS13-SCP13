@@ -132,6 +132,12 @@
 	M.confused = 0
 	M.sleeping = 0
 	M.jitteriness = 0
+	if (ishuman(M) && istype(M.species, /datum/species/scp049_1))
+		var/mob/living/carbon/human/H = M
+		H.set_species("Human")
+		H.mutations &= ~HUSK
+		H.name = H.pre_scp049_name
+		H.real_name = H.pre_scp049_real_name
 
 /datum/reagent/gold
 	name = "Gold"
