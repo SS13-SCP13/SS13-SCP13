@@ -1,6 +1,6 @@
-/datum/species/scp106
-	name = "SCP-106"
-	name_plural = "SCP-106s"
+/datum/species/scp049
+	name = "SCP-049"
+	name_plural = "SCP-049s"
 
 	darksight = 8
 	has_organ = list()
@@ -34,7 +34,7 @@
 	radiation_mod =  0.0                    // No radiation damage
 	flash_mod =      0.0                    // Unflashable
 
-/datum/species/scp106/handle_npc(var/mob/living/carbon/human/scp106/H)
-	if (!H.pursueTarget() || H.loc in GLOB.scp106_floors)
+/datum/species/scp049/handle_npc(var/mob/living/carbon/human/scp049/H)
+	if (!H.pursueTarget())
 		var/turf/T = step_rand(H)
 		H.Move(get_dir(H, T))

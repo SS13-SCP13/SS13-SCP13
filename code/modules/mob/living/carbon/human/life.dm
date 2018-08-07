@@ -65,6 +65,10 @@
 
 	//No need to update all of these procs if the guy is dead.
 	if(stat != DEAD && !InStasis())
+	
+		if(!client && !mind)
+			species.handle_npc(src)
+
 		//Updates the number of stored chemicals for powers
 		handle_changeling()
 
@@ -77,10 +81,6 @@
 		handle_pain()
 
 		handle_medical_side_effects()
-
-		if(!client && !mind)
-			species.handle_npc(src)
-
 
 	// spooky SCP-106 music
 	if (client)
