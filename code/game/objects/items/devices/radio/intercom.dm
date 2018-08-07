@@ -164,7 +164,7 @@
 	locked_frequency = 1480
 	
 /obj/item/device/radio/intercom/locked/desk_phone
-	icon = "icons
+	icon = "icons/obj/items.dmi"
 	icon_state = "intercom"
 	name = "desk phone"
 	locked_frequency = 1500
