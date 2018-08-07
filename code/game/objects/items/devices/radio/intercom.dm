@@ -162,3 +162,13 @@
 /obj/item/device/radio/intercom/locked/confessional
 	name = "confessional intercom"
 	locked_frequency = 1480
+	
+/obj/item/device/radio/intercom/locked/desk_phone
+	icon = "icons
+	icon_state = "intercom"
+	name = "desk phone"
+	locked_frequency = 1500
+	desc = "A phone, made for desks."
+	broadcasting = 1
+	listening = 1
+	
