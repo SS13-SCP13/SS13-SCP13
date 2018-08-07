@@ -170,5 +170,5 @@
 	locked_frequency = 1500
 	desc = "A phone, made for desks."
 	broadcasting = 1
-	listening = 1
+	listening = 1 
 	
