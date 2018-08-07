@@ -1,15 +1,13 @@
 GLOBAL_LIST_EMPTY(scp106s)
+GLOBAL_LIST_EMPTY(scp106_landmarks)
 
 /mob/living/carbon/human/scp106
-	desc = "A rotting, elderly old man."
+	desc = "A creature in the form of a rotting, elderly humanoid."
 	SCP = /datum/scp/SCP_106
 	var/mob/living/target = null
 	var/last_x = -1
 	var/last_y = -1
 	var/last_z = -1
-	
-/mob/living/carbon/human/scp106/examine(mob/user)
-	user << "<b><span class = 'info'><big>SCP-106</big></span></b> - [desc]"
 
 /datum/scp/SCP_106
 	name = "SCP-106"
@@ -25,20 +23,16 @@ GLOBAL_LIST_EMPTY(scp106s)
 /obj/scp106_sprite_helper/CanMoveOnto(atom/movable/mover, turf/target, height=1.5, direction = 0)
 	return TRUE
 
-// no need to sanity check vis_locs, because we couldn't click it in the first place if vis_locs.len was 0
 /obj/scp106_sprite_helper/Click(location,control,params)
-	var/atom/A = vis_locs[1]
-	return A.Click(location, control, params)
+	if (vis_locs.len)
+		var/atom/A = vis_locs[1]
+		return A.Click(location, control, params)
 
 /obj/scp106_sprite_helper/DblClick(location,control,params)
-	var/atom/A = vis_locs[1]
-	return A.DblClick(location, control, params)
-		
-// for tableclimbing
-/obj/scp106_sprite_helper/MouseDrop(over)
-	var/atom/A = vis_locs[1]
-	return A.MouseDrop(over)
-		
+	if (vis_locs.len)
+		var/atom/A = vis_locs[1]
+		return A.DblClick(location, control, params)
+
 /mob/living/carbon/human/scp106/IsAdvancedToolUser()
 	return FALSE
 
@@ -75,12 +69,6 @@ GLOBAL_LIST_EMPTY(scp106s)
 /mob/living/carbon/human/scp106/forceMove(destination)
 	. = ..(destination)
 	update_stuff_PD()
-	
-/mob/living/carbon/human/scp106/ClickOn(var/atom/A, var/params)
-	for (var/obj/scp106_sprite_helper/O in vis_contents)
-		O.set_dir(get_dir(src, A))
-		break
-	return ..(A, params)
 
 /mob/living/carbon/human/scp106/proc/update_stuff_PD()
 
@@ -97,29 +85,17 @@ GLOBAL_LIST_EMPTY(scp106s)
 		O.dir = dir
 		break
 
-/mob/living/carbon/human/scp106/proc/fix_icons()
-	icon = null
-	icon_state = null
-	stand_icon = null
-	lying_icon = null
-	update_icon = FALSE
-
-	if (!vis_contents.len)
-		vis_contents += new /obj/scp106_sprite_helper
-		
-	// we're lying, turn right
-	var/obj/scp106_sprite_helper = vis_contents[vis_contents.len]
-	if (lying)
-		scp106_sprite_helper.icon = turn(icon('icons/mob/scp106.dmi'), 90)
+/mob/living/carbon/human/scp106/ClickOn(var/atom/A, var/params)
+	for (var/obj/scp106_sprite_helper/O in vis_contents)
+		O.set_dir(get_dir(src, A))
+		break
+	return ..(A, params)
 
 /mob/living/carbon/human/scp106/get_pressure_weakness()
 	return 0
 
 /mob/living/carbon/human/scp106/handle_breath()
 	return 1
-	
-/mob/living/carbon/human/scp106/movement_delay()
-	return -1.5
 
 /mob/living/carbon/human/scp106/say(var/message, var/datum/language/speaking = null, whispering)
 	src << "<span class = 'notice'>You cannot speak.</span>"
@@ -130,6 +106,16 @@ GLOBAL_LIST_EMPTY(scp106s)
 		return ..(L)
 	visible_message("<span class = 'danger'>[L] is warped away!</span>")
 	L.forceMove(pick(GLOB.scp106_floors))
+
+/mob/living/carbon/human/scp106/proc/fix_icons()
+	icon = null
+	icon_state = null
+	stand_icon = null
+	lying_icon = null
+	update_icon = FALSE
+
+	if (!vis_contents.len)
+		vis_contents += new /obj/scp106_sprite_helper
 
 // NPC stuff
 /mob/living/carbon/human/scp106/proc/getTarget()
@@ -167,6 +153,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 						break
 	return target
 
+// NPC stuff
 /mob/living/carbon/human/scp106/proc/pursueTarget()
 
 	getTarget()
@@ -176,8 +163,8 @@ GLOBAL_LIST_EMPTY(scp106s)
 		return FALSE
 
 	if (!(target in orange(1, src)))
-		// moves slightly faster than humans
-		walk_to(src, target, 1, 0.7+config.run_speed)
+		// moves slightly slower than humans
+		walk_to(src, target, 1, 2+config.run_speed)
 		return TRUE
 		
 	walk(src, null)
@@ -192,7 +179,6 @@ GLOBAL_LIST_EMPTY(scp106s)
 		G = make_grab(src, target)
 		if (G)
 			G.upgrade(TRUE)
-		target.Weaken(1)
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
 	if (!isscp106(M))
@@ -208,21 +194,12 @@ GLOBAL_LIST_EMPTY(scp106s)
 		forceMove(locate(last_x, last_y, last_z))
 	verbs -= /mob/living/carbon/human/scp106/proc/go_back
 
-#define PHASE_TIME 30
-/mob/living/carbon/human/scp106/var/phase_cooldown = -1
 /mob/living/carbon/human/scp106/proc/phase_through_airlock()
-	set name = "Phase Through Object"
+	set name = "Phase Through Airlock"
 	set category = "SCP"
-	set desc = "Phase through an object in front of you."
-	if (world.time < phase_cooldown)
-		return
-	for (var/obj/O in get_step(src, dir))
-	
-		if (!isstructure(O) && !ismachinery(O))
-			continue
-	
-		phase_cooldown = world.time + (PHASE_TIME + 5)
-		
+	set desc = "Phase through an airlock in front of you."
+	for (var/obj/machinery/door/airlock/A in get_step(src, dir))
+
 		var/initial_loc = loc
 		var/atom/sprite = null
 
@@ -236,10 +213,10 @@ GLOBAL_LIST_EMPTY(scp106s)
 		if (sprite)
 			for (var/v in 1 to 58)
 				spawn (round(v * 0.5, 0.1))
-					if (!src || !O || loc != initial_loc)
+					if (!src || !A || loc != initial_loc)
 						goto __fixsprite__
 					else
-						switch (get_dir(src, O))
+						switch (get_dir(src, A))
 							if (NORTH, NORTHEAST, NORTHWEST)
 								++sprite.pixel_y
 							if (SOUTH, SOUTHEAST, SOUTHWEST)
@@ -249,7 +226,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 							if (WEST)
 								--sprite.pixel_x
 
-		if (do_after(src, PHASE_TIME, O))
+		if (do_after(src, 30, A))
 			forceMove(get_step(src, dir))
 			forceMove(get_step(src, dir))
 
@@ -264,7 +241,6 @@ GLOBAL_LIST_EMPTY(scp106s)
 			a.pixel_y = 0
 
 		break
-#undef PHASE_TIME
 
 /mob/living/carbon/human/scp106/proc/enter_pocket_dimension()
 	set name = "Enter Pocket Dimension"
@@ -328,7 +304,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 	if (!istype(L) || isscp106(L))
 		return ..(L)
 	if (prob(50))
-		L.adjustBrainLoss(500)
+		L.adjustBrainLoss(1000)
 	else
 		visible_message("<span class = 'danger'>[L] is warped away!</span>")
 		L.forceMove(pick(GLOB.scp106_floors))

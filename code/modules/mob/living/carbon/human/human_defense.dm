@@ -70,10 +70,6 @@ meteor_act
 	..(stun_amount, agony_amount, def_zone)
 
 /mob/living/carbon/human/getarmor(var/def_zone, var/type)
-	
-	if (isscp049_1(src) && lowertext(def_zone) != "head")
-		return 1000
-		
 	var/armorval = 0
 	var/total = 0
 
