@@ -165,7 +165,7 @@
 	
 /obj/item/device/radio/intercom/locked/desk_phone
 	icon = 'icons/obj/items.dmi'
-	icon_state = "intercom"
+	icon_state = "desk_phone"
 	name = "desk phone"
 	locked_frequency = 1500
 	desc = "A phone, made for desks."
