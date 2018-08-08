@@ -227,3 +227,42 @@
 	sound_env = MEDIUM_SOFTFLOOR
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	icon_state = "head_quarters"
+
+/area/site53/uez/hopoffice
+	name = "\improper Head of Personnel's Office"
+	sound_env = MEDIUM_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "head_quarters"
+
+/area/site53/uez/cmooffice
+	name = "\improper Chief Medical Officer's Office"
+	sound_env = MEDIUM_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "head_quarters"
+
+/area/site53/uez/ceoffice
+	name = "\improper Chief Engineer's Office"
+	sound_env = MEDIUM_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "head_quarters"
+
+/area/site53/uez/rdoffice
+	name = "\improper Research Director's Office"
+	sound_env = MEDIUM_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "head_quarters"
+
+/area/site53/uez/hallway
+	name = "\improper Upper Entrance Zone"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "hallC1"
+
+/area/site53/uez/canteen
+	name = "\improper Canteen"
+	icon_state = "bar"
+	sound_env = LARGE_SOFTFLOOR
+
+/area/site53/uez/conference
+	name = "\improper Conference Room A"
+	icon_state = "bar"
+	sound_env = LARGE_SOFTFLOOR
