@@ -221,3 +221,9 @@
 	name = "\improper SCP-513"
 	icon_state = "pmaint"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/uez/sdoffice
+	name = "\improper Site Director's Office"
+	sound_env = MEDIUM_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "head_quarters"
