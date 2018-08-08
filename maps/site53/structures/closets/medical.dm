@@ -37,7 +37,7 @@
 		RANDOM_SCRUBS
 	)
 
-
+/*
 /obj/structure/closet/secure_closet/medical_torchsenior
 	name = "physician's locker"
 	req_access = list(access_senmed)
@@ -140,3 +140,4 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat = 2,
 		/obj/item/clothing/mask/surgical = 2
 	)
+*/
