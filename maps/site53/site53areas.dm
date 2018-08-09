@@ -276,3 +276,15 @@
 	name = "Upper Entrance Zone Substation"
 	icon_state = "SolarcontrolS"
 	sound_env = SMALL_ENCLOSED
+
+/area/site53/uez/bridge
+	name = "\improper Bridge"
+	icon_state = "hallC1"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	requires_power = 0
+	dynamic_lighting = 0
+
+/area/site53/uez/mcrsubstation
+	name = "Main Control Room Substation"
+	icon_state = "SolarcontrolS"
+	sound_env = SMALL_ENCLOSED
