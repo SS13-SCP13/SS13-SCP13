@@ -266,3 +266,13 @@
 	name = "\improper Conference Room A"
 	icon_state = "bar"
 	sound_env = LARGE_SOFTFLOOR
+
+/area/site53/uez/maintenance
+	name = "Upper Entrance Zone Maintenance"
+	icon_state = "SolarcontrolS"
+	sound_env = SMALL_ENCLOSED
+
+/area/site53/uez/substation
+	name = "Upper Entrance Zone Substation"
+	icon_state = "SolarcontrolS"
+	sound_env = SMALL_ENCLOSED
