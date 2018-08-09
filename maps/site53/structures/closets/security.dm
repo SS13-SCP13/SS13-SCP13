@@ -1,7 +1,7 @@
 /*
  * Torch Security
  */
-
+/*
 /obj/structure/closet/secure_closet/security_torch
 	name = "master at arms' locker"
 	req_access = list(access_brig)
@@ -37,45 +37,6 @@
 	)
 
 
-/obj/structure/closet/secure_closet/seccomm
-	name = "Security Commander's locker"
-	req_access = list(access_hos)
-	icon_state = "hossecure1"
-	icon_closed = "hossecure"
-	icon_locked = "hossecure1"
-	icon_opened = "hossecureopen"
-	icon_off = "hossecureoff"
-/* AWAITING OVERHAUL
-/obj/structure/closet/secure_closet/cos/WillContain()
-	return list(
-		/obj/item/clothing/suit/armor/pcarrier/medium/command/security,
-		/obj/item/clothing/head/helmet/solgov/command,
-		/obj/item/clothing/head/HoS/dermal,
-		/obj/item/weapon/cartridge/hos,
-		/obj/item/device/radio/headset/heads/cos,
-		/obj/item/clothing/glasses/sunglasses/sechud/goggles,
-		/obj/item/taperoll/police,
-		/obj/item/weapon/handcuffs,
-		/obj/item/weapon/storage/belt/security,
-		/obj/item/device/flash,
-		/obj/item/device/megaphone,
-		/obj/item/weapon/melee/baton/loaded,
-		/obj/item/weapon/gun/energy/gun,
-		/obj/item/clothing/accessory/holster/thigh,
-		/obj/item/weapon/melee/telebaton,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/clothing/accessory/storage/black_vest,
-		/obj/item/weapon/gun/energy/taser,
-		/obj/item/device/hailer,
-		/obj/item/weapon/clipboard,
-		/obj/item/weapon/folder/red,
-		/obj/item/device/holowarrant,
-		/obj/item/clothing/gloves/thick,
-		/obj/item/device/flashlight/maglight,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
-	)
-*/
 /obj/structure/closet/secure_closet/brigofficer
 	name = "brig officer's locker"
 	req_access = list(access_armory)
@@ -155,7 +116,7 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
 	)
-
+*/
 // MTF LOCKERS
 
 /obj/structure/closet/secure_closet/mtf/enlisted

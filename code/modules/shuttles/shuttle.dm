@@ -159,7 +159,7 @@
 			for(var/turf/TO in A.contents)
 				var/turf/TA = GetAbove(TO)
 				if(istype(TA, ceiling_type))
-					TA.ChangeTurf(get_base_turf_by_area(TA), 1, 1)
+					TA.ChangeTurf(/turf/simulated/floor/plating, 1, 1)
 		if(knockdown)
 			for(var/mob/M in A)
 				if(M.client)

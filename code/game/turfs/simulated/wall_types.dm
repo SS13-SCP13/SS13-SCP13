@@ -107,36 +107,3 @@
 	if(prob(explosion_resistance))
 		return
 	..()
-
-
-// NEW WALLS
-// Reinforced walls
-
-/turf/simulated/wall/scp/New()
-      return
-
-/turf/simulated/wall/scp/r_wall/r_mid
-	icon_state = "r_mid"
-
-/turf/simulated/wall/scp/r_wall/r_end
-	icon_state = "r_end"
-
-/turf/simulated/wall/scp/r_wall/r_t
-	icon_state = "r_t"
-
-/turf/simulated/wall/scp/r_wall/r_x
-	icon_state = "r_x"
-
-// Regular Walls
-
-/turf/simulated/wall/scp/wall/mid
-	icon_state = "mid"
-
-/turf/simulated/wall/scp/wall/end
-	icon_state = "end"
-
-/turf/simulated/wall/scp/wall/t
-	icon_state = "t-shape"
-
-/turf/simulated/wall/scp/wall/x
-	icon_state = "x-shape"

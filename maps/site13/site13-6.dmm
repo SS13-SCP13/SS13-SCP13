@@ -1862,13 +1862,13 @@
 "YM" = (/obj/item/pizzabox/meat,/turf/simulated/floor/shuttle/red,/area/skipjack_station/start)
 "YN" = (/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/floor/shuttle/red,/area/skipjack_station/start)
 "ZG" = (/turf/simulated/wall/r_wall/hull,/area/site13/supply/dock)
-"ZH" = (/obj/machinery/door/airlock/highsecurity{name = "Cargo Bay Access"; req_access = list(301)},/turf/simulated/floor/tiled/grey,/area/site13/supply/dock)
-"ZI" = (/turf/simulated/floor/tiled/grey,/area/site13/supply/dock)
-"ZJ" = (/obj/effect/shuttle_landmark/supply/centcom,/turf/simulated/floor/tiled/grey,/area/site13/supply/dock)
-"ZK" = (/obj/machinery/light{icon_state = "tube1"; dir = 1},/turf/simulated/floor/tiled/grey,/area/site13/supply/dock)
-"ZL" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_y = 0},/turf/simulated/floor/tiled/grey,/area/site13/supply/dock)
-"ZM" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled/grey,/area/site13/supply/dock)
-"ZN" = (/obj/machinery/light,/turf/simulated/floor/tiled/grey,/area/site13/supply/dock)
+"ZH" = (/obj/machinery/door/airlock/highsecurity{name = "Cargo Bay Access"; req_access = list(301)},/turf/simulated/floor/tiled,/area/site13/supply/dock)
+"ZI" = (/turf/simulated/floor/tiled,/area/site13/supply/dock)
+"ZJ" = (/obj/effect/shuttle_landmark/supply/centcom,/turf/simulated/floor/tiled,/area/site13/supply/dock)
+"ZK" = (/obj/machinery/light{icon_state = "tube1"; dir = 1},/turf/simulated/floor/tiled,/area/site13/supply/dock)
+"ZL" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_y = 0},/turf/simulated/floor/tiled,/area/site13/supply/dock)
+"ZM" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled,/area/site13/supply/dock)
+"ZN" = (/obj/machinery/light,/turf/simulated/floor/tiled,/area/site13/supply/dock)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
