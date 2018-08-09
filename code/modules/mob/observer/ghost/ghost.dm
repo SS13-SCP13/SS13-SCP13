@@ -202,13 +202,16 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(mind.current.key && copytext(mind.current.key,1,2)!="@")	//makes sure we don't accidentally kick any clients
 		to_chat(src, "<span class='warning'>Another consciousness is in your body... it is resisting you.</span>")
 		return
+	reenter_corpse_p()
+	if(!admin_ghosted)
+		announce_ghost_joinleave(mind, 0, "They now occupy their body again.")
+	return 1
+	
+/mob/observer/ghost/proc/reenter_corpse_p()
 	stop_following()
 	mind.current.key = key
 	mind.current.teleop = null
 	mind.current.reload_fullscreen()
-	if(!admin_ghosted)
-		announce_ghost_joinleave(mind, 0, "They now occupy their body again.")
-	return 1
 
 /mob/observer/ghost/verb/toggle_medHUD()
 	set category = "Ghost"
@@ -320,6 +323,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			var/list/scps = list()
 			for (var/scp106 in GLOB.scp106s)
 				var/mob/M = scp106
+				if (!M.client)
+					scps += M
+			for (var/scp049 in GLOB.scp049s)
+				var/mob/M = scp049
 				if (!M.client)
 					scps += M
 			// add new humanoid SCPs here or they won't be playable - Kachnov

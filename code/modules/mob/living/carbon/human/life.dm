@@ -65,6 +65,10 @@
 
 	//No need to update all of these procs if the guy is dead.
 	if(stat != DEAD && !InStasis())
+	
+		if(!client && !mind)
+			species.handle_npc(src)
+
 		//Updates the number of stored chemicals for powers
 		handle_changeling()
 
@@ -77,10 +81,6 @@
 		handle_pain()
 
 		handle_medical_side_effects()
-
-		if(!client && !mind)
-			species.handle_npc(src)
-
 
 	// spooky SCP-106 music
 	if (client)
@@ -104,7 +104,10 @@
 		return											//We go ahead and process them 5 times for HUD images and other stuff though.
 
 	//Update our name based on whether our face is obscured/disfigured
-	SetName(get_visible_name())
+	if (isscp049_1(src))
+		SetName(real_name)
+	else
+		SetName(get_visible_name())
 
 /mob/living/carbon/human/set_stat(var/new_stat)
 	. = ..()
