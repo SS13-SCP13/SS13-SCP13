@@ -136,8 +136,8 @@
 		var/mob/living/carbon/human/H = M
 		H.set_species("Human")
 		H.mutations &= ~HUSK
-		H.name = H.pre_scp049_name
 		H.real_name = H.pre_scp049_real_name
+		H.name = H.real_name
 
 /datum/reagent/gold
 	name = "Gold"

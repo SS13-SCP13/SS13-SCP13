@@ -119,7 +119,7 @@ GLOBAL_LIST_EMPTY(scp049s)
 				. += L 
 		
 		if (length(.))
-			return pick(.)
+			target = pick(.)
 			
 	return target
 
@@ -148,17 +148,10 @@ GLOBAL_LIST_EMPTY(scp049s)
 	var/mob/living/carbon/human/scp049/H = M
 	switch (stat)
 		if (CONSCIOUS, UNCONSCIOUS)
-			visible_message("<span class = 'danger'><big>[H] touches [src]!</big></span>")
-			for (var/v in 1 to 10)
-				spawn (v)
-					adjustFireLoss(5)
-					switch (v)
-						if (1)
-							emote("scream")
-						if (10)
-							mutations |= HUSK 
-							UpdateDamageIcon()
-							stat = DEAD
+			visible_message("<span class = 'danger'><big>[H] touches [src], killing them instantly!</big></span>")
+			mutations |= HUSK 
+			regenerate_icons()
+			death()
 		if (DEAD)
 			H.scp049_attack(src)
 
