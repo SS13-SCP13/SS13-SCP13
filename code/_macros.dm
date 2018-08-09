@@ -73,7 +73,7 @@
 
 #define isscp049(A) istype(A, /mob/living/carbon/human/scp049)
 
-#define isscp049_1(A) istype(A, /mob/living/carbon/human && istype(A:species, /datum/species/scp049_1))
+#define isscp049_1(A) (istype(A, /mob/living/carbon/human) && istype(A:species, /datum/species/scp049_1))
 
 #define isunderwear(A) istype(A, /obj/item/underwear)
 
