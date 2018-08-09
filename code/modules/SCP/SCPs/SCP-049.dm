@@ -3,10 +3,9 @@ GLOBAL_LIST_EMPTY(scp049s)
 /mob/living/carbon/human/scp049
 	desc = "A mysterious plague doctor."
 	SCP = /datum/scp/SCP_049
+	var/list/attempted_surgery_on = list()
 	var/mob/living/target = null
 	var/zombies = 0
-	var/old_names[10]
-	var/old_real_names[10]
 	
 /mob/living/carbon/human/scp049/examine(mob/user)
 	user << "<b><span class = 'info'><big>SCP-049</big></span></b> - [desc]"
@@ -164,9 +163,13 @@ GLOBAL_LIST_EMPTY(scp049s)
 /mob/living/carbon/human/scp049/proc/scp049_attack_2(var/mob/living/target)
 	var/obj/item/grab/G = locate() in src
 	if (G)
+		if (target in attempted_surgery_on)
+			src << "<span class = 'danger'>This cadaver is already spent.</span>"
+			return
 		visible_message("<span class = 'danger'>[src] begins to perform surgery on [target].</span>")
 		if (do_mob(src, target, 150))
 			visible_message("<span class = 'danger'>[src] performs surgery on [target].</span>")
+			attempted_surgery_on += target
 			spawn (20)
 				if (target)
 					if (ishuman(target))
