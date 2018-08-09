@@ -261,3 +261,12 @@ var/global/list/sparring_attack_cache = list()
 	damage = 0
 	sharp = 0
 	edge = 0
+	
+// clawing for SCP-049-1
+/datum/unarmed_attack/claw
+	attack_verb = list("claws")
+	attack_sound = 'sound/weapons/slice.ogg'
+	shredding = 0
+	damage = 8
+	sharp = 1
+	edge = 1

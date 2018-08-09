@@ -28,6 +28,10 @@
 			new /mob/living/carbon/human/scp106 (loc)
 			delete_me = 1
 			return
+		if ("scp049")
+			new /mob/living/carbon/human/scp049 (loc)
+			delete_me = 1
+			return
 		if("JoinLate")
 			GLOB.latejoin += loc
 			delete_me = 1
