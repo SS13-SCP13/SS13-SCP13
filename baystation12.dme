@@ -693,6 +693,7 @@
 #include "code\game\objects\explosion_recursive.dm"
 #include "code\game\objects\items.dm"
 #include "code\game\objects\objs.dm"
+#include "code\game\objects\sprite_helper.dm"
 #include "code\game\objects\structures.dm"
 #include "code\game\objects\topic.dm"
 #include "code\game\objects\weapons.dm"

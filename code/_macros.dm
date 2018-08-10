@@ -47,6 +47,8 @@
 
 #define isobj(A) istype(A, /obj)
 
+#define isspritehelper(A) istype(A, /obj/sprite_helper)
+
 #define isstructure(A) istype(A, /obj/structure)
 
 #define ismachinery(A) istype(A, /obj/machinery)
