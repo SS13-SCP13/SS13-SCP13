@@ -536,3 +536,8 @@
 /obj/structure/sign/scp/dontlook
 	icon_state = "dontlook"
 	desc = "A warning sign which reads: CAUTION, DO NOT LOOK AT ANOMALOUS OBJECT."
+
+/obj/structure/sign/scp/dclass
+	name = "\improper MIND THE ACCEPTABLE ZONES!"
+	icon_state = "securearea2"
+	desc = "A warning sign which reads: REMEMBER YOUR PLACE. DO NOT MOVE BEYOND THE YELLOW HAZARD MARKINGS IF RED HATCHED MARKINGS ARE PRESENT! IMMEDIATE TERMINATION TO VIOLATIONS!"
