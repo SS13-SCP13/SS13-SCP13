@@ -28,6 +28,10 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
+/obj/item/scp513/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
 /obj/item/scp513/proc/ring(mob/living/user)
 	for(var/mob/living/carbon/M in hear(7, get_turf(src)))
 		to_chat(M, "<span class='danger'><i>\The [src] rings, sending chills to your very bone.</i></span>")
