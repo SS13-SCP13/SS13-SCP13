@@ -1,7 +1,13 @@
 #define MESSAGE_COOLDOWN 100
 
+/datum/scp/SCP_895
+	name = "SCP-895"
+	designation = "895"
+	classification = EUCLID
+
 /obj/structure/closet/coffin/scp895
 	name = "oak coffin"
+	SCP = /datum/scp/SCP_895
 	var/redzone = 5
 	var/list/cooldown = list()
 	var/list/start = list()
@@ -41,7 +47,7 @@
 			users -= H
 			start -= H
 			cooldown -= H
-			H << sound(null, channel = 895, volume = 70)
+			H << sound(null, channel = 895)
 
 
 #undef MESSAGE_COOLDOWN
