@@ -75,17 +75,24 @@
 		fov.dir = dir
 		if(fov.alpha)
 			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), oviewers(10, src)))
-				I = image("split", L)
-				I.override = TRUE
-				client.images += I
-				client.hidden_atoms += I
-				client.hidden_mobs += L
+			
+				var/list/things = list(L)|L.vis_contents 
+				
+				for (var/thing in things)
+					I = image("split", thing)
+					I.override = TRUE
+						
+					client.images += I
+					client.hidden_atoms += I
+					
+					if (thing == things[1])
+						client.hidden_mobs += L
 
-				if(pulling == L)//If we're pulling them we don't want them to be invisible, too hard to play like that.
-					I.override = FALSE
+						if(pulling == L)//If we're pulling them we don't want them to be invisible, too hard to play like that.
+							I.override = FALSE
 
-				else if(L.footstep >= 1)
-					L.in_vision_cones[client] = TRUE
+						else if(L.footstep >= 1)
+							L.in_vision_cones[client] = TRUE
 
 			//Optional items can be made invisible too. Uncomment this part if you wish to items to be invisible.
 			//var/obj/item/O

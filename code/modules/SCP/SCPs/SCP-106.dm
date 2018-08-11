@@ -16,28 +16,8 @@ GLOBAL_LIST_EMPTY(scp106s)
 	designation = "106"
 	classification = KETER
 
-/obj/scp106_sprite_helper
+/obj/sprite_helper/scp106
 	icon = 'icons/mob/scp106.dmi'
-	name = ""
-	desc = "" // I doubt this matters but just in case
-	layer = MOB_LAYER+0.1
-
-/obj/scp106_sprite_helper/CanMoveOnto(atom/movable/mover, turf/target, height=1.5, direction = 0)
-	return TRUE
-
-// no need to sanity check vis_locs, because we couldn't click it in the first place if vis_locs.len was 0
-/obj/scp106_sprite_helper/Click(location,control,params)
-	var/atom/A = vis_locs[1]
-	return A.Click(location, control, params)
-
-/obj/scp106_sprite_helper/DblClick(location,control,params)
-	var/atom/A = vis_locs[1]
-	return A.DblClick(location, control, params)
-		
-// for tableclimbing
-/obj/scp106_sprite_helper/MouseDrop(over)
-	var/atom/A = vis_locs[1]
-	return A.MouseDrop(over)
 		
 /mob/living/carbon/human/scp106/IsAdvancedToolUser()
 	return FALSE
@@ -76,12 +56,6 @@ GLOBAL_LIST_EMPTY(scp106s)
 	. = ..(destination)
 	update_stuff_PD()
 	
-/mob/living/carbon/human/scp106/ClickOn(var/atom/A, var/params)
-	for (var/obj/scp106_sprite_helper/O in vis_contents)
-		O.set_dir(get_dir(src, A))
-		break
-	return ..(A, params)
-
 /mob/living/carbon/human/scp106/proc/update_stuff_PD()
 
 	if (loc in GLOB.scp106_floors)
@@ -93,7 +67,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 	// stand_icon tends to come back after movement
 	fix_icons()
-	for (var/obj/scp106_sprite_helper/O in vis_contents)
+	for (var/obj/sprite_helper/scp106/O in vis_contents)
 		O.dir = dir
 		break
 
@@ -105,7 +79,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 	update_icon = FALSE
 
 	if (!vis_contents.len)
-		vis_contents += new /obj/scp106_sprite_helper
+		vis_contents += new /obj/sprite_helper/scp106
 		
 	// we're lying, turn right
 	var/obj/scp106_sprite_helper = vis_contents[vis_contents.len]
@@ -290,7 +264,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 /mob/living/carbon/human/scp106/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/damage_flags = 0, var/obj/used_weapon = null, var/obj/item/organ/external/given_organ = null)
 	. = ..(damage, damagetype, def_zone, blocked, damage_flags, used_weapon, given_organ)
-	if (getBruteLoss() + getFireLoss() + getToxLoss() + getCloneLoss() >= 100)
+	if (getBruteLoss() + getFireLoss() + getToxLoss() + getCloneLoss() >= 200)
 		if (!(loc in GLOB.scp106_floors))
 			src << "<span class = 'danger'><i>You flee back to your pocket dimension!</i></danger>"
 			forceMove(pick(GLOB.scp106_floors))

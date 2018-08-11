@@ -725,6 +725,7 @@
 			
 	if ((isscp106(src) || isscp049(src)) && !incapacitated(INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_BUCKLED_PARTIALLY))
 		lying = 0
+		density = 1
 
 	//Temporarily moved here from the various life() procs
 	//I'm fixing stuff incrementally so this will likely find a better home.

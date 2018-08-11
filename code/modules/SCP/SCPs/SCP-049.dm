@@ -15,29 +15,9 @@ GLOBAL_LIST_EMPTY(scp049s)
 	designation = "049"
 	classification = EUCLID
 
-/obj/scp049_sprite_helper
+/obj/sprite_helper/scp049
 	icon = 'icons/mob/scp049.dmi'
-	name = ""
-	desc = "" // I doubt this matters but just in case
-	layer = MOB_LAYER+0.1
-
-/obj/scp049_sprite_helper/CanMoveOnto(atom/movable/mover, turf/target, height=1.5, direction = 0)
-	return TRUE
-
-// no need to sanity check vis_locs, because we couldn't click it in the first place if vis_locs.len was 0
-/obj/scp049_sprite_helper/Click(location,control,params)
-	var/atom/A = vis_locs[1]
-	return A.Click(location, control, params)
-
-/obj/scp049_sprite_helper/DblClick(location,control,params)
-	var/atom/A = vis_locs[1]
-	return A.DblClick(location, control, params)
-		
-// for tableclimbing
-/obj/scp049_sprite_helper/MouseDrop(over)
-	var/atom/A = vis_locs[1]
-	return A.MouseDrop(over)
-		
+	
 /mob/living/carbon/human/scp049/IsAdvancedToolUser()
 	return FALSE
 
@@ -68,16 +48,10 @@ GLOBAL_LIST_EMPTY(scp049s)
 	. = ..(destination)
 	update_stuff()
 
-/mob/living/carbon/human/scp049/ClickOn(var/atom/A, var/params)
-	for (var/obj/scp049_sprite_helper/O in vis_contents)
-		O.set_dir(get_dir(src, A))
-		break
-	return ..(A, params)
-
 /mob/living/carbon/human/scp049/proc/update_stuff()
 	// stand_icon tends to come back after movement
 	fix_icons()
-	for (var/obj/scp049_sprite_helper/O in vis_contents)
+	for (var/obj/sprite_helper/scp049/O in vis_contents)
 		O.dir = dir
 		break
 
@@ -89,14 +63,13 @@ GLOBAL_LIST_EMPTY(scp049s)
 	update_icon = FALSE
 
 	if (!vis_contents.len)
-		vis_contents += new /obj/scp049_sprite_helper
+		vis_contents += new /obj/sprite_helper/scp049
 	
 	// we're lying, turn right
-	var/obj/scp049_sprite_helper = vis_contents[vis_contents.len]
+	var/obj/sprite_helper/scp049/SH = vis_contents[vis_contents.len]
 	if (lying)
-		scp049_sprite_helper.icon = turn(icon('icons/mob/scp049.dmi'), 90)
+		SH.icon = turn(icon('icons/mob/scp049.dmi'), 90)
 		
-
 /mob/living/carbon/human/scp049/get_pressure_weakness()
 	return 0
 
@@ -142,7 +115,7 @@ GLOBAL_LIST_EMPTY(scp049s)
 	return TRUE
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
-	if (!isscp049(M) || src == M)
+	if (!isscp049(M) || isscp049_1(src) || src == M)
 		return ..(M)
 	var/mob/living/carbon/human/scp049/H = M
 	switch (stat)
@@ -153,6 +126,11 @@ GLOBAL_LIST_EMPTY(scp049s)
 			death()
 		if (DEAD)
 			H.scp049_attack(src)
+			
+/mob/living/carbon/human/scp049/attack_hand(mob/living/carbon/M)
+	if (!isscp049_1(M) || M.a_intent == I_HELP)
+		return ..(M)
+	M << "<span class = 'danger'><big>You cannot attack your master.</big></span>"
 
 /mob/living/carbon/human/scp049/proc/scp049_attack(var/mob/living/target)
 	var/obj/item/grab/G = locate() in src
@@ -165,6 +143,7 @@ GLOBAL_LIST_EMPTY(scp049s)
 	if (G)
 		if (target in attempted_surgery_on)
 			src << "<span class = 'danger'>This cadaver is already spent.</span>"
+			qdel(G)
 			return
 		visible_message("<span class = 'danger'>[src] begins to perform surgery on [target].</span>")
 		if (do_mob(src, target, 150))
@@ -195,3 +174,4 @@ GLOBAL_LIST_EMPTY(scp049s)
 							H.visible_message("<span class = 'notice'>The surgery seems to have been unsucessful.</span>")
 					else
 						target.visible_message("<span class = 'notice'>The surgery seems to have been unsucessful.</span>")
+			qdel(G)
