@@ -37,6 +37,7 @@ changes:
   - tweak: "Updated SCP-500's icon to be more canonical."
   - tweak: "Replaced Delta alert sound with revised sound."
   - tweak: "Overhauled computer and consoles with new sprites from Bay."
+  - tweak: "Overhauled Laptop sprites with new ones from Bay."
   - soundadd: "Altered sound for the vote panel to be less startling."
   - rscadd: "Adds kneepads to the Security lockers."
   - rscadd: "Added standard side arms for jobs that need it. (CMO and CE included.)"
