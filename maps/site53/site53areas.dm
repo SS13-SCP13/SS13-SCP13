@@ -166,6 +166,11 @@
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+/area/site53/maintenance
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = TUNNEL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
+
 /area/site53/maintenance/surface
 	name = "\improper Tram Hub Maintenance"
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -211,6 +216,7 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	requires_power = 0
 	dynamic_lighting = 1
+	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/llcz/scp513
 	name = "\improper SCP-513"
@@ -221,6 +227,7 @@
 	name = "\improper SCP-513"
 	icon_state = "pmaint"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/uez/sdoffice
 	name = "\improper Site Director's Office"
@@ -271,11 +278,13 @@
 	name = "Upper Entrance Zone Maintenance"
 	icon_state = "SolarcontrolS"
 	sound_env = SMALL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/uez/substation
 	name = "Upper Entrance Zone Substation"
 	icon_state = "SolarcontrolS"
 	sound_env = SMALL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/uez/bridge
 	name = "\improper Bridge"
@@ -288,3 +297,11 @@
 	name = "Main Control Room Substation"
 	icon_state = "SolarcontrolS"
 	sound_env = SMALL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/ulcz/maintenance
+	name = "Upper Light Containment Maintenance"
+	icon_state = "maint_security_starboard"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = TUNNEL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
