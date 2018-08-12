@@ -50,7 +50,7 @@
 //	#include "structures/closets/command.dm"
 //	#include "structures/closets/engineering.dm"
 	#include "structures/closets/medical.dm"
-//	#include "structures/closets/misc.dm"
+	#include "structures/closets/misc.dm"
 	#include "structures/closets/research.dm"
 	#include "structures/closets/security.dm"
 	#include "structures/closets/services.dm"

@@ -305,3 +305,11 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	sound_env = TUNNEL_ENCLOSED
 	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/llcz/mine/explored
+	name = "Mine"
+	icon_state = "explored"
+
+/area/site53/llcz/mine/unexplored
+	name = "Mine"
+	icon_state = "unexplored"
