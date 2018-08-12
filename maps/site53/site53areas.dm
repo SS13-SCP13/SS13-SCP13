@@ -306,6 +306,16 @@
 	sound_env = TUNNEL_ENCLOSED
 	turf_initializer = /decl/turf_initializer/maintenance
 
+/area/site53/llcz/mining/miningops
+	name = "\improper Mining Operations"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "hallC1"
+
+/area/site53/llcz/mining/miningfact
+	name = "\improper Mining Factory"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "hallC1"
+
 /area/site53/llcz/mine/explored
 	name = "Mine"
 	icon_state = "explored"
