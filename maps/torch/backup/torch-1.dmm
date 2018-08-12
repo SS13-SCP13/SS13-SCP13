@@ -3028,9 +3028,6 @@
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/forestarboard)
-"hJ" = (
-/turf/unsimulated/mask,
-/area/hallway/primary/fourthdeck/center)
 "hK" = (
 /turf/simulated/shuttle/wall/corner/dark,
 /area/shuttle/escape_pod6/station)
@@ -5169,7 +5166,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fourthdeck/fore)
 "md" = (
-/obj/turbolift_map_holder/torch,
 /turf/unsimulated/mask,
 /area/hallway/primary/fourthdeck/center)
 "me" = (
@@ -32465,10 +32461,10 @@ eF
 fs
 ge
 aA
-hJ
-hJ
-hJ
-hJ
+md
+md
+md
+md
 md
 nj
 op
@@ -32667,11 +32663,11 @@ bn
 bR
 gf
 aA
-hJ
-hJ
-hJ
-hJ
-hJ
+md
+md
+md
+md
+md
 nk
 op
 pK
@@ -32869,11 +32865,11 @@ eG
 bn
 gg
 aA
-hJ
-hJ
-hJ
-hJ
-hJ
+md
+md
+md
+md
+md
 nk
 oq
 pL
@@ -33071,11 +33067,11 @@ bn
 ft
 gh
 aA
-hJ
-hJ
-hJ
-hJ
-hJ
+md
+md
+md
+md
+md
 nk
 op
 pM
@@ -33273,11 +33269,11 @@ eH
 fu
 gi
 aA
-hJ
-hJ
-hJ
-hJ
-hJ
+md
+md
+md
+md
+md
 aA
 op
 pK
