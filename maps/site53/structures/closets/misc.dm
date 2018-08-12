@@ -145,7 +145,7 @@
 	icon_off = "miningsecoff"
 	req_access = list(access_dclassmining)
 
-/obj/structure/closet/secure_closet/miner/New()
+/obj/structure/closet/secure_closet/site53/dmining/WillContain()
 	return list(
 	new /obj/item/clothing/gloves/thick,
 	new /obj/item/device/analyzer,

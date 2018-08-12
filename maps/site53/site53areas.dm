@@ -316,6 +316,101 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	icon_state = "hallC1"
 
+/area/site53/llcz/dclass/recreationhallway
+	name = "\improper Recreation Hallway"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "hallC1"
+
+/area/site53/llcz/dclass/checkpoint
+	name = "\improper Primary D-Class Checkpoint"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "checkpoint"
+
+/area/site53/llcz/dclass/checkpointoverlook
+	name = "\improper Primary D-Class Checkpoint Overlook"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "checkpoint1"
+
+/area/site53/llcz/dclass/prep
+	name = "\improper Primary D-Class Checkpoint Preperation"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "checkpoint1"
+
+/area/site53/llcz/dclass/kitchenbotanybubble
+	name = "\improper Kitchen and Botany Security Bubble"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "checkpoint1"
+
+/area/site53/llcz/dclass/assignmentbubble
+	name = "\improper Assignments Security Bubble"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "checkpoint1"
+
+/area/site53/llcz/dclass/cellbubble
+	name = "\improper Cell Security Bubble"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "checkpoint1"
+
+/area/site53/llcz/dclass/canteenbubble
+	name = "\improper Canteen Security Bubble"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "checkpoint1"
+
+/area/site53/llcz/dclass/checkequip
+	name = "\improper Primary Checkpoint Equipment"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "checkpoint1"
+
+/area/site53/llcz/dclass/janitorial
+	name = "\improper Janitorial Closet"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "janitor"
+
+/area/site53/llcz/dclass/cells
+	name = "\improper D-Class Cell Area"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "Sleep"
+
+/area/site53/llcz/dclass/shower
+	name = "\improper D-Class Shower Area"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "Sleep"
+
+/area/site53/llcz/dclass/canteen
+	name = "\improper D-Class Canteen"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "cafeteria"
+
+/area/site53/llcz/dclass/kitchen
+	name = "\improper D-Class Kitchen"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "kitchen"
+
+/area/site53/llcz/dclass/botany
+	name = "\improper D-Class Botany"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "kitchen"
+
+/area/site53/llcz/dclass/assignment
+	name = "\improper D-Class Assingments"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "Sleep"
+
+/area/site53/llcz/dclass/cryo
+	name = "\improper D-Class Cryo Area"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "Sleep"
+
+/area/site53/llcz/dclass/medicalpost
+	name = "\improper D-Class Medical Post"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "exam_room"
+
+/area/site53/llcz/dclass/medicalstorage
+	name = "\improper D-Class Medical Storage"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "exam_room"
+
 /area/site53/llcz/mine/explored
 	name = "Mine"
 	icon_state = "explored"
