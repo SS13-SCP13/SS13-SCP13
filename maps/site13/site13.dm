@@ -34,7 +34,7 @@
 	#include "site13-5.dmm"
 	#include "site13-6.dmm"
 	#include "../../code/modules/lobby_music/Perdition.dm"
-	#include "../../code/modules/lobby_music/sm.dm"
+	#include "../../code/modules/lobby_music/hie.dm"
 	#include "../../code/modules/lobby_music/std.dm"
 
 
