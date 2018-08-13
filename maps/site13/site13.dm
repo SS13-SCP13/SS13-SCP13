@@ -1,3 +1,5 @@
+/* SITE 13 IS DEPRECATED UNTIL FURTHER NOTICE.
+
 #if !defined(using_map_DATUM)
 
 	#include "site13_announcements.dm"
@@ -45,3 +47,4 @@
 	#warn A map has already been included, ignoring Site 13
 
 #endif
+*/
