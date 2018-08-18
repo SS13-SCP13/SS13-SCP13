@@ -31,8 +31,8 @@
 	slot_flags = SLOT_MASK | SLOT_TIE
 
 /obj/item/clothing/accessory/badge/solgov/ethics
-	name = "Ethics Commitee Badge"
-	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a representative of the Ethics Commitee."
+	name = "Ethics Committee Badge"
+	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a representative of the Ethics Committee."
 	icon_state = "solbadge"
 	slot_flags = SLOT_TIE
 	badge_string = "The SCP Foundation"

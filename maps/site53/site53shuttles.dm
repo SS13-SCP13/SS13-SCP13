@@ -90,7 +90,7 @@
 	shuttle_area = /area/shuttle/escape_pod10/station
 	number = 10
 /obj/effect/shuttle_landmark/escape_pod/start/pod10
-	base_turf = /turf/simulated/floor/reinforced/airless
+	base_turf = /turf/simulated/floor/reinforced
 	number = 10
 /obj/effect/shuttle_landmark/escape_pod/out/pod10
 	number = 10
@@ -188,10 +188,12 @@
 /obj/effect/shuttle_landmark/engineering/start
 	name = "Tram Hub"
 	landmark_tag = "nav_engineering_start"
+	base_turf = /turf/simulated/floor/reinforced
 
 /obj/effect/shuttle_landmark/engineering/out
 	name = "Engineering Department"
 	landmark_tag = "nav_engineering_out"
+	base_turf = /turf/simulated/floor/reinforced
 
 /obj/effect/shuttle_landmark/engineering/internim
 	name = "In transit"
@@ -207,10 +209,12 @@
 /obj/effect/shuttle_landmark/hcz/start
 	name = "Tram Hub"
 	landmark_tag = "nav_hcz_start"
+	base_turf = /turf/simulated/floor/reinforced
 
 /obj/effect/shuttle_landmark/hcz/out
 	name = "Heavy Containment Zone"
 	landmark_tag = "nav_hcz_out"
+	base_turf = /turf/simulated/floor/reinforced
 
 /datum/shuttle/autodock/ferry/lcz
 	name = "Light Containment Tram"
@@ -222,10 +226,12 @@
 /obj/effect/shuttle_landmark/lcz/start
 	name = "Tram Hub"
 	landmark_tag = "nav_lcz_start"
+	base_turf = /turf/simulated/floor/reinforced
 
 /obj/effect/shuttle_landmark/lcz/out
 	name = "Light Containment Zone"
 	landmark_tag = "nav_lcz_out"
+	base_turf = /turf/simulated/floor/reinforced
 
 /datum/shuttle/autodock/multi/antag/rescue
 	name = "Rescue"

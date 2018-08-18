@@ -1,3 +1,5 @@
+/* DEPRECATED AND UNUSED!
+
 /obj/structure/closet/secure_closet/liaison
 	name = "\improper NanoTrasen liaison's locker"
 	req_access = list(access_liaison)
@@ -110,3 +112,45 @@
 		/obj/item/weapon/gun/energy/gun = 2,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/gun/energy/gun, /obj/item/weapon/gun/energy/gun/small))
 	)
+
+*/
+// D-CLASS JANITORIAL
+
+/obj/structure/closet/djcloset
+	name = "custodial closet"
+	desc = "It's a storage unit for janitorial clothes and gear."
+	icon_state = "mixed"
+	icon_closed = "mixed"
+
+/obj/structure/closet/site53/d_class/djcloset/WillContain()
+	return list(
+		/obj/item/clothing/gloves/thick,
+		/obj/item/clothing/head/soft/purple,
+		/obj/item/clothing/head/beret/purple,
+		/obj/item/weapon/caution = 4,
+		/obj/item/device/lightreplacer,
+		/obj/item/weapon/storage/bag/trash,
+		/obj/item/clothing/shoes/galoshes,
+		/obj/item/weapon/soap)
+
+// D-CLASS MINING
+
+/obj/structure/closet/secure_closet/site53/dmining
+	name = "miner's equipment"
+	icon_state = "miningsec1"
+	icon_closed = "miningsec"
+	icon_locked = "miningsec1"
+	icon_opened = "miningsecopen"
+	icon_broken = "miningsecbroken"
+	icon_off = "miningsecoff"
+	req_access = list(access_dclassmining)
+
+/obj/structure/closet/secure_closet/site53/dmining/WillContain()
+	return list(
+	new /obj/item/clothing/gloves/thick,
+	new /obj/item/device/analyzer,
+	new /obj/item/weapon/storage/ore,
+	new /obj/item/device/flashlight/lantern,
+	new /obj/item/weapon/shovel,
+	new /obj/item/weapon/pickaxe,
+	new /obj/item/clothing/glasses/meson)

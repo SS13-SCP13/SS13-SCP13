@@ -133,6 +133,7 @@
 		new /obj/item/weapon/paper/scp/euclid/scp153(src)
 		new /obj/item/weapon/paper/scp/euclid/scp153/addendum1(src)
 		new /obj/item/weapon/paper/scp/euclid/scp173(src)
+		new /obj/item/weapon/paper/scp/euclid/scp513(src)
 		update_icon()
 
 /obj/structure/filingcabinet/scp/euclid/scp1000to1999

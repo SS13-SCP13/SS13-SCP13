@@ -2,43 +2,7 @@
  * Torch Medical
  */
 
-/obj/structure/closet/secure_closet/CMO_torch
-	name = "chief medical officer's locker"
-	req_access = list(access_cmo)
-	icon_state = "cmosecure1"
-	icon_closed = "cmosecure"
-	icon_locked = "cmosecure1"
-	icon_opened = "cmosecureopen"
-	icon_off = "cmosecureoff"
-
-/obj/structure/closet/secure_closet/CMO_torch/WillContain()
-	return list(
-		/obj/item/clothing/suit/bio_suit/cmo,
-		/obj/item/clothing/head/bio_hood/cmo,
-		/obj/item/clothing/shoes/white,
-		/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
-		/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
-		/obj/item/weapon/cartridge/cmo,
-		/obj/item/device/radio/headset/heads/cmo,
-		/obj/item/device/flash,
-		/obj/item/device/megaphone,
-		/obj/item/weapon/reagent_containers/hypospray/vial,
-		/obj/item/weapon/storage/fancy/vials,
-		/obj/item/device/healthanalyzer,
-		/obj/item/clothing/accessory/stethoscope,
-		/obj/item/device/flashlight/pen,
-		/obj/item/clothing/glasses/hud/health,
-		/obj/item/clothing/suit/armor/pcarrier/medium/command,
-		/obj/item/clothing/head/helmet/solgov/command,
-		/obj/item/device/holowarrant,
-		/obj/item/weapon/storage/firstaid/adv,
-		/obj/item/weapon/storage/box/armband/med,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/medic, /obj/item/weapon/storage/backpack/satchel_med)),
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/med, /obj/item/weapon/storage/backpack/messenger/med)),
-		RANDOM_SCRUBS
-	)
-
-/obj/structure/closet/secure_closet/CMO_ds90
+/obj/structure/closet/secure_closet/site53/cmo
 	name = "chief medical officer's locker"
 	req_access = list(access_mtflvl4)
 	icon_state = "cmosecure1"
@@ -47,15 +11,13 @@
 	icon_opened = "cmosecureopen"
 	icon_off = "cmosecureoff"
 
-/obj/structure/closet/secure_closet/CMO_ds90/WillContain()
+/obj/structure/closet/secure_closet/site53/cmo/WillContain()
 	return list(
 		/obj/item/clothing/suit/bio_suit/cmo,
 		/obj/item/clothing/head/bio_hood/cmo,
 		/obj/item/clothing/shoes/white,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
-		/obj/item/weapon/cartridge/cmo,
-		/obj/item/device/radio/headset/heads/cmo,
 		/obj/item/device/flash,
 		/obj/item/device/megaphone,
 		/obj/item/weapon/reagent_containers/hypospray/vial,
@@ -64,16 +26,18 @@
 		/obj/item/clothing/accessory/stethoscope,
 		/obj/item/device/flashlight/pen,
 		/obj/item/clothing/glasses/hud/health,
-		/obj/item/clothing/suit/armor/pcarrier/medium/command,
-		/obj/item/device/holowarrant,
 		/obj/item/weapon/storage/firstaid/adv,
 		/obj/item/weapon/storage/box/armband/med,
+		/obj/item/weapon/gun/projectile/pistol,
+		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/clothing/accessory/holster/thigh,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/medic, /obj/item/weapon/storage/backpack/satchel_med)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/med, /obj/item/weapon/storage/backpack/messenger/med)),
 		RANDOM_SCRUBS
 	)
 
-
+/*
 /obj/structure/closet/secure_closet/medical_torchsenior
 	name = "physician's locker"
 	req_access = list(access_senmed)
@@ -176,3 +140,4 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat = 2,
 		/obj/item/clothing/mask/surgical = 2
 	)
+*/

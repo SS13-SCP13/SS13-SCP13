@@ -1,7 +1,51 @@
+/obj/item/weapon/book/manual/solgov_law
+	name = "Sol Central Government Law"
+	desc = "A brief overview of SolGov Law."
+	icon_state = "bookSolGovLaw"
+	author = "The Sol Central Government"
+	title = "Sol Central Government Law"
+
+/obj/item/weapon/book/manual/solgov_law/Initialize()
+	. = ..()
+	dat = {"
+
+		<html><head>
+		</head>
+
+		<body>
+		<iframe width='100%' height='97%' src="[config.wikiurl]Sol_Central_Government_Law&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		</body>
+
+		</html>
+
+		"}
+
+
+/obj/item/weapon/book/manual/military_law
+	name = "The Sol Code of Military Justice"
+	desc = "A brief overview of military law."
+	icon_state = "bookSolGovLaw"
+	author = "The Sol Central Government"
+	title = "The Sol Code of Military Justice"
+
+/obj/item/weapon/book/manual/military_law/Initialize()
+	. = ..()
+	dat = {"
+
+		<html><head>
+		</head>
+
+		<body>
+		<iframe width='100%' height='97%' src="[config.wikiurl]Sol_Gov_Military_Justice&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		</body>
+
+		</html>
+
+		"}
 
 /obj/item/weapon/book/manual/mil_sop
 	name = "Military Operating Procedure"
-	desc = "SOP in Site 13."
+	desc = "SOP in Site DS90."
 	icon_state = "booksolregs"
 	author = "The Foundation"
 	title = "Standard Operating Procedure"
@@ -20,6 +64,108 @@
 		</html>
 
 		"}
+
+/obj/item/weapon/folder/nt/rd
+
+/obj/item/weapon/folder/envelope/blanks
+	desc = "A thick envelope. The Nanotrasen logo is stamped in the corner, along with 'CONFIDENTIAL'."
+
+/obj/item/weapon/folder/envelope/blanks/Initialize()
+	. = ..()
+	new/obj/item/weapon/paper/blanks(src)
+
+/obj/item/weapon/paper/blanks
+	name = "RE: Regarding testing supplies"
+	info = {"
+	<tt><center><b><font color='red'>CONFIDENTIAL: UPPER MANAGEMENT ONLY</font></b>
+	<h3>NANOTRASEN RESEARCH DIVISION</h3>
+	<img src = ntlogo.png>
+	</center>
+	<b>FROM:</b> Hieronimus Blackstone, Overseer of Torch Cooperation Project<br>
+	<b>TO:</b> Research Director of SEV Torch branch<br>
+	<b>CC:</b> Liason with SCG services aboard SEV Torch<br>
+	<b>SUBJECT:</b> RE: Testing Materials<br>
+	<hr>
+	We have reviewed your request, and would like to make an addition to the list of needed materials.<br>
+	As we hold very high hopes for this branch, it would be only right to provide our scientists with the most accurate testing environment. And by that we mean the living human subjects. Our Ethics Review Board suggested a workaround for that pesky 'consent' requierment.<br>
+	In the Research Wing you should find a small section labeled 'Aux Custodial Supplies'. Inside we have provided several mind-blank vatgrown clones. Our Law Special Response Team so far had not found SCG legislation that explicitly forbids their use in research.<br>
+	They come in self-contained life support bags, with additional measures to make them easier to use for, let's say, more sensitive personnel. As our preliminary study showed, 75% more subjects were more willing to harm a (consenting) intern if their face was fully hidden.<br>
+	We are expecting great results from this program. Do not disappoint us.<br>
+	<i>H.B.</i></tt>
+	"}
+
+/obj/item/weapon/folder/envelope/captain
+	desc = "A thick envelope. The SCG crest is stamped in the corner, along with 'TOP SECRET - TORCH UMBRA'."
+
+/obj/item/weapon/folder/envelope/captain/Initialize()
+	. = ..()
+	var/obj/effect/overmap/torch = map_sectors["[z]"]
+	var/memo = {"
+	<tt><center><b><font color='red'>SECRET - CODE WORDS: TORCH</font></b>
+	<h3>SOL CENTRAL GOVERNMENT EXPEDITIONARY COMMAND</h3>
+	<img src = sollogo.png>
+	</center>
+	<b>FROM:</b> ADM William Lau<br>
+	<b>TO:</b> Commanding Officer of SEV Torch<br>
+	<b>SUBJECT:</b> Standing Orders<br>
+	<hr>
+	Captain.<br>
+	Your orders are to visit the following star systems. Keep in mind that your supplies are limited; ration exploration time accordingly.
+	<li>[generate_system_name()]</li>
+	<li>[generate_system_name()]</li>
+	<li>[generate_system_name()]</li>
+	<li>[generate_system_name()]</li>
+	<li>[generate_system_name()]</li>
+	<li>[GLOB.using_map.system_name]</li>
+	<li>[generate_system_name()]</li>
+	<li>[generate_system_name()]</li>
+	<li>[generate_system_name()]</li>
+	<br>
+	Priority targets are artifacts of uncontacted alien species and signal sources of unknown origin.<br>
+	None of these systems are claimed by any entity recognized by the SCG, so you have full salvage rights on any derelicts discovered.<br>
+	Investigate and mark any prospective colony worlds as per usual procedures.<br>
+	There is no SCG presence in that area. In case of distress calls, you will be the only vessel available; do not ignore them. We cannot afford any more PR backlash.<br>
+	The current docking code is: [torch.docking_codes]<br>
+	Report all findings via bluespace comm buoys during inter-system jumps.<br>
+
+	<i>ADM Lau.</i></tt>
+	<i>This paper has been stamped with the stamp of SCG Expeditionary Command.</i>
+	"}
+	new/obj/item/weapon/paper(src, memo, "Standing Orders")
+
+	new/obj/item/weapon/paper/umbra(src)
+
+/obj/item/weapon/folder/envelope/rep
+	desc = "A thick envelope. The SCG crest is stamped in the corner, along with 'TOP SECRET - UMBRA'."
+
+/obj/item/weapon/folder/envelope/rep/Initialize()
+	. = ..()
+	new/obj/item/weapon/paper/umbra(src)
+
+/obj/item/weapon/paper/umbra
+	name = "UMBRA Protocol"
+	info = {"
+	<tt><center><b><font color='red'>TOP SECRET - CODE WORDS: TORCH UMBRA</font></b>
+	<h3>OFFICE OF THE SECRETARY GENERAL OF SOL CENTRAL GOVERNMENT</h3>
+	<img src = sollogo.png>
+	</center>
+	<b>FROM:</b> Johnathan Smitherson, Special Aide of the Secretary General<br>
+	<b>TO:</b> Commanding Officer of the SEV Torch<br>
+	<b>CC:</b> Special Representative aboard the SEV Torch<br>
+	<b>SUBJECT:</b> UMBRA protocol<br>
+	<hr>
+	This is a small addendum to the usual operating procedures. Unlike the rest of SOP, this is not left to the Commanding Officer's discretion and is mandatory. As unconventional as this is, we felt it is essential for smooth operation of this mission.<br>
+	Procedure can be initiated only by transmission from SCG Expeditionary Command via secure channel. The sender may not introduce themselves, but you shouldn't have trouble confirming the transmission source, I believe.<br>
+	The signal to initiate the procedure are codewords 'GOOD NIGHT WORLD' used in this order as one phrase. You do not need to send acknowledgement.
+	<li>Information about this expedition's findings is to be treated as secret and vital to SCG's national security, and is protected under codeword UMBRA. Only SCG government employees, NT personnel and Skrell citizens aboard the SEV Torch are allowed access to this information on a need-to-know basis.</li>
+	<li>The secrecy of this information is to be applied retroactively. Any non-cleared personnel who were exposed to such information are to be secured and transferred to DIA on arrival at home port.</li>
+	<li>Any devices capable of transmitting data on interstellar range are to be confiscated from private possession.</li>
+	<li>Disregard any systems remaining in your flight plan and set course for Sol, Neptune orbit. You will be contacted upon your arrival. Do not make stops in ports on the way unless absolutely necessary.</li>
+	<br>
+	While drastic, I assure you this is a simple precaution, lest any issues. Just keep the option open, and carry on with your normal duties.
+	<i>Regards, John.</i></tt>
+	<i>This paper has been stamped with the stamp of Office of the General Secretary of SCG.</i>
+	"}
 
 /////////////
 //SCP BOOKS//
@@ -71,6 +217,7 @@ Failure rate can be affected by subjects not coming into contact with SCP-113 fo
 
 
 "}
+
 
 /obj/item/weapon/paper/scp/safe/scp500
 	name = "SCP-500"
@@ -271,8 +418,54 @@ Personnel report sounds of scraping stone originating from within the container 
 The reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.</tt>
 	"}
 
-
-
+/obj/item/weapon/paper/scp/euclid/scp513
+	name = "SCP-513"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-513</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+</b>Item #:</b> SCP-500
+<br>
+<b>Object Class:</b> Safe
+<br>
+<b>Special Containment Procedures:</b> SCP-500 must be stored in a cool and dry place away from bright light. SCP-500 is only allowed to be accessed by personnel with level 4 security clearance to prevent misapplication.
+<br>
+<b>Description:</b> SCP-500 is a small plastic can which at the time of writing contains forty-seven (47) red pills. One pill, when taken orally, effectively cures the subject of all diseases within two hours, exact time depending on the severity and amount of the subject's conditions. Despite extensive trials, all attempts at synthesizing more of what is thought to be the active ingredient of the pills have been unsuccessful.
+<br>
+<b>Note From Dr. Klein:</b> SCP personnel below Level 3 are now banned from handling SCP-500. This is not to be used to cure a hangover. Get AIDS and then ask permission.
+<br>
+<br>
+<b>Request 500-1774-k</b> Dr. --REDACTED-- has requested one (1) SCP-500 pill for testing with --REDACTED--. Request has been approved.
+<br>
+<b>Request 500-1862-b</b> Dr. Gears has requested one (1) SCP-500 pill for testing in --REDACTED--. Request has been approved.
+<br>
+<b>Request 500-2354-f</b> Dr. ¦¦¦¦¦¦¦¦¦ has requested one (1) SCP-500 pill for testing with --REDACTED--. Request denied.
+<br>
+<b>Request 500-5667-e</b> Dr. Gibbons has requested two (2) pills of SCP-500 for his personal medkit. Request denied.
+<br>
+<b>Addendum 500-1:</b> Two (2) pills have been authorized for use with --REDACTED--. As a result of conducting a series of tests on Class D subjects infected with SCP-008, it appears that even in the most advanced stages of the disease one whole pill will accomplish full recovery. Number of pills is fifty-seven (57) at the time of writing. - Dr. --REDACTED--
+<br>
+<b>Addendum 500-2:</b> One (1) pill has been authorized for use with --REDACTED--. SCP-500 was tested on Subject 409-D5 who was exposed to the effects of --REDACTED--. Complete recovery accomplished. See Addendum 409-1. Number of pills is fifty-six (56) at the time of writing. - Dr. --REDACTED--
+<br>
+<b>Addendum 500-4:</b> Request 500-1774-k approved. Five (5) pills have been used in experimentation with --REDACTED--. It has been determined that SCP-038 is capable of duplicating SCP-500; however, the success of the duplicated pills is limited. The duplicated pills are only effective in curing the subject 30% of the time, with chance of successful healing dropping as time since cloned increases. In 60% of the cases where the infection is permanent, symptoms of infection remain, though further infestation is neutralized. Repeated dosing with SCP-038 cloned pills is recommended for all personnel suffering from incurable conditions, as supply of SCP-500 remains extremely limited. All five (5) used samples of SCP-500 were returned. Number of pills is fifty-six (56) at the time of writing.
+<br>
+<b>Addendum 500-5:</b> During experiments with SCP-038, one (1) pill was stolen by personnel D-¦¦¦¦¦¦ to, reportedly, "cure a hangover". Stricter controls for samples of SCP-500 given to other projects is suggested. Personnel D-¦¦¦¦¦¦ has been terminated. Number of pills is fifty-five (55) at the time of writing.
+<br>
+<b>Addendum 500-6:</b> One (1) pill has been used with --REDACTED--. Number of pills is fifty-four (54) at the time of writing.
+<br>
+<b>Addendum 500-7:</b> One (1) pill has been used for --REDACTED--. Number of pills is fifty-three (53) at the time of writing.
+<br>
+<b>Addendum 500-8:</b> One (1) pill has been used with --REDACTED--. Number of pills is fifty-two (52) at the time of writing.
+<br>
+<b>Addendum 500-9:</b> Request 500-1862-b approved. One (1) pill of SCP-500 is placed within --REDACTED-- with the setting at "Fine". Resulting object classified as --REDACTED--. Number of pills is fifty-one (51) at the time of writing.
+<br>
+<b>Addendum 500-10:</b> Five (5) pills have been taken for the --REDACTED-- although only two (2) were used. The remaining three (3) will be returned shortly. Upon return, number of pills will be forty-nine (49).
+<br>
+<b>Addendum 500-11:</b> Two (2) pills have been used for Experiment 217-¦¦¦¦¦-¦¦¦¦¦. Number of pills is forty-seven (47) at the time of writing.
+<br>
+<b>Addendum 500-12:</b> Request to have SCP-500 investigated for mental compulsion leading to obsessive fixation denied for triviality.
+"}
 // EUCLID ADDENDUMS
 
 
@@ -457,7 +650,7 @@ Congratulations, you're in charge of assignments today!
 <b>Before assigning work detail to anyone, make sure to coordinate with your fellow cell guards and Lieutenant to see if all work places have at least one cell guard overlooking it!</b>
 <br>
 <br>
-<b>As an additional note, there is a maximum of work assignments, which is 6x mining and manual labor, 4 x botany, 3x kitchen and 2x janitorial, making for 15 work places at current time.</b>
+<b>As an additional note, there is a maximum of work assignments, which is 6x mining and manual labor, 4 x botany, 3x kitchen, 4x janitorial and 6x mining, making for 17 work places at current time.</b>
 <br>
 <b>DO NOT EXCEED THE MAXIMUM ALLOWED OF WORKSPACES UNDER THREAT OF IMMEDIATE EMPLOYMENT TERMINATION.</b>
 <br>

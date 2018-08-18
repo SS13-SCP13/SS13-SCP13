@@ -49,8 +49,8 @@
 	#include "structures/signs.dm"
 //	#include "structures/closets/command.dm"
 //	#include "structures/closets/engineering.dm"
-//	#include "structures/closets/medical.dm"
-//	#include "structures/closets/misc.dm"
+	#include "structures/closets/medical.dm"
+	#include "structures/closets/misc.dm"
 	#include "structures/closets/research.dm"
 	#include "structures/closets/security.dm"
 	#include "structures/closets/services.dm"
@@ -72,7 +72,7 @@
 	#include "site53-2.dmm"
 	#include "site53-3.dmm"
 	#include "site53-4.dmm"
-//	#include "site53-5.dmm"
+	#include "site53-5.dmm"
 //	#include "site53-6.dmm"
 //	#include "site53-7.dmm"
 	#include "site53-8.dmm"
@@ -101,7 +101,7 @@
 	#include "../away/lar_maria/lar_maria.dm"*/
 
 	#include "../../code/modules/lobby_music/Perdition.dm"
-	#include "../../code/modules/lobby_music/sm.dm"
+	#include "../../code/modules/lobby_music/hie.dm"
 	#include "../../code/modules/lobby_music/std.dm"
 
 

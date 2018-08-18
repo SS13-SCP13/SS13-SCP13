@@ -26,6 +26,10 @@
 		/obj/item/clothing/mask/gas,
 		/obj/item/device/multitool,
 		/obj/item/device/flash,
+		/obj/item/weapon/gun/projectile/pistol,
+		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/taperoll/engineering,
 		/obj/item/weapon/crowbar/brace_jack
 	)

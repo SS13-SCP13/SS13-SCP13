@@ -218,6 +218,7 @@ Failure rate can be affected by subjects not coming into contact with SCP-113 fo
 
 "}
 
+
 /obj/item/weapon/paper/scp/safe/scp500
 	name = "SCP-500"
 	info = {"
@@ -417,8 +418,54 @@ Personnel report sounds of scraping stone originating from within the container 
 The reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.</tt>
 	"}
 
-
-
+/obj/item/weapon/paper/scp/euclid/scp513
+	name = "SCP-513"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-513</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+</b>Item #:</b> SCP-500
+<br>
+<b>Object Class:</b> Safe
+<br>
+<b>Special Containment Procedures:</b> SCP-500 must be stored in a cool and dry place away from bright light. SCP-500 is only allowed to be accessed by personnel with level 4 security clearance to prevent misapplication.
+<br>
+<b>Description:</b> SCP-500 is a small plastic can which at the time of writing contains forty-seven (47) red pills. One pill, when taken orally, effectively cures the subject of all diseases within two hours, exact time depending on the severity and amount of the subject's conditions. Despite extensive trials, all attempts at synthesizing more of what is thought to be the active ingredient of the pills have been unsuccessful.
+<br>
+<b>Note From Dr. Klein:</b> SCP personnel below Level 3 are now banned from handling SCP-500. This is not to be used to cure a hangover. Get AIDS and then ask permission.
+<br>
+<br>
+<b>Request 500-1774-k</b> Dr. --REDACTED-- has requested one (1) SCP-500 pill for testing with --REDACTED--. Request has been approved.
+<br>
+<b>Request 500-1862-b</b> Dr. Gears has requested one (1) SCP-500 pill for testing in --REDACTED--. Request has been approved.
+<br>
+<b>Request 500-2354-f</b> Dr. ¦¦¦¦¦¦¦¦¦ has requested one (1) SCP-500 pill for testing with --REDACTED--. Request denied.
+<br>
+<b>Request 500-5667-e</b> Dr. Gibbons has requested two (2) pills of SCP-500 for his personal medkit. Request denied.
+<br>
+<b>Addendum 500-1:</b> Two (2) pills have been authorized for use with --REDACTED--. As a result of conducting a series of tests on Class D subjects infected with SCP-008, it appears that even in the most advanced stages of the disease one whole pill will accomplish full recovery. Number of pills is fifty-seven (57) at the time of writing. - Dr. --REDACTED--
+<br>
+<b>Addendum 500-2:</b> One (1) pill has been authorized for use with --REDACTED--. SCP-500 was tested on Subject 409-D5 who was exposed to the effects of --REDACTED--. Complete recovery accomplished. See Addendum 409-1. Number of pills is fifty-six (56) at the time of writing. - Dr. --REDACTED--
+<br>
+<b>Addendum 500-4:</b> Request 500-1774-k approved. Five (5) pills have been used in experimentation with --REDACTED--. It has been determined that SCP-038 is capable of duplicating SCP-500; however, the success of the duplicated pills is limited. The duplicated pills are only effective in curing the subject 30% of the time, with chance of successful healing dropping as time since cloned increases. In 60% of the cases where the infection is permanent, symptoms of infection remain, though further infestation is neutralized. Repeated dosing with SCP-038 cloned pills is recommended for all personnel suffering from incurable conditions, as supply of SCP-500 remains extremely limited. All five (5) used samples of SCP-500 were returned. Number of pills is fifty-six (56) at the time of writing.
+<br>
+<b>Addendum 500-5:</b> During experiments with SCP-038, one (1) pill was stolen by personnel D-¦¦¦¦¦¦ to, reportedly, "cure a hangover". Stricter controls for samples of SCP-500 given to other projects is suggested. Personnel D-¦¦¦¦¦¦ has been terminated. Number of pills is fifty-five (55) at the time of writing.
+<br>
+<b>Addendum 500-6:</b> One (1) pill has been used with --REDACTED--. Number of pills is fifty-four (54) at the time of writing.
+<br>
+<b>Addendum 500-7:</b> One (1) pill has been used for --REDACTED--. Number of pills is fifty-three (53) at the time of writing.
+<br>
+<b>Addendum 500-8:</b> One (1) pill has been used with --REDACTED--. Number of pills is fifty-two (52) at the time of writing.
+<br>
+<b>Addendum 500-9:</b> Request 500-1862-b approved. One (1) pill of SCP-500 is placed within --REDACTED-- with the setting at "Fine". Resulting object classified as --REDACTED--. Number of pills is fifty-one (51) at the time of writing.
+<br>
+<b>Addendum 500-10:</b> Five (5) pills have been taken for the --REDACTED-- although only two (2) were used. The remaining three (3) will be returned shortly. Upon return, number of pills will be forty-nine (49).
+<br>
+<b>Addendum 500-11:</b> Two (2) pills have been used for Experiment 217-¦¦¦¦¦-¦¦¦¦¦. Number of pills is forty-seven (47) at the time of writing.
+<br>
+<b>Addendum 500-12:</b> Request to have SCP-500 investigated for mental compulsion leading to obsessive fixation denied for triviality.
+"}
 // EUCLID ADDENDUMS
 
 
@@ -603,7 +650,7 @@ Congratulations, you're in charge of assignments today!
 <b>Before assigning work detail to anyone, make sure to coordinate with your fellow cell guards and Lieutenant to see if all work places have at least one cell guard overlooking it!</b>
 <br>
 <br>
-<b>As an additional note, there is a maximum of work assignments, which is 6x mining and manual labor, 4 x botany, 3x kitchen and 2x janitorial, making for 15 work places at current time.</b>
+<b>As an additional note, there is a maximum of work assignments, which is 6x mining and manual labor, 4 x botany, 3x kitchen, 4x janitorial and 6x mining, making for 17 work places at current time.</b>
 <br>
 <b>DO NOT EXCEED THE MAXIMUM ALLOWED OF WORKSPACES UNDER THREAT OF IMMEDIATE EMPLOYMENT TERMINATION.</b>
 <br>
