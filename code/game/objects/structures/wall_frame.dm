@@ -14,9 +14,9 @@
 	layer = TABLE_LAYER
 	color = COLOR_GUNMETAL
 
+	var/damage = 0
 	var/maxhealth = 10
 	var/health = 10
-	var/stripe_color
 
 	blend_objects = list(/obj/machinery/door) // Objects which to blend with
 	noblend_objects = list(/obj/machinery/door/window)
@@ -63,42 +63,40 @@
 		if(!ST.material.created_window)
 			return 0
 
-		var/dir_to_set = 1
-		if(loc == user.loc)
-			dir_to_set = user.dir
-		else
-			if( ( x == user.x ) || (y == user.y) ) //Only supposed to work for cardinal directions.
-				if( x == user.x )
-					if( y > user.y )
-						dir_to_set = 2
-					else
-						dir_to_set = 1
-				else if( y == user.y )
-					if( x > user.x )
-						dir_to_set = 8
-					else
-						dir_to_set = 4
-			else
-				to_chat(user, "<span class='notice'>You can't reach.</span>")
-				return //Only works for cardinal direcitons, diagonals aren't supposed to work like this.
 		for(var/obj/structure/window/WINDOW in loc)
-			if(WINDOW.dir == dir_to_set)
-				to_chat(user, "<span class='notice'>There is already a window facing this way there.</span>")
+			if(WINDOW)
+				to_chat(user, "<span class='notice'>There is already a window here.</span>")
 				return
 		to_chat(user, "<span class='notice'>You start placing the window.</span>")
 		if(do_after(user,20,src))
 			for(var/obj/structure/window/WINDOW in loc)
-				if(WINDOW.dir == dir_to_set)//checking this for a 2nd time to check if a window was made while we were waiting.
-					to_chat(user, "<span class='notice'>There is already a window facing this way there.</span>")
+				if(WINDOW)//checking this for a 2nd time to check if a window was made while we were waiting.
+					to_chat(user, "<span class='notice'>There is already a window here.</span>")
 					return
 
 			var/wtype = ST.material.created_window
 			if (ST.use(1))
-				var/obj/structure/window/WD = new wtype(loc, dir_to_set, 1)
+				var/obj/structure/window/WD = new wtype(loc, 5, 1)
 				to_chat(user, "<span class='notice'>You place the [WD] on [src].</span>")
+				WD.update_connections(1)
 				WD.update_icon()
 		return
 	//window placing end
+
+	if(isWrench(W))
+		for(var/obj/structure/S in loc)
+			if(istype(S, /obj/structure/window))
+				to_chat(user, "<span class='notice'>There is still a window on the low wall!</span>")
+				return
+			else if(istype(S, /obj/structure/grille))
+				to_chat(user, "<span class='notice'>There is still a grille on the low wall!</span>")
+				return
+		playsound(src.loc, 'sound/items/Ratchet.ogg', 100, 1)
+		to_chat(user, "<span class='notice'>Now disassembling the low wall...</span>")
+		if(do_after(user, 40,src))
+			if(!src) return
+			to_chat(user, "<span class='notice'>You dissasembled the low wall!</span>")
+			dismantle()
 
 	..()
 	return
@@ -125,15 +123,6 @@
 		overlays += I
 	return
 
-	if(stripe_color)
-		for(var/i = 1 to 4)
-			if(other_connections[i] != "0")
-				I = image('icons/obj/wall_frame.dmi', "stripe_other[connections[i]]", dir = 1<<(i-1))
-			else
-				I = image('icons/obj/wall_frame.dmi', "stripe[connections[i]]", dir = 1<<(i-1))
-			I.color = stripe_color
-			overlays += I
-
 /obj/structure/wall_frame/titanium
 	color = COLOR_TITANIUM
 
@@ -154,3 +143,35 @@
 			var/bleach_factor = rand(10,50)
 			color = adjust_brightness(color, bleach_factor)
 	update_icon()
+
+/obj/structure/wall_frame/bullet_act(var/obj/item/projectile/Proj)
+	var/proj_damage = Proj.get_structure_damage()
+	var/damage = min(proj_damage, 100)
+	take_damage(damage)
+	return
+
+/obj/structure/wall_frame/hitby(AM as mob|obj, var/speed=THROWFORCE_SPEED_DIVISOR)
+	..()
+	if(ismob(AM))
+		return
+	var/obj/O = AM
+	var/tforce = O.throwforce * (speed/THROWFORCE_SPEED_DIVISOR)
+	if (tforce < 15)
+		return
+
+	take_damage(tforce)
+
+/obj/structure/wall_frame/proc/dismantle()
+	new /obj/item/stack/material/steel(get_turf(src))
+	qdel(src)
+
+/obj/structure/wall_frame/proc/take_damage(dam)
+	if(dam)
+		damage = max(0, damage + dam)
+		update_damage()
+	return
+
+/obj/structure/wall_frame/proc/update_damage()
+	if(damage >= 150)
+		dismantle()
+	return

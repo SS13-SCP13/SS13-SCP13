@@ -70,6 +70,8 @@
 	assembly = new(src)
 	assembly.state = 4
 
+	update_icon()
+
 	/* // Use this to look for cameras that have the same c_tag.
 	for(var/obj/machinery/camera/C in cameranet.cameras)
 		var/list/tempnetwork = C.network&src.network
@@ -83,8 +85,8 @@
 			error("[src.name] in [get_area(src)]has errored. [src.network?"Empty network list":"Null network list"]")
 		ASSERT(src.network)
 		ASSERT(src.network.len > 0)
-		
-	global.camera_list += src 
+
+	global.camera_list += src
 	..()
 
 /obj/machinery/camera/Initialize()
@@ -102,10 +104,10 @@
 
 
 /obj/machinery/camera/Destroy()
-	global.camera_list -= src 
+	global.camera_list -= src
 	deactivate(null, 0) //kick anyone viewing out
 	if(assembly)
-		qdel(assembly)
+		del(assembly)
 		assembly = null
 	qdel(wires)
 	wires = null
@@ -304,14 +306,14 @@
 	pixel_y = 0
 
 	var/turf/T = get_step(get_turf(src), turn(dir, 180))
-	
+
 	if(istype(T, /turf/simulated/wall))
 		switch (dir)
-			if (NORTH)
+			if (SOUTH)
 				pixel_y = 21
-			if (EAST)
-				pixel_x = 10
 			if (WEST)
+				pixel_x = 10
+			if (EAST)
 				pixel_x = -10
 
 	if (!status || (stat & BROKEN))

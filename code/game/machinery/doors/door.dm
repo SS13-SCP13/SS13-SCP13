@@ -31,7 +31,7 @@
 	var/close_door_at = 0 //When to automatically close the door, if possible
 	var/list/connections = list("0", "0", "0", "0")
 	var/list/blend_objects = list(/obj/structure/wall_frame, /obj/structure/window, /obj/structure/grille) // Objects which to blend with
-	
+
 	//Multi-tile doors
 	dir = SOUTH
 	var/width = 1
@@ -149,7 +149,7 @@
 	if(density)
 		if(allowed(user))
 			open()
-		else 
+		else
 			do_animate("deny")
 	return
 
@@ -293,6 +293,7 @@
 
 	if(src.density)
 		do_animate("deny")
+	update_icon()
 	return
 
 /obj/machinery/door/emag_act(var/remaining_charges)
@@ -494,10 +495,10 @@
 			success = 1
 			if(propagate)
 				var/turf/simulated/wall/W = T
-				W.update_connections()
+				W.update_connections(1)
 				W.update_icon()
 
-		else if( istype(T, /turf/simulated/shuttle/wall))
+		else if( istype(T, /turf/simulated/shuttle/wall) ||  istype(T, /turf/unsimulated/wall))
 			success = 1
 		else
 			for(var/obj/O in T)

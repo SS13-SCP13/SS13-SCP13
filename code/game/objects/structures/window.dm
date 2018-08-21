@@ -329,9 +329,12 @@
 	ini_dir = dir
 
 	update_connections(1)
+	update_icon()
 
 	update_nearby_tiles(need_rebuild=1)
 	update_nearby_icons()
+	update_connections(1)
+	update_icon()
 
 
 /obj/structure/window/Destroy()
