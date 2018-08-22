@@ -8,6 +8,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 	var/list/pestilence_images = list()
 	var/mob/living/target = null
 	var/zombies = 0
+	var/next_emote = -1
 	
 /mob/living/carbon/human/scp049/examine(mob/user)
 	user << "<b><span class = 'info'><big>SCP-049</big></span></b> - [desc]"
@@ -39,6 +40,15 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 	GLOB.scp049s += src
 
 	verbs += /mob/living/carbon/human/proc/SCP_049_talk
+
+	// emotes
+	verbs += list(
+		/mob/living/carbon/human/scp049/proc/greetings,
+		/mob/living/carbon/human/scp049/proc/yet_another_victim,
+		/mob/living/carbon/human/scp049/proc/you_are_not_a_doctor,
+		/mob/living/carbon/human/scp049/proc/I_sense_the_disease_in_you,
+		/mob/living/carbon/human/scp049/proc/Im_here_to_cure_you
+	)
 
 /mob/living/carbon/human/scp049/Destroy()
 	GLOB.scp049s -= src
@@ -249,3 +259,39 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 		var/say = sanitize(input(src, "Communicate what?") as text)
 		for (var/M in GLOB.scp049s|GLOB.scp049_1s)
 			M << "<em><strong>[real_name]</strong>: [say]</em>"
+
+// SCP-049 emotes 
+/mob/living/carbon/human/scp049/proc/greetings()
+	set category = "SCP-049"
+	set name = "Greetings"
+	if (world.time >= next_emote)
+		playsound(src, 'sound/scp/voice/SCP049_1.ogg', 100)
+		next_emote = world.time + 10
+
+/mob/living/carbon/human/scp049/proc/yet_another_victim()
+	set category = "SCP-049"
+	set name = "Yet another victim"
+	if (world.time >= next_emote)
+		playsound(src, 'sound/scp/voice/SCP049_2.ogg', 100)
+		next_emote = world.time + 40
+
+/mob/living/carbon/human/scp049/proc/you_are_not_a_doctor()
+	set category = "SCP-049"
+	set name = "You are not a doctor"
+	if (world.time >= next_emote)
+		playsound(src, 'sound/scp/voice/SCP049_3.ogg', 100)
+		next_emote = world.time + 20
+
+/mob/living/carbon/human/scp049/proc/I_sense_the_disease_in_you()
+	set category = "SCP-049"
+	set name = "I sense the disease in you"
+	if (world.time >= next_emote)
+		playsound(src, 'sound/scp/voice/SCP049_4.ogg', 100)
+		next_emote = world.time + 20
+
+/mob/living/carbon/human/scp049/proc/Im_here_to_cure_you()
+	set category = "SCP-049"
+	set name = "I'm here to cure you"
+	if (world.time >= next_emote)
+		playsound(src, 'sound/scp/voice/SCP049_5.ogg', 100)
+		next_emote = world.time + 40
