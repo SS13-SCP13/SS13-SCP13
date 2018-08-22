@@ -168,6 +168,9 @@ GLOBAL_LIST_EMPTY(scp049s)
 			
 /mob/living/carbon/human/scp049/attack_hand(mob/living/carbon/M)
 	if (!isscp049_1(M) || M.a_intent == I_HELP)
+		if (ishuman(M))
+			var/mob/living/carbon/human/H = M 
+			H.pestilence = TRUE
 		return ..(M)
 	M << "<span class = 'danger'><big>You cannot attack your master.</big></span>"
 
