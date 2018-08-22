@@ -175,7 +175,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 	M << "<span class = 'danger'><big>You cannot attack your master.</big></span>"
 
 /mob/living/carbon/human/scp049/bullet_act(var/obj/item/projectile/P, var/def_zone)
-	if (ishuman(P.firer))
+	if (P.damage && !P.nodamage && ishuman(P.firer))
 		var/mob/living/carbon/human/H = P.firer 
 		H.pestilence = TRUE 
 	return ..(P, def_zone)
