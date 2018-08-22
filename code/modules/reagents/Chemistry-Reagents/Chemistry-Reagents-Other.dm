@@ -132,9 +132,9 @@
 	M.confused = 0
 	M.sleeping = 0
 	M.jitteriness = 0
-	if (ishuman(M) && istype(M.species, /datum/species/scp049_1))
+	if (isscp049_1(M))
 		var/mob/living/carbon/human/H = M
-		H.set_species("Human")
+		H.set_species(H.pre_scp049_species)
 		H.mutations &= ~HUSK
 		H.real_name = H.pre_scp049_real_name
 		H.name = H.real_name

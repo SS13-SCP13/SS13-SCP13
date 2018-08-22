@@ -107,13 +107,20 @@ GLOBAL_LIST_EMPTY(scp106s)
 
 // NPC stuff
 /mob/living/carbon/human/scp106/proc/getTarget()
-	/* if we have no target, or our current target is a nonhuman, or our target is out of view,
+
+	// stupid hack
+	if (client)
+		target = null
+		return target 
+
+	/* if we have no target, or our target is dead, or our target is a nonhuman, or our target is out of view,
 	 * try to find a better one. Failing to do so just makes us continue to go after the old target */
-	if (!target || !ishuman(target) || !(src in viewers(world.view, target)))
+	if (!target || target.stat == DEAD || !ishuman(target) || !(src in viewers(world.view, target)))
 
 		var/list/possible_targets = list()
 		for (var/mob/living/L in oview(world.view, src))
-			possible_targets += L
+			if (L.stat != DEAD)
+				possible_targets += L
 
 		var/attempts = 0
 		while (++attempts <= 3)
@@ -153,7 +160,9 @@ GLOBAL_LIST_EMPTY(scp106s)
 		
 	walk(src, null)
 
-	scp106_attack(target)
+	if (!locate(/obj/item/grab) in src)
+		scp106_attack(target)
+
 	return TRUE
 
 /mob/living/carbon/human/scp106/proc/scp106_attack(var/mob/living/target)
@@ -164,6 +173,12 @@ GLOBAL_LIST_EMPTY(scp106s)
 		if (G)
 			G.upgrade(TRUE)
 		target.Weaken(1)
+		// NPC stuff
+		if (!client)
+			spawn (20)
+				if (G)
+					G.last_upgrade = -1
+					G.upgrade(FALSE)
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/M)
 	if (!isscp106(M))
