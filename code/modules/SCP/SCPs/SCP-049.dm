@@ -174,6 +174,18 @@ GLOBAL_LIST_EMPTY(scp049s)
 		return ..(M)
 	M << "<span class = 'danger'><big>You cannot attack your master.</big></span>"
 
+/mob/living/carbon/human/scp049/bullet_act(var/obj/item/projectile/P, var/def_zone)
+	if (ishuman(P.firer))
+		var/mob/living/carbon/human/H = P.firer 
+		H.pestilence = TRUE 
+	return ..(P, def_zone)
+
+/mob/living/carbon/human/scp049/attackby(obj/item/W, mob/user)
+	if (W.force > 0 && ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.pestilence = TRUE 
+	return ..(W, user)
+
 /mob/living/carbon/human/scp049/proc/scp049_attack(var/mob/living/target)
 	var/obj/item/grab/G = locate() in src
 	if (!G)
