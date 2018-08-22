@@ -156,8 +156,8 @@ GLOBAL_LIST_EMPTY(scp049s)
 		return
 	switch (stat)
 		if (CONSCIOUS, UNCONSCIOUS)
-			src << "<span class = 'good'><big>Excellent! You have cured [src] of the Pestilence.</big></span>"
-			for (var/mob/M2 in orange(world.view, src))
+			H << "<span class = 'good'><big>Excellent! You have cured [src] of the Pestilence.</big></span>"
+			for (var/mob/M2 in orange(world.view, H))
 				M2 << "<span class = 'danger'><big>[H] touches [src], killing them instantly!</big></span>"
 			mutations |= HUSK 
 			regenerate_icons()
