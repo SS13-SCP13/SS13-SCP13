@@ -1,4 +1,5 @@
 GLOBAL_LIST_EMPTY(scp049s)
+GLOBAL_LIST_EMPTY(scp049_1s)
 
 /mob/living/carbon/human/scp049
 	desc = "A mysterious plague doctor."
@@ -36,6 +37,8 @@ GLOBAL_LIST_EMPTY(scp049s)
 
 	set_species("SCP-049")
 	GLOB.scp049s += src
+
+	verbs += /mob/living/carbon/human/proc/SCP_049_talk
 
 /mob/living/carbon/human/scp049/Destroy()
 	GLOB.scp049s -= src
@@ -157,9 +160,9 @@ GLOBAL_LIST_EMPTY(scp049s)
 	switch (stat)
 		if (CONSCIOUS, UNCONSCIOUS)
 			visible_message("<span class = 'danger'><big>[H] touches [src], killing them instantly!</big></span>")
+			mutations |= HUSK
 			regenerate_icons()
 			death()
-			mutations |= HUSK
 		if (DEAD)
 			H.scp049_attack(src)
 			
@@ -228,6 +231,8 @@ GLOBAL_LIST_EMPTY(scp049s)
 							H.set_species("SCP-049-1")
 							H.real_name = "SCP-049-[++zombies]"
 							H.name = H.real_name
+							H.verbs += /mob/living/carbon/human/proc/SCP_049_talk
+							GLOB.scp049_1s += H
 						else 
 							H.visible_message("<span class = 'notice'>The surgery seems to have been unsucessful.</span>")
 						H.pestilence = FALSE
@@ -235,3 +240,12 @@ GLOBAL_LIST_EMPTY(scp049s)
 					else
 						target.visible_message("<span class = 'notice'>The surgery seems to have been unsucessful.</span>")
 			qdel(G)
+
+// special channel that lets SCP-049 and SCP-049-1 communicate
+/mob/living/carbon/human/proc/SCP_049_talk()
+	set category = "SCP-049"
+	set name = "Communicate"
+	if (isscp049(src) || isscp049_1(src))
+		var/say = sanitize(input(src, "Communicate what?") as text)
+		for (var/M in GLOB.scp049s|GLOB.scp049_1s)
+			M << "<em><strong>[real_name]</strong>: [say]</em>"

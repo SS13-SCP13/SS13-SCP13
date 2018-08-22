@@ -139,6 +139,8 @@
 		H.real_name = H.pre_scp049_real_name
 		H.name = H.real_name
 		H.pestilence = TRUE
+		H.verbs -= /mob/living/carbon/human/proc/SCP_049_talk
+		GLOB.scp049_1s -= H
 
 /datum/reagent/gold
 	name = "Gold"

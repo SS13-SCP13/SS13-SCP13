@@ -21,3 +21,4 @@ changes:
   - bugfix: "Fixed SCP-500 not returning SCP-049-1 to its original species."
   - bugfix: "Fixed various SCP-049 and SCP-106 AI errors."
   - tweak: "Gave SCP-049 a Pestilence feature. It can only attack people who are 'infected'. Those infected will have an overlay only visible to SCP-049."
+  - rscadd: "Gave SCP-049 and SCP-049-1 a verb that lets them communicate remotely."
