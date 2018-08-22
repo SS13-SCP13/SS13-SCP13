@@ -184,7 +184,10 @@ GLOBAL_LIST_EMPTY(scp106s)
 	if (!isscp106(M))
 		return ..(M)
 	var/mob/living/carbon/human/scp106/H = M
-	H.scp106_attack(src)
+	if (isscp049(src))
+		H << "<span class = \"danger\">You cannot attack SCP-049.</span>"
+	else
+		H.scp106_attack(src)
 
 /mob/living/carbon/human/scp106/proc/go_back()
 	set name = "Return"
