@@ -156,13 +156,10 @@ GLOBAL_LIST_EMPTY(scp049s)
 		return
 	switch (stat)
 		if (CONSCIOUS, UNCONSCIOUS)
-			H << "<span class = 'good'><big>Excellent! You have cured [src] of the Pestilence.</big></span>"
-			for (var/mob/M2 in oview(world.view, H))
-				M2 << "<span class = 'danger'><big>[H] touches [src], killing them instantly!</big></span>"
-			mutations |= HUSK 
+			visible_message("<span class = 'danger'><big>[H] touches [src], killing them instantly!</big></span>")
 			regenerate_icons()
 			death()
-			pestilence = FALSE
+			mutations |= HUSK
 		if (DEAD)
 			H.scp049_attack(src)
 			
@@ -233,6 +230,8 @@ GLOBAL_LIST_EMPTY(scp049s)
 							H.name = H.real_name
 						else 
 							H.visible_message("<span class = 'notice'>The surgery seems to have been unsucessful.</span>")
+						H.pestilence = FALSE
+						src << "<span class = 'good'><big>You have cured [H].</big></span>"
 					else
 						target.visible_message("<span class = 'notice'>The surgery seems to have been unsucessful.</span>")
 			qdel(G)

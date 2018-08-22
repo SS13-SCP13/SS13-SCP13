@@ -138,6 +138,7 @@
 		H.mutations &= ~HUSK
 		H.real_name = H.pre_scp049_real_name
 		H.name = H.real_name
+		H.pestilence = TRUE
 
 /datum/reagent/gold
 	name = "Gold"
