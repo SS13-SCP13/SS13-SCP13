@@ -218,6 +218,26 @@
 	dynamic_lighting = 1
 	turf_initializer = /decl/turf_initializer/maintenance
 
+/area/site53/lowertrams/escape
+	name = "\improper Escape Train Hub"
+	icon_state = "centcom"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	requires_power = 0
+	dynamic_lighting = 1
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/lowertrams/secondarymaintenance
+	name = "\improper Lower Tram Hub Secondary Maintenance Tunnel"
+	icon_state = "conference"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/engineering/maintenance/maintenancetunnel
+	name = "\improper Engineering Maintenance Tunnels"
+	icon_state = "conference"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
 /area/site53/llcz/scp513
 	name = "\improper SCP-513"
 	icon_state = "research"
