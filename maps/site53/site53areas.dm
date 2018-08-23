@@ -173,6 +173,12 @@
 	icon_state = "hallA"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+/area/site53/lowertrams/hczmaint
+	name = "\improper Heavy Containment Maintenance"
+	icon_state = "hallA"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
 /area/site53/lowertrams/orangeline
 	name = "\improper Orange Line"
 	icon_state = "hallF"
@@ -214,6 +220,11 @@
 
 /area/site53/llcz/scp500
 	name = "\improper SCP-500"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/llcz/scp012
+	name = "\improper SCP-012"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
@@ -493,3 +504,63 @@
 	icon_state = "SolarcontrolS"
 	sound_env = SMALL_ENCLOSED
 	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/uhcz/scp106observ
+	name = "\improper SCP-106 Observation"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/uhcz/scp106parts
+	name = "\improper SCP-106 Maintenance"
+	icon_state = "fpmaint"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/uhcz/scp106maintup
+	name = "\improper SCP-106 Upper Maintenance"
+	icon_state = "fpmaint"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/uhcz/scp106maintlow
+	name = "\improper SCP-106 Lower Maintenance"
+	icon_state = "fpmaint"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/uhcz/scp106containment
+	name = "\improper SCP-106 Containment Chamber"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/lhcz/scp049containment
+	name = "\improper SCP-049 Containment Chamber"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/lhcz/hallway
+	name = "\improper Lower Heavy Containment Hallways"
+	icon_state = "hallC3"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/lhcz/maintenance
+	name = "\improper Lower Heavy Containment Maintenance"
+	icon_state = "fpmaint"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/engineering/controlroom
+	name = "\improper Engineering Control Room"
+	icon_state = "bridge"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/engineering/atmos
+	name = "\improper Atmospherics"
+	icon_state = "atmos"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/primaryhallway
+	name = "\improper Engineering Hallway"
+	icon_state = "engineering_foyer"
+	area_flags = AREA_FLAG_RAD_SHIELDED
