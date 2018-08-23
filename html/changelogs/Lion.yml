@@ -43,6 +43,7 @@ changes:
   - rscadd: "Added standard side arms for jobs that need it. (CMO and CE included.)"
   - rscadd: "Adds documentation for SCP-513."
   - rscadd: "First round of three month+ backers to the changelog."
+  - rscdel: "Removed holomaps. Signs will have to do."
   - sounddel: "Removed Supermarine from lobby music."
   - soundadd: "Added new lobby track."
   - imageadd: "Adds new medical decals."
