@@ -35,6 +35,10 @@
 	flash_mod =      0.0                    // Unflashable
 
 /datum/species/scp049/handle_npc(var/mob/living/carbon/human/scp049/H)
+	// sanity check, apparently its needed
+	if (!H || H.client)
+		return
+	// walk around randomly if we don't have a target
 	if (!H.pursueTarget())
 		var/turf/T = step_rand(H)
 		H.Move(get_dir(H, T))
