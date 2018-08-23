@@ -195,3 +195,7 @@
 	hard_drive.store_file(new/datum/computer_file/program/chatclient())
 	hard_drive.store_file(new/datum/computer_file/program/card_mod())
 	hard_drive.store_file(new/datum/computer_file/program/camera_monitor())
+
+/obj/item/modular_computer/console/preset/mtf/camera/install_default_programs()
+	..()
+	hard_drive.store_file(new/datum/computer_file/program/camera_monitor())

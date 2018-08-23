@@ -45,6 +45,38 @@
 	requires_power = 0
 	dynamic_lighting = 1
 
+/area/turbolift/site53/uhcz
+	name = "lift (Upper Heavy Containment Zone)"
+	lift_floor_label = "UHCZ"
+	lift_floor_name = "Upper Heavy Containment Zone"
+	lift_announce_str = "Arriving at Upper Heavy Containment Zone: SCP-106, Tram hub."
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/turbolift/site53/lhcz
+	name = "lift (Lower Heavy Containment Zone)"
+	lift_floor_label = "LHCZ"
+	lift_floor_name = "Lower Heavy Containment Zone"
+	lift_announce_str = "Arriving at Lower Heavy Containment Zone: SCP-049."
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/turbolift/site53/scp106cont
+	name = "lift (SCP-106 Containment)"
+	lift_floor_label = "SCP-106 Containment"
+	lift_floor_name = "SCP-106 Containment"
+	lift_announce_str = "Arriving at SCP-106 Containment: SCP-106 Containment Chamber, Maintenance access."
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/turbolift/site53/scp106obs
+	name = "lift (SCP-106 Observation)"
+	lift_floor_label = "SCP-106 Observation"
+	lift_floor_name = "SCP-106 Observation"
+	lift_announce_str = "Arriving at SCP-106 Observation: Containment Observation."
+	requires_power = 0
+	dynamic_lighting = 1
+
 // SITE 53 TRAM AREA'S
 
 /area/site53/tram/engineering
