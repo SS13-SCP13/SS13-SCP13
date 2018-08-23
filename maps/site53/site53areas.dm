@@ -224,7 +224,6 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	requires_power = 0
 	dynamic_lighting = 1
-	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/lowertrams/secondarymaintenance
 	name = "\improper Lower Tram Hub Secondary Maintenance Tunnel"
@@ -438,3 +437,27 @@
 /area/site53/llcz/mine/unexplored
 	name = "Mine"
 	icon_state = "unexplored"
+
+/area/site53/engineering/lowernukeladders
+	name = "\improper Lower Self Destruct Ladders"
+	icon_state = "nuke_storage"
+
+/area/site53/engineering/uppernukeladders
+	name = "\improper Upper Self Destruct Ladders"
+	icon_state = "nuke_storage"
+
+/area/site53/engineering/selfdestruct
+	name = "\improper Self-Destruct Room"
+	icon_state = "nuke_storage"
+
+/area/site53/engineering/maintenance/lowerselfdestruct
+	name = "Lower Self Destruct Maintenance"
+	icon_state = "SolarcontrolS"
+	sound_env = SMALL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site53/engineering/maintenance/upperselfdestruct
+	name = "Upper Self Destruct Maintenance"
+	icon_state = "SolarcontrolS"
+	sound_env = SMALL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
