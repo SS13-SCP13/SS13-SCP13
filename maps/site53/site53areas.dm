@@ -564,3 +564,173 @@
 	name = "\improper Engineering Hallway"
 	icon_state = "engineering_foyer"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/centcom/telecomms
+	name = "\improper Telecommunications"
+	icon_state = "centcom"
+	requires_power = 0
+	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/ceoffice
+	name = "\improper Chief Engineer's Office"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/contengoff
+	name = "\improper Containment Engineer's Office"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/entrancezone/securitypost
+	name = "\improper Entrance Zone Security Post"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/entrancezone/hallway
+	name = "\improper Entrance Zone Hallway"
+	icon_state = "hallC1"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/entrancezone/substation
+	name = "\improper Entrance Zone Substation"
+	icon_state = "substation"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/infirmreception
+	name = "\improper Infirmary Reception"
+	icon_state = "medbay2"
+	ambience = list('sound/ambience/signal.ogg')
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/infirmreception/waiting
+	name = "\improper Infirmary Reception Waiting Area"
+	icon_state = "medbay2"
+	ambience = list('sound/ambience/signal.ogg')
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/infirmary
+	name = "\improper Infirmary Hallway"
+	icon_state = "medbay"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/surgery/op1
+	name = "\improper Operating Theatre #1"
+	icon_state = "surgery"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/surgery/op2
+	name = "\improper Operating Theatre #2"
+	icon_state = "surgery"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/surgery/storage
+	name = "\improper Operating Storage"
+	icon_state = "surgery"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/surgery/recov
+	name = "\improper Surgical Recovery"
+	icon_state = "surgery"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/surgery/hall
+	name = "\improper Surgical Hallway"
+	icon_state = "surgery"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/exam_room
+	name = "\improper Exam Room"
+	icon_state = "exam_room"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/bloodstor
+	name = "\improper Blood Bag Storage"
+	icon_state = "exam_room"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/mentalhealth/isolation
+	name = "\improper Mental Health Isolation"
+	icon_state = "medbay3"
+	ambience = list('sound/ambience/signal.ogg')
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/mentalhealth/office
+	name = "\improper Psychiatrist's Office"
+	icon_state = "medbay3"
+	ambience = list('sound/ambience/signal.ogg')
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/virology
+	name = "\improper Virology"
+	icon_state = "virology"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/morgue
+	name = "\improper Morgue"
+	icon_state = "morgue"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/sleeper
+	name = "\improper Emergency Treatment Centre"
+	icon_state = "exam_room"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/chemistry
+	name = "\improper Chemistry"
+	icon_state = "chem"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/medical/equipstorage
+	name = "\improper Equipment Storage"
+	icon_state = "medbay4"
+	ambience = list('sound/ambience/signal.ogg')
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/engine_smes
+	name = "\improper Engineering SMES"
+	icon_state = "engine_smes"
+	sound_env = SMALL_ENCLOSED
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/biosupplies
+	name = "\improper Engineering Bio supplies"
+	icon_state = "engine_smes"
+	sound_env = SMALL_ENCLOSED
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/bathrooms
+	name = "\improper Engineering Bathrooms"
+	icon_state = "engine_smes"
+	sound_env = SMALL_ENCLOSED
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/storage
+	name = "\improper Engineering Storage"
+	icon_state = "engineering_storage"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/auxstorage
+	name = "\improper Auxiliary Engineering Storage"
+	icon_state = "engineering_storage"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/janitorial
+	name = "\improper Auxiliary Engineering Storage"
+	icon_state = "janitor"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/locker_room
+	name = "\improper Engineering Locker Room"
+	icon_state = "engineering_locker"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/breakroom
+	name = "\improper Engineering Break Room"
+	icon_state = "engineering_locker"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/engineering/sleeproom
+	name = "\improper Engineering Sleep Room"
+	icon_state = "engineering_locker"
+	area_flags = AREA_FLAG_RAD_SHIELDED
