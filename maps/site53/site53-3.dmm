@@ -730,7 +730,7 @@
 "ob" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/door/airlock/maintenance{name = "Maintenance"; req_access = list(301)},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor/plating,/area/maintenance/exterior{name = "\improper EZ and Medical Maintenance"})
 "oc" = (/obj/machinery/door/airlock/glass/security{name = "Security Post"; req_access = list(300)},/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled,/area/site53/entrancezone/securitypost)
 "od" = (/obj/machinery/door/airlock/glass/security{name = "Security Post"; req_access = list(300)},/turf/simulated/floor/tiled,/area/site53/entrancezone/securitypost)
-"oe" = (/obj/machinery/door/airlock/multi_tile/glass/command{name = "Administration Offices"; req_access = list(500)},/turf/simulated/floor/tiled,/area/site53/entrancezone/hallway)
+"oe" = (/obj/machinery/door/airlock/multi_tile/glass/command{name = "Administration Offices"; req_access = list(); req_one_access = list(500,300,400)},/turf/simulated/floor/tiled,/area/site53/entrancezone/hallway)
 "of" = (/obj/structure/cable/green{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_x = 0; pixel_y = 0; req_access = list(301)},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/plating,/area/site53/entrancezone/substation)
 "og" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/plating,/area/site53/entrancezone/substation)
 "oh" = (/obj/structure/cable/green{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/site53/entrancezone/substation)

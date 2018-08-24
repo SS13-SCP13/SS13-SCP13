@@ -146,7 +146,7 @@
 
 /obj/structure/closet/secure_closet/mtf/commander
 	name = "MTF Commander Locker"
-	req_access = list(access_forensics_lockers)
+	req_access = list(access_mtflvl5)
 	icon_state = "cmlocked"
 	icon_closed = "cmunlocked"
 	icon_locked = "cmlocked"
