@@ -725,7 +725,7 @@
 "nW" = (/obj/machinery/light{dir = 4; icon_state = "tube1"; pixel_x = 12; pixel_y = 0},/turf/simulated/floor/tiled,/area/site53/uhcz/scp106containment)
 "nX" = (/obj/structure/table/steel_reinforced,/obj/item/device/camera,/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled,/area/site53/lhcz/scp049containment)
 "nY" = (/obj/structure/table/steel_reinforced,/obj/item/device/camera_film,/obj/item/device/camera_film,/turf/simulated/floor/tiled,/area/site53/lhcz/scp049containment)
-"nZ" = (/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/tiled,/area/site53/lhcz/scp049containment)
+"nZ" = (/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_x = 0; pixel_y = 24; req_access = list(201)},/turf/simulated/floor/tiled,/area/site53/lhcz/scp049containment)
 "oa" = (/obj/machinery/button/remote/blast_door{id = "scp0491"; name = "SCP-049-1 Containment Chamber Unlock"; pixel_x = 0; pixel_y = 32},/turf/simulated/floor/tiled,/area/site53/lhcz/scp049containment)
 "ob" = (/obj/machinery/door/airlock/vault{name = "Containment Chamber"; req_access = list(404)},/turf/simulated/floor/plating,/area/site53/uhcz/scp106containment)
 "oc" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled,/area/site53/uhcz/scp106containment)

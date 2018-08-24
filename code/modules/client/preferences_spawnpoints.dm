@@ -56,19 +56,6 @@ GLOBAL_VAR(spawntypes)
 /datum/spawnpoint/cryo
 	display_name = "Cryogenic Storage"
 	msg = "has woken up from cryogenics storage"
-	disallow_job = list(
-	"Cyborg",
-	"Class D",
-	"Assistant",
-	"Security Commander",
-	"Security Lieutenant",
-	"Security Officer",
-	"Junior Security Officer",
-	"Senior Scientist",
-	"Junior Scientist",
-	"Scientist",
-	"Research Director",
-	"Cell Guard")
 
 /datum/spawnpoint/cryo/New()
 	..()
@@ -86,29 +73,6 @@ GLOBAL_VAR(spawntypes)
 /datum/spawnpoint/lcz
 	display_name = "Light Containment Zone"
 	msg = "has entered the light containment zone"
-	restrict_job = list(
-	"Junior Scientist",
-	"Scientist",
-	"Senior Scientist",
-	"Research Director",
-	"Cell Guard")
-	disallow_job = list(
-	"Class D",
-	"Chief Engineer",
-	"Senior Engineer",
-	"Containment Engineer",
-	"Junior Engineer",
-	"Engineer",
-	"Security Commander",
-	"Security Lieutenant",
-	"Security Officer",
-	"Junior Security Officer",
-	"Chief Medical Officer",
-	"Surgeon",
-	"Virologist",
-	"Medical Doctor",
-	"Chemist"
-	)
 
 /datum/spawnpoint/lcz/New()
 	..()
