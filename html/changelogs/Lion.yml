@@ -49,3 +49,4 @@ changes:
   - imageadd: "Adds new medical decals."
   - bugfix: "Fixed leftover remains of sub-species clothing in lockers frequently used. Further issues should be reported."
   - bugfix: "Fixed wrong access requirements on welding and electrical lockers. Further oversights should be reported."
+  - bugfix: "Fix up wrong logo's."
