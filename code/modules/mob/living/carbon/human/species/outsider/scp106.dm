@@ -45,6 +45,6 @@
 		var/turf/T = step_rand(H)
 		H.Move(get_dir(H, T))
 	#else 
-		var/turf/T = step_rand(H)
-		H.Move(get_dir(H, T))
+	var/turf/T = step_rand(H)
+	H.Move(get_dir(H, T))
 	#endif
