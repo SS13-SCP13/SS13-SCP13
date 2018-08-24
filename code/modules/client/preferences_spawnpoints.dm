@@ -56,6 +56,8 @@ GLOBAL_VAR(spawntypes)
 /datum/spawnpoint/cryo
 	display_name = "Cryogenic Storage"
 	msg = "has woken up from cryogenics storage"
+	disallow_job = list(
+	"Class D")
 
 /datum/spawnpoint/cryo/New()
 	..()
