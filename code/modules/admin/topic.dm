@@ -26,7 +26,7 @@
 			return
 
 //		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed", "Thanks", "Guilty", "L: Xeno Quickstart Guide", "L: Marine quickstart guide", "L: Current Map", "A: No plasma regen", "A: Devour as Xeno", "J: Job bans", "E: Event in progress", "R: Radios", "D: Joining disabled", "M: Macros")
-		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed","Thanks!", "A: RUST Engine", "A: D-Class Riot", "A: D-Class Cells", "A: Directions/Lost", "A: Character setup", "LION ONLY: God damnit Cyclus!")
+		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed","Thanks!", "A: GitHub Issue", "A: RUST Engine", "A: D-Class Riot", "A: D-Class Cells", "A: Directions/Lost", "A: Character setup", "LION ONLY: God damnit Cyclus!")
 
 
 		var/msgplayer
@@ -39,6 +39,8 @@
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. The issue is already fixed.</b>"
 			if("Thanks!")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. Have a SCP day!</b>"
+			if("A: GitHub Issue")
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. Thanks for reporting this issue! Though, for maximum effectivity, please create an issue report on our GitHub: https://github.com/SS13-SCP13/SS13-SCP13/issues</b>"
 			if("A: RUST Engine")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. The RUST Engine can be set up by finding the placed manual in the chamber area's, or alternatively you can visit <a href='http://wiki.scp13.site/index.php?title=RUST_MK.3_Engine'>the wiki guide on this engine</a>.</b>"
 			if("A: D-Class Riot")
