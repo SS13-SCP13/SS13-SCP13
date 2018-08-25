@@ -125,6 +125,7 @@
 
 	New()
 		..()
+		new /obj/item/weapon/paper/scp/euclid/scp012(src)
 		new /obj/item/weapon/paper/scp/euclid/scp049(src)
 		new /obj/item/weapon/paper/scp/euclid/scp096(src)
 		new /obj/item/weapon/paper/scp/euclid/scp096/addendum1(src)

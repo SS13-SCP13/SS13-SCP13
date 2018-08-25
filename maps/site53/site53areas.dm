@@ -280,6 +280,12 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	turf_initializer = /decl/turf_initializer/maintenance
 
+/area/site53/engineering/maintenance/llczmaint
+	name = "\improper Lower Light Containment Maintenance Tunnels"
+	icon_state = "conference"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	turf_initializer = /decl/turf_initializer/maintenance
+
 /area/site53/llcz/scp513
 	name = "\improper SCP-513"
 	icon_state = "research"
@@ -526,13 +532,11 @@
 	name = "\improper HCZ Tram Station"
 	icon_state = "fpmaint"
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/uhcz/hallways
 	name = "\improper HCZ Hallways"
 	icon_state = "fpmaint"
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/uhcz/scp106maintlow
 	name = "\improper SCP-106 Lower Maintenance"

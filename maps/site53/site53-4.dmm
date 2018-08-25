@@ -121,7 +121,7 @@
 "cq" = (/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/wood,/area/site53/uez/sdoffice)
 "cr" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/wood,/area/site53/uez/sdoffice)
 "cs" = (/obj/structure/bed,/obj/structure/curtain/open/bed,/obj/item/weapon/bedsheet/purple,/turf/simulated/floor/carpet/purple,/area/site53/uez/sdoffice)
-"ct" = (/obj/structure/table/woodentable,/turf/simulated/floor/carpet/purple,/area/site53/uez/sdoffice)
+"ct" = (/obj/structure/table/woodentable,/obj/item/weapon/storage/secure/briefcase/nukedisk,/turf/simulated/floor/carpet/purple,/area/site53/uez/sdoffice)
 "cu" = (/obj/machinery/light{dir = 4; icon_state = "tube1"; pixel_x = 0},/turf/simulated/floor/wood,/area/site53/uez/sdoffice)
 "cv" = (/obj/item/modular_computer/console/preset/security,/obj/machinery/light{dir = 4; icon_state = "tube1"; pixel_x = 0},/turf/simulated/floor/wood,/area/site53/uez/sdoffice)
 "cw" = (/obj/item/modular_computer/console/preset/medical,/turf/simulated/floor/wood,/area/site53/uez/hopoffice)

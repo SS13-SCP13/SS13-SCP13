@@ -292,6 +292,24 @@ Despite the tragedy that SCP-682 had brought upon the facility, SCP-999 has not 
 
 // EUCLID
 
+/obj/item/weapon/paper/scp/euclid/scp012
+	name = "SCP-049"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-012</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+<b>Item #:</b> SCP-012
+<br>
+<b>Object Class:</b> Euclid
+<br>
+<b>Special Containment Procedures:</b> SCP-012 is to be kept in a darkened room at all times. If the object is exposed to light or seen by personnel using a light frequency other than infrared, remove personnel for mental health screening and immediate physical. Object is to be encased in an iron-shielded box, suspended from the ceiling with a minimum clearance of 2.5 m (8 ft) from the floor, walls, and any openings.
+<br>
+<b>Description:</b> SCP-012 was retrieved by Archaeologist K.M. Sandoval during the excavation of a northern Italian tomb destroyed in a recent storm. The object, a piece of handwritten musical score entitled "On Mount Golgotha", part of a larger set of sheet music, appears to be incomplete. The red/black ink, first thought to be some form of berry or natural dye ink, was later found to be human blood from multiple subjects. The first personnel to locate the sheet (Site 19 Special Salvage) had two (2) members descend into insanity, attempting to use their own blood to finish the composition, ultimately resulting in massive blood loss and internal trauma.
+
+Following initial investigations, multiple test subjects were allowed access to the score. In every case, the subjects mutilated themselves in order to use their own blood to finish the piece, resulting in subsequent symptoms of psychosis and massive trauma. Those subjects who managed to finish a section of the piece immediately committed suicide, declaring the piece to be "impossible to complete". Attempts to perform the music have resulted in a disagreeable cacophony, with each instrumental part having no correlation or harmony with the other instruments.
+"}
+
 /obj/item/weapon/paper/scp/euclid/scp049
 	name = "SCP-049"
 	info = {"
