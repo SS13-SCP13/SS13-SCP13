@@ -825,7 +825,7 @@
 "pS" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/door/blast/regular/open{dir = 1; icon_state = "pdoor0"; id = "prototype_chamber_blast2"},/obj/effect/wallframe_spawn/reinforced_phoron,/turf/simulated/floor/reinforced/airless,/area/vacant/prototype/engine)
 "pT" = (/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/plating,/area/vacant/prototype/engine)
 "pU" = (/obj/structure/cable/yellow{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/plating,/area/vacant/prototype/engine)
-"pV" = (/obj/structure/flora/pottedplant,/obj/effect/floor_decal/corner/yellow/three_quarters{icon_state = "corner_white_three_quarters"; dir = 1},/turf/unsimulated/floor{icon_state = "steel"},/area/site53/engineering/primaryhallway)
+"pV" = (/obj/structure/flora/pottedplant,/obj/effect/floor_decal/corner/yellow/three_quarters{icon_state = "corner_white_three_quarters"; dir = 1},/turf/simulated/floor/tiled,/area/site53/engineering/primaryhallway)
 "pW" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled,/area/site53/engineering/primaryhallway)
 "pX" = (/obj/structure/extinguisher_cabinet{pixel_y = 30},/obj/effect/floor_decal/corner/yellow{dir = 5},/turf/simulated/floor/tiled,/area/site53/engineering/primaryhallway)
 "pY" = (/obj/effect/floor_decal/industrial/warning{dir = 5},/turf/simulated/floor/reinforced/airless,/area/vacant/prototype/engine)
