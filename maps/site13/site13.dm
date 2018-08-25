@@ -1,3 +1,5 @@
+/* SITE 13 IS DEPRECATED UNTIL FURTHER NOTICE.
+
 #if !defined(using_map_DATUM)
 
 	#include "site13_announcements.dm"
@@ -34,7 +36,7 @@
 	#include "site13-5.dmm"
 	#include "site13-6.dmm"
 	#include "../../code/modules/lobby_music/Perdition.dm"
-	#include "../../code/modules/lobby_music/sm.dm"
+	#include "../../code/modules/lobby_music/hie.dm"
 	#include "../../code/modules/lobby_music/std.dm"
 
 
@@ -45,3 +47,4 @@
 	#warn A map has already been included, ignoring Site 13
 
 #endif
+*/

@@ -116,6 +116,10 @@
 			src << sound(null, channel = 012)
 			client.next_scp012_sound = -1
 
+  // SCP-049 stuff 
+	if (!isscp049(src) && !isscp049_1(src) && !isscp106(src) && !pestilence && prob(5) && prob(1)) // a 1 in 2,000 chance every 2 seconds = 66 minutes?
+		pestilence = TRUE
+
 	if(!handle_some_updates())
 		return											//We go ahead and process them 5 times for HUD images and other stuff though.
 

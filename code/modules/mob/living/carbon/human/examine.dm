@@ -41,7 +41,7 @@
 		// Just in case someone VVs the gender to something strange. It'll runtime anyway when it hits usages, better to CRASH() now with a helpful message.
 		CRASH("Gender datum was null; key was '[(skipjumpsuit && skipface) ? PLURAL : gender]'")
 
-	msg += "<EM>[src.name]</EM>"
+	msg += "<strong>[src.name]</strong>"
 
 	var/is_synth = isSynthetic()
 	if(!(skipjumpsuit && skipface))
