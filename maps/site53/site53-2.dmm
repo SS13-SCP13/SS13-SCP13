@@ -465,7 +465,7 @@
 "iW" = (/obj/structure/table/steel,/obj/effect/floor_decal/corner/yellow{dir = 5},/turf/simulated/floor/tiled,/area/site53/engineering/breakroom)
 "iX" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/structure/flora/pottedplant,/obj/machinery/light{icon_state = "tube1"; dir = 1; pixel_x = 0},/turf/simulated/floor/tiled,/area/site53/engineering/breakroom)
 "iY" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/alarm{frequency = 1439; pixel_y = 23; req_one_access = list(201)},/turf/simulated/floor/tiled,/area/site53/engineering/breakroom)
-"iZ" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/power/apc{icon_state = "apc0"; dir = 1},/turf/simulated/floor/tiled,/area/site53/engineering/breakroom)
+"iZ" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/power/apc{icon_state = "apc0"; dir = 1},/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 0},/turf/simulated/floor/tiled,/area/site53/engineering/breakroom)
 "ja" = (/obj/structure/closet/crate/bin,/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/effect/floor_decal/corner/yellow{icon_state = "corner_white"; dir = 6},/turf/simulated/floor/tiled,/area/site53/engineering/breakroom)
 "jb" = (/obj/structure/table/steel,/turf/simulated/floor/tiled,/area/site53/engineering/sleeproom)
 "jc" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/plating,/area/site53/engineering/maintenance/upperselfdestruct)
