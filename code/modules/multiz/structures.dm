@@ -67,7 +67,9 @@
 	var/obj/structure/ladder/target_ladder = getTargetLadder(M)
 	if(!target_ladder)
 		return
-	if(!M.Move(get_turf(src)))
+
+	// hacky istype() code to fix a mysterious bug with this and SCPs
+	if(!M.Move(get_turf(src)) && !isscp106(M) && !isscp049(M))
 		to_chat(M, "<span class='notice'>You fail to reach \the [src].</span>")
 		return
 

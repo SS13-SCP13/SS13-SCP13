@@ -99,6 +99,22 @@
 			src << sound(null, channel = 106)
 			client.next_scp106_sound = -1
 
+	// spooky SCP-012 ambience
+	if (client)
+
+		var/scp012_music = FALSE
+		for (var/scp012 in GLOB.scp012s)
+			var/atom/A = scp012
+			if (A != src && abs(x - A.x) <= 2 && abs(y - A.y) <= 2 && !abs(z - A.z))
+				scp012_music = TRUE
+				if (world.time >= client.next_scp012_sound)
+					src << sound('sound/scp/012.ogg', channel = 12, volume = 100)
+					client.next_scp012_sound = world.time + 230
+					break
+
+		if (!scp012_music && client.next_scp012_sound != -1)
+			src << sound(null, channel = 012)
+			client.next_scp012_sound = -1
 
 	if(!handle_some_updates())
 		return											//We go ahead and process them 5 times for HUD images and other stuff though.
