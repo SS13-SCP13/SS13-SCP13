@@ -36,7 +36,7 @@
 
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies"
-	req_access = list(access_engine_equip)
+	req_access = list(access_mtflvl2)
 	icon_state = "secureengelec1"
 	icon_closed = "secureengelec"
 	icon_locked = "secureengelec1"
@@ -45,7 +45,6 @@
 
 /obj/structure/closet/secure_closet/engineering_electrical/WillContain()
 	return list(
-		/obj/item/clothing/gloves/nabber = 2,
 		/obj/item/clothing/gloves/insulated = 3,
 		/obj/item/weapon/storage/toolbox/electrical = 3,
 		/obj/item/weapon/module/power_control = 3,
@@ -54,7 +53,7 @@
 
 /obj/structure/closet/secure_closet/engineering_welding
 	name = "welding supplies"
-	req_access = list(access_construction)
+	req_access = list(access_mtflvl2)
 	icon_state = "secureengweld1"
 	icon_closed = "secureengweld"
 	icon_locked = "secureengweld1"

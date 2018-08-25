@@ -184,3 +184,18 @@
 	hard_drive.store_file(new/datum/computer_file/program/comm())
 	hard_drive.store_file(new/datum/computer_file/program/camera_monitor())
 	hard_drive.store_file(new/datum/computer_file/program/email_client())
+
+/obj/item/modular_computer/console/preset/mtf/dassignments/install_default_hardware()
+	..()
+	nano_printer = new/obj/item/weapon/computer_hardware/nano_printer(src)
+	card_slot = new/obj/item/weapon/computer_hardware/card_slot(src)
+
+/obj/item/modular_computer/console/preset/mtf/dassignments/install_default_programs()
+	..()
+	hard_drive.store_file(new/datum/computer_file/program/chatclient())
+	hard_drive.store_file(new/datum/computer_file/program/card_mod())
+	hard_drive.store_file(new/datum/computer_file/program/camera_monitor())
+
+/obj/item/modular_computer/console/preset/mtf/camera/install_default_programs()
+	..()
+	hard_drive.store_file(new/datum/computer_file/program/camera_monitor())
