@@ -1,0 +1,24 @@
+################################
+# Valid Prefixes: 
+#   bugfix
+#   wip (For works in progress)
+#   tweak
+#   soundadd
+#   sounddel
+#   rscadd (general adding of nice things)
+#   rscdel (general deleting of nice things)
+#   imageadd
+#   imagedel
+#   maptweak
+#   spellcheck (typo fixes)
+#   experiment
+#################################
+
+author: Memeopolis
+delete-after: False
+
+changes: 
+  - rscadd: "Added SCP-012."
+  - bugfix: "Fixed SCP-049 & SCP-106 being unable to use ladders."
+  - tweak: "Made SCP-049-1 unable to speak."
+  - tweak: "Disabled buggy SCP-049 & SCP-106 AI."
