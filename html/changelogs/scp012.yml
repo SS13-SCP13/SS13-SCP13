@@ -15,7 +15,7 @@
 #################################
 
 author: Memeopolis
-delete-after: False
+delete-after: True
 
 changes: 
   - rscadd: "Added SCP-012."
