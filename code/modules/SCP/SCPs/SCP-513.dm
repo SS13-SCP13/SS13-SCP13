@@ -33,7 +33,7 @@
 	return ..()
 
 /obj/item/scp513/proc/ring(mob/living/user)
-	for(var/mob/living/carbon/M in hear(7, get_turf(src)))
+	for(var/mob/living/carbon/human/M in hear(7, get_turf(src)))
 		if(M.is_deaf() || istype(M.l_ear, /obj/item/clothing/ears/earmuffs) || istype(M.r_ear, /obj/item/clothing/ears/earmuffs))
 			continue
 		to_chat(M, "<span class='danger'><i>\The [src] rings, sending chills to your very bone.</i></span>")
