@@ -36,7 +36,7 @@
 	for(var/mob/living/carbon/M in hear(7, get_turf(src)))
 		to_chat(M, "<span class='danger'><i>\The [src] rings, sending chills to your very bone.</i></span>")
 		M << pick('sound/scp/spook/Bell2.ogg', 'sound/scp/spook/Bell3.ogg')
-		if(!(M in victims) && !M.is_deaf())
+		if(!(M in victims) && !M.is_deaf() && !if(istype(M.l_ear, /obj/item/clothing/ears/earmuffs) || istype(H.r_ear, /obj/item/clothing/ears/earmuffs)))
 			victims += M
 			braindamage_stage[M] = STAGE_WAIT
 			next_braindamage_stage[M] = world.time + rand(300, 420) //Funnily enough, 420 seconds is 7 minutes. Which makes for good weed jokes.
