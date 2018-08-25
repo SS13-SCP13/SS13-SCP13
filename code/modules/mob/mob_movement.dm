@@ -215,6 +215,11 @@
 	if(!mob.canmove)
 		return
 
+	// don't let a mob move out of range of scp012
+	if (ishuman(mob) && locate(/obj/item/paper/scp012) in view(2, src))
+		if (!locate(/obj/item/paper/scp012) in view(2, n))
+			return
+
 	if(isliving(mob))
 		var/mob/living/L = mob
 		if(L.incorporeal_move)//Move though walls
