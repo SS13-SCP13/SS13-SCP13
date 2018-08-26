@@ -122,7 +122,7 @@
 	icon_state = "mixed"
 	icon_closed = "mixed"
 
-/obj/structure/closet/site53/d_class/djcloset/WillContain()
+/obj/structure/closet/djcloset/WillContain()
 	return list(
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/head/soft/purple,
