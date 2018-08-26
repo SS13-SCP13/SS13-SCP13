@@ -58,7 +58,7 @@
 "bf" = (/obj/machinery/door/airlock/glass/freezer,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/site53/lowertrams/restaurantkitchenarea)
 "bg" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/material/kitchen/rollingpin,/turf/simulated/floor/tiled,/area/site53/lowertrams/restaurantkitchenarea)
 "bh" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,/obj/item/weapon/reagent_containers/food/condiment/small/sugar,/turf/simulated/floor/tiled,/area/site53/lowertrams/restaurantkitchenarea)
-"bi" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/reagent_containers/glass/beaker/large,/turf/simulated/floor/tiled,/area/site53/lowertrams/restaurantkitchenarea)
+"bi" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/reagent_containers/glass/beaker/large,/obj/machinery/microwave,/turf/simulated/floor/tiled,/area/site53/lowertrams/restaurantkitchenarea)
 "bj" = (/obj/machinery/light{icon_state = "tube1"; dir = 8; pixel_x = 0},/turf/simulated/floor/tiled,/area/site53/lowertrams/restaurantkitchenarea)
 "bk" = (/obj/structure/closet/secure_closet/freezer/meat,/turf/simulated/floor/tiled,/area/site53/lowertrams/restaurantkitchenarea)
 "bl" = (/obj/structure/closet/secure_closet/freezer/kitchen{req_access = list()},/obj/item/weapon/reagent_containers/food/condiment/enzyme,/turf/simulated/floor/tiled,/area/site53/lowertrams/restaurantkitchenarea)
