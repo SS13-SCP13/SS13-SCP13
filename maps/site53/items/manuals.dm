@@ -293,7 +293,7 @@ Despite the tragedy that SCP-682 had brought upon the facility, SCP-999 has not 
 // EUCLID
 
 /obj/item/weapon/paper/scp/euclid/scp012
-	name = "SCP-049"
+	name = "SCP-012"
 	info = {"
 	<tt><center><b><font color='orange'>EUCLID: SCP-012</font></b>
 	<h3>FOUNDATION RESEARCH DIVISION</h3>
@@ -443,46 +443,29 @@ The reddish brown substance on the floor is a combination of feces and blood. Or
 	<h3>FOUNDATION RESEARCH DIVISION</h3>
 	</center>
 <br>
-</b>Item #:</b> SCP-500
+<b>Item #:</b> SCP-513
 <br>
-<b>Object Class:</b> Safe
+<b>Object Class:</b> Euclid
 <br>
-<b>Special Containment Procedures:</b> SCP-500 must be stored in a cool and dry place away from bright light. SCP-500 is only allowed to be accessed by personnel with level 4 security clearance to prevent misapplication.
+<b>Special Containment Procedures:</b> SCP-513 is to be suspended in a one cubic meter block of gelatin and contained within a soundproofed, climate-controlled cell. The gelatin must be inspected daily for any degradation or loss of integrity. An emergency inspection will be carried out immediately following any earthquake, explosion, or sonic event grade 2 or higher. Personnel performing the inspection are to wear earplugs and active noise-canceling earmuffs at all times while inside SCP-513’s cell.
 <br>
-<b>Description:</b> SCP-500 is a small plastic can which at the time of writing contains forty-seven (47) red pills. One pill, when taken orally, effectively cures the subject of all diseases within two hours, exact time depending on the severity and amount of the subject's conditions. Despite extensive trials, all attempts at synthesizing more of what is thought to be the active ingredient of the pills have been unsuccessful.
+If the gelatin cube shows any signs of degradation (such as rips, tears, splits, liquefaction, or mold), SCP-513 is to be immediately removed and suspended within a replacement cube by a team of surgically deafened Class-D personnel. No other personnel are to enter the cell during this procedure.
+
+Any sentient beings exposed to SCP-513 are to be monitored by at least two security personnel at all times. Under absolutely no circumstances may exposure victims be administered sedatives or allowed to fall unconscious. Any victim who does fall unconscious is to be terminated immediately.
+
+Class-D personnel are to be terminated at the first sign of mental degradation. All other exposure victims may be terminated at their request.
+
+If possible, SCP-513-1 is to be apprehended on sight.
 <br>
-<b>Note From Dr. Klein:</b> SCP personnel below Level 3 are now banned from handling SCP-500. This is not to be used to cure a hangover. Get AIDS and then ask permission.
-<br>
-<br>
-<b>Request 500-1774-k</b> Dr. --REDACTED-- has requested one (1) SCP-500 pill for testing with --REDACTED--. Request has been approved.
-<br>
-<b>Request 500-1862-b</b> Dr. Gears has requested one (1) SCP-500 pill for testing in --REDACTED--. Request has been approved.
-<br>
-<b>Request 500-2354-f</b> Dr. ¦¦¦¦¦¦¦¦¦ has requested one (1) SCP-500 pill for testing with --REDACTED--. Request denied.
-<br>
-<b>Request 500-5667-e</b> Dr. Gibbons has requested two (2) pills of SCP-500 for his personal medkit. Request denied.
-<br>
-<b>Addendum 500-1:</b> Two (2) pills have been authorized for use with --REDACTED--. As a result of conducting a series of tests on Class D subjects infected with SCP-008, it appears that even in the most advanced stages of the disease one whole pill will accomplish full recovery. Number of pills is fifty-seven (57) at the time of writing. - Dr. --REDACTED--
-<br>
-<b>Addendum 500-2:</b> One (1) pill has been authorized for use with --REDACTED--. SCP-500 was tested on Subject 409-D5 who was exposed to the effects of --REDACTED--. Complete recovery accomplished. See Addendum 409-1. Number of pills is fifty-six (56) at the time of writing. - Dr. --REDACTED--
-<br>
-<b>Addendum 500-4:</b> Request 500-1774-k approved. Five (5) pills have been used in experimentation with --REDACTED--. It has been determined that SCP-038 is capable of duplicating SCP-500; however, the success of the duplicated pills is limited. The duplicated pills are only effective in curing the subject 30% of the time, with chance of successful healing dropping as time since cloned increases. In 60% of the cases where the infection is permanent, symptoms of infection remain, though further infestation is neutralized. Repeated dosing with SCP-038 cloned pills is recommended for all personnel suffering from incurable conditions, as supply of SCP-500 remains extremely limited. All five (5) used samples of SCP-500 were returned. Number of pills is fifty-six (56) at the time of writing.
-<br>
-<b>Addendum 500-5:</b> During experiments with SCP-038, one (1) pill was stolen by personnel D-¦¦¦¦¦¦ to, reportedly, "cure a hangover". Stricter controls for samples of SCP-500 given to other projects is suggested. Personnel D-¦¦¦¦¦¦ has been terminated. Number of pills is fifty-five (55) at the time of writing.
-<br>
-<b>Addendum 500-6:</b> One (1) pill has been used with --REDACTED--. Number of pills is fifty-four (54) at the time of writing.
-<br>
-<b>Addendum 500-7:</b> One (1) pill has been used for --REDACTED--. Number of pills is fifty-three (53) at the time of writing.
-<br>
-<b>Addendum 500-8:</b> One (1) pill has been used with --REDACTED--. Number of pills is fifty-two (52) at the time of writing.
-<br>
-<b>Addendum 500-9:</b> Request 500-1862-b approved. One (1) pill of SCP-500 is placed within --REDACTED-- with the setting at "Fine". Resulting object classified as --REDACTED--. Number of pills is fifty-one (51) at the time of writing.
-<br>
-<b>Addendum 500-10:</b> Five (5) pills have been taken for the --REDACTED-- although only two (2) were used. The remaining three (3) will be returned shortly. Upon return, number of pills will be forty-nine (49).
-<br>
-<b>Addendum 500-11:</b> Two (2) pills have been used for Experiment 217-¦¦¦¦¦-¦¦¦¦¦. Number of pills is forty-seven (47) at the time of writing.
-<br>
-<b>Addendum 500-12:</b> Request to have SCP-500 investigated for mental compulsion leading to obsessive fixation denied for triviality.
+<b>Description:</b> Physically, SCP-513 is an unremarkable, rusty cowbell. No marks or engravings are visible on its surface due to the large amount of corrosion. Attempts to remove the rust chemically or mechanically have had no success.
+
+SCP-513 was recovered by Agent ¦¦¦¦¦¦ while carrying out Containment Reestablishment Procedure Mu at Site-¦¦. SCP-513’s clapper was firmly held in place by several strips of duct tape. A single scrap of paper was found along with SCP-513 (see Addendum).
+
+Any noise produced by SCP-513 immediately induces strong anxiety in all sentient beings who hear it, regardless of their previous mental status. Exposure victims report feelings of being watched by an unseen entity and present elevated heart rates and blood pressure. Roughly one hour after exposure, exposure victims begin to catch glimpses of SCP-513-1 when opening doors, walking past mirrors, turning their heads, or performing any other actions that result in a sudden change in visual perception. Upon being sighted, SCP-513-1 reportedly turns away and runs out of view before disappearing without a trace. Questioning of bystanders indicates that SCP-513-1 is invisible to those who have not been exposed to SCP-513.
+
+Sightings of SCP-513-1 reoccur every 14 to 237 minutes. This “stalking” behavior inevitably causes extreme sleep deprivation, as victims are frequently disturbed by SCP-513-1’s presence in their quarters. Victims able to fall asleep before SCP-513-1's appearance report being physically assaulted by it. Upon the victim's awakening, SCP-513-1 flees as usual (see Experiment Log 513). This sleep deprivation, along with the mental stress caused by SCP-513-1's behavior, invariably induces paranoia, aggression, hypervigilance, and depression. All test cases but one have ended with the test subject’s suicide.
+
+Descriptions of SCP-513-1's appearance are largely unreliable. Test subjects are unable to provide complete accounts of sightings due to their exhaustion, degraded mental health, and disruptive hypervigilance. However, all interrogations thus far indicate that SCP-513-1 is a tall, emaciated humanoid with abnormally large hands.
 "}
 // EUCLID ADDENDUMS
 

@@ -35,3 +35,10 @@ delete-after: True
 changes: 
   - rscadd: "Re-added SCP-113, gender changing rock."
   - maptweak: "Minor updates to the map meant to improve consistency."
+  - bugfix: "Fixes defibrillators spawning unloaded."
+  - bugfix: "Added water tank and bucket to hydroponics."
+  - bugfix: "Fixes #204"
+  - bugfix: "Fixes #205"
+  - bugfix: "Fixes #201"
+  - maptweak: "Adds #199"
+  
