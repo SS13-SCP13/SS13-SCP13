@@ -39,6 +39,8 @@ changes:
   - rscadd: "New job: Bartender/Waiter."
   - rscadd: "SCP-895 now has functional camera's."
   - rscadd: "Engineering now has functional camera's."
+  - rscdel: "Removes Pumpkin seeds from Hydroseeds."
+  - rscdel: "Removes Ambrosia Vulgaris seeds from Hydroseeds."
   - soundadd: "New roundstart sound."
   - soundadd: "New command report sound."
   - maptweak: "Fixed SCP-106 being able to escape containment easily, even with containment up."
