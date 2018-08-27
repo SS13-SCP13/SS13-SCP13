@@ -222,14 +222,14 @@
 
 /datum/job/ltofficer
 	has_email = TRUE
-	title = "Guard Lieutenant"
+	title = "Zone Commander"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
-	supervisors = "the Security Commander"
+	total_positions = 3
+	spawn_positions = 3
+	supervisors = "the Guard Commander"
+	duties = "<big><b>As the Zone Commander, you're the right hand of the Guard Commander, and in charge of a specific zone. In this zone, you have full command of the guards stationed there in every situation, except Code Red or higher. You should ask the Guard Commander which zone you're assigned to. You won't have command over the Cell Guards or Overseer.</span>"
 	economic_modifier = 4
-	alt_titles = list("Senior Agent")
 	minimal_player_age = 10
 	ideal_character_age = 45
 	alt_titles = null
@@ -254,7 +254,7 @@
 	department_flag = SEC
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Security Commander"
+	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
 	alt_titles = list("Agent")
 	minimal_player_age = 5
@@ -281,7 +281,7 @@
 	department_flag = SEC
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Security Commander"
+	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
 	alt_titles = list("Junior Agent")
 	minimal_player_age = 0

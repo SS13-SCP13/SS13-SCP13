@@ -76,7 +76,7 @@
 	l_pocket = /obj/item/device/radio
 
 /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
-	name = OUTFIT_JOB_NAME("Guard Lieutenant")
+	name = OUTFIT_JOB_NAME("Zone Commander")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
