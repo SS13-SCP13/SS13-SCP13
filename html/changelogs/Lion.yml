@@ -41,3 +41,4 @@ changes:
   - maptweak: "Fixed mismatching wall types in D-Class area."
   - maptweak: "Enhances security at the D-Class assignments with line shutters."
   - bugfix: "Fixed a HCZ hallway being unlit."
+  - experiment: "Experimental change of sounds for blastdoors."
