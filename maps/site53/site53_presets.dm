@@ -1,15 +1,19 @@
-var/const/NETWORK_895	      = "SCP-895 CCTV Network"
+var/const/NETWORK_895			= "SCP-895 CCTV Network"
+var/const/NETWORK_ENGINE		= "Engineering Network"
 
 /datum/map/site53/get_network_access(var/network)
 	switch(network)
 		if(NETWORK_895)
 			return list(access_sciencelvl4, access_mtflvl4)
+		if(NETWORK_ENGINEERING)
+			return access_mtflvl1
 	return get_shared_network_access(network) || ..()
 
 /datum/map/site53
 	// Networks that will show up as options in the camera monitor program
 	station_networks = list(
-		NETWORK_895
+		NETWORK_895,
+		NETWORK_ENGINE
 	)
 
 //
@@ -20,13 +24,8 @@ var/const/NETWORK_895	      = "SCP-895 CCTV Network"
 /obj/machinery/camera/network/scp895
 	network = list(NETWORK_895)
 
-// Motion
-/obj/machinery/camera/motion/engineering_outpost
-	network = list(NETWORK_ENGINEERING_OUTPOST)
-
-// All Upgrades
-/obj/machinery/camera/all/command
-	network = list(NETWORK_COMMAND)
+/obj/machinery/camera/network/engine
+	network = list(NETWORK_ENGINE)
 
 // Substation SMES
 /obj/machinery/power/smes/buildable/preset/ds90/substation/configure_and_install_coils()
@@ -75,3 +74,8 @@ var/const/NETWORK_895	      = "SCP-895 CCTV Network"
 	_input_on = TRUE
 	_output_on = TRUE
 	_fully_charged = TRUE
+
+/datum/map/proc/get_shared_network_access(var/network)
+	switch(network)
+		if(NETWORK_ENGINE)
+			return access_mtflvl1

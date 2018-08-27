@@ -164,8 +164,8 @@
 	back = null
 	l_ear = null
 
-/decl/hierarchy/outfit/job/site90/crew/civ/chef
-	name = OUTFIT_JOB_NAME("Chef")
+/decl/hierarchy/outfit/job/site90/crew/civ/bartender
+	name = OUTFIT_JOB_NAME("Bartender")
 	uniform = /obj/item/clothing/under/suit_jacket/tan
 	shoes = /obj/item/clothing/shoes/laceup
 	l_pocket = /obj/item/device/radio
