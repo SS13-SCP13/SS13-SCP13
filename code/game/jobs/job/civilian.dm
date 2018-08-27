@@ -2,7 +2,7 @@
 /*
 /datum/job/bartender
 	title = "Bartender"
-	department = "Service"
+	department = "Civilian"
 	department_flag = SRV
 	total_positions = 1
 	spawn_positions = 1
@@ -14,7 +14,7 @@
 
 /datum/job/chef
 	title = "Chef"
-	department = "Service"
+	department = "Civilian"
 	department_flag = SRV
 	total_positions = 2
 	spawn_positions = 2

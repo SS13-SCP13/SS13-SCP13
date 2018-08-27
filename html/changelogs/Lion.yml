@@ -44,6 +44,7 @@ changes:
   - tweak: "Renamed Guard Lieutenant to Zone Commander."
   - tweak: "Renamed Cell Guard Lieutenant to Cell Warden."
   - tweak: "Reduced the amount of Zone Commanders to three."
+  - tweak: "Altered selection color for Logistics."
   - soundadd: "New roundstart sound."
   - soundadd: "New command report sound."
   - maptweak: "Fixed SCP-106 being able to escape containment easily, even with containment up."

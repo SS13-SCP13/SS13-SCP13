@@ -670,7 +670,7 @@
 	department_flag = SUP
 	total_positions = 0
 	spawn_positions = 0
-	selection_color = "#515151"
+	selection_color = "B4802B"
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
 	ideal_character_age = 24
@@ -716,6 +716,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Head of Personnel"
+	selection_color = "#515151"
 	ideal_character_age = 24
 	alt_titles = list("Cook")
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/chef
@@ -737,6 +738,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Head of Personnel"
+	selection_color = "#515151"
 	ideal_character_age = 24
 	alt_titles = list("Waiter")
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/bartender
