@@ -146,7 +146,7 @@
 
 /datum/job/cellguardlieutenant
 	has_email = TRUE
-	title = "Cell Guard Lieutenant"
+	title = "Cell Overseer"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 1

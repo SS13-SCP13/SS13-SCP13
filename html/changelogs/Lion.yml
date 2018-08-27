@@ -42,6 +42,7 @@ changes:
   - rscdel: "Removes Pumpkin seeds from Hydroseeds."
   - rscdel: "Removes Ambrosia Vulgaris seeds from Hydroseeds."
   - tweak: "Renamed Guard Lieutenant to Zone Commander."
+  - tweak: "Renamed Cell Guard Lieutenant to Cell Overseer."
   - soundadd: "New roundstart sound."
   - soundadd: "New command report sound."
   - maptweak: "Fixed SCP-106 being able to escape containment easily, even with containment up."

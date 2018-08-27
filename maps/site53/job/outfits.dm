@@ -52,7 +52,7 @@
 // Cell Guards
 
 /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
-	name = OUTFIT_JOB_NAME("Cell Guard Lieutenant")
+	name = OUTFIT_JOB_NAME("Cell Overseer")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
