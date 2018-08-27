@@ -33,5 +33,11 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
+  - rscadd: "Added body disposal in SCP-012."
+  - rscadd: "Added body disposal in D-Class Cells."
+  - soundadd: "New roundstart sound."
+  - soundadd: "New command report sound."
   - maptweak: "Fixed SCP-106 being able to escape containment easily, even with containment up."
+  - maptweak: "Fixed mismatching wall types in D-Class area."
   - maptweak: "Enhances security at the D-Class assignments with line shutters."
+  - bugfix: "Fixed a HCZ hallway being unlit."

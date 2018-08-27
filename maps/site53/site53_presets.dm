@@ -1,3 +1,11 @@
+var/const/NETWORK_895	      = "SCP-895 CCTV Network"
+
+/datum/map/site53/get_network_access(var/network)
+	switch(network)
+		if(NETWORK_895)
+			return list(access_sciencelvl4, access_mtflvl4)
+	return get_shared_network_access(network) || ..()
+
 // Substation SMES
 /obj/machinery/power/smes/buildable/preset/ds90/substation/configure_and_install_coils()
 	component_parts += new /obj/item/weapon/smes_coil(src)
