@@ -152,9 +152,28 @@
 	shoes = /obj/item/clothing/shoes/workboots
 	l_pocket = /obj/item/device/radio
 	id_type = /obj/item/weapon/card/id/sciencelvl1
+	back = null
+	l_ear = null
 
+/decl/hierarchy/outfit/job/site90/crew/civ/chef
+	name = OUTFIT_JOB_NAME("Chef")
+	uniform = /obj/item/clothing/under/color/white
+	shoes = /obj/item/clothing/shoes/white
+	l_pocket = /obj/item/device/radio
+	id_type = /obj/item/weapon/card/id/sciencelvl1
+	back = null
+	l_ear = null
 
+/decl/hierarchy/outfit/job/site90/crew/civ/chef
+	name = OUTFIT_JOB_NAME("Chef")
+	uniform = /obj/item/clothing/under/suit_jacket/tan
+	shoes = /obj/item/clothing/shoes/laceup
+	l_pocket = /obj/item/device/radio
+	id_type = /obj/item/weapon/card/id/sciencelvl1
+	back = null
+	l_ear = null
 
+// ENGINEERING STUFF
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	name = OUTFIT_JOB_NAME("Junior Engineer")

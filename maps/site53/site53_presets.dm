@@ -6,6 +6,28 @@ var/const/NETWORK_895	      = "SCP-895 CCTV Network"
 			return list(access_sciencelvl4, access_mtflvl4)
 	return get_shared_network_access(network) || ..()
 
+/datum/map/site53
+	// Networks that will show up as options in the camera monitor program
+	station_networks = list(
+		NETWORK_895
+	)
+
+//
+// Cameras
+//
+
+// Networks
+/obj/machinery/camera/network/scp895
+	network = list(NETWORK_895)
+
+// Motion
+/obj/machinery/camera/motion/engineering_outpost
+	network = list(NETWORK_ENGINEERING_OUTPOST)
+
+// All Upgrades
+/obj/machinery/camera/all/command
+	network = list(NETWORK_COMMAND)
+
 // Substation SMES
 /obj/machinery/power/smes/buildable/preset/ds90/substation/configure_and_install_coils()
 	component_parts += new /obj/item/weapon/smes_coil(src)

@@ -760,3 +760,13 @@
 	name = "\improper HCZ Checkpoint"
 	icon_state = "checkpoint"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/lhcz/scp895
+	name = "\improper Lower SCP-895"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/uhcz/scp895
+	name = "\improper Upper SCP-895"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
