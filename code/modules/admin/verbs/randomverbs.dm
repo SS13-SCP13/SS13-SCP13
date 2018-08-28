@@ -879,8 +879,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			for(var/obj/item/clothing/under/X in M)
 				qdel(X)
 			for(var/obj/item/W in M)
-            M.drop_from_inventory(W)
-            W.loc = K
+            	M.drop_from_inventory(W)
+            	W.loc = K
 
 			var/obj/structure/closet/crate/secure/K = new /obj/structure/closet/crate/secure/(M.loc)
 			K.name = (M.real_name + " - Cryogenics Crate")
