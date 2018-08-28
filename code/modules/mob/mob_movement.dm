@@ -216,7 +216,7 @@
 		return
 
 	// don't let a mob move out of range of scp012
-	if (ishuman(mob) && locate(/obj/item/paper/scp012) in view(2, src))
+	if (ishuman(mob) && mob.stat == CONSCIOUS && locate(/obj/item/paper/scp012) in view(2, mob))
 		if (!locate(/obj/item/paper/scp012) in view(2, n))
 			return
 
