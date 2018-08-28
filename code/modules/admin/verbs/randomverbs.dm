@@ -864,36 +864,36 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!istype(M))
 		alert("Cannot cryo a ghost")
 		return
+		
+	var/confirm = alert(src, "You will be removing [M] from the round, are you sure?", "Message", "Yes", "No")
+	if(confirm != "Yes")
+		return
+	if (usr.client)
+		if(usr.client.holder)
+			var/job = M.mind.assigned_role.title
 
-	if(usr)
-		var/confirm = alert(src, "You will be removing [M] from the round, are you sure?", "Message", "Yes", "No")
-		if(confirm != "Yes")
-			return
-		if (usr.client)
-			if(usr.client.holder)
-				var/job = M.mind.assigned_role
+			for(var/obj/item/weapon/card/id/Z in M)
+				qdel(Z)
+			for(var/obj/item/device/pda/Y in M)
+				qdel(Y)
+			for(var/obj/item/clothing/under/X in M)
+				qdel(X)
+			for(var/obj/item/W in M)
+            M.drop_from_inventory(W)
+            W.loc = K
 
-				for(var/obj/item/weapon/card/id/Z in M)
-					del(Z)
-				for(var/obj/item/device/pda/Y in M)
-					del(Y)
-				for(var/obj/item/clothing/under/X in M)
-					del(X)
-				for(var/obj/item/W in M)
-					M.drop_from_inventory(W)
-
-				var/obj/structure/closet/crate/secure/K = new /obj/structure/closet/crate/secure/(M.loc)
-				K.name = (M.real_name + " - Cryogenics Crate")
-				K.health = 50
+			var/obj/structure/closet/crate/secure/K = new /obj/structure/closet/crate/secure/(M.loc)
+			K.name = (M.real_name + " - Cryogenics Crate")
+			K.health = 50
 				
-				job_master.FreeRole(job)
+			job_master.FreeRole(job)
 
-				message_admins("\blue [key_name_admin(usr)] has admin cryoed [key_name(M)]")
-				log_admin("[key_name(usr)] admin cryoed [key_name(M)]")
+			message_admins("\blue [key_name_admin(usr)] has admin cryoed [key_name(M)]")
+			log_admin("[key_name(usr)] admin cryoed [key_name(M)]")
 
-				// Delete the mob.
-				//This should guarantee that ghosts don't spawn.
-				M.ckey = null
-				del(M)
-				M = null
-		return	
+			// Delete the mob.
+			//This should guarantee that ghosts don't spawn.
+			M.key = null
+			del(M)
+			M = null
+	return	
