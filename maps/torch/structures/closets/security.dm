@@ -226,7 +226,7 @@
 	)
 
 /obj/structure/closet/secure_closet/mtf/co
-	name = "Guard CO Locker"
+	name = "Zone Commander Locker"
 //	req_access = list(access_forensics_lockers)
 	icon_state = "colocked"
 	icon_closed = "counlocked"
