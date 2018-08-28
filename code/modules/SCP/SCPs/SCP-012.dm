@@ -28,7 +28,7 @@ GLOBAL_LIST_EMPTY(scp012s)
 	++ticks
 
 	// find a victim in case the last one is gone
-	var/affecting = null
+	var/mob/living/carbon/human/affecting = null
 	for (var/mob/living/carbon/human/H in shuffle(view(2, src)))
 		if (H.stat == CONSCIOUS)
 			affecting = H
