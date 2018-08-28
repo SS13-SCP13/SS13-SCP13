@@ -175,6 +175,7 @@
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
+		/obj/item/clothing/accessory/storage/black_vest,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
 	)
@@ -194,6 +195,7 @@
 		/obj/item/clothing/head/helmet/bgtactical,
 		/obj/item/clothing/suit/armor/vest/bgguard,
 		/obj/item/weapon/storage/belt/security,
+		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/weapon/gun/projectile/pistol,
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/weapon/melee/telebaton,
@@ -220,6 +222,7 @@
 		/obj/item/weapon/gun/projectile/pistol,
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/weapon/melee/classic_baton,
+		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/weapon/handcuffs,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
@@ -240,6 +243,7 @@
 		/obj/item/clothing/head/helmet/bgtactical,
 		/obj/item/clothing/suit/armor/vest/bgguard,
 		/obj/item/weapon/storage/belt/security,
+		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/weapon/gun/projectile/pistol,
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/weapon/melee/classic_baton,
