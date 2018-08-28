@@ -853,3 +853,89 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		to_chat(usr, "Random events disabled")
 		message_admins("Admin [key_name_admin(usr)] has disabled random events.", 1)
 	feedback_add_details("admin_verb","TRE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	
+	
+/client/proc/cmd_admin_cryo(mob/living/M as mob in SSmobs.mob_list)
+	set category = "Special Verbs"	
+	set name = "Admin Cryo"
+	if(!check_rights(R_SERVER))
+		src << "Only administrators may use this command."	
+		return
+	if(!istype(M))
+		alert("Cannot cryo a ghost")
+		return
+
+	if(usr)
+		var/confirm = alert(src, "You will be removing [M] from the round, are you sure?", "Message", "Yes", "No")
+		if(confirm != "Yes")
+			return
+		if (usr.client)
+			if(usr.client.holder)
+				var/job = M.mind.assigned_role
+
+				for(var/obj/item/weapon/card/id/Z in M)
+					del(Z)
+				for(var/obj/item/device/pda/Y in M)
+					del(Y)
+				for(var/obj/item/clothing/under/X in M)
+					del(X)
+				for(var/obj/item/W in M)
+					M.drop_from_inventory(W)
+
+				var/obj/structure/closet/crate/secure/K = new /obj/structure/closet/crate/secure/(M.loc)
+				K.name = (M.real_name + " - Cryogenics Crate")
+				K.health = 50
+				
+				job_master.FreeRole(job)
+
+				message_admins("\blue [key_name_admin(usr)] has admin cryoed [key_name(M)]")
+				log_admin("[key_name(usr)] admin cryoed [key_name(M)]")
+
+				// Delete the mob.
+				//This should guarantee that ghosts don't spawn.
+				M.ckey = null
+				del(M)
+				M = null
+		return	
+/client/proc/cmd_admin_cryo(mob/living/M as mob in SSmobs.mob_list)
+	set category = "Special Verbs"	
+	set name = "Admin Cryo"
+	if(!check_rights(R_SERVER))
+		src << "Only administrators may use this command."	
+		return
+	if(!istype(M))
+		alert("Cannot cryo a ghost")
+		return
+
+	if(usr)
+		var/confirm = alert(src, "You will be removing [M] from the round, are you sure?", "Message", "Yes", "No")
+		if(confirm != "Yes")
+			return
+		if (usr.client)
+			if(usr.client.holder)
+				var/job = M.mind.assigned_role
+
+				for(var/obj/item/weapon/card/id/Z in M)
+					del(Z)
+				for(var/obj/item/device/pda/Y in M)
+					del(Y)
+				for(var/obj/item/clothing/under/X in M)
+					del(X)
+				for(var/obj/item/W in M)
+					M.drop_from_inventory(W)
+
+				var/obj/structure/closet/crate/secure/K = new /obj/structure/closet/crate/secure/(M.loc)
+				K.name = (M.real_name + " - Cryogenics Crate")
+				K.health = 50
+				
+				job_master.FreeRole(job)
+
+				message_admins("\blue [key_name_admin(usr)] has admin cryoed [key_name(M)]")
+				log_admin("[key_name(usr)] admin cryoed [key_name(M)]")
+
+				// Delete the mob.
+				//This should guarantee that ghosts don't spawn.
+				M.ckey = null
+				del(M)
+				M = null
+		return
