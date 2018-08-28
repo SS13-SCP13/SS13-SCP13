@@ -158,7 +158,7 @@
 // MTF LOCKERS
 
 /obj/structure/closet/secure_closet/mtf/enlisted
-	name = "MTF Enlisted Locker"
+	name = "Guard Enlisted Locker"
 //	req_access = list(access_forensics_lockers)
 	icon_state = "enlistedlocked"
 	icon_closed = "enlistedunlocked"
@@ -180,7 +180,7 @@
 	)
 
 /obj/structure/closet/secure_closet/mtf/commander
-	name = "MTF Commander Locker"
+	name = "Guard Commander Locker"
 //	req_access = list(access_forensics_lockers)
 	icon_state = "cmlocked"
 	icon_closed = "cmunlocked"
@@ -203,7 +203,7 @@
 	)
 
 /obj/structure/closet/secure_closet/mtf/nco
-	name = "MTF NCO Locker"
+	name = "Guard NCO Locker"
 //	req_access = list(access_forensics_lockers)
 	icon_state = "nlocked"
 	icon_closed = "nunlocked"
@@ -226,7 +226,7 @@
 	)
 
 /obj/structure/closet/secure_closet/mtf/co
-	name = "MTF CO Locker"
+	name = "Guard CO Locker"
 //	req_access = list(access_forensics_lockers)
 	icon_state = "colocked"
 	icon_closed = "counlocked"
