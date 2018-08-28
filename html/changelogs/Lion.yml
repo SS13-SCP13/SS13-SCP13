@@ -54,6 +54,8 @@ changes:
   - maptweak: "Minor overhaul to trams."
   - maptweak: "Added missing wall decals in Engine Room."
   - maptweak: "Fix incorrect window usage Engineering."
+  - maptweak: "Removed access requirements to HCZ hallway doors."
+  - maptweak: "Added access requirements to HCZ Checkpoint buttons."
   - bugfix: "Fixed a HCZ hallway being unlit."
   - bugfix: "Fixed issue with D-Class mining area being depressurized."
   - experiment: "Experimental change of sounds for blastdoors."
