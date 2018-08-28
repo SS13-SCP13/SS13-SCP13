@@ -52,6 +52,7 @@ changes:
   - maptweak: "Enhances security at the D-Class assignments with line shutters."
   - maptweak: "Significantly extended the mining zone again."
   - maptweak: "Minor overhaul to trams."
+  - maptweak: "Added missing wall decals in Engine Room."
   - bugfix: "Fixed a HCZ hallway being unlit."
   - bugfix: "Fixed issue with D-Class mining area being depressurized."
   - experiment: "Experimental change of sounds for blastdoors."
