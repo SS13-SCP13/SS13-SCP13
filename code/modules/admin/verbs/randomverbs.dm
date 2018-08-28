@@ -884,7 +884,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			K.health = 50
 			for(var/obj/item/W in M)
 			M.drop_from_inventory(W)
-            W.loc = K
+            	W.loc = K
 
 				
 			job_master.FreeRole(job)
