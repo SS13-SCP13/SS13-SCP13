@@ -216,7 +216,7 @@
 
 /obj/item/weapon/card/id/seclvl2
 	name = "level five security keycard"
-	desc = "A dark purple keycard. Looks important."
+	desc = "A dark purple keycard. Looks important. The person wearing it, not at all."
 	icon_state = "securitylvl2"
 	item_state = "Sec_ID2"
 	job_access_type = /datum/job/ncoofficer
@@ -226,7 +226,7 @@
 	desc = "A dark blue keycard. Looks important. The person wearing it not so much."
 	icon_state = "securitylvl3"
 	item_state = "Sec_ID3"
-//	job_access_type = /datum/job/hos
+	job_access_type = /datum/job/ncoofficer
 
 /obj/item/weapon/card/id/seclvl4
 	name = "level five security keycard"
