@@ -305,10 +305,19 @@
 	back = null
 
 /decl/hierarchy/outfit/job/ds90/medical/surgeon
-	name = OUTFIT_JOB_NAME("Virologist")
+	name = OUTFIT_JOB_NAME("Surgeon")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/green
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	id_type = /obj/item/weapon/card/id/seclvl2
+	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
+
+/decl/hierarchy/outfit/job/ds90/medical/emt
+	name = OUTFIT_JOB_NAME("Emergency Medical Technician")
+	uniform = /obj/item/clothing/under/rank/medical/scrubs/black
+	shoes = /obj/item/clothing/shoes/white
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
 	l_ear = null
