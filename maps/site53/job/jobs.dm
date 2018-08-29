@@ -89,7 +89,7 @@
 /datum/job/commsofficer
 	has_email = TRUE
 	title = "Communications Officer"
-	supervisors = "the Security Commander and Site Director"
+	supervisors = "the Security Commander"
 	department = "Command"
 	department_flag = COM
 	total_positions = 0
@@ -127,7 +127,7 @@
 /datum/job/cmo
 	has_email = TRUE
 	title = "Chief Medical Officer"
-	supervisors = "the Commanding Officer and the Executive Officer"
+	supervisors = "the Security Commander"
 	economic_modifier = 10
 	minimal_player_age = 21
 	ideal_character_age = 48
@@ -202,6 +202,7 @@
 	supervisors = "The Facility Director"
 	department = "Security"
 	department_flag = SEC|COM
+	duties = "<big><b>As the Guard Commander, you have direct say over the Security department. You're not assigned to any zone, but instead should jump in where necessary or requested. You are to speak with your Zone Commanders oftenly, and assign new guards to the right zone, or where it's needed mostly.</span>"
 	economic_modifier = 8
 	minimal_player_age = 21
 	ideal_character_age = 55
@@ -228,7 +229,7 @@
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "the Guard Commander"
-	duties = "<big><b>As the Zone Commander, you're the right hand of the Guard Commander, and in charge of a specific zone. In this zone, you have full command of the guards stationed there in every situation, except Code Red or higher. You should ask the Guard Commander which zone you're assigned to. You won't have command over the Cell Guards or Overseer.</span>"
+	duties = "<big><b>As the Zone Commander, you're the right hand of the Guard Commander, and in charge of a specific zone. In this zone, you have full command of the guards stationed there in every situation, except Code Red or higher. You should ask the Guard Commander which zone you're assigned to, if you joined later in the round. You won't have command over the Cell Guards or Warden.</span>"
 	economic_modifier = 4
 	minimal_player_age = 10
 	ideal_character_age = 45
@@ -245,8 +246,6 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
-
-
 /datum/job/ncoofficer
 	has_email = TRUE
 	title = "Guard"
@@ -254,6 +253,7 @@
 	department_flag = SEC
 	total_positions = 6
 	spawn_positions = 6
+	duties = "<big><b>As the Guard you have more access than a Junior Guard, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
 	alt_titles = list("Agent")
@@ -271,7 +271,7 @@
 	)
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
 	minimal_access = list()
 
 /datum/job/enlistedofficer
@@ -281,6 +281,7 @@
 	department_flag = SEC
 	total_positions = 6
 	spawn_positions = 6
+	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
 	alt_titles = list("Junior Agent")
