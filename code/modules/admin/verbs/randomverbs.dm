@@ -870,7 +870,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		return
 	if (usr.client)
 		if(usr.client.holder)
-			var/job = M.mind.assigned_role.title
+			var/job = M.mind.assigned_role
 
 			for(var/obj/item/weapon/card/id/Z in M)
 				qdel(Z)
