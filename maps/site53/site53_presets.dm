@@ -1,5 +1,6 @@
 var/const/NETWORK_895			= "SCP-895 CCTV Network"
 var/const/NETWORK_ENGINE		= "Engineering Network"
+var/const/NETWORK_ENTRANCE		= "Entrance Zone Network"
 
 /datum/map/site53/get_network_access(var/network)
 	switch(network)
@@ -7,13 +8,16 @@ var/const/NETWORK_ENGINE		= "Engineering Network"
 			return list(access_sciencelvl4, access_mtflvl4)
 		if(NETWORK_ENGINEERING)
 			return access_mtflvl1
+		if(NETWORK_ENTRANCE)
+			return access_mtflvl1
 	return get_shared_network_access(network) || ..()
 
 /datum/map/site53
 	// Networks that will show up as options in the camera monitor program
 	station_networks = list(
 		NETWORK_895,
-		NETWORK_ENGINE
+		NETWORK_ENGINE,
+		NETWORK_ENTRANCE
 	)
 
 //

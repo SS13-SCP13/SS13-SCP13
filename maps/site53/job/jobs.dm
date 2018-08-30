@@ -279,8 +279,8 @@
 	title = "Junior Guard"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 8
+	spawn_positions = 8
 	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
@@ -413,8 +413,7 @@
 		"Junior Maintenance Technician",
 		"Junior Engine Technician",
 		"Junior Damage Control Technician",
-		"Junior Electrician",
-		"Junior Atmospheric Technician"
+		"Junior Electrician"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	allowed_branches = list(
@@ -441,8 +440,7 @@
 		"Maintenance Technician",
 		"Engine Technician",
 		"Damage Control Technician",
-		"Electrician",
-		"Atmospheric Technician"
+		"Electrician"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	allowed_branches = list(
@@ -470,8 +468,7 @@
 		"Senior Maintenance Technician",
 		"Senior Engine Technician",
 		"Senior Damage Control Technician",
-		"Senior Electrician",
-		"Senior Atmospheric Technician"
+		"Senior Electrician"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/seneng
 	allowed_branches = list(

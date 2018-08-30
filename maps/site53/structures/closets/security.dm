@@ -36,6 +36,7 @@
 		/obj/item/ammo_magazine/a10mm = 4,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
+		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/gloves/tactical,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
@@ -70,6 +71,7 @@
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/clothing/gloves/tactical,
+		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
 		/obj/item/clothing/mask/balaclava
@@ -103,6 +105,7 @@
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/clothing/gloves/tactical,
+		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/clothing/mask/balaclava
@@ -133,6 +136,7 @@
 		/obj/item/ammo_magazine/mc9mm = 4,
 		/obj/item/weapon/gun/projectile/automatic/c20r,
 		/obj/item/ammo_magazine/a10mm = 4,
+		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
 		/obj/item/weapon/handcuffs,
