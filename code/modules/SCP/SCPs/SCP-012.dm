@@ -5,6 +5,7 @@ GLOBAL_LIST_EMPTY(scp012s)
 	name = "On Mount Golgotha"
 	desc = "An old paper of handwritten sheet music, titled \"On Mount Golgotha\". The writing is in a conspicuous blood red."
 	w_class = ITEM_SIZE_NO_CONTAINER //Quick fix that may need more work in the future.
+	nothrow = TRUE
 	SCP = /datum/scp/SCP_012
 	var/ticks = 0
 
@@ -30,7 +31,7 @@ GLOBAL_LIST_EMPTY(scp012s)
 	// find a victim in case the last one is gone
 	var/mob/living/carbon/human/affecting = null
 	for (var/mob/living/carbon/human/H in shuffle(view(2, src)))
-		if (H.stat == CONSCIOUS)
+		if (can_affect(H))
 			affecting = H
 			break
 
@@ -61,7 +62,10 @@ GLOBAL_LIST_EMPTY(scp012s)
 		else if (prob(5))
 			if (prob(50))
 				affecting.visible_message("<span class = \"notice\">[affecting] looks at \"[name]\" and sighs dejectedly.</span>")
-				affecting.emote("sigh")
+				playsound(affecting, "sound/voice/emotes/sigh_[T.key].ogg", 100)
 			else
 				affecting.visible_message("<span class = \"notice\">[affecting] looks at \"[name]\" and cries.</span>")
-				affecting.emote("cry")
+				playsound(affecting, "sound/voice/emotes/[T.key]_cry[pick(1,2)].ogg", 100)
+
+/obj/item/paper/proc/can_affect(var/mob/living/carbon/human/H)
+	return H.stat == CONSCIOUS && !(src in H.hidden_atoms) && !H.blinded && !istype(H.glasses, /obj/item/clothing/glasses/sunglasses/blindfold)

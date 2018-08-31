@@ -67,6 +67,9 @@
 	if(stat || paralysis || stunned || weakened)
 		return
 
+	if (is_scp012_affected())
+		return
+
 	face_atom(A) // change direction to face what you clicked on
 
 	if(!canClick()) // in the year 2000...
