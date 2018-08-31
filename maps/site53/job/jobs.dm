@@ -154,6 +154,7 @@
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = null
+	duties = "<big><b>As the Cell Warden, it is your job to coordinate the cell guards, prevent riots and breakouts. <br>It's also important to note that if you're an asshole or intentionally trying to be one, Class D's are more likely to riot.<br> If a Class D is requested for testing it is not your, or the Cell Guard's job to deliver them to the tests. Hand them over to one of the zone guards, instead.</span>"
 	minimal_player_age = 7
 	ideal_character_age = 30
 	alt_titles = null
@@ -176,7 +177,8 @@
 	department_flag = SEC
 	total_positions = 7
 	spawn_positions = 7
-	supervisors = "the Security Commander"
+	supervisors = "the Cell Warden"
+	duties = "<big><b>As the Cell Guard, it is your job to prevent riots and breakouts. <br>It's also important to note that if you're an asshole or intentionally trying to be one, Class D's are more likely to riot.<br> If a Class D is requested for testing it is not your, or the Cell Guard's job to deliver them to the tests. Hand them over to one of the zone guards, instead.</span>"
 	economic_modifier = 4
 	alt_titles = null
 	minimal_player_age = 5
