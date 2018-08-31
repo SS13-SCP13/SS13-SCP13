@@ -403,6 +403,14 @@ var/global/datum/controller/occupations/job_master
 						for(var/i in 1 to (isnull(accessory_data)? 1 : accessory_data))
 							H.equip_to_slot_or_del(new accessory_path(src), slot_tie)
 
+			// override to make sure people don't spawn with backpacks unless their outfit allows it - Kachnov
+			var/decl/hierarchy/outfit/override = job.get_outfit(H, H.mind ? H.mind.role_alt_title : "", H.char_branch, H.char_rank)
+			if (!override.back && H.back)
+				var/obj/item/deleted = H.back
+				if (H.remove_from_mob(deleted))
+					qdel(deleted)
+
+
 		else
 			to_chat(H, "Your job is [rank] and the game just can't handle it! Please report this bug to an administrator.")
 
