@@ -309,14 +309,14 @@
 
 /datum/job/juniorscientist
 	has_email = TRUE
-	title = "Junior Scientist"
+	title = "Scientist Associate"
 	department = "Science"
 	department_flag = SCI
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = list("Junior Xenobiologist", "Junior Xenoarcheologist")
+	alt_titles = list("Xenobiologist Associate", "Xenoarcheologist Associate")
 	minimal_player_age = 0
 	ideal_character_age = 22
 	alt_titles = null

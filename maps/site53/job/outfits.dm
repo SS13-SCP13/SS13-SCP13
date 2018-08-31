@@ -119,7 +119,7 @@
 // SCIENCE OUTFITS
 
 /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
-	name = OUTFIT_JOB_NAME("Junior Scientist")
+	name = OUTFIT_JOB_NAME("Scientist Associate")
 	uniform = /obj/item/clothing/under/scp/suittie
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/laceup
@@ -129,7 +129,7 @@
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/scientist
-	name = OUTFIT_JOB_NAME("Junior Scientist")
+	name = OUTFIT_JOB_NAME("Scientist")
 	uniform = /obj/item/clothing/under/scp/suittie
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	shoes = /obj/item/clothing/shoes/laceup
@@ -139,7 +139,7 @@
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/seniorscientist
-	name = OUTFIT_JOB_NAME("Junior Scientist")
+	name = OUTFIT_JOB_NAME("Senior Scientist")
 	uniform = /obj/item/clothing/under/scp/suittie
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
 	shoes = /obj/item/clothing/shoes/laceup
