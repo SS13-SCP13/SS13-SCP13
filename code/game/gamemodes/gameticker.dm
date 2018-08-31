@@ -309,7 +309,7 @@ var/global/datum/controller/gameticker/ticker
 		if(captainless)
 			for(var/mob/M in GLOB.player_list)
 				if(!istype(M,/mob/new_player))
-					to_chat(M, "Captainship not forced on anyone.")
+					to_chat(M, "Site Director not forced on anyone.")
 
 
 	proc/process()

@@ -775,3 +775,8 @@
 	name = "\improper Zone Commander's Office"
 	icon_state = "security"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/reswing/robotics
+	name = "\improper Robotics Laboratory"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
