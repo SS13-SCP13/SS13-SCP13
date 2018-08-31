@@ -41,6 +41,7 @@ changes:
   - rscadd: "SCP-895 now has functional camera's."
   - rscadd: "Engineering now has functional camera's."
   - rscadd: "Adds webbings to the Guard lockers."
+  - rscadd: "D-Class mining gets excavation tools to minimize the radiation issues. Be sure to use it!"
   - rscadd: "Added functional Atmospherics to upper LCZ."
   - rscdel: "Removes Pumpkin seeds from Hydroseeds."
   - rscdel: "Removes Ambrosia Vulgaris seeds from Hydroseeds."
