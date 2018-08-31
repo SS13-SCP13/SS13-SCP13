@@ -125,6 +125,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl1
 	l_pocket = /obj/item/device/radio
+	gloves = /obj/item/clothing/gloves/latex
 	l_ear = null
 	back = null
 
@@ -135,6 +136,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl2
 	l_pocket = /obj/item/device/radio
+	gloves = /obj/item/clothing/gloves/latex
 	l_ear = null
 	back = null
 
@@ -145,6 +147,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl4
 	l_pocket = /obj/item/device/radio
+	gloves = /obj/item/clothing/gloves/latex/nitrile
 	l_ear = null
 	back = null
 
@@ -155,6 +158,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl5
 	l_pocket = /obj/item/device/radio
+	gloves = /obj/item/clothing/gloves/latex/nitrile
 	l_ear = null
 	back = null
 

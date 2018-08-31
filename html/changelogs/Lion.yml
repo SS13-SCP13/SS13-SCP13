@@ -53,6 +53,7 @@ changes:
   - tweak: "Refactored security clearance for NCO Officers."
   - tweak: "Updated Medical allowed ranks."
   - tweak: "Renamed Junior Scientist to Scientist Associate."
+  - tweak: "All Scientists now spawn with gloves."
   - soundadd: "New roundstart sound."
   - soundadd: "New command report sound."
   - maptweak: "Fixed SCP-106 being able to escape containment easily, even with containment up."
