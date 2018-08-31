@@ -312,17 +312,25 @@
 /obj/item/clothing/head/helmet/solgov
 	starting_accessories = list(/obj/item/clothing/accessory/armor/helmcover/blue/sol)
 
-/obj/item/clothing/head/helmet/solgov/security
-	name = "security helmet"
-	desc = "A helmet with 'POLICE' printed on the back in silver lettering."
+/obj/item/clothing/head/helmet/site53/zonecomm
+	name = "zone commander's helmet"
+	desc = "A helmet with 'ZONE COMMANDER' printed on the back in silver lettering."
 	icon_state = "helmet_security"
 	icon = 'maps/torch/icons/obj/solgov-head.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/solgov-head.dmi')
 	starting_accessories = null
 
-/obj/item/clothing/head/helmet/solgov/command
-	name = "command helmet"
-	desc = "A helmet with 'SOL CENTRAL GOVERNMENT' printed on the back in gold lettering."
+/obj/item/clothing/head/helmet/site53/guard
+	name = "guard's helmet"
+	desc = "A helmet with 'GUARD' printed on the back in red lettering."
+	icon_state = "helmet_pcrc"
+	icon = 'maps/torch/icons/obj/solgov-head.dmi'
+	item_icons = list(slot_head_str = 'maps/torch/icons/mob/solgov-head.dmi')
+	starting_accessories = null
+
+/obj/item/clothing/head/helmet/site53/guardcomm
+	name = "guard commander's helmet"
+	desc = "A helmet with 'GUARD COMMANDER' printed on the back in gold lettering."
 	icon_state = "helmet_command"
 	icon = 'maps/torch/icons/obj/solgov-head.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/solgov-head.dmi')

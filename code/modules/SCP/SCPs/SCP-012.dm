@@ -7,7 +7,6 @@ GLOBAL_LIST_EMPTY(scp012s)
 	w_class = ITEM_SIZE_NO_CONTAINER //Quick fix that may need more work in the future.
 	nothrow = TRUE
 	SCP = /datum/scp/SCP_012
-	var/mob/living/carbon/human/affecting = null
 	var/ticks = 0
 
 /datum/scp/SCP_012
@@ -30,7 +29,7 @@ GLOBAL_LIST_EMPTY(scp012s)
 	++ticks
 
 	// find a victim in case the last one is gone
-	affecting = null
+	var/mob/living/carbon/human/affecting = null
 	for (var/mob/living/carbon/human/H in shuffle(view(2, src)))
 		if (can_affect(H))
 			affecting = H

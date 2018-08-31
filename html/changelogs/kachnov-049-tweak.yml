@@ -18,4 +18,5 @@ author: Memeopolis
 delete-after: True
 
 changes: 
-  - bugfix: "Fixes conveyors not working."
+  - tweak: "Made SCP-049-1 unable to pick up items."
+  - tweak: "Made SCP-049-1 able to break windows and doors."

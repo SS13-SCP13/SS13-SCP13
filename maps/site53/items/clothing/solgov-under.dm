@@ -162,8 +162,8 @@
 
 
 /obj/item/clothing/under/solgov/utility/marine
-	name = "marine fatigues"
-	desc = "The utility uniform of the SCG Marine Corps, made from durable material."
+	name = "security fatigues"
+	desc = "The utility uniform of the Security Branch, made from durable material."
 	icon_state = "greenutility"
 	item_state = "jensensuit"
 	worn_state = "greenutility"
@@ -201,7 +201,7 @@
 
 /obj/item/clothing/under/solgov/utility/marine/tan
 	name = "tan fatigues"
-	desc = "A tan version of the SCG marine utility uniform, made from durable material."
+	desc = "A tan version of the Security uniform, made from durable material."
 	icon_state = "tanutility"
 	item_state = "johnny"
 	worn_state = "tanutility"
