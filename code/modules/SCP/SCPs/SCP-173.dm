@@ -16,6 +16,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 	health = 5000
 
 	var/last_snap = 0
+	var/next_shit = 0
 
 /mob/living/scp_173/New()
 	..()
@@ -63,6 +64,11 @@ GLOBAL_LIST_EMPTY(scp173s)
 	if (client)
 		return
 	if(IsBeingWatched())
+		return
+	if(world.time >= next_shit)
+		next_shit = world.time+math.random(5 MINUTES, 10 MINUTES)
+		var/feces = pick(/obj/effect/decal/cleanable/blood, /obj/effect/decal/cleanable/blood/gibs, /obj/effect/decal/cleanable/mucus)
+		new feces(loc)
 		return
 	var/mob/living/carbon/human/target
 	var/mob/living/carbon/human/possible_targets = list()
