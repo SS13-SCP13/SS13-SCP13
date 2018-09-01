@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(scp173s)
+
 /datum/scp/SCP_173
 	name = "SCP-173"
 	designation = "173"
@@ -14,6 +16,14 @@
 	health = 5000
 
 	var/last_snap = 0
+
+/mob/living/scp_173/New()
+	..()
+	GLOB.scp173s += src
+
+/mob/living/scp_173/Destroy()
+	GLOB.scp173s -= src
+	..()
 
 /mob/living/scp_173/proc/IsBeingWatched()
 	for(var/mob/living/carbon/human/H in view(src, 7))
