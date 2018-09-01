@@ -218,7 +218,7 @@
 "ej" = (/obj/effect/paint_stripe/white,/turf/simulated/wall,/area/site53/medical/chemistry)
 "ek" = (/obj/machinery/atmospherics/pipe/manifold/hidden{icon_state = "map"; dir = 4},/obj/structure/iv_drip,/turf/simulated/floor/tiled/white,/area/site53/medical/sleeper)
 "el" = (/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 1},/turf/simulated/floor/carpet/orange,/area/site53/medical/mentalhealth/office)
-"em" = (/obj/machinery/door/airlock/medical{name = "Locker Room"; req_access = list(300)},/turf/simulated/floor/tiled/white,/area/site53/medical/equipstorage)
+"em" = (/obj/machinery/door/airlock/medical{name = "Locker Room"; req_access = list(300)},/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/white,/area/site53/medical/equipstorage)
 "en" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/carpet/orange,/area/site53/medical/mentalhealth/office)
 "eo" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/carpet/purple,/area/site53/medical/mentalhealth/isolation)
 "ep" = (/turf/simulated/floor/carpet/purple,/area/site53/medical/mentalhealth/isolation)
