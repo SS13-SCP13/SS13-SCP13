@@ -467,6 +467,67 @@ Sightings of SCP-513-1 reoccur every 14 to 237 minutes. This “stalking” behavior
 
 Descriptions of SCP-513-1's appearance are largely unreliable. Test subjects are unable to provide complete accounts of sightings due to their exhaustion, degraded mental health, and disruptive hypervigilance. However, all interrogations thus far indicate that SCP-513-1 is a tall, emaciated humanoid with abnormally large hands.
 "}
+
+/obj/item/weapon/paper/scp/euclid/scp895
+	name = "SCP-895"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-895</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+
+<b>Item #:</b> SCP-895
+<br>
+<b>Object Class:</b> Euclid
+<br>
+<b>Special Containment Procedures:</b> SCP-895 is sealed closed and stored in an isolated underground containment cell at a depth of approximately 100 meters. No cameras, microphones, or other surveillance equipment may be brought within the 10 meter "Red Zone" radius of SCP-895 without express permission from at least two (2) Level 3 personnel.
+
+Any on-site personnel exhibiting unusual behavior or signs of psychological trauma are to be screened immediately, and removed from the site or terminated as the situation warrants.
+<br>
+<b>Description:</b> SCP-895 is an ornate oak coffin recovered from the ¦¦¦¦¦ ¦¦¦¦¦ Mortuary by SCP personnel on ¦¦/¦/¦¦, following reports of unusual footage captured by surveillance equipment installed at that location. When questioned, mortuary staff were unable to determine the source of SCP-895 and how it was transported to the location. Upon attempting to open SCP-895, agents on location found the object empty; however, observers viewing the live camera feed were -DATA EXPUNGED-. Until further notice, SCP-895 must remain closed at all times.
+
+SCP-895 causes disruptions in video and photographic surveillance equipment within 50 meters similar to vivid, disturbing hallucinations with variable duration and regularity corresponding to the camera's proximity to SCP-895. Within a range of 5 meters from SCP-895, footage captured can cause severe psychological trauma and hysteria in most subjects. These disruptions do not extend to observers physically present within the area.
+<br>
+<b>Addendum 895-01:</b> Audio excerpt from the SCP-895 Recovery Log (¦¦/¦/¦¦)
+<br>
+> 03:41L - <b>Command:</b> Team One, Command. All civilians have been detained and evacuated. You are cleared to move in and capture.
+<br>
+> 03:41L - <b>T1Lead:</b> Command, One Lead. Roger, we are moving in.
+<br>
+> 03:43L - <b>T1Lead:</b> We are inside the lobby. Video feed check.
+<br>
+> 03:44L - <b>Command:</b> Team One, Command. We are receiving...-pause-...we are seeing blood on the walls, please confirm.
+<br>
+> 03:44L - <b>T1Lead:</b> Negative, Command, it's clean in here. Nothing out of the ordinary.
+<br>
+> 03:45L - <b>Command:</b> ... it's gone. Team One, advise possible memetic properties in effect.
+<br>
+> 03:45L - <b>T1Lead:</b> Copy, Command. Team One moving into storage area.
+<br>
+> 03:47L - <b>T1Lead:</b> We are in the storage area, object located.
+<br>
+> 03:48L - <b>Command:</b> Christ, it's moving... Team One, confirm, object appears to be alive and moving.
+<br>
+> 03:48L - <b>T1Lead:</b> ... Command, negative, we see no movement. Object appears to be normal.
+<br>
+> 03:48L - <b>T1Lead:</b> Two, open it up.
+<br>
+> 03:48L - <i>Sounds of weapons being readied, followed by creaking as object is opened.</i>
+<br>
+> 03:49L - <b>T1-2:</b> Sir, it's empty.
+<br>
+> 03:50L - <b>T1Lead:</b> Command, One Lead. The object appears to be empty.
+<br>
+> 03:51L - <b>T1Lead:</b> Command, do you copy?
+<br>
+> 03:51L - <b>Command:</b> //Sounds of screaming and retching.//
+<br>
+> 03:51L - <b>T1Lead:</b> Command, do you copy?!
+<br>
+> 03:52L - <b>T1Lead:</b> Shit, we're bugging out. Close that thing!
+<br>
+<b>Addendum 895-02:</b> Following Incident -DATA EXPUNGED- and the loss of 3 personnel, the Red Zone of SCP-895 has been extended from 5 meters to 10 meters, and security personnel shifts have been reduced to 4 hours as a precaution.
+"}
+
 // EUCLID ADDENDUMS
 
 
