@@ -2238,6 +2238,7 @@
 #include "code\modules\SCP\SCPs\SCP-106.dm"
 #include "code\modules\SCP\SCPs\SCP-113.dm"
 #include "code\modules\SCP\SCPs\SCP-151.dm"
+#include "code\modules\SCP\SCPs\SCP-173.dm"
 #include "code\modules\SCP\SCPs\SCP-294.dm"
 #include "code\modules\SCP\SCPs\SCP-513.dm"
 #include "code\modules\SCP\SCPs\SCP-895.dm"
