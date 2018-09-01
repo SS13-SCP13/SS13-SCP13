@@ -22,11 +22,18 @@
 /mob/living/simple_animal/scp_999/update_icon()
 	if(stat != DEAD && resting)
 		icon_state = "999_rest"
-		return
-	..()
+	else if(stat == DEAD)
+		icon_state = "999_press_f"
+	else
+		icon_state = "999"
+
+/mob/living/simple_animal/scp_999/death()
+	. = ..()
+	update_icon()
 
 /mob/living/simple_animal/scp_999/Life()
 	. = ..()
+	update_icon()
 	if(attached)
 		forceMove(attached.loc)
 		if(!last_healing[attached] || ((last_healing[attached] + 5 MINUTES) >= world.time))
@@ -51,6 +58,17 @@
 			attached_mode = IMMOBILIZING
 			attached = a
 			a.visible_message("<span class='warning'>[src] begins to wrap around [attached]!</span>", "<span class='warning'>[src] begins wrapping around you, filling you with happiness!</span>")
+
+/mob/living/simple_animal/scp_999/Move(a,b,f)
+	if(attached)
+		if(attached_mode == HUGGING)
+			to_chat(src, "<span class='notice'>You are hugging someone! Detach to move!</span>")
+			return
+		else
+			if(prob(5))
+				attached.Move(a,b,f)
+			return
+	return ..(a,b,f)
 
 /mob/living/simple_animal/scp_999/verb/detach()
 	set category = "SCP"
