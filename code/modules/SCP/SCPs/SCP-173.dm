@@ -8,6 +8,7 @@
 	desc = "A statue, constructed from concrete and rebar with traces of Krylon brand spray paint"
 	icon = 'icons/SCP/scp-173.dmi'
 	icon_state = "173"
+	SCP = /datum/scp/SCP_173
 
 	maxHealth = 5000
 	health = 5000
