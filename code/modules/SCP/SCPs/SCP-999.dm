@@ -12,6 +12,7 @@
 	icon = 'icons/SCP/scp-999.dmi'
 	icon_living = "999"
 	icon_dead = "999_press_f"
+	alpha = 200
 	SCP = /datum/scp/SCP_999
 	maxHealth = 1500
 	health = 1500
@@ -37,7 +38,7 @@
 	update_icon()
 	if(attached)
 		forceMove(attached.loc)
-		if(!last_healing[attached] || ((last_healing[attached] + 5 MINUTES) >= world.time))
+		if(last_healing[attached] == null || ((last_healing[attached] + 5 MINUTES) >= world.time))
 			last_healing[attached] = world.time
 			if(attached_mode == HUGGING)
 				attached.reagents.add_reagent(/datum/reagent/bicaridine, 5)
