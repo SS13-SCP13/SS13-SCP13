@@ -46,6 +46,7 @@ changes:
   - bugfix: "Several wall issues fixed in D-Class."
   - bugfix: "Fix incorrect e-mail address syntax not corresponding with site name."
   - bugfix: "Fix incorrect APC access requirement for D-Class Assignments."
+  - bugfix: "Fixed missing wire LLCZ."
   - bugfix: "Attempted fix at D-Class cryo door."
   - maptweak: "Removed a nonsensical area in z-1."
   - maptweak: "Changed around access route to D-Class body disposals."
