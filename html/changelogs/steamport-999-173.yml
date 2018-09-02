@@ -1,0 +1,7 @@
+author: steamport
+delete-after: True
+changes: 
+  - tweak: "SCP-173 can now ventcrawl"
+  - tweak: "SCP-173 can now be controlled during Code Red."
+  - rcsadd: "Looking at SCP-173 will result in blinking every so often."
+  - bugfix: "SCP-999 can now properly set intent"

@@ -15,6 +15,7 @@
 	SCP = /datum/scp/SCP_999
 	maxHealth = 1500
 	health = 1500
+	hud_type = /datum/hud/slime
 	var/mob/living/carbon/attached
 	var/attached_mode = HUGGING
 	var/list/last_healing = list()
@@ -58,6 +59,7 @@
 			attached_mode = IMMOBILIZING
 			attached = a
 			a.visible_message("<span class='warning'>[src] begins to wrap around [attached]!</span>", "<span class='warning'>[src] begins wrapping around you, filling you with happiness!</span>")
+		forceMove(attached.loc)
 
 /mob/living/simple_animal/scp_999/Move(a,b,f)
 	if(attached)
