@@ -218,6 +218,16 @@
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+/area/site53/ulcz/scp173
+	name = "\improper SCP-173"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/ulcz/scp999
+	name = "\improper SCP-999"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
 /area/site53/llcz/scp500
 	name = "\improper SCP-500"
 	icon_state = "research"

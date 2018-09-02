@@ -216,7 +216,7 @@
 		/datum/mil_rank/security/o3
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -245,7 +245,7 @@
 		/datum/mil_rank/security/o2
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 
 /datum/job/ncoofficer
@@ -273,7 +273,7 @@
 	)
 
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
 /datum/job/enlistedofficer
@@ -300,7 +300,7 @@
 	)
 
 
-	access = list(access_mtflvl1)
+	access = list(access_mtflvl1, access_sciencelvl1)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
