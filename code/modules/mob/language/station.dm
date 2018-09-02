@@ -28,7 +28,7 @@
 	exclaim_verb = "roars"
 	colour = "soghun"
 	key = "o"
-	flags = WHITELISTED
+	flags = RESTRICTED
 	space_chance = 40
 	syllables = list(
 		"za", "az", "ze", "ez", "zi", "iz", "zo", "oz", "zu", "uz", "zs", "sz",
@@ -48,7 +48,7 @@
 	exclaim_verb = "yowls"
 	colour = "tajaran"
 	key = "j"
-	flags = WHITELISTED
+	flags = RESTRICTED
 	syllables = list("mrr","rr","tajr","kir","raj","kii","mir","kra","ahk","nal","vah","khaz","jri","ran","darr",
 	"mi","jri","dynh","manq","rhe","zar","rrhaz","kal","chur","eech","thaa","dra","jurl","mah","sanu","dra","ii'r",
 	"ka","aasi","far","wa","baq","ara","qara","zir","sam","mak","hrar","nja","rir","khan","jun","dar","rik","kah",
@@ -71,7 +71,7 @@
 	exclaim_verb = "warbles"
 	colour = "skrell"
 	key = "k"
-	flags = WHITELISTED
+	flags = RESTRICTED
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix","*","!")
 
 /datum/language/human
@@ -81,7 +81,7 @@
 	whisper_verb = "whispers"
 	colour = "solcom"
 	key = "1"
-	flags = WHITELISTED
+	flags = RESTRICTED
 
 	//syllables are at the bottom of the file
 
@@ -110,9 +110,10 @@
 	exclaim_verb = "whistles loudly"
 	colour = "changeling"
 	key = "6"
-	flags = NO_STUTTER
+	flags = RESTRICTED
 	syllables = list("beep","beep","beep","beep","beep","boop","boop","boop","bop","bop","dee","dee","doo","doo","hiss","hss","buzz","buzz","bzz","ksssh","keey","wurr","wahh","tzzz")
 	space_chance = 10
+	flags = RESTRICTED
 
 /datum/language/machine/can_speak_special(var/mob/living/speaker)
 	return speaker.isSynthetic()
@@ -189,7 +190,7 @@
 	signlang_verb = list("uses their tail to convey", "gestures with their tail", "gestures with their tail elaborately")
 	colour = "tajaran"
 	key = "l"
-	flags = WHITELISTED | SIGNLANG | NO_STUTTER | NONVERBAL
+	flags = RESTRICTED
 
 /datum/language/confederate
 	name = LANGUAGE_INDEPENDENT
@@ -200,6 +201,7 @@
 	syllables = list("rus","zem","ave","groz","ski","ska","ven","konst","pol","lin","svy",
 	"danya","da","mied","zan","das","krem","myka","to","st","no","na","ni",
 	"ko","ne","en","po","ra","li","on","byl","cto","eni","ost","ol","ego","ver","stv","pro")
+	flags = RESTRICTED
 
 /datum/language/nabber
 	name = LANGUAGE_NABBER
@@ -223,3 +225,4 @@
 	syllables = list ("die", "en", "skei", "van", "son", "der", "aar", "ch", "op", "ruk", "aa", "be", "ne", "het",
  	"ek", "ras", "ver", "zan", "das", "waa", "geb", "vol", "lu", "min", "breh", "rus", "stv", "ee", "goe", "sk",
  	"la", "ver", "we", "ge", "luk", "an", "ar", "at", "es", "et", "bel", "du", "jaa", "ch", "kk", "gh", "ll", "uu", "wat")
+	flags = RESTRICTED

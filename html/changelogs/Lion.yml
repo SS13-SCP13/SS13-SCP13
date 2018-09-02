@@ -39,6 +39,8 @@ changes:
   - rscadd: "Added the hand pickaxe to the d-class mining lockers. These mine 30 cm deep, and will make it all a bit faster, I hope."
   - rscadd: "Added bodybag box to Class D medical post."
   - rscdel: "Removed a bunch of character creation options, such as nonsensical options for home system, etc."
+  - rscdel: "Removed a shit ton of languages that aren't used from character creation."
   - bugfix: "Fixed bug with incorrect access on SCP-151. It now takes Science levels."
   - bugfix: "Several wall issues fixed in D-Class."
   - maptweak: "Changed around access route to D-Class body disposals."
+  - maptweak: "Minor fix to Tram Hub Restaurant."

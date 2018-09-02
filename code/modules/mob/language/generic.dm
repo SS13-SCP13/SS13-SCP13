@@ -53,6 +53,7 @@
 					 "voluptate", "velit", "esse", "cillum", "dolore", "eu", "fugiat", "nulla",
 					 "pariatur", "excepteur", "sint", "occaecat", "cupidatat", "non", "proident", "sunt",
 					 "in", "culpa", "qui", "officia", "deserunt", "mollit", "anim", "id", "est", "laborum")
+	flags = RESTRICTED
 
 // Criminal language.
 /datum/language/gutter
@@ -62,6 +63,7 @@
 	colour = "rough"
 	key = "3"
 	syllables = list ("gra","ba","ba","breh","bra","rah","dur","ra","ro","gro","go","ber","bar","geh","heh", "gra")
+	flags = RESTRICTED
 
 /datum/language/sign
 	name = LANGUAGE_SIGN
