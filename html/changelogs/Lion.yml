@@ -43,5 +43,7 @@ changes:
   - bugfix: "Fixed bug with incorrect access on SCP-151. It now takes Science levels."
   - bugfix: "Several wall issues fixed in D-Class."
   - bugfix: "Fix incorrect e-mail address syntax not corresponding with site name."
+  - bugfix: "Fix incorrect APC access requirement for D-Class Assignments."
+  - maptweak: "Removed a nonsensical area in z-1."
   - maptweak: "Changed around access route to D-Class body disposals."
   - maptweak: "Minor fix to Tram Hub Restaurant."
