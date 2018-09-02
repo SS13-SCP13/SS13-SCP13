@@ -35,5 +35,6 @@ delete-after: True
 changes: 
   - rscadd: "Added backpacks to the lockers of department heads. They can distribute them now."
   - rscadd: "Added messenger bags to D-Class Mining."
+  - rscadd: "Added stasis bags to NanoMed Plus vendors."
   - rscadd: "Added the hand pickaxe to the d-class mining lockers. These mine 30 cm deep, and will make it all a bit faster, I hope."
   - bugfix: "Fixed bug with incorrect access on SCP-151. It now takes Science levels."
