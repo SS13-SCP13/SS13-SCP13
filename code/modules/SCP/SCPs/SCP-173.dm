@@ -72,6 +72,9 @@ GLOBAL_LIST_EMPTY(scp173s)
 			continue
 		if(world.time >= next_blinks[A])
 			var/mob/living/carbon/human/H = A
+			if(H.stat) // Sleeping or dead people can't blink!
+				next_blinks[A] = null
+				continue
 			H.visible_message("<span class='notice'>[H] blinks.</span>")
 			H.eye_blind += 2
 			next_blinks[H] = 10+world.time+rand(25 SECONDS, 45 SECONDS)
