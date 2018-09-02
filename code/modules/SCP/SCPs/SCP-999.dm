@@ -12,7 +12,7 @@
 	icon = 'icons/SCP/scp-999.dmi'
 	icon_living = "999"
 	icon_dead = "999_press_f"
-	alpha= 200
+	alpha = 200
 	SCP = /datum/scp/SCP_999
 	maxHealth = 1500
 	health = 1500
