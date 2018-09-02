@@ -115,3 +115,9 @@ GLOBAL_LIST_EMPTY(scp173s)
 		playsound(loc, pick('sound/scp/spook/NeckSnap1.ogg', 'sound/scp/spook/NeckSnap3.ogg'), 50, 1)
 		target.death()
 		last_snap = world.time
+
+/mob/living/scp_173/can_ventcrawl()
+	if(IsBeingWatched())
+		to_chat(src, "<span class='warning'>You're being watched!</span>")
+		return FALSE
+	return ..()
