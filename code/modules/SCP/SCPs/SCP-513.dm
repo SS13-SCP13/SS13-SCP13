@@ -33,7 +33,9 @@
 	return ..()
 
 /obj/item/scp513/proc/ring(mob/living/user)
-	for(var/mob/living/carbon/M in hear(7, get_turf(src)))
+	for(var/mob/living/carbon/human/M in hear(7, get_turf(src)))
+		if(M.is_deaf() || istype(M.l_ear, /obj/item/clothing/ears/earmuffs) || istype(M.r_ear, /obj/item/clothing/ears/earmuffs))
+			continue
 		to_chat(M, "<span class='danger'><i>\The [src] rings, sending chills to your very bone.</i></span>")
 		M << pick('sound/scp/spook/Bell2.ogg', 'sound/scp/spook/Bell3.ogg')
 		if(!(M in victims))
@@ -70,27 +72,29 @@
 			display_513_1(find_safe_spot(get_turf(M), M.client.view), M, 17)
 			to_chat(M, "<span class='warning'><i>[pick(spook_messages)]</i></span>")
 		else if (next_braindamage_stage[M] && world.time >= next_braindamage_stage[M])
-			switch(braindamage_stage[M])
-				if(STAGE_WAIT)
-					braindamage_stage = STAGE_MESSAGE
-				if(STAGE_MESSAGE)
-					next_braindamage_stage[M] = world.time + rand(120, 300)
-					braindamage_stage = STAGE_SLEEP
-				if(STAGE_SLEEP)
-					next_braindamage_stage[M] = world.time + rand(600, 720)
-					braindamage_stage = STAGE_DAMAGE
+			if(M in braindamage_stage) //idk why this is needed but it spams runtime despite everyone being in victims and braindamage_stage
+				switch(braindamage_stage[M])
+					if(STAGE_WAIT)
+						braindamage_stage = STAGE_MESSAGE
+					if(STAGE_MESSAGE)
+						next_braindamage_stage[M] = world.time + rand(120, 300)
+						braindamage_stage = STAGE_SLEEP
+					if(STAGE_SLEEP)
+						next_braindamage_stage[M] = world.time + rand(600, 720)
+						braindamage_stage = STAGE_DAMAGE
 		else
-			switch(braindamage_stage[M])
-				if(STAGE_MESSAGE)
-					if(prob(3.5))
-						to_chat(M, "<span class='warning'>[pick(insomnia_messages)]</span>")
-				if(STAGE_SLEEP)
-					if(prob(4))
-						M.sleeping = 500
-				if(STAGE_DAMAGE)
-					var/obj/item/organ/internal/brain = M.internal_organs_by_name[BP_BRAIN]
-					if(brain)
-						brain.take_damage(rand(4,6))
+			if(M in braindamage_stage) //idk why this is needed but it spams runtime despite everyone being in victims and braindamage_stage
+				switch(braindamage_stage[M])
+					if(STAGE_MESSAGE)
+						if(prob(3.5))
+							to_chat(M, "<span class='warning'>[pick(insomnia_messages)]</span>")
+					if(STAGE_SLEEP)
+						if(prob(4))
+							M.sleeping = 500
+					if(STAGE_DAMAGE)
+						var/obj/item/organ/internal/brain = M.internal_organs_by_name[BP_BRAIN]
+						if(brain)
+							brain.take_damage(rand(4,6))
 
 /obj/item/scp513/proc/display_513_1(turf/spot, mob/living/target, length = 20, fade=TRUE)
 	var/image/img = image('icons/SCP/32x64.dmi', spot, "scp_513_1")

@@ -1,4 +1,9 @@
 /mob/living/carbon/human/say(var/message, var/datum/language/speaking = null, whispering)
+
+	if (isscp049_1(src))
+		src << "<span class = 'warning'>You cannot speak. Use your \"Communicate\" verb instead.</span>"
+		return
+
 	var/alt_name = ""
 	if(name != GetVoice())
 		if(get_id_name("Unknown") != GetVoice())

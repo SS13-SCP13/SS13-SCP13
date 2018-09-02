@@ -20,7 +20,7 @@ var/list/mining_floors = list()
 	density = 1
 	blocks_air = 1
 	temperature = T0C
-	var/mined_turf = /turf/simulated/floor/asteroid
+	var/mined_turf = /turf/simulated/floor/exoplanet/desert
 	var/ore/mineral
 	var/mined_ore = 0
 	var/last_act = 0

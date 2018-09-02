@@ -215,6 +215,9 @@
 	if(!mob.canmove)
 		return
 
+	if (mob.is_scp012_affected(n))
+		return
+
 	if(isliving(mob))
 		var/mob/living/L = mob
 		if(L.incorporeal_move)//Move though walls

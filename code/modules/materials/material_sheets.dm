@@ -231,6 +231,9 @@
 /obj/item/stack/material/steel/fifty
 	amount = 50
 
+/obj/item/stack/material/steel/thirty
+	amount = 30
+
 /obj/item/stack/material/plasteel
 	name = "plasteel"
 	icon_state = "sheet-plasteel"
@@ -242,6 +245,9 @@
 
 /obj/item/stack/material/plasteel/fifty
 	amount = 50
+
+/obj/item/stack/material/plasteel/thirty
+	amount = 30
 
 /obj/item/stack/material/wood
 	name = "wooden plank"

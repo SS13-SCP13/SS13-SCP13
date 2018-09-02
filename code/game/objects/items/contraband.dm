@@ -29,6 +29,48 @@
 	new /obj/item/weapon/reagent_containers/pill/scp500( src )
 	new /obj/item/weapon/reagent_containers/pill/scp500( src )
 
+/obj/item/weapon/storage/pill_bottle/amnesticsa
+	name = "bottle of pills"
+	desc = "Class A Amnestics."
+
+/obj/item/weapon/storage/pill_bottle/amnesticsa/New()
+	..()
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classa( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classa( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classa( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classa( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classa( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classa( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classa( src )
+
+/obj/item/weapon/storage/pill_bottle/amnesticsb
+	name = "bottle of pills"
+	desc = "Class B Amnestics."
+
+/obj/item/weapon/storage/pill_bottle/amnesticsb/New()
+	..()
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classb( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classb( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classb( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classb( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classb( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classb( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classb( src )
+
+/obj/item/weapon/storage/pill_bottle/amnesticsc
+	name = "bottle of pills"
+	desc = "Class C Amnestics."
+
+/obj/item/weapon/storage/pill_bottle/amnesticsc/New()
+	..()
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classc( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classc( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classc( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classc( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classc( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classc( src )
+	new /obj/item/weapon/reagent_containers/pill/amnestics/classc( src )
+
 /obj/item/weapon/storage/pill_bottle/zoom
 	name = "bottle of Zoom pills"
 	desc = "Highly illegal drug. Trade brain for speed."

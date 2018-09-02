@@ -122,7 +122,7 @@
 	icon_state = "mixed"
 	icon_closed = "mixed"
 
-/obj/structure/closet/site53/d_class/djcloset/WillContain()
+/obj/structure/closet/djcloset/WillContain()
 	return list(
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/head/soft/purple,
@@ -147,10 +147,15 @@
 
 /obj/structure/closet/secure_closet/site53/dmining/WillContain()
 	return list(
-	new /obj/item/clothing/gloves/thick,
-	new /obj/item/device/analyzer,
-	new /obj/item/weapon/storage/ore,
-	new /obj/item/device/flashlight/lantern,
-	new /obj/item/weapon/shovel,
-	new /obj/item/weapon/pickaxe,
-	new /obj/item/clothing/glasses/meson)
+		/obj/item/clothing/gloves/thick,
+		/obj/item/device/analyzer,
+		/obj/item/weapon/storage/ore,
+		/obj/item/device/flashlight/lantern,
+		/obj/item/weapon/shovel,
+		/obj/item/weapon/pickaxe,
+		/obj/item/clothing/glasses/meson,
+		/obj/item/device/measuring_tape,
+		/obj/item/weapon/storage/bag/fossils,
+		/obj/item/device/ano_scanner,
+		/obj/item/device/depth_scanner,
+		/obj/item/weapon/storage/excavation)

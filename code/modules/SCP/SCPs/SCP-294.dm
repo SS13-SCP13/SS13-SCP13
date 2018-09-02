@@ -26,10 +26,7 @@
 	if(uses_left < 1)
 		visible_message("<span class='notice'>[src] displays RESTOCKING, PLEASE WAIT message.</span>")
 		return
-	uses_left--
-	if (uses_left < 1)
-		spawn(2000)
-			uses_left = 12
+
 	var/product = null
 	var/mob/living/carbon/victim = null
 	var/input_reagent = lowertext(input("Enter the name of any liquid", "What would you like to drink?") as text)
@@ -45,6 +42,16 @@
 						M.adjustBruteLoss(5)
 	if(!victim)
 		product = find_reagent(input_reagent)
+
+
+	// use one use
+	if (product || victim)
+		--uses_left
+		if (!uses_left)
+			spawn(2000)
+				uses_left = initial(uses_left)
+
+
 	sleep(10)
 	if(product)
 		var/obj/item/weapon/reagent_containers/food/drinks/sillycup/D = new /obj/item/weapon/reagent_containers/food/drinks/sillycup(loc)

@@ -13,6 +13,9 @@
 #define OPPOSITE_DIR(D) turn(D, 180)
 
 /client
+	var/list/hidden_images = list()
+
+/mob/living/carbon/human
 	var/list/hidden_atoms = list()
 	var/list/hidden_mobs = list()
 
@@ -63,18 +66,19 @@
 	var/delay = 10
 	if(client)
 		var/image/I = null
-		for(var/image in client.hidden_atoms)
+		for(var/image in client.hidden_images)
 			I = image
 			I.override = FALSE
 			spawn (delay)
 				qdel(I)
 			delay += 10
 		check_fov()
-		client.hidden_atoms.Cut()
-		client.hidden_mobs.Cut()
+		client.hidden_images.Cut()
+		hidden_atoms.Cut()
+		hidden_mobs.Cut()
 		fov.dir = dir
 		if(fov.alpha)
-			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), oviewers(10, src)))
+			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), oviewers(src)))
 			
 				var/list/things = list(L)|L.vis_contents 
 				
@@ -83,10 +87,11 @@
 					I.override = TRUE
 						
 					client.images += I
-					client.hidden_atoms += I
+					client.hidden_images += I
+					hidden_atoms += thing
 					
 					if (thing == things[1])
-						client.hidden_mobs += L
+						hidden_mobs += L
 
 						if(pulling == L)//If we're pulling them we don't want them to be invisible, too hard to play like that.
 							I.override = FALSE
@@ -94,13 +99,13 @@
 						else if(L.footstep >= 1)
 							L.in_vision_cones[client] = TRUE
 
-			//Optional items can be made invisible too. Uncomment this part if you wish to items to be invisible.
-			//var/obj/item/O
-			//for(O in cone(src, OPPOSITE_DIR(src.dir), oview(src)))
-			//	I = image("split", O)
-			//	I.override = 1
-			//	src.client.images += I
-			//	src.client.hidden_atoms += I
+			// items are invisible too
+			for(var/obj/item/item in cone(src, OPPOSITE_DIR(dir), oview(src)))
+				I = image("split", item)
+				I.override = TRUE
+				client.images += I
+				client.hidden_images += I
+				hidden_atoms += item
 
 	else
 		return

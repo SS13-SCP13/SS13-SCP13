@@ -25,8 +25,8 @@
 	icon_state = "helmet_nt"
 
 /obj/item/clothing/head/helmet/pcrc
-	name = "\improper PCRC helmet"
-	desc = "A helmet with 'PRIVATE SECURITY' printed on the back in cyan lettering."
+	name = "\improper Guard helmet"
+	desc = "A helmet with 'GUARD' printed on the back in cyan lettering."
 	icon_state = "helmet_pcrc"
 
 /obj/item/clothing/head/helmet/nt/guard

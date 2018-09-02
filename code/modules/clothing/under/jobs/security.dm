@@ -181,7 +181,7 @@
  */
 
 /obj/item/clothing/under/rank/security/navyblue
-	name = "security officer's uniform"
+	name = "security guard's uniform"
 	desc = "The latest in fashionable security outfits."
 	icon_state = "officerblueclothes"
 	item_state = "ba_suit"

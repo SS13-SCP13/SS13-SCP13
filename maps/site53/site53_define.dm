@@ -6,15 +6,15 @@
 
 	lobby_icon = 'icons/lobby.dmi'
 
-	station_levels = list(1,2,3,4,5,6)
-	contact_levels = list(1,2,3,4,5,6)
-	player_levels = list(1,2,3,4,5,6)
-	admin_levels = list(7,8)
+	station_levels = list(1,2,3,4)
+	contact_levels = list(1,2,3,4)
+	player_levels = list(1,2,3,4)
+	admin_levels = list(5,6,7)
 	empty_levels = list()
-	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1,"5"=1,"6"=1, "7"=30, "8"=30)
+	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1, "5"=30, "6"=30, "7"=30)
 	overmap_size = 35
 	overmap_event_areas = 0
-	usable_email_tlds = list("ds90.foundation", "security.ds90.foundation", "science.ds90.foundation", "utility.ds90.foundation")
+	usable_email_tlds = list("site53.foundation", "security.site53.foundation", "science.site53.foundation", "utility.site53.foundation")
 
 	allowed_spawns = list("Cryogenic Storage", "D-Cells", "Light Containment Zone", "Security Base")
 	default_spawn = "Cryogenic Storage"

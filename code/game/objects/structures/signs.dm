@@ -406,6 +406,10 @@
 	name = "\improper Light Containment Zone"
 	icon_state = "lcz"
 
+/obj/structure/sign/directions/site53/adm
+	name = "\improper Administration"
+	icon_state = "direction_adm"
+
 /obj/structure/sign/deck/bridge
 	name = "\improper Bridge Deck"
 	icon_state = "deck-b"

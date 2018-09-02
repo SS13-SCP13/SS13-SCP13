@@ -36,7 +36,7 @@
 	has_email = TRUE
 	title = "Site Director"
 	supervisors = "the SCP Foundation and O5 Council"
-	duties = "<big><b>As the Site Director you are responsible for the operations happening in the Site that you manage.<br>You won't have access to SCP's, or the D-Class area.<br> As Site Director, you should worry about making sure all SOP and safety procedures are followed by delegating to the heads of staff.<br><span style = 'color:red'>It is not your job to jump in where necessary! Terrible roleplay will be punished!</span>"
+	duties = "<big><b>As the Site Director you are responsible for the operations happening in the Site that you manage.<br>You won't have access to SCP's, or the D-Class area.<br> As Site Director, you should worry about making sure all SOP and safety procedures are followed by delegating to the heads of staff.<br><span style = 'color:red'>It is not your job to jump in where necessary! Consistently bad roleplay will be punished under the CoHoS rule!</span>"
 	minimal_player_age = 20
 	economic_modifier = 15
 	ideal_character_age = 50
@@ -89,7 +89,7 @@
 /datum/job/commsofficer
 	has_email = TRUE
 	title = "Communications Officer"
-	supervisors = "the Security Commander and Site Director"
+	supervisors = "the Security Commander"
 	department = "Command"
 	department_flag = COM
 	total_positions = 0
@@ -127,7 +127,7 @@
 /datum/job/cmo
 	has_email = TRUE
 	title = "Chief Medical Officer"
-	supervisors = "the Commanding Officer and the Executive Officer"
+	supervisors = "the Security Commander"
 	economic_modifier = 10
 	minimal_player_age = 21
 	ideal_character_age = 48
@@ -146,7 +146,7 @@
 
 /datum/job/cellguardlieutenant
 	has_email = TRUE
-	title = "Cell Guard Lieutenant"
+	title = "Cell Warden"
 	department = "Security"
 	department_flag = SEC
 	total_positions = 1
@@ -154,6 +154,7 @@
 	supervisors = "the Security Commander"
 	economic_modifier = 4
 	alt_titles = null
+	duties = "<big><b>As the Cell Warden, it is your job to coordinate the cell guards, prevent riots and breakouts. <br>It's also important to note that if you're an asshole or intentionally trying to be one, Class D's are more likely to riot.<br> If a Class D is requested for testing it is not your, or the Cell Guard's job to deliver them to the tests. Hand them over to one of the zone guards, instead.</span>"
 	minimal_player_age = 7
 	ideal_character_age = 30
 	alt_titles = null
@@ -176,7 +177,8 @@
 	department_flag = SEC
 	total_positions = 7
 	spawn_positions = 7
-	supervisors = "the Security Commander"
+	supervisors = "the Cell Warden"
+	duties = "<big><b>As the Cell Guard, it is your job to prevent riots and breakouts. <br>It's also important to note that if you're an asshole or intentionally trying to be one, Class D's are more likely to riot.<br> If a Class D is requested for testing it is not your, or the Cell Guard's job to deliver them to the tests. Hand them over to one of the zone guards, instead.</span>"
 	economic_modifier = 4
 	alt_titles = null
 	minimal_player_age = 5
@@ -202,6 +204,7 @@
 	supervisors = "The Facility Director"
 	department = "Security"
 	department_flag = SEC|COM
+	duties = "<big><b>As the Guard Commander, you have direct say over the Security department. You're not assigned to any zone, but instead should jump in where necessary or requested. You are to speak with your Zone Commanders oftenly, and assign new guards to the right zone, or where it's needed mostly.</span>"
 	economic_modifier = 8
 	minimal_player_age = 21
 	ideal_character_age = 55
@@ -213,7 +216,7 @@
 		/datum/mil_rank/security/o3
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -222,14 +225,14 @@
 
 /datum/job/ltofficer
 	has_email = TRUE
-	title = "Guard Lieutenant"
+	title = "Zone Commander"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
-	supervisors = "the Security Commander"
+	total_positions = 3
+	spawn_positions = 3
+	supervisors = "the Guard Commander"
+	duties = "<big><b>As the Zone Commander, you're the right hand of the Guard Commander, and in charge of a specific zone. In this zone, you have full command of the guards stationed there in every situation, except Code Red or higher. You should ask the Guard Commander which zone you're assigned to, if you joined later in the round. You won't have command over the Cell Guards or Warden.</span>"
 	economic_modifier = 4
-	alt_titles = list("Senior Agent")
 	minimal_player_age = 10
 	ideal_character_age = 45
 	alt_titles = null
@@ -242,10 +245,8 @@
 		/datum/mil_rank/security/o2
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
-
-
 
 /datum/job/ncoofficer
 	has_email = TRUE
@@ -254,7 +255,8 @@
 	department_flag = SEC
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Security Commander"
+	duties = "<big><b>As the Guard you have more access than a Junior Guard, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
+	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
 	alt_titles = list("Agent")
 	minimal_player_age = 5
@@ -271,7 +273,7 @@
 	)
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
 /datum/job/enlistedofficer
@@ -279,9 +281,10 @@
 	title = "Junior Guard"
 	department = "Security"
 	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
-	supervisors = "the Security Commander"
+	total_positions = 8
+	spawn_positions = 8
+	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
+	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
 	alt_titles = list("Junior Agent")
 	minimal_player_age = 0
@@ -297,7 +300,7 @@
 	)
 
 
-	access = list(access_mtflvl1)
+	access = list(access_mtflvl1, access_sciencelvl1)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -308,14 +311,14 @@
 
 /datum/job/juniorscientist
 	has_email = TRUE
-	title = "Junior Scientist"
+	title = "Scientist Associate"
 	department = "Science"
 	department_flag = SCI
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "the Research Director and anyone in a higher position than you"
 	economic_modifier = 4
-	alt_titles = list("Junior Xenobiologist", "Junior Xenoarcheologist")
+	alt_titles = list("Xenobiologist Associate", "Xenoarcheologist Associate")
 	minimal_player_age = 0
 	ideal_character_age = 22
 	alt_titles = null
@@ -412,8 +415,7 @@
 		"Junior Maintenance Technician",
 		"Junior Engine Technician",
 		"Junior Damage Control Technician",
-		"Junior Electrician",
-		"Junior Atmospheric Technician"
+		"Junior Electrician"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	allowed_branches = list(
@@ -440,8 +442,7 @@
 		"Maintenance Technician",
 		"Engine Technician",
 		"Damage Control Technician",
-		"Electrician",
-		"Atmospheric Technician"
+		"Electrician"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	allowed_branches = list(
@@ -469,8 +470,7 @@
 		"Senior Maintenance Technician",
 		"Senior Engine Technician",
 		"Senior Damage Control Technician",
-		"Senior Electrician",
-		"Senior Atmospheric Technician"
+		"Senior Electrician"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/seneng
 	allowed_branches = list(
@@ -586,8 +586,7 @@
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e1,
-		/datum/mil_rank/security/e2)
+		/datum/mil_rank/security/e4)
 
 
 	access = list(access_mtflvl1, access_mtflvl2)
@@ -626,6 +625,27 @@
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
 	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/surgeon
+	allowed_branches = list(
+	/datum/mil_branch/security)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e3)
+
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+/datum/job/emt
+	has_email = TRUE
+	title = "Emergency Medical Technician"
+	department = "Medical"
+	department_flag = MED
+	selection_color = "#013d3b"
+	total_positions = 2
+	spawn_positions = 2
+	ideal_character_age = 40
+	economic_modifier = 5
+	supervisors = "the Chief Medical Officer"
+	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/emt
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
@@ -670,7 +690,7 @@
 	department_flag = SUP
 	total_positions = 0
 	spawn_positions = 0
-	selection_color = "#515151"
+	selection_color = "B4802B"
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
 	ideal_character_age = 24
@@ -698,6 +718,50 @@
 	ideal_character_age = 24
 	alt_titles = list("Interior caretaker")
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/janitor
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+	)
+	allowed_ranks = list(
+	/datum/mil_rank/civ/classd
+	)
+
+	access = list(access_sciencelvl1)
+	minimal_access = list()
+
+/datum/job/chef
+	has_email = TRUE
+	title = "Chef"
+	department = "Civilian"
+	department_flag = CIV
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Head of Personnel"
+	selection_color = "#515151"
+	ideal_character_age = 24
+	alt_titles = list("Cook")
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/chef
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+	)
+	allowed_ranks = list(
+	/datum/mil_rank/civ/classd
+	)
+
+	access = list(access_sciencelvl1)
+	minimal_access = list()
+
+/datum/job/bartender
+	has_email = TRUE
+	title = "Bartender"
+	department = "Civilian"
+	department_flag = CIV
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Head of Personnel"
+	selection_color = "#515151"
+	ideal_character_age = 24
+	alt_titles = list("Waiter")
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/bartender
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
