@@ -100,6 +100,14 @@
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+
+/area/site53/tram/mtf
+	name = "MTF Heli"
+	icon_state = "Sleep"
+	requires_power = 0
+	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
 // SITE 53 SURFACE AREA'S
 
 /area/site53/surface/surface
