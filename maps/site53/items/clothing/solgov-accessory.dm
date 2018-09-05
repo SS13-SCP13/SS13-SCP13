@@ -258,8 +258,8 @@ armour attachments
 	icon_state = "ecflag"
 
 /obj/item/clothing/accessory/armor/tag/solgov/sec
-	name = "\improper POLICE tag"
-	desc = "An armor tag with the word POLICE printed in silver lettering on it."
+	name = "\improper GUARD tag"
+	desc = "An armor tag with the word GUARD printed in silver lettering on it."
 	icon_state = "sectag"
 
 /obj/item/clothing/accessory/armor/tag/solgov/com
@@ -270,6 +270,14 @@ armour attachments
 /obj/item/clothing/accessory/armor/tag/solgov/com/sec
 	name = "\improper POLICE tag"
 	desc = "An armor tag with the words POLICE printed in gold lettering on it."
+
+/obj/item/clothing/accessory/armor/tag/solgov/com/guardcomm
+	name = "\improper GUARD COMMANDER tag"
+	desc = "An armor tag with the words GUARD COMMANDER printed in gold lettering on it."
+
+/obj/item/clothing/accessory/armor/tag/solgov/com/zonecomm
+	name = "\improper ZONE COMMANDER tag"
+	desc = "An armor tag with the words ZONE COMMANDER printed in gold lettering on it."
 
 /obj/item/clothing/accessory/armor/helmcover/blue/sol
 	name = "peacekeeper helmet cover"
@@ -300,7 +308,7 @@ department tags
 
 /obj/item/clothing/accessory/solgov/department/command/marine
 	icon_state = "dept_marine"
-	desc = "Insignia denoting assignment to the command department. These fit Marine Corps uniforms."
+	desc = "Insignia denoting assignment to the command department. These fit Security uniforms."
 	on_rolled = list("down" = "none")
 
 /obj/item/clothing/accessory/solgov/department/engineering
@@ -336,7 +344,7 @@ department tags
 
 /obj/item/clothing/accessory/solgov/department/security/marine
 	icon_state = "dept_marine"
-	desc = "Insignia denoting assignment to the security department. These fit Marine Corps uniforms."
+	desc = "Insignia denoting assignment to the security department. These fit Security uniforms."
 	on_rolled = list("down" = "none")
 
 /obj/item/clothing/accessory/solgov/department/medical

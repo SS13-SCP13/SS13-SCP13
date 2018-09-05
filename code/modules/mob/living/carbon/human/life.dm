@@ -103,17 +103,16 @@
 
 		// spooky SCP-012 ambience
 		var/scp012_music = FALSE
-		for (var/scp012 in GLOB.scp012s)
-			var/atom/A = scp012
-			if (A != src && abs(x - A.x) <= 2 && abs(y - A.y) <= 2 && !abs(z - A.z))
-				scp012_music = TRUE
-				if (world.time >= client.next_scp012_sound)
-					src << sound('sound/scp/012.ogg', channel = 12, volume = 100)
-					client.next_scp012_sound = world.time + 230
-					break
+
+		if (is_scp012_affected())
+
+			scp012_music = TRUE
+			if (world.time >= client.next_scp012_sound)
+				src << sound('sound/scp/012.ogg', channel = 12, volume = 100)
+				client.next_scp012_sound = world.time + 230
 
 		if (!scp012_music && client.next_scp012_sound != -1 && client.next_scp012_sound > world.time)
-			src << sound(null, channel = 012)
+			src << sound(null, channel = 12)
 			client.next_scp012_sound = -1
 
   	// SCP-049 stuff: don't change the order of these checks, they short circuit

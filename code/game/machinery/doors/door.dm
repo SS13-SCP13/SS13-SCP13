@@ -194,6 +194,13 @@
 	return src.attack_hand(user)
 
 /obj/machinery/door/attack_hand(mob/user as mob)
+	if (isscp049_1(user))
+		user.visible_message("<span class='danger'>[user] smashes [src]!</span>")
+		user.do_attack_animation(src)
+		take_damage(20)
+		if (stat & BROKEN && density)
+			open(TRUE)
+		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	return src.attackby(user, user)
 
 /obj/machinery/door/attack_tk(mob/user as mob)

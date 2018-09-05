@@ -218,6 +218,16 @@
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+/area/site53/ulcz/scp173
+	name = "\improper SCP-173"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/ulcz/scp999
+	name = "\improper SCP-999"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
 /area/site53/llcz/scp500
 	name = "\improper SCP-500"
 	icon_state = "research"
@@ -768,5 +778,15 @@
 
 /area/site53/uhcz/scp895
 	name = "\improper Upper SCP-895"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/zonecommanderoffice
+	name = "\improper Zone Commander's Office"
+	icon_state = "security"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/reswing/robotics
+	name = "\improper Robotics Laboratory"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED

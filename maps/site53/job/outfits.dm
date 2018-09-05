@@ -13,6 +13,8 @@
 	suit = /obj/item/clothing/suit/storage/toggle/suit/black
 	id_type = /obj/item/weapon/card/id/adminlvl5
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	name = OUTFIT_JOB_NAME("Head of Human Resources")
@@ -21,6 +23,8 @@
 	suit = /obj/item/clothing/suit/storage/toggle/suit/black
 	id_type = /obj/item/weapon/card/id/adminlvl4
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/command/commsofficer
 	name = OUTFIT_JOB_NAME("Communications Officer")
@@ -28,6 +32,8 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer
 	name = OUTFIT_JOB_NAME("Logistics Officer")
@@ -35,6 +41,8 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl3
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 // END OF COMMAND OUTFITS
 
@@ -42,85 +50,106 @@
 /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	name = OUTFIT_JOB_NAME("Chief Engineer")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
-	l_ear = /obj/item/device/radio/headset/heads/ce
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 
 // Cell Guards
 
 /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
 	name = OUTFIT_JOB_NAME("Cell Warden")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/rank/security2
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
 	name = OUTFIT_JOB_NAME("Cell Guard")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/rank/security2
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 // SECURITY OUTFITS
 
 /decl/hierarchy/outfit/job/site90/crew/command/cos
 	name = OUTFIT_JOB_NAME("Guard Commander")
-	l_ear = /obj/item/device/radio/headset/heads/cos
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/solgov/utility/marine/command
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl5
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
 	name = OUTFIT_JOB_NAME("Zone Commander")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/solgov/utility/marine/tan
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
 	name = OUTFIT_JOB_NAME("Guard")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/solgov/utility/marine/security
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/seclvl3
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
 	name = OUTFIT_JOB_NAME("Junior Guard")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/solgov/utility/marine/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl1
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 // SCIENCE OUTFITS
 
 /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
-	name = OUTFIT_JOB_NAME("Junior Scientist")
+	name = OUTFIT_JOB_NAME("Scientist Associate")
 	uniform = /obj/item/clothing/under/scp/suittie
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl1
 	l_pocket = /obj/item/device/radio
+	gloves = /obj/item/clothing/gloves/latex
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/scientist
-	name = OUTFIT_JOB_NAME("Junior Scientist")
+	name = OUTFIT_JOB_NAME("Scientist")
 	uniform = /obj/item/clothing/under/scp/suittie
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl2
 	l_pocket = /obj/item/device/radio
+	gloves = /obj/item/clothing/gloves/latex
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/seniorscientist
-	name = OUTFIT_JOB_NAME("Junior Scientist")
+	name = OUTFIT_JOB_NAME("Senior Scientist")
 	uniform = /obj/item/clothing/under/scp/suittie
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl4
 	l_pocket = /obj/item/device/radio
+	gloves = /obj/item/clothing/gloves/latex/nitrile
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/researchdirector
 	name = OUTFIT_JOB_NAME("Research Director")
@@ -129,6 +158,9 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl5
 	l_pocket = /obj/item/device/radio
+	gloves = /obj/item/clothing/gloves/latex/nitrile
+	l_ear = null
+	back = null
 
 
 // MISC OUTFITS
@@ -182,6 +214,8 @@
 	id_type = /obj/item/weapon/card/id/seclvl2
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/eng
 	name = OUTFIT_JOB_NAME("Engineer")
@@ -190,6 +224,8 @@
 	id_type = /obj/item/weapon/card/id/seclvl3
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/seneng
 	name = OUTFIT_JOB_NAME("Senior Engineer")
@@ -198,6 +234,8 @@
 	id_type = /obj/item/weapon/card/id/seclvl4
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/conteng
 	name = OUTFIT_JOB_NAME("Containment Engineer")
@@ -206,6 +244,8 @@
 	id_type = /obj/item/weapon/card/id/seclvl4
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 // BRIG OFFICER
 /decl/hierarchy/outfit/job/torch/crew/security/brig_officer
@@ -213,6 +253,8 @@
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2
+	l_ear = null
+	back = null
 
 // MEDICAL OUTFITS
 
@@ -223,6 +265,8 @@
 	shoes = /obj/item/clothing/shoes/white
 	id_type = /obj/item/weapon/card/id/seclvl5
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/ds90/medical/psychiatrist
 	name = OUTFIT_JOB_NAME("Psychiatrist")
@@ -231,6 +275,8 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	id_type = /obj/item/weapon/card/id/seclvl1
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/ds90/medical/chemist
 	name = OUTFIT_JOB_NAME("Chemist")
@@ -239,6 +285,8 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/ds90/medical/medicaldoctor
 	name = OUTFIT_JOB_NAME("Chemist")
@@ -247,6 +295,8 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/ds90/medical/virologist
 	name = OUTFIT_JOB_NAME("Virologist")
@@ -255,14 +305,27 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 /decl/hierarchy/outfit/job/ds90/medical/surgeon
-	name = OUTFIT_JOB_NAME("Virologist")
+	name = OUTFIT_JOB_NAME("Surgeon")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/green
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
+
+/decl/hierarchy/outfit/job/ds90/medical/emt
+	name = OUTFIT_JOB_NAME("Emergency Medical Technician")
+	uniform = /obj/item/clothing/under/rank/medical/scrubs/black
+	shoes = /obj/item/clothing/shoes/white
+	id_type = /obj/item/weapon/card/id/seclvl2
+	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null
 
 
 
@@ -275,3 +338,5 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
+	l_ear = null
+	back = null

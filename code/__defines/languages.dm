@@ -1,7 +1,7 @@
 // Languages.
-#define LANGUAGE_GALCOM "Galactic Common"
+#define LANGUAGE_GALCOM "English"
 #define LANGUAGE_EAL "Encoded Audio Language"
-#define LANGUAGE_SOL_COMMON "Sol Common"
+#define LANGUAGE_SOL_COMMON "English"
 #define LANGUAGE_UNATHI "Sinta'unathi"
 #define LANGUAGE_SIIK_MAAS "Siik'maas"
 #define LANGUAGE_SIIK_TAJR "Siik'tajr"

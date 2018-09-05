@@ -153,4 +153,9 @@
 		/obj/item/device/flashlight/lantern,
 		/obj/item/weapon/shovel,
 		/obj/item/weapon/pickaxe,
-		/obj/item/clothing/glasses/meson)
+		/obj/item/clothing/glasses/meson,
+		/obj/item/device/measuring_tape,
+		/obj/item/weapon/storage/bag/fossils,
+		/obj/item/device/ano_scanner,
+		/obj/item/device/depth_scanner,
+		/obj/item/weapon/storage/excavation)

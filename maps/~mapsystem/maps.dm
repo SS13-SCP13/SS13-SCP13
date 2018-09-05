@@ -109,38 +109,15 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 
 	//Factions prefs stuff
 	var/list/citizenship_choices = list(
-		"Earth",
-		"Mars",
-		"Terra",
-		"Gaia",
-		"Moghes",
-		"Ahdomai",
-		"Qerrbalak"
+		"Earth"
 	)
 
 	var/list/home_system_choices = list(
-		"Sol",
-		"Nyx",
-		"Tau Ceti",
-		"Epsilon Ursae Minoris",
-		"Zamsiin-lr",
-		"Gilgamesh"
+		"Sol"
 		)
 
 	var/list/faction_choices = list(
-		"Sol Central Government",
-		"Terran Colonial Confederation",
-		"Vey Med",
-		"Einstein Engines",
-		"Free Trade Union",
-		"NanoTrasen",
-		"Ward-Takahashi GMB",
-		"Gilthari Exports",
-		"Grayson Manufactories Ltd.",
-		"Aether Atmospherics",
-		"Zeng-Hu Pharmaceuticals",
-		"Hephaestus Industries",
-		"Commonwealth of Ahdomai"
+		"SCP Foundation"
 		)
 
 	var/list/religion_choices = list(
