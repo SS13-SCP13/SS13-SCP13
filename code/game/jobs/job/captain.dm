@@ -87,3 +87,61 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	access_mtflvl4
 	)
 	minimal_access = list()
+
+/datum/job/o5rep
+	has_email = TRUE
+	title = "O5 Representative"
+	department = "Civilian"
+	selection_color = "#2f2f7f"
+	department_flag = COM
+	total_positions = 1
+	spawn_positions = 1
+	duties = "<big><b>As the O5 Representative, your task is to generally assess the site, and you are to fax the O5 Council of any wrongdoings or SOP violations. You can also mediate between two employees if it is absolutely necessary. <span style = 'color:red'>REMEMBER!</span> This is a heavy roleplay job, and bad roleplay will be punished. Your job is not to assess SCP's, nor will you have access there. So don't try."
+	supervisors = "the Research Director"
+	economic_modifier = 4
+	minimal_player_age = 5
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/o5rep
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/civ/classa
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
+		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4, access_adminlvl5)
+	minimal_access = list()
+
+/datum/job/archivist
+	has_email = TRUE
+	title = "Archivist"
+	department = "Civilian"
+	selection_color = "#2f2f7f"
+	department_flag = COM|SCI
+	total_positions = 1
+	spawn_positions = 1
+	duties = "<big><b>As the Archivist, it is your job to make sure the proper test logs are digitalized and saved in the digital archive, thus safekeeping them forever. You must be picky and selective, and only get those with great quality out! <span style = 'color:red'>REMEMBER!</span> If you put in nonsensical things, or copypasta's such as Woody's got Wood, you will be permanently job banned WITHOUT chance to appeal.</span>"
+	supervisors = "the Research Director"
+	economic_modifier = 4
+	minimal_player_age = 5
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/archivist
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/civ/classa
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
+		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	minimal_access = list()

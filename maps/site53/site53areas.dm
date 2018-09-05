@@ -318,6 +318,12 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	icon_state = "head_quarters"
 
+/area/site53/uez/o5repoffice
+	name = "\improper O5 Representative's Office"
+	sound_env = MEDIUM_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	icon_state = "head_quarters"
+
 /area/site53/uez/hopoffice
 	name = "\improper Head of Personnel's Office"
 	sound_env = MEDIUM_SOFTFLOOR

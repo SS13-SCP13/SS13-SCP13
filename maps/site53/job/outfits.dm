@@ -205,6 +205,24 @@
 	back = null
 	l_ear = null
 
+/decl/hierarchy/outfit/job/site90/crew/civ/archivist
+	name = OUTFIT_JOB_NAME("Archivist")
+	uniform = /obj/item/clothing/under/suit_jacket/really_black
+	shoes = /obj/item/clothing/shoes/laceup
+	l_pocket = /obj/item/device/radio
+	id_type = /obj/item/weapon/card/id/sciencelvl3
+	back = null
+	l_ear = null
+
+/decl/hierarchy/outfit/job/site90/crew/civ/o5rep
+	name = OUTFIT_JOB_NAME("O5 Representative")
+	uniform = /obj/item/clothing/under/suit_jacket/really_black
+	shoes = /obj/item/clothing/shoes/laceup
+	l_pocket = /obj/item/device/radio
+	id_type = /obj/item/weapon/card/id/adminlvl5
+	back = null
+	l_ear = null
+
 // ENGINEERING STUFF
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng

@@ -44,7 +44,6 @@
 		/obj/item/clothing/suit/armor/vest/nt,
 		/obj/item/clothing/head/helmet,
 		/obj/item/weapon/cartridge/hop,
-		/obj/item/device/radio/headset/heads/hop,
 		/obj/item/weapon/storage/box/ids = 2,
 		/obj/item/weapon/gun/projectile/sec/flash,
 		/obj/item/device/flash
