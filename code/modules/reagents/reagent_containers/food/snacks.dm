@@ -1621,7 +1621,8 @@
 	filling_color = "#adac7f"
 	center_of_mass = "x=16;y=14"
 
-	var/wrapped = 0
+	var/wrapped = FALSE
+	var/spent = FALSE
 	var/monkey_type = /mob/living/carbon/human/monkey
 
 /obj/item/weapon/reagent_containers/food/snacks/monkeycube/New()
@@ -1633,6 +1634,9 @@
 		Unwrap(user)
 
 /obj/item/weapon/reagent_containers/food/snacks/monkeycube/proc/Expand()
+	if (spent)
+		return
+	spent = TRUE
 	src.visible_message("<span class='notice'>\The [src] expands!</span>")
 	var/mob/monkey = new monkey_type
 	monkey.dropInto(src.loc)
