@@ -34,6 +34,9 @@
 	if(start_grab_name)
 		current_grab = all_grabstates[start_grab_name]
 
+	var/mob/M = loc 
+	M.grabs += src
+
 /obj/item/grab/examine(var/user)
 	..()
 	var/obj/item/O = get_targeted_organ()
@@ -54,6 +57,8 @@
 
 /obj/item/grab/dropped()
 	..()
+	var/mob/M = loc 
+	M.grabs -= src
 	loc = null
 	if(!QDELETED(src))
 		qdel(src)
