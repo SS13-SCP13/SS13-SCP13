@@ -10,8 +10,8 @@
 	name = "SCP-999"
 	desc = "A large, amorphous, gelatinous mass of translucent orange slime. It looks really happy."
 	icon = 'icons/SCP/scp-999.dmi'
-	icon_living = "999"
-	icon_dead = "999_press_f"
+	icon_living = "SCP-999"
+	icon_dead = "SCP-999_d"
 	alpha = 200
 	SCP = /datum/scp/SCP_999
 	maxHealth = 1500
@@ -23,11 +23,11 @@
 
 /mob/living/simple_animal/scp_999/update_icon()
 	if(stat != DEAD && resting)
-		icon_state = "999_rest"
+		icon_state = "SCP-999_rest"
 	else if(stat == DEAD)
-		icon_state = "999_press_f"
+		icon_state = "SCP-999_d"
 	else
-		icon_state = "999"
+		icon_state = "SCP-999"
 
 /mob/living/simple_animal/scp_999/death()
 	. = ..()
