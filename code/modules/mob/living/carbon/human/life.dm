@@ -74,6 +74,7 @@
 
 		//Organs and blood
 		handle_organs()
+
 		stabilize_body_temperature() //Body temperature adjusts itself (self-regulation)
 
 		handle_shock()
@@ -82,9 +83,10 @@
 
 		handle_medical_side_effects()
 
-	// spooky SCP-106 music
+	
 	if (client)
 
+		// spooky SCP-106 music
 		var/scp106_music = FALSE
 		for (var/scp106 in GLOB.scp106s)
 			var/atom/A = scp106
@@ -95,13 +97,11 @@
 					client.next_scp106_sound = world.time + 1500 // a bit longer than the ogg itself
 					break
 
-		if (!scp106_music && client.next_scp106_sound != -1)
+		if (!scp106_music && client.next_scp106_sound != -1 && client.next_scp106_sound > world.time)
 			src << sound(null, channel = 106)
 			client.next_scp106_sound = -1
 
-	// spooky SCP-012 ambience
-	if (client)
-
+		// spooky SCP-012 ambience
 		var/scp012_music = FALSE
 		for (var/scp012 in GLOB.scp012s)
 			var/atom/A = scp012
@@ -112,19 +112,19 @@
 					client.next_scp012_sound = world.time + 230
 					break
 
-		if (!scp012_music && client.next_scp012_sound != -1)
+		if (!scp012_music && client.next_scp012_sound != -1 && client.next_scp012_sound > world.time)
 			src << sound(null, channel = 012)
 			client.next_scp012_sound = -1
 
-  // SCP-049 stuff 
-	if (!isscp049(src) && !isscp049_1(src) && !isscp106(src) && !pestilence && prob(5) && prob(1)) // a 1 in 2,000 chance every 2 seconds = 66 minutes?
+  	// SCP-049 stuff: don't change the order of these checks, they short circuit
+	if (prob(1) && prob(5) && type == /mob/living/carbon/human && !isscp049_1(src) && !pestilence) // a 1 in 2,000 chance every 2 seconds = 66 minutes?
 		pestilence = TRUE
 
 	if(!handle_some_updates())
 		return											//We go ahead and process them 5 times for HUD images and other stuff though.
 
 	//Update our name based on whether our face is obscured/disfigured
-	if (isscp049_1(src))
+	if (name != real_name && isscp049_1(src))
 		SetName(real_name)
 	else
 		SetName(get_visible_name())
