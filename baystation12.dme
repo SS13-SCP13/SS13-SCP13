@@ -10,6 +10,7 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
+#include "donator.dm"
 #include "code\_macros.dm"
 #include "code\client_macros.dm"
 #include "code\hub.dm"
@@ -1381,6 +1382,10 @@
 #include "code\modules\detectivework\tools\storage.dm"
 #include "code\modules\detectivework\tools\swabs.dm"
 #include "code\modules\detectivework\tools\uvlight.dm"
+#include "code\modules\donator\_readme.dm"
+#include "code\modules\donator\client.dm"
+#include "code\modules\donator\donator_holder.dm"
+#include "code\modules\donator\load_donators.dm"
 #include "code\modules\economy\Accounts.dm"
 #include "code\modules\economy\Accounts_DB.dm"
 #include "code\modules\economy\ATM.dm"

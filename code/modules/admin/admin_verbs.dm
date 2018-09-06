@@ -179,6 +179,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/cmd_debug_tog_aliens,
 	/client/proc/air_report,
 	/client/proc/reload_admins,
+	/client/proc/reload_donators,
 	/client/proc/reload_mentors,
 	/client/proc/restart_controller,
 	/client/proc/print_random_map,
@@ -574,7 +575,7 @@ var/list/admin_verbs_sendev = list(
 /client/proc/colorooc()
 	set category = "Fun"
 	set name = "OOC Text Color"
-	if(!holder)	return
+	if(!can_select_ooc_color(src))	return
 	var/response = alert(src, "Please choose a distinct color that is easy to read and doesn't mix with all the other chat and radio frequency colors.", "Change own OOC color", "Pick new color", "Reset to default", "Cancel")
 	if(response == "Pick new color")
 		prefs.ooccolor = input(src, "Please select your OOC colour.", "OOC colour") as color
