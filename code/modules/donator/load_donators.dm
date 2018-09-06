@@ -9,6 +9,7 @@ proc/load_donators()
 	GLOB.donator_keys.Cut()
 
 	for(var/client/C in GLOB.donators)
+		C.donator_holder.remove_flags(C.donator_holder.flags)
 		C.donator_holder = null
 	GLOB.donators.Cut()
 
@@ -36,7 +37,7 @@ proc/load_donators()
 		//load permissions associated with this rank
 		var/perms = 0
 		if(rank == "donator")
-			perms |= D_TAG + D_OOCCOLOUR
+			perms |= D_TAG + D_OOCCOLOUR + D_DOOC
 
 		var/datum/donator/D = new /datum/donator(GLOB.ckey_directory[ckey], perms)
 

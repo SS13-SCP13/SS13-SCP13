@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6	{color: #0000ff;font-family: Georgia, Verdana, sans-serif
 .ooc .developer			{color: #1b521f;}
 .ooc .admin				{color: #b82e00;}
 .ooc .aooc				{color: #960018;}
+.ooc .dooc				{color: #CC0099;}
 
 .staffwarn				{color: #ff0000; font-weight:bold; font-size: 150%;}
 /* Admin: Private Messages */
