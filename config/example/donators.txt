@@ -1,0 +1,9 @@
+######################################################################
+# Basically, ckey goes first. Rank goes after the "-"                #
+# Case is not important for ckey.                                    #
+# Case IS important for the rank.                                    #
+# Much like admins.txt                                               #
+# Currently the only rank that exists is 'donator'                   #
+######################################################################
+
+# not_a_user - donator
