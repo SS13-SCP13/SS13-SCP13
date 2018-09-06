@@ -42,7 +42,7 @@
 	set name = "Devsay"
 	set hidden = 1
 
-	if(!check_rights(R_MENTOR))	return
+	if(!check_rights(R_DEBUG|R_MOD))	return
 
 	msg = sanitize(msg)
 	log_admin("DEV: [key_name(src)] : [msg]")
@@ -53,8 +53,9 @@
 	var/sender_name = key_name(usr, 1)
 	if(check_rights(R_ADMIN, 0))
 		sender_name = "<span class='admin'>[sender_name]</span>"
-	for(var/client/C in GLOB.admins)
-		to_chat(C, "<span class='dev_channel'>" + create_text_tag("developer", "DEV:", C) + " <span class='name'>[sender_name]</span>([admin_jump_link(mob, C.holder)]): <span class='message'>[msg]</span></span>")
+	for(var/client/C in GLOB.clients)
+		if(check_rights(R_MOD|R_DEBUG, 0, C))
+			to_chat(C, "<span class='dev_channel'>" + create_text_tag("developer", "DEV:", C) + " <span class='name'>[sender_name]</span>([admin_jump_link(mob, C.holder)]): <span class='message'>[msg]</span></span>")
 
 	feedback_add_details("admin_verb","DS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
