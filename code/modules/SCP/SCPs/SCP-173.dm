@@ -88,7 +88,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 		new feces(loc)
 		return
 	var/mob/living/carbon/human/target
-	var/mob/living/carbon/human/possible_targets = list()
+	var/mob/living/carbon/human/possible_targets = list(null)
 	for(var/mob/living/carbon/human/H in our_view)
 		if(H.SCP)
 			continue
@@ -100,24 +100,25 @@ GLOBAL_LIST_EMPTY(scp173s)
 	if(world.time >= last_snap+50)
 		var/turf/spot
 		target = pick(possible_targets)
-		var/turf/behind_target = get_step(target.loc, turn(target.dir, 180))
-		if(isfloor(behind_target) && get_dist(behind_target, loc) <= 7)
-			spot = behind_target
-		else
-			var/list/directions = shuffle(GLOB.cardinal.Copy())
-			for(var/D in directions)
-				var/turf/T = get_step(target, D)
-				if(isfloor(T) && get_dist(T, loc) <= 7)
-					spot = T
-					break
-		if(!spot) // We couldn't find a spot to go to!
-			return
-		forceMove(spot)
-		dir = get_dir(src, target)
-		visible_message("<span class='danger'>[src] snaps [target]'s neck!</span>")
-		playsound(loc, pick('sound/scp/spook/NeckSnap1.ogg', 'sound/scp/spook/NeckSnap3.ogg'), 50, 1)
-		target.death()
-		last_snap = world.time
+		if (target)
+			var/turf/behind_target = get_step(target.loc, turn(target.dir, 180))
+			if(isfloor(behind_target) && get_dist(behind_target, loc) <= 7)
+				spot = behind_target
+			else
+				var/list/directions = shuffle(GLOB.cardinal.Copy())
+				for(var/D in directions)
+					var/turf/T = get_step(target, D)
+					if(isfloor(T) && get_dist(T, loc) <= 7)
+						spot = T
+						break
+			if(!spot) // We couldn't find a spot to go to!
+				return
+			forceMove(spot)
+			dir = get_dir(src, target)
+			visible_message("<span class='danger'>[src] snaps [target]'s neck!</span>")
+			playsound(loc, pick('sound/scp/spook/NeckSnap1.ogg', 'sound/scp/spook/NeckSnap3.ogg'), 50, 1)
+			target.death()
+			last_snap = world.time
 
 /mob/living/scp_173/can_ventcrawl()
 	if(IsBeingWatched())
