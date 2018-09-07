@@ -102,6 +102,12 @@
 		src.loc = null
 	return ..()
 
+/obj/item/forceMove(location)
+	..(location)
+	var/mob/M = loc 
+	if (M && istype(M) && action_button_name)
+		M.items_with_action_button_names |= src	
+
 /obj/item/device
 	icon = 'icons/obj/device.dmi'
 
@@ -249,6 +255,7 @@
 
 // apparently called whenever an item is removed from a slot, container, or anything else.
 /obj/item/proc/dropped(mob/user as mob)
+
 	if(randpixel)
 		pixel_z = randpixel //an idea borrowed from some of the older pixel_y randomizations. Intended to make items appear to drop at a character
 	if(zoom)
@@ -268,11 +275,19 @@
 
 // called when this item is removed from a storage item, which is passed on as S. The loc variable is already set to the new destination before this is called.
 /obj/item/proc/on_exit_storage(obj/item/weapon/storage/S as obj)
-	return
+	var/mob/M = S.loc 
+	if (action_button_name && M && istype(M) && loc != M)
+		M.items_with_action_button_names -= src
 
 // called when this item is added into a storage item, which is passed on as S. The loc variable is already set to the storage item.
 /obj/item/proc/on_enter_storage(obj/item/weapon/storage/S as obj)
-	return
+	var/mob/M = loc 
+	if (action_button_name && M && istype(M))
+		if (M.l_hand == src || M.r_hand == src)
+			M.items_with_action_button_names |= src	
+		else 
+			M.items_with_action_button_names -= src
+
 
 // called when "found" in pockets and storage items. Returns 1 if the search should end.
 /obj/item/proc/on_found(mob/finder as mob)
