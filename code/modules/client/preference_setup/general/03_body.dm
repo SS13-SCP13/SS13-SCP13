@@ -463,11 +463,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		var/third_limb = null  // if you try to unchange the hand, the arm should also change
 
 		// Do not let them amputate their entire body, ty.
-		var/list/choice_options = list("Normal","Amputated","Prosthesis")
+		var/list/choice_options = list("Normal","Amputated") //lmao easier to fix than disabling a species jesus fuck.
 
 		//Dare ye who decides to one day make fbps be able to have fleshy bits. Heed my warning, recursion is a bitch. - Snapshot
 		if(pref.organ_data[BP_CHEST] == "cyborg")
-			choice_options = list("Amputated", "Prosthesis")
+			choice_options = list("Amputated")
 
 		switch(organ_tag)
 			if("Left Leg")
