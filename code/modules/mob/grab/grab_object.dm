@@ -34,8 +34,7 @@
 	if(start_grab_name)
 		current_grab = all_grabstates[start_grab_name]
 
-	var/mob/M = loc 
-	M.grabs += src
+	attacker.grabs += src
 
 /obj/item/grab/examine(var/user)
 	..()
@@ -56,9 +55,10 @@
 	current_grab.hit_with_grab(src)
 
 /obj/item/grab/dropped()
-	..()
 	var/mob/M = loc 
-	M.grabs -= src
+	if (M && istype(M))
+		M.grabs -= src
+	..()
 	loc = null
 	if(!QDELETED(src))
 		qdel(src)
@@ -70,6 +70,7 @@
 		affecting.reset_plane_and_layer()
 		affecting = null
 	if(assailant)
+		assailant.grabs -= src
 		assailant = null
 	return ..()
 
