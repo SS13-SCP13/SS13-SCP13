@@ -298,13 +298,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			var/datum/job/ref = job_master.occupations_by_type[/datum/job/assistant]
 			if (ref && ref.is_position_available())
 				job_master.EquipRank(H, "Class D", TRUE)
+				
 				H.do_possession(src)
-				// send us to the spawnpoint 
-				var/datum/spawnpoint/spawnpoint = job_master.get_spawnpoint_for(H.client, "Class D")
-				H.loc = pick(spawnpoint.turfs)
-				// we failed to spawn
-				if (istype(H.loc, /turf/space))
-					H.forceMove(get_turf(job_master.get_roundstart_spawnpoint("Class D")))
+				H.forceMove(get_turf(job_master.get_roundstart_spawnpoint("Class D")))
 
 				H.h_style = H.client.prefs.h_style
 				H.update_icon()
