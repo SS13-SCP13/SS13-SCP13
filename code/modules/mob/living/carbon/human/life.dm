@@ -77,12 +77,12 @@
 
 		stabilize_body_temperature() //Body temperature adjusts itself (self-regulation)
 
-		handle_shock()
+		if (prob(20))
+			handle_shock()
 
 		handle_pain()
 
 		handle_medical_side_effects()
-
 	
 	if (client)
 
@@ -892,28 +892,29 @@
 	if(stat == UNCONSCIOUS && world.time - l_move_time < 5 && prob(10))
 		to_chat(src,"<span class='notice'>You feel like you're [pick("moving","flying","floating","falling","hovering")].</span>")
 
+// only called every 3 ticks
 /mob/living/carbon/human/handle_stomach()
-	spawn(0)
-		for(var/a in stomach_contents)
-			if(!(a in contents) || isnull(a))
-				stomach_contents.Remove(a)
+	set waitfor = FALSE
+	for(var/a in stomach_contents)
+		if(!(a in contents) || isnull(a))
+			stomach_contents.Remove(a)
+			continue
+		if(iscarbon(a)|| isanimal(a))
+			var/mob/living/M = a
+			if(M.stat == DEAD)
+				M.death(1)
+				stomach_contents.Remove(M)
+				qdel(M)
 				continue
-			if(iscarbon(a)|| isanimal(a))
-				var/mob/living/M = a
-				if(M.stat == DEAD)
-					M.death(1)
-					stomach_contents.Remove(M)
-					qdel(M)
-					continue
-				if(life_tick % 3 == 1)
-					if(!(M.status_flags & GODMODE))
-						M.adjustBruteLoss(5)
-					nutrition += 10
+			if(!(M.status_flags & GODMODE))
+				M.adjustBruteLoss(5)
+			nutrition += 10
 
 /mob/living/carbon/human/proc/handle_changeling()
 	if(mind && mind.changeling)
 		mind.changeling.regenerate()
 
+// this only gets called every 5 ticks now
 /mob/living/carbon/human/proc/handle_shock()
 	..()
 	if(status_flags & GODMODE)	return 0	//godmode
@@ -925,14 +926,14 @@
 		shock_stage = max(shock_stage, 61)
 	var/traumatic_shock = get_shock()
 	if(traumatic_shock >= max(30, 0.8*shock_stage))
-		shock_stage += 1
+		shock_stage += 5
 	else
 		shock_stage = min(shock_stage, 160)
-		var/recovery = 1
+		var/recovery = 5
 		if(traumatic_shock < 0.5 * shock_stage) //lower shock faster if pain is gone completely
-			recovery++
+			recovery += 5
 		if(traumatic_shock < 0.25 * shock_stage)
-			recovery++
+			recovery += 5
 		shock_stage = max(shock_stage - recovery, 0)
 		return
 	if(stat) return 0
