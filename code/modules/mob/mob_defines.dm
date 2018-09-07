@@ -169,3 +169,5 @@
 	var/silent = null
 
 	var/list/grabs = list()
+
+	var/list/items_with_action_button_names = list()
