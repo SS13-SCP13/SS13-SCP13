@@ -1,4 +1,5 @@
 GLOBAL_LIST_EMPTY(scp106s)
+GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /mob/living/carbon/human/scp106
 	desc = "A rotting, elderly old man."
@@ -315,3 +316,19 @@ GLOBAL_LIST_EMPTY(scp106s)
 /obj/structure/femur_breaker 
 	icon = 'icons/obj/femurbreaker.dmi'
 	density = TRUE
+
+/obj/structure/femur_breaker/MouseDrop_T(mob/target, mob/user)
+	if (target && user && ishuman(target))
+		visible_message("<span class = 'warning'>[target] starts to put [user] into the femur breaker...</span>")
+		if (do_mob(user, target, 3 SECONDS))
+			visible_message("<span class = 'danger'>[target] puts [user] into the femur breaker.</span>")
+			var/mob/living/carbon/human/H = target
+			H.forceMove(get_turf(src))
+			for (var/obj/item/organ/external/leg/L in H.organs)
+				if (!(L.status & BROKEN))
+					L.fracture()
+					spawn (10 SECONDS)
+						for (var/scp106 in GLOB.scp106s)
+							var/atom/movable/A = scp106 
+							A.forceMove(pick(GLOB.scp106_spawnpoints))
+					break
