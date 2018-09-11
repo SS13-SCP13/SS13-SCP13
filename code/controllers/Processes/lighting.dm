@@ -23,7 +23,7 @@
 /datum/controller/process/lighting/setup()
 	name = "lighting"
 
-	schedule_interval = 0 // run as fast as you possibly can
+	schedule_interval = 1 // run as fast as you possibly can
 	sleep_interval = 10 
 	create_all_lighting_overlays()
 	lighting_overlays_initialised = TRUE
@@ -36,7 +36,9 @@
 
 	lighting_update_lights_old = lighting_update_lights //We use a different list so any additions to the update lists during a delay from scheck() don't cause things to be cut from the list without being updated.
 	lighting_update_lights = list()
-	for(var/datum/light_source/L in lighting_update_lights_old)
+	for(var/source in lighting_update_lights_old)
+
+		var/datum/light_source/L = source
 
 		if(L.check() || L.destroyed || L.force_update)
 			L.remove_lum()
