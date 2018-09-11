@@ -41,6 +41,8 @@
 			return global.SSair;
 		if("SSairflow")
 			return global.SSairflow;
+		if("SSalarm")
+			return global.SSalarm;
 		if("SSatoms")
 			return global.SSatoms;
 		if("SSfastprocess")
@@ -69,6 +71,8 @@
 			return global.SSsun;
 		if("SStimer")
 			return global.SStimer;
+		if("SSturf")
+			return global.SSturf;
 		if("SSvines")
 			return global.SSvines;
 		if("SSwireless")
@@ -153,8 +157,6 @@
 			return global.air_blocked;
 		if("air_processing_killed")
 			return global.air_processing_killed;
-		if("alarm_manager")
-			return global.alarm_manager;
 		if("alien_whitelist")
 			return global.alien_whitelist;
 		if("allCasters")
@@ -769,8 +771,6 @@
 			return global.priv_syndicate_access;
 		if("processScheduler")
 			return global.processScheduler;
-		if("processing_turfs")
-			return global.processing_turfs;
 		if("prometheans")
 			return global.prometheans;
 		if("protected_objects")
@@ -1224,8 +1224,8 @@
 			global.air_blocked=newval;
 		if("air_processing_killed")
 			global.air_processing_killed=newval;
-		if("alarm_manager")
-			global.alarm_manager=newval;
+		if("airlock_overlays")
+			global.airlock_overlays=newval;
 		if("alien_whitelist")
 			global.alien_whitelist=newval;
 		if("allCasters")
@@ -1840,8 +1840,6 @@
 			global.priv_syndicate_access=newval;
 		if("processScheduler")
 			global.processScheduler=newval;
-		if("processing_turfs")
-			global.processing_turfs=newval;
 		if("prometheans")
 			global.prometheans=newval;
 		if("protected_objects")
@@ -2162,6 +2160,7 @@
 	"SKILLS",
 	"SSair",
 	"SSairflow",
+	"SSalarm",
 	"SSatoms",
 	"SSfastprocess",
 	"SSgarbage",
@@ -2176,6 +2175,7 @@
 	"SSskybox",
 	"SSsun",
 	"SStimer",
+	"SSturf",
 	"SSvines",
 	"SSwireless",
 	"SSxenoarch",
@@ -2218,7 +2218,7 @@
 	"air_alarm_topic",
 	"air_blocked",
 	"air_processing_killed",
-	"alarm_manager",
+	"airlock_overlays",
 	"alien_whitelist",
 	"allCasters",
 	"allConsoles",
