@@ -11,10 +11,12 @@ var/list/whitelist = list()
 	whitelist = file2list(WHITELISTFILE)
 	if(!whitelist.len)	whitelist = null
 
-/proc/check_whitelist(mob/M /*, var/rank*/)
-	if(!whitelist)
-		return 0
-	return ("[M.ckey]" in whitelist)
+/proc/check_whitelist(mob/M, var/rank)
+	if(whitelist)
+		for (var/line in whitelist)
+			if (M.ckey in line)
+				if ("+[rank]" in line)
+					return TRUE 
 
 /var/list/alien_whitelist = list()
 

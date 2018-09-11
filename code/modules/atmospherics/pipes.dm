@@ -1,3 +1,5 @@
+#define PIPE_PROCESS_CHECK if (prob(80)) return
+
 /obj/machinery/atmospherics/pipe
 
 	var/datum/gas_mixture/air_temporary // used when reconstructing a pipeline that broke
@@ -207,6 +209,7 @@
 	update_icon()
 
 /obj/machinery/atmospherics/pipe/simple/Process()
+	PIPE_PROCESS_CHECK
 	if(!parent) //This should cut back on the overhead calling build_network thousands of times per cycle
 		..()
 	else if(leaking)
@@ -475,6 +478,7 @@
 	return list(node1, node2, node3)
 
 /obj/machinery/atmospherics/pipe/manifold/Process()
+	PIPE_PROCESS_CHECK
 	if(!parent)
 		..()
 	else
@@ -724,6 +728,7 @@
 	return list(node1, node2, node3, node4)
 
 /obj/machinery/atmospherics/pipe/manifold4w/Process()
+	PIPE_PROCESS_CHECK
 	if(!parent)
 		..()
 	else
@@ -992,6 +997,7 @@
 	return list(node)
 
 /obj/machinery/atmospherics/pipe/cap/Process()
+	PIPE_PROCESS_CHECK
 	if(!parent)
 		..()
 	else
@@ -1113,6 +1119,7 @@
 	. = ..()
 
 /obj/machinery/atmospherics/pipe/tank/Process()
+	PIPE_PROCESS_CHECK
 	if(!parent)
 		..()
 	else
@@ -1292,6 +1299,7 @@
 	volume = 1000
 
 /obj/machinery/atmospherics/pipe/vent/Process()
+	PIPE_PROCESS_CHECK
 	if(!parent)
 		if(build_killswitch <= 0)
 			. = PROCESS_KILL

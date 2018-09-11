@@ -28,7 +28,8 @@
 			bad_external_organs |= Ex
 
 	//processing internal organs is pretty cheap, do that first.
-	for(var/obj/item/organ/I in internal_organs)
+	for(var/organ in internal_organs)
+		var/obj/item/organ/I = organ
 		I.Process()
 
 	handle_stance()
@@ -37,7 +38,8 @@
 	if(!force_process && !bad_external_organs.len)
 		return
 
-	for(var/obj/item/organ/external/E in bad_external_organs)
+	for(var/external in bad_external_organs)
+		var/obj/item/organ/external/E = external
 		if(!E)
 			continue
 		if(!E.need_process())
