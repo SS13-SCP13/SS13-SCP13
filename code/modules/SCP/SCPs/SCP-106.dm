@@ -214,9 +214,6 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	
 		if (!isstructure(O) && !ismachinery(O))
 			continue
-
-		if (istype(O, /obj/machinery/door/airlock/vault))
-			continue
 	
 		phase_cooldown = world.time + (PHASE_TIME + 5)
 		
