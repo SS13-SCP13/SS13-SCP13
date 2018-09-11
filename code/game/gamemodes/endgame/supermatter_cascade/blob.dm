@@ -16,7 +16,7 @@
 
 /turf/unsimulated/wall/supermatter/New()
 	..()
-	processing_turfs.Add(src)
+	START_PROCESSING(SSturf, src)
 	next_check = world.time + 5 SECONDS
 
 	// Nom.
@@ -24,19 +24,18 @@
 		Consume(A)
 
 /turf/unsimulated/wall/supermatter/Destroy()
-	processing_turfs.Remove(src)
-	..()
+	STOP_PROCESSING(SSturf, src)
+	. = ..()
 
-/turf/unsimulated/wall/supermatter/process()
+/turf/unsimulated/wall/supermatter/Process(wait, times_fired)
 	// Only check infrequently.
-	if(next_check>world.time) return
+	var/how_often = max(round(5 SECONDS/wait), 1)
+	if(times_fired % how_often)
+		return
 
-	// No more available directions? Shut down process().
+	// No more available directions? Stop processing.
 	if(!avail_dirs.len)
 		return PROCESS_KILL
-
-	// We're checking, reset the timer.
-	next_check = world.time + 5 SECONDS
 
 	// Choose a direction.
 	var/pdir = pick(avail_dirs)
@@ -51,6 +50,7 @@
 			if(istype(T,type)) // In case another blob came first, don't create another blob
 				return
 			T.ChangeTurf(type)
+
 
 /turf/unsimulated/wall/supermatter/attack_generic(mob/user as mob)
 	if(istype(user))

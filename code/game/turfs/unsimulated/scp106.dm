@@ -8,15 +8,15 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 
 /turf/unsimulated/floor/scp106/New()
 	..()
-	processing_turfs += src
+	START_PROCESSING(SSturf, src)
 	GLOB.scp106_floors += src
 
 /turf/unsimulated/floor/scp106/Destroy()
-	processing_turfs -= src
+	STOP_PROCESSING(SSturf, src)
 	GLOB.scp106_floors -= src
 	. = ..()
 
-/turf/unsimulated/floor/scp106/process()
+/turf/unsimulated/floor/scp106/Process()
 	for (var/mob/living/L in contents)
 		if (isscp106(L))
 			// since we "take" 0.1x damage in the PD, these actually become -5
