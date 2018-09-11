@@ -26,6 +26,7 @@
 			return
 		if ("scp106")
 			new /mob/living/carbon/human/scp106 (loc)
+			GLOB.scp106_spawnpoints += loc
 			delete_me = 1
 			return
 		if ("scp049")

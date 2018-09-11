@@ -31,12 +31,12 @@ var/global/floorIsLava = 0
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
 /datum/admins/New()
 	..()
-	global.admin_datums_by_value += src 
-	
+	global.admin_datums_by_value += src
+
 /datum/admins/Destroy()
-	global.admin_datums_by_value -= src 
+	global.admin_datums_by_value -= src
 	return ..()
-	
+
 /datum/admins/proc/show_player_panel(var/mob/M in SSmobs.mob_list)
 	set category = "Admin"
 	set name = "Show Player Panel"
@@ -736,6 +736,22 @@ var/global/floorIsLava = 0
 		to_world("<B>The AOOC channel has been globally disabled!</B>")
 	log_and_message_admins("toggled AOOC.")
 	feedback_add_details("admin_verb","TAOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/toggledooc()
+	set category = "Server"
+	set desc="Globally Toggles DOOC"
+	set name="Toggle DOOC"
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	config.donator_ooc_allowed = !(config.donator_ooc_allowed)
+	if (config.donator_ooc_allowed)
+		to_world("<B>The DOOC channel has been globally enabled!</B>")
+	else
+		to_world("<B>The DOOC channel has been globally disabled!</B>")
+	log_and_message_admins("toggled DOOC.")
+	feedback_add_details("admin_verb","TDOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/togglelooc()
 	set category = "Server"

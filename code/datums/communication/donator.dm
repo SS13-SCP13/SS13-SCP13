@@ -1,6 +1,6 @@
 /decl/communication_channel/dooc
 	name = "DOOC"
-	config_setting = "ooc_allowed"
+	config_setting = "donator_ooc_allowed"
 	expected_communicator_type = /client
 	flags = COMMUNICATION_LOG_CHANNEL_NAME|COMMUNICATION_ADMIN_FOLLOW
 	log_proc = /proc/log_ooc
