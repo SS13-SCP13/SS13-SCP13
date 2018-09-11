@@ -22,7 +22,8 @@
 		handle_random_events()
 
 		//stuff in the stomach
-		handle_stomach()
+		if (prob(33))
+			handle_stomach()
 
 		// eye, ear, brain damages
 		handle_disabilities()

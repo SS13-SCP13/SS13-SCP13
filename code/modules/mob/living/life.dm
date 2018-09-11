@@ -6,8 +6,11 @@
 
 	if (transforming)
 		return
+	
 	if(!loc)
 		return
+
+	var/active = client && client.inactivity < 50
 
 	if(machine && !CanMouseDrop(machine, src))
 		machine = null
@@ -29,14 +32,17 @@
 
 	update_pulling()
 
-	for(var/obj/item/grab/G in grabs)
+	for(var/grab in grabs)
+		var/obj/item/grab/G = grab
 		G.Process()
 
-	handle_actions()
+	if (active)
+		handle_actions()
 
 	update_canmove()
 
-	handle_regular_hud_updates()
+	if (active)
+		handle_regular_hud_updates()
 
 	return 1
 

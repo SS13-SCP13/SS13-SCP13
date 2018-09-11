@@ -70,7 +70,8 @@ mob/living/carbon/human/proc/handle_pain()
 				msg = "OH GOD! Your [damaged_organ.name] is [burning ? "on fire" : "hurting terribly"]!"
 		custom_pain(msg, maxdam, prob(10), damaged_organ, TRUE)
 	// Damage to internal organs hurts a lot.
-	for(var/obj/item/organ/internal/I in internal_organs)
+	for(var/internal in internal_organs)
+		var/obj/item/organ/internal/I = internal
 		if(prob(1) && !((I.status & ORGAN_DEAD) || I.robotic >= ORGAN_ROBOT) && I.damage > 5)
 			var/obj/item/organ/external/parent = get_organ(I.parent_organ)
 			var/pain = 10

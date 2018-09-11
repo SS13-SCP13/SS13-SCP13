@@ -56,14 +56,15 @@
 	if(life_tick % 15 != 0)
 		return 0
 
-	var/list/L = typesof(/datum/medical_effect)-/datum/medical_effect
+	var/list/L = subtypesof(/datum/medical_effect)
 	for(var/T in L)
 		var/datum/medical_effect/M = new T
 		if (M.manifest(src))
 			src.add_side_effect(M.name)
 
 	// One full cycle(in terms of strength) every 10 minutes
-	for (var/datum/medical_effect/M in side_effects)
+	for (var/effect in side_effects)
+		var/datum/medical_effect/M = effect
 		if (!M) continue
 		var/strength_percent = sin((life_tick - M.start) / 2)
 
