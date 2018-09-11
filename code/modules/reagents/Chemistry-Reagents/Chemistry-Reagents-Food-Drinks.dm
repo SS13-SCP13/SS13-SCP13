@@ -2045,3 +2045,122 @@
 
 	glass_name = "special blend whiskey"
 	glass_desc = "Just when you thought regular whiskey was good... This silky, amber goodness has to come along and ruin everything."
+
+//Below are reagents that, as of now, can only be obtained through SCP-294, for now at least.
+
+/datum/reagent/drink/saliva
+	name = "Saliva"
+	description = "Why are you drinking this...?"
+	taste_description = "mouth juices"
+	reagent_state = LIQUID
+	color = "#C0C0C0"
+	nutrition = 0
+
+	glass_name = "saliva"
+	glass_desc = "This is not for you to drink."
+	
+/datum/reagent/drink/saliva
+	name = "Saliva"
+	description = "Why are you drinking this...?"
+	taste_description = "mouth juices"
+	reagent_state = LIQUID
+	color = "#C0C0C0"
+	nutrition = 0
+
+	glass_name = "saliva"
+	glass_desc = "Someone else should be swallowing this."
+	
+/datum/reagent/drink/saliva
+	name = "Saliva"
+	description = "Why are you drinking this...?"
+	taste_description = "mouth juices"
+	reagent_state = LIQUID
+	color = "#C0C0C0"
+	nutrition = 0
+
+	glass_name = "saliva"
+	glass_desc = "This is not for you to drink."
+	
+/datum/reagent/drink/lava
+	name = "Lava"
+	description = "Hot."
+	taste_description = "melting flesh"
+	reagent_state = LIQUID
+	color = "#cf1020"
+	nutrition = -5
+
+	glass_name = "Lava"
+	glass_desc = "It looks very hot!"
+	
+	/datum/reagent/drink/lava/affect_touch(var/mob/living/carbon/M)
+	M.take_organ_damage(2.4 * removed, 0)
+	M.adjustFireLoss(rand(50, 100) * removed)	
+	M.emote("scream")
+	M.visible_message("<span class='warning'>[M] is burnt badly by the lava!</span>")
+
+	/datum/reagent/drink/lava/affect_ingest(var/mob/living/carbon/M)
+	M.take_organ_damage(5 * removed, 0)
+	M.adjustFireLoss(rand(150, 200) * removed)
+	M.emote("scream")
+	
+/datum/reagent/drink/erp
+	name = "Shame"
+	description = "You are a very bad person."
+	taste_description = "shame"
+	reagent_state = LIQUID
+	color = "#FF1D8E"
+	nutrition = 0
+
+	glass_name = "liquid shame"
+	glass_desc = "You feel dirty just looking at this."
+	
+	/datum/reagent/drink/erp/affect_ingest(var/mob/living/carbon/M)
+	M.emote("moan")
+	M.apply_effect(3, STUTTER)
+	
+/datum/reagent/drink/dog
+	name = "Dog"
+	description = "Ew..."
+	taste_description = "puppy smoothie"
+	reagent_state = LIQUID
+	color = "#af111c"
+	nutrition = 2
+
+	glass_name = "blended puppies"
+	glass_desc = "God, why?!"
+	
+/datum/reagent/drink/cat
+	name = "Cat"
+	description = "Ew..."
+	taste_description = "kitty smoothie"
+	reagent_state = LIQUID
+	color = "#af111c"
+	nutrition = 2
+
+	glass_name = "blended kittens"
+	glass_desc = "God, why?!"
+	
+/datum/reagent/drink/mouse
+	name = "Mouse"
+	description = "Ew..."
+	taste_description = "mice smoothie"
+	reagent_state = LIQUID
+	color = "#af111c"
+	nutrition = 2
+
+	glass_name = "blended mice"
+	glass_desc = "God, why?!"
+
+/datum/reagent/drink/yogurt
+	name = "Yogurt"
+	description = "Creamy!"
+	taste_description = "cream"
+	reagent_state = LIQUID
+	color = "#fffdd0"
+	nutrition = 1
+
+	glass_name = "yogurt"
+	glass_desc = "Creamy and fat-free!"
+
+
+
