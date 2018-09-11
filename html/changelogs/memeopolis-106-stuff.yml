@@ -1,0 +1,6 @@
+author: Memeopolis
+delete-after: True
+changes: 
+  - tweak: "Removed SCP-106's 'Exit Pocket Dimension' verb."
+  - rscadd: "Added the femur breaker to recontain SCP-106."
+  - bugfix: "Removed SCP-106's ability to phase through his containment airlock."
