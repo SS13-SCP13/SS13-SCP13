@@ -1,4 +1,5 @@
 GLOBAL_LIST_EMPTY(scp106s)
+GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /mob/living/carbon/human/scp106
 	desc = "A rotting, elderly old man."
@@ -35,9 +36,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 			mind.name = real_name
 
 	verbs += /mob/living/carbon/human/scp106/proc/phase_through_airlock
-	if (loc in GLOB.scp106_floors)
-		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
-	else
+	if (!(loc in GLOB.scp106_floors))
 		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 
 	set_species("SCP-106")
@@ -189,6 +188,11 @@ GLOBAL_LIST_EMPTY(scp106s)
 	else
 		H.scp106_attack(src)
 
+/mob/living/carbon/human/scp106/proc/set_last_xyz()
+	last_x = x
+	last_y = y
+	last_z = z
+
 /mob/living/carbon/human/scp106/proc/go_back()
 	set name = "Return"
 	set category = "SCP"
@@ -196,6 +200,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 	if (last_x != -1) // shouldn't be possible but just in case
 		forceMove(locate(last_x, last_y, last_z))
 	verbs -= /mob/living/carbon/human/scp106/proc/go_back
+	verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 
 #define PHASE_TIME 30
 /mob/living/carbon/human/scp106/var/phase_cooldown = -1
@@ -208,6 +213,9 @@ GLOBAL_LIST_EMPTY(scp106s)
 	for (var/obj/O in get_step(src, dir))
 	
 		if (!isstructure(O) && !ismachinery(O))
+			continue
+
+		if (istype(O, /obj/machinery/door/airlock/vault))
 			continue
 	
 		phase_cooldown = world.time + (PHASE_TIME + 5)
@@ -260,25 +268,10 @@ GLOBAL_LIST_EMPTY(scp106s)
 	set category = "SCP"
 	set desc = "Enter your pocket dimension."
 	if (do_after(src, 30, get_turf(src)))
+		set_last_xyz()
 		forceMove(pick(GLOB.scp106_floors))
 		verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
-		verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
-
-/mob/living/carbon/human/scp106/proc/exit_pocket_dimension()
-	set name = "Exit Pocket Dimension"
-	set category = "SCP"
-	set desc = "Exit your pocket dimension."
-	if (do_after(src, 30, get_turf(src)))
-		if (last_x != -1)
-			forceMove(locate(last_x, last_y, last_z))
-			last_x = -1
-			last_y = -1
-			last_z = -1
-		else
-			forceMove(pick(GLOB.simulated_turfs_scp106))
-		verbs -= /mob/living/carbon/human/scp106/proc/go_back
-		verbs -= /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
-		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+		verbs += /mob/living/carbon/human/scp106/proc/go_back
 
 /mob/living/carbon/human/scp106/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/damage_flags = 0, var/obj/used_weapon = null, var/obj/item/organ/external/given_organ = null)
 	. = ..(damage, damagetype, def_zone, blocked, damage_flags, used_weapon, given_organ)
@@ -287,7 +280,7 @@ GLOBAL_LIST_EMPTY(scp106s)
 			src << "<span class = 'danger'><i>You flee back to your pocket dimension!</i></danger>"
 			forceMove(pick(GLOB.scp106_floors))
 			verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
-			verbs += /mob/living/carbon/human/scp106/proc/exit_pocket_dimension
+			verbs += /mob/living/carbon/human/scp106/proc/go_back
 
 
 // special objects
@@ -321,3 +314,24 @@ GLOBAL_LIST_EMPTY(scp106s)
 	else
 		visible_message("<span class = 'danger'>[L] is warped away!</span>")
 		L.forceMove(pick(GLOB.scp106_floors))
+
+// the femur breaker
+/obj/structure/femur_breaker 
+	icon = 'icons/obj/femurbreaker.dmi'
+	density = TRUE
+
+/obj/structure/femur_breaker/MouseDrop_T(mob/target, mob/user)
+	if (target && user && ishuman(target))
+		visible_message("<span class = 'warning'>[target] starts to put [user] into the femur breaker...</span>")
+		if (do_mob(user, target, 3 SECONDS))
+			visible_message("<span class = 'danger'>[target] puts [user] into the femur breaker.</span>")
+			var/mob/living/carbon/human/H = target
+			H.forceMove(get_turf(src))
+			for (var/obj/item/organ/external/leg/L in H.organs)
+				if (!(L.status & BROKEN))
+					L.fracture()
+					spawn (10 SECONDS)
+						for (var/scp106 in GLOB.scp106s)
+							var/atom/movable/A = scp106 
+							A.forceMove(pick(GLOB.scp106_spawnpoints))
+					break
