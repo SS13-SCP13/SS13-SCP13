@@ -2093,15 +2093,15 @@
 	glass_desc = "It looks very hot!"
 	
 	/datum/reagent/drink/lava/affect_touch(var/mob/living/carbon/M)
-	M.take_organ_damage(5)
-	M.adjustFireLoss(rand(50, 100))	
-	M.emote("scream")
-	M.visible_message("<span class='warning'>[M] is burnt badly by the lava!</span>")
+		M.take_organ_damage(5)
+		M.adjustFireLoss(rand(50, 100))	
+		M.emote("scream")
+		M.visible_message("<span class='warning'>[M] is burnt badly by the lava!</span>")
 
 	/datum/reagent/drink/lava/affect_ingest(var/mob/living/carbon/M)
-	M.take_organ_damage(15)
-	M.adjustFireLoss(rand(150, 200))
-	M.emote("scream")
+		M.take_organ_damage(15)
+		M.adjustFireLoss(rand(150, 200))
+		M.emote("scream")
 	
 /datum/reagent/drink/erp
 	name = "Shame"
@@ -2115,7 +2115,7 @@
 	glass_desc = "You feel dirty just looking at this."
 	
 	/datum/reagent/drink/erp/affect_ingest(var/mob/living/carbon/M)
-	M.emote("moan")
+		M.emote("moan")
 	
 /datum/reagent/drink/dog
 	name = "Dog"
