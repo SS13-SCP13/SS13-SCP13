@@ -27,14 +27,14 @@
 	ks2type = /obj/item/device/encryptionkey/headset_torchrd
 
 /obj/item/device/radio/headset/heads/cos
-	name = "chief of security's headset"
+	name = "guard commander's headset"
 	desc = "The headset of the man who protects your worthless lives."
 	icon_state = "com_headset"
 	item_state = "headset"
 	ks2type = /obj/item/device/encryptionkey/heads/hos
 
 /obj/item/device/radio/headset/headset_deckofficer
-	name = "deck officer's radio headset"
+	name = "logistics officer's radio headset"
 	desc = "The headset of the chief box pusher."
 	icon_state = "cargo_headset"
 	item_state = "headset"

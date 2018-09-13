@@ -25,6 +25,8 @@
 		/obj/item/device/healthanalyzer,
 		/obj/item/clothing/accessory/stethoscope,
 		/obj/item/device/flashlight/pen,
+		/obj/item/weapon/storage/belt/medical/emt,
+		/obj/item/weapon/defibrillator/loaded,
 		/obj/item/clothing/glasses/hud/health,
 		/obj/item/weapon/storage/firstaid/adv,
 		/obj/item/weapon/storage/box/armband/med,
@@ -32,9 +34,7 @@
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/clothing/accessory/holster/thigh,
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/medic, /obj/item/weapon/storage/backpack/satchel_med)),
-		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/med, /obj/item/weapon/storage/backpack/messenger/med)),
-		RANDOM_SCRUBS
+		/obj/item/clothing/under/rank/medical/scrubs/navyblue
 	)
 
 /*
