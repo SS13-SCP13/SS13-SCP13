@@ -335,6 +335,7 @@
 	ini_dir = dir
 
 	update_connections(1)
+	update_icon()
 
 	update_nearby_tiles(need_rebuild=1)
 	update_nearby_icons()
@@ -368,6 +369,8 @@
 	anchored = new_anchored
 	update_verbs()
 	update_nearby_icons()
+	update_connections(1)
+	update_icon()
 
 //This proc is used to update the icons of nearby windows. It should not be confused with update_nearby_tiles(), which is an atmos proc!
 /obj/structure/window/proc/update_nearby_icons()
