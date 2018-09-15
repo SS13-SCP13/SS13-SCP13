@@ -307,11 +307,11 @@
 	
 	if(istype(T, /turf/simulated/wall))
 		switch (dir)
-			if (NORTH)
+			if (SOUTH)
 				pixel_y = 21
-			if (EAST)
-				pixel_x = 10
 			if (WEST)
+				pixel_x = 10
+			if (EAST)
 				pixel_x = -10
 
 	if (!status || (stat & BROKEN))
