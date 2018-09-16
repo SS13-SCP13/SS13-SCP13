@@ -199,6 +199,27 @@
 	name = "In transit"
 	landmark_tag = "nav_engineering_transition"
 
+/datum/shuttle/autodock/ferry/heli/mtf
+	name = "MTF Helicopter"
+	warmup_time = 40
+	shuttle_area = list(/area/site53/tram/mtf)
+	waypoint_station = "nav_mtf_start"
+	waypoint_offsite = "nav_mtf_out"
+
+/obj/effect/shuttle_landmark/heli/mtf/start
+	name = "MTF Base"
+	landmark_tag = "nav_mtf_start"
+	base_turf = /turf/simulated/floor/tiled/dark
+
+/obj/effect/shuttle_landmark/heli/mtf/out
+	name = "Site 53"
+	landmark_tag = "nav_mtf_out"
+	base_turf = /turf/simulated/floor/reinforced
+
+/obj/effect/shuttle_landmark/heli/mtf
+	name = "In transit"
+	landmark_tag = "nav_mtf_transition"
+
 /datum/shuttle/autodock/ferry/hcz
 	name = "Heavy Containment Tram"
 	warmup_time = 10
