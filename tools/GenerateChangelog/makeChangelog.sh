@@ -1,1 +1,1 @@
-python ss13_genchangelog.py ../../html/changelog.html ../../html/changelogs
+python3 ss13_genchangelog.py ../../html/changelog.html ../../html/changelogs
