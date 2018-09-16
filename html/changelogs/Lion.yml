@@ -45,6 +45,7 @@ changes:
   - rscadd: "Added fax machine to 173."
   - rscadd: "Added headsets back to Security. If positive, the change will be carried over to all jobs."
   - rscdel: "Removed notoriously fucked up medical decals until they can be fixed."
+  - rscdel: "Disabled HoP to be used while the job is reviewed."
   - tweak: "Altered CMO locker contents a bit."
   - tweak: "Reduced amount of exosuit fabricators from three to two."
   - maptweak: "Altered some map area's."
