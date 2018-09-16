@@ -24,10 +24,10 @@ var/global/datum/getrev/revdata = new()
 					date = unix2date(unix_time)
 			break
 
-	world.log << "Running revision:"
-	world.log << branch
-	world.log << date
-	world.log << revision
+	rustg_log_write(world.log, "Running revision:")
+	rustg_log_write(world.log, branch)
+	rustg_log_write(world.log, date)
+	rustg_log_write(world.log, revision)
 
 /client/verb/showrevinfo()
 	set category = "OOC"

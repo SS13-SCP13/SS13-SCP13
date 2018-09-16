@@ -626,7 +626,7 @@
 
 /mob/Stat()
 	..()
-	. = (is_client_active(10 MINUTES))
+	. = is_client_active(2 MINUTES)
 	if(!.)
 		return
 

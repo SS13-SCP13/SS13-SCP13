@@ -53,11 +53,11 @@
 	return .
 
 /proc/cone(atom/center, dir = NORTH, list/list)
-	for(var/atom in list)
+	. = list
+	for(var/atom in .)
 		var/atom/A = atom
 		if(!A.InCone(center, dir))
-			list -= A
-	return list
+			. -= A
 
 /mob/proc/update_vision_cone()
 	return FALSE
@@ -69,8 +69,7 @@
 		for(var/image in client.hidden_images)
 			I = image
 			I.override = FALSE
-			spawn (delay)
-				qdel(I)
+			delete_image(I, delay)
 			delay += 10
 		check_fov()
 		client.hidden_images.Cut()
@@ -80,7 +79,7 @@
 		if(fov.alpha)
 			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), oviewers(src)))
 			
-				var/list/things = list(L)|L.vis_contents 
+				var/list/things = L.vis_contents+L
 				
 				for (var/thing in things)
 					I = image("split", thing)
@@ -107,8 +106,10 @@
 				client.hidden_images += I
 				hidden_atoms += item
 
-	else
-		return
+/mob/living/carbon/human/proc/delete_image(image, delay)
+	set waitfor = FALSE 
+	sleep(delay)
+	qdel(image)
 
 /mob/living/carbon/human/proc/SetFov(var/n)
 	if(!n)

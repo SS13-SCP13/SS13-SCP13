@@ -202,11 +202,11 @@
 //Updates the total_moles count and trims any empty gases.
 /datum/gas_mixture/proc/update_values()
 	total_moles = 0
-	for(var/g in gas)
-		if(gas[g] <= 0)
-			gas -= g
+	for(. in gas)
+		if(gas[.] <= 0)
+			gas -= .
 		else
-			total_moles += gas[g]
+			total_moles += gas[.]
 
 
 //Returns the pressure of the gas mix.  Only accurate if there have been no gas modifications since update_values() has been called.
