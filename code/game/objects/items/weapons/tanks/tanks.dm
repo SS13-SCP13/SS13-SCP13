@@ -337,10 +337,10 @@ var/list/global/tank_gauge_cache = list()
 /obj/item/weapon/tank/Process()
 	//Allow for reactions
 	air_contents.react() //cooking up air tanks - add phoron and oxygen, then heat above PHORON_MINIMUM_BURN_TEMPERATURE
-	update_icon()
 	check_status()
 
 /obj/item/weapon/tank/update_icon()
+
 	overlays.Cut()
 	if(proxyassembly.assembly || wired)
 		overlays += image(icon,"bomb_assembly")
