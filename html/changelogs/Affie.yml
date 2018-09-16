@@ -21,8 +21,8 @@
 #   experiment
 #################################
 
-# Your name.  
-author: TheLion1675
+# TJ 
+author: Affie
 
 # Optional: Remove this file after generating master changelog.  Useful for PR changelogs that won't get used again.
 delete-after: True
@@ -33,19 +33,5 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - bugfix: "Fixed ERT shuttle unable to deploy."
-  - bugfix: "Fixed issue with the engine having space tiles, making it unable to be run."
-  - bugfix: "Fixed janitorial closet not having a bucket."
-  - bugfix: "Fixed a part of the HCZ tram leading to space."
-  - bugfix: "Fixed a large portion of airless plating not being self-contained."
-  - bugfix: "Fixed ceilings in some part not generating, so they were manually added."
-  - bugfix: "Fixed a weird area bug near medical."
-  - bugfix: "Fixed parts of the ULCZ leading to space or airless plating if certain walls were breached."
-  - rscadd: "Added fax machine to 151."
-  - rscadd: "Added fax machine to 173."
-  - rscadd: "Added headsets back to Security. If positive, the change will be carried over to all jobs."
-  - rscdel: "Removed notoriously fucked up medical decals until they can be fixed."
-  - rscdel: "Disabled HoP to be used while the job is reviewed."
-  - tweak: "Altered CMO locker contents a bit."
-  - tweak: "Reduced amount of exosuit fabricators from three to two."
-  - maptweak: "Altered some map area's."
+  - rscdel: "Adrenaline no longer acts as a combat aid."
+  - rscadd: "Adds a number of misc reagents for use with 294. More may be added later with effects."

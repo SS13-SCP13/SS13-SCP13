@@ -64,7 +64,7 @@
 /obj/item/device/encryptionkey/headset_com
 	name = "command radio encryption key"
 	icon_state = "com_cypherkey"
-	channels = list("Command" = 1)
+	channels = list("Command" = 1, "Security" =1, "Science" = 1)
 
 /obj/item/device/encryptionkey/heads/captain
 	name = "captain's encryption key"
