@@ -63,20 +63,14 @@
 	return FALSE
 
 /mob/living/carbon/human/update_vision_cone()
-	var/delay = 10
-	if(client)
-		var/image/I = null
-		for(var/image in client.hidden_images)
-			I = image
-			I.override = FALSE
-			delete_image(I, delay)
-			delay += 10
-		check_fov()
-		client.hidden_images.Cut()
-		hidden_atoms.Cut()
-		hidden_mobs.Cut()
+
+	set waitfor = FALSE
+
+	if (reset_vision_cone())
+
 		fov.dir = dir
 		if(fov.alpha)
+			var/image/I = null
 			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), oviewers(src)))
 			
 				var/list/things = L.vis_contents+L
@@ -94,8 +88,7 @@
 
 						if(pulling == L)//If we're pulling them we don't want them to be invisible, too hard to play like that.
 							I.override = FALSE
-
-						else if(L.footstep >= 1)
+						else if (L.footstep >= 1)
 							L.in_vision_cones[client] = TRUE
 
 			// items are invisible too
@@ -105,6 +98,21 @@
 				client.images += I
 				client.hidden_images += I
 				hidden_atoms += item
+
+/mob/living/carbon/human/proc/reset_vision_cone()
+	var/delay = 10
+	if(client)
+		for(var/image in client.hidden_images)
+			var/image/I = image
+			I.override = FALSE
+			delete_image(I, delay)
+			delay += 10
+		check_fov()
+		client.hidden_images.Cut()
+		hidden_atoms.Cut()
+		hidden_mobs.Cut()
+		return TRUE 
+	return FALSE
 
 /mob/living/carbon/human/proc/delete_image(image, delay)
 	set waitfor = FALSE 

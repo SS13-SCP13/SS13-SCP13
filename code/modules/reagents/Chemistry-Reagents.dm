@@ -21,9 +21,15 @@
 	var/glass_desc = "It's a glass of... what, exactly?"
 	var/list/glass_special = null // null equivalent to list()
 
+	var/static/list/created_reagents = list()
+
 /datum/reagent/New(var/datum/reagents/holder)
 	if(!holder || !istype(holder))
-		CRASH("Invalid reagents holder: [holder ? log_info_line(holder) : "null"]")
+		if (!created_reagents[type])
+			created_reagents[type] = TRUE
+			return
+		else
+			CRASH("Invalid reagents holder: [holder ? log_info_line(holder) : "null"]")
 	src.holder = holder
 	..()
 
