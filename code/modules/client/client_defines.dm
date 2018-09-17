@@ -3,7 +3,6 @@
 		//BLACK MAGIC THINGS//
 		//////////////////////
 	parent_type = /datum
-	fps = 30
 		////////////////
 		//ADMIN THINGS//
 		////////////////

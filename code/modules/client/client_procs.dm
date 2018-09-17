@@ -155,7 +155,7 @@
 		preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
-	apply_fps(prefs.clientfps)
+	apply_fps(prefs.clientfps ? prefs.clientfps : 30)
 
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
