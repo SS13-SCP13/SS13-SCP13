@@ -8,6 +8,7 @@ GLOBAL_LIST_EMPTY(areas)
 	var/uid
 	var/area_flags
 	var/holomap_color
+	var/engine_area = FALSE
 
 /area/New()
 	icon_state = ""
