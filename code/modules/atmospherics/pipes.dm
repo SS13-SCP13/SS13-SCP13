@@ -1,3 +1,6 @@
+
+#define PIPE_PROCESS_CHECK return 1
+
 /obj/machinery/atmospherics/pipe
 
 	var/datum/gas_mixture/air_temporary // used when reconstructing a pipeline that broke
