@@ -61,6 +61,7 @@ Class Procs:
 
 */
 
+
 SUBSYSTEM_DEF(air)
 	name = "Air"
 	priority = SS_PRIORITY_AIR
@@ -134,8 +135,9 @@ SUBSYSTEM_DEF(air)
 
 	var/simulated_turf_count = 0
 	for(var/turf/simulated/S)
-		simulated_turf_count++
-		S.update_air_properties()
+		if (process_check(S))
+			simulated_turf_count++
+			S.update_air_properties()
 
 		CHECK_TICK
 
@@ -175,6 +177,9 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		var/turf/T = curr_tiles[curr_tiles.len]
 		curr_tiles.len--
 
+		if (!process_check(T))
+			continue
+
 		if (!T)
 			if (no_mc_tick)
 				CHECK_TICK
@@ -210,6 +215,9 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	while (curr_defer.len)
 		var/turf/T = curr_defer[curr_defer.len]
 		curr_defer.len--
+
+		if (!process_check(T))
+			continue
 
 		T.update_air_properties()
 		T.post_update_air_properties()
@@ -440,3 +448,9 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		active_edges -= E
 	if(processing_edges)
 		processing_edges -= E
+
+/datum/controller/subsystem/air/proc/process_check(var/turf/simulated/T)
+	var/area/A = get_area(T)
+	if (A && A.engine_area)
+		return TRUE 
+	return FALSE

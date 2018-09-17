@@ -148,12 +148,15 @@ Class Procs:
 /zone/proc/tick()
 	if(air.temperature >= PHORON_FLASHPOINT && !(src in SSair.active_fire_zones) && air.check_combustability() && contents.len)
 		var/turf/T = pick(contents)
-		if(istype(T))
-			T.create_fire(vsc.fire_firelevel_multiplier)
+		if (SSair.process_check(T))
+			if(istype(T))
+				T.create_fire(vsc.fire_firelevel_multiplier)
 
 	if(air.check_tile_graphic(graphic_add, graphic_remove))
 		for(var/turf/simulated/T in contents)
-			T.update_graphic(graphic_add, graphic_remove)
+			if (SSair.process_check(T))
+				T.update_graphic(graphic_add, graphic_remove)
+				
 		graphic_add.len = 0
 		graphic_remove.len = 0
 
