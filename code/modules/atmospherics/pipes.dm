@@ -1,4 +1,4 @@
-#define PIPE_PROCESS_CHECK if (prob(80)) return
+#define PIPE_PROCESS_CHECK if (prob(100)) return
 
 /obj/machinery/atmospherics/pipe
 
