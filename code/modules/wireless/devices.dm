@@ -197,3 +197,18 @@
 	var/obj/machinery/mass_driver/M = parent
 	if(istype(M))
 		M.drive()
+
+
+//-------------------------------
+// Femur Breaker button
+//	Sender: Activates the Receiver
+//	Receiver: Triggers the parent Femur Breaker to activate
+//-------------------------------
+/datum/wifi/sender/femur_breaker/activate()
+	for(var/datum/wifi/receiver/button/femur_breaker/F in connected_devices)
+		F.activate()
+
+/datum/wifi/receiver/button/femur_breaker/activate()
+	var/obj/structure/femur_breaker/FB = parent
+	if(istype(FB))
+		FB.activate()
