@@ -150,9 +150,6 @@ mob/living/carbon/human/airflow_hit(atom/A)
 /zone/proc/movables()
 	. = list()
 	for(var/turf in contents)
-		if (!turf)
-			turfs -= turf 
-			continue
 		var/turf/T = turf
 		for(var/movable in T)
 			var/atom/movable/A = movable
