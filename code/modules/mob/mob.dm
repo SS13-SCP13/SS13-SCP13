@@ -733,7 +733,9 @@
 		regenerate_icons()
 	else if( lying != lying_prev )
 		update_icons()
-	update_vision_cone()
+		if (ishuman(src))
+			var/mob/living/carbon/human/H = src 
+			H.check_fov()
 
 	return canmove
 
