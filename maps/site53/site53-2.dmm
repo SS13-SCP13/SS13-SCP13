@@ -1405,7 +1405,7 @@
 "Ba" = (/obj/machinery/power/apc{icon_state = "apc0"; dir = 4},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/obj/structure/cable/green{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/tiled/monotile,/area/site53/uhcz/scp106observ)
 "Bb" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/monotile,/area/site53/uhcz/scp106observ)
 "Bc" = (/obj/structure/bed/chair/office/dark,/turf/simulated/floor/tiled/monotile,/area/site53/uhcz/scp106observ)
-"Bd" = (/obj/structure/table/steel_reinforced,/obj/item/device/radio/phone,/turf/simulated/floor/tiled/monotile,/area/site53/uhcz/scp106observ)
+"Bd" = (/obj/structure/table/steel_reinforced,/obj/item/device/radio/phone,/obj/machinery/button/femur_breaker,/turf/simulated/floor/tiled/monotile,/area/site53/uhcz/scp106observ)
 "Be" = (/obj/effect/catwalk_plated/dark,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/site53/engineering/primaryhallway)
 "Bf" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/folder,/turf/simulated/floor/tiled/monotile,/area/site53/uhcz/scp106observ)
 "Bg" = (/obj/item/modular_computer/console/preset/mtf/camera{icon_state = "console"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/site53/uhcz/scp106observ)
