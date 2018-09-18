@@ -21,13 +21,13 @@
 
 /obj/structure/closet/secure_closet/mtf/enlisted/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/marine/security,
+		/obj/item/clothing/under/solgov/utility/fleet/combat/security,
 		/obj/item/clothing/head/helmet/pcrc,
-		/obj/item/clothing/accessory/armor/helmcover/tan,
-		/obj/item/clothing/suit/armor/pcarrier/tan,
+		/obj/item/clothing/accessory/armor/helmcover/navy,
+		/obj/item/clothing/suit/armor/pcarrier,
 		/obj/item/clothing/accessory/armorplate,
-		/obj/item/clothing/accessory/armguards/tan,
-		/obj/item/clothing/accessory/legguards/tan,
+		/obj/item/clothing/accessory/armguards,
+		/obj/item/clothing/accessory/legguards,
 		/obj/item/clothing/accessory/armor/tag/solgov/sec,
 		/obj/item/clothing/glasses/sunglasses/sechud/goggles,
 		/obj/item/weapon/storage/belt/security/tactical,
@@ -55,10 +55,10 @@
 
 /obj/structure/closet/secure_closet/mtf/commander/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/marine/command,
+		/obj/item/clothing/under/solgov/utility/fleet/combat/security,
 		/obj/item/clothing/head/helmet/site53/guardcomm,
-		/obj/item/clothing/accessory/armor/helmcover/tan,
-		/obj/item/clothing/suit/armor/pcarrier/navy,
+		/obj/item/clothing/accessory/armor/helmcover/navy,
+		/obj/item/clothing/suit/armor/pcarrier,
 		/obj/item/clothing/glasses/sunglasses/sechud/goggles,
 		/obj/item/clothing/accessory/armorplate/merc,
 		/obj/item/clothing/accessory/armguards/merc,
@@ -90,14 +90,14 @@
 
 /obj/structure/closet/secure_closet/mtf/nco/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/marine/security,
+		/obj/item/clothing/under/solgov/utility/fleet/combat/security,
 		/obj/item/clothing/head/helmet/pcrc,
-		/obj/item/clothing/accessory/armor/helmcover/tan,
-		/obj/item/clothing/suit/armor/pcarrier/tan,
+		/obj/item/clothing/accessory/armor/helmcover/navy,
+		/obj/item/clothing/suit/armor/pcarrier,
 		/obj/item/clothing/accessory/armorplate/medium,
-		/obj/item/clothing/accessory/armguards/tan,
+		/obj/item/clothing/accessory/armguards,
 		/obj/item/clothing/glasses/sunglasses/sechud/goggles,
-		/obj/item/clothing/accessory/legguards/tan,
+		/obj/item/clothing/accessory/legguards,
 		/obj/item/clothing/accessory/armor/tag/solgov/sec,
 		/obj/item/weapon/storage/belt/security/tactical,
 		/obj/item/clothing/accessory/storage/pouches/tan,
@@ -125,10 +125,10 @@
 
 /obj/structure/closet/secure_closet/mtf/co/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/marine/tan,
+		/obj/item/clothing/under/solgov/utility/fleet/combat/security,
 		/obj/item/clothing/head/helmet/site53/zonecomm,
-		/obj/item/clothing/accessory/armor/helmcover/tan,
-		/obj/item/clothing/suit/armor/pcarrier/navy,
+		/obj/item/clothing/accessory/armor/helmcover/navy,
+		/obj/item/clothing/suit/armor/pcarrier,
 		/obj/item/clothing/accessory/armorplate/tactical,
 		/obj/item/clothing/accessory/armguards/ablative,
 		/obj/item/clothing/accessory/legguards/ablative,

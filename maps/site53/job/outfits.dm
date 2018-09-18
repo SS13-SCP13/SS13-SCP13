@@ -82,7 +82,7 @@
 
 /decl/hierarchy/outfit/job/site90/crew/command/cos
 	name = OUTFIT_JOB_NAME("Guard Commander")
-	uniform = /obj/item/clothing/under/solgov/utility/marine/command
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl5
 	l_pocket = /obj/item/device/radio
@@ -91,7 +91,7 @@
 
 /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
 	name = OUTFIT_JOB_NAME("Zone Commander")
-	uniform = /obj/item/clothing/under/solgov/utility/marine/tan
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
@@ -100,7 +100,7 @@
 
 /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
 	name = OUTFIT_JOB_NAME("Guard")
-	uniform = /obj/item/clothing/under/solgov/utility/marine/security
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl3
 	l_pocket = /obj/item/device/radio
@@ -109,7 +109,7 @@
 
 /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
 	name = OUTFIT_JOB_NAME("Junior Guard")
-	uniform = /obj/item/clothing/under/solgov/utility/marine/security
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl1
 	l_pocket = /obj/item/device/radio
