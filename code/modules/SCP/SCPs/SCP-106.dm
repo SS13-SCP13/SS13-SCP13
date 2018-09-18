@@ -317,6 +317,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	icon = 'icons/obj/femurbreaker.dmi'
 	density = TRUE
 	anchored = TRUE
+	buckle_lying = 1
 	var/spent_mobs = list()
 	var/_wifi_id = "femurbreaker"
 	var/datum/wifi/receiver/button/femur_breaker/wifi_receiver = null
@@ -350,7 +351,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		qdel(G)
 
 /obj/structure/femur_breaker/attack_hand(mob/user)
-	if (buckled_mob)
+	if (buckled_mob && buckled_mob != user)
 
 		visible_message("<span class = 'notice'>[user] unbuckles [buckled_mob] from the femur breaker.</span>")
 		buckled_mob.buckled = null
