@@ -387,7 +387,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 				for (var/scp106 in GLOB.scp106s)
 					var/atom/movable/A = scp106 
 					if (get_area(A) != get_area(GLOB.scp106_spawnpoints[1]))
-						if (!(A.loc in GLOB.scp106_turfs))
+						if (!(A.loc in GLOB.scp106_floors))
 							return // failed 
 				sleep(30 SECONDS)
 				var/active_shield_generators = 0
