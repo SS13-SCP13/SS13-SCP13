@@ -25,6 +25,9 @@
 
 	for(var/listener in listening_hosts)
 		var/mob/listening_mob = listener
+		// fuck bay12
+		if (M && !(listening_mob in range(world.view, get_turf(M))))
+			continue
 		var/client/t = listening_mob.get_client()
 		if(!t)
 			continue
