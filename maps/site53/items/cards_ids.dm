@@ -206,6 +206,9 @@
 ***SCP CARDS***
 ***************
 */
+
+// Currently, cards have to be added for each job and have their own unique identifier if we want access to be made more unique. So that's what we're doing here.
+
 // SECURITY
 /obj/item/weapon/card/id/seclvl1
 	name = "level one security keycard"
