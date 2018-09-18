@@ -16,7 +16,7 @@
 		T.update_icon()
 
 //Creates a new turf
-#ifdef NO_SPACE_TILES
+#define NO_SPACE_TILES
 /turf/proc/ChangeTurf(var/turf/N, var/tell_universe=1, var/force_lighting_update = 0)
 	if (!N)
 		return
