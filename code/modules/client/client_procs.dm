@@ -344,12 +344,19 @@
 		'html/panels.css',
 		'html/spacemag.css',
 		'html/images/loading.gif',
-		'html/images/ntlogo.png',
-		'html/images/bluentlogo.png',
-		'html/images/sollogo.png',
-		'html/images/terralogo.png',
-		'html/images/talisman.png',
-		'html/images/eng.png'
+		'html/images/eng.png',
+		'html/images/sec.png',
+		'html/images/med.png',
+		'html/images/sci.png',
+		'html/images/ethics.png',
+		'html/images/log.png',
+		'html/images/isd.png',
+		'html/images/admin.png',
+		'html/images/o5.png',
+		'html/images/ecd.png',
+		'html/images/int.png',
+		'html/images/mtf.png',
+		'html/images/scplogo.png'
 		)
 
 	spawn (10) //removing this spawn causes all clients to not get verbs.

@@ -35,8 +35,10 @@ delete-after: True
 changes: 
   - rscadd: "Added command consoles to RD and Security Commander offices as an interim solution until Control Room Operators are added."
   - rscadd: "Added Sec goggles to security lockers."
+  - rscadd: "New logo's for both admin faxes and regular paperwork. These are: scilogo, loglogo, seclogo, medlogo, englogo, logo and ethicslogo. Remember to use the paperwork brackets!"
   - bugfix: "Fixed a console facing the wrong way in the RD's office."
   - wip: "Minorly changes how Traitor is handled. Fluff remaining, but gamemode should be more or less functional."
   - imageadd: "New SCP-513 sprite, with thanks to Lucaschao."
   - maptweak: "Beefed up security in the ID line for D-Class."
   - rscdel: "Removed skeleton keys from the D-Class ID line, which is in line with a new experimental feature to access it directly with the ID Cards from guards."
+  - rscdel: "Removes old logo's and they are now no longer present in the code nor able to be used in-game."
