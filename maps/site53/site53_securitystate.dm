@@ -3,8 +3,8 @@
 
 //Torch map alert levels. Refer to security_state.dm.
 /decl/security_state/default/torchdept
-	all_security_levels = list(/decl/security_level/default/torchdept/code_green, /decl/security_level/default/torchdept/code_blue, /decl/security_level/default/torchdept/code_red, /decl/security_level/default/code_delta)
-	standard_security_levels = list(/decl/security_level/default/torchdept/code_green, /decl/security_level/default/torchdept/code_blue)
+	all_security_levels = list(/decl/security_level/default/torchdept/code_green, /decl/security_level/default/torchdept/code_blue, /decl/security_level/default/torchdept/code_red, /decl/security_level/default/torchdept/code_black, /decl/security_level/default/code_delta)
+	standard_security_levels = list(/decl/security_level/default/torchdept/code_green, /decl/security_level/default/torchdept/code_blue, /decl/security_level/default/torchdept/code_red, /decl/security_level/default/torchdept/code_black)
 
 /decl/security_level/default/torchdept
 	icon = 'maps/site_ds90/icons/security_state.dmi'
@@ -89,8 +89,8 @@
 /decl/security_level/default/torchdept/code_red/switching_down_to()
 	security_announcement_red.Announce("The self-destruct mechanism has been deactivated. All staff are to report to their supervisor for orders. All crew should obey orders from relevant emergency personnel. Security personnel are permitted to search staff and facilities, and may have weapons unholstered at any time.", "Attention! Code red alert procedures now in effect!")
 	notify_station()
-/*
-/decl/security_level/default/code_black
+
+/decl/security_level/default/torchdept/code_black
 	name = "code black"
 
 	light_range = 4
@@ -103,7 +103,6 @@
 
 	var/static/datum/announcement/priority/security/security_announcement_black = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/ds90/codeblack.ogg'))
 
-/decl/security_level/default/code_black/switching_up_to()
+/decl/security_level/default/torchdept/code_black/switching_up_to()
 	security_announcement_black.Announce("The site is experiencing multiple keter and euclid level containment breaches. Full site lockdown initiated. ")
 	notify_station()
-*/

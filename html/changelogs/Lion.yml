@@ -36,6 +36,7 @@ changes:
   - rscadd: "Added command consoles to RD and Security Commander offices as an interim solution until Control Room Operators are added."
   - rscadd: "Added Sec goggles to security lockers."
   - rscadd: "New logo's for both admin faxes and regular paperwork. These are: scilogo, loglogo, seclogo, medlogo, englogo, logo and ethicslogo. Remember to use the paperwork brackets!"
+  - rscadd: "Added Code Black. Code Red and the associated alert levels still need rewording."
   - bugfix: "Fixed a console facing the wrong way in the RD's office."
   - wip: "Minorly changes how Traitor is handled. Fluff remaining, but gamemode should be more or less functional."
   - imageadd: "New SCP-513 sprite, with thanks to Lucaschao."
