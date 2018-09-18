@@ -80,7 +80,7 @@
 	overlay_alarm = "alarm_red"
 	overlay_status_display = "status_display_red"
 
-	var/static/datum/announcement/priority/security/security_announcement_red = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/misc/redalert1.ogg'))
+	var/static/datum/announcement/priority/security/security_announcement_red = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/ds90/codered.ogg'))
 
 /decl/security_level/default/torchdept/code_red/switching_up_to()
 	security_announcement_red.Announce("A severe emergency has occurred. All staff are to report to their supervisor for orders. All crew should obey orders from relevant emergency personnel. Security personnel are permitted to search staff and facilities, and may have weapons unholstered at any time.", "Attention! Code red alert procedures now in effect!")
@@ -89,3 +89,21 @@
 /decl/security_level/default/torchdept/code_red/switching_down_to()
 	security_announcement_red.Announce("The self-destruct mechanism has been deactivated. All staff are to report to their supervisor for orders. All crew should obey orders from relevant emergency personnel. Security personnel are permitted to search staff and facilities, and may have weapons unholstered at any time.", "Attention! Code red alert procedures now in effect!")
 	notify_station()
+/*
+/decl/security_level/default/code_black
+	name = "code black"
+
+	light_range = 4
+	light_power = 2
+	light_color_alarm = COLOR_RED
+	light_color_status_display = COLOR_NAVY_BLUE
+
+	overlay_alarm = "alarm_delta"
+	overlay_status_display = "status_display_delta"
+
+	var/static/datum/announcement/priority/security/security_announcement_black = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/ds90/codeblack.ogg'))
+
+/decl/security_level/default/code_black/switching_up_to()
+	security_announcement_black.Announce("The site is experiencing multiple keter and euclid level containment breaches. Full site lockdown initiated. ")
+	notify_station()
+*/

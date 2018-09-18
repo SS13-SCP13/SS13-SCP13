@@ -239,3 +239,21 @@
 /decl/security_level/default/code_delta/switching_up_to()
 	security_announcement_delta.Announce("Attention all personnel, security level Delta has been reached. The omega warhead is now armed, primed for detonation. All personnel are instructed to obey any and all instructions given by Foundation security personnel, or the respective heads of their department. Any violation of these orders will result in immediate termination of employment. Lethal force has been authorized. This is not a drill. Omega warhead detonation in T minus 15 minutes.", "Attention! Omega Warhead now live! This is not a drill!")
 	notify_station()
+
+/decl/security_level/default/code_black
+	name = "code black"
+
+	light_range = 4
+	light_power = 2
+	light_color_alarm = COLOR_RED
+	light_color_status_display = COLOR_NAVY_BLUE
+
+	overlay_alarm = "alarm_delta"
+	overlay_status_display = "status_display_delta"
+
+	var/static/datum/announcement/priority/security/security_announcement_black = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/ds90/codeblack.ogg'))
+
+/decl/security_level/default/code_black/switching_up_to()
+	security_announcement_black.Announce("The site is experiencing multiple keter and euclid level containment breaches. Full site lockdown initiated. ")
+	notify_station()
+
