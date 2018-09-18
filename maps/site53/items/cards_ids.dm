@@ -315,3 +315,11 @@
 	item_state = "Admin_ID"
 	job_access_type = /datum/job/captain
 
+// MEDICAL CARDS
+
+/obj/item/weapon/card/id/emt
+	name = "level one security keycard"
+	desc = "A light blue card. Seems almost as unimportant as the person itself."
+	icon_state = "securitylvl1"
+	item_state = "Sec_ID1"
+	job_access_type = /datum/job/emt

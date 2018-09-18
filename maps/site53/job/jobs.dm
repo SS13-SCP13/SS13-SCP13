@@ -732,7 +732,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(50,70), rand(5,10))
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_mtflvl1)
 	minimal_access = list()
 
 

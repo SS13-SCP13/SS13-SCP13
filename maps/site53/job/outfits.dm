@@ -340,7 +340,7 @@
 	name = OUTFIT_JOB_NAME("Emergency Medical Technician")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/black
 	shoes = /obj/item/clothing/shoes/white
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/emt
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null
