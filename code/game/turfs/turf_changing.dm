@@ -16,9 +16,16 @@
 		T.update_icon()
 
 //Creates a new turf
+#define NO_SPACE_TILES
 /turf/proc/ChangeTurf(var/turf/N, var/tell_universe=1, var/force_lighting_update = 0)
 	if (!N)
 		return
+
+	#ifdef NO_SPACE_TILES
+	if (istype(src, /turf/simulated))
+		if (istype(N, /turf/space) || ispath(N, /turf/space))
+			return
+	#endif
 
 	// This makes sure that turfs are not changed to space when one side is part of a zone
 	if(N == /turf/space)
