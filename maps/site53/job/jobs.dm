@@ -204,7 +204,7 @@
 	department_flag = SEC|COM
 	duties = "<big><b>As the Guard Commander, you have direct say over the Security department. You're not assigned to any zone, but instead should jump in where necessary or requested. You are to speak with your Zone Commanders oftenly, and assign new guards to the right zone, or where it's needed mostly.</span>"
 	economic_modifier = 8
-	minimal_player_age = 21
+	minimal_player_age = 15
 	ideal_character_age = 55
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
 	allowed_branches = list(
@@ -425,7 +425,7 @@
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
 	economic_modifier = 5
-	minimal_player_age = 7
+	minimal_player_age = 2
 	ideal_character_age = 30
 	alt_titles = list(
 		"Junior Maintenance Technician",
@@ -552,7 +552,7 @@
 	spawn_positions = 1
 	economic_modifier = 9
 	ideal_character_age = 40
-	minimal_player_age = 21
+	minimal_player_age = 15
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(/datum/mil_rank/security/o1, /datum/mil_rank/security/o2)
@@ -571,7 +571,7 @@
 	title = "Chief Medical Officer"
 	supervisors = "the Security Commander"
 	economic_modifier = 10
-	minimal_player_age = 21
+	minimal_player_age = 15
 	ideal_character_age = 48
 	alt_titles = list("Medical Director")
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/cmo
@@ -871,6 +871,7 @@
 	department_flag = CIV
 	total_positions = 1
 	spawn_positions = 1
+	minimal_player_age = 9
 	duties = "<big><b>As the Archivist, it is your job to make sure the proper test logs are digitalized and saved in the digital archive, thus safekeeping them forever. You must be picky and selective, and only get those with great quality out! <span style = 'color:red'>REMEMBER!</span> If you put in nonsensical things, or copypasta's such as Woody's got Wood, you will be permanently job banned WITHOUT chance to appeal.</span>"
 	supervisors = "the Research Director"
 	economic_modifier = 4
@@ -903,6 +904,7 @@
 	supervisors = "the Research Director"
 	economic_modifier = 4
 	minimal_player_age = 5
+	minimal_player_age = 9
 	ideal_character_age = 30
 	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/o5rep
