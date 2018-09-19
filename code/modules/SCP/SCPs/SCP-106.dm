@@ -210,9 +210,13 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	set desc = "Phase through an object in front of you."
 	if (world.time < phase_cooldown)
 		return
+
 	for (var/obj/O in get_step(src, dir))
 	
 		if (!isstructure(O) && !ismachinery(O))
+			continue
+
+		if (istype(O, /obj/machinery/shieldwall))
 			continue
 	
 		phase_cooldown = world.time + (PHASE_TIME + 5)
