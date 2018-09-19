@@ -77,8 +77,6 @@
 
 #define isscp049_1(A) (istype(A, /mob/living/carbon/human) && istype(A:species, /datum/species/scp049_1))
 
-#define isscp012(A) istype(A, /obj/item/paper/scp012)
-
 #define isunderwear(A) istype(A, /obj/item/underwear)
 
 #define isvirtualmob(A) istype(A, /mob/observer/virtual)
