@@ -193,6 +193,8 @@
 
 /obj/item/attack_hand(mob/user as mob)
 	if (!user) return
+	if (isscp012(src))
+		return
 	if (anchored || isscp106(user) || isscp049(user) || isscp049_1(user))
 		return ..()
 	if (hasorgans(user))
