@@ -95,7 +95,7 @@
 							L.in_vision_cones[client] = TRUE
 
 			// items are invisible too
-			for(var/item in cone(src, OPPOSITE_DIR(dir), oview(get_turf(src), /obj/item))) // http://www.byond.com/docs/ref/info.html#/proc/view
+			for(var/item in cone(src, OPPOSITE_DIR(dir), oview(get_turf(src)), /obj/item)) // http://www.byond.com/docs/ref/info.html#/proc/view
 				I = image("split", item)
 				I.override = TRUE
 				client.images += I
