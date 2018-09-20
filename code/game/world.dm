@@ -133,6 +133,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
 	rustg_log_write(diary, "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][log_end]")
+	var/datum/getrev/revdata = GLOB.revdata
 	if (T == "ping")
 		var/x = 1
 		for (var/client/C)
@@ -210,8 +211,9 @@ var/world_topic_spam_protect_time = world.timeofday
 		L["dd_version"] = world.byond_version // DreamDaemon version running on
 
 		if(revdata.revision)
-			L["revision"] = GLOB.revdata.commit
-			L["date"] = GLOB.revdata.date
+			L["revision"] = revdata.revision
+			L["branch"] = revdata.branch
+			L["date"] = revdata.date
 		else
 			L["revision"] = "unknown"
 
