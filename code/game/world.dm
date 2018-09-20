@@ -133,7 +133,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
 	rustg_log_write(diary, "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][log_end]")
-
+	var/datum/getrev/revdata = revdata
 	if (T == "ping")
 		var/x = 1
 		for (var/client/C)
@@ -483,7 +483,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 		for(var/client/C in GLOB.clients)
-			to_chat(C, link("byond://[config.server]"))
+			C << link("byond://[config.server]")
 
 	if(config.wait_for_sigusr1_reboot && reason != 3)
 		text2file("foo", "reboot_called")
