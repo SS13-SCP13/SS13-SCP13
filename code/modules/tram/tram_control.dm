@@ -9,9 +9,14 @@
 /obj/tram/controlpad/attack_hand(var/mob/user)
 	usr.set_machine(src)
 	if(!tram_linked)	return
-	var/dat = "Tram Controller"
+	var/dat = "<b>Tram Control Panel</b><br>"
 	dat += "<br>Tram engine: <a href=?src=\ref[src];engine_toggle=1>[tram_linked.automode ? "<font color='green'>On</font>" : "<font color='red'>Off</font>"]</a>"
-	dat += "<br><A href='?src=\ref[src];close=1'>Close console</A>"
+	dat += "<br>Direction: <a href=?src=\ref[src];direction=1>Switch</a>"
+	dat += "<br>Speed: [tram_linked.speed < 2 ? "<a href=?src=\ref[src];speeddown=1>-</a>" : ""]  [1/tram_linked.speed] [tram_linked.speed > 0.1 ? "<a href=?src=\ref[src];speedup=1>+</a>" : ""]"
+	if(tram_linked.speed < 1)
+		dat += "<br><i>Warning: Speed is above recommended levels!</i>"
+	if(tram_linked.delay_timer > 1)
+		dat += "<br>Automatic delay active. <a href=?src=\ref[src];nodelay=1><font color=yellow>Force Start</font></a>"
 	user << browse(dat, "window=trampad")
 	onclose(user,"trampad")
 
@@ -28,9 +33,24 @@
 		tram_linked.automode = !tram_linked.automode
 		if(tram_linked.automode)	tram_linked.startLoop()
 		else	tram_linked.killLoop()
-	else if(href_list["close"])
-		usr.unset_machine()
-		usr << browse(null, "window=trampad")
+	if(href_list["direction"])
+		var/stored_rail = null
+		for(var/cdir in list(NORTH, SOUTH, EAST, WEST))
+			for(var/obj/tram/rail/R in get_step(tram_linked,cdir))
+				if(!istype(R))	continue
+				if(R != tram_linked.last_played_rail)
+					tram_linked.last_played_rail = stored_rail
+	if(href_list["speedup"])
+		if(tram_linked.speed > 0.1)
+			tram_linked.speed -= 0.1
+		if(tram_linked.speed <= 0)
+			tram_linked.speed = 0.1
+	if(href_list["speeddown"])
+		if(tram_linked.speed < 2)
+			tram_linked.speed += 0.1
 
-	src.add_fingerprint(usr)
-	src.updateUsrDialog()
+	if(href_list["nodelay"])
+		tram_linked.delay_timer = 1 //1 instead of 0 because if delay_timer is 0 the logic will evaluate to false and it will just reset the timer.
+
+	add_fingerprint(usr)
+	updateUsrDialog()

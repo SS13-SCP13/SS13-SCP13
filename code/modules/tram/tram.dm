@@ -7,7 +7,8 @@
 	var/list/tram_walls = list()
 	var/list/controllers = list()
 
-	var/list/tram = list()
+	var/list/tram = list() //every part of the tram
+	var/list/pretram = list() //every part of the tram in the last move
 
 	var/list/collide_list = list()
 
@@ -15,15 +16,24 @@
 	var/last_played_rail
 
 	var/automode = 0
-	var/fast_mode = 0
+	var/speed = 1
 
 	var/activated = 0
 	var/looptick = 0
 
 	var/delay_timer = null
 
-	var/list/blacklist = list(/obj/tram/rail,/atom/movable/lighting_overlay)
-	var/list/ancwhitelist = list(/obj/tram, /obj/vehicle, /obj/structure/bed/chair, /obj/structure/grille, /obj/structure/window, /obj/structure/wall_frame)
+	var/list/blacklist = list(/obj/tram/rail,
+							  /atom/movable/lighting_overlay)
+	var/list/ancwhitelist = list(/obj/tram,
+								 /obj/vehicle,
+								 /obj/structure/bed,
+								 /obj/structure/table,
+								 /obj/structure/grille,
+								 /obj/structure/wall_frame,
+								 /obj/structure/window,
+								 /obj/machinery/door,
+								 /obj/machinery/light)
 
 /obj/tram/tram_controller/New()
 	spawn(1)
@@ -33,6 +43,8 @@
 			init_tram() //Combine walls and floors and anything inside the tram
 			init_controllers() //Find control pads
 			gen_collision() //Generate collision system
+			if(automode)
+				startLoop() //if it has been mapped as active, let's start it
 
 /obj/tram/tram_controller/Destroy()
 	for(var/obj/tram/floor/F in tram_floors)
@@ -55,20 +67,21 @@
 		while(activated)
 			process()
 			looptick++
-			sleep(1)
+			sleep(speed)
 
 /obj/tram/tram_controller/proc/killLoop()
 	activated = 0
 	looptick = 0
+	tram.Cut()
+	pretram.Cut()
 
 /obj/tram/tram_controller/proc/process()
 	update_tram() //Update combine to account for new mobs and/or objects
 	if(automode)
 		tram_rail_follow()
-		if(fast_mode)
-			tram_rail_follow()
 
 /obj/tram/tram_controller/proc/update_tram()
+	pretram = tram.Copy()
 	tram.Cut()
 	init_tram()
 
@@ -224,12 +237,14 @@
 	if(dir in collide_list) //Prevent moving if there are collisions in that direction
 		return 0
 	hurt_mobs(dir)
+	playsound(src,'sound/effects/tram.ogg',40,20)
 	for(var/atom/movable/A in tram)
 		var/turf/T = get_step(A,dir)
 		A.forceMove(T) //Move everything inside the tram and the tram itself manually
 		if(A.light_range)
 			A.set_light()
 	gen_collision() //Generate collision again
+	hurt_jumpers() //Hurt people who get off while we are moving
 	return 1
 
 /obj/tram/tram_controller/proc/hurt_mobs(var/dir)
@@ -263,12 +278,19 @@
 		throwdir2 |= SOUTH
 	M.throw_at(get_step(M, pick(throwdir1,throwdir2)), 10, 1)
 	M.Weaken(5)
-	M.apply_damage(33, BRUTE, BP_HEAD)
-	M.apply_damage(33, BRUTE, BP_CHEST)
-	M.apply_damage(33, BRUTE, BP_L_LEG)
-	M.apply_damage(33, BRUTE, BP_R_LEG)
-	M.apply_damage(33, BRUTE, BP_L_ARM)
-	M.apply_damage(33, BRUTE, BP_R_ARM)
+	var/damage = 1 / speed * 33
+	M.apply_damage(damage, BRUTE, BP_HEAD)
+	M.apply_damage(damage, BRUTE, BP_CHEST)
+	M.apply_damage(damage, BRUTE, BP_L_LEG)
+	M.apply_damage(damage, BRUTE, BP_R_LEG)
+	M.apply_damage(damage, BRUTE, BP_L_ARM)
+	M.apply_damage(damage, BRUTE, BP_R_ARM)
+
+/obj/tram/tram_controller/proc/hurt_jumpers()
+	for(var/mob/living/M in pretram)
+		if(!tram.Find(M))
+			M.Weaken(3)
+			M.apply_damage(1/speed * 2, BRUTE, pick(BP_L_LEG,BP_R_LEG))
 
 //////////////////////DAMAGE PROCS
 /obj/tram/ex_act(severity)
