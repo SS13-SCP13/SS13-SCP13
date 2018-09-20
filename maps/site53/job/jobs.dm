@@ -21,7 +21,7 @@
 
 
 
-/datum/job/assistant/equip(var/mob/living/carbon/human/H)
+/datum/job/assistant/equip(mob/living/carbon/human/H)
 	..()
 	H.add_stats(rand(3,6), rand(3,6), rand(5,7)) // Str, Dex, Int.
 	H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
@@ -32,9 +32,10 @@
 	used_numbers += r
 	H.name = random_name(H.gender, H.species.name)
 	H.real_name = H.name
-	if(H.wear_id)
-		H.wear_id.registered_name = "D-[used_numbers[used_numbers.len]]"
-		H.wear_id.update_name()
+	if(istype(H.wear_id, /obj/item/weapon/card/id))
+		var/obj/item/weapon/card/id/ID = H.wear_id
+		ID.registered_name = "D-[used_numbers[used_numbers.len]]"
+		ID.update_name()
 
 
 
