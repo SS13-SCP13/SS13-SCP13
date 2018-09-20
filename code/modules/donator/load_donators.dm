@@ -44,4 +44,4 @@ proc/load_donators()
 		//find the client for a ckey if they are connected and associate them with the new admin datum
 		GLOB.donators += D.client
 		GLOB.donator_keys[ckey] = perms
-	rustg_log_write(world.log, "FINISHED LOADING DONATORS...")
+	WRITE_LOG(world.log, "FINISHED LOADING DONATORS...")
