@@ -164,7 +164,7 @@
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(7,10), rand(7,10), rand(5,10)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(70,90), rand(70,90), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
@@ -193,7 +193,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(5,10), rand(5,10), rand(5,10)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
 	minimal_access = list()

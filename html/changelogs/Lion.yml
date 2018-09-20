@@ -36,3 +36,4 @@ changes:
   - bugfix: "Added RD access to the command and communications program."
   - bugfix: "Fixed a bug with the Cell Guard locker room not being powered."
   - rscdel: "Removed Junior Agent and Agent alt titles for guards. It's useless and has no official meaning. Might be re-added in the future."
+  - tweak: "Significantly buffs Cell Guard's and Cell Warden's stats."
