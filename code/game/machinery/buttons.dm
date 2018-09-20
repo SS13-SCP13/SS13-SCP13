@@ -46,7 +46,8 @@
 	use_power(5)
 	update_icon()
 	wifi_sender.activate(user)
-	sleep(sleep_time)
+	if (sleep_time)
+		sleep(sleep_time)
 	active = 0
 	update_icon()
 	operating = 0
