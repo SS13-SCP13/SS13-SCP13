@@ -38,3 +38,5 @@ changes:
   - rscdel: "Removed Junior Agent and Agent alt titles for guards. It's useless and has no official meaning. Might be re-added in the future."
   - tweak: "Significantly buffs Guard's stats."
   - tweak: "Nerfs Class-D's stats minorly."
+  - maptweak: "Fixed some decals in the D-Class area."
+  - maptweak: "Adds advanced first aid kits to the D-Class area security posts."
