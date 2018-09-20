@@ -2,7 +2,7 @@
 	id = MODE_CHANGELING
 	role_text = "Shapeshifter"
 	role_text_plural = "Shapeshifters"
-	feedback_tag = "shapeshifter_objective"
+	feedback_tag = "changeling_objective"
 	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg)
 	protected_jobs = list(/datum/job/captain)
 	welcome_text = "Use say \"#g message\" to communicate with your fellow shapeshifters. Remember: you get all of their absorbed DNA if you absorb them."
