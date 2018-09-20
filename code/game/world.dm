@@ -209,7 +209,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		L["dm_version"] = DM_VERSION // DreamMaker version compiled in
 		L["dd_version"] = world.byond_version // DreamDaemon version running on
 
-		if(revdata.revision)
+		if(revdata.commit)
 			L["revision"] = GLOB.revdata.commit
 			L["date"] = GLOB.revdata.date
 		else
