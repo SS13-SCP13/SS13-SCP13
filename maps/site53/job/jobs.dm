@@ -17,22 +17,25 @@
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
 	allowed_ranks = list(/datum/mil_rank/civ/classd)
-	equip(var/mob/living/carbon/human/H)
-		..()
-		H.add_stats(rand(3,6), rand(3,6), rand(5,7)) // Str, Dex, Int.
-		H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 	var/static/list/used_numbers = list()
 
 
 
-/datum/job/assistant/equip(var/mob/living/carbon/human/H)
+/datum/job/assistant/equip(mob/living/carbon/human/H)
 	..()
+	H.add_stats(rand(3,6), rand(3,6), rand(5,7)) // Str, Dex, Int.
+	H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+	
 	var/r = rand(100,9000)
 	while (used_numbers.Find(r))
 		r = rand(100,9000)
 	used_numbers += r
-	H.name = "D-[used_numbers[used_numbers.len]]"
+	H.name = random_name(H.gender, H.species.name)
 	H.real_name = H.name
+	if(istype(H.wear_id, /obj/item/weapon/card/id))
+		var/obj/item/weapon/card/id/ID = H.wear_id
+		ID.registered_name = "D-[used_numbers[used_numbers.len]]"
+		ID.update_name()
 
 
 

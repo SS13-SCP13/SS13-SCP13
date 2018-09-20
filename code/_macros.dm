@@ -107,7 +107,6 @@
 
 #define random_id(key,min_id,max_id) uniqueness_repository.Generate(/datum/uniqueness_generator/id_random, key, min_id, max_id)
 
-#define to_chat(target, message)                            target << message
 #define to_world(message)                                   world << message
 #define to_world_log(message)                               world.log << message
 #define sound_to(target, sound)                             target << sound
@@ -117,10 +116,6 @@
 #define close_browser(target, browser_name)                 target << browse(null, browser_name)
 #define show_image(target, image)                           target << image
 #define send_rsc(target, rsc_content, rsc_name)             target << browse_rsc(rsc_content, rsc_name)
-
-// file writes on Unix are much much faster than rust_g, but rust_g is 10x faster than using the vanilla Windows system
-#define rustg_log_write(filename, text) world.system_type == UNIX ? \
-	file(filename) << text : call("tools/rust_g.dll", "log_write")(filename, text)
 
 #define MAP_IMAGE_PATH "nano/images/[GLOB.using_map.path]/"
 
@@ -183,3 +178,6 @@
 #define cast_new(type, num, args...) if((num) == 1) { new type(args) } else { for(var/i=0;i<(num),i++) { new type(args) } }
 
 #define FLAGS_EQUALS(flag, flags) ((flag & (flags)) == (flags))
+
+/proc/to_chat(target, msg) // i couldn't find anywhere else to put this. it's just a wrapper for now.
+	target << msg

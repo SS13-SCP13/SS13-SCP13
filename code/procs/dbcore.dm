@@ -143,6 +143,9 @@ DBQuery/proc/SetConversion(column,conversion)
 	else if(conversions.len < column) conversions.len = column
 	conversions[column] = conversion
 
+datum/DBQuery/CanProcCall(proc_name)
+	return FALSE
+
 
 DBColumn
 	var/name
