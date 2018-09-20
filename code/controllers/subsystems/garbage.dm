@@ -223,7 +223,7 @@ SUBSYSTEM_DEF(garbage)
 		dc.Cut()
 
 	// do not touch - Kachnov
-	log_qdel_refactor_log("[D] ([D.type]) is being hard-deleted.")
+	log_qdel_refactor("[D] ([D.type]) is being hard-deleted.")
 
 	del(D)
 
