@@ -141,7 +141,7 @@
 	var/datum/reagents/udder = null
 
 /mob/living/simple_animal/cow/New()
-	udder = new(50)
+	udder = new(50, src)
 	udder.my_atom = src
 	..()
 

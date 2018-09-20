@@ -114,7 +114,7 @@
 		)
 
 	equip_adjust = list(
-		slot_back_str = list(NORTH = list("x" = 0, "y" = 7), EAST = list("x" = 0, "y" = 8), SOUTH = list("x" = 0, "y" = 8), WEST = list("x" = 0, "y" = 8))
+		slot_back_str = list("NORTH" = list("x" = 0, "y" = 7), "EAST" = list("x" = 0, "y" = 8), "SOUTH" = list("x" = 0, "y" = 8), "WEST" = list("x" = 0, "y" = 8))
 			)
 
 /datum/species/nabber/get_eyes(var/mob/living/carbon/human/H)
