@@ -27,4 +27,4 @@ SUBSYSTEM_DEF(updateserver)
 	shell("python3 tools/updateserver.py")
 
 /datum/controller/subsystem/updateserver/stat_entry()
-	..("Updated Server: [done ? "yes" : "no"]")
+	..(done ? "updated" : "not updated")
