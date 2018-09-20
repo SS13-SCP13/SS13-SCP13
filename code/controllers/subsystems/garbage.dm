@@ -222,6 +222,9 @@ SUBSYSTEM_DEF(garbage)
 	if(dc)
 		dc.Cut()
 
+	// do not touch - Kachnov
+	log_qdel_refactor("[D] ([D.type]) is being hard-deleted.")
+
 	del(D)
 
 	tick = (TICK_USAGE-tick+((world.time-ticktime)/world.tick_lag*100))
