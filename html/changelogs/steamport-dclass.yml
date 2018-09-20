@@ -1,0 +1,6 @@
+author: steamport
+
+delete-after: True
+
+changes: 
+  - tweak: "D-Class now have actual names, with their number being specified on their ID."
