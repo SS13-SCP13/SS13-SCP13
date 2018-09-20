@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 		return FALSE
 	return ..()
 
-/mob/living/scp_173/verb/take_shit()
+/mob/living/scp_173/verb/get_schwifty() // plz don't kill me for the reference
 	set name = "Shit On Floor"
 	set category = "SCP"
 	if(world.time >= last_player_shit + 600)
