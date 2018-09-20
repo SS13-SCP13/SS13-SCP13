@@ -89,9 +89,6 @@
 		clear()
 		return
 
-	if(target != GLOBAL_PROC && !target.CanProcCall(procname))
-		to_chat(usr, "Proccall on [target.type]/proc/[procname] is disallowed!")
-
 	if(hastarget)
 		if(!target)
 			to_chat(usr, "Your callproc target no longer exists.")

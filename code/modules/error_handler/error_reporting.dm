@@ -2,7 +2,6 @@
 #ifdef DEBUG
 
 /hook/roundend/proc/send_runtimes_to_ircbot()
-	var/datum/getrev/revdata = GLOB.revdata
 	if(!revdata.revision) return // we can't do much useful if we don't know what we are
 	var/list/errors = list()
 	for(var/erruid in GLOB.error_cache.error_sources)
