@@ -25,7 +25,7 @@
 	..()
 	H.add_stats(rand(3,6), rand(3,6), rand(5,7)) // Str, Dex, Int.
 	H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
-	
+
 	var/r = rand(100,9000)
 	while (used_numbers.Find(r))
 		r = rand(100,9000)
@@ -263,7 +263,6 @@
 	duties = "<big><b>As the Guard you have more access than a Junior Guard, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
-	alt_titles = list("Agent")
 	minimal_player_age = 5
 	ideal_character_age = 30
 	alt_titles = null
@@ -294,7 +293,6 @@
 	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
-	alt_titles = list("Junior Agent")
 	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
