@@ -18,6 +18,8 @@ GLOBAL_LIST_EMPTY(scp173s)
 	var/last_snap = 0
 	var/next_shit = 0
 	var/list/next_blinks = list()
+	
+	var/last_player_shit = 0
 
 /mob/living/scp_173/New()
 	..()
@@ -127,3 +129,12 @@ GLOBAL_LIST_EMPTY(scp173s)
 		to_chat(src, "<span class='warning'>You're being watched!</span>")
 		return FALSE
 	return ..()
+
+/mob/living/scp_173/verb/take_shit()
+	set name = "Shit On Floor"
+	set category = "SCP"
+	if(world.time >= last_player_shit + 600)
+		last_player_shit = world.time
+		var/feces = pick(/obj/effect/decal/cleanable/blood, /obj/effect/decal/cleanable/blood/gibs, /obj/effect/decal/cleanable/mucus)
+		new feces(loc)
+
