@@ -52,12 +52,13 @@
 			return FALSE
 	return .
 
-/proc/cone(atom/center, dir = NORTH, list/list)
-	. = list
-	for(var/atom in .)
+/proc/cone(atom/center, dir = NORTH, list/L, typecheck = /atom)
+	. = list()
+	for(var/atom in L)
 		var/atom/A = atom
-		if(!A.InCone(center, dir))
-			. -= A
+		if (typecheck == /atom || istype(A, typecheck))
+			if(A.InCone(center, dir))
+				. += A
 
 /mob/proc/update_vision_cone()
 	return FALSE
@@ -71,7 +72,9 @@
 		fov.dir = dir
 		if(fov.alpha)
 			var/image/I = null
-			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), oviewers(src)))
+			for(var/living in cone(src, OPPOSITE_DIR(dir), oviewers(src), /mob/living))
+
+				var/mob/living/L = living
 			
 				var/list/things = L.vis_contents+L
 				
@@ -92,7 +95,7 @@
 							L.in_vision_cones[client] = TRUE
 
 			// items are invisible too
-			for(var/obj/item/item in cone(src, OPPOSITE_DIR(dir), oview(get_turf(src)))) // http://www.byond.com/docs/ref/info.html#/proc/view
+			for(var/item in cone(src, OPPOSITE_DIR(dir), oview(get_turf(src)), /obj/item)) // http://www.byond.com/docs/ref/info.html#/proc/view
 				I = image("split", item)
 				I.override = TRUE
 				client.images += I

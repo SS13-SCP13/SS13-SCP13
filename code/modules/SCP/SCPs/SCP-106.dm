@@ -210,9 +210,13 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	set desc = "Phase through an object in front of you."
 	if (world.time < phase_cooldown)
 		return
+
 	for (var/obj/O in get_step(src, dir))
 	
 		if (!isstructure(O) && !ismachinery(O))
+			continue
+
+		if (istype(O, /obj/machinery/shieldwall))
 			continue
 	
 		phase_cooldown = world.time + (PHASE_TIME + 5)
@@ -317,13 +321,15 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	icon = 'icons/obj/femurbreaker.dmi'
 	density = TRUE
 	anchored = TRUE
+	buckle_lying = 1
 	var/spent_mobs = list()
 	var/_wifi_id = "femurbreaker"
 	var/datum/wifi/receiver/button/femur_breaker/wifi_receiver = null
 
 /obj/structure/femur_breaker/Initialize()
-	wifi_receiver = new(_wifi_id, src)
-	return ..()
+	. = ..()
+	if(_wifi_id)
+		wifi_receiver = new(_wifi_id, src)
 
 /obj/structure/femur_breaker/Destroy()
 	qdel(wifi_receiver)
@@ -350,7 +356,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		qdel(G)
 
 /obj/structure/femur_breaker/attack_hand(mob/user)
-	if (buckled_mob)
+	if (buckled_mob && buckled_mob != user)
 
 		visible_message("<span class = 'notice'>[user] unbuckles [buckled_mob] from the femur breaker.</span>")
 		buckled_mob.buckled = null
@@ -409,5 +415,6 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	sleep_time = 90 SECONDS
 
 /obj/machinery/button/femur_breaker/Initialize()
-	wifi_sender = new/datum/wifi/sender/femur_breaker(_wifi_id, src)
-	return ..()
+	if(_wifi_id)
+		wifi_sender = new/datum/wifi/sender/femur_breaker(_wifi_id, src)
+	. = ..()

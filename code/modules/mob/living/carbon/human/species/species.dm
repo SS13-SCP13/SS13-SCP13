@@ -207,7 +207,7 @@ the direction to shift the thing and what direction.
 
 example:
 	equip_adjust = list(
-		slot_back_str = list(NORTH = list(SOUTH = 12, EAST = 7), EAST = list(SOUTH = 2, WEST = 12))
+		slot_back_str = list("NORTH" = list(SOUTH = 12, EAST = 7), "EAST" = list(SOUTH = 2, WEST = 12))
 			)
 
 This would shift back items (backpacks, axes, etc.) when the mob

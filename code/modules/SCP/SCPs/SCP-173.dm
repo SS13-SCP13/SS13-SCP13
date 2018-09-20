@@ -65,6 +65,8 @@ GLOBAL_LIST_EMPTY(scp173s)
 
 /mob/living/scp_173/Life()
 	. = ..()
+	if (isobj(loc))
+		return
 	var/list/our_view = view(src, 7)
 	for(var/A in next_blinks)
 		if(!(A in our_view))

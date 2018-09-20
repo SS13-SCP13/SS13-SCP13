@@ -199,6 +199,19 @@ SUBSYSTEM_DEF(garbage)
 	var/type = D.type
 	var/refID = "\ref[D]"
 
+	var/list/dc = datum_components
+	for(var/I in dc)
+		var/datum/component/C = I
+		C._RemoveNoSignal()
+		qdel(C)
+	if(dc)
+		dc.Cut()
+
+	// do not touch - Kachnov
+	// ok - Steamport
+	log_qdel_refactor("[D] ([D.type]) is being hard-deleted.")
+
+
 	del(D)
 
 	tick = (TICK_USAGE-tick+((world.time-ticktime)/world.tick_lag*100))
