@@ -23,7 +23,7 @@
 
 /datum/job/assistant/equip(mob/living/carbon/human/H)
 	..()
-	H.add_stats(rand(3,6), rand(3,6), rand(5,7)) // Str, Dex, Int.
+	H.add_stats(rand(1,6), rand(1,6), rand(1,7)) // Str, Dex, Int.
 	H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	var/r = rand(100,9000)
