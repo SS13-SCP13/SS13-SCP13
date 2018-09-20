@@ -133,7 +133,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
 	rustg_log_write(diary, "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][log_end]")
-	var/datum/getrev/revdata = GLOB.revdata
+	var/datum/getrev/revdata = revdata
 	if (T == "ping")
 		var/x = 1
 		for (var/client/C)
