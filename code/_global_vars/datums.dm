@@ -1,0 +1,1 @@
+GLOBAL_DATUM(revdata, /datum/getrev)
