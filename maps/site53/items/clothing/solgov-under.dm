@@ -150,7 +150,7 @@
 
 /obj/item/clothing/under/solgov/utility/fleet/combat
 	name = "fleet fatigues"
-	desc = "Alternative utility uniform of the SCG Fleet, for when coveralls are impractical."
+	desc = "Alternative utility uniform of the Foundation, for when coveralls are impractical."
 	icon_state = "navycombat"
 	worn_state = "navycombat"
 

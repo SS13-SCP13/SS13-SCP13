@@ -754,6 +754,8 @@ About the new airlock wires panel:
 			if(density && src.arePowerSystemsOn())
 				set_airlock_overlays(AIRLOCK_EMAG)
 				flick("deny", src)
+		else
+			update_icon()
 	return
 
 /obj/machinery/door/airlock/attack_ai(mob/user as mob)
@@ -1393,6 +1395,7 @@ About the new airlock wires panel:
 		brace.take_damage(amount)
 	else
 		..(amount)
+	update_icon()
 
 /obj/machinery/door/airlock/examine()
 	. = ..()

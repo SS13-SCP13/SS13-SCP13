@@ -656,7 +656,7 @@
 /area/vacant/prototype/engine
 	name = "\improper Prototype Fusion Reactor Chamber"
 	icon_state = "firingrange"
-
+	engine_area = TRUE
 
 /area/vacant/cargo
 	name = "\improper Requisitions Office"

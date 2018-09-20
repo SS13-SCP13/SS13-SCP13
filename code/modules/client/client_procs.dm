@@ -44,7 +44,7 @@
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
-		world.log << "Attempted use of scripts within a topic call, by [src]"
+		rustg_log_write(world.log, "Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
 		//qdel(usr)
 		return
@@ -155,7 +155,7 @@
 		preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
-	apply_fps(prefs.clientfps)
+	apply_fps(prefs.clientfps ? prefs.clientfps : 30)
 
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
@@ -344,11 +344,19 @@
 		'html/panels.css',
 		'html/spacemag.css',
 		'html/images/loading.gif',
-		'html/images/ntlogo.png',
-		'html/images/bluentlogo.png',
-		'html/images/sollogo.png',
-		'html/images/terralogo.png',
-		'html/images/talisman.png'
+		'html/images/eng.png',
+		'html/images/sec.png',
+		'html/images/med.png',
+		'html/images/sci.png',
+		'html/images/ethics.png',
+		'html/images/log.png',
+		'html/images/isd.png',
+		'html/images/admin.png',
+		'html/images/o5.png',
+		'html/images/ecd.png',
+		'html/images/int.png',
+		'html/images/mtf.png',
+		'html/images/scplogo.png'
 		)
 
 	spawn (10) //removing this spawn causes all clients to not get verbs.
@@ -373,4 +381,4 @@ client/verb/character_setup()
 
 /client/proc/apply_fps(var/client_fps)
 	if(world.byond_version >= 511 && byond_version >= 511 && client_fps >= CLIENT_MIN_FPS && client_fps <= CLIENT_MAX_FPS)
-		vars["fps"] = prefs.clientfps
+		vars["fps"] = client_fps

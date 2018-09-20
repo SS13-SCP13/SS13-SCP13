@@ -411,33 +411,18 @@ datum/objective/steal
 	var/target_name
 
 	var/global/possible_items[] = list(
-		"the captain's antique laser gun" = /obj/item/weapon/gun/energy/captain,
-		"a bluespace rift generator" = /obj/item/integrated_circuit/manipulation/bluespace_rift,
-		"an RCD" = /obj/item/weapon/rcd,
-		"a jetpack" = /obj/item/weapon/tank/jetpack,
-		"a captain's jumpsuit" = /obj/item/clothing/under/rank/captain,
-		"a functional AI" = /obj/item/weapon/aicard,
-		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
 		"the [station_name()] blueprints" = /obj/item/blueprints,
 		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,
-		"28 moles of phoron (full tank)" = /obj/item/weapon/tank,
 		"a sample of slime extract" = /obj/item/slime_extract,
-		"a piece of corgi meat" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
-		"a research director's jumpsuit" = /obj/item/clothing/under/rank/research_director,
-		"a chief engineer's jumpsuit" = /obj/item/clothing/under/rank/chief_engineer,
-		"a chief medical officer's jumpsuit" = /obj/item/clothing/under/rank/chief_medical_officer,
-		"a head of security's jumpsuit" = /obj/item/clothing/under/rank/head_of_security,
-		"a head of personnel's jumpsuit" = /obj/item/clothing/under/rank/head_of_personnel,
-		"the hypospray" = /obj/item/weapon/reagent_containers/hypospray,
-		"the captain's pinpointer" = /obj/item/weapon/pinpointer,
-		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,
+		"the nuke disk pinpointer" = /obj/item/weapon/pinpointer,
+		"the SCP-500 pill bottle" = /obj/item/weapon/storage/pill_bottle/scp500,
+		"SCP-113" = /obj/item/device/scp113,
+		"SCP-513" = /obj/item/scp513
 	)
 
 	var/global/possible_items_special[] = list(
 		/*"nuclear authentication disk" = /obj/item/weapon/disk/nuclear,*///Broken with the change to nuke disk making it respawn on z level change.
-		"nuclear gun" = /obj/item/weapon/gun/energy/gun/nuclear,
 		"diamond drill" = /obj/item/weapon/pickaxe/diamonddrill,
-		"bag of holding" = /obj/item/weapon/storage/backpack/holding,
 		"hyper-capacity cell" = /obj/item/weapon/cell/hyper,
 		"10 diamonds" = /obj/item/stack/material/diamond,
 		"50 gold bars" = /obj/item/stack/material/gold,

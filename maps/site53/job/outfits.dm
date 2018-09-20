@@ -13,7 +13,7 @@
 	suit = /obj/item/clothing/suit/storage/toggle/suit/black
 	id_type = /obj/item/weapon/card/id/adminlvl5
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/heads/captain
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/command/headofhr
@@ -23,7 +23,7 @@
 	suit = /obj/item/clothing/suit/storage/toggle/suit/black
 	id_type = /obj/item/weapon/card/id/adminlvl4
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/heads/hop
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/command/commsofficer
@@ -32,7 +32,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/heads/commsofficer
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer
@@ -41,7 +41,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl3
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/headset_deckofficer
 	back = null
 
 // END OF COMMAND OUTFITS
@@ -54,7 +54,7 @@
 	id_type = /obj/item/weapon/card/id/seclvl4
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/heads/ce
 	back = null
 
 
@@ -66,7 +66,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/heads/cw
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
@@ -75,45 +75,45 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/headset_sec
 	back = null
 
 // SECURITY OUTFITS
 
 /decl/hierarchy/outfit/job/site90/crew/command/cos
 	name = OUTFIT_JOB_NAME("Guard Commander")
-	uniform = /obj/item/clothing/under/solgov/utility/marine/command
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl5
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/heads/cos
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
 	name = OUTFIT_JOB_NAME("Zone Commander")
-	uniform = /obj/item/clothing/under/solgov/utility/marine/tan
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/headset_com
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
 	name = OUTFIT_JOB_NAME("Guard")
-	uniform = /obj/item/clothing/under/solgov/utility/marine/security
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl3
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/headset_sec
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
 	name = OUTFIT_JOB_NAME("Junior Guard")
-	uniform = /obj/item/clothing/under/solgov/utility/marine/security
+	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl1
 	l_pocket = /obj/item/device/radio
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/headset_sec
 	back = null
 
 // SCIENCE OUTFITS
@@ -340,7 +340,7 @@
 	name = OUTFIT_JOB_NAME("Emergency Medical Technician")
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/black
 	shoes = /obj/item/clothing/shoes/white
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/emt
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null

@@ -626,7 +626,7 @@
 
 /mob/Stat()
 	..()
-	. = (is_client_active(10 MINUTES))
+	. = is_client_active(2 MINUTES)
 	if(!.)
 		return
 
@@ -733,7 +733,12 @@
 		regenerate_icons()
 	else if( lying != lying_prev )
 		update_icons()
-	update_vision_cone()
+		if (ishuman(src))
+			var/mob/living/carbon/human/H = src 
+			if (lying)
+				H.reset_vision_cone()
+			else 
+				H.update_vision_cone()
 
 	return canmove
 

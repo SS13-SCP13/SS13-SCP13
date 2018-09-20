@@ -16,7 +16,7 @@
 	var/footer = null
 	var/footerOn = FALSE
 
-	var/logo_list = list("ntlogo.png","sollogo.png","terralogo.png")
+	var/logo_list = list("admin.png", "o5.png", "isd.png", "ecd.png", "int.png", "mtf.png")
 	var/logo = ""
 
 /obj/item/weapon/paper/admin/New()
@@ -46,7 +46,7 @@
 	var/text = null
 	//TODO change logo based on who you're contacting.
 	text = "<center><img src = [logo]></br>"
-	text += "<b>[origin] Quantum Uplink Signed Message</b><br>"
+	text += "<b>[origin] Fax Network</b><br>"
 	text += "<font size = \"1\">Encryption key: [originhash]<br>"
 	text += "Challenge: [challengehash]<br></font></center><hr>"
 
@@ -149,7 +149,7 @@ obj/item/weapon/paper/admin/proc/updateDisplay()
 		footerOn = !footerOn
 		updateDisplay()
 		return
-	
+
 	if(href_list["changelogo"])
 		logo = input(usr, "What logo?", "Choose a logo", "") as null|anything in (logo_list)
 		generateHeader()

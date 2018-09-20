@@ -121,11 +121,12 @@ var/const/NO_EMAG_ACT = -50
 /obj/item/weapon/card/id/New()
 	..()
 	if(job_access_type)
-		var/datum/job/j = job_master.GetJobByType(job_access_type)
-		if(j)
-			rank = j.title
-			assignment = rank
-			access |= j.get_access()
+		if (job_master)
+			var/datum/job/j = job_master.GetJobByType(job_access_type)
+			if(j)
+				rank = j.title
+				assignment = rank
+				access |= j.get_access()
 
 /obj/item/weapon/card/id/examine(mob/user)
 	set src in oview(1)

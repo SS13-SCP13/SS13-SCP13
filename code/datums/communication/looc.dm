@@ -17,8 +17,8 @@
 		return FALSE
 
 /decl/communication_channel/ooc/looc/do_communicate(var/client/C, var/message)
-	var/mob/M = C.mob ? C.mob.get_looc_mob() : null
-	var/list/listening_hosts = hosts_in_view_range(M)
+	var/mob/M = C.mob
+	var/list/listening_hosts = looc_view(M)
 	var/list/listening_clients = list()
 
 	var/key = C.key
@@ -51,11 +51,15 @@
 /mob/observer/eye/looc_prefix()
 	return "Eye"
 
-/mob/proc/get_looc_mob()
-	return src
-
 /mob/living/silicon/ai/get_looc_mob()
 	if(!eyeobj)
 		return src
 	return eyeobj
 
+/mob/proc/get_looc_mob()
+	return src
+
+/proc/looc_view(var/atom/movable/center)
+	. = list()
+	for (var/mob/M in viewers(world.view, center))
+		. += M

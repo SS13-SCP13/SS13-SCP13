@@ -17,7 +17,7 @@
 	emag_file = 'icons/obj/doors/double/emag.dmi'
 	width = 2
 	appearance_flags = 0
-	opacity = 0
+	opacity = 1
 	assembly_type = /obj/structure/door_assembly/multi_tile
 	
 /obj/machinery/door/airlock/multi_tile/New()
@@ -61,7 +61,7 @@
 			success = 1
 			if(propagate)
 				var/turf/simulated/wall/W = T
-				W.update_connections()
+				W.update_connections(1)
 				W.update_icon()
  
 		else if( istype(T, /turf/simulated/shuttle/wall))

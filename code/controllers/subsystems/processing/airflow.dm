@@ -14,8 +14,15 @@ PROCESSING_SUBSYSTEM_DEF(airflow)
 	flags = SS_NO_INIT
 	priority = SS_PRIORITY_AIRFLOW
 
-
+#define AIRFLOW_DISABLED
 /datum/controller/subsystem/processing/airflow/fire(resumed = FALSE)
+
+	#ifdef AIRFLOW_DISABLED
+	return 
+	#endif 
+
+#undef AIRFLOW_DISABLED
+	
 	if (!resumed)
 		current_run = processing.Copy()	// Defined in parent.
 
