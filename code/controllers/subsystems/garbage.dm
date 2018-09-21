@@ -306,7 +306,7 @@ SUBSYSTEM_DEF(garbage)
 			if (QDEL_HINT_IWILLGC)
 				D.gc_destroyed = world.time
 				return
-			if (QDEL_HINT_LETMELIVE)	//qdel should let the object live after calling destory.
+			if (QDEL_HINT_LETMELIVE)	//qdel should let the object live after calling Destroy().
 				if(!force)
 					D.gc_destroyed = null //clear the gc variable (important!)
 					return
@@ -348,7 +348,7 @@ SUBSYSTEM_DEF(garbage)
 
 	find_references(FALSE)
 
-/datum/proc/find_references(skip_alert)
+/datum/proc/find_references(skip_alert, var/movables_only = FALSE)
 	running_find_references = type
 	if(usr && usr.client)
 		if(usr.client.running_find_references)
@@ -375,7 +375,8 @@ SUBSYSTEM_DEF(garbage)
 	last_find_references = world.time
 	DoSearchVar(GLOB)
 	for(var/thing in world)
-		DoSearchVar(thing, "WorldRef: [thing]")
+		if (!movables_only || ismovable(thing))
+			DoSearchVar(thing, "WorldRef: [thing]")
 	testing("Completed search for references to a [type].")
 	if(usr && usr.client)
 		usr.client.running_find_references = null
