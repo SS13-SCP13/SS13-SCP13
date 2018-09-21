@@ -8,7 +8,7 @@ SUBSYSTEM_DEF(updateserver)
 /datum/controller/subsystem/updateserver/fire()
 	var/update = FALSE
 
-	if (!done)
+	if (!done && length(GLOB.clients) > 1)
 
 		switch (ticker.current_state)
 			if (GAME_STATE_PLAYING)

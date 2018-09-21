@@ -18,8 +18,8 @@
 	if(mind && mind.current == src)
 		spellremove(src)
 	ghostize()
-	..()
-	return QDEL_HINT_HARDDEL
+	key = null
+	return ..()
 
 /mob/proc/remove_screen_obj_references()
 	hands = null

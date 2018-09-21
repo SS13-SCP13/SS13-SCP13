@@ -204,6 +204,10 @@
 	//DISCONNECT//
 	//////////////
 /client/Del()
+	return Destroy()
+
+/client/Destroy()
+	key = null 
 	ticket_panels -= src
 	if(holder)
 		holder.owner = null
@@ -211,10 +215,6 @@
 	GLOB.ckey_directory -= ckey
 	GLOB.clients -= src
 	return ..()
-
-/client/Destroy()
-	..()
-	return QDEL_HINT_HARDDEL_NOW
 
 // here because it's similar to below
 

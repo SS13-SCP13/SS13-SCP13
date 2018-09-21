@@ -87,7 +87,7 @@ SUBSYSTEM_DEF(atoms)
 				else
 					A.LateInitialize(arglist(arguments))
 			if(INITIALIZE_HINT_QDEL)
-				qdel(A)
+				A.Destroy() // let the actual GC pick it up, since qdel(A) here results in a hard delete most of the time
 				qdeleted = TRUE
 			else
 				BadInitializeCalls[the_type] |= BAD_INIT_NO_HINT
