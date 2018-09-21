@@ -40,10 +40,6 @@ var/list/admin_datums = list()
 		owner.add_admin_verbs()	//TODO
 		GLOB.admins |= C
 
-		// hacks
-		if (C.ckey in GLOB.devs)
-			C.verbs |= /client/proc/cmd_dev_say
-
 /datum/admins/proc/disassociate()
 	if(owner)
 		GLOB.admins -= owner

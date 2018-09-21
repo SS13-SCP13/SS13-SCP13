@@ -173,6 +173,11 @@
 		add_admin_verbs()
 		admin_memo_show()
 
+	// hacks
+	spawn (7)
+		if (src && ckey in GLOB.devs)
+			verbs |= /client/proc/cmd_dev_say
+
 	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
 	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
 	spawn(5) // And wait a half-second, since it sounds like you can do this too fast.
