@@ -6,15 +6,6 @@ SUBSYSTEM_DEF(lighting)
 	init_order = INIT_ORDER_LIGHTING
 
 	var/lighting_overlays_initialised = FALSE
-	// Queues of update counts, waiting to be rolled into stats lists
-	var/list/stats_queues = list(
-		"Source" = list(), "Corner" = list(), "Overlay" = list())
-	// Stats lists
-	var/list/stats_lists = list(
-		"Source" = list(), "Corner" = list(), "Overlay" = list())
-	var/update_stats_every = (1 SECONDS)
-	var/next_stats_update = 0
-	var/stat_updates_to_keep = 5
 
 	// misc lists
 	var/list/update_lights    = list()    // List of lighting sources  queued for update.
