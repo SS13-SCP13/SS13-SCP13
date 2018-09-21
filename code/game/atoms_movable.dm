@@ -22,11 +22,14 @@
 	var/item_state = null // Used to specify the item state for the on-mob overlays.
 
 /atom/movable/Destroy()
+
 	. = ..()
-	for(var/atom/movable/AM in src)
+
+	for(var/AM in src)
 		qdel(AM)
 
 	forceMove(null)
+	
 	if (pulledby)
 		if (pulledby.pulling == src)
 			pulledby.pulling = null
