@@ -7,6 +7,7 @@ GLOBAL_LIST_EMPTY(scp012s)
 	w_class = ITEM_SIZE_NO_CONTAINER //Quick fix that may need more work in the future.
 	nothrow = TRUE
 	SCP = /datum/scp/SCP_012
+	anchored = 1
 	var/ticks = 0
 
 /datum/scp/SCP_012

@@ -1,5 +1,5 @@
 //wrapper macros for easier grepping
-#define WRITE_FILE(file, text) rustg_log_write(file, text)
+#define WRITE_FILE(filename, text) rustg_log_write(filename, text)
 
 
 // On Linux/Unix systems the line endings are LF, on windows it's CRLF, admins that don't use notepad++
@@ -61,6 +61,9 @@
 /proc/log_game(text)
 	if (config.log_game)
 		game_log("GAME", text)
+
+/proc/log_qdel_refactor(text)
+	WRITE_FILE("data/logs/qdel_refactor.txt", text)
 
 /proc/log_vote(text)
 	if (config.log_vote)

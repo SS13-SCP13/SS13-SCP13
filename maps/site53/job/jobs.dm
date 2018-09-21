@@ -17,22 +17,25 @@
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
 	allowed_ranks = list(/datum/mil_rank/civ/classd)
-	equip(var/mob/living/carbon/human/H)
-		..()
-		H.add_stats(rand(3,6), rand(3,6), rand(5,7)) // Str, Dex, Int.
-		H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 	var/static/list/used_numbers = list()
 
 
 
-/datum/job/assistant/equip(var/mob/living/carbon/human/H)
+/datum/job/assistant/equip(mob/living/carbon/human/H)
 	..()
+	H.add_stats(rand(1,6), rand(1,6), rand(1,7)) // Str, Dex, Int.
+	H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
 	var/r = rand(100,9000)
 	while (used_numbers.Find(r))
 		r = rand(100,9000)
 	used_numbers += r
-	H.name = "D-[used_numbers[used_numbers.len]]"
+	H.name = random_name(H.gender, H.species.name)
 	H.real_name = H.name
+	if(istype(H.wear_id, /obj/item/weapon/card/id))
+		var/obj/item/weapon/card/id/ID = H.wear_id
+		ID.registered_name = "D-[used_numbers[used_numbers.len]]"
+		ID.update_name()
 
 
 
@@ -161,7 +164,7 @@
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(7,10), rand(7,10), rand(5,10)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(70,90), rand(70,90), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
@@ -190,7 +193,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(5,10), rand(5,10), rand(5,10)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
 	minimal_access = list()
@@ -215,7 +218,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(8,10), rand(8,10), rand(7,10)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(90,100), rand(90,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
@@ -244,7 +247,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(7,10), rand(7,10), rand(6,10)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
@@ -260,7 +263,6 @@
 	duties = "<big><b>As the Guard you have more access than a Junior Guard, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
-	alt_titles = list("Agent")
 	minimal_player_age = 5
 	ideal_character_age = 30
 	alt_titles = null
@@ -275,7 +277,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(6,9), rand(6,9), rand(6,9)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
@@ -291,7 +293,6 @@
 	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
-	alt_titles = list("Junior Agent")
 	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
@@ -305,7 +306,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(6,9), rand(6,9), rand(6,9)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_sciencelvl1)

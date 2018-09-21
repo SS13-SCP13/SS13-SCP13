@@ -210,9 +210,13 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	set desc = "Phase through an object in front of you."
 	if (world.time < phase_cooldown)
 		return
+
 	for (var/obj/O in get_step(src, dir))
 	
 		if (!isstructure(O) && !ismachinery(O))
+			continue
+
+		if (istype(O, /obj/machinery/shieldwall))
 			continue
 	
 		phase_cooldown = world.time + (PHASE_TIME + 5)
@@ -323,8 +327,9 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	var/datum/wifi/receiver/button/femur_breaker/wifi_receiver = null
 
 /obj/structure/femur_breaker/Initialize()
-	wifi_receiver = new(_wifi_id, src)
-	return ..()
+	. = ..()
+	if(_wifi_id)
+		wifi_receiver = new(_wifi_id, src)
 
 /obj/structure/femur_breaker/Destroy()
 	qdel(wifi_receiver)
@@ -410,5 +415,6 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	sleep_time = 90 SECONDS
 
 /obj/machinery/button/femur_breaker/Initialize()
-	wifi_sender = new/datum/wifi/sender/femur_breaker(_wifi_id, src)
-	return ..()
+	if(_wifi_id)
+		wifi_sender = new/datum/wifi/sender/femur_breaker(_wifi_id, src)
+	. = ..()

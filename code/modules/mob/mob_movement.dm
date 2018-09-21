@@ -296,9 +296,6 @@
 				direct = turn(direct, pick(90, -90))
 			return mob.buckled.relaymove(mob,direct)
 
-		else if (istype(mob.buckled, /obj/structure/femur_breaker))
-			return
-
 		if(istype(mob.machine, /obj/machinery))
 			if(mob.machine.relaymove(mob,direct))
 				return
@@ -324,6 +321,9 @@
 							if(prob(25))	direct = turn(direct, pick(90, -90))
 				move_delay += 2
 				return mob.buckled.relaymove(mob,direct)
+
+			else if (istype(mob.buckled, /obj/structure/femur_breaker))
+				return
 
 		if(mob.check_slipmove())
 			return
