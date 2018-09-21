@@ -37,6 +37,7 @@
 #include "code\__defines\feedback.dm"
 #include "code\__defines\flags.dm"
 #include "code\__defines\gamemode.dm"
+#include "code\__defines\garbage.dm"
 #include "code\__defines\inventory_sizes.dm"
 #include "code\__defines\items_clothing.dm"
 #include "code\__defines\languages.dm"

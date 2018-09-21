@@ -87,7 +87,11 @@ SUBSYSTEM_DEF(atoms)
 				else
 					A.LateInitialize(arglist(arguments))
 			if(INITIALIZE_HINT_QDEL)
-				A.Destroy() // let the actual GC pick it up, since qdel(A) here results in a hard delete most of the time
+				// this seemingly helps avoid hard deletes
+				if (ismovable(A))
+					var/atom/movable/AM = A 
+					AM.forceMove(null)
+				qdel_after(A, 30 SECONDS)
 				qdeleted = TRUE
 			else
 				BadInitializeCalls[the_type] |= BAD_INIT_NO_HINT

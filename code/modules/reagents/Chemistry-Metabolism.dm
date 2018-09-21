@@ -9,6 +9,20 @@
 	if(istype(parent_mob))
 		parent = parent_mob
 
+/datum/reagents/metabolism/Destroy()
+
+	if (parent)
+		if (parent.bloodstr == src)
+			parent.bloodstr = null 
+		if (parent.ingested == src)
+			parent.ingested = null 
+		if (parent.touching == src)
+			parent.touching = null 
+		if (parent.reagents == src)
+			parent.reagents = null
+
+	return ..()
+
 /datum/reagents/metabolism/proc/metabolize()
 
 	var/metabolism_type = 0 //non-human mobs
