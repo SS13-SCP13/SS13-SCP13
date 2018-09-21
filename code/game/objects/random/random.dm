@@ -1081,7 +1081,7 @@ var/list/multi_point_spawns
 	spawnpoints -= src
 	if(!spawnpoints.len)
 		multi_point_spawns -= id
-	. = ..()
+	return ..()
 
 /obj/random_multi/proc/generate_items()
 	return

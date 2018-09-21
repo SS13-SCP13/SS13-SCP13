@@ -1,4 +1,3 @@
-/var/total_lighting_corners = 0
 /var/datum/lighting_corner/dummy/dummy_lighting_corner = new
 // Because we can control each corner of every lighting overlay.
 // And corners get shared between multiple turfs (unless you're on the corners of the map, then 1 corner doesn't).
@@ -32,7 +31,7 @@
 /datum/lighting_corner/New(var/turf/new_turf, var/diagonal)
 	. = ..()
 
-	total_lighting_corners++
+	++SSlighting.total_lighting_corners
 
 	masters[new_turf] = turn(diagonal, 180)
 	z = new_turf.z
@@ -84,6 +83,7 @@
 	global.lighting_corner_list += src
 	
 /datum/lighting_corner/Destroy()
+	--SSlighting.total_lighting_corners
 	global.lighting_corner_list -= src 
 	return ..()
 
@@ -101,7 +101,7 @@
 
 	if (!needs_update)
 		needs_update = TRUE
-		lighting_update_corners += src
+		SSlighting.update_corners += src
 
 /datum/lighting_corner/proc/update_overlays()
 	// Cache these values a head of time so 4 individual lighting overlays don't all calculate them individually.
@@ -133,7 +133,7 @@
 		if (T.lighting_overlay)
 			if (!T.lighting_overlay.needs_update)
 				T.lighting_overlay.needs_update = TRUE
-				lighting_update_overlays += T.lighting_overlay
+				SSlighting.update_overlays += T.lighting_overlay
 
 
 /datum/lighting_corner/dummy/New()
