@@ -201,12 +201,7 @@
 		global_listeners -= listener
 	return TRUE
 
-#define FUCKTHISLAG
 /decl/observ/proc/raise_event()
-	
-	#ifdef FUCKTHISLAG
-	return FALSE 
-	#endif 
 	
 	// Sanity
 	if (!args.len)
