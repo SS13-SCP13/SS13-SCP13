@@ -207,13 +207,14 @@
 	return Destroy()
 
 /client/Destroy()
+	key = null 
 	ticket_panels -= src
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
 	GLOB.ckey_directory -= ckey
 	GLOB.clients -= src
-	return
+	return ..()
 
 // here because it's similar to below
 

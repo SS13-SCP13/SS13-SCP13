@@ -18,7 +18,8 @@
 	if(mind && mind.current == src)
 		spellremove(src)
 	ghostize()
-	return
+	key = null
+	return ..()
 
 /mob/proc/remove_screen_obj_references()
 	hands = null
