@@ -5,6 +5,8 @@
 #define MIN_CLIENT_VERSION	0		//Just an ambiguously low version for now, I don't want to suddenly stop people playing.
 									//I would just like the code ready should it ever need to be used.
 
+GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
+
 //#define TOPIC_DEBUGGING 1
 
 	/*

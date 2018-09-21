@@ -2,8 +2,6 @@
 #define STEALTH_MANUAL 1
 #define STEALTH_AUTO 2
 
-GLOBAL_LIST_INIT(devs, world.file2list("config/devs.txt"))
-
 var/list/admin_datums = list()
 
 /datum/admins
