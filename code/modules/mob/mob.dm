@@ -1,4 +1,6 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
+	if (client && client.mob == src)
+		client.mob = null
 	STOP_PROCESSING(SSmobs, src)
 	GLOB.mob_list -= src
 	GLOB.dead_mob_list_ -= src
@@ -8,8 +10,8 @@
 	for(var/obj/item/grab/G in grabbed_by)
 		qdel(G)
 	clear_fullscreen()
+	remove_screen_obj_references()
 	if(client)
-		remove_screen_obj_references()
 		for(var/atom/movable/AM in client.screen)
 			var/obj/screen/screenobj = AM
 			if(!istype(screenobj) || !screenobj.globalscreen)

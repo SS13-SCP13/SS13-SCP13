@@ -12,7 +12,6 @@
 /obj/skybox/Initialize()
 	. = ..()
 	var/mob/M = loc
-	SSskybox.skyboxes += src
 	owner = M
 	loc = null
 	SSskybox.skyboxes += src
@@ -40,7 +39,6 @@
 	appearance = rotation
 
 /obj/skybox/Destroy()
-	owner = null
 	SSskybox.skyboxes -= src
 	return ..()
 
