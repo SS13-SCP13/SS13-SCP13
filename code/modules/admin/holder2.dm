@@ -2,6 +2,8 @@
 #define STEALTH_MANUAL 1
 #define STEALTH_AUTO 2
 
+GLOBAL_LIST_INIT(devs, world.file2list("config/devs.txt"))
+
 var/list/admin_datums = list()
 
 /datum/admins
@@ -37,6 +39,10 @@ var/list/admin_datums = list()
 		owner.holder = src
 		owner.add_admin_verbs()	//TODO
 		GLOB.admins |= C
+
+		// hacks
+		if (C.ckey in GLOB.devs)
+			C.verbs |= /client/proc/cmd_dev_say
 
 /datum/admins/proc/disassociate()
 	if(owner)
