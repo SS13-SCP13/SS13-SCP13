@@ -23,8 +23,6 @@
 
 /atom/movable/Destroy()
 
-	. = ..()
-
 	for(var/AM in src)
 		qdel(AM)
 
@@ -34,6 +32,8 @@
 		if (pulledby.pulling == src)
 			pulledby.pulling = null
 		pulledby = null
+
+	return ..()
 
 /atom/movable/Bump(var/atom/A, yes)
 	if(src.throwing)
