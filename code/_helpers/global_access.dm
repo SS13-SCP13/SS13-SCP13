@@ -545,20 +545,6 @@
 			return global.lighting_corner_list;
 		if("lighting_overlay_list")
 			return global.lighting_overlay_list;
-		if("lighting_overlays_initialised")
-			return global.lighting_overlays_initialised;
-		if("lighting_update_corners")
-			return global.lighting_update_corners;
-		if("lighting_update_corners_old")
-			return global.lighting_update_corners_old;
-		if("lighting_update_lights")
-			return global.lighting_update_lights;
-		if("lighting_update_lights_old")
-			return global.lighting_update_lights_old;
-		if("lighting_update_overlays")
-			return global.lighting_update_overlays;
-		if("lighting_update_overlays_old")
-			return global.lighting_update_overlays_old;
 		if("limb_icon_cache")
 			return global.limb_icon_cache;
 		if("loadout_categories")
@@ -993,12 +979,6 @@
 			return global.ticket_panels;
 		if("tickets")
 			return global.tickets;
-		if("total_lighting_corners")
-			return global.total_lighting_corners;
-		if("total_lighting_overlays")
-			return global.total_lighting_overlays;
-		if("total_lighting_sources")
-			return global.total_lighting_sources;
 		if("total_unit_tests")
 			return global.total_unit_tests;
 		if("traitors")
@@ -1614,20 +1594,6 @@
 			global.lighting_corner_list=newval;
 		if("lighting_overlay_list")
 			global.lighting_overlay_list=newval;
-		if("lighting_overlays_initialised")
-			global.lighting_overlays_initialised=newval;
-		if("lighting_update_corners")
-			global.lighting_update_corners=newval;
-		if("lighting_update_corners_old")
-			global.lighting_update_corners_old=newval;
-		if("lighting_update_lights")
-			global.lighting_update_lights=newval;
-		if("lighting_update_lights_old")
-			global.lighting_update_lights_old=newval;
-		if("lighting_update_overlays")
-			global.lighting_update_overlays=newval;
-		if("lighting_update_overlays_old")
-			global.lighting_update_overlays_old=newval;
 		if("limb_icon_cache")
 			global.limb_icon_cache=newval;
 		if("loadout_categories")
@@ -2062,12 +2028,6 @@
 			global.ticket_panels=newval;
 		if("tickets")
 			global.tickets=newval;
-		if("total_lighting_corners")
-			global.total_lighting_corners=newval;
-		if("total_lighting_overlays")
-			global.total_lighting_overlays=newval;
-		if("total_lighting_sources")
-			global.total_lighting_sources=newval;
 		if("total_unit_tests")
 			global.total_unit_tests=newval;
 		if("traitors")
@@ -2413,13 +2373,6 @@
 	"light_overlay_cache",
 	"lighting_corner_list",
 	"lighting_overlay_list",
-	"lighting_overlays_initialised",
-	"lighting_update_corners",
-	"lighting_update_corners_old",
-	"lighting_update_lights",
-	"lighting_update_lights_old",
-	"lighting_update_overlays",
-	"lighting_update_overlays_old",
 	"limb_icon_cache",
 	"loadout_categories",
 	"lobby_image",

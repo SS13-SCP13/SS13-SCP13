@@ -5,6 +5,8 @@
 #define MIN_CLIENT_VERSION	0		//Just an ambiguously low version for now, I don't want to suddenly stop people playing.
 									//I would just like the code ready should it ever need to be used.
 
+GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
+
 //#define TOPIC_DEBUGGING 1
 
 	/*
@@ -173,6 +175,11 @@
 		add_admin_verbs()
 		admin_memo_show()
 
+	// hacks
+	spawn (7)
+		if (src && ckey in GLOB.devs)
+			verbs |= /client/proc/cmd_dev_say
+
 	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
 	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
 	spawn(5) // And wait a half-second, since it sounds like you can do this too fast.
@@ -204,6 +211,10 @@
 	//DISCONNECT//
 	//////////////
 /client/Del()
+	return Destroy()
+
+/client/Destroy()
+	key = null 
 	ticket_panels -= src
 	if(holder)
 		holder.owner = null
@@ -211,10 +222,6 @@
 	GLOB.ckey_directory -= ckey
 	GLOB.clients -= src
 	return ..()
-
-/client/Destroy()
-	..()
-	return QDEL_HINT_HARDDEL_NOW
 
 // here because it's similar to below
 

@@ -1,0 +1,1 @@
+#define qdel_after(D, time) spawn (time) if (D) {qdel(D)}

@@ -107,6 +107,7 @@
 	if(client)
 		for(var/image in client.hidden_images)
 			var/image/I = image
+			client.images -= I
 			I.override = FALSE
 			delete_image(I, delay)
 			delay += 10
