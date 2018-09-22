@@ -214,8 +214,9 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 	//DISCONNECT//
 	//////////////
 /client/Del()
-	last_mob[ckey] = mob
-	mob.Logout()
+	if (mob)
+		last_mob[ckey] = mob
+		mob.Logout()
 	return Destroy()
 
 // made this remove a lot more references so clients properly GC
