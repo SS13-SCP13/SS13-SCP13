@@ -46,7 +46,7 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
-		rustg_log_write(world.log, "Attempted use of scripts within a topic call, by [src]")
+		WRITE_LOG(world.log, "Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
 		//qdel(usr)
 		return

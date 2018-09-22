@@ -796,7 +796,7 @@
 		if("restricted_camera_networks")
 			return global.restricted_camera_networks;
 		if("revdata")
-			return global.revdata;
+			return GLOB.revdata;
 		if("revs")
 			return global.revs;
 		if("robot_custom_icons")
@@ -1049,7 +1049,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-		
+
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ALL_ANTIGENS")
@@ -1845,7 +1845,7 @@
 		if("restricted_camera_networks")
 			global.restricted_camera_networks=newval;
 		if("revdata")
-			global.revdata=newval;
+			GLOB.revdata=newval;
 		if("revs")
 			global.revs=newval;
 		if("robot_custom_icons")
@@ -2098,7 +2098,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-		
+
 /var/list/_all_globals=list(
 	"ALL_ANTIGENS",
 	"ANTAG_FREQS",

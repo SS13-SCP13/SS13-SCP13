@@ -585,7 +585,7 @@ proc/SwapMaps_CreateFromTemplate(template_id)
 	else if(swapmaps_mode!=SWAPMAPS_TEXT && fexists("map_[template_id].txt"))
 		text=1
 	else
-		rustg_log_write(world.log, "SwapMaps error in SwapMaps_CreateFromTemplate(): map_[template_id] file not found.")
+		WRITE_LOG(world.log, "SwapMaps error in SwapMaps_CreateFromTemplate(): map_[template_id] file not found.")
 		return
 	if(text)
 		S=new
@@ -612,7 +612,7 @@ proc/SwapMaps_LoadChunk(chunk_id,turf/locorner)
 	else if(swapmaps_mode!=SWAPMAPS_TEXT && fexists("map_[chunk_id].txt"))
 		text=1
 	else
-		rustg_log_write(world.log, "SwapMaps error in SwapMaps_LoadChunk(): map_[chunk_id] file not found.")
+		WRITE_LOG(world.log, "SwapMaps error in SwapMaps_LoadChunk(): map_[chunk_id] file not found.")
 		return
 	if(text)
 		S=new
@@ -630,9 +630,9 @@ proc/SwapMaps_LoadChunk(chunk_id,turf/locorner)
 
 proc/SwapMaps_SaveChunk(chunk_id,turf/corner1,turf/corner2)
 	if(!corner1 || !corner2)
-		rustg_log_write(world.log, "SwapMaps error in SwapMaps_SaveChunk():")
-		if(!corner1) rustg_log_write(world.log, "  corner1 turf is null")
-		if(!corner2) rustg_log_write(world.log, "  corner2 turf is null")
+		WRITE_LOG(world.log, "SwapMaps error in SwapMaps_SaveChunk():")
+		if(!corner1) WRITE_LOG(world.log, "  corner1 turf is null")
+		if(!corner2) WRITE_LOG(world.log, "  corner2 turf is null")
 		return
 	var/swapmap/M=new
 	M.id=chunk_id
@@ -659,7 +659,7 @@ proc/SwapMaps_GetSize(id)
 	else if(swapmaps_mode!=SWAPMAPS_TEXT && fexists("map_[id].txt"))
 		text=1
 	else
-		rustg_log_write(world.log, "SwapMaps error in SwapMaps_GetSize(): map_[id] file not found.")
+		WRITE_LOG(world.log, "SwapMaps error in SwapMaps_GetSize(): map_[id] file not found.")
 		return
 	if(text)
 		S=new
