@@ -4,9 +4,12 @@
 /var/list/view_variables_no_assoc = list("verbs", "contents","screen","images")
 
 // Acceptable 'in world', as VV would be incredibly hampered otherwise
-/client/proc/debug_variables2(var/datum/D in list(GLOB)+world.contents)
+/client/proc/debug_variables2()
 	set category = "Debug"
 	set name = "View Variables 2.0"
+	if ((input(src, "Debug GLOB?") in list("Yes", "No")) == "Yes")
+		return debug_variables(GLOB)
+	var/datum/D = input(src, "Debug what variable?") in world
 	return debug_variables(D)
 
 /client/proc/debug_variables(var/datum/D in world)
