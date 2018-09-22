@@ -16,9 +16,7 @@
 	var/last_played_rail
 
 	var/automode = 0
-	var/speed = 1
 
-	var/activated = 0
 	var/looptick = 0
 
 	var/delay_timer = null
@@ -36,6 +34,7 @@
 								 /obj/machinery/light)
 
 /obj/tram/tram_controller/New()
+	SStram.trams += src
 	spawn(1)
 		init_floors() //Search and link floors
 		init_walls() //Search and link walls
@@ -43,42 +42,25 @@
 			init_tram() //Combine walls and floors and anything inside the tram
 			init_controllers() //Find control pads
 			gen_collision() //Generate collision system
-			if(automode)
-				startLoop() //if it has been mapped as active, let's start it
 
 /obj/tram/tram_controller/Destroy()
+	SStram.trams -= src
 	for(var/obj/tram/floor/F in tram_floors)
 		remove_floor(F)
 	for(var/obj/tram/wall/TW in tram_walls)
 		remove_wall(TW)
 	for(var/obj/tram/controlpad/CP in controllers)
 		remove_controller(CP)
-	killLoop()
 	return ..()
 
 /obj/tram/tram_controller/emp_act(severity)
 	if(automode)	automode = 0
 	..()
 
-/obj/tram/tram_controller/proc/startLoop()
-	if(activated)	return
-	activated = 1
-	spawn(0)
-		while(activated)
-			process()
-			looptick++
-			sleep(speed)
-
-/obj/tram/tram_controller/proc/killLoop()
-	activated = 0
-	looptick = 0
-	tram.Cut()
-	pretram.Cut()
-
 /obj/tram/tram_controller/proc/process()
+	looptick++
 	update_tram() //Update combine to account for new mobs and/or objects
-	if(automode)
-		tram_rail_follow()
+	tram_rail_follow()
 
 /obj/tram/tram_controller/proc/update_tram()
 	pretram = tram.Copy()
@@ -278,7 +260,7 @@
 		throwdir2 |= SOUTH
 	M.throw_at(get_step(M, pick(throwdir1,throwdir2)), 10, 1)
 	M.Weaken(5)
-	var/damage = 1 / speed * 33
+	var/damage = 33
 	M.apply_damage(damage, BRUTE, BP_HEAD)
 	M.apply_damage(damage, BRUTE, BP_CHEST)
 	M.apply_damage(damage, BRUTE, BP_L_LEG)
@@ -290,7 +272,7 @@
 	for(var/mob/living/M in pretram)
 		if(!tram.Find(M))
 			M.Weaken(3)
-			M.apply_damage(1/speed * 2, BRUTE, pick(BP_L_LEG,BP_R_LEG))
+			M.apply_damage(2, BRUTE, pick(BP_L_LEG,BP_R_LEG))
 
 //////////////////////DAMAGE PROCS
 /obj/tram/ex_act(severity)

@@ -12,9 +12,6 @@
 	var/dat = "<b>Tram Control Panel</b><br>"
 	dat += "<br>Tram engine: <a href=?src=\ref[src];engine_toggle=1>[tram_linked.automode ? "<font color='green'>On</font>" : "<font color='red'>Off</font>"]</a>"
 	dat += "<br>Direction: <a href=?src=\ref[src];direction=1>Switch</a>"
-	dat += "<br>Speed: [tram_linked.speed < 2 ? "<a href=?src=\ref[src];speeddown=1>-</a>" : ""]  [1/tram_linked.speed] [tram_linked.speed > 0.1 ? "<a href=?src=\ref[src];speedup=1>+</a>" : ""]"
-	if(tram_linked.speed < 1)
-		dat += "<br><i>Warning: Speed is above recommended levels!</i>"
 	if(tram_linked.delay_timer > 1)
 		dat += "<br>Automatic delay active. <a href=?src=\ref[src];nodelay=1><font color=yellow>Force Start</font></a>"
 	user << browse(dat, "window=trampad")
@@ -31,8 +28,7 @@
 
 	if(href_list["engine_toggle"])
 		tram_linked.automode = !tram_linked.automode
-		if(tram_linked.automode)	tram_linked.startLoop()
-		else	tram_linked.killLoop()
+
 	if(href_list["direction"])
 		var/stored_rail = null
 		for(var/cdir in list(NORTH, SOUTH, EAST, WEST))
@@ -40,14 +36,6 @@
 				if(!istype(R))	continue
 				if(R != tram_linked.last_played_rail)
 					tram_linked.last_played_rail = stored_rail
-	if(href_list["speedup"])
-		if(tram_linked.speed > 0.1)
-			tram_linked.speed -= 0.1
-		if(tram_linked.speed <= 0)
-			tram_linked.speed = 0.1
-	if(href_list["speeddown"])
-		if(tram_linked.speed < 2)
-			tram_linked.speed += 0.1
 
 	if(href_list["nodelay"])
 		tram_linked.delay_timer = 1 //1 instead of 0 because if delay_timer is 0 the logic will evaluate to false and it will just reset the timer.
