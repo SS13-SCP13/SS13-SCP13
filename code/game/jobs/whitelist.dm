@@ -16,7 +16,7 @@ var/list/whitelist = list()
 		for (var/line in whitelist)
 			if (M.ckey in line)
 				if ("+[rank]" in line)
-					return TRUE 
+					return TRUE
 
 /var/list/alien_whitelist = list()
 
@@ -24,7 +24,7 @@ var/list/whitelist = list()
 	if(config.usealienwhitelist)
 		if(config.usealienwhitelistSQL)
 			if(!load_alienwhitelistSQL())
-				rustg_log_write(world.log, "Could not load alienwhitelist via SQL")
+				WRITE_LOG(world.log, "Could not load alienwhitelist via SQL")
 		else
 			load_alienwhitelist()
 	return 1
@@ -39,7 +39,7 @@ var/list/whitelist = list()
 /proc/load_alienwhitelistSQL()
 	var/DBQuery/query = dbcon_old.NewQuery("SELECT * FROM whitelist")
 	if(!query.Execute())
-		rustg_log_write(world.log, dbcon_old.ErrorMsg())
+		WRITE_LOG(world.log, dbcon_old.ErrorMsg())
 		return 0
 	else
 		while(query.NextRow())
