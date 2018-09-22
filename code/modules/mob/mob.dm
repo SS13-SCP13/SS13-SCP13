@@ -1,7 +1,4 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
-	if (client && client.mob == src)
-		client.mob = null
-
 	STOP_PROCESSING(SSmobs, src)
 	GLOB.player_list -= src
 	GLOB.mob_list -= src

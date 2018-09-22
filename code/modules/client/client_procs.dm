@@ -214,6 +214,8 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 	return Destroy()
 
 /client/Destroy()
+	if (mob && mob.client == src)
+		mob.client = null
 	key = null 
 	ticket_panels -= src
 	if(holder)
@@ -221,7 +223,8 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 		GLOB.admins -= src
 	GLOB.ckey_directory -= ckey
 	GLOB.clients -= src
-	return ..()
+	..()
+	return QDEL_HINT_IWILLGC
 
 // here because it's similar to below
 
