@@ -77,7 +77,7 @@
 	W.post_change()
 	. = W
 
-	if(lighting_overlays_initialised)
+	if(SSlighting.lighting_overlays_initialised)
 		lighting_overlay = old_lighting_overlay
 		affecting_lights = old_affecting_lights
 		corners = old_corners

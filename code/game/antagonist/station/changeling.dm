@@ -1,18 +1,18 @@
 /datum/antagonist/changeling
 	id = MODE_CHANGELING
-	role_text = "Changeling"
-	role_text_plural = "Changelings"
+	role_text = "Shapeshifter"
+	role_text_plural = "Shapeshifters"
 	feedback_tag = "changeling_objective"
 	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg)
 	protected_jobs = list(/datum/job/captain)
-	welcome_text = "Use say \"#g message\" to communicate with your fellow changelings. Remember: you get all of their absorbed DNA if you absorb them."
+	welcome_text = "Use say \"#g message\" to communicate with your fellow shapeshifters. Remember: you get all of their absorbed DNA if you absorb them."
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	antaghud_indicator = "hudchangeling"
 
 	faction = "changeling"
 
 /datum/antagonist/changeling/get_special_objective_text(var/datum/mind/player)
-	return "<br><b>Changeling ID:</b> [player.changeling.changelingID].<br><b>Genomes Absorbed:</b> [player.changeling.absorbedcount]"
+	return "<br><b>Shapeshifter ID:</b> [player.changeling.changelingID].<br><b>Genomes Absorbed:</b> [player.changeling.absorbedcount]"
 
 /datum/antagonist/changeling/update_antag_mob(var/datum/mind/player)
 	..()

@@ -1,15 +1,24 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
 	STOP_PROCESSING(SSmobs, src)
+	GLOB.player_list -= src
 	GLOB.mob_list -= src
 	GLOB.dead_mob_list_ -= src
 	GLOB.living_mob_list_ -= src
+	GLOB.event_sources_count -= src
+
+	for (var/observer in all_virtual_listeners)
+		var/mob/observer/virtual/O = observer 
+		if (O.host == src)
+			O.host = null
+
 	unset_machine()
 	QDEL_NULL(hud_used)
 	for(var/obj/item/grab/G in grabbed_by)
 		qdel(G)
 	clear_fullscreen()
+	remove_screen_obj_references()
+
 	if(client)
-		remove_screen_obj_references()
 		for(var/atom/movable/AM in client.screen)
 			var/obj/screen/screenobj = AM
 			if(!istype(screenobj) || !screenobj.globalscreen)
@@ -18,8 +27,9 @@
 	if(mind && mind.current == src)
 		spellremove(src)
 	ghostize()
+	key = null
 	..()
-	return QDEL_HINT_HARDDEL
+	return QDEL_HINT_IWILLGC
 
 /mob/proc/remove_screen_obj_references()
 	hands = null
@@ -45,7 +55,7 @@
 	
 /mob/New()
 	..()
-	GLOB.mob_list += src 
+	GLOB.mob_list += src
 
 /mob/Initialize()
 	. = ..()

@@ -591,6 +591,20 @@ proc/dd_sortedTextList(list/incoming)
 	var/case_sensitive = 1
 	return dd_sortedtextlist(incoming, case_sensitive)
 
+proc/upperlist(var/list/L)
+	. = list()
+	for (var/element in L)
+		. += uppertext(element)
+
+proc/lowerlist(var/list/L)
+	. = list()
+	for (var/element in L)
+		. += lowertext(element)
+
+proc/ckeylist(var/list/L)
+	. = list()
+	for (var/element in L)
+		. += ckey(element)
 
 /datum/proc/dd_SortValue()
 	return "[src]"

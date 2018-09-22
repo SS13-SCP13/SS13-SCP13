@@ -72,7 +72,7 @@
 
 /atom/Destroy()
 	QDEL_NULL(reagents)
-	. = ..()
+	return ..()
 
 /atom/proc/reveal_blood()
 	return
