@@ -1,6 +1,8 @@
 //conveyor2 is pretty much like the original, except it supports corners, but not diverters.
 //note that corner pieces transfer stuff clockwise when running forward, and anti-clockwise backwards.
 
+GLOBAL_LIST_EMPTY(conveyors)
+
 /obj/machinery/conveyor
 	icon = 'icons/obj/recycling.dmi'
 	icon_state = "conveyor0"
@@ -36,6 +38,8 @@
 	if(on)
 		operating = 1
 		setmove()
+
+	GLOB.conveyors += src
 
 
 
@@ -176,7 +180,7 @@
 
 	spawn(5)		// allow map load
 		conveyors = list()
-		for(var/obj/machinery/conveyor/C in world)
+		for(var/obj/machinery/conveyor/C in GLOB.conveyors)
 			if(C.id == id)
 				conveyors += C
 
@@ -224,7 +228,7 @@
 	update_icon()
 
 	// find any switches with same id as this one, and set their positions to match us
-	for(var/obj/machinery/conveyor_switch/S in world)
+	for(var/obj/machinery/conveyor_switch/S in SSmachines.all_machinery)
 		if(S.id == src.id)
 			S.position = position
 			S.update_icon()
@@ -253,7 +257,7 @@
 	update_icon()
 
 	// find any switches with same id as this one, and set their positions to match us
-	for(var/obj/machinery/conveyor_switch/S in world)
+	for(var/obj/machinery/conveyor_switch/S in SSmachines.all_machinery)
 		if(S.id == src.id)
 			S.position = position
 			S.update_icon()

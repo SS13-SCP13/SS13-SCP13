@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(machines)
 	init_order = INIT_ORDER_MACHINES
 	flags = SS_KEEP_TIMING
 	runlevels = RUNLEVEL_GAME|RUNLEVEL_POSTGAME
-
+	
 	var/current_step = SSMACHINES_PIPENETS
 
 	var/cost_pipenets      = 0
@@ -50,6 +50,7 @@ SUBSYSTEM_DEF(machines)
 	var/list/machinery     = list()
 	var/list/powernets     = list()
 	var/list/power_objects = list()
+	var/list/all_machinery = list()
 
 	var/list/processing
 	var/list/current_run = list()
@@ -91,7 +92,7 @@ if(current_step == this_step || (check_resumed && !resumed)) {\
 	for(var/datum/powernet/PN in powernets)
 		qdel(PN)
 	powernets.Cut()
-	setup_powernets_for_cables(cable_list)
+	setup_powernets_for_cables(global.cable_list)
 
 /datum/controller/subsystem/machines/proc/setup_powernets_for_cables(list/cables)
 	for(var/obj/structure/cable/PC in cables)

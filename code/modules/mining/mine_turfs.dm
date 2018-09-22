@@ -1,3 +1,4 @@
+GLOBAL_LIST_EMPTY(mineral_turfs)
 var/list/mining_walls = list()
 var/list/mining_floors = list()
 
@@ -19,7 +20,7 @@ var/list/mining_floors = list()
 	density = 1
 	blocks_air = 1
 	temperature = T0C
-	var/mined_turf = /turf/simulated/floor/asteroid
+	var/mined_turf = /turf/simulated/floor/exoplanet/desert
 	var/ore/mineral
 	var/mined_ore = 0
 	var/last_act = 0
@@ -41,6 +42,7 @@ var/list/mining_floors = list()
 	if (!mining_walls["[src.z]"])
 		mining_walls["[src.z]"] = list()
 	mining_walls["[src.z]"] += src
+	GLOB.mineral_turfs += src
 	spawn(0)
 		MineralSpread()
 	spawn(2)
@@ -49,6 +51,7 @@ var/list/mining_floors = list()
 /turf/simulated/mineral/Destroy()
 	if (mining_walls["[src.z]"])
 		mining_walls["[src.z]"] -= src
+	GLOB.mineral_turfs -= src
 	return ..()
 
 /turf/simulated/mineral/can_build_cable()

@@ -47,6 +47,12 @@
 
 #define isobj(A) istype(A, /obj)
 
+#define isspritehelper(A) istype(A, /obj/sprite_helper)
+
+#define isstructure(A) istype(A, /obj/structure)
+
+#define ismachinery(A) istype(A, /obj/machinery)
+
 #define isghost(A) istype(A, /mob/observer/ghost)
 
 #define isobserver(A) istype(A, /mob/observer)
@@ -64,6 +70,12 @@
 #define issilicon(A) istype(A, /mob/living/silicon)
 
 #define isslime(A) istype(A, /mob/living/carbon/slime)
+
+#define isscp106(A) istype(A, /mob/living/carbon/human/scp106)
+
+#define isscp049(A) istype(A, /mob/living/carbon/human/scp049)
+
+#define isscp049_1(A) (istype(A, /mob/living/carbon/human) && istype(A:species, /datum/species/scp049_1))
 
 #define isunderwear(A) istype(A, /obj/item/underwear)
 

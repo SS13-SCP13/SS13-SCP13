@@ -3,6 +3,7 @@
 	filetype = "PRG"
 	filename = "UnknownProgram"				// File name. FILE NAME MUST BE UNIQUE IF YOU WANT THE PROGRAM TO BE DOWNLOADABLE FROM NTNET!
 	var/required_access = null				// List of required accesses to run/download the program.
+	var/list/req_one_access = list()		// List of any single access that can run/download the program
 	var/requires_access_to_run = 1			// Whether the program checks for required_access when run.
 	var/requires_access_to_download = 1		// Whether the program checks for required_access when downloading.
 	var/datum/nano_module/NM = null			// If the program uses NanoModule, put it here and it will be automagically opened. Otherwise implement ui_interact.
@@ -40,6 +41,7 @@
 /datum/computer_file/program/clone()
 	var/datum/computer_file/program/temp = ..()
 	temp.required_access = required_access
+	temp.req_one_access = req_one_access.Copy()
 	temp.nanomodule_path = nanomodule_path
 	temp.filedesc = filedesc
 	temp.program_icon_state = program_icon_state
@@ -93,7 +95,8 @@
 	// Defaults to required_access
 	if(!access_to_check)
 		access_to_check = required_access
-	if(!access_to_check) // No required_access, allow it.
+
+	if(!access_to_check && !req_one_access.len) // No required_access, allow it.
 		return 1
 
 	// Admin override - allows operation of any computer as aghosted admin, as if you had any required access.
@@ -109,9 +112,14 @@
 			to_chat(user, "<span class='notice'>\The [computer] flashes an \"RFID Error - Unable to scan ID\" warning.</span>")
 		return 0
 
-	if(access_to_check in I.access)
+	if(access_to_check && access_to_check in I.access)
 		return 1
-	else if(loud)
+
+	for (var/access in req_one_access)
+		if (access in I.access)
+			return 1
+
+	if(loud)
 		to_chat(user, "<span class='notice'>\The [computer] flashes an \"Access Denied\" warning.</span>")
 
 // This attempts to retrieve header data for NanoUIs. If implementing completely new device of different type than existing ones

@@ -41,12 +41,15 @@
 
 	..()
 	START_PROCESSING(SSobj, src)
-	for(var/obj/machinery/power/singularity_beacon/singubeacon in SSmachines.machinery)
+	for(var/obj/machinery/power/singularity_beacon/singubeacon in SSmachines.all_machinery)
 		if(singubeacon.active)
 			target = singubeacon
 			break
+			
+	global.singularity_list += src 
 
 /obj/singularity/Destroy()
+	global.singularity_list -= src 
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

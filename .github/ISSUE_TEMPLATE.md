@@ -34,10 +34,8 @@
 -->
 
 
-
 #### Client version, Server revision & Game ID
 <!-- Found with the "Show server revision" verb in the OOC tab in game. -->
-
 
 
 #### Issue bingo
@@ -50,4 +48,4 @@ Please check whatever applies. More checkboxes checked increase your chances of 
 - [ ] Issue could be reproduced by different players
 - [ ] Issue could be reproduced in multiple rounds
 - [ ] Issue happened in a recent (less than 7 days ago) round
-- [ ] [Couldn't find an existing issue about this](https://github.com/Baystation12/Baystation12/issues)
+- [ ] [Couldn't find an existing issue about this]( https://github.com/SS13-SCP13/SS13-SCP13/issues )

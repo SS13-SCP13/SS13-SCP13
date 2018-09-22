@@ -73,7 +73,7 @@
 
 /datum/mind/proc/transfer_to(mob/living/new_character)
 	if(!istype(new_character))
-		world.log << "## DEBUG: transfer_to(): Some idiot has tried to transfer_to() a non mob/living mob. Please inform Carn"
+		WRITE_LOG(world.log, "## DEBUG: transfer_to(): Some idiot has tried to transfer_to() a non mob/living mob. Please inform Carn")
 	if(current)					//remove ourself from our old body's mind variable
 		if(changeling)
 			current.remove_changeling_powers()
@@ -178,7 +178,7 @@
 		if(antag) antag.place_mob(src.current)
 
 	else if (href_list["role_edit"])
-		var/new_role = input("Select new role", "Assigned role", assigned_role) as null|anything in joblist
+		var/new_role = input("Select new role", "Assigned role", assigned_role) as null|anything in global.job_list
 		if (!new_role) return
 		assigned_role = new_role
 
@@ -498,7 +498,7 @@
 		if(ticker)
 			ticker.minds += mind
 		else
-			world.log << "## DEBUG: mind_initialize(): No ticker ready yet! Please inform Carn"
+			WRITE_LOG(world.log, "## DEBUG: mind_initialize(): No ticker ready yet! Please inform Carn")
 	if(!mind.name)	mind.name = real_name
 	mind.current = src
 	if(player_is_antag(mind))

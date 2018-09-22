@@ -202,6 +202,7 @@
 	return TRUE
 
 /decl/observ/proc/raise_event()
+	
 	// Sanity
 	if (!args.len)
 		return FALSE

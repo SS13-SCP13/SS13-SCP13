@@ -83,6 +83,8 @@
 			error("[src.name] in [get_area(src)]has errored. [src.network?"Empty network list":"Null network list"]")
 		ASSERT(src.network)
 		ASSERT(src.network.len > 0)
+		
+	global.camera_list += src 
 	..()
 
 /obj/machinery/camera/Initialize()
@@ -100,6 +102,7 @@
 
 
 /obj/machinery/camera/Destroy()
+	global.camera_list -= src 
 	deactivate(null, 0) //kick anyone viewing out
 	if(assembly)
 		qdel(assembly)
@@ -297,6 +300,20 @@
 	return 0
 
 /obj/machinery/camera/update_icon()
+	pixel_x = 0
+	pixel_y = 0
+
+	var/turf/T = get_step(get_turf(src), turn(dir, 180))
+	
+	if(istype(T, /turf/simulated/wall))
+		switch (dir)
+			if (SOUTH)
+				pixel_y = 21
+			if (WEST)
+				pixel_x = 10
+			if (EAST)
+				pixel_x = -10
+
 	if (!status || (stat & BROKEN))
 		icon_state = "[initial(icon_state)]1"
 	else if (stat & EMPED)

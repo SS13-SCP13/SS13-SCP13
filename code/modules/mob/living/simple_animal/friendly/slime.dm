@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(slimes)
+
 /mob/living/simple_animal/slime
 	name = "pet slime"
 	desc = "A lovable, domesticated slime."
@@ -13,6 +15,14 @@
 	response_harm   = "stomps on"
 	emote_see = list("jiggles", "bounces in place")
 	var/colour = "grey"
+
+/mob/living/simple_animal/slime/New()
+	..()
+	GLOB.slimes += src
+
+/mob/living/simple_animal/slime/Destroy()
+	GLOB.slimes -= src 
+	return ..()
 
 /mob/living/simple_animal/slime/can_force_feed(var/feeder, var/food, var/feedback)
 	if(feedback)

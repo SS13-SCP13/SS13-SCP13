@@ -499,7 +499,7 @@
 	docking_controller = "rescue_shuttle_dock_airlock"
 
 /obj/effect/shuttle_landmark/ert/deck1
-	name =  "Southwest of Fourth deck"
+	name =  "Site 53 LZ"
 	landmark_tag = "nav_ert_deck1"
 
 /obj/effect/shuttle_landmark/ert/deck2

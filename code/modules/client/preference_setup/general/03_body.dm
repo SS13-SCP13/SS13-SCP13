@@ -463,44 +463,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		var/third_limb = null  // if you try to unchange the hand, the arm should also change
 
 		// Do not let them amputate their entire body, ty.
-		var/list/choice_options = list("Normal","Amputated","Prosthesis")
-
-		//Dare ye who decides to one day make fbps be able to have fleshy bits. Heed my warning, recursion is a bitch. - Snapshot
-		if(pref.organ_data[BP_CHEST] == "cyborg")
-			choice_options = list("Amputated", "Prosthesis")
-
-		switch(organ_tag)
-			if("Left Leg")
-				limb = BP_L_LEG
-				second_limb = BP_L_FOOT
-			if("Right Leg")
-				limb = BP_R_LEG
-				second_limb = BP_R_FOOT
-			if("Left Arm")
-				limb = BP_L_ARM
-				second_limb = BP_L_HAND
-			if("Right Arm")
-				limb = BP_R_ARM
-				second_limb = BP_R_HAND
-			if("Left Foot")
-				limb = BP_L_FOOT
-				third_limb = BP_L_LEG
-			if("Right Foot")
-				limb = BP_R_FOOT
-				third_limb = BP_R_LEG
-			if("Left Hand")
-				limb = BP_L_HAND
-				third_limb = BP_L_ARM
-			if("Right Hand")
-				limb = BP_R_HAND
-				third_limb = BP_R_ARM
-			if("Head")
-				limb =        BP_HEAD
-				choice_options = list("Prosthesis")
-			if("Full Body")
-				limb =        BP_CHEST
-				third_limb =  BP_GROIN
-				choice_options = list("Normal","Prosthesis")
+		var/list/choice_options = list("Normal","Amputated") //lmao easier to fix than disabling a species jesus fuck.
 
 		var/new_state = input(user, "What state do you wish the limb to be in?") as null|anything in choice_options
 		if(!new_state || !CanUseTopic(user)) return TOPIC_NOACTION
@@ -526,40 +489,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				if(second_limb)
 					pref.organ_data[second_limb] = "amputated"
 					pref.rlimb_data[second_limb] = null
-
-			if("Prosthesis")
-				var/tmp_species = pref.species ? pref.species : SPECIES_HUMAN
-				var/list/usable_manufacturers = list()
-				for(var/company in chargen_robolimbs)
-					var/datum/robolimb/M = chargen_robolimbs[company]
-					if(tmp_species in M.species_cannot_use)
-						continue
-					if(M.restricted_to.len && !(tmp_species in M.restricted_to))
-						continue
-					if(M.applies_to_part.len && !(limb in M.applies_to_part))
-						continue
-					usable_manufacturers[company] = M
-				if(!usable_manufacturers.len)
-					return
-				var/choice = input(user, "Which manufacturer do you wish to use for this limb?") as null|anything in usable_manufacturers
-				if(!choice)
-					return
-				pref.rlimb_data[limb] = choice
-				pref.organ_data[limb] = "cyborg"
-				if(second_limb)
-					pref.rlimb_data[second_limb] = choice
-					pref.organ_data[second_limb] = "cyborg"
-				if(third_limb && pref.organ_data[third_limb] == "amputated")
-					pref.organ_data[third_limb] = null
-
-				if(limb == BP_CHEST)
-					for(var/other_limb in BP_ALL_LIMBS - BP_CHEST)
-						pref.organ_data[other_limb] = "cyborg"
-						pref.rlimb_data[other_limb] = choice
-					if(!pref.organ_data[BP_BRAIN])
-						pref.organ_data[BP_BRAIN] = "assisted"
-					for(var/internal_organ in list(BP_HEART,BP_EYES,BP_LUNGS,BP_LIVER,BP_KIDNEYS))
-						pref.organ_data[internal_organ] = "mechanical"
 
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 

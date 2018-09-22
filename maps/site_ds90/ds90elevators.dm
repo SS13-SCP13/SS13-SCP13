@@ -38,8 +38,9 @@
 	lift_size_y = 4
 
 	areas_to_use = list(
-		/area/turbolift/lowerentrance4,
-		/area/turbolift/hcz
+		/area/turbolift/hcz,
+		/area/turbolift/lowerentrance4
+
 		)
 
 /obj/turbolift_map_holder/scp049
@@ -49,8 +50,8 @@
 	lift_size_y = 3
 
 	areas_to_use = list(
-		/area/turbolift/hcz2plag,
-		/area/turbolift/plag2hcz
+		/area/turbolift/plag2hcz,
+		/area/turbolift/hcz2plag
 		)
 
 /obj/turbolift_map_holder/scp106
@@ -60,8 +61,9 @@
 	lift_size_y = 3
 
 	areas_to_use = list(
-		/area/turbolift/hcz2dmh,
-		/area/turbolift/dmh2hcz
+		/area/turbolift/dmh2hcz,
+		/area/turbolift/hcz2dmh
+
 		)
 
 /obj/turbolift_map_holder/lhcz2lcz

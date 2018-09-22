@@ -101,7 +101,7 @@
 
 			for(var/area/A in gravity_generator.localareas)
 				var/obj/machinery/gravity_generator/G
-				for(G in SSmachines.machinery)
+				for(G in SSmachines.all_machinery)
 					if((A in G.localareas) && (G.on))
 						break
 				if(!G)

@@ -185,6 +185,7 @@ var/list/gamemode_cache = list()
 	var/ooc_allowed = 1
 	var/looc_allowed = 1
 	var/dooc_allowed = 1
+	var/donator_ooc_allowed = 1
 	var/dsay_allowed = 1
 	var/aooc_allowed = 1
 
@@ -449,6 +450,9 @@ var/list/gamemode_cache = list()
 
 				if ("disable_dsay")
 					config.dsay_allowed = 0
+
+				if("disable_dooc")
+					config.donator_ooc_allowed = 0
 
 				if ("disable_respawn")
 					config.abandon_allowed = 0

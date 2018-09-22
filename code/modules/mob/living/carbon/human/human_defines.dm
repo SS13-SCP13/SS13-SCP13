@@ -118,3 +118,9 @@
 
 	var/obj/item/grab/current_grab_type 	// What type of grab they use when they grab someone.
 	var/skin_state = SKIN_NORMAL
+	
+	// SCP-049
+	var/pre_scp049_name = ""
+	var/pre_scp049_real_name = ""
+	var/pre_scp049_species = "Human"
+	var/pestilence = FALSE

@@ -43,14 +43,14 @@
 
 		"}
 
-/obj/item/weapon/book/manual/sol_sop
-	name = "Standard Operating Procedure"
-	desc = "SOP aboard the SEV Torch."
+/obj/item/weapon/book/manual/mil_sop
+	name = "Military Operating Procedure"
+	desc = "SOP in Site DS90."
 	icon_state = "booksolregs"
-	author = "The Sol Central Government"
+	author = "The Foundation"
 	title = "Standard Operating Procedure"
 
-/obj/item/weapon/book/manual/sol_sop/Initialize()
+/obj/item/weapon/book/manual/mil_sop/Initialize()
 	. = ..()
 	dat = {"
 
@@ -58,7 +58,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Standard_Operating_Procedure&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="http://wiki.scp13.site/index.php?title=Security/Military&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
@@ -216,6 +216,21 @@ Previously exposed subjects may undergo SCP-113's effects again by re-initiating
 Failure rate can be affected by subjects not coming into contact with SCP-113 for a lengthy period of time, which varies by subject; patterns are under research. Under normal circumstances, transformation failure rate increases exponentially upon multiple exposures. Subjects who survive rapid, repeated exposure are eventually transformed -DATA EXPUNGED- Further anomalous elements continue to appear as exposure count increases.
 
 
+"}
+
+/obj/item/weapon/paper/scp/safe/scp500
+	name = "SCP-500"
+	info = {"
+	<tt><center><b><font color='green'>SAFE: SCP-500</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+
+<b>Item #:</b> SCP-500
+
+<b>Object Class:</b> Safe
+
+<b>Special Containment Procedures:</b> SCP-500 must be stored in a cool and dry place away from bright light. SCP-500 is only allowed to be accessed by personnel with level 4 security clearance to prevent misapplication.
+
+<b>Description:</b> SCP-500 is a small plastic can which at the time of writing contains forty-seven (47) red pills. One pill, when taken orally, effectively cures the subject of all diseases within two hours, exact time depending on the severity and amount of the subject's conditions. Despite extensive trials, all attempts at synthesizing more of what is thought to be the active ingredient of the pills have been unsuccessful.
 "}
 
 /obj/item/weapon/paper/scp/safe/scp999
@@ -571,6 +586,50 @@ SCP-939 do not possess many vital organ systems; central and peripheral nervous 
 SCP-939's primary method of luring prey is the imitation of human speech in the voices of prior victims, though imitation of other species and active nocturnal hunts have been documented. SCP-939 vocalizations often imply significant distress; whether SCP-939 understand their vocalizations or are repeating previously heard phrases is the subject of ongoing study. How SCP-939 acquire voices is not currently understood; specimens have been documented imitating victims despite never hearing the victim speak. Analysis of SCP-939 vocalizations cannot distinguish between SCP-939 and samples of known victims' voices. The use of biometric voice-recognition security or identification systems at any installation housing SCP-939 is strongly discouraged for this reason. Prey is usually killed with a single bite to the cranium or neck; bite forces have been measured in excess of 35 MPa.
 
 SCP-939 exhale minute traces of an aerosolized Class C amnestic, designated AMN-C227. AMN-C227 causes temporary anterograde amnesia, inhibiting memory formation for the duration of exposure, plus an average of thirty (30) minutes. It is colorless, odorless, and tasteless with an estimated ECt50 for inhalation of 0.0015mg•min/m3. In well-ventilated or open air environments, risk of exposure to ECt50 is greatly reduced but not negligible. AMN-C227 is typically undetectable in the bloodstream sixty (60) minutes following cessation of exposure. Reported sensations of disorientation and mild hallucinations immediately following removal from environments saturated with the agent are similar to recreational use of numerous psychoactive substances and easily mistaken as such.
+"}
+
+
+// MISC.
+
+/obj/item/weapon/paper/dcell/assignment
+	name = "READ THIS FIRST!"
+	info = {"
+	<tt><center><b>
+	<h3>FOUNDATION SECURITY DIVISION</h3></b>
+	</center>
+<br>
+Congratulations, you're in charge of assignments today!
+<br>
+<b>Before assigning work detail to anyone, make sure to coordinate with your fellow cell guards and Lieutenant to see if all work places have at least one cell guard overlooking it!</b>
+<br>
+<br>
+<b>As an additional note, there is a maximum of work assignments, which is 6x mining and manual labor, 4 x botany, 3x kitchen and 2x janitorial, making for 15 work places at current time.</b>
+<br>
+<b>DO NOT EXCEED THE MAXIMUM ALLOWED OF WORKSPACES UNDER THREAT OF IMMEDIATE EMPLOYMENT TERMINATION.</b>
+<br>
+<br>
+<b>Cell guards must not assign access other than the D-Class Work Zones. Doing this will result in immediate employment termination.</b>
+<br>
+Steps to assign someone to work duty;
+<br>
+0. Remind all guards that work duty assignment requires them to update their access as well. Ask the Lieutenant to hand out assignments ASAP. Guard assignments go first. D-Cells may be unlocked after.
+<br>
+1. D-Class are allowed to cite their preference. This does not mean you have to grant them at you.
+<br>
+2. Ask for the ID Card of the D-Class, and assign the appropriate access. Only one work assignment per D-Class.
+<br>
+3. Return ID Card to D-Class, and give them instructions on how to get to their area.
+<br>
+4. Inform guards at work stations of the D-Number that is coming their way, so they do not let in random people.
+<br>
+<br>
+<b>Once you are done with assigning D-Class, or the work assignments are full, close down the shutters and secure the Mastercard in the locker supplied next to your desk. The safe code is 15954. Failure to do this will result in immediate termination.</b>
+<br>
+<br>
+<b>Assigning additional access to yourself besides the Class D work assignments is noted, and logged in the secure logging system of this terminal. Termination will be instant.</b>
+<br>
+<br>
+Good luck on your shift! For further questions, please defer to your Cell Lieutenant. Return this piece of paper to the Guard Lieutenant, or stash it in the safe if one is not around.
 "}
 
 

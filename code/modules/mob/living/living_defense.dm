@@ -339,10 +339,15 @@
 
 /mob/living/proc/handle_actions()
 	//Pretty bad, i'd use picked/dropped instead but the parent calls in these are nonexistent
-	for(var/datum/action/A in actions)
+	for(var/action in actions)
+		var/datum/action/A = action
 		if(A.CheckRemoval(src))
 			A.Remove(src)
-	for(var/obj/item/I in src)
+	for(var/item in items_with_action_button_names)
+		var/obj/item/I = item
+		if (get_dist(I, src) != 0 || (l_hand != I && r_hand != I))
+			items_with_action_button_names -= I 
+			continue
 		if(I.action_button_name)
 			if(!I.action)
 				if(I.action_button_is_hands_free)

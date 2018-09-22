@@ -1,6 +1,10 @@
 //wrapper macros for easier grepping
 #define DIRECT_OUTPUT(A, B) A << B
+#define SEND_IMAGE(target, image) DIRECT_OUTPUT(target, image)
+#define SEND_SOUND(target, sound) DIRECT_OUTPUT(target, sound)
+#define SEND_TEXT(target, text) DIRECT_OUTPUT(target, text)
 #define WRITE_FILE(file, text) DIRECT_OUTPUT(file, text)
+#define WRITE_LOG(log, text) rustg_log_write(log, text)
 
 
 // On Linux/Unix systems the line endings are LF, on windows it's CRLF, admins that don't use notepad++
@@ -34,7 +38,7 @@
 	to_world_log("## TESTING: [msg][log_end]")
 
 /proc/game_log(category, text)
-	diary << "\[[time_stamp()]] [game_id] [category]: [text][log_end]"
+	WRITE_LOG(diary, "\[[time_stamp()]] [game_id] [category]: [text][log_end]")
 
 /proc/log_admin(text)
 	GLOB.admin_log.Add(text)
@@ -62,6 +66,9 @@
 /proc/log_game(text)
 	if (config.log_game)
 		game_log("GAME", text)
+
+/proc/log_qdel_refactor(text)
+	WRITE_FILE("data/logs/qdel_refactor.txt", text)
 
 /proc/log_vote(text)
 	if (config.log_vote)

@@ -2,7 +2,7 @@
 	plane = OBJ_PLANE
 
 	appearance_flags = TILE_BOUND
-	glide_size = 8
+	glide_size = 0
 
 	var/movable_flags
 
@@ -22,15 +22,18 @@
 	var/item_state = null // Used to specify the item state for the on-mob overlays.
 
 /atom/movable/Destroy()
-	. = ..()
-	for(var/atom/movable/AM in src)
+
+	for(var/AM in src)
 		qdel(AM)
 
 	forceMove(null)
+	
 	if (pulledby)
 		if (pulledby.pulling == src)
 			pulledby.pulling = null
 		pulledby = null
+
+	return ..()
 
 /atom/movable/Bump(var/atom/A, yes)
 	if(src.throwing)

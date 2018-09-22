@@ -1,14 +1,24 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
 	STOP_PROCESSING(SSmobs, src)
+	GLOB.player_list -= src
+	GLOB.mob_list -= src
 	GLOB.dead_mob_list_ -= src
 	GLOB.living_mob_list_ -= src
+	GLOB.event_sources_count -= src
+
+	for (var/observer in all_virtual_listeners)
+		var/mob/observer/virtual/O = observer 
+		if (O.host == src)
+			O.host = null
+
 	unset_machine()
 	QDEL_NULL(hud_used)
 	for(var/obj/item/grab/G in grabbed_by)
 		qdel(G)
 	clear_fullscreen()
+	remove_screen_obj_references()
+
 	if(client)
-		remove_screen_obj_references()
 		for(var/atom/movable/AM in client.screen)
 			var/obj/screen/screenobj = AM
 			if(!istype(screenobj) || !screenobj.globalscreen)
@@ -17,8 +27,9 @@
 	if(mind && mind.current == src)
 		spellremove(src)
 	ghostize()
+	key = null
 	..()
-	return QDEL_HINT_HARDDEL
+	return QDEL_HINT_IWILLGC
 
 /mob/proc/remove_screen_obj_references()
 	hands = null
@@ -41,6 +52,10 @@
 	gun_setting_icon = null
 	ability_master = null
 	zone_sel = null
+	
+/mob/New()
+	..()
+	GLOB.mob_list += src
 
 /mob/Initialize()
 	. = ..()
@@ -155,8 +170,6 @@
 			. += 1
 
 /mob/proc/Life()
-//	if(organStructure)
-//		organStructure.ProcessOrgans()
 	return
 
 #define UNBUCKLED 0
@@ -418,7 +431,8 @@
 	var/list/namecounts = list()
 	var/list/creatures = list()
 
-	for(var/obj/O in world)				//EWWWWWWWWWWWWWWWWWWWWWWWW ~needs to be optimised
+	for(var/obj in global.obj_list)
+		var/obj/O = obj 
 		if(!O.loc)
 			continue
 		if(istype(O, /obj/item/weapon/disk/nuclear))
@@ -622,7 +636,7 @@
 
 /mob/Stat()
 	..()
-	. = (is_client_active(10 MINUTES))
+	. = is_client_active(2 MINUTES)
 	if(!.)
 		return
 
@@ -716,6 +730,10 @@
 
 		if(G.force_stand())
 			lying = 0
+			
+	if ((isscp106(src) || isscp049(src)) && !incapacitated(INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_BUCKLED_PARTIALLY))
+		lying = 0
+		density = 1
 
 	//Temporarily moved here from the various life() procs
 	//I'm fixing stuff incrementally so this will likely find a better home.
@@ -725,7 +743,12 @@
 		regenerate_icons()
 	else if( lying != lying_prev )
 		update_icons()
-	update_vision_cone()
+		if (ishuman(src))
+			var/mob/living/carbon/human/H = src 
+			if (lying)
+				H.reset_vision_cone()
+			else 
+				H.update_vision_cone()
 
 	return canmove
 
@@ -1058,8 +1081,18 @@ mob/proc/yank_out_object()
 			to_chat(usr, "The game is not currently looking for antags.")
 	else
 		to_chat(usr, "You must be observing or in the lobby to join the antag pool.")
+
 /mob/proc/is_invisible_to(var/mob/viewer)
 	return (!alpha || !mouse_opacity || viewer.see_invisible < invisibility)
+
+/mob/proc/is_scp012_affected(var/turf/target)
+	if (!target)
+		target = get_turf(src)
+	if (ishuman(src) && locate(/obj/item/paper/scp012) in view(2, src))
+		for (var/obj/item/paper/scp012/scp012 in view(2, target))
+			if (scp012.can_affect(src))
+				return TRUE 
+	return FALSE
 
 /client/proc/check_has_body_select()
 	return mob && mob.hud_used && istype(mob.zone_sel, /obj/screen/zone_sel)

@@ -34,6 +34,8 @@
 	if(start_grab_name)
 		current_grab = all_grabstates[start_grab_name]
 
+	attacker.grabs += src
+
 /obj/item/grab/examine(var/user)
 	..()
 	var/obj/item/O = get_targeted_organ()
@@ -53,6 +55,9 @@
 	current_grab.hit_with_grab(src)
 
 /obj/item/grab/dropped()
+	var/mob/M = loc 
+	if (M && istype(M))
+		M.grabs -= src
 	..()
 	loc = null
 	if(!QDELETED(src))
@@ -65,6 +70,7 @@
 		affecting.reset_plane_and_layer()
 		affecting = null
 	if(assailant)
+		assailant.grabs -= src
 		assailant = null
 	return ..()
 
@@ -162,6 +168,19 @@
 		adjust_position()
 		update_icons()
 		current_grab.enter_as_up(src)
+
+		if (!bypass_cooldown && isscp106(loc) && !(loc.loc in GLOB.scp106_floors))
+			var/mob/living/carbon/human/scp106/H = loc
+			affecting.forceMove(pick(GLOB.scp106_floors))
+			H.set_last_xyz()
+			H.forceMove(get_turf(affecting))
+			H.verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+			H.verbs += /mob/living/carbon/human/scp106/proc/go_back
+			qdel(src)
+		else if (!bypass_cooldown && isscp049(loc))
+			var/mob/living/carbon/human/scp049/H = loc
+			H.scp049_attack_2(affecting)
+			qdel(src)
 
 /obj/item/grab/proc/downgrade()
 	var/datum/grab/downgrab = current_grab.downgrade(src)

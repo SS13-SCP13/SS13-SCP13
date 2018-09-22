@@ -5,6 +5,8 @@
 #define MIN_CLIENT_VERSION	0		//Just an ambiguously low version for now, I don't want to suddenly stop people playing.
 									//I would just like the code ready should it ever need to be used.
 
+GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
+
 //#define TOPIC_DEBUGGING 1
 
 	/*
@@ -44,7 +46,7 @@
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
-		world.log << "Attempted use of scripts within a topic call, by [src]"
+		WRITE_LOG(world.log, "Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
 		//qdel(usr)
 		return
@@ -124,7 +126,7 @@
 		return
 
 	if(config.player_limit != 0)
-		if((GLOB.clients.len >= config.player_limit) && !(ckey in admin_datums))
+		if((GLOB.clients.len >= config.player_limit) && !(ckey in admin_datums) && !(ckey in GLOB.server_whitelist))
 			alert(src,"This server is currently full and not accepting new connections.","Server Full","OK")
 			log_admin("[ckey] tried to join and was turned away due to the server being full (player_limit=[config.player_limit])")
 			qdel(src)
@@ -155,7 +157,7 @@
 		preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
-	apply_fps(prefs.clientfps)
+	apply_fps(prefs.clientfps ? prefs.clientfps : 30)
 
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
@@ -172,6 +174,11 @@
 	if(holder)
 		add_admin_verbs()
 		admin_memo_show()
+
+	// hacks
+	spawn (7)
+		if (src && ckey in GLOB.devs)
+			verbs |= /client/proc/cmd_dev_say
 
 	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
 	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
@@ -204,17 +211,20 @@
 	//DISCONNECT//
 	//////////////
 /client/Del()
+	return Destroy()
+
+/client/Destroy()
+	if (mob && mob.client == src)
+		mob.client = null
+	key = null 
 	ticket_panels -= src
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
 	GLOB.ckey_directory -= ckey
 	GLOB.clients -= src
-	return ..()
-
-/client/Destroy()
 	..()
-	return QDEL_HINT_HARDDEL_NOW
+	return QDEL_HINT_IWILLGC
 
 // here because it's similar to below
 
@@ -344,11 +354,19 @@
 		'html/panels.css',
 		'html/spacemag.css',
 		'html/images/loading.gif',
-		'html/images/ntlogo.png',
-		'html/images/bluentlogo.png',
-		'html/images/sollogo.png',
-		'html/images/terralogo.png',
-		'html/images/talisman.png'
+		'html/images/eng.png',
+		'html/images/sec.png',
+		'html/images/med.png',
+		'html/images/sci.png',
+		'html/images/ethics.png',
+		'html/images/log.png',
+		'html/images/isd.png',
+		'html/images/admin.png',
+		'html/images/o5.png',
+		'html/images/ecd.png',
+		'html/images/int.png',
+		'html/images/mtf.png',
+		'html/images/scplogo.png'
 		)
 
 	spawn (10) //removing this spawn causes all clients to not get verbs.
@@ -373,4 +391,4 @@ client/verb/character_setup()
 
 /client/proc/apply_fps(var/client_fps)
 	if(world.byond_version >= 511 && byond_version >= 511 && client_fps >= CLIENT_MIN_FPS && client_fps <= CLIENT_MAX_FPS)
-		vars["fps"] = prefs.clientfps
+		vars["fps"] = client_fps

@@ -7,11 +7,13 @@
 		var/list/turfs = list(	)
 		var/turf/picked
 
-		for(var/turf/T in world)
+		for(var/turf in global.turf_list)
+			var/turf/T = turf
 			if(T.z < 5 && istype(T,/turf/simulated/floor))
 				turfs += T
 
-		for(var/turf/T in world)
+		for(var/turf in global.turf_list)
+			var/turf/T = turf
 			if(prob(10) && T.z < 5 && istype(T,/turf/simulated/floor))
 				spawn(50+rand(0,3000))
 					picked = pick(turfs)

@@ -233,6 +233,7 @@
 /area/hallway/primary/firstdeck/center
 	name = "\improper First Deck Central Hallway"
 	icon_state = "hallC1"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/hallway/primary/firstdeck/aft
 	name = "\improper First Deck Aft Hallway"
@@ -655,7 +656,7 @@
 /area/vacant/prototype/engine
 	name = "\improper Prototype Fusion Reactor Chamber"
 	icon_state = "firingrange"
-
+	engine_area = TRUE
 
 /area/vacant/cargo
 	name = "\improper Requisitions Office"
@@ -993,6 +994,7 @@
 /area/bridge
 	name = "\improper Bridge"
 	icon_state = "bridge"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/bridge/meeting_room
 	name = "\improper Heads of Staff Meeting Room"
@@ -1410,7 +1412,8 @@
 
 /area/acting/stage
 	name = "\improper Stage"
-	dynamic_lighting = 1
+	requires_power = 0
+	dynamic_lighting = 0
 	icon_state = "yellow"
 
 // Thunderdome

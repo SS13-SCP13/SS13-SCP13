@@ -611,8 +611,8 @@ proc/GaussRandRound(var/sigma,var/roundto)
 		areatype = areatemp.type
 
 	var/list/areas = new/list()
-	for(var/area/N in world)
-		if(istype(N, areatype)) areas += N
+	for(var/area in GLOB.areas)
+		if(istype(area, areatype)) areas += area
 	return areas
 
 //Takes: Area type as text string or as typepath OR an instance of the area.
@@ -625,9 +625,9 @@ proc/GaussRandRound(var/sigma,var/roundto)
 		areatype = areatemp.type
 
 	var/list/atoms = new/list()
-	for(var/area/N in world)
-		if(istype(N, areatype))
-			for(var/atom/A in N)
+	for(var/area in GLOB.areas)
+		if(istype(area, areatype))
+			for(var/atom/A in area)
 				atoms += A
 	return atoms
 
@@ -1101,3 +1101,14 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 
 /proc/pass()
 	return
+
+//clicking to move pulled objects onto assignee's turf/loc
+/proc/do_pull_click(mob/user, atom/A)
+	if(ismob(user.pulling))
+		var/mob/M = user.pulling
+		var/atom/movable/t = M.pulling
+		M.stop_pulling()
+		step(user.pulling, get_dir(user.pulling.loc, A))
+		M.start_pulling(t)
+	else
+		step(user.pulling, get_dir(user.pulling.loc, A))

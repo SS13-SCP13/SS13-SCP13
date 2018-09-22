@@ -2,7 +2,7 @@
 /*
 /datum/job/bartender
 	title = "Bartender"
-	department = "Service"
+	department = "Civilian"
 	department_flag = SRV
 	total_positions = 1
 	spawn_positions = 1
@@ -14,7 +14,7 @@
 
 /datum/job/chef
 	title = "Chef"
-	department = "Service"
+	department = "Civilian"
 	department_flag = SRV
 	total_positions = 2
 	spawn_positions = 2
@@ -144,6 +144,58 @@
 	allowed_ranks = list(
 	/datum/mil_rank/civ/classd
 	)
+
+	access = list(access_sciencelvl1)
+	minimal_access = list()
+
+/datum/job/chef
+	has_email = TRUE
+	title = "Chef"
+	department = "Civilian"
+	department_flag = CIV
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Head of Personnel"
+	selection_color = "#515151"
+	ideal_character_age = 24
+	alt_titles = list("Cook")
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/chef
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+	)
+	allowed_ranks = list(
+	/datum/mil_rank/civ/classd
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
+		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_sciencelvl1)
+	minimal_access = list()
+
+/datum/job/bartender
+	has_email = TRUE
+	title = "Bartender"
+	department = "Civilian"
+	department_flag = CIV
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Head of Personnel"
+	selection_color = "#515151"
+	ideal_character_age = 24
+	alt_titles = list("Waiter")
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/bartender
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+	)
+	allowed_ranks = list(
+	/datum/mil_rank/civ/classd
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
+		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_sciencelvl1)
 	minimal_access = list()

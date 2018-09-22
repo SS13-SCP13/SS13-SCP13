@@ -11,9 +11,11 @@
 /obj/machinery/door/firedoor
 	name = "\improper Emergency Shutter"
 	desc = "Emergency air-tight shutter, capable of sealing off breached areas."
-	icon = 'icons/obj/doors/DoorHazard.dmi'
-	icon_state = "door_open"
-	req_one_access = list(access_atmospherics, access_engine_equip)
+	icon = 'icons/obj/doors/hazard/door.dmi'
+	var/panel_file = 'icons/obj/doors/hazard/panel.dmi'
+	var/welded_file = 'icons/obj/doors/hazard/welded.dmi'
+	icon_state = "open"
+	req_one_access = list(access_mtflvl1)
 	opacity = 0
 	density = 0
 	layer = BELOW_DOOR_LAYER
@@ -48,6 +50,8 @@
 		"hot",
 		"cold"
 	)
+
+	blend_objects = list(/obj/machinery/door/firedoor, /obj/structure/wall_frame, /turf/unsimulated/wall, /obj/structure/window) // Objects which to blend with
 
 /obj/machinery/door/firedoor/Initialize()
 	. = ..()
@@ -213,6 +217,8 @@
 					user.visible_message("<span class='danger'>[user] has removed the electronics from \the [src].</span>",
 										"You have removed the electronics from [src].")
 					deconstruct(user)
+			else
+				to_chat(user, "<span class='notice'>You must remain still to remove the electronics from \the [src].</span>")
 		return
 
 	if(blocked)
@@ -243,10 +249,10 @@
 					user.visible_message("<span class='danger'>\The [user] forces \the [src] [density ? "open" : "closed"] with \a [C]!</span>",\
 					"You force \the [src] [density ? "open" : "closed"] with \the [C]!",\
 					"You hear metal strain, and a door [density ? "open" : "close"].")
-			else
-				user.visible_message("<span class='danger'>\The [user] forces \the [ blocked ? "welded" : "" ] [src] [density ? "open" : "closed"] with \a [C]!</span>",\
-					"You force \the [ blocked ? "welded" : "" ] [src] [density ? "open" : "closed"] with \the [C]!",\
-					"You hear metal strain and groan, and a door [density ? "opening" : "closing"].")
+				else
+					user.visible_message("<span class='danger'>\The [user] forces \the [ blocked ? "welded" : "" ] [src] [density ? "open" : "closed"] with \a [C]!</span>",\
+						"You force \the [ blocked ? "welded" : "" ] [src] [density ? "open" : "closed"] with \the [C]!",\
+						"You hear metal strain and groan, and a door [density ? "opening" : "closing"].")
 			if(density)
 				spawn(0)
 					open(1)
@@ -254,7 +260,8 @@
 				spawn(0)
 					close()
 			return
-
+		else
+			to_chat(user, "<span class='notice'>You must remain still to interact with \the [src].</span>")
 	return ..()
 
 /obj/machinery/door/firedoor/deconstruct(mob/user, var/moved = FALSE)
@@ -346,8 +353,7 @@
 		else
 			use_power(360)
 	else
-		log_admin("[usr]([usr.ckey]) has forced open an emergency shutter.")
-		message_admins("[usr]([usr.ckey]) has forced open an emergency shutter.")
+		log_and_message_admins("has forced open an emergency shutter.")
 	latetoggle()
 	return ..()
 
@@ -374,25 +380,35 @@
 /obj/machinery/door/firedoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			flick("door_opening", src)
+			flick("opening", src)
 		if("closing")
-			flick("door_closing", src)
+			flick("closing", src)
 	return
 
 
 /obj/machinery/door/firedoor/update_icon()
+	var/icon/lights_overlay
+	var/icon/panel_overlay
+	var/icon/weld_overlay
+
 	overlays.Cut()
 	set_light(0)
 	var/do_set_light = FALSE
 
+	if(connections in list(NORTH, SOUTH, NORTH|SOUTH))
+		if(connections in list(WEST, EAST, EAST|WEST))
+			set_dir(SOUTH)
+		else
+			set_dir(EAST)
+	else
+		set_dir(SOUTH)
+
 	if(density)
-		icon_state = "door_closed"
+		icon_state = "closed"
 		if(hatch_open)
-			overlays += "hatch"
-		if(blocked)
-			overlays += "welded"
+			overlays = panel_overlay
 		if(pdiff_alert)
-			overlays += "palert"
+			lights_overlay += "palert"
 			do_set_light = TRUE
 		if(dir_alerts)
 			for(var/d=1;d<=4;d++)
@@ -402,12 +418,17 @@
 						overlays += new/icon(icon,"alert_[ALERT_STATES[i]]", dir=cdir)
 						do_set_light = TRUE
 	else
-		icon_state = "door_open"
-		if(blocked)
-			overlays += "welded_open"
+		icon_state = "open"
+
+	if(blocked)
+		weld_overlay = welded_file
 
 	if(do_set_light)
-		set_light(1.5, 0.5, COLOR_SUN)
+		set_light(0.25, 0.1, 1, 2, COLOR_SUN)
+
+	overlays += panel_overlay
+	overlays += weld_overlay
+	overlays += lights_overlay
 
 //These are playing merry hell on ZAS.  Sorry fellas :(
 
@@ -418,7 +439,6 @@
 			  //This is needed due to BYOND limitations in controlling visibility
 	heat_proof = 1
 	air_properties_vary_with_direction = 1
-
 	CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 		if(istype(mover) && mover.checkpass(PASS_FLAG_GLASS))
 			return 1
@@ -427,7 +447,6 @@
 			return !density
 		else
 			return 1
-
 	CheckExit(atom/movable/mover as mob|obj, turf/target as turf)
 		if(istype(mover) && mover.checkpass(PASS_FLAG_GLASS))
 			return 1
@@ -435,16 +454,11 @@
 			return !density
 		else
 			return 1
-
-
 	update_nearby_tiles(need_rebuild)
 		if(!air_master) return 0
-
 		var/turf/simulated/source = loc
 		var/turf/simulated/destination = get_step(source,dir)
-
 		update_heat_protection(loc)
-
 		if(istype(source)) air_master.tiles_to_update += source
 		if(istype(destination)) air_master.tiles_to_update += destination
 		return 1

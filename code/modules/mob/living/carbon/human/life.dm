@@ -65,28 +65,68 @@
 
 	//No need to update all of these procs if the guy is dead.
 	if(stat != DEAD && !InStasis())
+	
+		if(!client && !mind)
+			species.handle_npc(src)
+
 		//Updates the number of stored chemicals for powers
 		handle_changeling()
 
 		//Organs and blood
 		handle_organs()
+
 		stabilize_body_temperature() //Body temperature adjusts itself (self-regulation)
 
-		handle_shock()
+		if (prob(20))
+			handle_shock()
 
 		handle_pain()
 
 		handle_medical_side_effects()
+	
+	if (client)
 
-		if(!client && !mind)
-			species.handle_npc(src)
+		// spooky SCP-106 music
+		var/scp106_music = FALSE
+		for (var/scp106 in GLOB.scp106s)
+			var/atom/A = scp106
+			if (A != src && abs(x - A.x) <= 5 && abs(y - A.y) <= 5 && !abs(z - A.z))
+				scp106_music = TRUE
+				if (world.time >= client.next_scp106_sound)
+					src << sound('sound/scp/chase/scp106chase.ogg', channel = 106, volume = 100)
+					client.next_scp106_sound = world.time + 1500 // a bit longer than the ogg itself
+					break
 
+		if (!scp106_music && client.next_scp106_sound != -1 && client.next_scp106_sound > world.time)
+			src << sound(null, channel = 106)
+			client.next_scp106_sound = -1
+
+		// spooky SCP-012 ambience
+		var/scp012_music = FALSE
+
+		if (is_scp012_affected())
+
+			scp012_music = TRUE
+			if (world.time >= client.next_scp012_sound)
+				src << sound('sound/scp/012.ogg', channel = 12, volume = 100)
+				client.next_scp012_sound = world.time + 230
+
+		if (!scp012_music && client.next_scp012_sound != -1 && client.next_scp012_sound > world.time)
+			src << sound(null, channel = 12)
+			client.next_scp012_sound = -1
+
+  	// SCP-049 stuff: don't change the order of these checks, they short circuit
+	if (prob(1) && prob(5) && type == /mob/living/carbon/human && !isscp049_1(src) && !pestilence) // a 1 in 2,000 chance every 2 seconds = 66 minutes?
+		pestilence = TRUE
 
 	if(!handle_some_updates())
 		return											//We go ahead and process them 5 times for HUD images and other stuff though.
 
 	//Update our name based on whether our face is obscured/disfigured
-	SetName(get_visible_name())
+	if (name != real_name && isscp049_1(src))
+		SetName(real_name)
+	else
+		SetName(get_visible_name())
 
 /mob/living/carbon/human/set_stat(var/new_stat)
 	. = ..()
@@ -852,28 +892,29 @@
 	if(stat == UNCONSCIOUS && world.time - l_move_time < 5 && prob(10))
 		to_chat(src,"<span class='notice'>You feel like you're [pick("moving","flying","floating","falling","hovering")].</span>")
 
+// only called every 3 ticks
 /mob/living/carbon/human/handle_stomach()
-	spawn(0)
-		for(var/a in stomach_contents)
-			if(!(a in contents) || isnull(a))
-				stomach_contents.Remove(a)
+	set waitfor = FALSE
+	for(var/a in stomach_contents)
+		if(!(a in contents) || isnull(a))
+			stomach_contents.Remove(a)
+			continue
+		if(iscarbon(a)|| isanimal(a))
+			var/mob/living/M = a
+			if(M.stat == DEAD)
+				M.death(1)
+				stomach_contents.Remove(M)
+				qdel(M)
 				continue
-			if(iscarbon(a)|| isanimal(a))
-				var/mob/living/M = a
-				if(M.stat == DEAD)
-					M.death(1)
-					stomach_contents.Remove(M)
-					qdel(M)
-					continue
-				if(life_tick % 3 == 1)
-					if(!(M.status_flags & GODMODE))
-						M.adjustBruteLoss(5)
-					nutrition += 10
+			if(!(M.status_flags & GODMODE))
+				M.adjustBruteLoss(5)
+			nutrition += 10
 
 /mob/living/carbon/human/proc/handle_changeling()
 	if(mind && mind.changeling)
 		mind.changeling.regenerate()
 
+// this only gets called every 5 ticks now
 /mob/living/carbon/human/proc/handle_shock()
 	..()
 	if(status_flags & GODMODE)	return 0	//godmode
@@ -885,14 +926,14 @@
 		shock_stage = max(shock_stage, 61)
 	var/traumatic_shock = get_shock()
 	if(traumatic_shock >= max(30, 0.8*shock_stage))
-		shock_stage += 1
+		shock_stage += 5
 	else
 		shock_stage = min(shock_stage, 160)
-		var/recovery = 1
+		var/recovery = 5
 		if(traumatic_shock < 0.5 * shock_stage) //lower shock faster if pain is gone completely
-			recovery++
+			recovery += 5
 		if(traumatic_shock < 0.25 * shock_stage)
-			recovery++
+			recovery += 5
 		shock_stage = max(shock_stage - recovery, 0)
 		return
 	if(stat) return 0

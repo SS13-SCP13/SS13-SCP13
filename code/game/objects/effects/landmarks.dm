@@ -10,6 +10,8 @@
 
 /obj/effect/landmark/New()
 	..()
+
+	global.landmark_list += src
 	tag = "landmark*[name]"
 
 	//TODO clean up this mess
@@ -22,6 +24,23 @@
 			GLOB.newplayer_start += loc
 			delete_me = 1
 			return
+		if ("scp106")
+			new /mob/living/carbon/human/scp106 (loc)
+			GLOB.scp106_spawnpoints += loc
+			delete_me = 1
+			return
+		if ("scp049")
+			new /mob/living/carbon/human/scp049 (loc)
+			delete_me = 1
+			return
+		if ("scp173")
+			new /mob/living/scp_173 (loc)
+			delete_me = 1
+			return
+		if ("scp999")
+			new /mob/living/simple_animal/scp_999 (loc)
+			delete_me = 1
+			return
 		if("JoinLate")
 			GLOB.latejoin += loc
 			delete_me = 1
@@ -32,6 +51,18 @@
 			return
 		if("JoinLateCryo")
 			GLOB.latejoin_cryo += loc
+			delete_me = 1
+			return
+		if("JoinLateDclass")
+			GLOB.latejoin_dclass += loc
+			delete_me = 1
+			return
+		if("JoinLatelcz")
+			GLOB.latejoin_lcz += loc
+			delete_me = 1
+			return
+		if("JoinLateSecurity")
+			GLOB.latejoin_security += loc
 			delete_me = 1
 			return
 		if("JoinLateCyborg")
@@ -63,7 +94,6 @@
 			delete_me = 1
 			return
 
-	landmarks_list += src
 	return 1
 
 /obj/effect/landmark/proc/delete()
@@ -75,7 +105,7 @@
 		return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/Destroy()
-	landmarks_list -= src
+	global.landmark_list -= src
 	return ..()
 
 /obj/effect/landmark/start

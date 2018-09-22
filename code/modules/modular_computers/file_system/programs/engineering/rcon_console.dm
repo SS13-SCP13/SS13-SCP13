@@ -6,7 +6,7 @@
 	program_key_state = "rd_key"
 	program_menu_icon = "power"
 	extended_desc = "This program allows remote control of power distribution systems. This program can not be run on tablet computers."
-	required_access = access_engine
+	required_access = access_mtflvl2
 	requires_ntnet = 1
 	network_destination = "RCON remote control system"
 	requires_ntnet_feature = NTNET_SYSTEMCONTROL
@@ -123,11 +123,11 @@
 // Description: Refreshes local list of known devices.
 /datum/nano_module/rcon/proc/FindDevices()
 	known_SMESs = new /list()
-	for(var/obj/machinery/power/smes/buildable/SMES in SSmachines.machinery)
+	for(var/obj/machinery/power/smes/buildable/SMES in SSmachines.all_machinery)
 		if(AreConnectedZLevels(get_host_z(), get_z(SMES)) && SMES.RCon_tag && (SMES.RCon_tag != "NO_TAG") && SMES.RCon)
 			known_SMESs.Add(SMES)
 
 	known_breakers = new /list()
-	for(var/obj/machinery/power/breakerbox/breaker in SSmachines.machinery)
+	for(var/obj/machinery/power/breakerbox/breaker in SSmachines.all_machinery)
 		if(AreConnectedZLevels(get_host_z(), get_z(breaker)) && breaker.RCon_tag != "NO_TAG")
 			known_breakers.Add(breaker)

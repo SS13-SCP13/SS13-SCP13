@@ -99,7 +99,7 @@ var/const/HOLOPAD_MODE = RANGE_BASED
 					var/obj/effect/overmap/O = map_sectors["[z]"]
 					for(var/obj/effect/overmap/OO in range(O,map_range))
 						zlevels |= OO.map_z
-				for(var/obj/machinery/hologram/holopad/H in SSmachines.machinery)
+				for(var/obj/machinery/hologram/holopad/H in SSmachines.all_machinery)
 					if((H.z in zlevels) && H.operable())
 						holopadlist["[H.loc.loc.name]"] = H	//Define a list and fill it with the area of every holopad in the world
 				holopadlist = sortAssoc(holopadlist)
@@ -306,7 +306,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 		end_call()
 	if (caller_id&&sourcepad)
 		if(caller_id.loc!=sourcepad.loc)
-			sourcepad.to_chat(caller_id, "Severing connection to distant holopad.")
+			to_chat(caller_id, "Severing connection to distant holopad.")
 			end_call()
 			audible_message("The connection has been terminated by the caller.")
 	return 1

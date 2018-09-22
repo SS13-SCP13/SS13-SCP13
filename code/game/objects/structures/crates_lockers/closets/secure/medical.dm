@@ -19,7 +19,7 @@
 	icon_locked = "medical1"
 	icon_opened = "medicalopen"
 	icon_off = "medicaloff"
-	req_access = list(access_medical_equip)
+	req_access = list(access_mtflvl1)
 
 /obj/structure/closet/secure_closet/medical1/WillContain()
 	return list(
@@ -42,7 +42,7 @@
 	icon_locked = "medical1"
 	icon_opened = "medicalopen"
 	icon_off = "medicaloff"
-	req_access = list(access_surgery)
+	req_access = list(access_mtflvl1)
 
 /obj/structure/closet/secure_closet/medical2/WillContain()
 	return list(
@@ -52,7 +52,7 @@
 
 /obj/structure/closet/secure_closet/medical3
 	name = "medical doctor's locker"
-	req_access = list(access_medical_equip)
+	req_access = list(access_mtflvl1)
 	icon_state = "securemed1"
 	icon_closed = "securemed"
 	icon_locked = "securemed1"
@@ -61,23 +61,15 @@
 
 /obj/structure/closet/secure_closet/medical3/WillContain()
 	return list(
-		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/medic, /obj/item/weapon/storage/backpack/satchel_med)),
-		new/datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag/med, 50),
-		/obj/item/clothing/under/rank/nursesuit,
-		/obj/item/clothing/head/nursehat,
-		/obj/item/clothing/under/rank/medical,
-		/obj/item/clothing/under/rank/nurse,
-		/obj/item/clothing/under/rank/orderly,
+		/obj/item/clothing/under/rank/medical/scrubs/blue,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
-		/obj/item/clothing/suit/storage/toggle/fr_jacket,
 		/obj/item/clothing/shoes/white,
-		/obj/item/device/radio/headset/headset_med,
-		/obj/item/taperoll/medical,
-		/obj/item/weapon/storage/belt/medical/emt,
-		RANDOM_SCRUBS,
-		RANDOM_SCRUBS
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/accessory/stethoscope,
+		/obj/item/device/radio,
+		/obj/item/weapon/storage/belt/medical/emt
 	)
-
+/*
 /obj/structure/closet/secure_closet/paramedic
 	name = "paramedic locker"
 	desc = "Supplies for a first responder."
@@ -139,7 +131,7 @@
 		/obj/item/weapon/reagent_containers/hypospray/vial,
 		RANDOM_SCRUBS
 	)
-
+*/
 /obj/structure/closet/secure_closet/chemical
 	name = "chemical closet"
 	desc = "Store dangerous chemicals in here."
@@ -148,7 +140,7 @@
 	icon_locked = "medical1"
 	icon_opened = "medicalopen"
 	icon_off = "medicaloff"
-	req_access = list(access_chemistry)
+	req_access = list(access_mtflvl2)
 
 /obj/structure/closet/secure_closet/chemical/WillContain()
 	return list(
@@ -156,7 +148,7 @@
 		/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone,
 		/obj/random/medical = 12
 	)
-
+/*
 /obj/structure/closet/secure_closet/medical_wall
 	name = "first aid closet"
 	desc = "It's a secure wall-mounted storage unit for first aid supplies."
@@ -255,3 +247,4 @@
 		/obj/item/clothing/under/rank/psych/turtleneck,
 		/obj/item/clothing/under/rank/psych
 	)
+*/

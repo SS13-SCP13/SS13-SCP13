@@ -98,4 +98,5 @@
 	return ..()
 
 /proc/can_select_ooc_color(var/mob/user)
-	return config.allow_admin_ooccolor && check_rights(R_ADMIN, 0, user)
+	var/client/C = isclient(user) ? user : user.client
+	return (config.allow_admin_ooccolor && check_rights(R_ADMIN, 0, C)) || (C && C.donator_holder && C.donator_holder.flags & D_OOCCOLOUR)

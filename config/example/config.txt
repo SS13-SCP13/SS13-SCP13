@@ -191,13 +191,13 @@ GUEST_BAN
 #SERVERURL server.net:port
 
 ## forum address
-# FORUMURL http://example.com
+# FORUMURL https://scp13.site
 
 ## Wiki address
-# WIKIURL http://example.com
+# WIKIURL http://wiki.scp13.site
 
 ## GitHub address
-# GITHUBURL https://github.com/example-user/example-repository
+GITHUBURL https://github.com/SS13-SCP13/SS13-SCP13
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 # BANAPPEALS http://example.com

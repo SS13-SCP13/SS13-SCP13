@@ -21,14 +21,21 @@
 	var/glass_desc = "It's a glass of... what, exactly?"
 	var/list/glass_special = null // null equivalent to list()
 
+	var/static/list/created_reagents = list()
+
 /datum/reagent/New(var/datum/reagents/holder)
-	if(!istype(holder))
-		CRASH("Invalid reagents holder: [log_info_line(holder)]")
+	if(!holder || !istype(holder))
+		if (!created_reagents[type])
+			created_reagents[type] = TRUE
+			return
+		else
+			CRASH("Invalid reagents holder: [holder ? log_info_line(holder) : "null"]")
 	src.holder = holder
 	..()
 
 /datum/reagent/proc/remove_self(var/amount) // Shortcut
-	holder.remove_reagent(type, amount)
+	if (holder)
+		holder.remove_reagent(type, amount)
 
 // This doesn't apply to skin contact - this is for, e.g. extinguishers and sprays. The difference is that reagent is not directly on the mob's skin - it might just be on their clothing.
 /datum/reagent/proc/touch_mob(var/mob/M, var/amount)

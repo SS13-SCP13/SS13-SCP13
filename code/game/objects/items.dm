@@ -81,13 +81,17 @@
 	// Works similarly to worn sprite_sheets, except the alternate sprites are used when the clothing/refit_for_species() proc is called.
 	var/list/sprite_sheets_obj = list()
 
+	var/nothrow = FALSE
+
 /obj/item/New()
 	..()
 	if(randpixel && (!pixel_x && !pixel_y) && isturf(loc)) //hopefully this will prevent us from messing with mapper-set pixel_x/y
 		pixel_x = rand(-randpixel, randpixel)
 		pixel_y = rand(-randpixel, randpixel)
+	global.item_list += src 
 
 /obj/item/Destroy()
+	global.item_list -= src 
 	qdel(hidden_uplink)
 	hidden_uplink = null
 	if(ismob(loc))
@@ -98,8 +102,22 @@
 		src.loc = null
 	return ..()
 
+/obj/item/forceMove(location)
+	..(location)
+	var/mob/M = loc 
+	if (M && istype(M) && action_button_name)
+		M.items_with_action_button_names |= src	
+
 /obj/item/device
 	icon = 'icons/obj/device.dmi'
+
+/obj/item/device/New()
+	..()
+	global.device_list += src 
+	
+/obj/item/device/Destroy()
+	global.device_list -= src 
+	return ..()
 
 //Checks if the item is being held by a mob, and if so, updates the held icons
 /obj/item/proc/update_twohanding()
@@ -175,7 +193,7 @@
 
 /obj/item/attack_hand(mob/user as mob)
 	if (!user) return
-	if (anchored)
+	if (anchored || isscp106(user) || isscp049(user) || isscp049_1(user))
 		return ..()
 	if (hasorgans(user))
 		var/mob/living/carbon/human/H = user
@@ -237,6 +255,7 @@
 
 // apparently called whenever an item is removed from a slot, container, or anything else.
 /obj/item/proc/dropped(mob/user as mob)
+
 	if(randpixel)
 		pixel_z = randpixel //an idea borrowed from some of the older pixel_y randomizations. Intended to make items appear to drop at a character
 	if(zoom)
@@ -256,11 +275,19 @@
 
 // called when this item is removed from a storage item, which is passed on as S. The loc variable is already set to the new destination before this is called.
 /obj/item/proc/on_exit_storage(obj/item/weapon/storage/S as obj)
-	return
+	var/mob/M = S.loc 
+	if (action_button_name && M && istype(M) && loc != M)
+		M.items_with_action_button_names -= src
 
 // called when this item is added into a storage item, which is passed on as S. The loc variable is already set to the storage item.
 /obj/item/proc/on_enter_storage(obj/item/weapon/storage/S as obj)
-	return
+	var/mob/M = loc 
+	if (action_button_name && M && istype(M))
+		if (M.l_hand == src || M.r_hand == src)
+			M.items_with_action_button_names |= src	
+		else 
+			M.items_with_action_button_names -= src
+
 
 // called when "found" in pockets and storage items. Returns 1 if the search should end.
 /obj/item/proc/on_found(mob/finder as mob)
@@ -415,7 +442,7 @@ var/list/global/slot_flags_enumeration = list(
 		return
 	if(!usr.canmove || usr.stat || usr.restrained() || !Adjacent(usr))
 		return
-	if((!istype(usr, /mob/living/carbon)) || (istype(usr, /mob/living/carbon/brain)))//Is humanoid, and is not a brain
+	if(!istype(usr, /mob/living/carbon) || istype(usr, /mob/living/carbon/brain) || istype(usr, /mob/living/carbon/human/scp106)) //Is humanoid, and is not a brain or scp106
 		to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
 		return
 	if( usr.stat || usr.restrained() )//Is not asleep/dead and is not restrained
@@ -572,7 +599,7 @@ var/list/global/slot_flags_enumeration = list(
 	I.Blend(new /icon('icons/effects/blood.dmi', "itemblood"),ICON_MULTIPLY) //adds blood and the remaining white areas become transparant
 
 	//not sure if this is worth it. It attaches the blood_overlay to every item of the same type if they don't have one already made.
-	for(var/obj/item/A in world)
+	for(var/obj/item/A in global.item_list)
 		if(A.type == type && !A.blood_overlay)
 			A.blood_overlay = image(I)
 

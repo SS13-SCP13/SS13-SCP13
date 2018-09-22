@@ -160,6 +160,27 @@
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
+		/datum/mil_rank/security/e3)
+
+
+	access = list(access_mtflvl1, access_mtflvl2)
+	minimal_access = list()
+
+/datum/job/emt
+	has_email = TRUE
+	title = "Emergency Medical Technician"
+	department = "Medical"
+	department_flag = MED
+	selection_color = "#013d3b"
+	total_positions = 1
+	spawn_positions = 1
+	ideal_character_age = 40
+	economic_modifier = 5
+	supervisors = "the Chief Medical Officer"
+	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/emt
+	allowed_branches = list(
+	/datum/mil_branch/security)
+	allowed_ranks = list(
 		/datum/mil_rank/security/e4)
 
 

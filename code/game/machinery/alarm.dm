@@ -41,7 +41,7 @@
 	idle_power_usage = 80
 	active_power_usage = 1000 //For heating/cooling rooms. 1000 joules equates to about 1 degree every 2 seconds for a single tile of air.
 	power_channel = ENVIRON
-	req_one_access = list(access_atmospherics, access_engine_equip)
+	req_one_access = list(access_mtflvl2)
 	clicksound = "button"
 	clickvol = 30
 
@@ -328,6 +328,19 @@
 		if (2)
 			icon_state = "alarm1"
 			new_color = COLOR_RED_LIGHT
+
+	pixel_x = 0
+	pixel_y = 0
+	var/turf/T = get_step(get_turf(src), turn(dir, 180))
+	if(istype(T) && T.density)
+		if(dir == NORTH)
+			pixel_y = -21
+		else if(dir == SOUTH)
+			pixel_y = 21
+		else if(dir == WEST)
+			pixel_x = 21
+		else if(dir == EAST)
+			pixel_x = -21
 
 	set_light(l_range = 2, l_power = 0.6, l_color = new_color)
 
@@ -883,6 +896,20 @@ FIRE ALARM
 
 /obj/machinery/firealarm/update_icon()
 	overlays.Cut()
+
+	pixel_x = 0
+	pixel_y = 0
+	var/walldir = (dir & (NORTH|SOUTH)) ? GLOB.reverse_dir[dir] : dir
+	var/turf/T = get_step(get_turf(src), walldir)
+	if(istype(T) && T.density)
+		if(dir == SOUTH)
+			pixel_y = 21
+		else if(dir == NORTH)
+			pixel_y = -21
+		else if(dir == EAST)
+			pixel_x = 21
+		else if(dir == WEST)
+			pixel_x = -21
 
 	if(wiresexposed)
 		switch(buildstage)

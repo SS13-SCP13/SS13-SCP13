@@ -41,7 +41,7 @@
 			return
 
 
-	var/T = side_effects[name]
+	var/T = global.side_effect_list[name]
 	if (!T)
 		return
 
@@ -49,21 +49,22 @@
 	if(M.name == name)
 		M.strength = strength
 		M.start = life_tick
-		side_effects += M
+		src.side_effects += M
 
 /mob/living/carbon/human/proc/handle_medical_side_effects()
 	//Going to handle those things only every few ticks.
 	if(life_tick % 15 != 0)
 		return 0
 
-	var/list/L = typesof(/datum/medical_effect)-/datum/medical_effect
+	var/list/L = subtypesof(/datum/medical_effect)
 	for(var/T in L)
 		var/datum/medical_effect/M = new T
 		if (M.manifest(src))
 			src.add_side_effect(M.name)
 
 	// One full cycle(in terms of strength) every 10 minutes
-	for (var/datum/medical_effect/M in side_effects)
+	for (var/effect in side_effects)
+		var/datum/medical_effect/M = effect
 		if (!M) continue
 		var/strength_percent = sin((life_tick - M.start) / 2)
 

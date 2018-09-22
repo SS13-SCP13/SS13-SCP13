@@ -11,7 +11,9 @@
 // Normal
 #define SS_PRIORITY_MOB            100	// Mob Life().
 #define SS_PRIORITY_MACHINERY      100	// Machinery + powernet ticks.
+#define SS_PRIORITY_LIGHTING       90
 #define SS_PRIORITY_AIR            80	// ZAS processing.
+#define SS_PRIORITY_ALARM          45   // Alarm processing.
 #define SS_PRIORITY_AIRFLOW        15	// Object movement from ZAS airflow.
 
 // SS_BACKGROUND
@@ -19,4 +21,5 @@
 #define SS_PRIORITY_PROCESSING    30	// Generic datum processor. Replaces objects processor.
 #define SS_PRIORITY_GARBAGE       25	// Garbage collection.
 #define SS_PRIORITY_VINES         25	// Spreading vine effects.
+#define SS_PRIORITY_TURF          20    // Radioactive walls/blob.
 #define SS_PRIORITY_WIRELESS      10	// Wireless connection setup.

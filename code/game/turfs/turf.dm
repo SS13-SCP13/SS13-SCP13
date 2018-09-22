@@ -41,7 +41,10 @@
 	else
 		luminosity = 1
 
+	global.turf_list += src
+
 /turf/Destroy()
+	global.turf_list -= src
 	remove_cleanables()
 	..()
 	return QDEL_HINT_IWILLGC
@@ -138,13 +141,10 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 				return 0
 	return 1 //Nothing found to block so return success!
 
-var/const/enterloopsanity = 100
+#define ENTERLOOPSANITY 25
 /turf/Entered(atom/atom as mob|obj)
 
 	..()
-
-	if(!istype(atom, /atom/movable))
-		return
 
 	var/atom/movable/A = atom
 
@@ -162,14 +162,15 @@ var/const/enterloopsanity = 100
 	var/objects = 0
 	if(A && (A.movable_flags & MOVABLE_FLAG_PROXMOVE))
 		for(var/atom/movable/thing in range(1))
-			if(objects > enterloopsanity) break
+			if(objects > ENTERLOOPSANITY) break
 			objects++
 			spawn(0)
 				if(A)
 					A.HasProximity(thing, 1)
 					if ((thing && A) && (thing.movable_flags & MOVABLE_FLAG_PROXMOVE))
 						thing.HasProximity(A, 1)
-	return
+
+#undef ENTERLOOPSANITY
 
 /turf/proc/adjacent_fire_act(turf/simulated/floor/source, temperature, volume)
 	return
@@ -230,9 +231,6 @@ var/const/enterloopsanity = 100
 			if(!LinkBlocked(src, t) && !TurfBlockedNonWindow(t))
 				L.Add(t)
 	return L
-
-/turf/proc/process()
-	return PROCESS_KILL
 
 /turf/proc/contains_dense_objects()
 	if(density)

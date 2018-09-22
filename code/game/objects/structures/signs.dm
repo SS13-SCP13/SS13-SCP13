@@ -245,6 +245,12 @@
 	desc = "An extremely long list of names and job titles and a picture of the design team responsible for building this AI Core."
 	icon_state = "kiddieplaque"
 
+/obj/structure/sign/dplaque
+	name = "\improper D-Class Work Assignment Sheet"
+	desc = "Kitchen Duty - 3x, Botany Duty - 4x, Mining & Manual Labor - 6x, Janitorial - 2x."
+	icon_state = "kiddieplaque"
+
+
 /obj/structure/sign/atmosplaque
 	name = "\improper engineering memorial plaque"
 	desc = "This plaque memorializes those engineers and technicians who made the ultimate sacrifice to save their vessel and its crew."
@@ -380,6 +386,30 @@
 	name = "\improper Exam Room"
 	icon_state = "examroom"
 
+/obj/structure/sign/directions/site53/mcr
+	name = "\improper Main Control Room"
+	icon_state = "mcr"
+
+/obj/structure/sign/directions/site53/ez
+	name = "\improper Entrance Zone"
+	icon_state = "ez"
+
+/obj/structure/sign/directions/site53/bunker
+	name = "\improper Secure Bunker"
+	icon_state = "bunker"
+
+/obj/structure/sign/directions/site53/hcz
+	name = "\improper Heavy Containment Zone"
+	icon_state = "hcz"
+
+/obj/structure/sign/directions/site53/lcz
+	name = "\improper Light Containment Zone"
+	icon_state = "lcz"
+
+/obj/structure/sign/directions/site53/adm
+	name = "\improper Administration"
+	icon_state = "direction_adm"
+
 /obj/structure/sign/deck/bridge
 	name = "\improper Bridge Deck"
 	icon_state = "deck-b"
@@ -510,3 +540,8 @@
 /obj/structure/sign/scp/dontlook
 	icon_state = "dontlook"
 	desc = "A warning sign which reads: CAUTION, DO NOT LOOK AT ANOMALOUS OBJECT."
+
+/obj/structure/sign/scp/dclass
+	name = "\improper MIND THE ACCEPTABLE ZONES!"
+	icon_state = "securearea2"
+	desc = "A warning sign which reads: REMEMBER YOUR PLACE. DO NOT MOVE BEYOND THE YELLOW HAZARD MARKINGS IF RED HATCHED MARKINGS ARE PRESENT! IMMEDIATE TERMINATION TO VIOLATIONS!"

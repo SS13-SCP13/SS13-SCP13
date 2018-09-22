@@ -1,4 +1,3 @@
-/var/total_lighting_overlays = 0
 /atom/movable/lighting_overlay
 	name = ""
 	mouse_opacity = 0
@@ -28,13 +27,15 @@
 	if(T.dynamic_lighting)
 		. = ..()
 		verbs.Cut()
-		total_lighting_overlays++
+
+		++SSlighting.total_lighting_overlays
 
 		T.lighting_overlay = src
 		T.luminosity = 0
 		if(no_update)
 			return
 		update_overlay()
+		global.lighting_overlay_list += src 
 	else
 		qdel(src)
 
@@ -121,9 +122,10 @@
 	return
 
 /atom/movable/lighting_overlay/Destroy()
-	total_lighting_overlays--
-	global.lighting_update_overlays     -= src
-	global.lighting_update_overlays_old -= src
+	--SSlighting.total_lighting_overlays
+	global.lighting_overlay_list -= src
+	SSlighting.update_overlays     -= src
+	SSlighting.update_overlays_old -= src
 
 	var/turf/T = loc
 	if(istype(T))

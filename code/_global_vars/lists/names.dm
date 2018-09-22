@@ -12,5 +12,7 @@ GLOBAL_LIST_INIT(clown_names, safefile2list("config/names/clown.txt"))
 
 GLOBAL_LIST_INIT(verbs, safefile2list("config/names/verbs.txt"))
 GLOBAL_LIST_INIT(adjectives, safefile2list("config/names/adjectives.txt"))
+
+GLOBAL_LIST_INIT(server_whitelist, safefile2list("config/server_whitelist.txt"))
 //loaded on startup because of "
 //would include in rsc if ' was used

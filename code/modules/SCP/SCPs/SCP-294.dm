@@ -1,5 +1,5 @@
 /obj/machinery/scp294
-	name = "Hot Drinks machine"
+	name = "SCP-294"
 	desc = "A standard coffee vending machine. This one seems to have a QWERTY keyboard."
 	icon = 'icons/obj/scp294.dmi'
 	icon_state = "coffee_294"
@@ -26,14 +26,11 @@
 	if(uses_left < 1)
 		visible_message("<span class='notice'>[src] displays RESTOCKING, PLEASE WAIT message.</span>")
 		return
-	uses_left--
-	if (uses_left < 1)
-		spawn(2000)
-			uses_left = 12
+
 	var/product = null
 	var/mob/living/carbon/victim = null
 	var/input_reagent = lowertext(input("Enter the name of any liquid", "What would you like to drink?") as text)
-	for(var/mob/living/carbon/M in world)
+	for(var/mob/living/carbon/M in GLOB.living_mob_list_)
 		if (lowertext(M.name) == input_reagent)
 			if (istype(M, /mob/living/carbon/))
 				victim = M
@@ -45,6 +42,16 @@
 						M.adjustBruteLoss(5)
 	if(!victim)
 		product = find_reagent(input_reagent)
+
+
+	// use one use
+	if (product || victim)
+		--uses_left
+		if (!uses_left)
+			spawn(2000)
+				uses_left = initial(uses_left)
+
+
 	sleep(10)
 	if(product)
 		var/obj/item/weapon/reagent_containers/food/drinks/sillycup/D = new /obj/item/weapon/reagent_containers/food/drinks/sillycup(loc)
@@ -60,17 +67,15 @@
 	else
 		visible_message("<span class='notice'>[src]'s OUT OF RANGE light flashes rapidly.</span>")
 
-
-
 /obj/machinery/scp294/proc/find_reagent(input)
 	. = FALSE
-	if(chemical_reagents_list[input])
-		var/datum/reagent/R = chemical_reagents_list[input]
+	if(global.chemical_reagent_list[input])
+		var/datum/reagent/R = global.chemical_reagent_list[input]
 		if(R)
 			return R.type
 	else
-		for(var/X in chemical_reagents_list)
-			var/datum/reagent/R = chemical_reagents_list[X]
+		for(var/X in global.chemical_reagent_list)
+			var/datum/reagent/R = global.chemical_reagent_list[X]
 			if(R && input == replacetext(lowertext(R.name), " ", ""))
 				return R.type
 			else if(R && input == replacetext(capitalize(R.name), " ", ""))

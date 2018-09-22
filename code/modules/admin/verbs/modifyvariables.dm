@@ -42,7 +42,7 @@
 			var_value = input("Select reference:","Reference") as null|mob|obj|turf|area in world
 
 		if("mob reference")
-			var_value = input("Select reference:","Reference") as null|mob in world
+			var_value = input("Select reference:","Reference") as null|mob in GLOB.mob_list
 
 		if("file")
 			var_value = input("Pick file:","File") as null|file
@@ -95,7 +95,7 @@
 			var_value = input("Select reference:","Reference") as mob|obj|turf|area in world
 
 		if("mob reference")
-			var_value = input("Select reference:","Reference") as mob in world
+			var_value = input("Select reference:","Reference") as mob in GLOB.mob_list
 
 		if("file")
 			var_value = input("Pick file:","File") as file
@@ -114,7 +114,8 @@
 			L[var_value] = mod_list_add_ass() //haha
 		if("No")
 			L += var_value
-	world.log << "### ListVarEdit by [src]: [O.type] [objectvar]: ADDED=[var_value]"
+
+	WRITE_LOG(world.log, "### ListVarEdit by [src]: [O.type] [objectvar]: ADDED=[var_value]")
 	log_admin("[key_name(src)] modified [original_name]'s [objectvar]: ADDED=[var_value]")
 	message_admins("[key_name_admin(src)] modified [original_name]'s [objectvar]: ADDED=[var_value]")
 
@@ -265,7 +266,7 @@
 			modify_variables(variable)
 
 		if("DELETE FROM LIST")
-			world.log << "### ListVarEdit by [src]: [O.type] [objectvar]: REMOVED=[html_encode("[variable]")]"
+			WRITE_LOG(world.log, "### ListVarEdit by [src]: [O.type] [objectvar]: REMOVED=[html_encode("[variable]")]")
 			log_admin("[key_name(src)] modified [original_name]'s [objectvar]: REMOVED=[variable]")
 			message_admins("[key_name_admin(src)] modified [original_name]'s [objectvar]: REMOVED=[variable]")
 			L -= variable
@@ -300,7 +301,7 @@
 				L[L.Find(variable)] = new_var
 
 		if("mob reference")
-			new_var = input("Select reference:","Reference") as mob in world
+			new_var = input("Select reference:","Reference") as mob in GLOB.mob_list
 			if(assoc)
 				L[assoc_key] = new_var
 			else
@@ -329,7 +330,7 @@
 			else
 				L[L.Find(variable)] = new_var
 
-	world.log << "### ListVarEdit by [src]: [O.type] [objectvar]: [original_var]=[new_var]"
+	WRITE_LOG(world.log, "### ListVarEdit by [src]: [O.type] [objectvar]: [original_var]=[new_var]")
 	log_admin("[key_name(src)] modified [original_name]'s [objectvar]: [original_var]=[new_var]")
 	message_admins("[key_name_admin(src)] modified [original_name]'s varlist [objectvar]: [original_var]=[new_var]")
 
@@ -543,7 +544,7 @@
 			var_value = var_new
 
 		if("mob reference")
-			var/var_new = input("Select reference:","Reference",O.get_variable_value(variable)) as null|mob in world
+			var/var_new = input("Select reference:","Reference",O.get_variable_value(variable)) as null|mob in GLOB.mob_list
 			if(var_new==null) return
 			var_value = var_new
 
@@ -578,7 +579,7 @@
 	if(old_value == new_value)
 		return
 
-	world.log << "### VarEdit by [src]: [O.type] [variable]=[html_encode("[new_value]")]"
+	WRITE_LOG(world.log, "### VarEdit by [src]: [O.type] [variable]=[html_encode("[new_value]")]")
 	log_and_message_admins("modified [original_name]'s [variable] from '[old_value]' to '[new_value]'")
 
 /client

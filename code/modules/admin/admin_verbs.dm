@@ -7,6 +7,7 @@ var/list/admin_verbs_default = list(
 	/client/proc/hide_verbs,			//hides all our adminverbs,
 	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs,
 	/client/proc/debug_variables,		//allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify,
+	/client/proc/debug_variables2,
 	/client/proc/debug_global_variables,//as above but for global variables,
 //	/client/proc/check_antagonists,		//shows all antags,
 	/client/proc/cmd_mentor_check_new_players
@@ -61,6 +62,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/investigate_show,		//various admintools for investigation. Such as a singulo grief-log,
 	/datum/admins/proc/toggleooc,		//toggles ooc on/off for everyone,
 	/datum/admins/proc/toggleaooc,		//toggles aooc on/off for everyone,
+	/datum/admins/proc/toggledooc,      //toggles dooc on/off for everyone,
 	/datum/admins/proc/togglelooc,		//toggles looc on/off for everyone,
 	/datum/admins/proc/toggleoocdead,	//toggles ooc on/off for everyone who is dead,
 	/datum/admins/proc/toggledsay,		//toggles dsay on/off for everyone,
@@ -97,7 +99,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/list_traders,
 	/client/proc/add_trader,
 	/client/proc/remove_trader,
-	/datum/admins/proc/sendFax
+	/datum/admins/proc/sendFax,
+	/client/proc/cmd_admin_cryo
 )
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
@@ -178,6 +181,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/cmd_debug_tog_aliens,
 	/client/proc/air_report,
 	/client/proc/reload_admins,
+	/client/proc/reload_donators,
 	/client/proc/reload_mentors,
 	/client/proc/restart_controller,
 	/client/proc/print_random_map,
@@ -198,6 +202,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/jumptomob,
 	/client/proc/jumptocoord,
 	/client/proc/dsay,
+	/client/proc/cmd_dev_say,
 	/datum/admins/proc/run_unit_test,
 	/turf/proc/view_chunk,
 	/turf/proc/update_chunk,
@@ -212,7 +217,8 @@ var/list/admin_verbs_debug = list(
 var/list/admin_verbs_paranoid_debug = list(
 	/client/proc/callproc,
 	/client/proc/callproc_target,
-	/client/proc/debug_controller
+	/client/proc/debug_controller,
+	/client/proc/cmd_dev_say
 	)
 
 var/list/admin_verbs_possess = list(
@@ -292,6 +298,7 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/cmd_debug_tog_aliens,
 	/client/proc/air_report,
 	/client/proc/enable_debug_verbs,
+	/client/proc/cmd_dev_say,
 	/client/proc/roll_dices,
 	/proc/possess,
 	/proc/release
@@ -300,6 +307,7 @@ var/list/admin_verbs_mod = list(
 	/client/proc/cmd_admin_pm_context,	// right-click adminPM interface,
 	/client/proc/cmd_admin_pm_panel,	// admin-pm list,
 	/client/proc/debug_variables,		// allows us to -see- the variables of any instance in the game.,
+	/client/proc/debug_variables2,
 	/client/proc/debug_global_variables,// as above but for global variables,
 	/datum/admins/proc/PlayerNotes,
 	/client/proc/admin_ghost,			// allows us to ghost/reenter body at will,
@@ -312,9 +320,11 @@ var/list/admin_verbs_mod = list(
 	/client/proc/check_antagonists,
 	/client/proc/cmd_admin_subtle_message, // send an message to somebody as a 'voice in their head',
 	/client/proc/aooc,
-	/datum/admins/proc/sendFax
+	/datum/admins/proc/sendFax,
+	/client/proc/FRules
 
 )
+
 
 var/list/admin_verbs_mentor = list(
 	/client/proc/cmd_admin_pm_context,
@@ -322,10 +332,10 @@ var/list/admin_verbs_mentor = list(
 	/datum/admins/proc/PlayerNotes,
 	/client/proc/admin_ghost,
 	/client/proc/cmd_mod_say,
-	/client/proc/cmd_dev_say,
 	/datum/admins/proc/show_player_info,
 //	/client/proc/dsay,
-	/client/proc/cmd_admin_subtle_message
+	/client/proc/cmd_admin_subtle_message,
+	/client/proc/dooc
 )
 /* NEW VARS
 var/list/admin_verbs_mentor = list(
@@ -569,7 +579,7 @@ var/list/admin_verbs_sendev = list(
 /client/proc/colorooc()
 	set category = "Fun"
 	set name = "OOC Text Color"
-	if(!holder)	return
+	if(!can_select_ooc_color(src))	return
 	var/response = alert(src, "Please choose a distinct color that is easy to read and doesn't mix with all the other chat and radio frequency colors.", "Change own OOC color", "Pick new color", "Reset to default", "Cancel")
 	if(response == "Pick new color")
 		prefs.ooccolor = input(src, "Please select your OOC colour.", "OOC colour") as color
