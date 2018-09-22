@@ -6,7 +6,11 @@
 // Acceptable 'in world', as VV would be incredibly hampered otherwise
 /client/proc/debug_variables2(var/datum/D in list(GLOB)+world.contents)
 	set category = "Debug"
+<<<<<<< HEAD
 	set name = "View Variables 2.0"
+=======
+	set name = "View Variable 2.0"
+>>>>>>> 3e30109a8fdb2c32f00ccd5a9262d38f7ae8b792
 	return debug_variables(D)
 
 /client/proc/debug_variables(var/datum/D in world)
