@@ -177,28 +177,6 @@
 /obj/effect/shuttle_landmark/escape_pod/transit/pod17
 	number = 17
 
-
-/datum/shuttle/autodock/ferry/engineering
-	name = "Engineering Tram"
-	warmup_time = 10
-	shuttle_area = list(/area/site53/tram/engineering)
-	waypoint_station = "nav_engineering_start"
-	waypoint_offsite = "nav_engineering_out"
-
-/obj/effect/shuttle_landmark/engineering/start
-	name = "Tram Hub"
-	landmark_tag = "nav_engineering_start"
-	base_turf = /turf/simulated/floor/reinforced
-
-/obj/effect/shuttle_landmark/engineering/out
-	name = "Engineering Department"
-	landmark_tag = "nav_engineering_out"
-	base_turf = /turf/simulated/floor/reinforced
-
-/obj/effect/shuttle_landmark/engineering/internim
-	name = "In transit"
-	landmark_tag = "nav_engineering_transition"
-
 /datum/shuttle/autodock/ferry/heli/mtf
 	name = "MTF Helicopter"
 	warmup_time = 40
@@ -219,40 +197,6 @@
 /obj/effect/shuttle_landmark/heli/mtf
 	name = "In transit"
 	landmark_tag = "nav_mtf_transition"
-
-/datum/shuttle/autodock/ferry/hcz
-	name = "Heavy Containment Tram"
-	warmup_time = 10
-	shuttle_area = list(/area/site53/tram/hcz)
-	waypoint_station = "nav_hcz_start"
-	waypoint_offsite = "nav_hcz_out"
-
-/obj/effect/shuttle_landmark/hcz/start
-	name = "Tram Hub"
-	landmark_tag = "nav_hcz_start"
-	base_turf = /turf/simulated/floor/reinforced
-
-/obj/effect/shuttle_landmark/hcz/out
-	name = "Heavy Containment Zone"
-	landmark_tag = "nav_hcz_out"
-	base_turf = /turf/simulated/floor/reinforced
-
-/datum/shuttle/autodock/ferry/lcz
-	name = "Light Containment Tram"
-	warmup_time = 10
-	shuttle_area = list(/area/site53/tram/lcz)
-	waypoint_station = "nav_lcz_start"
-	waypoint_offsite = "nav_lcz_out"
-
-/obj/effect/shuttle_landmark/lcz/start
-	name = "Tram Hub"
-	landmark_tag = "nav_lcz_start"
-	base_turf = /turf/simulated/floor/reinforced
-
-/obj/effect/shuttle_landmark/lcz/out
-	name = "Light Containment Zone"
-	landmark_tag = "nav_lcz_out"
-	base_turf = /turf/simulated/floor/reinforced
 
 /datum/shuttle/autodock/multi/antag/rescue
 	name = "Rescue"
