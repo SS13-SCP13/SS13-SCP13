@@ -229,6 +229,8 @@
 			A.set_light()
 	gen_collision() //Generate collision again
 	hurt_jumpers() //Hurt people who get off while we are moving
+	if(prob(1))
+		weaken_passengers()
 	return 1
 
 /obj/tram/tram_controller/proc/hurt_mobs(var/dir)
@@ -269,6 +271,14 @@
 	M.apply_damage(damage, BRUTE, BP_R_LEG)
 	M.apply_damage(damage, BRUTE, BP_L_ARM)
 	M.apply_damage(damage, BRUTE, BP_R_ARM)
+
+/obj/tram/tram_controller/proc/weaken_passengers()
+	for(var/mob/living/M in tram)
+		if(M.buckled || M.resting)
+			to_chat(M, "The tram bumps on the rail.")
+			continue
+		to_chat(M, "<span class='warning'>The tram bumps on the rail and you fall!</span>")
+		M.Weaken(1)
 
 /obj/tram/tram_controller/proc/hurt_jumpers()
 	for(var/mob/living/M in pretram)
