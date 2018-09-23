@@ -33,7 +33,8 @@
 								 /obj/machinery/door,
 								 /obj/machinery/light)
 
-/obj/tram/tram_controller/New()
+/obj/tram/tram_controller/Initialize()
+	. = ..()
 	SStram.trams += src
 	spawn(1)
 		init_floors() //Search and link floors
