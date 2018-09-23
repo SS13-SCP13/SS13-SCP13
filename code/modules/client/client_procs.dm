@@ -159,6 +159,9 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 	prefs.last_id = computer_id			//these are gonna be used for banning
 	apply_fps(prefs.clientfps ? prefs.clientfps : 30)
 
+	if (last_mob[ckey])
+		mob = last_mob[ckey]
+
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
 
@@ -211,16 +214,30 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 	//DISCONNECT//
 	//////////////
 /client/Del()
+	if (mob)
+		last_mob[ckey] = mob
+		mob.Logout()
 	return Destroy()
 
+// made this remove a lot more references so clients properly GC
 /client/Destroy()
 	if (mob && mob.client == src)
 		mob.client = null
+	if (eye && ismob(eye) && eye:client == src)
+		eye:client = null
+	if (statobj && ismob(statobj) && statobj:client == src)
+		statobj:client = null 
+	if (virtual_eye && ismob(virtual_eye) && virtual_eye:client == src)
+		virtual_eye:client = null
+	if (prefs && prefs.client == src)
+		prefs.client = null
 	key = null 
 	ticket_panels -= src
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
+	if (donator_holder && donator_holder.client == src)
+		donator_holder.client = null
 	GLOB.ckey_directory -= ckey
 	GLOB.clients -= src
 	..()

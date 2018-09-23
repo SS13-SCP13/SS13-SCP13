@@ -1,2 +1,3 @@
 /image/Destroy()
-	return ..()
+	..()
+	return QDEL_HINT_IWILLGC

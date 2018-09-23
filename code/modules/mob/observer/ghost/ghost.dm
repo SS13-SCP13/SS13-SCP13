@@ -210,8 +210,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/ghost/proc/reenter_corpse_p()
 	stop_following()
 	mind.current.key = key
-	mind.current.teleop = null
 	mind.current.reload_fullscreen()
+	QDEL_NULL(mind.current.teleop)
 
 /mob/observer/ghost/verb/toggle_medHUD()
 	set category = "Ghost"

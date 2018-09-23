@@ -4,7 +4,7 @@
 	role_text_plural = "Shapeshifters"
 	feedback_tag = "changeling_objective"
 	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg)
-	protected_jobs = list(/datum/job/captain)
+	protected_jobs = list(/datum/job/assistant, /datum/job/captain, /datum/job/cellguardlieutenant, /datum/job/hos, /datum/job/ltofficer, /datum/job/rd, /datum/job/o5rep)
 	welcome_text = "Use say \"#g message\" to communicate with your fellow shapeshifters. Remember: you get all of their absorbed DNA if you absorb them."
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	antaghud_indicator = "hudchangeling"
