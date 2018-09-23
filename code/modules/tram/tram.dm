@@ -31,7 +31,8 @@
 								 /obj/structure/wall_frame,
 								 /obj/structure/window,
 								 /obj/machinery/door,
-								 /obj/machinery/light)
+								 /obj/machinery/light,
+								 /mob/living) //AHAHAHA, people got gibbed because they sat on chairs.
 
 /obj/tram/tram_controller/Initialize()
 	. = ..()
