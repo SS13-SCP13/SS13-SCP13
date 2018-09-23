@@ -161,11 +161,16 @@ var/list/datum/power/changeling/powerinstances = list()
 	genomecost = 7
 	verbpath = /mob/proc/changeling_rapidregen
 
-
+/datum/power/changeling/armblade
+	name = "Flesh Blade"
+	desc = "We evolve the ability to turn our arm into a powerful blade."
+	helptext = "Very good for stabbing and/or killing."
+	genomecost = 6
+	verbpath = /mob/proc/changeling_armblade
 
 // Modularchangling, totally stolen from the new player panel.  YAYY
 /datum/changeling/proc/EvolutionMenu()//The new one
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set desc = "Level up!"
 
 	if(!usr || !usr.mind || !usr.mind.changeling)	return
