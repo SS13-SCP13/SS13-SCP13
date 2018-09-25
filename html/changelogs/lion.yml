@@ -40,6 +40,7 @@ changes:
   - maptweak: "Added a CAUTION! to the SCP-895 camera."
   - maptweak: "Added catwalks to LCZ hallways."
   - maptweak: "Adds a water tank to xenobiology."
+  - maptweak: "Moves SCP-106's APC to the opposing wall."
   - tweak: "Gives Guards a sane strength and dexterity again. This should prevent one-hit pops of the foot."
   - tweak: "Added alternative access for Archivist, who can now access all archives. Their console is ID locked, and the Archive is generally overhauled and redesigned. They now also have their own ID Card with their specific access. First job in many to come."
   - tweak: "Added two new steal objectives for C.I. Operatives."
