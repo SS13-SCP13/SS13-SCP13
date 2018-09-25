@@ -193,7 +193,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
 	minimal_access = list()
@@ -247,7 +247,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
@@ -277,7 +277,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
@@ -306,7 +306,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_sciencelvl1)
@@ -891,7 +891,7 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	access = list(access_archive)
 	minimal_access = list()
 
 /datum/job/o5rep

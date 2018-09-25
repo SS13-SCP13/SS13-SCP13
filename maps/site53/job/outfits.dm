@@ -210,7 +210,7 @@
 	uniform = /obj/item/clothing/under/suit_jacket/really_black
 	shoes = /obj/item/clothing/shoes/laceup
 	l_pocket = /obj/item/device/radio
-	id_type = /obj/item/weapon/card/id/sciencelvl3
+	id_type = /obj/item/weapon/card/id/archivist
 	back = null
 	l_ear = null
 
