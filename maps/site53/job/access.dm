@@ -131,3 +131,11 @@
 	id = access_archive
 	desc = "Archive"
 	region = ACCESS_REGION_GENERAL
+
+// KEYCARD AUTH
+
+/var/const/access_keyauth = 601
+/datum/access/keyauth
+	id = access_keyauth
+	desc = "Keycard Authentication Access"
+	region = ACCESS_REGION_COMMAND

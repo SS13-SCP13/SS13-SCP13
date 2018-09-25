@@ -60,7 +60,8 @@
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1
+	access_adminlvl1,
+	access_keyauth
 	)
 	minimal_access = list()
 
@@ -91,7 +92,8 @@
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1
+	access_adminlvl1,
+	access_keyauth
 	)
 	minimal_access = list()
 
@@ -221,7 +223,7 @@
 		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(90,100), rand(90,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4, access_keyauth)
 	minimal_access = list()
 
 /datum/job/ltofficer
@@ -411,7 +413,8 @@
 	access_sciencelvl4,
 	access_sciencelvl3,
 	access_sciencelvl2,
-	access_sciencelvl1)
+	access_sciencelvl1,
+	access_keyauth)
 	minimal_access = list()
 
 
@@ -562,7 +565,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(80,100)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_keyauth)
 	minimal_access = list()
 
 // MEDICAL JOBS.
@@ -581,7 +584,7 @@
 	/datum/mil_rank/security/w2,
 	/datum/mil_rank/security/w3)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_keyauth)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
