@@ -46,3 +46,5 @@ changes:
   - bugfix: "Fixes some runtimes occurring when double catwalks spawn."
   - bugfix: "Fixes some area's in HCZ not spawning catwalks."
   - bugfix: "Adds a specific access level for keycard authentication devices. This should fix the RD being unable to use them."
+  - bugfix: "Replaced several buggy airlocks in the tram and research area."
+  - bugfix: "Fixed guards spawning with blue pouches for on their plate carrier. They are now black."
