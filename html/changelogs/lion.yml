@@ -33,14 +33,17 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - experiment: "The Site 19 server banned all SCP13 devs and staff. Be sure to say hi to them! Also, be sure to connect to scp13.site:106!"
+  - experiment: "The Site 19 server banned all SCP13 devs and staff. Be sure to say hi to them if you run into them! Also, be sure to connect to scp13.site:106!"
   - rscdel: "Removed an old autoreply. Sad RIP."
   - rscadd: "Added a new autoreply for forum, wiki and discord information."
-  - imageadd: "New camera sprites, with thanks to UFRLAmmar."
+  - imageadd: "New camera sprites, with thanks to UFRLammar."
   - maptweak: "Added a CAUTION! to the SCP-895 camera."
   - maptweak: "Added catwalks to LCZ hallways."
   - maptweak: "Adds a water tank to xenobiology."
   - maptweak: "Moves SCP-106's APC to the opposing wall."
+  - maptweak: "Added Escape Train window and door lockdown."
+  - maptweak: "Adds nanopaste for assisted organs."
+  - maptweak: "Overhauled the bunker. Added a command area, including lounge for them (the scumbags!), and separated the medical area from the general area."
   - tweak: "Gives Guards a sane strength and dexterity again. This should prevent one-hit pops of the foot."
   - tweak: "Added alternative access for Archivist, who can now access all archives. Their console is ID locked, and the Archive is generally overhauled and redesigned. They now also have their own ID Card with their specific access. First job in many to come."
   - tweak: "Added two new steal objectives for C.I. Operatives."
@@ -49,3 +52,5 @@ changes:
   - bugfix: "Adds a specific access level for keycard authentication devices. This should fix the RD being unable to use them."
   - bugfix: "Replaced several buggy airlocks in the tram and research area."
   - bugfix: "Fixed guards spawning with blue pouches for on their plate carrier. They are now black."
+  - bugfix: "The escape train leaves again."
+  - bugfix: "Fixes bartenders not being able to withdraw from the Booze-O-Mat."
