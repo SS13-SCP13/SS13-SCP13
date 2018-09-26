@@ -1,0 +1,4 @@
+author: Buffalowing
+delete-after: True
+changes: 
+  - bugfix: "Fixed telecomms overheating"
