@@ -37,9 +37,11 @@
 		/obj/item/ammo_magazine/a10mm = 4,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
+		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/gloves/tactical,
 		/obj/item/clothing/accessory/holster/thigh,
+		/obj/item/device/flash,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
 		/obj/item/clothing/mask/balaclava
 	)
@@ -73,8 +75,10 @@
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/clothing/gloves/tactical,
+		/obj/item/device/flash,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/clothing/accessory/holster/thigh,
+		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
 		/obj/item/clothing/mask/balaclava
 	)
@@ -108,6 +112,8 @@
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
 		/obj/item/clothing/gloves/tactical,
+		/obj/item/device/flash,
+		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
 		/obj/item/clothing/accessory/holster/thigh,
@@ -144,6 +150,8 @@
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
 		/obj/item/weapon/handcuffs,
+		/obj/item/weapon/reagent_containers/spray/pepper,
+		/obj/item/device/flash,
 		/obj/item/clothing/gloves/tactical,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/clothing/mask/balaclava

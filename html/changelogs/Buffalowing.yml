@@ -1,5 +1,0 @@
-author: Buffalowing
-delete-after: True
-changes: 
-  - tweak: "Removed some mentions of NanoTrasen."
-  - bugfix: "Fixed help intent on simple mobs displaying 'tries to help', and harm intent displaying a similar message."
