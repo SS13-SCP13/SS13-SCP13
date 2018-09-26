@@ -27,6 +27,20 @@
 	icon_open = "labcoat_cmoalt_open"
 	icon_closed = "labcoat_cmoalt"
 
+/obj/item/clothing/suit/storage/toggle/labcoat/donator1
+	name = "Dr. Fields Labcoat"
+	desc = "A augmented CMO labcoat with golden stripes and a name etched into the fabric on the left side; Dr. Matthew Fields."
+	icon_state = "labcoat_aptare_open"
+	icon_open = "labcoat_aptare_open"
+	icon_closed = "labcoat_aptare"
+
+/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt
+	name = "chief medical officer labcoat"
+	desc = "A labcoat with command blue highlights."
+	icon_state = "labcoat_cmoalt_open"
+	icon_open = "labcoat_aptare_open"
+	icon_closed = "labcoat_aptare"
+
 /obj/item/clothing/suit/storage/toggle/labcoat/mad
 	name = "The Mad's labcoat"
 	desc = "It makes you look capable of konking someone on the noggin and shooting them into space."
