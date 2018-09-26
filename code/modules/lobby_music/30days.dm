@@ -1,4 +1,4 @@
-/lobby_music/humanity
+/lobby_music/30days
 	artist = "Buffalowing/Various Artists"
 	title = "30 Days"
 	album = "SCP13 OST"
