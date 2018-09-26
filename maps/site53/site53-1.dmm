@@ -1271,7 +1271,7 @@
 "yw" = (/obj/effect/paint_stripe/orange,/obj/structure/sign/poster,/turf/simulated/wall/titanium,/area/site53/llcz/dclass/cells{name = "\improper Sector 7 Room 1"; requires_power = 0})
 "yx" = (/obj/effect/paint_stripe/orange,/turf/simulated/wall/titanium,/area/site53/llcz/dclass/cells{name = "\improper Sector 7 Room 2"; requires_power = 0})
 "yy" = (/obj/effect/catwalk_plated/white,/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor,/area/site53/llcz/dclass/cells{name = "\improper Sector 7"})
-"yz" = (/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/obj/machinery/power/apc{icon_state = "apc0"; dir = 4},/turf/simulated/floor/tiled/monotile/white,/area/site53/llcz/dclass/cells{name = "\improper Sector 7"})
+"yz" = (/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/obj/machinery/power/apc/hyper{icon_state = "apc0"; dir = 4},/turf/simulated/floor/tiled/monotile/white,/area/site53/llcz/dclass/cells{name = "\improper Sector 7"})
 "yA" = (/obj/machinery/light/small{dir = 8},/obj/machinery/cryopod{icon_state = "body_scanner_0"; dir = 4},/turf/simulated/floor/tiled/old_tile,/area/site53/llcz/dclass/cells{name = "\improper Sector 7 Room 1"; requires_power = 0})
 "yB" = (/turf/simulated/floor/tiled/old_tile,/area/site53/llcz/dclass/cells{name = "\improper Sector 7 Room 2"; requires_power = 0})
 "yC" = (/obj/structure/bed{material = "plastic"},/obj/item/weapon/bedsheet/brown,/obj/machinery/light_switch{pixel_y = 25},/turf/simulated/floor/tiled/old_tile,/area/site53/llcz/dclass/cells{name = "\improper Sector 7 Room 2"; requires_power = 0})
