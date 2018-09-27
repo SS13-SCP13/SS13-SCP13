@@ -41,6 +41,7 @@ changes:
   - maptweak: "Changed large webbing for NTF with Bandoliers for the sake of storage spaces."
   - maptweak: "Visually overhauled MTF base."
   - maptweak: "Changed the ERT backpack colors from red to blue, as they should be."
+  - maptweak: "Adds radiation suit lockers to the xenoarcheology laboratory."
   - rscdel: "Removed Research taperoll from RD's locker. Useless stuff anyway."
   - rscdel: "Removed movement penalty for heavy armor plates. This should make Guard Commanders and MTF as fast as their lesser counterparts."
   - rscadd: "Donator item for Aptare. Thank you for your continued contribution and support!"
