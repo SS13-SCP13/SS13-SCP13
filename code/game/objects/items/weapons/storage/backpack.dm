@@ -112,8 +112,8 @@
 	item_state_slots = null
 
 /obj/item/weapon/storage/backpack/toxins
-	name = "\improper NanoTrasen backpack"
-	desc = "It's a light backpack modeled for use in laboratories and other scientific institutions. The colors on it denote it as a NanoTrasen backpack."
+	name = "\improper Foundation backpack"
+	desc = "It's a light backpack modeled for use in laboratories and other scientific institutions. The colors on it denote it as a Foundation backpack."
 	icon_state = "ntpack"
 
 /obj/item/weapon/storage/backpack/hydroponics
