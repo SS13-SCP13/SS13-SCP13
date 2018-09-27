@@ -27,9 +27,9 @@
 	icon_open = "labcoat_cmoalt_open"
 	icon_closed = "labcoat_cmoalt"
 
-/obj/item/clothing/suit/storage/toggle/labcoat/donator1
-	name = "Dr. Fields Labcoat"
-	desc = "A augmented CMO labcoat with golden stripes and a name etched into the fabric on the left side; Dr. Matthew Fields."
+/obj/item/clothing/suit/storage/toggle/labcoat/donators/aptare
+	name = "Dr. Fields' Labcoat"
+	desc = "An augmented CMO labcoat with golden stripes and a name etched into the fabric on the left side; Dr. Matthew Fields."
 	icon_state = "labcoat_aptare_open"
 	icon_open = "labcoat_aptare_open"
 	icon_closed = "labcoat_aptare"

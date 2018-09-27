@@ -48,7 +48,7 @@
 	icon_opened = "hydrosecureopen"
 	icon_off = "hydrosecureoff"
 
-/obj/structure/closet/secure_closet/hydroponics_torch/WillContain()
+/obj/structure/closet/secure_closet/hydroponics_dclass/WillContain()
 	return list(
 		/obj/item/clothing/suit/apron,
 		/obj/item/clothing/suit/apron/overalls,

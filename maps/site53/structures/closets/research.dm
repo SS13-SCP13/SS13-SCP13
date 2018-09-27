@@ -195,12 +195,11 @@
 /obj/structure/closet/secure_closet/scpscience/directorofscience/WillContain()
 	return list(
 		/obj/item/weapon/storage/backpack/dufflebag,
-		/obj/item/clothing/under/rank/scientist,
+		/obj/item/clothing/under/scp/suittie,
 		/obj/item/clothing/suit/storage/toggle/labcoat/rd,
 		/obj/item/clothing/shoes/white,
 		/obj/item/clothing/mask/gas,
-		/obj/item/weapon/clipboard,
-		/obj/item/taperoll/research
+		/obj/item/weapon/clipboard
 	)
 
 

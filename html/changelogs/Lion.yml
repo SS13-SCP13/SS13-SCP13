@@ -1,0 +1,52 @@
+################################
+# Example Changelog File
+#
+# Note: This file, and files beginning with ".", and files that don't end in ".yml" will not be read. If you change this file, you will look really dumb.
+#
+# Your changelog will be merged with a master changelog. (New stuff added only, and only on the date entry for the day it was merged.)
+# When it is, any changes listed below will disappear.
+#
+# Valid Prefixes: 
+#   bugfix
+#   wip (For works in progress)
+#   tweak
+#   soundadd
+#   sounddel
+#   rscadd (general adding of nice things)
+#   rscdel (general deleting of nice things)
+#   imageadd
+#   imagedel
+#   maptweak
+#   spellcheck (typo fixes)
+#   experiment
+#################################
+
+# Your name.  
+author: TheLion1675
+
+# Optional: Remove this file after generating master changelog.  Useful for PR changelogs that won't get used again.
+delete-after: True
+
+# Any changes you've made.  See valid prefix list above.
+# INDENT WITH TWO SPACES.  NOT TABS.  SPACES.
+# SCREW THIS UP AND IT WON'T WORK.
+# Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
+# Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
+changes: 
+  - experiment: "Foundation 19 has banned all SCP13 staff and devs. Be sure to say hi to them if you run into them! Also, if you want a better experience, connect to scp13.site:106!"
+  - bugfix: "Fixed Delta Alert not having an icon on the screen."
+  - bugfix: "Fixes D-Class Hydroponics lockers not spawning any items."
+  - bugfix: "Radiation effects for mining now positively removed."
+  - maptweak: "Removed SCP-294 near the D-Block and replaced it with a cola vending machine."
+  - maptweak: "Adds anomaly suits to Xenoarcheology laboratory."
+  - maptweak: "Changed large webbing for NTF with Bandoliers for the sake of storage spaces."
+  - maptweak: "Visually overhauled MTF base."
+  - maptweak: "Changed the ERT backpack colors from red to blue, as they should be."
+  - maptweak: "Adds radiation suit lockers to the xenoarcheology laboratory."
+  - maptweak: "Adds Suspension Field generators to securely extract anomalies."
+  - rscdel: "Removed Research taperoll from RD's locker. Useless stuff anyway."
+  - rscdel: "Removed movement penalty for heavy armor plates. This should make Guard Commanders and MTF as fast as their lesser counterparts."
+  - rscadd: "Donator item for Aptare. Thank you for your continued contribution and support!"
+  - tweak: "Removed all of the old NTF armor, and spawned one, fully decked out plate carrier, ready to throw on and deploy immediately to save time figuring things out from there."
+  - tweak: "Updated ERT to correspond more to the fluff of the MTF. Keycard also changed."
+  - wip: "Full overhaul of current existing alert codes. Code Blue is now for Keter testing. Red is for Keter SCP escaping, Code Black remained the same. Delta idem. More alert levels to be added when we have the sprites for them."
