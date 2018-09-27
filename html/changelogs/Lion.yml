@@ -38,3 +38,4 @@ changes:
   - bugfix: "Fixes D-Class Hydroponics lockers not spawning any items."
   - maptweak: "Removed SCP-294 near the D-Block and replaced it with a cola vending machine."
   - maptweak: "Adds anomaly suits to Xenoarcheology laboratory."
+  - rscdel: "Removed Research taperoll from RD's locker. Useless stuff anyway."
