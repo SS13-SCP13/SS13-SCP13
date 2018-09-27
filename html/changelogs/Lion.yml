@@ -36,3 +36,4 @@ changes:
   - experiment: "Foundation 19 has banned all SCP13 staff and devs. Be sure to say hi to them if you run into them! Also, if you want a better experience, connect to scp13.site:106!"
   - bugfix: "Fixed Delta Alert not having an icon on the screen."
   - maptweak: "Removed SCP-294 near the D-Block and replaced it with a cola vending machine."
+  - maptweak: "Adds anomaly suits to Xenoarcheology laboratory."
