@@ -2059,28 +2059,6 @@
 	glass_name = "saliva"
 	glass_desc = "This is not for you to drink."
 	
-/datum/reagent/drink/saliva
-	name = "Saliva"
-	description = "Why are you drinking this...?"
-	taste_description = "mouth juices"
-	reagent_state = LIQUID
-	color = "#C0C0C0"
-	nutrition = 0
-
-	glass_name = "saliva"
-	glass_desc = "Someone else should be swallowing this."
-	
-/datum/reagent/drink/saliva
-	name = "Saliva"
-	description = "Why are you drinking this...?"
-	taste_description = "mouth juices"
-	reagent_state = LIQUID
-	color = "#C0C0C0"
-	nutrition = 0
-
-	glass_name = "saliva"
-	glass_desc = "This is not for you to drink."
-	
 /datum/reagent/drink/lava
 	name = "Lava"
 	description = "Hot."
