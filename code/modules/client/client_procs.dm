@@ -235,6 +235,8 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 	//////////////
 /client/Del()
 	if (mob)
+		if (last_mob[ckey] && last_mob[ckey] != mob)
+			qdel(last_mob[ckey])
 		last_mob[ckey] = mob
 		mob.Logout()
 	return Destroy()
