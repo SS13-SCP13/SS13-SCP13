@@ -1,6 +1,7 @@
 #define FOOTSTEP_CARPET 	"carpet"
 #define FOOTSTEP_TILES 		"tiles"
 #define FOOTSTEP_PLATING 	"plating"
+#define FOOTSTEP_PLATING_049 "plating049"
 #define FOOTSTEP_WOOD 		"wood"
 #define FOOTSTEP_ASTEROID 	"asteroid"
 #define FOOTSTEP_GRASS 		"grass"
@@ -26,6 +27,10 @@
 		'sound/effects/footstep/plating3.ogg',
 		'sound/effects/footstep/plating4.ogg',
 		'sound/effects/footstep/plating5.ogg'),
+	FOOTSTEP_PLATING_049 = list(
+		'sound/effects/footstep/scp049/plating1.ogg',
+		'sound/effects/footstep/scp049/plating2.ogg',
+		'sound/effects/footstep/scp049/plating2.ogg'),
 	FOOTSTEP_CARPET = list(
 		'sound/effects/footstep/carpet1.ogg',
 		'sound/effects/footstep/carpet2.ogg',
@@ -60,13 +65,19 @@
 /decl/flooring/wood/footstep_type = FOOTSTEP_WOOD
 /decl/flooring/reinforced/footstep_type = FOOTSTEP_PLATING
 
-/turf/simulated/floor/proc/get_footstep_sound()
+/turf/simulated/floor/proc/get_footstep_sound(var/mob/living/carbon/human/H)
 	if(is_plating())
-		return safepick(footstep_sounds[FOOTSTEP_PLATING])
+		if (isscp049(H))
+			return safepick(footstep_sounds[FOOTSTEP_PLATING_049])
+		else
+			return safepick(footstep_sounds[FOOTSTEP_PLATING])
 	else if(!flooring || !flooring.footstep_type)
 		return safepick(footstep_sounds[FOOTSTEP_BLANK])
 	else
-		return safepick(footstep_sounds[flooring.footstep_type])
+		if (isscp049(H))
+			return safepick(footstep_sounds[FOOTSTEP_PLATING_049])
+		else
+			return safepick(footstep_sounds[flooring.footstep_type])
 
 /turf/simulated/floor/asteroid/get_footstep_sound()
 	return safepick(footstep_sounds[FOOTSTEP_ASTEROID])
@@ -116,7 +127,8 @@
 	if(!has_organ(BP_L_FOOT) && !has_organ(BP_R_FOOT))
 		return //no feet no footsteps
 
-	var/S = T.get_footstep_sound()
+	var/S = T.get_footstep_sound(src)
+
 	if(S)
 		var/range = -(world.view - 2)
 		var/volume = 70

@@ -71,10 +71,10 @@
 			misc[name] = rank
 
 	// Synthetics don't have actual records, so we will pull them from here.
-	for(var/mob/living/silicon/ai/ai in SSmobs.mob_list)
+	for(var/mob/living/silicon/ai/ai in GLOB.mob_list)
 		bot[ai.name] = "Artificial Intelligence"
 
-	for(var/mob/living/silicon/robot/robot in SSmobs.mob_list)
+	for(var/mob/living/silicon/robot/robot in GLOB.mob_list)
 		// No combat/syndicate cyborgs, no drones.
 		if(robot.module && robot.module.hide_on_manifest)
 			continue
@@ -96,13 +96,13 @@
 /proc/silicon_nano_crew_manifest(var/list/filter)
 	var/list/filtered_entries = list()
 
-	for(var/mob/living/silicon/ai/ai in SSmobs.mob_list)
+	for(var/mob/living/silicon/ai/ai in GLOB.mob_list)
 		filtered_entries.Add(list(list(
 			"name" = ai.name,
 			"rank" = "Artificial Intelligence",
 			"status" = ""
 		)))
-	for(var/mob/living/silicon/robot/robot in SSmobs.mob_list)
+	for(var/mob/living/silicon/robot/robot in GLOB.mob_list)
 		if(robot.module && robot.module.hide_on_manifest)
 			continue
 		filtered_entries.Add(list(list(

@@ -135,6 +135,8 @@
 	var/overlay_alarm
 	var/overlay_status_display
 
+	var/crb = FALSE
+
 // Called when we're switching from a lower security level to this one.
 /decl/security_level/proc/switching_up_to()
 	return
@@ -223,6 +225,8 @@
 	up_description = "There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised."
 	down_description = "The self-destruct mechanism has been deactivated, there is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised."
 
+	crb = TRUE 
+
 /decl/security_level/default/code_delta
 	name = "code delta"
 
@@ -233,6 +237,8 @@
 
 	overlay_alarm = "alarm_delta"
 	overlay_status_display = "status_display_delta"
+
+	crb = TRUE
 
 	var/static/datum/announcement/priority/security/security_announcement_delta = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/announcer/delta.ogg'))
 
