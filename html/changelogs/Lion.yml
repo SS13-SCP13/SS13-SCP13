@@ -37,6 +37,7 @@ changes:
   - bugfix: "Fixed Delta Alert not having an icon on the screen."
   - bugfix: "Fixes D-Class Hydroponics lockers not spawning any items."
   - bugfix: "Radiation effects for mining now positively removed."
+  - bugfix: "Fixed an oversight in the D-Class Area where the cryo'd D-Class wouldn't actually cryo."
   - maptweak: "Removed SCP-294 near the D-Block and replaced it with a cola vending machine."
   - maptweak: "Adds anomaly suits to Xenoarcheology laboratory."
   - maptweak: "Changed large webbing for NTF with Bandoliers for the sake of storage spaces."
