@@ -91,17 +91,17 @@ research holder datum.
 	return
 
 /datum/research/proc/AddDesign2Known(var/datum/design/D)
-	if(!known_designs.len) // Special case
-		known_designs.Add(D)
+	if(!length(known_designs)) // Special case
+		known_designs += D
 		return
-	for(var/i = 1 to known_designs.len)
+	for(var/i = 1 to length(known_designs))
 		var/datum/design/A = known_designs[i]
 		if(A.id == D.id) // We are guaranteed to reach this if the ids are the same, because sort_string will also be the same
 			return
 		if(A.sort_string > D.sort_string)
 			known_designs.Insert(i, D)
 			return
-	known_designs.Add(D)
+	known_designs += D
 	return
 
 //Refreshes known_tech and known_designs list

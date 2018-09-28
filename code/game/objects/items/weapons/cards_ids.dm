@@ -286,8 +286,10 @@ var/const/NO_EMAG_ACT = -50
 	access |= get_all_station_access()
 
 /obj/item/weapon/card/id/centcom/ERT
-	name = "\improper Emergency Response Team ID"
-	assignment = "Emergency Response Team"
+	name = "\improper NTF Epsilon-11 ID"
+	icon_state = "adminlvl5"
+	item_state = "Admin_ID"
+	assignment = "NTF Epsilon-11"
 
 /obj/item/weapon/card/id/centcom/ERT/New()
 	..()

@@ -1,8 +1,8 @@
 //TORCH NanoTrasen Uniforms - DO NOT ADD NEW UNIFORMS TO UNIFORM.DMI - TORCH NANOTRASEN UNIFORMS GO IN NANOTRASEN.DMI
 
 /obj/item/clothing/under/rank/guard
-	desc = "A durable uniform worn by NanoTrasen corporate security."
-	name = "\improper NanoTrasen security uniform"
+	desc = "A durable uniform worn by Foundation corporate security."
+	name = "\improper Foundation security uniform"
 	icon_state = "ntguard"
 	item_state = "r_suit"
 	worn_state = "ntguard"
@@ -14,8 +14,8 @@
 		)
 
 /obj/item/clothing/under/rank/scientist
-	name = "\improper NanoTrasen polo and pants"
-	desc = "A fashionable polo and pair of trousers made from patented biohazard-resistant synthetic fabrics. The colors denote the wearer as a member of NanoTrasen."
+	name = "\improper Foundation polo and pants"
+	desc = "A fashionable polo and pair of trousers made from patented biohazard-resistant synthetic fabrics. The colors denote the wearer as a member of the Foundation."
 	icon_state = "ntsmock"
 	item_state = "w_suit"
 	worn_state = "ntsmock"
@@ -28,15 +28,15 @@
 		)
 
 /obj/item/clothing/under/rank/scientist/executive
-	name = "\improper NanoTrasen executive polo and pants"
-	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a member of NanoTrasen's higher-ups."
+	name = "\improper Foundation executive polo and pants"
+	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a member of the Foundation's higher-ups."
 	icon_state = "ntsmockexec"
 	worn_state = "ntsmockexec"
 	starting_accessories = list(/obj/item/clothing/accessory/nt_tunic/exec)
 
 /obj/item/clothing/under/rank/ntwork
-	name = "\improper NanoTrasen coveralls"
-	desc = "A pair of beige coveralls made out of a strong, canvas-like material. The coloring on the fringes denotes it as a NanoTrasen-branded suit, typically given to their more blue-collared employees."
+	name = "\improper Foundation coveralls"
+	desc = "A pair of beige coveralls made out of a strong, canvas-like material. The coloring on the fringes denotes it as a Foundation-branded suit, typically given to their more blue-collared employees."
 	icon_state = "ntwork"
 	item_state = "lb_suit"
 	worn_state = "ntwork"
@@ -47,8 +47,8 @@
 		)
 
 /obj/item/clothing/under/rank/ntpilot
-	name = "\improper NanoTrasen flightsuit"
-	desc = "A sleek dark red NanoTrasen flightsuit. It proudly sports three different patches with the NanoTrasen logo on it, as well as several unnecessary looking flaps and pockets for effect."
+	name = "\improper Foundation flightsuit"
+	desc = "A sleek dark red Foundation flightsuit. It proudly sports three different patches with the Foundation logo on it, as well as several unnecessary looking flaps and pockets for effect."
 	icon_state = "ntpilot"
 	item_state = "r_suit"
 	worn_state = "ntpilot"
@@ -58,8 +58,8 @@
 		)
 
 /obj/item/clothing/under/suit_jacket/nt
-	name = "\improper NanoTrasen executive suit"
-	desc = "A suit that NanoTrasen gives to its executives."
+	name = "\improper Foundation executive suit"
+	desc = "A suit that the Foundation gives to its executives."
 	icon_state = "ntsuit"
 	item_state = "bl_suit"
 	worn_state = "ntsuit"

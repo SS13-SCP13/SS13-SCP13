@@ -29,9 +29,9 @@
 	var/stop_automated_movement_when_pulled = 1 //When set to 1 this stops the animal from moving when someone is pulling it.
 
 	//Interaction
-	var/response_help   = "tries to help"
+	var/response_help   = "pets"
 	var/response_disarm = "tries to disarm"
-	var/response_harm   = "tries to hurt"
+	var/response_harm   = "punches"
 	var/harm_intent_damage = 3
 
 	//Temperature effect

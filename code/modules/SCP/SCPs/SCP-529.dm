@@ -1,4 +1,4 @@
-/mob/living/simple_animal/cat/fluff/SCP-529
+/mob/living/simple_animal/cat/fluff/SCP529
 	name = "SCP-529"
 	SCP = /datum/scp/SCP_529
 	desc = "A friendly tabby cat that seems to be missing half of her body."
@@ -17,9 +17,8 @@
 	health = 50 //Josie is slightly more robust than most cats for anomalous reasons.
 	maxHealth = 50
 	gender = FEMALE
-	friend_name = "Josie"
-	
-	
+
+
 /datum/scp/SCP_529
 	name = "SCP-529"
 	designation = "529"

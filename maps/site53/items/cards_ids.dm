@@ -326,3 +326,21 @@
 	icon_state = "securitylvl1"
 	item_state = "Sec_ID1"
 	job_access_type = /datum/job/emt
+
+// ARCHIVE
+
+/obj/item/weapon/card/id/archivist
+	name = "level five administration keycard"
+	desc = "A black keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "adminlvl5"
+	item_state = "Admin_ID"
+	job_access_type = /datum/job/archivist
+
+// RESEARCH
+
+/obj/item/weapon/card/id/rd
+	name = "level five science keycard"
+	desc = "A red keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "sciencelvl5"
+	item_state = "Science_ID5"
+	job_access_type = /datum/job/rd

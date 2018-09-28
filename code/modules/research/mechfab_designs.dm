@@ -95,7 +95,7 @@
 	name = "Armour plating"
 	id = "armour"
 	build_path = /obj/item/robot_parts/robot_component/armour
-
+/*
 /datum/design/item/mechfab/ripley
 	category = "Ripley"
 
@@ -315,7 +315,7 @@
 	build_path = /obj/item/mecha_parts/part/durand_armour
 	time = 60
 	materials = list(DEFAULT_WALL_MATERIAL = 50000, "uranium" = 10000)
-
+*/
 /datum/design/item/robot_upgrade
 	build_type = MECHFAB
 	time = 12
@@ -382,7 +382,7 @@
 	req_tech = list(TECH_COMBAT = 4, TECH_ILLEGAL = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 10000, "glass" = 15000, "diamond" = 10000)
 	build_path = /obj/item/borg/upgrade/syndicate
-
+/*
 /datum/design/item/mecha_tracking
 	name = "Exosuit tracking beacon"
 	build_type = MECHFAB
@@ -420,7 +420,7 @@
 	name = "Cable layer"
 	id = "mech_cable_layer"
 	build_path = /obj/item/mecha_parts/mecha_equipment/tool/cable_layer
-	
+
 /datum/design/item/mecha/flaregun
 	name = "Flare launcher"
 	id = "mecha_flare_gun"
@@ -440,13 +440,13 @@
 	time = 20
 	materials = list(DEFAULT_WALL_MATERIAL = 3000, "glass" = 2000)
 
-/*
+
 /datum/design/item/mecha/syringe_gun
 	desc = "Exosuit-mounted syringe gun and chemical synthesizer."
 	id = "mech_syringe_gun"
 	req_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4, TECH_MAGNET = 4, TECH_DATA = 3)
 	build_path = /obj/item/mecha_parts/mecha_equipment/tool/syringe_gun
-	*/
+
 
 /datum/design/item/mecha/passenger
 	name = "Passenger compartment"
@@ -469,8 +469,9 @@
 
 /datum/design/item/mecha/weapon
 	req_tech = list(TECH_COMBAT = 3)
-
+*/
 // *** Weapon modules
+/*
 /datum/design/item/mecha/weapon/scattershot
 	name = "LBX AC 10 \"Scattershot\""
 	id = "mech_scattershot"
@@ -599,7 +600,7 @@
 	req_tech = list(TECH_POWER= 3, TECH_ENGINEERING = 3, TECH_MATERIAL = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 10000, "silver" = 500, "glass" = 1000)
 	build_path = /obj/item/mecha_parts/mecha_equipment/generator/nuclear
-
+*/
 /datum/design/item/synthetic_flash
 	name = "Synthetic flash"
 	id = "sflash"

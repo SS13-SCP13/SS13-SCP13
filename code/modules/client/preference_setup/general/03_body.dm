@@ -141,6 +141,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "(<a href='?src=\ref[src];random=1'>&reg;</A>)"
 	. += "<br>"
 
+/* CANDIDATE FOR DELETION ~ Lion
 	if(config.use_cortical_stacks)
 		. += "Neural lace: "
 		if(mob_species.spawn_flags & SPECIES_NO_LACE)
@@ -149,8 +150,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			. += pref.has_cortical_stack ? "present." : "<b>not present.</b>"
 			. += " \[<a href='byond://?src=\ref[src];toggle_stack=1'>toggle</a>\]"
 		. += "<br>"
-
-	. += "Species: <a href='?src=\ref[src];show_species=1'>[pref.species]</a><br>"
+*/
+// >>UNCOMMENTED BECAUSE SPECIES SHOULDN'T BE AN OPTION RIGHT NOW! ~Lion<<	. += "Species: <a href='?src=\ref[src];show_species=1'>[pref.species]</a><br>"
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 
 	if(has_flag(mob_species, HAS_BASE_SKIN_COLOURS))
@@ -161,7 +162,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 
 	. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
-	. += "Limbs: <a href='?src=\ref[src];limbs=1'>Adjust</a> <a href='?src=\ref[src];reset_limbs=1'>Reset</a><br>"
+// >> UNNCOMMENTED TO PREVENT BRAINLETS FROM APUTATING THEIR OWN SHIT, FUCKING HELL ~Lion <<	. += "Limbs: <a href='?src=\ref[src];limbs=1'>Adjust</a> <a href='?src=\ref[src];reset_limbs=1'>Reset</a><br>"
 	. += "Internal Organs: <a href='?src=\ref[src];organs=1'>Adjust</a><br>"
 
 	//display limbs below
@@ -226,8 +227,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				. += ", "
 			if(organ_name == BP_BRAIN)
 				. += "\tPositronic [organ_name]"
-			else
-				. += "\tSynthetic [organ_name]"
+// >> Synthetic stuff is dumb in SCP13 ~Lion			else
+//				. += "\tSynthetic [organ_name]"
 		else if(status == "assisted")
 			++ind
 			if(ind > 1)

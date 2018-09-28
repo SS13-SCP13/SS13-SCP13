@@ -22,9 +22,7 @@
 #################################
 
 # Your name.  
-author: steamp0rt
+author: Memeopolis
 delete-after: True
 changes: 
-  - tweak: "Shapeshifters no longer need brains, or heads."
-  - rscadd: "Shapeshifters, for 6 DNA points, can now buy armblades, to be used on people who annoy them or walk in on them while in the middle of a snack!"
-  - spellcheck: "Changed many references of 'Changelings' to 'Shapeshifters'"
+  - rscadd: "Gave SCP-049 custom footstep sounds."

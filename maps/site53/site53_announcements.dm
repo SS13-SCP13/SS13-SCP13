@@ -7,13 +7,13 @@
 
 	emergency_shuttle_recall_message = "Attention all hands: emergency evacuation sequence aborted. Return to normal operating conditions."
 
-	command_report_sound = sound('sound/AI/ds90/commandreport.ogg', volume = 45)
+	command_report_sound = sound('sound/AI/announcer/commandreport.ogg', volume = 45)
 
 	grid_check_message = "Abnormal activity detected in the site's power network. As a precaution, the site's power must be shut down for an indefinite duration."
-	grid_check_sound = sound('sound/AI/ds90/poweroff.ogg', volume = 150)
+	grid_check_sound = sound('sound/AI/announcer/poweroff.ogg', volume = 150)
 
 	grid_restored_message = "Site power will be restored at this time"
-	grid_restored_sound = sound('sound/AI/ds90/poweron.ogg', volume = 150)
+	grid_restored_sound = sound('sound/AI/announcer/poweron.ogg', volume = 150)
 
 	meteor_detected_sound = sound('sound/AI/torch/meteors.ogg', volume = 45)
 
