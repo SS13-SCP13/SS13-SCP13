@@ -10,6 +10,7 @@
 	throwforce = 3
 	force = 3
 	w_class = ITEM_SIZE_TINY
+	drawsound = null
 	var/obj/item/weapon/reagent_containers/syringe/syringe
 
 /obj/item/weapon/syringe_cartridge/update_icon()
