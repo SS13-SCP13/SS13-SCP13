@@ -1,6 +1,6 @@
 #define RULES_FILE "config/rules.html"
 
-/client/proc/FRules(mob/M as mob in SSmobs.mob_list)
+/client/proc/FRules(mob/M as mob in GLOB.mob_list)
 	set category = "Special Verbs"
 	set name = "Force Rules"
 	if(!holder)
