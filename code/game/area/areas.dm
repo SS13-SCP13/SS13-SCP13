@@ -302,7 +302,7 @@ var/list/mob/living/forced_ambiance_list = new
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 	if (security_state.current_security_level.crb)
 		if (islist(ambience_crb))
-			playambience = list(pick(ambience_crb))
+			playambience = pick(ambience_crb)
 		else if (!isnull(ambience_crb))
 			playambience = ambience_crb
 
