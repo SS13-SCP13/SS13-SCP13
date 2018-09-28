@@ -858,7 +858,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 /client/proc/cmd_admin_cryo(mob/living/M as mob in SSmobs.mob_list)
 	set category = "Special Verbs"
 	set name = "Admin Cryo"
-	if(!check_rights(R_MENTOR))
+	if(!check_rights(R_MOD))
 		src << "Only moderators may use this command."
 		return
 	if(!istype(M))
