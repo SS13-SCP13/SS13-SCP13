@@ -119,7 +119,7 @@
 				if (A.ambience_cgb)
 					L << (islist(A.ambience_cgb) ? pick(A.ambience_cgb) : A.ambience_cgb)
 
-		if (/decl/security_level/default/code_red, /decl/security_level/default/code_delta)
+		else
 			for (var/mob/living/L in GLOB.player_list)
 				var/area/A = get_area(L)
 				if (A.ambience_crb)
