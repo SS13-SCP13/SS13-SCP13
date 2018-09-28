@@ -309,15 +309,13 @@ var/list/mob/living/forced_ambiance_list = new
 	if (!playambience && ambience.len)
 		playambience = pick(ambience)
 
-	playambience = playambience && prob(35) && world.time >= L.client.played + 3 MINUTES
-
 	if(forced_ambience)
 		if(forced_ambience.len)
 			forced_ambiance_list |= L
 			L.playsound_local(T,sound(pick(forced_ambience), repeat = 1, wait = 0, volume = 25, channel = 1))
 		else
 			sound_to(L, sound(null, channel = 1))
-	else if(playambience)
+	else if(playambience && prob(35) && world.time >= L.client.played + 3 MINUTES)
 		L.playsound_local(T, sound(playambience, repeat = 0, wait = 0, volume = 15, channel = 1))
 		L.client.played = world.time
 
