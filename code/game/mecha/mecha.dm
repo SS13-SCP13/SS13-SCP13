@@ -360,7 +360,9 @@
 	if(state)
 		occupant_message("<font color='red'>Maintenance protocols in effect.</font>")
 		return
-	return do_move(direction)
+	. = do_move(direction)
+	occupant.dir = dir 
+	occupant.update_vision_cone()
 
 /obj/mecha/proc/do_move(direction)
 	if(!can_move)
@@ -1058,6 +1060,8 @@
 		*/
 		H.stop_pulling()
 		H.forceMove(src)
+		H.update_vision_cone()
+
 		src.occupant = H
 		src.add_fingerprint(H)
 		src.forceMove(src.loc)
@@ -1147,6 +1151,8 @@
 			src.occupant.client.perspective = MOB_PERSPECTIVE
 		*/
 		src.occupant << browse(null, "window=exosuit")
+		src.occupant.update_vision_cone()
+		
 		if(istype(mob_container, /obj/item/device/mmi))
 			var/obj/item/device/mmi/mmi = mob_container
 			if(mmi.brainmob)

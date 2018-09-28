@@ -159,8 +159,28 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 	prefs.last_id = computer_id			//these are gonna be used for banning
 	apply_fps(prefs.clientfps ? prefs.clientfps : 30)
 
+	// retrieve the old mob
 	if (last_mob[ckey])
 		mob = last_mob[ckey]
+
+		// when Destroy() is called we end up getting removed from these lists
+		// even though we may not have been garbage-collected yet
+		// so append us to all relevant lists
+		// I think this only occurs with new_players but you never know
+		GLOB.mob_list |= mob 
+		GLOB.player_list |= mob 
+
+		if (isliving(mob))
+			GLOB.living_mob_list_ |= mob
+			var/mob/living/L = mob 
+			if (L.stat == DEAD)
+				GLOB.dead_mob_list_ |= mob
+		if (ishuman(mob))
+			GLOB.human_mob_list |= mob 
+		if (issilicon(mob))
+			GLOB.silicon_mob_list |= mob 
+		if (isghost(mob))
+			GLOB.ghost_mob_list |= mob
 
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
@@ -215,6 +235,8 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 	//////////////
 /client/Del()
 	if (mob)
+		if (last_mob[ckey] && last_mob[ckey] != mob)
+			qdel(last_mob[ckey])
 		last_mob[ckey] = mob
 		mob.Logout()
 	return Destroy()

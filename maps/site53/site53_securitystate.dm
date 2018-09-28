@@ -80,6 +80,8 @@
 	overlay_alarm = "alarm_red"
 	overlay_status_display = "status_display_red"
 
+	crb = TRUE
+
 	var/static/datum/announcement/priority/security/security_announcement_red = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/announcer/codered.ogg'))
 
 /decl/security_level/default/site53/code_red/switching_up_to()
@@ -100,6 +102,8 @@
 
 	overlay_alarm = "alarm_delta"
 	overlay_status_display = "status_display_delta"
+
+	crb = TRUE
 
 	var/static/datum/announcement/priority/security/security_announcement_black = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/announcer/codeblack.ogg'))
 

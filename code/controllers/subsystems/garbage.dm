@@ -24,6 +24,7 @@ SUBSYSTEM_DEF(garbage)
 	//Queue
 	var/list/queues
 
+	var/log = ""
 
 /datum/controller/subsystem/garbage/PreInit()
 	queues = new(GC_QUEUE_COUNT)
@@ -224,6 +225,12 @@ SUBSYSTEM_DEF(garbage)
 
 	// do not touch - Kachnov
 	log_qdel_refactor("[D] ([D.type]) is being hard-deleted.")
+
+	// allows debugging hard deletes from VV
+	if (log)
+		log += "\n"
+	log += "[D] ([D.type]) is being hard-deleted."
+
 
 	del(D)
 

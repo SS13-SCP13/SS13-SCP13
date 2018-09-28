@@ -88,7 +88,7 @@ var/global/list/image/ghost_sightless_images = list() //this is a list of images
 /mob/observer/ghost/Topic(href, href_list)
 	if (href_list["track"])
 		if(istype(href_list["track"],/mob))
-			var/mob/target = locate(href_list["track"]) in SSmobs.mob_list
+			var/mob/target = locate(href_list["track"]) in GLOB.mob_list
 			if(target)
 				ManualFollow(target)
 		else
@@ -374,7 +374,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 							/mob/living/carbon/human/verb/yawn,
 							/mob/living/carbon/human/verb/hug,
 							/mob/living/carbon/human/verb/scream,
-							/mob/living/carbon/human/verb/emoteclearthroat
+							/mob/living/carbon/human/verb/emoteclearthroat,
+							/mob/living/verb/lay_down
 						)
 				else
 					src << "<span class = 'danger'>This SCP has already been taken by someone else.</span>"
