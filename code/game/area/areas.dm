@@ -9,7 +9,6 @@ GLOBAL_LIST_EMPTY(areas)
 	var/area_flags
 	var/holomap_color
 	var/engine_area = FALSE
-	var/ambience_cgb = null 
 	var/ambience_crb = null
 
 /area/New()
@@ -298,17 +297,29 @@ var/list/mob/living/forced_ambiance_list = new
 			L.client.ambience_playing = 0
 			sound_to(L, sound(null, channel = 2))
 
+	var/playambience = null
+
+	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
+	if (security_state.current_security_level.crb)
+		if (islist(ambience_crb))
+			playambience = list(pick(ambience_crb))
+		else if (!isnull(ambience_crb))
+			playambience = ambience_crb
+
+	if (!playambience && ambience.len)
+		playambience = pick(ambience)
+
+	playambience = playambience && prob(35) && world.time >= L.client.played + 3 MINUTES
+
 	if(forced_ambience)
 		if(forced_ambience.len)
 			forced_ambiance_list |= L
 			L.playsound_local(T,sound(pick(forced_ambience), repeat = 1, wait = 0, volume = 25, channel = 1))
 		else
 			sound_to(L, sound(null, channel = 1))
-	else if(src.ambience.len && prob(35))
-		if((world.time >= L.client.played + 3 MINUTES))
-			var/sound = pick(ambience)
-			L.playsound_local(T, sound(sound, repeat = 0, wait = 0, volume = 15, channel = 1))
-			L.client.played = world.time
+	else if(playambience)
+		L.playsound_local(T, sound(ambience, repeat = 0, wait = 0, volume = 15, channel = 1))
+		L.client.played = world.time
 
 /area/proc/gravitychange(var/gravitystate = 0)
 	has_gravity = gravitystate
