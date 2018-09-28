@@ -374,7 +374,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 							/mob/living/carbon/human/verb/yawn,
 							/mob/living/carbon/human/verb/hug,
 							/mob/living/carbon/human/verb/scream,
-							/mob/living/carbon/human/verb/emoteclearthroat
+							/mob/living/carbon/human/verb/emoteclearthroat,
+							/mob/living/verb/lay_down
 						)
 				else
 					src << "<span class = 'danger'>This SCP has already been taken by someone else.</span>"
