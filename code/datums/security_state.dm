@@ -112,6 +112,19 @@
 		previous_security_level.switching_down_from()
 		new_security_level.switching_down_to()
 
+	switch (current_security_level.type)
+		if (/decl/security_level/default/code_green, /decl/security_level/default/code_blue)
+			for (var/mob/living/L in GLOB.player_list)
+				var/area/A = get_area(L)
+				if (A.ambience_cgb)
+					L << (islist(A.ambience_cgb) ? pick(A.ambience_cgb) : A.ambience_cgb)
+
+		if (/decl/security_level/default/code_red, /decl/security_level/default/code_delta)
+			for (var/mob/living/L in GLOB.player_list)
+				var/area/A = get_area(L)
+				if (A.ambience_crb)
+					L << (islist(A.ambience_crb) ? pick(A.ambience_crb) : A.ambience_crb)
+
 	log_and_message_admins("has changed the security level from [previous_security_level.name] to [new_security_level.name].")
 	return TRUE
 
