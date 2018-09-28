@@ -112,8 +112,8 @@
 		previous_security_level.switching_down_from()
 		new_security_level.switching_down_to()
 
-	switch (current_security_level.type)
-		if (/decl/security_level/default/code_green, /decl/security_level/default/code_blue)
+	switch (current_security_level.name)
+		if ("code blue", "code green")
 			for (var/mob/living/L in GLOB.player_list)
 				var/area/A = get_area(L)
 				if (A.ambience_cgb)
