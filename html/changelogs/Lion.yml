@@ -45,6 +45,7 @@ changes:
   - maptweak: "Adds radiation suit lockers to the xenoarcheology laboratory."
   - maptweak: "Adds Suspension Field generators to securely extract anomalies."
   - maptweak: "Removed SCP-590's containment chamber."
+  - maptweak: "Added megaphones to main D-Class Checkpoint and security bubble."
   - rscdel: "Removed Research taperoll from RD's locker. Useless stuff anyway."
   - rscdel: "Removed movement penalty for heavy armor plates. This should make Guard Commanders and MTF as fast as their lesser counterparts."
   - rscdel: "Fully removed the option to alter limbs. Making yourself amputated has never served anyone!"
