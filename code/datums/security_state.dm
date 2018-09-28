@@ -112,19 +112,6 @@
 		previous_security_level.switching_down_from()
 		new_security_level.switching_down_to()
 
-	switch (current_security_level.name)
-		if ("code blue", "code green")
-			for (var/mob/living/L in GLOB.player_list)
-				var/area/A = get_area(L)
-				if (A.ambience_cgb)
-					L << (islist(A.ambience_cgb) ? pick(A.ambience_cgb) : A.ambience_cgb)
-
-		else
-			for (var/mob/living/L in GLOB.player_list)
-				var/area/A = get_area(L)
-				if (A.ambience_crb)
-					L << (islist(A.ambience_crb) ? pick(A.ambience_crb) : A.ambience_crb)
-
 	log_and_message_admins("has changed the security level from [previous_security_level.name] to [new_security_level.name].")
 	return TRUE
 
@@ -147,6 +134,8 @@
 
 	var/overlay_alarm
 	var/overlay_status_display
+
+	var/crb = FALSE
 
 // Called when we're switching from a lower security level to this one.
 /decl/security_level/proc/switching_up_to()
@@ -236,6 +225,8 @@
 	up_description = "There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised."
 	down_description = "The self-destruct mechanism has been deactivated, there is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised."
 
+	crb = TRUE 
+
 /decl/security_level/default/code_delta
 	name = "code delta"
 
@@ -246,6 +237,8 @@
 
 	overlay_alarm = "alarm_delta"
 	overlay_status_display = "status_display_delta"
+
+	crb = TRUE
 
 	var/static/datum/announcement/priority/security/security_announcement_delta = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/announcer/delta.ogg'))
 
