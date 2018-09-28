@@ -14,6 +14,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 
 	maxHealth = 5000
 	health = 5000
+	
 
 	var/last_snap = 0
 	var/next_shit = 0
@@ -25,10 +26,25 @@ GLOBAL_LIST_EMPTY(scp173s)
 	..()
 	GLOB.scp173s += src
 	verbs += /mob/living/proc/ventcrawl
+	add_language(LANGUAGE_GALCOM, 1) // it's a fucking magical statue
+	add_language(LANGUAGE_EAL, 1)
+	add_language(LANGUAGE_SOL_COMMON, 1)
+	add_language(LANGUAGE_UNATHI, 1)
+	add_language(LANGUAGE_SIIK_MAAS, 1)
+	add_language(LANGUAGE_SKRELLIAN, 1)
+	add_language(LANGUAGE_LUNAR, 1)
+	add_language(LANGUAGE_GUTTER, 1)
+	add_language(LANGUAGE_SIGN, 0)
+	add_language(LANGUAGE_INDEPENDENT, 1)
+	add_language(LANGUAGE_SPACER, 1)
+		
 
 /mob/living/scp_173/Destroy()
 	GLOB.scp173s -= src
 	..()
+
+/mob/living/scp_173/say(var/message)
+	return // lol you can't talk
 
 /mob/living/scp_173/proc/IsBeingWatched()
 	for(var/mob/living/carbon/human/H in view(src, 7))
