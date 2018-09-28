@@ -148,6 +148,7 @@
 	force = 3
 	throw_distance = 7
 	release_force = 7
+	drawsound = null
 
 /obj/item/weapon/gun/launcher/syringe/disguised/examine(mob/user)
 	if(( . = ..(user, 0)))
