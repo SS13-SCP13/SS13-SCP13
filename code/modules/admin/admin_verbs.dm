@@ -99,12 +99,12 @@ var/list/admin_verbs_admin = list(
 	/client/proc/list_traders,
 	/client/proc/add_trader,
 	/client/proc/remove_trader,
-	/datum/admins/proc/sendFax,
-	/client/proc/cmd_admin_cryo
+	/datum/admins/proc/sendFax
 )
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
-	/client/proc/jobbans
+	/client/proc/jobbans,
+	/client/proc/cmd_admin_cryo
 	)
 var/list/admin_verbs_sounds = list(
 	/client/proc/play_local_sound,
