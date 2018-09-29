@@ -1,5 +1,4 @@
 /obj/item/device/scp113
-	name = "jasper rock"
 	desc = "The red piece of quartz gleams with unnatural smoothness."
 	icon_state = "scp113"
 	force = 10.0
@@ -9,6 +8,9 @@
 	throw_speed = 3
 	candrop = 0
 	SCP = /datum/scp/SCP_113
+
+/obj/item/device/scp113/examine(mob/user)
+	user << "<b><span class = 'safe'><big>SCP-113</big></span></b> - [desc]"
 
 /datum/scp/SCP_113
 	name = "SCP-113"

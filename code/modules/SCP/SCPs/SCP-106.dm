@@ -8,9 +8,9 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	var/last_x = -1
 	var/last_y = -1
 	var/last_z = -1
-	
+
 /mob/living/carbon/human/scp106/examine(mob/user)
-	user << "<b><span class = 'info'><big>SCP-106</big></span></b> - [desc]"
+	user << "<b><span class = 'keter'><big>SCP-106</big></span></b> - [desc]"
 
 /datum/scp/SCP_106
 	name = "SCP-106"
@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /obj/sprite_helper/scp106
 	icon = 'icons/mob/scp106.dmi'
-		
+
 /mob/living/carbon/human/scp106/IsAdvancedToolUser()
 	return FALSE
 
@@ -54,7 +54,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 /mob/living/carbon/human/scp106/forceMove(destination)
 	. = ..(destination)
 	update_stuff_PD()
-	
+
 /mob/living/carbon/human/scp106/proc/update_stuff_PD()
 
 	if (loc in GLOB.scp106_floors)
@@ -79,7 +79,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 	if (!vis_contents.len)
 		vis_contents += new /obj/sprite_helper/scp106
-		
+
 	// we're lying, turn right
 	var/obj/scp106_sprite_helper = vis_contents[vis_contents.len]
 	if (lying)
@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /mob/living/carbon/human/scp106/handle_breath()
 	return 1
-	
+
 /mob/living/carbon/human/scp106/movement_delay()
 	return -1.5
 
@@ -110,7 +110,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	// stupid hack
 	if (client)
 		target = null
-		return target 
+		return target
 
 	/* if we have no target, or our target is dead, or our target is a nonhuman, or our target is out of view,
 	 * try to find a better one. Failing to do so just makes us continue to go after the old target */
@@ -156,7 +156,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		// moves slightly faster than humans
 		walk_to(src, target, 1, 0.7+config.run_speed)
 		return TRUE
-		
+
 	walk(src, null)
 
 	if (!locate(/obj/item/grab) in src)
@@ -212,15 +212,15 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		return
 
 	for (var/obj/O in get_step(src, dir))
-	
+
 		if (!isstructure(O) && !ismachinery(O))
 			continue
 
 		if (istype(O, /obj/machinery/shieldwall))
 			continue
-	
+
 		phase_cooldown = world.time + (PHASE_TIME + 5)
-		
+
 		var/initial_loc = loc
 		var/atom/sprite = null
 
@@ -317,7 +317,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		L.forceMove(pick(GLOB.scp106_floors))
 
 // the femur breaker
-/obj/structure/femur_breaker 
+/obj/structure/femur_breaker
 	icon = 'icons/obj/femurbreaker.dmi'
 	density = TRUE
 	anchored = TRUE
@@ -338,9 +338,9 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /obj/structure/femur_breaker/attackby(obj/item/W, mob/user)
 	var/obj/item/grab/G = W
-	
+
 	if (G && istype(G) && G.affecting && ishuman(G.affecting))
-		var/mob/living/carbon/human/target = G.affecting 
+		var/mob/living/carbon/human/target = G.affecting
 
 		if (buckled_mob)
 			to_chat(user, "It is already in use.")
@@ -386,15 +386,15 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 					return
 				sleep(10 SECONDS)
 				for (var/scp106 in GLOB.scp106s)
-					var/atom/movable/A = scp106 
+					var/atom/movable/A = scp106
 					A.forceMove(GLOB.scp106_spawnpoints[1])
 					break
 				sleep(40 SECONDS)
 				for (var/scp106 in GLOB.scp106s)
-					var/atom/movable/A = scp106 
+					var/atom/movable/A = scp106
 					if (get_area(A) != get_area(GLOB.scp106_spawnpoints[1]))
 						if (!(A.loc in GLOB.scp106_floors))
-							return // failed 
+							return // failed
 				sleep(30 SECONDS)
 				var/active_shield_generators = 0
 				for (var/obj/machinery/shieldwallgen/G in get_area(GLOB.scp106_spawnpoints[1]))
