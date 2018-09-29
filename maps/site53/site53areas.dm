@@ -17,16 +17,6 @@
 	name = "\improper Entrance Zone"
 	base_turf = /turf/simulated/open
 
-
-// Elevator areas.
-/area/turbolift/ds90_surf
-	name = "lift (topside)"
-	lift_floor_label = "Surface"
-	lift_floor_name = "Surface"
-	lift_announce_str = "Arriving at Surface: General staff amenities, Security base."
-	requires_power = 0
-	dynamic_lighting = 1
-
 // SITE 53 ELEVATOR AREA'S
 
 /area/turbolift/site53/surface
@@ -180,6 +170,7 @@
 	name = "\improper Brown Line"
 	icon_state = "hallA"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
 
 /area/site53/lowertrams/hczmaint
 	name = "\improper Heavy Containment Maintenance"
@@ -191,26 +182,31 @@
 	name = "\improper Orange Line"
 	icon_state = "hallF"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
 
 /area/site53/lowertrams/redline
 	name = "\improper Red Line"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
 
 /area/site53/lowertrams/restaurant
 	name = "\improper Restaurant"
 	icon_state = "cafeteria"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = MEDIUM_SOFTFLOOR
 
 /area/site53/lowertrams/restaurantkitchenarea
 	name = "\improper Restaurant Kitchen Area"
 	icon_state = "cafeteria"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = MEDIUM_SOFTFLOOR
 
 /area/site53/lowertrams/hub
 	name = "\improper Tram Hub"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
 
 /area/site53/maintenance
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -225,63 +221,111 @@
 	name = "\improper SCP-151"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/ulcz/scp173
 	name = "\improper SCP-173"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/ulcz/scp999
 	name = "\improper SCP-999"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/llcz/scp500
 	name = "\improper SCP-500"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/llcz/scp113
 	name = "\improper SCP-113"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/llcz/scp012
 	name = "\improper SCP-012"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/llcz/genstorage1
 	name = "\improper General Storage #1"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/llcz/hallways
 	name = "\improper Lower Light Containment Hallway"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
+	ambience = list(
+	'sound/ambience/lcz/general/Ambient1.ogg',
+	'sound/ambience/lcz/general/Ambient2.ogg',
+	'sound/ambience/lcz/general/Ambient3.ogg',
+	'sound/ambience/lcz/general/Ambient4.ogg',
+	'sound/ambience/lcz/general/Ambient5.ogg',
+	'sound/ambience/lcz/general/Ambient6.ogg',
+	'sound/ambience/lcz/general/Ambient7.ogg',
+	'sound/ambience/lcz/general/Ambient8.ogg',
+	'sound/ambience/lcz/general/Ambient9.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/lcz/crb/Commotion15.ogg',
+	'sound/ambience/lcz/crb/Commotion19.ogg',
+	'sound/ambience/lcz/crb/Commotion21.ogg'
+	)
 
 /area/site53/ulcz/hallways
 	name = "\improper Upper Light Containment Hallway"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
+	ambience = list(
+	'sound/ambience/lcz/general/Ambient1.ogg',
+	'sound/ambience/lcz/general/Ambient2.ogg',
+	'sound/ambience/lcz/general/Ambient3.ogg',
+	'sound/ambience/lcz/general/Ambient4.ogg',
+	'sound/ambience/lcz/general/Ambient5.ogg',
+	'sound/ambience/lcz/general/Ambient6.ogg',
+	'sound/ambience/lcz/general/Ambient7.ogg',
+	'sound/ambience/lcz/general/Ambient8.ogg',
+	'sound/ambience/lcz/general/Ambient9.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/lcz/crb/EmilyScream.ogg',
+	'sound/ambience/lcz/crb/AnnouncAfter1.ogg',
+	'sound/ambience/lcz/crb/alarm.ogg',
+	'sound/ambience/lcz/crb/Commotion3.ogg',
+	'sound/ambience/lcz/crb/Commotion15.ogg',
+	'sound/ambience/lcz/crb/Commotion19.ogg',
+	'sound/ambience/lcz/crb/Commotion21.ogg',
+	'sound/ambience/lcz/crb/Ambient2.ogg',
+	'sound/ambience/lcz/crb/Ambient3.ogg',
+	'sound/ambience/lcz/crb/Ambient8.ogg'
+	)
 
 /area/site53/ulcz/tram
 	name = "\improper Upper Light Containment Tram Station"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
 
 /area/site53/ulcz/office
 	name = "\improper Upper Light Containment Office"
 	icon_state = "conference"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/lowertrams/maintenance
 	name = "\improper Lower Tram Hub Maintenance"
 	icon_state = "conference"
 	area_flags = AREA_FLAG_RAD_SHIELDED
-	requires_power = 0
-	dynamic_lighting = 1
 	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/lowertrams/escape
@@ -313,9 +357,10 @@
 	name = "\improper SCP-513"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
 /area/site53/llcz/maintenance
-	name = "\improper SCP-513"
+	name = "\improper LLCZ Substation"
 	icon_state = "pmaint"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	turf_initializer = /decl/turf_initializer/maintenance
@@ -360,6 +405,7 @@
 	name = "\improper Upper Entrance Zone"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	icon_state = "hallC1"
+	sound_env = LARGE_ENCLOSED
 
 /area/site53/uez/canteen
 	name = "\improper Canteen"
@@ -374,19 +420,18 @@
 /area/site53/uez/maintenance
 	name = "Upper Entrance Zone Maintenance"
 	icon_state = "SolarcontrolS"
-	sound_env = SMALL_ENCLOSED
 	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/uez/substation
 	name = "Upper Entrance Zone Substation"
 	icon_state = "SolarcontrolS"
-	sound_env = SMALL_ENCLOSED
 	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/uez/bridge
 	name = "\improper Bridge"
 	icon_state = "hallC1"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
 	requires_power = 0
 	dynamic_lighting = 0
 
@@ -467,6 +512,7 @@
 	name = "\improper D-Class Cell Area"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	icon_state = "Sleep"
+	sound_env = LARGE_ENCLOSED
 
 /area/site53/llcz/dclass/shower
 	name = "\improper D-Class Shower Area"
@@ -477,6 +523,7 @@
 	name = "\improper D-Class Canteen"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	icon_state = "cafeteria"
+	sound_env = LARGE_SOFTFLOOR
 
 /area/site53/llcz/dclass/kitchen
 	name = "\improper D-Class Kitchen"
@@ -587,6 +634,7 @@
 	name = "\improper Lower Heavy Containment Hallways"
 	icon_state = "hallC3"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
 
 /area/site53/lhcz/maintenance
 	name = "\improper Lower Heavy Containment Maintenance"
