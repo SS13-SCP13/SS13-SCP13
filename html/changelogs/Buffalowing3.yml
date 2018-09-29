@@ -1,6 +1,0 @@
-author: Buffalowing
-delete-after: True
-changes: 
-  - rscadd: "Added additional lobby track."
-  - bugfix: "Fixed admincryo command storing organs in generated crates"
-  - bugfix: "Posters are now lore friendly."
