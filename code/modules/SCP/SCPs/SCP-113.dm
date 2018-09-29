@@ -31,6 +31,11 @@
 		return 1
 	if(!isitem(owner))
 		return
+
+	var/mob/living/carbon/human/H = user
+	if (istype(H) && H.gloves)
+		return 
+
 	var/obj/item/I = owner
 	I.candrop = 0 //reset candrop for new pickup
 
@@ -55,7 +60,6 @@
 		else
 			user.gender = FEMALE
 		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
 			H.reset_hair()
 			H.update_dna()
 			H.update_body()
