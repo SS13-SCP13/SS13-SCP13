@@ -3,8 +3,8 @@
 
 //Torch map alert levels. Refer to security_state.dm.
 /decl/security_state/default/site53
-	all_security_levels = list(/decl/security_level/default/site53/code_green, /decl/security_level/default/site53/code_blue, /decl/security_level/default/site53/code_red, /decl/security_level/default/site53/code_black, /decl/security_level/default/code_delta)
-	standard_security_levels = list(/decl/security_level/default/site53/code_green, /decl/security_level/default/site53/code_blue, /decl/security_level/default/site53/code_red, /decl/security_level/default/site53/code_black)
+	all_security_levels = list(/decl/security_level/default/site53/code_green, /decl/security_level/default/site53/code_blue, /decl/security_level/default/site53/code_orange, /decl/security_level/default/site53/code_red, /decl/security_level/default/site53/code_black, /decl/security_level/default/site53/code_gray, /decl/security_level/default/code_delta)
+	standard_security_levels = list(/decl/security_level/default/site53/code_green, /decl/security_level/default/site53/code_blue, /decl/security_level/default/site53/code_orange, /decl/security_level/default/site53/code_red, /decl/security_level/default/site53/code_black, /decl/security_level/default/site53/code_gray)
 
 /decl/security_level/default/site53
 	icon = 'maps/site53/icons/security_state.dmi'
@@ -55,6 +55,20 @@
 	down_description = "Code orange procedures are now in effect; Engineering personnel are required to report to their supervisor for orders, and non-engineering personnel are required to evacuate any affected areas and obey relevant instructions from engineering staff."
 */
 
+/decl/security_level/default/site53/code_yellow
+	name = "code yellow"
+	icon = 'icons/misc/security_state.dmi'
+
+	light_range = 3
+	light_power = 2
+	light_color_alarm = COLOR_BLUE
+	light_color_status_display = COLOR_BLUE
+	overlay_alarm = "alarm_yellow"
+	overlay_status_display = "status_display_yellow"
+
+	up_description = "Code Yellow procedures now in effect. A test on a Euclid SCP will commence shortly. Guards are to be posted at sensitive entry area's and maintain their post there until the all clear. Civilian and Scientists unrelated to the on-going test are to vacate the relevant zone before the test commences and kept there until the all clear. Violation of these procedures is grounds for immediate termination."
+	down_description = "Code Yellow procedures now in effect. Code Blue has been resolved, but all area's should be swept for threats extensively, and the integrity of all chambers should be inspected. All SCP's must be accounted for."
+
 /decl/security_level/default/site53/code_blue
 	name = "code blue"
 	icon = 'icons/misc/security_state.dmi'
@@ -68,6 +82,29 @@
 
 	up_description = "Code Blue procedures now in effect. A test on a Keter SCP will commence shortly. All class D should return to their cells and await the all-clear at this time. Guards are to be posted at sensitive entry area's and maintain their post there until the all clear. Engineering and Medical staff are confined to their departments or relevant work area's for this test. Civilian and Scientists unrelated to the on-going test are to be escorted to a safe place before the test commences and kept there until the all clear. Violation of these procedures is grounds for immediate termination."
 	down_description = "Code Blue procedures now in effect. Code Red has been resolved, but all area's should be swept for threats extensively, and the integrity of all chambers should be inspected. All SCP's must be accounted for."
+
+/decl/security_level/default/site53/code_orange
+	name = "code orange"
+	icon = 'icons/misc/security_state.dmi'
+
+	light_range = 4
+	light_power = 2
+	light_color_alarm = COLOR_ORANGE
+	light_color_status_display = COLOR_ORANGE
+	overlay_alarm = "alarm_orange"
+	overlay_status_display = "status_display_orange"
+
+	crb = TRUE
+
+	var/static/datum/announcement/priority/security/security_announcement_orange = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/AI/announcer/codered.ogg'))
+
+/decl/security_level/default/site53/code_orange/switching_up_to()
+	security_announcement_orange.Announce("Code Orange procedures are now in effect. A Euclid SCP has broken containment and its current whereabouts are unknown. Security should investigate and focus on recontainment as a first priority, or request an MTF unit to assist.", "Attention! Code Orange alert procedures now in effect!")
+	notify_station()
+
+/decl/security_level/default/site53/code_orange/switching_down_to()
+	security_announcement_orange.Announce("Code Orange procedures now in effect. All Keter SCP's have been recontained, but one or more Euclid SCP remains unaccounted for. Security should intensify searches to all area's to locate, and recontain the affected SCP's.", "Attention! Code Orange alert procedures now in effect!")
+	notify_station()
 
 /decl/security_level/default/site53/code_red
 	name = "code red"
@@ -100,8 +137,8 @@
 	light_color_alarm = COLOR_RED
 	light_color_status_display = COLOR_NAVY_BLUE
 
-	overlay_alarm = "alarm_delta"
-	overlay_status_display = "status_display_delta"
+	overlay_alarm = "alarm_black"
+	overlay_status_display = "status_display_black"
 
 	crb = TRUE
 
@@ -112,5 +149,26 @@
 	notify_station()
 
 /decl/security_level/default/site53/code_black/switching_down_to()
-	security_announcement_black.Announce("The Site's Nuclear Detonation has been canceled, however several SCP's of both Euclid and Keter classification remain at large. Security should work with relevant responding emergency personnel, or request an MTF to be dispatched to recontain the SCP's and fix any damage occurred at this time in the facility. Code Black evacuation procedures now in effect. Consult your SoP book for more information.", "Attention! Code Black alert procedures now in effect!")
+	security_announcement_black.Announce("The Site has been secured from subversive elements. Security is to do a mandatory sweep of the facility to make sure all SCP's remained inside containment.", "Attention! Code Black alert procedures now in effect!")
+	notify_station()
+
+/decl/security_level/default/site53/code_gray
+	name = "code gray"
+
+	light_range = 4
+	light_power = 2
+	light_color_alarm = COLOR_GRAY
+	light_color_status_display = COLOR_GRAY
+
+	overlay_alarm = "alarm_gray"
+	overlay_status_display = "status_display_gray"
+
+	var/static/datum/announcement/priority/security/security_announcement_gray = new(do_log = 0, do_newscast = 1, new_sound = sound())
+
+/decl/security_level/default/site53/code_gray/switching_up_to()
+	security_announcement_gray.Announce("There have been confirmed reports of a hostile Group of Interest having infiltrated the Site. Security is allowed to terminate the threats." ,"Attention! Code Gray alert procedures now in effect!")
+	notify_station()
+
+/decl/security_level/default/site53/code_gray/switching_down_to()
+	security_announcement_gray.Announce("The Site's Nuclear Detonation has been canceled, however, the site should be swept for subversive elements before returning to normal operations.", "Attention! Code Gray alert procedures now in effect!")
 	notify_station()
