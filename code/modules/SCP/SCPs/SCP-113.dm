@@ -31,7 +31,9 @@
 		return 1
 	if(!isitem(owner))
 		return
-	if (user.gloves)
+
+	var/mob/living/carbon/human/H = user
+	if (istype(H) && H.gloves)
 		return 
 
 	var/obj/item/I = owner
@@ -58,7 +60,6 @@
 		else
 			user.gender = FEMALE
 		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
 			H.reset_hair()
 			H.update_dna()
 			H.update_body()
