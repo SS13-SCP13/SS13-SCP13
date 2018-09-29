@@ -3,8 +3,8 @@
 
 //Torch map alert levels. Refer to security_state.dm.
 /decl/security_state/default/site53
-	all_security_levels = list(/decl/security_level/default/site53/code_green, /decl/security_level/default/site53/code_blue, /decl/security_level/default/site53/code_orange, /decl/security_level/default/site53/code_red, /decl/security_level/default/site53/code_black, /decl/security_level/default/site53/code_gray, /decl/security_level/default/code_delta)
-	standard_security_levels = list(/decl/security_level/default/site53/code_green, /decl/security_level/default/site53/code_blue, /decl/security_level/default/site53/code_orange, /decl/security_level/default/site53/code_red, /decl/security_level/default/site53/code_black, /decl/security_level/default/site53/code_gray)
+	all_security_levels = list(/decl/security_level/default/site53/code_green, /decl/security_level/default/site53/code_yellow, /decl/security_level/default/site53/code_blue, /decl/security_level/default/site53/code_orange, /decl/security_level/default/site53/code_red, /decl/security_level/default/site53/code_black, /decl/security_level/default/site53/code_gray, /decl/security_level/default/code_delta)
+	standard_security_levels = list(/decl/security_level/default/site53/code_green, /decl/security_level/default/site53/code_yellow, /decl/security_level/default/site53/code_blue, /decl/security_level/default/site53/code_orange, /decl/security_level/default/site53/code_red, /decl/security_level/default/site53/code_black, /decl/security_level/default/site53/code_gray)
 
 /decl/security_level/default/site53
 	icon = 'maps/site53/icons/security_state.dmi'
