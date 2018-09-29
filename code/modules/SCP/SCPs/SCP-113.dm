@@ -31,6 +31,9 @@
 		return 1
 	if(!isitem(owner))
 		return
+	if (user.gloves)
+		return 
+
 	var/obj/item/I = owner
 	I.candrop = 0 //reset candrop for new pickup
 
