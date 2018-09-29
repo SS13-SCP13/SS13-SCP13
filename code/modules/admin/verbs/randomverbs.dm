@@ -857,14 +857,15 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	
 /client/proc/cmd_admin_cryo(mob/living/M as mob in GLOB.mob_list)
 	set category = "Special Verbs"	
+
 	set name = "Admin Cryo"
 	if(!check_rights(R_MOD))
-		src << "Only moderators may use this command."	
+		src << "Only moderators may use this command."
 		return
 	if(!istype(M))
 		alert("Cannot cryo a ghost")
 		return
-		
+
 	var/confirm = alert(src, "You will be removing [M] from the round, are you sure?", "Message", "Yes", "No")
 	if(confirm != "Yes")
 		return
@@ -878,15 +879,17 @@ Traitors and the like can also be revived with the previous role mostly intact.
 				qdel(Y)
 			for(var/obj/item/clothing/under/X in M)
 				qdel(X)
+			for(var/obj/item/organ/V in M)
+				qdel(V)
 
 			var/obj/structure/closet/crate/secure/K = new /obj/structure/closet/crate/secure/(M.loc)
-			K.name = (M.real_name + " - Cryogenics Crate")
+			K.name = (M.real_name + " - Equipment Crate")
 			K.health = 50
 			for(var/obj/item/W in M)
 				M.drop_from_inventory(W)
 				W.loc = K
 
-				
+
 			job_master.FreeRole(job)
 
 			message_admins("\blue [key_name_admin(usr)] has admin cryoed [key_name(M)]")
@@ -894,7 +897,6 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 			// Delete the mob.
 			//This should guarantee that ghosts don't spawn.
-			M.key = null
 			del(M)
 			M = null
-	return	
+	return

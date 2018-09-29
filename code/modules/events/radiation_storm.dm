@@ -1,6 +1,6 @@
 /datum/event/radiation_storm
 	var/const/enterBelt		= 30
-	var/const/radIntervall 	= 5	// Enough time between enter/leave belt for 10 hits, as per original implementation
+	var/const/radIntervall 	= 1	// Enough time between enter/leave belt for 10 hits, as per original implementation
 	var/const/leaveBelt		= 80
 	var/const/revokeAccess	= 165 //Hopefully long enough for radiation levels to dissipate.
 	startWhen				= 2
@@ -9,14 +9,14 @@
 	var/postStartTicks 		= 0
 
 /datum/event/radiation_storm/announce()
-	command_announcement.Announce("High levels of radiation detected in proximity of the [location_name()]. Please evacuate into one of the shielded maintenance tunnels.", "[location_name()] Sensor Array", new_sound = GLOB.using_map.radiation_detected_sound, zlevels = affecting_z)
+	command_announcement.Announce("ERROR: Containment of radioactive object class Euclid detected. Please evacuate into one of the shielded maintenance tunnels.", "[location_name()] Sensor Array", new_sound = GLOB.using_map.radiation_detected_sound, zlevels = affecting_z)
 
 /datum/event/radiation_storm/start()
 	make_maint_all_access()
 
 /datum/event/radiation_storm/tick()
 	if(activeFor == enterBelt)
-		command_announcement.Announce("The [location_name()] has entered the radiation belt. Please remain in a sheltered area until we have passed the radiation belt.", "[location_name()] Sensor Array", zlevels = affecting_z)
+		command_announcement.Announce("Initial recontainment procedures failed. Deploying MTF.", "[location_name()] Sensor Array", zlevels = affecting_z)
 		radiate()
 
 	if(activeFor >= enterBelt && activeFor <= leaveBelt)
@@ -27,7 +27,7 @@
 		radiate()
 
 	else if(activeFor == leaveBelt)
-		command_announcement.Announce("The [location_name()] has passed the radiation belt. Please allow for up to one minute while radiation levels dissipate, and report to the infirmary if you experience any unusual symptoms. Maintenance will lose all access again shortly.", "[location_name()] Sensor Array", zlevels = affecting_z)
+		command_announcement.Announce("Object recontained. Please allow for up to one minute while radiation levels dissipate, and report to the infirmary if you experience any unusual symptoms. Amnestics available upon request.", "[location_name()] Sensor Array", zlevels = affecting_z)
 
 /datum/event/radiation_storm/proc/radiate()
 	var/radiation_level = rand(15, 35)
