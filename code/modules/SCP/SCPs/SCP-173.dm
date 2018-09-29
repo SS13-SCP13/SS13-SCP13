@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 	var/last_player_shit = 0
 
 /mob/living/scp_173/examine(mob/user)
-	user << "<b><span class = 'warning'><big>SCP-173</big></span></b> - [desc]"
+	user << "<b><span class = 'euclid'><big>SCP-173</big></span></b> - [desc]"
 
 /mob/living/scp_173/New()
 	..()
