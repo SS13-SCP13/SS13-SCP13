@@ -199,6 +199,7 @@
 	wires = null
 	qdel(terminal)
 	terminal = null
+	
 	if(cell)
 		cell.forceMove(loc)
 		cell = null
