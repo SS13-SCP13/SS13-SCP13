@@ -28,6 +28,8 @@
 	var/const/FREQ_LISTENING = 1
 	var/list/internal_channels
 
+	var/static/mob/living/silicon/ai/announcer = null
+
 /obj/item/device/radio
 	var/datum/radio_frequency/radio_connection
 	var/list/datum/radio_frequency/secure_radio_connections = new
@@ -215,10 +217,11 @@
 		channel = null
 	if (!istype(connection))
 		return
-	var/mob/living/silicon/ai/A = new /mob/living/silicon/ai(src, null, null, 1)
-	A.fully_replace_character_name(from)
-	talk_into(A, message, channel,"states")
-	qdel(A)
+
+	if (!announcer)
+		announcer = new /mob/living/silicon/ai(src, null, null, 1)
+	announcer.fully_replace_character_name(from)
+	talk_into(announcer, message, channel, "states")
 
 // Interprets the message mode when talking into a radio, possibly returning a connection datum
 /obj/item/device/radio/proc/handle_message_mode(mob/living/M as mob, message, message_mode)
