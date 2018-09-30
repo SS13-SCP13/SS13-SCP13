@@ -835,7 +835,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	if(!changeling)
 		return 0
 
-	for(var/obj/item/I in list(get_active_hand() + get_inactive_hand()))
+	for(var/obj/item/I in list(get_active_hand(), get_inactive_hand()))
 		if(istype(I, /obj/item/weapon/melee/arm_blade))
 			playsound(src, 'sound/effects/blobattack.ogg', 30, 1)
 			visible_message("<span class='warning'>With a sickening crunch, [src] reforms their blade into an arm!</span>", "<span class='notice'>We assimilate the blade back into our body.</span>", "<span class='italics>You hear organic matter ripping and tearing!</span>")
