@@ -1,6 +1,6 @@
 /mob/living/simple_animal/cat/fluff/SCP529
-	name = "SCP-529"
 	SCP = /datum/scp/SCP_529
+	name = "SCP-529"
 	desc = "A friendly tabby cat that seems to be missing half of her body."
 	icon = 'icons/SCP/josie.dmi'
 	icon_state = "cat"
@@ -17,6 +17,9 @@
 	health = 50 //Josie is slightly more robust than most cats for anomalous reasons.
 	maxHealth = 50
 	gender = FEMALE
+
+/mob/living/simple_animal/cat/fluff/SCP529/examine(mob/user)
+	user << "<b><span class = 'safe'><big>SCP-529</big></span></b> - [desc]"
 
 
 /datum/scp/SCP_529

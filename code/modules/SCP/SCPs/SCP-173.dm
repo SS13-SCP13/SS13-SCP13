@@ -14,13 +14,15 @@ GLOBAL_LIST_EMPTY(scp173s)
 
 	maxHealth = 5000
 	health = 5000
-	
 
 	var/last_snap = 0
 	var/next_shit = 0
 	var/list/next_blinks = list()
-	
+
 	var/last_player_shit = 0
+
+/mob/living/scp_173/examine(mob/user)
+	user << "<b><span class = 'euclid'><big>SCP-173</big></span></b> - [desc]"
 
 /mob/living/scp_173/New()
 	..()
@@ -37,7 +39,6 @@ GLOBAL_LIST_EMPTY(scp173s)
 	add_language(LANGUAGE_SIGN, 0)
 	add_language(LANGUAGE_INDEPENDENT, 1)
 	add_language(LANGUAGE_SPACER, 1)
-		
 
 /mob/living/scp_173/Destroy()
 	GLOB.scp173s -= src
@@ -153,4 +154,3 @@ GLOBAL_LIST_EMPTY(scp173s)
 		last_player_shit = world.time
 		var/feces = pick(/obj/effect/decal/cleanable/blood, /obj/effect/decal/cleanable/blood/gibs, /obj/effect/decal/cleanable/mucus)
 		new feces(loc)
-

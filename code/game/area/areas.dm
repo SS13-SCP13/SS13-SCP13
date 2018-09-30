@@ -24,7 +24,7 @@ GLOBAL_LIST_EMPTY(areas)
 		luminosity = 0
 	else
 		luminosity = 1
-		
+
 	GLOB.areas += src
 
 	..()
@@ -302,7 +302,7 @@ var/list/mob/living/forced_ambiance_list = new
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 	if (security_state.current_security_level.crb)
 		if (islist(ambience_crb))
-			playambience = list(pick(ambience_crb))
+			playambience = pick(ambience_crb)
 		else if (!isnull(ambience_crb))
 			playambience = ambience_crb
 
@@ -316,7 +316,7 @@ var/list/mob/living/forced_ambiance_list = new
 		else
 			sound_to(L, sound(null, channel = 1))
 	else if(playambience && prob(35) && world.time >= L.client.played + 3 MINUTES)
-		L.playsound_local(T, sound(playambience, repeat = 0, wait = 0, volume = 15, channel = 1))
+		L.playsound_local(T, sound(playambience, repeat = 0, wait = 0, volume = 80, channel = 1))
 		L.client.played = world.time
 
 /area/proc/gravitychange(var/gravitystate = 0)

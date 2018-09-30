@@ -10,6 +10,7 @@
 	throwforce = 3
 	force = 3
 	w_class = ITEM_SIZE_TINY
+	drawsound = null
 	var/obj/item/weapon/reagent_containers/syringe/syringe
 
 /obj/item/weapon/syringe_cartridge/update_icon()
@@ -147,6 +148,7 @@
 	force = 3
 	throw_distance = 7
 	release_force = 7
+	drawsound = null
 
 /obj/item/weapon/gun/launcher/syringe/disguised/examine(mob/user)
 	if(( . = ..(user, 0)))

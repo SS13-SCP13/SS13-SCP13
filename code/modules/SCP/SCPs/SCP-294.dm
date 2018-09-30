@@ -11,6 +11,9 @@
 	var/restocking_timer = 0
 	SCP = /datum/scp/SCP_294
 
+/obj/machinery/scp294/examine(mob/user)
+	user << "<b><span class = 'euclid'><big>SCP-294</big></span></b> - [desc]"
+
 
 /datum/scp/SCP_294
 	name = "SCP-294"

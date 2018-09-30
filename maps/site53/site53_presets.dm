@@ -1,7 +1,8 @@
-var/const/NETWORK_895			= "SCP-895 CCTV Network"
+var/const/NETWORK_895			= "SCP-895 CCTV Network (CAUTION!)"
 var/const/NETWORK_ENGINE		= "Engineering Network"
 var/const/NETWORK_ENTRANCE		= "Entrance Zone Network"
 var/const/NETWORK_173			= "SCP-173 CCTV Network"
+var/const/NETWORK_012			= "SCP-012 CCTV Network"
 
 /datum/map/site53/get_network_access(var/network)
 	switch(network)
@@ -12,6 +13,8 @@ var/const/NETWORK_173			= "SCP-173 CCTV Network"
 		if(NETWORK_ENTRANCE)
 			return access_mtflvl1
 		if(NETWORK_173)
+			return access_sciencelvl1
+		if(NETWORK_012)
 			return access_sciencelvl1
 	return get_shared_network_access(network) || ..()
 
@@ -34,6 +37,9 @@ var/const/NETWORK_173			= "SCP-173 CCTV Network"
 
 /obj/machinery/camera/network/scp173
 	network = list(NETWORK_173)
+
+/obj/machinery/camera/network/scp012
+	network = list(NETWORK_012)
 
 /obj/machinery/camera/network/engine
 	network = list(NETWORK_ENGINE)
