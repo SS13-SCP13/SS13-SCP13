@@ -49,8 +49,6 @@
 			return global.SSfastprocess;
 		if("SSgarbage")
 			return global.SSgarbage;
-		if("SSlegacy")
-			return global.SSlegacy;
 		if("SSmachines")
 			return global.SSmachines;
 		if("SSmapping")
@@ -755,8 +753,6 @@
 			return global.priv_station_access;
 		if("priv_syndicate_access")
 			return global.priv_syndicate_access;
-		if("processScheduler")
-			return global.processScheduler;
 		if("prometheans")
 			return global.prometheans;
 		if("protected_objects")
@@ -969,12 +965,8 @@
 			return global.tg_self_state;
 		if("tg_z_state")
 			return global.tg_z_state;
-		if("tgui_process")
-			return global.tgui_process;
 		if("ticker")
 			return global.ticker;
-		if("tickerProcess")
-			return global.tickerProcess;
 		if("ticket_panels")
 			return global.ticket_panels;
 		if("tickets")
@@ -985,8 +977,6 @@
 			return global.traitors;
 		if("transfer_controller")
 			return global.transfer_controller;
-		if("turbolift_controller")
-			return global.turbolift_controller;
 		if("turbolifts")
 			return global.turbolifts;
 		if("turret_icons")
@@ -1098,8 +1088,6 @@
 			global.SSfastprocess=newval;
 		if("SSgarbage")
 			global.SSgarbage=newval;
-		if("SSlegacy")
-			global.SSlegacy=newval;
 		if("SSmachines")
 			global.SSmachines=newval;
 		if("SSmapping")
@@ -1804,8 +1792,6 @@
 			global.priv_station_access=newval;
 		if("priv_syndicate_access")
 			global.priv_syndicate_access=newval;
-		if("processScheduler")
-			global.processScheduler=newval;
 		if("prometheans")
 			global.prometheans=newval;
 		if("protected_objects")
@@ -2018,12 +2004,8 @@
 			global.tg_self_state=newval;
 		if("tg_z_state")
 			global.tg_z_state=newval;
-		if("tgui_process")
-			global.tgui_process=newval;
 		if("ticker")
 			global.ticker=newval;
-		if("tickerProcess")
-			global.tickerProcess=newval;
 		if("ticket_panels")
 			global.ticket_panels=newval;
 		if("tickets")
@@ -2034,8 +2016,6 @@
 			global.traitors=newval;
 		if("transfer_controller")
 			global.transfer_controller=newval;
-		if("turbolift_controller")
-			global.turbolift_controller=newval;
 		if("turbolifts")
 			global.turbolifts=newval;
 		if("turret_icons")
@@ -2124,7 +2104,6 @@
 	"SSatoms",
 	"SSfastprocess",
 	"SSgarbage",
-	"SSlegacy",
 	"SSmachines",
 	"SSmapping",
 	"SSminimap",
@@ -2478,7 +2457,6 @@
 	"priv_region_access",
 	"priv_station_access",
 	"priv_syndicate_access",
-	"processScheduler",
 	"processing_turfs",
 	"prometheans",
 	"protected_objects",
@@ -2586,9 +2564,7 @@
 	"tg_physical_state",
 	"tg_self_state",
 	"tg_z_state",
-	"tgui_process",
 	"ticker",
-	"tickerProcess",
 	"ticket_panels",
 	"tickets",
 	"total_lighting_corners",

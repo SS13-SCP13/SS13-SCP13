@@ -650,8 +650,6 @@
 			stat("Location:", "([x], [y], [z]) [loc]")
 
 	if(client.holder)
-		if(statpanel("Processes") && processScheduler)
-			processScheduler.statProcesses()
 		if(statpanel("MC"))
 			stat("CPU:","[world.cpu]")
 			stat("Instances:","[world.contents.len]")

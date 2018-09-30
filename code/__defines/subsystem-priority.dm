@@ -6,6 +6,8 @@
 // SS_TICKER
 // < none >
 
+#define SS_PRIORITY_TICKER 200
+
 #define SS_PRIORITY_DEFAULT 50          // Default priority for both normal and background processes
 
 // Normal
@@ -22,4 +24,12 @@
 #define SS_PRIORITY_GARBAGE       25	// Garbage collection.
 #define SS_PRIORITY_VINES         25	// Spreading vine effects.
 #define SS_PRIORITY_TURF          20    // Radioactive walls/blob.
-#define SS_PRIORITY_WIRELESS      10	// Wireless connection setup.
+#define SS_PRIORITY_WIRELESS      15	// Wireless connection setup.
+#define SS_PRIORITY_TRADE		  10
+#define SS_PRIORITY_SUPPLY		  10
+#define SS_PRIORITY_EVENTS		  10
+#define SS_PRIORITY_EVACUATION	  10
+#define SS_PRIORITY_VOTING		  5
+#define SS_PRIORITY_NANOUI		  5
+#define SS_PRIORITY_TGUI		  5
+#define SS_PRIORITY_INACTIVITY	  3
