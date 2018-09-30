@@ -1,3 +1,29 @@
+SUBSYSTEM_DEF(tgui)
+	name = "TGUI"
+	priority = SS_PRIORITY_TGUI
+	init_order = INIT_ORDER_TGUI
+	flags = SS_BACKGROUND
+	wait = 1 SECOND
+	var/list/tg_open_uis = list() // A list of open UIs, grouped by src_object and ui_key.
+	var/list/processing_uis = list() // A list of processing UIs, ungrouped.
+	var/basehtml // The HTML base used for all UIs.
+
+/datum/controller/subsystem/tgui/Initialize()
+	basehtml = file2text('tgui/tgui.html') // Read the HTML from disk.
+	
+/datum/controller/subsystem/tgui/fire()
+	for(var/gui in processing_uis)
+		var/datum/tgui/ui = gui
+		if(ui && ui.user && ui.src_object)
+			ui.process()
+			CHECK_TICK
+			continue
+		processing_uis.Remove(ui)
+		CHECK_TICK
+
+/datum/controller/subsystem/tgui/stat_entry()
+	..("[processing_uis.len] UIs")
+
  /**
   * tgui process
   *
@@ -17,7 +43,7 @@
   *
   * return datum/tgui The found UI.
  **/
-/datum/controller/process/tgui/proc/try_update_ui(mob/user, datum/src_object, ui_key, datum/tgui/ui, force_open = 0)
+/datum/controller/subsystem/tgui/proc/try_update_ui(mob/user, datum/src_object, ui_key, datum/tgui/ui, force_open = 0)
 	if(isnull(ui)) // No UI was passed, so look for one.
 		ui = get_open_ui(user, src_object, ui_key)
 
@@ -42,7 +68,7 @@
   *
   * return datum/tgui The found UI.
  **/
-/datum/controller/process/tgui/proc/get_open_ui(mob/user, datum/src_object, ui_key)
+/datum/controller/subsystem/tgui/proc/get_open_ui(mob/user, datum/src_object, ui_key)
 	var/src_object_key = "\ref[src_object]"
 	if(isnull(tg_open_uis[src_object_key]) || !istype(tg_open_uis[src_object_key], /list))
 		return null // No UIs open.
@@ -64,7 +90,7 @@
   *
   * return int The number of UIs updated.
  **/
-/datum/controller/process/tgui/proc/update_uis(datum/src_object)
+/datum/controller/subsystem/tgui/proc/update_uis(datum/src_object)
 	var/src_object_key = "\ref[src_object]"
 	if(isnull(tg_open_uis[src_object_key]) || !istype(tg_open_uis[src_object_key], /list))
 		return 0 // Couldn't find any UIs for this object.
@@ -86,7 +112,7 @@
   *
   * return int The number of UIs closed.
  **/
-/datum/controller/process/tgui/proc/close_uis(datum/src_object)
+/datum/controller/subsystem/tgui/proc/close_uis(datum/src_object)
 	var/src_object_key = "\ref[src_object]"
 	if(isnull(tg_open_uis[src_object_key]) || !istype(tg_open_uis[src_object_key], /list))
 		return 0 // Couldn't find any UIs for this object.
@@ -110,7 +136,7 @@
   *
   * return int The number of UIs updated.
  **/
-/datum/controller/process/tgui/proc/update_user_uis(mob/user, datum/src_object = null, ui_key = null)
+/datum/controller/subsystem/tgui/proc/update_user_uis(mob/user, datum/src_object = null, ui_key = null)
 	if(isnull(user.tg_open_uis) || !istype(user.tg_open_uis, /list) || tg_open_uis.len == 0)
 		return 0 // Couldn't find any UIs for this user.
 
@@ -132,7 +158,7 @@
   *
   * return int The number of UIs closed.
  **/
-/datum/controller/process/tgui/proc/close_user_uis(mob/user, datum/src_object = null, ui_key = null)
+/datum/controller/subsystem/tgui/proc/close_user_uis(mob/user, datum/src_object = null, ui_key = null)
 	if(isnull(user.tg_open_uis) || !istype(user.tg_open_uis, /list) || tg_open_uis.len == 0)
 		return 0 // Couldn't find any UIs for this user.
 
@@ -150,7 +176,7 @@
   *
   * required ui datum/tgui The UI to be added.
  **/
-/datum/controller/process/tgui/proc/on_open(datum/tgui/ui)
+/datum/controller/subsystem/tgui/proc/on_open(datum/tgui/ui)
 	var/src_object_key = "\ref[ui.src_object]"
 	if(isnull(tg_open_uis[src_object_key]) || !istype(tg_open_uis[src_object_key], /list))
 		tg_open_uis[src_object_key] = list(ui.ui_key = list()) // Make a list for the ui_key and src_object.
@@ -172,7 +198,7 @@
   *
   * return bool If the UI was removed or not.
  **/
-/datum/controller/process/tgui/proc/on_close(datum/tgui/ui)
+/datum/controller/subsystem/tgui/proc/on_close(datum/tgui/ui)
 	var/src_object_key = "\ref[ui.src_object]"
 	if(isnull(tg_open_uis[src_object_key]) || !istype(tg_open_uis[src_object_key], /list))
 		return 0 // It wasn't open.
@@ -202,7 +228,7 @@
   *
   * return int The number of UIs closed.
  **/
-/datum/controller/process/tgui/proc/on_logout(mob/user)
+/datum/controller/subsystem/tgui/proc/on_logout(mob/user)
 	return close_user_uis(user)
 
  /**
@@ -215,7 +241,7 @@
   *
   * return bool If the UIs were transferred.
  **/
-/datum/controller/process/tgui/proc/on_transfer(mob/source, mob/target)
+/datum/controller/subsystem/tgui/proc/on_transfer(mob/source, mob/target)
 	if(!source || isnull(source.tg_open_uis) || !istype(source.tg_open_uis, /list) || tg_open_uis.len == 0)
 		return 0 // The old mob had no open UIs.
 

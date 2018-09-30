@@ -1,25 +1,24 @@
-var/global/datum/controller/process/ticker/tickerProcess
-
-/datum/controller/process/ticker
+SUBSYSTEM_DEF(ticker)
+	name = "Ticker"
+	priority = SS_PRIORITY_TICKER
+	init_order = INIT_ORDER_TICKER
+	flags = SS_BACKGROUND
+	wait = 1 SECOND
 	var/lastTickerTimeDuration
 	var/lastTickerTime
 
-/datum/controller/process/ticker/setup()
-	name = "ticker"
-	schedule_interval = 20 // every 2 seconds
+/datum/controller/subsystem/ticker/Initialize()
 
 	lastTickerTime = world.timeofday
 
 	if(!ticker)
 		ticker = new
 
-	tickerProcess = src
-
 	spawn(0)
 		if(ticker)
 			ticker.pregame()
 
-/datum/controller/process/ticker/doWork()
+/datum/controller/subsystem/ticker/fire()
 	var/currentTime = world.timeofday
 
 	if(currentTime < lastTickerTime) // check for midnight rollover
@@ -31,8 +30,8 @@ var/global/datum/controller/process/ticker/tickerProcess
 
 	ticker.process()
 
-/datum/controller/process/ticker/proc/getLastTickerTimeDuration()
+/datum/controller/subsystem/ticker/proc/getLastTickerTimeDuration()
 	return lastTickerTimeDuration
 
-/world/proc/has_round_started()
+/datum/controller/subsystem/ticker/proc/has_round_started()
 	return (ticker && ticker.current_state >= GAME_STATE_PLAYING)
