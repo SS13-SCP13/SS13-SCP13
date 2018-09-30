@@ -187,7 +187,7 @@ steam.start() -- spawns the effect
 	killme()
 
 /obj/effect/effect/smoke/proc/killme()
-	set waitfor = false
+	set waitfor = FALSE
 	sleep(time_to_live)
 	qdel(src)
 
