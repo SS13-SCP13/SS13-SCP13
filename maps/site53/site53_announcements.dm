@@ -1,6 +1,6 @@
 /datum/map/site53
-	emergency_shuttle_docked_message = "Attention all personnel: the Emergency Train has arrived. You have %ETD% to board the escape pods."
-	emergency_shuttle_leaving_dock = "Attention all personnel: the Emergency Train has left the station, arriving at off-site rendezvous point in %ETA%."
+	emergency_shuttle_docked_message = "Attention all personnel: the Emergency Train has arrived. You have %ETD% to board the escape cars."
+	emergency_shuttle_leaving_dock = "Attention all personnel: the Emergency Train has left the facility, arriving at off-site rendezvous point in %ETA%."
 
 	emergency_shuttle_called_message = "Attention all personnel: Code Gamma initiated, emergency evacuation procedures are now in effect. The Emergency Train will arrive in %ETA%"
 	emergency_shuttle_called_sound = sound('sound/AI/torch/abandonship.ogg', volume = 45)
@@ -17,14 +17,14 @@
 
 	meteor_detected_sound = sound('sound/AI/torch/meteors.ogg', volume = 45)
 
-	radiation_detected_message = "High levels of radiation detected in proximity of the %STATION_NAME%. Please evacuate into one of the shielded maintenance tunnels."
+	radiation_detected_message = "Radioactive object class SAFE containment breach detected. Please report to the medical bay if you feel strange."
 	radiation_detected_sound = sound('sound/AI/torch/radiation.ogg', volume = 45)
 
 	space_time_anomaly_sound = sound('sound/AI/torch/spanomalies.ogg', volume = 45)
 
-	unknown_biological_entities_message = "Unknown biological entities have been detected near the %STATION_NAME%, please stand-by."
+	unknown_biological_entities_message = "Unknown persons have been detected near %STATION_NAME%, please stand-by."
 
-	unidentified_lifesigns_message = "Unidentified lifesigns detected. Please lock down all exterior access points."
+	unidentified_lifesigns_message = "Unidentified lifesigns detected within fifteen miles of %STATION_NAME%, security please stand-by."
 	unidentified_lifesigns_sound = sound('sound/AI/torch/aliens.ogg', volume = 45)
 
 	xenomorph_spawn_sound = sound('sound/AI/torch/aliens.ogg', volume = 45)
