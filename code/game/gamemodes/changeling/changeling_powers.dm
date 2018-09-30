@@ -57,12 +57,13 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 	verbs += /datum/changeling/proc/EvolutionMenu
 	add_language("Shapeshifter")
-
-	if(iscarbon(src))
-		var/mob/living/carbon/C = src
-		var/obj/item/organ/internal/brain/brain = C.internal_organs_by_name[BP_BRAIN]
-		if(brain)
-			brain.fake_brain = 1
+	
+	spawn(50)
+		if(iscarbon(src))
+			var/mob/living/carbon/C = src
+			var/obj/item/organ/internal/brain/brain = C.internal_organs_by_name[BP_BRAIN]
+			if(brain)
+				brain.fake_brain = 1
 
 	var/lesser_form = !ishuman(src)
 
