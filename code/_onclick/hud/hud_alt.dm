@@ -284,7 +284,7 @@ datum/hud/New(mob/owner)
 
 /mob/proc/add_click_catcher()
 	if(!client.void)
-		client.void = create_click_catcher()
+		client.void = GLOB.void
 	if(!client.screen)
 		client.screen = list()
 	client.screen |= client.void
