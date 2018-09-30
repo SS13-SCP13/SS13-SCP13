@@ -216,8 +216,8 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		if (!isstructure(O) && !ismachinery(O))
 			continue
 
-		if (istype(O, /obj/machinery/shieldwall))
-			continue
+		for (var/obj/machinery/shieldwall/SW in get_turf(O))
+			return 
 
 		phase_cooldown = world.time + (PHASE_TIME + 5)
 
