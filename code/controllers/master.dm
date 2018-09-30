@@ -182,6 +182,9 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	var/time = (REALTIMEOFDAY - start_timeofday) / 10
 
 	var/msg = "Initializations complete within [time] second\s!"
+
+	initialization_stage |= INITIALIZATION_COMPLETE
+
 	report_progress(msg)
 	log_world(msg)
 
