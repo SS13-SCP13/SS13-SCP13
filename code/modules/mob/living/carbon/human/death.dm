@@ -11,8 +11,11 @@
 	for(var/movable in contents)
 		var/atom/movable/AM = movable
 		if (isitem(AM))
-			drop_from_inventory(AM)
-		AM.throw_at(get_edge_target_turf(src,pick(GLOB.alldirs)), rand(1,3), round(30/I.w_class))
+			var/obj/item/I = AM
+			drop_from_inventory(I)
+			I.throw_at(get_edge_target_turf(src,pick(GLOB.alldirs)), rand(1,3), round(30/I.w_class))
+		else
+			AM.forceMove(get_turf(src))
 
 	..(species.gibbed_anim)
 
