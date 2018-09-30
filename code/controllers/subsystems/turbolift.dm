@@ -1,17 +1,9 @@
-var/datum/controller/process/turbolift/turbolift_controller
-
-/datum/controller/process/turbolift
+SUBSYSTEM_DEF(turbolift)
+	name = "Turbolifts"
+	wait = 1 SECOND
 	var/list/moving_lifts = list()
 
-/datum/controller/process/turbolift/New()
-	..()
-	turbolift_controller = src
-
-/datum/controller/process/turbolift/setup()
-	name = "turbolift controller"
-	schedule_interval = 10
-
-/datum/controller/process/turbolift/doWork()
+/datum/controller/subsystem/turbolift/fire()
 	for(var/liftref in moving_lifts)
 		if(world.time < moving_lifts[liftref])
 			continue
@@ -29,7 +21,7 @@ var/datum/controller/process/turbolift/turbolift_controller
 			else
 				lift_is_moving(lift)
 			lift.busy = 0
-		SCHECK
+		CHECK_TICK
 
-/datum/controller/process/turbolift/proc/lift_is_moving(var/datum/turbolift/lift)
+/datum/controller/subsystem/turbolift/proc/lift_is_moving(var/datum/turbolift/lift)
 	moving_lifts["\ref[lift]"] = world.time + lift.move_delay

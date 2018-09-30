@@ -1,10 +1,11 @@
-/datum/controller/process/trade/setup()
-	name = "trade"
-	schedule_interval = 600 //1 minute
-	for(var/i in 1 to rand(1,3))
-		generateTrader(1)
+SUBSYSTEM_DEF(trade)
+	name = "Trade"
+	priority = SS_PRIORITY_TRADE
+	init_order = INIT_ORDER_TRADE
+	flags = SS_NO_INIT|SS_BACKGROUND
+	wait = 1 MINUTE
 
-/datum/controller/process/trade/doWork()
+/datum/controller/subsystem/trade/fire()
 	for(var/a in GLOB.traders)
 		var/datum/trader/T = a
 		if(!T.tick())
@@ -13,7 +14,7 @@
 	if(prob(100-GLOB.traders.len*10))
 		generateTrader()
 
-/datum/controller/process/trade/proc/generateTrader(var/stations = 0)
+/datum/controller/subsystem/trade/proc/generateTrader(var/stations = 0)
 	var/list/possible = list()
 	if(stations)
 		possible += subtypesof(/datum/trader) - typesof(/datum/trader/ship)
