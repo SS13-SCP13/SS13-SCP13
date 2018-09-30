@@ -291,10 +291,6 @@ SUBSYSTEM_DEF(garbage)
 		del(D)
 		return
 
-	// attempt to fix startup hard deletes - Kachnov
-	if (world.time < 30 SECONDS)
-		qdel_after(D, 30 SECONDS)
-		return
 
 	var/datum/qdel_item/I = SSgarbage.items[D.type]
 	if (!I)
@@ -308,6 +304,12 @@ SUBSYSTEM_DEF(garbage)
 		var/start_tick = world.tick_usage
 		var/hint = D.Destroy(force) // Let our friend know they're about to get fucked up.
 		D.SendSignal(COMSIG_PARENT_QDELETED)
+
+		// stops false positives from deleting during startup; let BYOND's GC handle it after Destroy() is called
+		if (world.time < 10 SECONDS && (hint in list(QDEL_HINT_QUEUE, QDEL_HINT_IWILLGC)))
+			D.gc_destroyed = world.time
+			return
+		
 		if(world.time != start_time)
 			I.slept_destroy++
 		else
