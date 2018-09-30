@@ -19,14 +19,33 @@ GLOBAL_LIST_EMPTY(scp173s)
 	var/next_shit = 0
 	var/list/next_blinks = list()
 
+	var/last_player_shit = 0
+
+/mob/living/scp_173/examine(mob/user)
+	user << "<b><span class = 'euclid'><big>SCP-173</big></span></b> - [desc]"
+
 /mob/living/scp_173/New()
 	..()
 	GLOB.scp173s += src
 	verbs += /mob/living/proc/ventcrawl
+	add_language(LANGUAGE_GALCOM, 1) // it's a fucking magical statue
+	add_language(LANGUAGE_EAL, 1)
+	add_language(LANGUAGE_SOL_COMMON, 1)
+	add_language(LANGUAGE_UNATHI, 1)
+	add_language(LANGUAGE_SIIK_MAAS, 1)
+	add_language(LANGUAGE_SKRELLIAN, 1)
+	add_language(LANGUAGE_LUNAR, 1)
+	add_language(LANGUAGE_GUTTER, 1)
+	add_language(LANGUAGE_SIGN, 0)
+	add_language(LANGUAGE_INDEPENDENT, 1)
+	add_language(LANGUAGE_SPACER, 1)
 
 /mob/living/scp_173/Destroy()
 	GLOB.scp173s -= src
 	..()
+
+/mob/living/scp_173/say(var/message)
+	return // lol you can't talk
 
 /mob/living/scp_173/proc/IsBeingWatched()
 	for(var/mob/living/carbon/human/H in view(src, 7))
@@ -65,6 +84,8 @@ GLOBAL_LIST_EMPTY(scp173s)
 
 /mob/living/scp_173/Life()
 	. = ..()
+	if (isobj(loc))
+		return
 	var/list/our_view = view(src, 7)
 	for(var/A in next_blinks)
 		if(!(A in our_view))
@@ -125,3 +146,11 @@ GLOBAL_LIST_EMPTY(scp173s)
 		to_chat(src, "<span class='warning'>You're being watched!</span>")
 		return FALSE
 	return ..()
+
+/mob/living/scp_173/verb/get_schwifty() // plz don't kill me for the reference
+	set name = "Shit On Floor"
+	set category = "SCP"
+	if(world.time >= last_player_shit + 600)
+		last_player_shit = world.time
+		var/feces = pick(/obj/effect/decal/cleanable/blood, /obj/effect/decal/cleanable/blood/gibs, /obj/effect/decal/cleanable/mucus)
+		new feces(loc)

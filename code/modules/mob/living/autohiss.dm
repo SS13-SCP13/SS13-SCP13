@@ -4,11 +4,13 @@
 /mob/living/proc/handle_autohiss(message, datum/language/L)
 	return message // no autohiss at this level
 
+// CANDIDATE FOR DELETION: If nobody grows a serpent's tongue between now and full removal, this serves no use. At all. Cutting your own tongue doesn't count, by the way. ~Lion
+/*
 /mob/living/carbon/human/handle_autohiss(message, datum/language/L)
 	if(!client || get_preference_value(/datum/client_preference/autohiss) == GLOB.PREF_OFF) // no need to process if there's no client or they have autohiss off
 		return message
 	return species.handle_autohiss(message, L, get_preference_value(/datum/client_preference/autohiss))
-
+*/
 /datum/species
 	var/list/autohiss_basic_map = null
 	var/list/autohiss_extra_map = null

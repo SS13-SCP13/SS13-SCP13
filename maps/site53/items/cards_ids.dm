@@ -206,6 +206,9 @@
 ***SCP CARDS***
 ***************
 */
+
+// Currently, cards have to be added for each job and have their own unique identifier if we want access to be made more unique. So that's what we're doing here.
+
 // SECURITY
 /obj/item/weapon/card/id/seclvl1
 	name = "level one security keycard"
@@ -315,3 +318,29 @@
 	item_state = "Admin_ID"
 	job_access_type = /datum/job/captain
 
+// MEDICAL CARDS
+
+/obj/item/weapon/card/id/emt
+	name = "level one security keycard"
+	desc = "A light blue card. Seems almost as unimportant as the person itself."
+	icon_state = "securitylvl1"
+	item_state = "Sec_ID1"
+	job_access_type = /datum/job/emt
+
+// ARCHIVE
+
+/obj/item/weapon/card/id/archivist
+	name = "level five administration keycard"
+	desc = "A black keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "adminlvl5"
+	item_state = "Admin_ID"
+	job_access_type = /datum/job/archivist
+
+// RESEARCH
+
+/obj/item/weapon/card/id/rd
+	name = "level five science keycard"
+	desc = "A red keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "sciencelvl5"
+	item_state = "Science_ID5"
+	job_access_type = /datum/job/rd

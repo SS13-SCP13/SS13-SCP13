@@ -20,6 +20,7 @@
 	var/const/damage_threshold_count = 10
 	var/damage_threshold_value
 	var/healed_threshold = 1
+	var/fake_brain = 0
 
 /obj/item/organ/internal/brain/robotize()
 	replace_self_with(/obj/item/organ/internal/posibrain)
@@ -65,7 +66,8 @@
 	. = ..()
 
 /obj/item/organ/internal/brain/proc/transfer_identity(var/mob/living/carbon/H)
-
+	if(fake_brain)
+		return
 	if(!brainmob)
 		brainmob = new(src)
 		brainmob.SetName(H.real_name)
@@ -84,7 +86,10 @@
 	if(brainmob && brainmob.client)//if thar be a brain inside... the brain.
 		to_chat(user, "You can feel the small spark of life still left in this one.")
 	else
-		to_chat(user, "This one seems particularly lifeless. Perhaps it will regain some of its luster later..")
+		if(fake_brain)
+			to_chat(user, "This one seems particularly lifeless. Perhaps it will regain some of its luster later.")
+		else
+			to_chat(user, "This one is completely devoid of life.")
 
 /obj/item/organ/internal/brain/removed(var/mob/living/user)
 	if(!istype(owner))
@@ -98,7 +103,8 @@
 	if(borer)
 		borer.detatch() //Should remove borer if the brain is removed - RR
 
-	transfer_identity(owner)
+	if(!fake_brain)
+		transfer_identity(owner)
 
 	..()
 
@@ -110,7 +116,7 @@
 		target.ghostize()
 
 	if(brainmob)
-		if(brainmob.mind)
+		if(brainmob.mind && !fake_brain)
 			brainmob.mind.transfer_to(target)
 		else
 			target.key = brainmob.key
@@ -140,8 +146,11 @@
 
 	if(owner)
 		if(damage > max_damage / 2 && healed_threshold)
-			spawn()
-				alert(owner, "You have taken massive brain damage! You will not be able to remember the events leading up to your injury.", "Brain Damaged")
+			if(fake_brain)
+				to_chat(owner, "<span class='warning'>Your brain has taken massive damage. Not like you care, but it might be good for acting.</span>")
+			else
+				spawn()
+					alert(owner, "You have taken massive brain damage! You will not be able to remember the events leading up to your injury.", "Brain Damaged")
 			healed_threshold = 0
 
 		if(damage < (max_damage / 4))

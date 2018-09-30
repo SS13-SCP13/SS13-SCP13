@@ -9,9 +9,9 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 	var/mob/living/target = null
 	var/zombies = 0
 	var/next_emote = -1
-	
+
 /mob/living/carbon/human/scp049/examine(mob/user)
-	user << "<b><span class = 'info'><big>SCP-049</big></span></b> - [desc]"
+	user << "<b><span class = 'euclid'><big>SCP-049</big></span></b> - [desc]"
 
 /datum/scp/SCP_049
 	name = "SCP-049"
@@ -20,7 +20,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 
 /obj/sprite_helper/scp049
 	icon = 'icons/mob/scp049.dmi'
-	
+
 /mob/living/carbon/human/scp049/IsAdvancedToolUser()
 	return FALSE
 
@@ -88,12 +88,12 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 
 	if (!vis_contents.len)
 		vis_contents += new /obj/sprite_helper/scp049
-	
+
 	// we're lying, turn right
 	var/obj/sprite_helper/scp049/SH = vis_contents[vis_contents.len]
 	if (lying)
 		SH.icon = turn(icon('icons/mob/scp049.dmi'), 90)
-		
+
 /mob/living/carbon/human/scp049/get_pressure_weakness()
 	return 0
 
@@ -102,14 +102,14 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 
 /mob/living/carbon/human/scp049/movement_delay()
 	return -1.5
-	 
+
 // NPC stuff
 /mob/living/carbon/human/scp049/proc/getTarget()
 
 	// stupid hack
 	if (client)
 		target = null
-		return target 
+		return target
 
 	/* if we have no target, or our target is dead, or our target is not human, or our target is out of view,
 	 * try to find a better one. Failing to do so just makes us continue to go after the old target */
@@ -120,7 +120,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 		for (var/mob/living/L in oview(world.view, src))
 			if (L.stat != DEAD)
 				if (!ishuman(L))
-					. += L 
+					. += L
 				else if (ishuman(L))
 					var/mob/living/carbon/human/H = L
 					if (H.pestilence)
@@ -130,13 +130,13 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 		for (var/mob/living/carbon/human/H in .)
 			for (var/mob/living/L in .)
 				if (!ishuman(L))
-					. -= L 
+					. -= L
 			break
-		
+
 		// pick a random candidate
 		if (length(.))
 			target = pick(.)
-			
+
 	return target
 
 // NPC stuff
@@ -152,7 +152,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 		// moves slightly faster than humans
 		walk_to(src, target, 1, 0.9+config.run_speed)
 		return TRUE
-		
+
 	walk(src, null)
 
 	if (!locate(/obj/item/grab) in src)
@@ -175,11 +175,11 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 			death()
 		if (DEAD)
 			H.scp049_attack(src)
-			
+
 /mob/living/carbon/human/scp049/attack_hand(mob/living/carbon/M)
 	if (!isscp049_1(M) || M.a_intent == I_HELP)
 		if (ishuman(M))
-			var/mob/living/carbon/human/H = M 
+			var/mob/living/carbon/human/H = M
 			if (H != src)
 				H.pestilence = TRUE
 		return ..(M)
@@ -187,16 +187,16 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 
 /mob/living/carbon/human/scp049/bullet_act(var/obj/item/projectile/P, var/def_zone)
 	if (P.damage && !P.nodamage && ishuman(P.firer))
-		var/mob/living/carbon/human/H = P.firer 
+		var/mob/living/carbon/human/H = P.firer
 		if (H != src)
-			H.pestilence = TRUE 
+			H.pestilence = TRUE
 	return ..(P, def_zone)
 
 /mob/living/carbon/human/scp049/attackby(obj/item/W, mob/user)
 	if (W.force > 0 && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if (H != src)
-			H.pestilence = TRUE 
+			H.pestilence = TRUE
 	return ..(W, user)
 
 /mob/living/carbon/human/scp049/proc/scp049_attack(var/mob/living/target)
@@ -210,7 +210,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 			spawn (20)
 				if (G)
 					scp049_attack_2(target)
-		
+
 /mob/living/carbon/human/scp049/proc/scp049_attack_2(var/mob/living/target)
 	var/obj/item/grab/G = locate() in src
 	if (G)
@@ -226,19 +226,19 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 				if (target)
 					if (ishuman(target))
 						var/mob/living/carbon/human/H = target
-						
+
 						var/foundclient = TRUE
 						if (!H.client)
 							foundclient = FALSE
 							for (var/mob/observer/ghost/ghost in GLOB.ghost_mob_list)
 								if (ghost.mind.current == H)
 									ghost.reenter_corpse_p()
-									foundclient = TRUE 
-									
+									foundclient = TRUE
+
 						if (foundclient)
 							H.rejuvenate()
 							H.visible_message("<span class = 'danger'><big>[H] rises up again.</big></span>")
-							H.pre_scp049_name = H.name 
+							H.pre_scp049_name = H.name
 							H.pre_scp049_real_name = H.real_name
 							H.pre_scp049_species = H.species.name
 							H.set_species("SCP-049-1")
@@ -246,7 +246,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 							H.name = H.real_name
 							H.verbs += /mob/living/carbon/human/proc/SCP_049_talk
 							GLOB.scp049_1s += H
-						else 
+						else
 							H.visible_message("<span class = 'notice'>The surgery seems to have been unsucessful.</span>")
 						H.pestilence = FALSE
 						src << "<span class = 'good'><big>You have cured [H].</big></span>"
@@ -263,7 +263,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 		for (var/M in GLOB.scp049s|GLOB.scp049_1s)
 			M << "<em><strong>[real_name]</strong>: [say]</em>"
 
-// SCP-049 emotes 
+// SCP-049 emotes
 /mob/living/carbon/human/scp049/proc/greetings()
 	set category = "SCP-049"
 	set name = "Greetings"

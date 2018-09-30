@@ -17,6 +17,12 @@
 	for(var/file in args)
 		src << browse_rsc(file)
 
+/proc/safefile2list(filename)
+	if(!fexists(filename))
+		log_error("Tried to read '[filename]', but it didn't exist!")
+	var/list/L = file2list(filename)
+	return LAZYLEN(L) ? L : list()
+
 /client/proc/browse_files(root="data/logs/", max_iterations=10, list/valid_extensions=list(".txt",".log",".htm"))
 	var/path = root
 

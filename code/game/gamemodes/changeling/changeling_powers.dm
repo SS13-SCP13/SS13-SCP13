@@ -56,7 +56,13 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	if(!mind.changeling)	mind.changeling = new /datum/changeling(gender)
 
 	verbs += /datum/changeling/proc/EvolutionMenu
-	add_language("Changeling")
+	add_language("Shapeshifter")
+
+	if(iscarbon(src))
+		var/mob/living/carbon/C = src
+		var/obj/item/organ/internal/brain/brain = C.internal_organs_by_name[BP_BRAIN]
+		if(brain)
+			brain.fake_brain = 1
 
 	var/lesser_form = !ishuman(src)
 
@@ -89,6 +95,11 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 //removes our changeling verbs
 /mob/proc/remove_changeling_powers()
 	if(!mind || !mind.changeling)	return
+	if(iscarbon(src))
+		var/mob/living/carbon/C = src
+		var/obj/item/organ/internal/brain/brain = C.internal_organs_by_name[BP_BRAIN]
+		if(brain)
+			brain.fake_brain = 0
 	for(var/datum/power/changeling/P in mind.changeling.purchasedpowers)
 		if(P.isVerb)
 			verbs -= P.verbpath
@@ -102,7 +113,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 	var/datum/changeling/changeling = src.mind.changeling
 	if(!changeling)
-		rustg_log_write(world.log, "[src] has the changeling_transform() verb but is not a changeling.")
+		WRITE_LOG(world.log, "[src] has the changeling_transform() verb but is not a changeling.")
 		return
 
 	if(src.stat > max_stat)
@@ -132,14 +143,14 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 		languages += language
 
 	//This isn't strictly necessary but just to be safe...
-	add_language("Changeling")
+	add_language("Shapeshifter")
 
 	return
 
 //Absorbs the victim's DNA making them uncloneable. Requires a strong grip on the victim.
 //Doesn't cost anything as it's the most basic ability.
 /mob/proc/changeling_absorb_dna()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Absorb DNA"
 
 	var/datum/changeling/changeling = changeling_power(0,0,100)
@@ -252,7 +263,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 //Change our DNA to that of somebody we've absorbed.
 /mob/proc/changeling_transform()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Transform (5)"
 
 	var/datum/changeling/changeling = changeling_power(5,1,0)
@@ -315,7 +326,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 //Transform into a monkey.
 /mob/proc/changeling_lesser_form()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Lesser Form (1)"
 
 	var/datum/changeling/changeling = changeling_power(1,0,0)
@@ -341,7 +352,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 //Transform into a human
 /mob/proc/changeling_lesser_transform()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Transform (1)"
 
 	var/datum/changeling/changeling = changeling_power(1,1,0)
@@ -421,7 +432,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 //Fake our own death and fully heal. You will appear to be dead but regenerate fully after a short delay.
 /mob/proc/changeling_fakedeath()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Regenerative Stasis (20)"
 
 	var/datum/changeling/changeling = changeling_power(20,1,100,DEAD)
@@ -449,7 +460,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	return 1
 
 /mob/proc/changeling_revive()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Revive"
 
 	var/mob/living/carbon/C = src
@@ -468,7 +479,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 //Boosts the range of your next sting attack by 1
 /mob/proc/changeling_boost_range()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Ranged Sting (10)"
 	set desc="Your next sting ability can be used against targets 2 squares away."
 
@@ -485,7 +496,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 //Recover from stuns.
 /mob/proc/changeling_unstun()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Epinephrine Sacs (45)"
 	set desc = "Removes all stuns"
 
@@ -520,7 +531,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 //Prevents AIs tracking you but makes you easily detectable to the human-eye.
 /mob/proc/changeling_digitalcamo()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Toggle Digital Camoflague"
 	set desc = "The AI can no longer track us, but we will look different if examined.  Has a constant cost while active."
 
@@ -545,7 +556,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 //Starts healing you every second for 10 seconds. Can be used whilst unconscious.
 /mob/proc/changeling_rapidregen()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Rapid Regeneration (30)"
 	set desc = "Begins rapidly regenerating.  Does not effect stuns or chemicals."
 
@@ -573,7 +584,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 var/list/datum/absorbed_dna/hivemind_bank = list()
 
 /mob/proc/changeling_hiveupload()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Hive Channel (10)"
 	set desc = "Allows you to channel DNA in the airwaves to allow other changelings to absorb it."
 
@@ -614,7 +625,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	return 1
 
 /mob/proc/changeling_hivedownload()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Hive Absorb (20)"
 	set desc = "Allows you to absorb DNA that is being channeled in the airwaves."
 
@@ -645,7 +656,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 // Fake Voice
 
 /mob/proc/changeling_mimicvoice()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Mimic Voice"
 	set desc = "Shape our vocal glands to form a voice of someone we choose. We cannot regenerate chemicals when mimicing."
 
@@ -722,7 +733,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 
 
 /mob/proc/changeling_lsdsting()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Hallucination Sting (15)"
 	set desc = "Causes terror in the target."
 
@@ -734,7 +745,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	return 1
 
 /mob/proc/changeling_silence_sting()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Silence sting (10)"
 	set desc="Sting target"
 
@@ -745,7 +756,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	return 1
 
 /mob/proc/changeling_blind_sting()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Blind sting (20)"
 	set desc="Sting target"
 
@@ -760,7 +771,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	return 1
 
 /mob/proc/changeling_deaf_sting()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Deaf sting (5)"
 	set desc="Sting target:"
 
@@ -773,7 +784,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	return 1
 
 /mob/proc/changeling_DEATHsting()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Death Sting (40)"
 	set desc = "Causes spasms onto death."
 	var/loud = 1
@@ -787,7 +798,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	return 1
 
 /mob/proc/changeling_extract_dna_sting()
-	set category = "Changeling"
+	set category = "Shapeshifter"
 	set name = "Extract DNA Sting (40)"
 	set desc="Stealthily sting a target to extract their DNA."
 
@@ -812,3 +823,31 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 
 	feedback_add_details("changeling_powers","ED")
 	return 1
+
+/mob/proc/changeling_armblade()
+	set category = "Shapeshifter"
+	set name = "Flesh Blade (25)"
+	set desc = "Create a blade of flesh on one of arms"
+
+	var/datum/changeling/changeling = null
+	if(src.mind && src.mind.changeling)
+		changeling = src.mind.changeling
+	if(!changeling)
+		return 0
+
+	for(var/obj/item/I in list(get_active_hand() + get_inactive_hand()))
+		if(istype(I, /obj/item/weapon/melee/arm_blade))
+			playsound(src, 'sound/effects/blobattack.ogg', 30, 1)
+			visible_message("<span class='warning'>With a sickening crunch, [src] reforms their blade into an arm!</span>", "<span class='notice'>We assimilate the blade back into our body.</span>", "<span class='italics>You hear organic matter ripping and tearing!</span>")
+			remove_from_mob(I)
+			update_inv_r_hand()
+			update_inv_l_hand()
+			return
+	var/obj/item/weapon/melee/arm_blade/new_blade = new(src)
+
+	if(put_in_active_hand(new_blade))
+		playsound(src, 'sound/effects/blobattack.ogg', 30, 1)
+		visible_message("<span class='warning'>A grotesque blade forms around [src]\'s arm!</span>", "<span class='warning'>Our arm twists and mutates, transforming it into a deadly blade.</span>", "<span class='italics'>You hear organic matter ripping and tearing!</span>")
+		changeling_sting(25, /mob/proc/changeling_armblade, 0)
+	else
+		to_chat(src, "<i>This hand is currently full!</i>")

@@ -1,48 +1,48 @@
 // baystation12 posters
 /datum/poster/bay_1
 	icon_state="bsposter1"
-	name = "Unlucky Space Explorer"
+	name = "Unlucky Anomaly Explorer"
 	desc = "This particular one depicts a skeletal form within a space suit."
 
 /datum/poster/bay_2
 	icon_state="bsposter2"
-	name = "Positronic Logic Conflicts"
+	name = "Logic Conflicts"
 	desc = "This particular one depicts the cold, unmoving stare of a particular advanced AI."
 
 /datum/poster/bay_3
 	icon_state="bsposter3"
 	name = "Paranoia"
-	desc = "This particular one warns of the dangers of trusting your co-workers too much."
+	desc = "This particular one warns of the dangers of trusting 'safe' SCPs."
 
 /datum/poster/bay_4
 	icon_state="bsposter4"
 	name = "Keep Calm"
-	desc = "This particular one is of a famous New Earth design, although a bit modified. Someone has scribbled an O over the A on the poster."
+	desc = "This particular one is of a famous American design, although a bit modified. Someone has scribbled an O over the A on the poster."
 
 /datum/poster/bay_5
 	icon_state="bsposter5"
-	name = "Martian Warlord"
-	desc = "This particular one depicts the cartoony mug of a certain Martial Warmonger."
+	name = "Warlord"
+	desc = "This particular one depicts the cartoony mug of a famous movie character."
 
 /datum/poster/bay_6
 	icon_state="bsposter6"
 	name = "Technological Singularity"
-	desc = "This particular one is of the blood-curdling symbol of a long-since defeated enemy of humanity."
+	desc = "This particular one is of a movie symbol, depicting a 'long-since defeated enemy of humanity.'"
 
 /datum/poster/bay_7
 	icon_state="bsposter7"
 	name = "Wasteland"
-	desc = "This particular one is of a couple of ragged gunmen, one male and one female, on top of a mound of rubble. The number \"12\" is visible on their blue jumpsuits."
+	desc = "This particular one is of a couple of ragged gunmen, one male and one female, on top of a mound of rubble. The number \"53\" is visible on their blue jumpsuits."
 
 /datum/poster/bay_8
 	icon_state="bsposter8"
-	name = "Pinup Girl Cindy"
-	desc = "This particular one is of a historical corporate PR girl, Cindy, in a particularly feminine pose."
+	name = "Pinup Girl"
+	desc = "This particular one is of a girl, Cindy, in a particularly feminine pose."
 
 /datum/poster/bay_9
 	icon_state="bsposter9"
-	name = "Pinup Girl Amy"
-	desc = "This particular one is of Amy, the nymphomaniac urban legend of deep space. How this photograph came to be is not known."
+	name = "Pinup Girl Ciel"
+	desc = "This particular one is of Ciel, the nymphomaniac urban legend of the internet."
 
 /datum/poster/bay_10
 	icon_state="bsposter10"
@@ -52,12 +52,12 @@
 /datum/poster/bay_11
 	icon_state="bsposter11"
 	name = "Underwater Laboratory"
-	desc = "This particular one is of the fabled last crew of a previous Company project."
+	desc = "This particular one depicts an underwater site."
 
 /datum/poster/bay_12
 	icon_state="bsposter12"
 	name = "Rogue AI"
-	desc = "This particular one depicts the shell of the infamous AI that catastropically comandeered one of humanity's earliest space stations. Back then, the Company was just known as TriOptimum."
+	desc = "This particular one depicts the shell of SCP-79."
 
 /datum/poster/bay_13
 	icon_state="bsposter13"
@@ -81,8 +81,8 @@
 
 /datum/poster/bay_17
 	icon_state="bsposter17"
-	name = "Pinup Girl Val"
-	desc = "Luscious Val McNeil, the vertically challenged Legal Extraordinaire, winner of Miss Space two years running and favoured pinup girl of Lawyers Weekly."
+	name = "Pinup Girl Curien"
+	desc = "Luscious Curien, internet sensation."
 
 /datum/poster/bay_18
 	icon_state="bsposter18"
@@ -91,18 +91,18 @@
 
 /datum/poster/bay_19
 	icon_state="bsposter19"
-	name = "Respect an Unathi"
-	desc = "This poster depicts a well dressed looking Unathi receiving a prestigious award. It appears to espouse greater co-operation and harmony between the two races."
+	name = "Respect"
+	desc = "This poster depicts a well dressed looking sci-fi character."
 
 /datum/poster/bay_20
 	icon_state="bsposter20"
-	name = "Skrell Twilight"
-	desc = "This poster depicts a mysteriously inscrutable, alien scene. Numerous Skrell can be seen conversing amidst great, crystalline towers rising above crashing waves"
+	name = "Twilight"
+	desc = "This poster depicts a sci-fi paradise."
 
 /datum/poster/bay_21
 	icon_state="bsposter21"
 	name = "Join the Fuzz!"
-	desc = "It's a nice recruitment poster of a white haired Chinese woman that says; \"Big Guns, Hot Women, Good Times. Security. We get it done.\""
+	desc = "It's a nice poster of a white haired Chinese woman that says; \"Big Guns, Hot Women, Good Times. MTF. We get it done.\""
 
 /datum/poster/bay_22
 	icon_state="bsposter22"
@@ -112,27 +112,27 @@
 /datum/poster/bay_23
 	icon_state="bsposter23"
 	name = "Safety first: because electricity doesn't wait!"
-	desc = "A safety poster starring a clueless looking redhead with frazzled hair. \"Every year, hundreds of NT employees expose themselves to electric shock. Play it safe. Avoid suspicious doors after electrical storms, and always wear protection when doing electric maintenance.\""
+	desc = "A safety poster starring a clueless looking redhead with frazzled hair. \"Every year, hundreds of Foundation employees expose themselves to electric shock. Play it safe. Avoid suspicious doors after power failures, and always wear protection when doing electric maintenance.\""
 
 /datum/poster/bay_24
 	icon_state="bsposter24"
-	name = "Responsible medbay habits, No #259"
-	desc = "A poster with a nervous looking geneticist on it states; \"Friends Tell Friends They're Clones. It can cause severe and irreparable emotional trauma if a person is not properly informed of their recent demise. Always follow your contractual obligation and inform them of their recent rejuvenation.\""
+	name = "Responsible Triage habits, No #259"
+	desc = "A poster with a nervous looking geneticist on it states; \"Objects are not people.\""
 
 /datum/poster/bay_25
 	icon_state="bsposter25"
-	name = "Irresponsible medbay habits, No #2"
+	name = "Irresponsible Triage habits, No #2"
 	desc = "This is a safety poster starring a perverted looking naked doctor. \"Sexual harassment is never okay. REPORT any acts of sexual deviance or harassment that disrupt a healthy working environment.\""
 
 /datum/poster/bay_26
 	icon_state="bsposter26"
 	name = "The Men We Knew"
-	desc = "This movie poster depicts a group of soldiers fighting a large mech, the movie seems to be a patriotic war movie."
+	desc = "This movie poster depicts a group of soldiers fighting a large sci-fi monster."
 
 /datum/poster/bay_27
 	icon_state="bsposter27"
 	name = "Plastic Sheep Can't Scream"
-	desc = "This is a movie poster for an upcoming horror movie, it features an AI in the front of it."
+	desc = "This is a movie poster for an upcoming horror movie, it features a ghost in the front of it."
 
 /datum/poster/bay_28
 	icon_state="bsposter28"
@@ -142,11 +142,11 @@
 /datum/poster/bay_29
 	icon_state="bsposter29"
 	name = "Winter Is Coming"
-	desc = "On the poster is a frighteningly large wolf, he warns: \"Only YOU can keep humanity from freezing during planetary occultation!\""
+	desc = "On the poster is a frighteningly large wolf, he warns: \"Only you can save yourself in cold environments.\""
 
 /datum/poster/bay_30
 	icon_state="bsposter30"
-	name = "Ambrosia Vulgaris"
+	name = "THC"
 	desc = "Just looking at this poster makes you feel a little bit dizzy."
 
 /datum/poster/bay_31
@@ -172,7 +172,7 @@
 /datum/poster/bay_35
 	icon_state="bsposter35"
 	name = "Lamarr"
-	desc = "This is a poster depicting the pet and mascot of the science department."
+	desc = "This is a poster depicting a famous video-game series."
 
 /datum/poster/bay_36
 	icon_state="bsposter36"
@@ -202,7 +202,7 @@
 /datum/poster/bay_41
 	icon_state="bsposter41"
 	name = "Professional work environment"
-	desc = "A safety poster featuring a green haired woman in a shimmering blue dress. \"As an Internal Affairs Agent, your job is to create a fair and agreeable work environment for the crewmembers, as discreetly and professionally as possible.\""
+	desc = "A safety poster featuring a green haired woman in a shimmering blue dress. \"As an Agent, your job is to create a fair and agreeable work environment for staff, as discreetly and professionally as possible.\""
 
 /datum/poster/bay_42
 	icon_state="bsposter42"
@@ -217,7 +217,7 @@
 /datum/poster/bay_44
 	icon_state="bsposter44"
 	name = "Time for a drink?"
-	desc = "This poster depicts a friendly-looking Tajara holding a tray of drinks."
+	desc = "This poster depicts a sci-fi character serving drinks."
 
 /datum/poster/bay_45
 	icon_state="bsposter45"
@@ -236,8 +236,8 @@
 
 /datum/poster/bay_48
 	icon_state="bsposter48"
-	name = "Borg pinup?"
-	desc = "This is a.. pin-up poster? It is a diagram on an old model of cyborg with a note scribbled in marker on the bottom, on the top there is a large XO written in red marker."
+	name = "Sci-Fi blueprint"
+	desc = "It is a blueprint of an old model of a movie cyborg with a note scribbled on the bottom, on the top there is a large XO written in red marker."
 
 /datum/poster/bay_49
 	icon_state="bsposter49"
@@ -246,13 +246,13 @@
 
 /datum/poster/bay_50
 	icon_state="bsposter50"
-	name = "Pinup Girl Cindy Kate"
-	desc = "This particular one is of Cindy Kate, a seductive performer well known among less savoury circles."
+	name = "Pinup Girl Lioness"
+	desc = "This particular one is of a beautiful woman dressed as a seductive lion."
 
 /datum/poster/bay_51
 	icon_state="bsposter51"
 	name = "space appreciation poster"
-	desc = "This is a poster produced by the Generic Space Company, as a part of a series of commemorative posters on the wonders of space. One of three."
+	desc = "This is a poster depicting the great unknown."
 
 /datum/poster/bay_52
 	icon_state="bsposter52"
@@ -267,29 +267,29 @@
 /datum/poster/bay_54
 	icon_state="bsposter54"
 	name = "firefighter poster"
-	desc = "This is a poster of a particularly stern looking firefighter. The caption reads, \"Only you can prevent space fires.\""
+	desc = "This is a poster of a particularly stern looking firefighter. The caption reads, \"Only you can prevent fires.\""
 
 /datum/poster/bay_55
 	icon_state="bsposter55"
 	name = "Earth appreciation poster"
-	desc = "This is a poster produced by the Generic Space Company, as a part of a series of commemorative posters on the wonders of space. Two of three."
+	desc = "This is a poster displaying an HD view of Earth from space."
 
 /datum/poster/bay_56
 	icon_state="bsposter56"
 	name = "Mars appreciation poster"
-	desc = "This is a poster produced by the Generic Space Company, as a part of a series of commemorative posters on the wonders of space. Three of three."
+	desc = "This is a poster displaying an HD view of Mars from space."
 
 /datum/poster/bay_57
 	icon_state="bsposter57"
-	name = "space carp warning poster"
-	desc = "This poster tells of the dangers of space carp infestations."
+	name = "Purple Carp"
+	desc = "This poster depicts some sort of savory fish."
 
 /datum/poster/bay_58
 	icon_state="bsposter58"
-	name = "space carp information poster"
-	desc = "This poster showcases an old spacer saying on the dangers of migrant space carp."
+	name = "purple carp information"
+	desc = "This poster showcases purple carp migration patterns."
 
 /datum/poster/bay_59
 	icon_state="bsposter59"
-	name = "poster - Miss Science 2558"
-	desc = "A large piece of space-resistant printed paper. This pin-up poster depicts a woman wearing a NanoTrasen labcoat, a bikini, and a sheepish grin. She's shyly posing atop some highly specialized research equipment."
+	name = "poster - Miss Science 2008"
+	desc = "This poster depicts a much younger Dr Rhoda Niobe, proudly wearing a bikini and labcoat."

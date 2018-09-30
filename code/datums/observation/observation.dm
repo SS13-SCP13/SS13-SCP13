@@ -201,21 +201,17 @@
 		global_listeners -= listener
 	return TRUE
 
-#define FUCKTHISLAG
 /decl/observ/proc/raise_event()
 	
-	#ifdef FUCKTHISLAG
-	return FALSE 
-	#endif 
-	
 	// Sanity
-	if (!args.len)
+	if (!length(args))
 		return FALSE
 
 	// Call the global listeners.
-	for (var/datum/listener in global_listeners)
-		var/list/callbacks = global_listeners[listener]
-		for (var/proc_call in callbacks)
+	for (var/L in global_listeners)
+		var/datum/listener = L
+
+		for (var/proc_call in global_listeners[listener])
 
 			// If the callback crashes, record the error and remove it.
 			try
@@ -229,9 +225,10 @@
 	var/source = args[1]
 	if (source in event_sources)
 		var/list/listeners = event_sources[source]
-		for (var/datum/listener in listeners)
-			var/list/callbacks = listeners[listener]
-			for (var/proc_call in callbacks)
+		for (var/L in listeners)
+			var/datum/listener = L
+			
+			for (var/proc_call in listeners[listener])
 
 				// If the callback crashes, record the error and remove it.
 				try

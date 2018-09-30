@@ -6,6 +6,7 @@
 	var/id = null
 	var/active = 0
 	var/operating = 0
+	var/sleep_time = 10
 	anchored = 1.0
 	use_power = 1
 	idle_power_usage = 2
@@ -45,7 +46,8 @@
 	use_power(5)
 	update_icon()
 	wifi_sender.activate(user)
-	sleep(10)
+	if (sleep_time)
+		sleep(sleep_time)
 	active = 0
 	update_icon()
 	operating = 0

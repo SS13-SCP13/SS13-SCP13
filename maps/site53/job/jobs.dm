@@ -17,22 +17,25 @@
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
 	allowed_ranks = list(/datum/mil_rank/civ/classd)
-	equip(var/mob/living/carbon/human/H)
-		..()
-		H.add_stats(rand(3,6), rand(3,6), rand(5,7)) // Str, Dex, Int.
-		H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 	var/static/list/used_numbers = list()
 
 
 
-/datum/job/assistant/equip(var/mob/living/carbon/human/H)
+/datum/job/assistant/equip(mob/living/carbon/human/H)
 	..()
+	H.add_stats(rand(1,6), rand(1,6), rand(1,7)) // Str, Dex, Int.
+	H.add_skills(rand(10,20), rand(5,10), rand(0,5), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
 	var/r = rand(100,9000)
 	while (used_numbers.Find(r))
 		r = rand(100,9000)
 	used_numbers += r
-	H.name = "D-[used_numbers[used_numbers.len]]"
+	H.name = random_name(H.gender, H.species.name)
 	H.real_name = H.name
+	if(istype(H.wear_id, /obj/item/weapon/card/id))
+		var/obj/item/weapon/card/id/ID = H.wear_id
+		ID.registered_name = "D-[used_numbers[used_numbers.len]]"
+		ID.update_name()
 
 
 
@@ -57,7 +60,8 @@
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1
+	access_adminlvl1,
+	access_keyauth
 	)
 	minimal_access = list()
 
@@ -88,7 +92,8 @@
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
-	access_adminlvl1
+	access_adminlvl1,
+	access_keyauth
 	)
 	minimal_access = list()
 
@@ -161,7 +166,7 @@
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(7,10), rand(7,10), rand(5,10)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(70,90), rand(70,90), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
@@ -190,7 +195,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(5,10), rand(5,10), rand(5,10)) // Str, Dex, Int.
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
 	minimal_access = list()
@@ -204,7 +209,7 @@
 	department_flag = SEC|COM
 	duties = "<big><b>As the Guard Commander, you have direct say over the Security department. You're not assigned to any zone, but instead should jump in where necessary or requested. You are to speak with your Zone Commanders oftenly, and assign new guards to the right zone, or where it's needed mostly.</span>"
 	economic_modifier = 8
-	minimal_player_age = 21
+	minimal_player_age = 15
 	ideal_character_age = 55
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
 	allowed_branches = list(
@@ -215,10 +220,10 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(8,10), rand(8,10), rand(7,10)) // Str, Dex, Int.
+		H.add_stats(rand(30,45), rand(50,65), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(90,100), rand(90,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4, access_keyauth)
 	minimal_access = list()
 
 /datum/job/ltofficer
@@ -244,7 +249,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(7,10), rand(7,10), rand(6,10)) // Str, Dex, Int.
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
@@ -260,7 +265,6 @@
 	duties = "<big><b>As the Guard you have more access than a Junior Guard, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
-	alt_titles = list("Agent")
 	minimal_player_age = 5
 	ideal_character_age = 30
 	alt_titles = null
@@ -275,7 +279,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(6,9), rand(6,9), rand(6,9)) // Str, Dex, Int.
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
@@ -291,7 +295,6 @@
 	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
-	alt_titles = list("Junior Agent")
 	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
@@ -305,7 +308,7 @@
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(6,9), rand(6,9), rand(6,9)) // Str, Dex, Int.
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_sciencelvl1)
@@ -410,7 +413,8 @@
 	access_sciencelvl4,
 	access_sciencelvl3,
 	access_sciencelvl2,
-	access_sciencelvl1)
+	access_sciencelvl1,
+	access_keyauth)
 	minimal_access = list()
 
 
@@ -425,7 +429,7 @@
 	department_flag = ENG
 	supervisors = "the Chief Engineer"
 	economic_modifier = 5
-	minimal_player_age = 7
+	minimal_player_age = 2
 	ideal_character_age = 30
 	alt_titles = list(
 		"Junior Maintenance Technician",
@@ -552,7 +556,7 @@
 	spawn_positions = 1
 	economic_modifier = 9
 	ideal_character_age = 40
-	minimal_player_age = 21
+	minimal_player_age = 15
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(/datum/mil_rank/security/o1, /datum/mil_rank/security/o2)
@@ -561,7 +565,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(80,100)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_keyauth)
 	minimal_access = list()
 
 // MEDICAL JOBS.
@@ -571,7 +575,7 @@
 	title = "Chief Medical Officer"
 	supervisors = "the Security Commander"
 	economic_modifier = 10
-	minimal_player_age = 21
+	minimal_player_age = 15
 	ideal_character_age = 48
 	alt_titles = list("Medical Director")
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/cmo
@@ -580,7 +584,7 @@
 	/datum/mil_rank/security/w2,
 	/datum/mil_rank/security/w3)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_keyauth)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -732,7 +736,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(50,70), rand(5,10))
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_mtflvl1)
 	minimal_access = list()
 
 
@@ -871,6 +875,7 @@
 	department_flag = CIV
 	total_positions = 1
 	spawn_positions = 1
+	minimal_player_age = 9
 	duties = "<big><b>As the Archivist, it is your job to make sure the proper test logs are digitalized and saved in the digital archive, thus safekeeping them forever. You must be picky and selective, and only get those with great quality out! <span style = 'color:red'>REMEMBER!</span> If you put in nonsensical things, or copypasta's such as Woody's got Wood, you will be permanently job banned WITHOUT chance to appeal.</span>"
 	supervisors = "the Research Director"
 	economic_modifier = 4
@@ -889,7 +894,7 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	access = list(access_archive)
 	minimal_access = list()
 
 /datum/job/o5rep
@@ -903,6 +908,7 @@
 	supervisors = "the Research Director"
 	economic_modifier = 4
 	minimal_player_age = 5
+	minimal_player_age = 9
 	ideal_character_age = 30
 	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/o5rep

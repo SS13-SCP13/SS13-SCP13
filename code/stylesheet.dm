@@ -83,6 +83,9 @@ h1.alert, h2.alert		{color: #000000;}
 .notice					{color: #000099;}
 .alium					{color: #00ff00;}
 .cult					{color: #800080; font-weight: bold; font-style: italic;}
+.safe					{color: #3BC92A;}
+.euclid					{color: #F3BE0B; font-style: italic;}
+.keter					{color: #FF0000; font-weight: bold; font-style: italic;}
 
 .reflex_shoot			{color: #000099; font-style: italic;}
 

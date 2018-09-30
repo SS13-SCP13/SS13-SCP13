@@ -220,6 +220,20 @@
 	darkness_view = -1
 	flash_protection = FLASH_PROTECTION_MODERATE
 
+/obj/item/clothing/glasses/threedglasses
+	name = "3D glasses"
+	desc = "A long time ago, people used these glasses to makes images from screens threedimensional."
+	icon_state = "3d"
+	item_state = "3d"
+	body_parts_covered = 0
+/*
+/obj/item/clothing/donator/wip
+	name = "3D glasses"
+	desc = "A long time ago, people used these glasses to makes images from screens threedimensional."
+	icon_state = "3d"
+	item_state = "3d"
+	body_parts_covered = 0
+*/
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
 	desc = "Protects the eyes from welders, approved by the mad scientist association."

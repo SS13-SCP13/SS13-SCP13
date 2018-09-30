@@ -2,12 +2,15 @@ GLOBAL_LIST_EMPTY(scp012s)
 
 /obj/item/paper/scp012
 	icon = 'icons/mob/scp012.dmi'
-	name = "On Mount Golgotha"
 	desc = "An old paper of handwritten sheet music, titled \"On Mount Golgotha\". The writing is in a conspicuous blood red."
 	w_class = ITEM_SIZE_NO_CONTAINER //Quick fix that may need more work in the future.
 	nothrow = TRUE
 	SCP = /datum/scp/SCP_012
+	anchored = 1
 	var/ticks = 0
+
+/obj/item/paper/scp012/examine(mob/user)
+	user << "<b><span class = 'euclid'><big>SCP-012</big></span></b> - [desc]"
 
 /datum/scp/SCP_012
 	name = "SCP-012"

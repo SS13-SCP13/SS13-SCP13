@@ -67,6 +67,27 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 937.5)
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 
+/obj/item/stack/tile/mono/dark
+	name = "dark mono tile"
+	singular_name = "dark mono tile"
+	icon_state = "tile"
+	matter = list(DEFAULT_WALL_MATERIAL = 937.5)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/monofloor
+	name = "mono floor"
+	singular_name = "mono floor"
+	icon_state = "tile"
+	matter = list(DEFAULT_WALL_MATERIAL = 937.5)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/mono/white
+	name = "white mono tile"
+	singular_name = "white mono tile"
+	icon_state = "tile"
+	matter = list(DEFAULT_WALL_MATERIAL = 937.5)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
  /obj/item/stack/tile/grid
 	name = "grey grid tile"
 	singular_name = "grey grid tile"
@@ -94,7 +115,7 @@
 	icon_state = "techtile_grid"
 	matter = list(DEFAULT_WALL_MATERIAL = 937.5)
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
-	
+
  /obj/item/stack/tile/techmaint
 	name = "dark techfloor tile"
 	singular_name = "dark techfloor tile"

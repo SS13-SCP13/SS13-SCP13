@@ -5,6 +5,8 @@
 #define MIN_CLIENT_VERSION	0		//Just an ambiguously low version for now, I don't want to suddenly stop people playing.
 									//I would just like the code ready should it ever need to be used.
 
+GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
+
 //#define TOPIC_DEBUGGING 1
 
 	/*
@@ -44,7 +46,7 @@
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
-		rustg_log_write(world.log, "Attempted use of scripts within a topic call, by [src]")
+		WRITE_LOG(world.log, "Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
 		//qdel(usr)
 		return
@@ -155,7 +157,30 @@
 		preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
-	apply_fps(prefs.clientfps)
+	apply_fps(prefs.clientfps ? prefs.clientfps : 30)
+
+	// retrieve the old mob
+	if (last_mob[ckey])
+		mob = last_mob[ckey]
+
+		// when Destroy() is called we end up getting removed from these lists
+		// even though we may not have been garbage-collected yet
+		// so append us to all relevant lists
+		// I think this only occurs with new_players but you never know
+		GLOB.mob_list |= mob 
+		GLOB.player_list |= mob 
+
+		if (isliving(mob))
+			GLOB.living_mob_list_ |= mob
+			var/mob/living/L = mob 
+			if (L.stat == DEAD)
+				GLOB.dead_mob_list_ |= mob
+		if (ishuman(mob))
+			GLOB.human_mob_list |= mob 
+		if (issilicon(mob))
+			GLOB.silicon_mob_list |= mob 
+		if (isghost(mob))
+			GLOB.ghost_mob_list |= mob
 
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
@@ -172,6 +197,11 @@
 	if(holder)
 		add_admin_verbs()
 		admin_memo_show()
+
+	// hacks
+	spawn (7)
+		if (src && ckey in GLOB.devs)
+			verbs |= /client/proc/cmd_dev_say
 
 	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
 	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
@@ -204,17 +234,36 @@
 	//DISCONNECT//
 	//////////////
 /client/Del()
+	if (mob)
+		if (last_mob[ckey] && last_mob[ckey] != mob)
+			qdel(last_mob[ckey])
+		last_mob[ckey] = mob
+		mob.Logout()
+	return Destroy()
+
+// made this remove a lot more references so clients properly GC
+/client/Destroy()
+	if (mob && mob.client == src)
+		mob.client = null
+	if (eye && ismob(eye) && eye:client == src)
+		eye:client = null
+	if (statobj && ismob(statobj) && statobj:client == src)
+		statobj:client = null 
+	if (virtual_eye && ismob(virtual_eye) && virtual_eye:client == src)
+		virtual_eye:client = null
+	if (prefs && prefs.client == src)
+		prefs.client = null
+	key = null 
 	ticket_panels -= src
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
+	if (donator_holder && donator_holder.client == src)
+		donator_holder.client = null
 	GLOB.ckey_directory -= ckey
 	GLOB.clients -= src
-	return ..()
-
-/client/Destroy()
 	..()
-	return QDEL_HINT_HARDDEL_NOW
+	return QDEL_HINT_IWILLGC
 
 // here because it's similar to below
 
@@ -344,11 +393,19 @@
 		'html/panels.css',
 		'html/spacemag.css',
 		'html/images/loading.gif',
-		'html/images/ntlogo.png',
-		'html/images/bluentlogo.png',
-		'html/images/sollogo.png',
-		'html/images/terralogo.png',
-		'html/images/talisman.png'
+		'html/images/eng.png',
+		'html/images/sec.png',
+		'html/images/med.png',
+		'html/images/sci.png',
+		'html/images/ethics.png',
+		'html/images/log.png',
+		'html/images/isd.png',
+		'html/images/admin.png',
+		'html/images/o5.png',
+		'html/images/ecd.png',
+		'html/images/int.png',
+		'html/images/mtf.png',
+		'html/images/scplogo.png'
 		)
 
 	spawn (10) //removing this spawn causes all clients to not get verbs.
@@ -373,4 +430,4 @@ client/verb/character_setup()
 
 /client/proc/apply_fps(var/client_fps)
 	if(world.byond_version >= 511 && byond_version >= 511 && client_fps >= CLIENT_MIN_FPS && client_fps <= CLIENT_MAX_FPS)
-		vars["fps"] = prefs.clientfps
+		vars["fps"] = client_fps

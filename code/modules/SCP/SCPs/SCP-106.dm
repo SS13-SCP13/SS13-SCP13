@@ -8,9 +8,9 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	var/last_x = -1
 	var/last_y = -1
 	var/last_z = -1
-	
+
 /mob/living/carbon/human/scp106/examine(mob/user)
-	user << "<b><span class = 'info'><big>SCP-106</big></span></b> - [desc]"
+	user << "<b><span class = 'keter'><big>SCP-106</big></span></b> - [desc]"
 
 /datum/scp/SCP_106
 	name = "SCP-106"
@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /obj/sprite_helper/scp106
 	icon = 'icons/mob/scp106.dmi'
-		
+
 /mob/living/carbon/human/scp106/IsAdvancedToolUser()
 	return FALSE
 
@@ -54,7 +54,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 /mob/living/carbon/human/scp106/forceMove(destination)
 	. = ..(destination)
 	update_stuff_PD()
-	
+
 /mob/living/carbon/human/scp106/proc/update_stuff_PD()
 
 	if (loc in GLOB.scp106_floors)
@@ -79,7 +79,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 	if (!vis_contents.len)
 		vis_contents += new /obj/sprite_helper/scp106
-		
+
 	// we're lying, turn right
 	var/obj/scp106_sprite_helper = vis_contents[vis_contents.len]
 	if (lying)
@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /mob/living/carbon/human/scp106/handle_breath()
 	return 1
-	
+
 /mob/living/carbon/human/scp106/movement_delay()
 	return -1.5
 
@@ -110,7 +110,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	// stupid hack
 	if (client)
 		target = null
-		return target 
+		return target
 
 	/* if we have no target, or our target is dead, or our target is a nonhuman, or our target is out of view,
 	 * try to find a better one. Failing to do so just makes us continue to go after the old target */
@@ -156,7 +156,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		// moves slightly faster than humans
 		walk_to(src, target, 1, 0.7+config.run_speed)
 		return TRUE
-		
+
 	walk(src, null)
 
 	if (!locate(/obj/item/grab) in src)
@@ -210,13 +210,17 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	set desc = "Phase through an object in front of you."
 	if (world.time < phase_cooldown)
 		return
+
 	for (var/obj/O in get_step(src, dir))
-	
+
 		if (!isstructure(O) && !ismachinery(O))
 			continue
-	
+
+		if (istype(O, /obj/machinery/shieldwall))
+			continue
+
 		phase_cooldown = world.time + (PHASE_TIME + 5)
-		
+
 		var/initial_loc = loc
 		var/atom/sprite = null
 
@@ -313,22 +317,104 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		L.forceMove(pick(GLOB.scp106_floors))
 
 // the femur breaker
-/obj/structure/femur_breaker 
+/obj/structure/femur_breaker
 	icon = 'icons/obj/femurbreaker.dmi'
 	density = TRUE
+	anchored = TRUE
+	buckle_lying = 1
+	var/spent_mobs = list()
+	var/_wifi_id = "femurbreaker"
+	var/datum/wifi/receiver/button/femur_breaker/wifi_receiver = null
 
-/obj/structure/femur_breaker/MouseDrop_T(mob/target, mob/user)
-	if (target && user && ishuman(target))
-		visible_message("<span class = 'warning'>[target] starts to put [user] into the femur breaker...</span>")
-		if (do_mob(user, target, 3 SECONDS))
-			visible_message("<span class = 'danger'>[target] puts [user] into the femur breaker.</span>")
-			var/mob/living/carbon/human/H = target
-			H.forceMove(get_turf(src))
-			for (var/obj/item/organ/external/leg/L in H.organs)
-				if (!(L.status & BROKEN))
-					L.fracture()
-					spawn (10 SECONDS)
-						for (var/scp106 in GLOB.scp106s)
-							var/atom/movable/A = scp106 
-							A.forceMove(pick(GLOB.scp106_spawnpoints))
+/obj/structure/femur_breaker/Initialize()
+	. = ..()
+	if(_wifi_id)
+		wifi_receiver = new(_wifi_id, src)
+
+/obj/structure/femur_breaker/Destroy()
+	qdel(wifi_receiver)
+	wifi_receiver = null
+	return ..()
+
+/obj/structure/femur_breaker/attackby(obj/item/W, mob/user)
+	var/obj/item/grab/G = W
+
+	if (G && istype(G) && G.affecting && ishuman(G.affecting))
+		var/mob/living/carbon/human/target = G.affecting
+
+		if (buckled_mob)
+			to_chat(user, "It is already in use.")
+		else if (target && user && ishuman(target))
+			visible_message("<span class = 'warning'>[user] starts to put [target] onto the femur breaker...</span>")
+			if (do_mob(user, target, 3 SECONDS))
+				visible_message("<span class = 'danger'>[user] puts [target] onto the femur breaker.</span>")
+				var/mob/living/carbon/human/H = target
+				H.forceMove(get_turf(src))
+				H.buckled = src
+				buckled_mob = H
+
+		qdel(G)
+
+/obj/structure/femur_breaker/attack_hand(mob/user)
+	if (buckled_mob && buckled_mob != user)
+
+		visible_message("<span class = 'notice'>[user] unbuckles [buckled_mob] from the femur breaker.</span>")
+		buckled_mob.buckled = null
+		buckled_mob.Move(get_step(buckled_mob, buckled_mob.dir))
+
+		var/nextdir = EAST
+		var/iterations = 0
+		while (buckled_mob.loc == get_turf(src))
+			var/nextturf = get_step(buckled_mob, nextdir)
+			buckled_mob.Move(nextturf)
+			nextdir = next_in_list(nextdir, list(NORTH, EAST, SOUTH, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST))
+			if (++iterations > 20)
+				break
+
+		buckled_mob.anchored = FALSE
+		buckled_mob = null
+
+/obj/structure/femur_breaker/proc/activate()
+	set waitfor = FALSE
+	for (var/mob/living/carbon/human/H in get_turf(src))
+		playsound(src, 'sound/scp/machinery/femur_breaker.ogg', 100)
+		sleep(2.8 SECONDS)
+		for (var/obj/item/organ/external/leg/L in H.organs)
+			if (!(L.status & BROKEN))
+				L.fracture()
+				if (spent_mobs[H])
+					return
+				sleep(10 SECONDS)
+				for (var/scp106 in GLOB.scp106s)
+					var/atom/movable/A = scp106
+					A.forceMove(GLOB.scp106_spawnpoints[1])
 					break
+				sleep(40 SECONDS)
+				for (var/scp106 in GLOB.scp106s)
+					var/atom/movable/A = scp106
+					if (get_area(A) != get_area(GLOB.scp106_spawnpoints[1]))
+						if (!(A.loc in GLOB.scp106_floors))
+							return // failed
+				sleep(30 SECONDS)
+				var/active_shield_generators = 0
+				for (var/obj/machinery/shieldwallgen/G in get_area(GLOB.scp106_spawnpoints[1]))
+					if (G.active)
+						++active_shield_generators
+
+				if (active_shield_generators < 4)
+					return // failed
+
+				world << sound('sound/scp/machinery/femur_breaker_success.ogg')
+				spent_mobs[H] = TRUE
+				return
+
+/obj/machinery/button/femur_breaker
+	name = "Femur Breaker Button"
+	icon = 'icons/obj/objects.dmi'
+	_wifi_id = "femurbreaker"
+	sleep_time = 90 SECONDS
+
+/obj/machinery/button/femur_breaker/Initialize()
+	if(_wifi_id)
+		wifi_sender = new/datum/wifi/sender/femur_breaker(_wifi_id, src)
+	. = ..()

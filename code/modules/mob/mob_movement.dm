@@ -322,6 +322,9 @@
 				move_delay += 2
 				return mob.buckled.relaymove(mob,direct)
 
+			else if (istype(mob.buckled, /obj/structure/femur_breaker))
+				return
+
 		if(mob.check_slipmove())
 			return
 

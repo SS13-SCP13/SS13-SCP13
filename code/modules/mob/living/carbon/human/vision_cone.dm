@@ -52,32 +52,29 @@
 			return FALSE
 	return .
 
-/proc/cone(atom/center, dir = NORTH, list/list)
-	. = list
-	for(var/atom in .)
+/proc/cone(atom/center, dir = NORTH, list/L, typecheck = /atom)
+	. = list()
+	for(var/atom in L)
 		var/atom/A = atom
-		if(!A.InCone(center, dir))
-			. -= A
+		if (typecheck == /atom || istype(A, typecheck))
+			if(A.InCone(center, dir))
+				. += A
 
 /mob/proc/update_vision_cone()
 	return FALSE
 
 /mob/living/carbon/human/update_vision_cone()
-	var/delay = 10
-	if(client)
-		var/image/I = null
-		for(var/image in client.hidden_images)
-			I = image
-			I.override = FALSE
-			delete_image(I, delay)
-			delay += 10
-		check_fov()
-		client.hidden_images.Cut()
-		hidden_atoms.Cut()
-		hidden_mobs.Cut()
+
+	set waitfor = FALSE
+
+	if (reset_vision_cone())
+
 		fov.dir = dir
 		if(fov.alpha)
-			for(var/mob/living/L in cone(src, OPPOSITE_DIR(dir), oviewers(src)))
+			var/image/I = null
+			for(var/living in cone(src, OPPOSITE_DIR(dir), oviewers(src), /mob/living))
+
+				var/mob/living/L = living
 			
 				var/list/things = L.vis_contents+L
 				
@@ -94,17 +91,32 @@
 
 						if(pulling == L)//If we're pulling them we don't want them to be invisible, too hard to play like that.
 							I.override = FALSE
-
-						else if(L.footstep >= 1)
+						else if (L.footstep >= 1)
 							L.in_vision_cones[client] = TRUE
 
 			// items are invisible too
-			for(var/obj/item/item in cone(src, OPPOSITE_DIR(dir), oview(src)))
+			for(var/item in cone(src, OPPOSITE_DIR(dir), oview(get_turf(src)), /obj/item)) // http://www.byond.com/docs/ref/info.html#/proc/view
 				I = image("split", item)
 				I.override = TRUE
 				client.images += I
 				client.hidden_images += I
 				hidden_atoms += item
+
+/mob/living/carbon/human/proc/reset_vision_cone()
+	var/delay = 10
+	if(client)
+		for(var/image in client.hidden_images)
+			var/image/I = image
+			client.images -= I
+			I.override = FALSE
+			delete_image(I, delay)
+			delay += 10
+		check_fov()
+		client.hidden_images.Cut()
+		hidden_atoms.Cut()
+		hidden_mobs.Cut()
+		return TRUE 
+	return FALSE
 
 /mob/living/carbon/human/proc/delete_image(image, delay)
 	set waitfor = FALSE 
