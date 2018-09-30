@@ -99,6 +99,7 @@ proc/get_open_ticket_by_client(var/datum/client_lite/owner)
 
 /datum/ticket_panel/proc/get_dat()
 	var/client/C = ticket_panel_window.user.client
+
 	if(!C)
 		return
 
@@ -219,7 +220,7 @@ proc/get_open_ticket_by_client(var/datum/client_lite/owner)
 	set name = "View Tickets"
 	set category = "Admin"
 
-	var/datum/ticket_panel/ticket_panel = new()
+	var/datum/ticket_panel/ticket_panel = new
 	ticket_panels[src] = ticket_panel
 	ticket_panel.ticket_panel_window = new(src.mob, "ticketpanel", "Ticket Manager", 1024, 768, ticket_panel)
 
@@ -228,6 +229,11 @@ proc/get_open_ticket_by_client(var/datum/client_lite/owner)
 
 /proc/update_ticket_panels()
 	for(var/client/C in ticket_panels)
+
+		if (isnull(C))
+			ticket_panels -= C
+			continue 
+
 		var/datum/ticket_panel/ticket_panel = ticket_panels[C]
 		if(C.mob != ticket_panel.ticket_panel_window.user)
 			C.view_tickets()
