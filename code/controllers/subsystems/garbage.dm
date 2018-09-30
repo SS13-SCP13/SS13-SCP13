@@ -285,10 +285,17 @@ SUBSYSTEM_DEF(garbage)
 /proc/qdel(datum/D, force=FALSE)
 	if(!D)
 		return
+
 	if(!istype(D))
 		crash_with("qdel() can only handle /datum (sub)types, was passed: [log_info_line(D)]")
 		del(D)
 		return
+
+	// attempt to fix startup hard deletes - Kachnov
+	if (world.time < 30 SECONDS)
+		qdel_after(D, 30 SECONDS)
+		return
+
 	var/datum/qdel_item/I = SSgarbage.items[D.type]
 	if (!I)
 		I = SSgarbage.items[D.type] = new /datum/qdel_item(D.type)
