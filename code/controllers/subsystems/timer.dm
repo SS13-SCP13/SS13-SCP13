@@ -2,7 +2,9 @@
 #define BUCKET_POS(timer) (round((timer.timeToRun - SStimer.head_offset) / world.tick_lag) + 1)
 #define TIMER_ID_MAX (2**24) //max float with integer precision
 
-SUBSYSTEM_DEF(timer)
+var/datum/controller/subsystem/timer/SStimer
+
+/datum/controller/subsystem/timer
 	name = "Timer"
 	wait = 1 //SS_TICKER subsystem, so wait is in ticks
 	init_order = 1
@@ -29,6 +31,9 @@ SUBSYSTEM_DEF(timer)
 
 	var/static/times_flushed = 0
 	var/static/times_crashed = 0
+
+/datum/controller/subsystem/timer/New()
+	NEW_SS_GLOBAL(SStimer)
 
 /datum/controller/subsystem/timer/stat_entry(msg)
 	..("B:[bucket_count] P:[length(processing)] H:[length(hashes)] C:[length(clienttime_timers)][times_crashed ? " F:[times_crashed]" : ""]")
