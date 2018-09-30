@@ -189,7 +189,8 @@ steam.start() -- spawns the effect
 /obj/effect/effect/smoke/proc/killme()
 	set waitfor = FALSE
 	sleep(time_to_live)
-	qdel(src)
+	if (src)
+		qdel(src)
 
 /obj/effect/effect/smoke/Crossed(mob/living/carbon/M as mob )
 	..()
