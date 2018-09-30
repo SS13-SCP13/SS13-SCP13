@@ -118,6 +118,10 @@
 #define show_image(target, image)                           target << image
 #define send_rsc(target, rsc_content, rsc_name)             target << browse_rsc(rsc_content, rsc_name)
 
+// file writes on Unix are much much faster than rust_g, but rust_g is 10x faster than using the vanilla Windows system
+#define rustg_log_write(filename, text) world.system_type == UNIX ? \
+	file(filename) << text : call("tools/rust_g.dll", "log_write")(filename, text)
+
 #define MAP_IMAGE_PATH "nano/images/[GLOB.using_map.path]/"
 
 #define map_image_file_name(z_level) "[GLOB.using_map.path]-[z_level].png"

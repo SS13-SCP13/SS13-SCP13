@@ -146,10 +146,23 @@ mob/living/carbon/human/airflow_hit(atom/A)
 		Stun(round(airflow_speed * vsc.airflow_stun/2))
 	. = ..()
 
-zone/proc/movables()
+// zone stuff is here now, thank you bay, very cool! - Kachnov
+/zone/var/list/turfs = list()
+
+/zone/New()
+	..()
+	for (var/turf/T in contents)
+		turfs += T
+
+/zone/proc/movables()
 	. = list()
-	for(var/turf/T in contents)
-		for(var/atom/movable/A in T)
+	for(var/turf in turfs)
+		if (!turf)
+			turfs -= turf 
+			continue
+		var/turf/T = turf
+		for(var/movable in T)
+			var/atom/movable/A = movable
 			if(!A.simulated || A.anchored || istype(A, /obj/effect) || isobserver(A))
 				continue
 			. += A
