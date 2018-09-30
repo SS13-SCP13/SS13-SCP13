@@ -184,8 +184,12 @@ steam.start() -- spawns the effect
 
 /obj/effect/effect/smoke/New()
 	..()
-	spawn (time_to_live)
-		qdel(src)
+	killme()
+
+/obj/effect/effect/smoke/proc/killme()
+	set waitfor = false
+	sleep(time_to_live)
+	qdel(src)
 
 /obj/effect/effect/smoke/Crossed(mob/living/carbon/M as mob )
 	..()
