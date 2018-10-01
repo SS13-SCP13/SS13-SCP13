@@ -118,7 +118,6 @@
 	// Create robolimbs for chargen.
 	populate_robolimb_list()
 
-	master_controller = new /datum/controller/game_controller()
 	Master.Initialize(10, FALSE)
 
 #ifdef UNIT_TEST
