@@ -33,6 +33,7 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
+  - experiment: "Added in new subtypes for blastdoors. 1x2 and 1x4 remain in private testing currently."
   - bugfix: "Fixed SCP-012's camera network not showing."
   - bugfix: "Fixed Yellow Alert not being displayed on change alert level."
   - bugfix: "Fixed residual bugs in Guard Commander and Cell Warden."
@@ -54,3 +55,5 @@ changes:
   - tweak: "Increased the amount of EMT's to 2."
   - tweak: "Nerfed the damage taken from SCP-106's Pocket Dimension from 5 to 3 every tick."
   - tweak: "Raised D-Class respawn rate from 5 minutes to 10 minutes."
+  - imageadd: "Ported over a better rack sprite."
+  - soundadd: "Added a new ambience file for 049's containment chamber."
