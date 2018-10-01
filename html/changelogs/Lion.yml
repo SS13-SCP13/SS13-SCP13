@@ -52,3 +52,4 @@ changes:
   - maptweak: "Adds wrenches for the suspension field generators."
   - tweak: "Increased the amount of EMT's to 2."
   - tweak: "Nerfed the damage taken from SCP-106's Pocket Dimension from 5 to 3 every tick."
+  - tweak: "Raised D-Class respawn rate from 5 minutes to 10 minutes."
