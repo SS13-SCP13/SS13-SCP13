@@ -755,7 +755,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		if(input("The evacuation will just be cancelled if you call it. Call anyway?") in list("Confirm", "Cancel") != "Confirm")
 			return
 
-	var/choice = input("Is this an emergency evacuation or a crew transfer?") in list("Emergency", "Crew Transfer")
+	var/choice = input("Call the emergency shuttle?") in list("Emergency")
 	evacuation_controller.call_evacuation(usr, (choice == "Emergency"))
 
 	feedback_add_details("admin_verb","CSHUT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -853,10 +853,10 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		to_chat(usr, "Random events disabled")
 		message_admins("Admin [key_name_admin(usr)] has disabled random events.", 1)
 	feedback_add_details("admin_verb","TRE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	
-	
+
+
 /client/proc/cmd_admin_cryo(mob/living/M as mob in GLOB.mob_list)
-	set category = "Special Verbs"	
+	set category = "Special Verbs"
 
 	set name = "Admin Cryo"
 	if(!check_rights(R_MOD))
