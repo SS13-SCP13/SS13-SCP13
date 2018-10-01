@@ -23,9 +23,6 @@
 		return
 
 	switch(controller)
-		if("Master")
-			debug_variables(master_controller)
-			feedback_add_details("admin_verb","DMC")
 		if("Ticker")
 			debug_variables(ticker)
 			feedback_add_details("admin_verb","DTicker")

@@ -646,6 +646,8 @@
 	name = "\improper SCP-049 Containment Chamber"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	ambience = list('sound/ambience/hcz/049/Room049.ogg')
+	ambience_crb = list('sound/ambience/hcz/049/Room049.ogg')
 
 /area/site53/lhcz/hallway
 	name = "\improper Lower Heavy Containment Hallways"
