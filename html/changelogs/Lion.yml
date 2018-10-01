@@ -50,3 +50,4 @@ changes:
   - maptweak: "Remapped and relocated the bloody telecommunications area. I hope this fixes it."
   - maptweak: "Adds wrenches for the suspension field generators."
   - tweak: "Increased the amount of EMT's to 2."
+  - tweak: "Nerfed the damage taken from SCP-106's Pocket Dimension from 5 to 3 every tick."

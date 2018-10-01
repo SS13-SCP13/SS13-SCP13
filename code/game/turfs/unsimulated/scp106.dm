@@ -32,7 +32,7 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 					if (I.scp106_vulnerable && !(I.status & ORGAN_DEAD) && prob(10))
 						I.scp106_affected = TRUE
 						break
-			L.adjustFireLoss(5)
+			L.adjustFireLoss(3)
 
 // walls
 /turf/unsimulated/wall/scp106
