@@ -1,0 +1,8 @@
+author: Buffalowing
+delete-after: True
+
+changes: 
+  - bugfix: "SCP-294 will now dispense correct reagents as they're inputted"
+  - maptweak: "Full implemented the escape train"
+  - maptweak: "Minor cosmetic changes to escape train area"
+  - rscadd: "Added a few animated sprites"
