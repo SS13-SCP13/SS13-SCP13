@@ -181,6 +181,8 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 			GLOB.silicon_mob_list |= mob 
 		if (isghost(mob))
 			GLOB.ghost_mob_list |= mob
+	else 
+		last_mob[ckey] = mob
 
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()

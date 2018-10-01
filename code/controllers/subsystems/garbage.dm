@@ -285,10 +285,13 @@ SUBSYSTEM_DEF(garbage)
 /proc/qdel(datum/D, force=FALSE)
 	if(!D)
 		return
+
 	if(!istype(D))
 		crash_with("qdel() can only handle /datum (sub)types, was passed: [log_info_line(D)]")
 		del(D)
 		return
+
+
 	var/datum/qdel_item/I = SSgarbage.items[D.type]
 	if (!I)
 		I = SSgarbage.items[D.type] = new /datum/qdel_item(D.type)
@@ -301,6 +304,12 @@ SUBSYSTEM_DEF(garbage)
 		var/start_tick = world.tick_usage
 		var/hint = D.Destroy(force) // Let our friend know they're about to get fucked up.
 		D.SendSignal(COMSIG_PARENT_QDELETED)
+
+		// stops false positives from deleting during startup; let BYOND's GC handle it after Destroy() is called
+		if (world.time < 10 SECONDS && (hint in list(QDEL_HINT_QUEUE, QDEL_HINT_IWILLGC)))
+			D.gc_destroyed = world.time
+			return
+		
 		if(world.time != start_time)
 			I.slept_destroy++
 		else

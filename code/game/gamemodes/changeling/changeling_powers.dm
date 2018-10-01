@@ -93,9 +93,9 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	return 1
 
 //removes our changeling verbs
-/mob/proc/remove_changeling_powers()
+/mob/proc/remove_changeling_powers(remove_decap_immunity = 1)
 	if(!mind || !mind.changeling)	return
-	if(iscarbon(src))
+	if(remove_decap_immunity && iscarbon(src))
 		var/mob/living/carbon/C = src
 		var/obj/item/organ/internal/brain/brain = C.internal_organs_by_name[BP_BRAIN]
 		if(brain)
@@ -372,7 +372,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	var/mob/living/carbon/human/C = src
 
 	changeling.chem_charges--
-	C.remove_changeling_powers()
+	C.remove_changeling_powers(0)
 	C.visible_message("<span class='warning'>[C] transforms!</span>")
 	C.dna = chosen_dna.Clone()
 
@@ -444,7 +444,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	to_chat(C, "<span class='notice'>We will attempt to regenerate our form.</span>")
 	C.status_flags |= FAKEDEATH		//play dead
 	C.update_canmove()
-	C.remove_changeling_powers()
+	C.remove_changeling_powers(0)
 
 	C.emote("gasp")
 
@@ -835,7 +835,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	if(!changeling)
 		return 0
 
-	for(var/obj/item/I in list(get_active_hand() + get_inactive_hand()))
+	for(var/obj/item/I in list(get_active_hand(), get_inactive_hand()))
 		if(istype(I, /obj/item/weapon/melee/arm_blade))
 			playsound(src, 'sound/effects/blobattack.ogg', 30, 1)
 			visible_message("<span class='warning'>With a sickening crunch, [src] reforms their blade into an arm!</span>", "<span class='notice'>We assimilate the blade back into our body.</span>", "<span class='italics>You hear organic matter ripping and tearing!</span>")
