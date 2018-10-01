@@ -315,7 +315,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		else
 			to_chat(src, "<span class = 'danger'>The game has not started yet, or has already ended.</span>")
 	else
-		to_chat(src, "<span class = 'danger'>You cannot spawn as a D-Class for [round(((5 MINUTES) - (world.time - timeofdeath))/600)] more minutes.</span>")
+		to_chat(src, "<span class = 'danger'>You cannot spawn as a D-Class for [round(((10 MINUTES) - (world.time - timeofdeath))/600)] more minutes.</span>")
 
 /mob/observer/ghost/verb/become_scp()
 	set category = "Ghost"
