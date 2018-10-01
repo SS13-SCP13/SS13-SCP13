@@ -102,7 +102,7 @@
 "bX" = (/obj/structure/railing/mapped{icon_state = "railing0"; dir = 8},/turf/simulated/floor/reinforced,/area/site53/surface/surface)
 "bY" = (/obj/structure/railing/mapped,/turf/simulated/floor/reinforced,/area/site53/surface/surface)
 "bZ" = (/obj/structure/railing/mapped{icon_state = "railing0"; dir = 4},/obj/structure/railing/mapped,/turf/simulated/floor/reinforced,/area/site53/surface/surface)
-"ca" = (/obj/machinery/door/airlock/security{name = "Communications Tower"; req_access = list(303)},/obj/item/taperoll/engineering/applied,/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
+"ca" = (/obj/machinery/door/airlock/security{locked = 1; name = "Communications Tower"; req_access = list(303)},/obj/item/taperoll/engineering/applied,/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
 "cb" = (/turf/simulated/wall/r_wall,/area/site53/upper_surface/commstower)
 "cc" = (/turf/unsimulated/mask,/area/site53/upper_surface/commstower)
 "cf" = (/obj/effect/paint_stripe/green,/turf/simulated/wall/r_wall,/area/site53/surface/surface)
