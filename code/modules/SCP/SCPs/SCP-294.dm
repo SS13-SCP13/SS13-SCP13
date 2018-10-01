@@ -79,5 +79,6 @@
 	else
 		for(var/X in global.chemical_reagent_list)
 			var/datum/reagent/R = global.chemical_reagent_list[X]
-			if (lowertext(input) == lowertext(R.name))
+			if (ckey(input) == ckey(R.name))
 				return R.type
+
