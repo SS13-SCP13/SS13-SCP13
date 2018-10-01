@@ -43,6 +43,116 @@
 
 		"}
 
+/obj/item/weapon/book/manual/scp/fra
+	name = "Foundation Regulations"
+	desc = "A book that has a comprehensive list of Foundation Regulations."
+	icon_state = "book1"
+	author = "The Internal Security Department"
+	title = "Foundation Regulations"
+
+/obj/item/weapon/book/manual/scp/fra/Initialize()
+	. = ..()
+	dat = {"
+
+		<html><head>
+		</head>
+
+		<body>
+		<iframe width='100%' height='97%' src="http://wiki.scp13.site/index.php?title=Foundation_Regulations&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		</body>
+
+		</html>
+
+		"}
+
+/obj/item/weapon/book/manual/scp/secsop
+	name = "Standard Operating Procedure - Security Department"
+	desc = "THE book that tells you not to be shit at your job."
+	icon_state = "book2"
+	author = "The Internal Security Department"
+	title = "Security SoP"
+
+/obj/item/weapon/book/manual/scp/secsop/Initialize()
+	. = ..()
+	dat = {"
+
+		<html><head>
+		</head>
+
+		<body>
+		<iframe width='100%' height='97%' src="http://wiki.scp13.site/index.php?title=Security_SOP&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		</body>
+
+		</html>
+
+		"}
+
+/obj/item/weapon/book/manual/scp/scisop
+	name = "Standard Operating Procedure - Science Department"
+	desc = "THE book that tells you not to be shit at your job."
+	icon_state = "book6"
+	author = "The Administrative Department"
+	title = "Science SoP"
+
+/obj/item/weapon/book/manual/scp/scisop/Initialize()
+	. = ..()
+	dat = {"
+
+		<html><head>
+		</head>
+
+		<body>
+		<iframe width='100%' height='97%' src="http://wiki.scp13.site/index.php?title=Research_SOP&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		</body>
+
+		</html>
+
+		"}
+
+/obj/item/weapon/book/manual/scp/medsop
+	name = "Standard Operating Procedure - Medical Department"
+	desc = "THE book that tells you not to be shit at your job."
+	icon_state = "book4"
+	author = "The Administrative Department"
+	title = "Medical SoP"
+
+/obj/item/weapon/book/manual/scp/medsop/Initialize()
+	. = ..()
+	dat = {"
+
+		<html><head>
+		</head>
+
+		<body>
+		<iframe width='100%' height='97%' src="http://wiki.scp13.site/index.php?title=Medical_SOP&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		</body>
+
+		</html>
+
+		"}
+
+/obj/item/weapon/book/manual/scp/engsop
+	name = "Standard Operating Procedure - Engineering Department"
+	desc = "THE book that tells you not to be shit at your job."
+	icon_state = "book3"
+	author = "The Administrative Department"
+	title = "Engineering SoP"
+
+/obj/item/weapon/book/manual/scp/engsop/Initialize()
+	. = ..()
+	dat = {"
+
+		<html><head>
+		</head>
+
+		<body>
+		<iframe width='100%' height='97%' src="http://wiki.scp13.site/index.php?title=Engineering_SOP&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		</body>
+
+		</html>
+
+		"}
+
 /obj/item/weapon/book/manual/mil_sop
 	name = "Military Operating Procedure"
 	desc = "SOP in Site DS90."
