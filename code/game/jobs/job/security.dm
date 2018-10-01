@@ -34,7 +34,7 @@
 	spawn_positions = 6
 	supervisors = "the Chief of Security"
 	economic_modifier = 4
-	alt_titles = list("Senior Agent")
+//	alt_titles = list("Senior Agent")
 	minimal_player_age = 10
 	ideal_character_age = 45
 	selection_color = "#601c1c"
@@ -98,7 +98,7 @@
 	title = "Security Officer"
 	department = "Security"
 	department_flag = SEC
-	alt_titles = list("Agent")
+//	alt_titles = list("Agent")
 
 	total_positions = 6
 	spawn_positions = 6
@@ -114,7 +114,7 @@
 	title = "Security Private"
 	department = "Security"
 	department_flag = SEC
-	alt_titles = list("Junior Agent")
+//	alt_titles = list("Junior Agent")
 
 	total_positions = 6
 	spawn_positions = 6
