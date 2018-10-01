@@ -12,3 +12,17 @@
 
 /turf/unsimulated/wall/other
 	icon_state = "r_wall"
+
+
+//putting the escape shuttle stuff in here for convenience fight me -buffalowing
+/turf/unsimulated/tunnelwall
+	name = "tunnel wall"
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "rockanimated"
+	density = 1
+
+/turf/unsimulated/platinganimated
+	name = "tunnel floor"
+	icon = 'icons/turf/flooring/plating.dmi'
+	icon_state = "platinganimated"
+	density = 1

@@ -170,6 +170,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 		on = 0
 	use_power = on
 
+#define NO_TELECOMMS_ATMOS // stops telecomms from malfunctioning when there's no atmos
 /obj/machinery/telecomms/Process()
 	update_power()
 
@@ -177,13 +178,16 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 		overloaded_for--
 
 	// Check heat and generate some
+	#ifndef NO_TELECOMMS_ATMOS
 	checkheat()
+	#endif
 
 	// Update the icon
 	update_icon()
 
 	if(traffic > 0)
 		traffic -= netspeed
+#undef NO_TELECOMMS_ATMOS
 
 /obj/machinery/telecomms/emp_act(severity)
 	if(prob(100/severity))

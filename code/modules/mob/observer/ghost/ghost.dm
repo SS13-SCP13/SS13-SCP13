@@ -206,7 +206,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!admin_ghosted)
 		announce_ghost_joinleave(mind, 0, "They now occupy their body again.")
 	return 1
-	
+
 /mob/observer/ghost/proc/reenter_corpse_p()
 	stop_following()
 	mind.current.key = key
@@ -286,19 +286,19 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	if(!fh.show_entry()) return
 	ManualFollow(fh.followed_instance)
-	
+
 /mob/observer/ghost/verb/become_classd()
 	set category = "Ghost"
 	set name = "Become D-Class"
 	set desc = "Spawn in as a new D-Class."
-	if (world.time - timeofdeath >= 5 MINUTES)
+	if (world.time - timeofdeath >= 10 MINUTES)
 		if (ticker.current_state == GAME_STATE_PLAYING)
 			// create and possess a new mob
 			var/mob/living/carbon/human/H = new
 			var/datum/job/ref = job_master.occupations_by_type[/datum/job/assistant]
 			if (ref && ref.is_position_available())
 				job_master.EquipRank(H, "Class D", TRUE)
-				
+
 				H.do_possession(src)
 				H.forceMove(get_turf(job_master.get_roundstart_spawnpoint("Class D")))
 
@@ -306,17 +306,17 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 				H.update_icon()
 
 				if (H.back)
-					var/deleted = H.back 
+					var/deleted = H.back
 					if (H.remove_from_mob(deleted))
 						qdel(deleted)
 
-			else 
+			else
 				to_chat(src, "<span class = 'danger'>This position is not available right now. Wait for another Class-D to die.</span>")
-		else 
+		else
 			to_chat(src, "<span class = 'danger'>The game has not started yet, or has already ended.</span>")
-	else 
+	else
 		to_chat(src, "<span class = 'danger'>You cannot spawn as a D-Class for [round(((5 MINUTES) - (world.time - timeofdeath))/600)] more minutes.</span>")
-				
+
 /mob/observer/ghost/verb/become_scp()
 	set category = "Ghost"
 	set name = "Become SCP"
