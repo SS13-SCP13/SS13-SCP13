@@ -79,7 +79,9 @@
 	else
 		for(var/X in global.chemical_reagent_list)
 			var/datum/reagent/R = global.chemical_reagent_list[X]
-			if(R && input == replacetext(lowertext(R.name), " ", ""))
+			if(R && findtext(input,R.name))
+				return R.type
+			else if(R && input == replacetext(lowertext(R.name), " ", ""))
 				return R.type
 			else if(R && input == replacetext(capitalize(R.name), " ", ""))
 				return R.type
