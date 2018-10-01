@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6	{color: #0000ff;font-family: Georgia, Verdana, sans-serif
 
 .ooc .everyone			{color: #002eb8;}
 .ooc .looc				{color: #3a9696;}
-.ooc .elevated			{color: #2e78d9;}
+.ooc .elevated			{color: #2798C0;}
 .ooc .moderator			{color: #184880;}
 .ooc .developer			{color: #1b521f;}
 .ooc .admin				{color: #b82e00;}

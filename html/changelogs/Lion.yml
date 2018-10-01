@@ -55,5 +55,6 @@ changes:
   - tweak: "Increased the amount of EMT's to 2."
   - tweak: "Nerfed the damage taken from SCP-106's Pocket Dimension from 5 to 3 every tick."
   - tweak: "Raised D-Class respawn rate from 5 minutes to 10 minutes."
+  - tweak: "Made Mentor's OOC messages stand out a bit more. Their previous color was akin to the admin logs one, which made their messages be drowned out to admins."
   - imageadd: "Ported over a better rack sprite."
   - soundadd: "Added a new ambience file for 049's containment chamber."
