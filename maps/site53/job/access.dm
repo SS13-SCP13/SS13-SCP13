@@ -139,3 +139,23 @@
 	id = access_keyauth
 	desc = "Keycard Authentication Access"
 	region = ACCESS_REGION_COMMAND
+
+// TELECOMMS
+
+/var/const/access_telecommsgen = 701
+/datum/access/telecommsgen
+	id = access_telecommsgen
+	desc = "Surface Level Server Farm"
+	region = ACCESS_REGION_COMMAND
+
+/var/const/access_servers = 702
+/datum/access/servers
+	id = access_servers
+	desc = "Basement Level Server Farm"
+	region = ACCESS_REGION_COMMAND
+
+/var/const/access_commtower = 703
+/datum/access/commtower
+	id = access_commtower
+	desc = "Communications Tower"
+	region = ACCESS_REGION_COMMAND

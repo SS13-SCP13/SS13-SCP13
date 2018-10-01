@@ -8,7 +8,7 @@
 
 
 /datum/event/brand_intelligence/announce()
-	command_announcement.Announce("Rampant brand intelligence has been detected aboard the [location_name()]. The origin is believed to be \a \"[initial(originMachine.name)]\" type. Fix it, before it spreads to other vending machines.", "Machine Learning Alert", zlevels = affecting_z)
+	command_announcement.Announce("ERROR: Network interface failure in one of \the \"[initial(originMachine.name)]\" machines. Fix it, before this error potentially spreads to other devices.", "Network Error", zlevels = affecting_z)
 
 
 /datum/event/brand_intelligence/start()
@@ -57,4 +57,4 @@
 		infectedMachine.shut_up = 1
 		infectedMachine.shoot_inventory = 0
 	spawn(2 SECONDS)
-		command_announcement.Announce("All traces of the rampant brand intelligence have disappeared from the systems.", "[location_name()] Firewall Subroutines")
+		command_announcement.Announce("Network interface restored.", "[location_name()] Firewall Subroutines")
