@@ -1,0 +1,8 @@
+author: Buffalowing
+delete-after: True
+
+changes: 
+  - bugfix: "Phased out a useless bluespace jump system"
+  - maptweak: "Full implemented the escape tram"
+  - maptweak: "Minor cosmetic changes to escape tram area"
+  - rscadd: "Added a few animated sprites"
