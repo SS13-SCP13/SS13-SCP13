@@ -212,3 +212,16 @@
 	begins_closed = FALSE
 
 // SUBTYPE: SCP ONES
+
+/obj/machinery/door/blast/onextwo/vertical
+	icon = 'icons/obj/doors/1x2blast_vert.dmi'
+	icon_state_open = "pdoor0"
+	icon_state_opening = "pdoorc0"
+	icon_state_closed = "pdoor1"
+	icon_state_closing = "pdoorc1"
+	icon_state = "pdoor1"
+	maxhealth = 600
+	block_air_zones = 1
+
+/obj/machinery/door/blast/onextwo/vertical/open
+	begins_closed = FALSE
