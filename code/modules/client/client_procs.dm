@@ -236,15 +236,17 @@ GLOBAL_LIST_INIT(devs, ckeylist(world.file2list("config/devs.txt")))
 	//DISCONNECT//
 	//////////////
 /client/Del()
+	return Destroy()
+
+// made this remove a lot more references so clients properly GC
+/client/Destroy()
+
 	if (mob)
 		if (last_mob[ckey] && last_mob[ckey] != mob)
 			qdel(last_mob[ckey])
 		last_mob[ckey] = mob
 		mob.Logout()
-	return Destroy()
 
-// made this remove a lot more references so clients properly GC
-/client/Destroy()
 	if (mob && mob.client == src)
 		mob.client = null
 	if (eye && ismob(eye) && eye:client == src)
