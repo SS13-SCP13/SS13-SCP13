@@ -1,3 +1,45 @@
+SUBSYSTEM_DEF(setup)
+	name = "Setup"
+	init_order = INIT_ORDER_SETUP
+	priority = SS_PRIORITY_SETUP
+	flags = SS_NO_FIRE
+
+	var/controller_iteration = 0
+	var/last_tick_duration = 0
+
+	var/air_processing_killed = 0
+	var/pipe_processing_killed = 0
+
+/datum/controller/subsystem/setup/Initialize()
+
+	if(!job_master)
+		job_master = new /datum/controller/occupations()
+		job_master.SetupOccupations(setup_titles=1)
+		job_master.LoadJobs("config/jobs.txt")
+		admin_notice("<span class='danger'>Job setup complete</span>", R_DEBUG)
+
+	if(!syndicate_code_phrase)		syndicate_code_phrase	= generate_code_phrase()
+	if(!syndicate_code_response)	syndicate_code_response	= generate_code_phrase()
+
+	spawn(20)
+		createRandomZlevel()
+
+	setup_objects()
+	setupgenetics()
+	setupSCPs()
+
+	transfer_controller = new
+
+	return ..()
+
+/datum/controller/subsystem/setup/proc/setup_objects()
+	if(GLOB.using_map.use_overmap)
+		report_progress("Initializing overmap events")
+		overmap_event_handler.create_events(GLOB.using_map.overmap_z, GLOB.using_map.overmap_size, GLOB.using_map.overmap_event_areas)
+
+	report_progress("Initializing lathe recipes")
+	populate_lathe_recipes()
+
 /////////////////////////
 // (mostly) DNA2 SETUP
 /////////////////////////
@@ -5,7 +47,7 @@
 // Randomize block, assign a reference name, and optionally define difficulty (by making activation zone smaller or bigger)
 // The name is used on /vg/ for species with predefined genetic traits,
 //  and for the DNA panel in the player panel.
-/proc/getAssignedBlock(var/name,var/list/blocksLeft, var/activity_bounds=DNA_DEFAULT_BOUNDS)
+/datum/controller/subsystem/setup/proc/getAssignedBlock(var/name,var/list/blocksLeft, var/activity_bounds=DNA_DEFAULT_BOUNDS)
 	if(blocksLeft.len==0)
 		warning("[name]: No more blocks left to assign!")
 		return 0
@@ -16,7 +58,7 @@
 	//testing("[name] assigned to block #[assigned].")
 	return assigned
 
-/proc/setupgenetics()
+/datum/controller/subsystem/setup/proc/setupgenetics()
 
 	if (prob(50))
 		// Currently unused.  Will revisit. - N3X
@@ -82,7 +124,7 @@
 			assignedToBlock.Add(G.name)
 			blocks_assigned[G.block]=assignedToBlock
 
-/proc/setupSCPs()
+/datum/controller/subsystem/setup/proc/setupSCPs()
 	var/list/SCPs = subtypesof(/datum/scp)
 	for(var/i in 1 to SCPs.len)
 		var/path = SCPs[i]   //They don't like it if you put it in one line

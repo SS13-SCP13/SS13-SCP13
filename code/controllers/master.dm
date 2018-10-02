@@ -59,6 +59,8 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	//used by CHECK_TICK as well so that the procs subsystems call can obey that SS's tick limits
 	var/static/current_ticklimit = TICK_LIMIT_RUNNING
 
+	var/initialization_stage = 0
+
 /datum/controller/master/New()
 	total_run_times = list()
 	// Highlander-style: there can only be one! Kill off the old and replace it with the new.
@@ -169,6 +171,8 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	// Sort subsystems by init_order, so they initialize in the correct order.
 	sortTim(subsystems, /proc/cmp_subsystem_init)
+
+	initialization_stage |= INITIALIZATION_HAS_BEGUN
 
 	var/start_timeofday = REALTIMEOFDAY
 	// Initialize subsystems.

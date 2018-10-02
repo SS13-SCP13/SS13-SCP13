@@ -1,0 +1,5 @@
+author: Buffalowing
+delete-after: True
+
+changes: 
+  - bugfix: "SCP-294 will now dispense correct reagents as they're inputted"

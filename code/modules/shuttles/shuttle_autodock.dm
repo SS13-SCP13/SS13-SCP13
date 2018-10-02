@@ -22,7 +22,8 @@
 	..(_name, start_waypoint)
 
 	//Initial dock
-	active_docking_controller = current_location.docking_controller
+	if (current_location)
+		active_docking_controller = current_location.docking_controller
 	update_docking_target(current_location)
 	if(active_docking_controller)
 		set_docking_codes(active_docking_controller.docking_codes)

@@ -227,7 +227,7 @@
 /datum/poster/bay_46
 	icon_state="bsposter46"
 	name = "Inspirational lawyer"
-	desc = "An inspirational poster depicting a Skrellian lawyer. He seems to be shouting something, while pointing fiercely to the right."
+	desc = "An video-game advertisement depicting a sci-fi lawyer. He seems to be shouting something, while pointing fiercely to the right."
 
 /datum/poster/bay_47
 	icon_state="bsposter47"
