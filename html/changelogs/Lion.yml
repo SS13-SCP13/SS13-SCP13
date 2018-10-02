@@ -36,3 +36,4 @@ changes:
   - bugfix: "Fixed a wiring issue in Engineering."
   - maptweak: "Adds bioprinters to medical bay."
   - maptweak: "Added a disposal network to Xenobiology, to dispose of old and used slimes."
+  - maptweak: "Removed duplicate light in D-Class zone, near the showers."
