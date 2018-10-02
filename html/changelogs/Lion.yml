@@ -35,3 +35,4 @@ delete-after: True
 changes: 
   - bugfix: "Fixed a wiring issue in Engineering."
   - maptweak: "Adds bioprinters to medical bay."
+  - maptweak: "Added a disposal network to Xenobiology, to dispose of old and used slimes."
