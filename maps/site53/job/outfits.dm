@@ -143,7 +143,7 @@
 	id_type = /obj/item/weapon/card/id/sciencelvl4
 	gloves = /obj/item/clothing/gloves/latex/nitrile
 	l_pocket = /obj/item/weapon/book/manual/scp/scisop
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/headset_sci
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/researchdirector
