@@ -1,3 +1,8 @@
+/decl/emote/audible/snap
+	key = "snap"
+	emote_message_3p = "USER snaps their fingers."
+	emote_sound = 'sound/voice/emotes/fingersnap.ogg'
+
 /decl/emote/audible
 	key = "burp"
 	emote_message_3p = "USER burps."
