@@ -138,7 +138,7 @@ Works together with spawning an observer, noted above.
 	if(teleop && istype(teleop, /mob/observer/ghost))
 		var/mob/observer/ghost/G = teleop
 
-		// teleop sometimes ends up pointed to ghosts that were supposed to be deleted, but weren't because of teleop still referencing them
+		// teleop sometimes ends up pointing to ghosts that were supposed to be deleted, but weren't because of teleop still referencing them
 		if (!G.teleop.loc || G.teleop.gc_destroyed)
 			QDEL_NULL(G.teleop)
 
