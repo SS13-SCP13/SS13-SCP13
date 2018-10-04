@@ -25,7 +25,6 @@ GLOBAL_LIST_INIT(scp294_reagents)
 
 /obj/machinery/scp294/attack_hand(mob/user)
 
-	//I dislike having these here but map-objects are initialised before world/New() is called. >_>
 	if(!GLOB.scp294_reagents.len)
 		//Chemical Reagents - Initialises all /datum/reagent into a list indexed by reagent id
 		var/paths = subtypesof(/datum/reagent) - /datum/reagent/adminordrazine
