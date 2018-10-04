@@ -1,3 +1,5 @@
+GLOBAL_LIST_INIT(scp294_reagents)
+
 /obj/machinery/scp294
 	name = "SCP-294"
 	desc = "A standard coffee vending machine. This one seems to have a QWERTY keyboard."
@@ -22,9 +24,19 @@
 
 
 /obj/machinery/scp294/attack_hand(mob/user)
+
+	//I dislike having these here but map-objects are initialised before world/New() is called. >_>
+	if(!GLOB.scp294_reagents.len)
+		//Chemical Reagents - Initialises all /datum/reagent into a list indexed by reagent id
+		var/paths = subtypesof(/datum/reagent) - /datum/reagent/adminordrazine
+		for(var/path in paths)
+			var/datum/reagent/D = new path
+			GLOB.scp294_reagents[D.name] = D
+
 	if((last_use + 3 SECONDS) > world.time)
 		visible_message("<span class='notice'>[src] displays NOT READY message.</span>")
 		return
+
 	last_use = world.time
 	if(uses_left < 1)
 		visible_message("<span class='notice'>[src] displays RESTOCKING, PLEASE WAIT message.</span>")
@@ -72,13 +84,13 @@
 
 /obj/machinery/scp294/proc/find_reagent(input)
 	. = FALSE
-	if(global.chemical_reagent_list[input])
-		var/datum/reagent/R = global.chemical_reagent_list[input]
+	if(GLOB.scp294_reagents[input])
+		var/datum/reagent/R = GLOB.scp294_reagents[input]
 		if(R)
 			return R.type
 	else
-		for(var/X in global.chemical_reagent_list)
-			var/datum/reagent/R = global.chemical_reagent_list[X]
+		for(var/X in GLOB.scp294_reagents)
+			var/datum/reagent/R = GLOB.scp294_reagents[X]
 			if (ckey(input) == ckey(R.name))
 				return R.type
 
