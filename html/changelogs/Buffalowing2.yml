@@ -2,4 +2,5 @@ author: Buffalowing
 delete-after: True
 
 changes: 
-  - bugfix: "SCP-294 will now dispense correct reagents as they're inputted"
+  - bugfix: "Updates scp-500's taste to be lore friendly."
+  - rscadd: "Adds *snap emote"
