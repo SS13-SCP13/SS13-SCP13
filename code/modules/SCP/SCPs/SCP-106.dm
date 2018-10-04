@@ -66,9 +66,6 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 	// stand_icon tends to come back after movement
 	fix_icons()
-	for (var/obj/sprite_helper/scp106/O in vis_contents)
-		O.dir = dir
-		break
 
 /mob/living/carbon/human/scp106/proc/fix_icons()
 	icon = null
@@ -84,6 +81,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	var/obj/scp106_sprite_helper = vis_contents[vis_contents.len]
 	if (lying)
 		scp106_sprite_helper.icon = turn(icon('icons/mob/scp106.dmi'), 90)
+	scp106_sprite_helper.dir = dir
 
 /mob/living/carbon/human/scp106/get_pressure_weakness()
 	return 0
