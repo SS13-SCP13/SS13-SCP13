@@ -671,6 +671,9 @@ default behaviour is:
 	resting = !resting
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
 
+	if (isscp049(src) || isscp106(src))
+		update_canmove()
+
 //called when the mob receives a bright flash
 /mob/living/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /obj/screen/fullscreen/flash)
 	if(override_blindness_check || !(disabilities & BLIND))
