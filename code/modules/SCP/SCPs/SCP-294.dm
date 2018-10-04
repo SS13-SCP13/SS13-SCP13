@@ -1,4 +1,4 @@
-GLOBAL_LIST_INIT(scp294_reagents)
+GLOBAL_LIST_EMPTY(scp294_reagents)
 
 /obj/machinery/scp294
 	name = "SCP-294"
