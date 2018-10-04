@@ -734,8 +734,11 @@
 
 		if(G.force_stand())
 			lying = 0
+
+	var/isscp106 = isscp106(src)
+	var/isscp049 = isscp049(src)
 			
-	if ((isscp106(src) || isscp049(src)) && !incapacitated(INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_BUCKLED_PARTIALLY))
+	if ((isscp106 || isscp049) && !incapacitated(INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_BUCKLED_PARTIALLY))
 		lying = 0
 		density = 1
 
@@ -753,6 +756,16 @@
 				H.reset_vision_cone()
 			else 
 				H.update_vision_cone()
+
+		// update SCP-106's vis_contents icon
+		if (isscp106)
+			var/mob/living/carbon/human/scp106/H = src 
+			H.fix_icons()
+
+		// update SCP-049's vis_contents icon
+		else if (isscp049)
+			var/mob/living/carbon/human/scp049/H = src 
+			H.fix_icons()
 
 	return canmove
 
