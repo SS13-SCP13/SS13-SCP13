@@ -13,17 +13,8 @@ GLOBAL_LIST_EMPTY(scp294_reagents)
 	var/restocking_timer = 0
 	SCP = /datum/scp/SCP_294
 
-/obj/machinery/scp294/examine(mob/user)
-	user << "<b><span class = 'euclid'><big>SCP-294</big></span></b> - [desc]"
-
-
-/datum/scp/SCP_294
-	name = "SCP-294"
-	designation = "294"
-	classification = EUCLID
-
-
-/obj/machinery/scp294/attack_hand(mob/user)
+/obj/machinery/scp294/New()
+	..()
 
 	if(!GLOB.scp294_reagents.len)
 		//Chemical Reagents - Initialises all /datum/reagent into a list indexed by reagent id
@@ -31,6 +22,16 @@ GLOBAL_LIST_EMPTY(scp294_reagents)
 		for(var/path in paths)
 			var/datum/reagent/D = new path
 			GLOB.scp294_reagents[D.name] = D
+
+/obj/machinery/scp294/examine(mob/user)
+	user << "<b><span class = 'euclid'><big>SCP-294</big></span></b> - [desc]"
+
+/datum/scp/SCP_294
+	name = "SCP-294"
+	designation = "294"
+	classification = EUCLID
+
+/obj/machinery/scp294/attack_hand(mob/user)
 
 	if((last_use + 3 SECONDS) > world.time)
 		visible_message("<span class='notice'>[src] displays NOT READY message.</span>")
