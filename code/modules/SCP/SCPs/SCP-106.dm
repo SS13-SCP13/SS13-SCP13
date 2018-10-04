@@ -79,8 +79,12 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 	// we're lying, turn right
 	var/obj/scp106_sprite_helper = vis_contents[vis_contents.len]
-	if (lying)
+	
+	if (lying || resting)
 		scp106_sprite_helper.icon = turn(icon('icons/mob/scp106.dmi'), 90)
+	else 
+		scp106_sprite_helper.icon = 'icons/mob/scp106.dmi'
+
 	scp106_sprite_helper.dir = dir
 
 /mob/living/carbon/human/scp106/get_pressure_weakness()

@@ -88,8 +88,12 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 
 	// we're lying, turn right
 	var/obj/sprite_helper/scp049/SH = vis_contents[vis_contents.len]
-	if (lying)
+
+	if (lying || resting)
 		SH.icon = turn(icon('icons/mob/scp049.dmi'), 90)
+	else 
+		SH.icon = 'icons/mob/scp049.dmi'
+
 	SH.dir = dir
 
 /mob/living/carbon/human/scp049/get_pressure_weakness()

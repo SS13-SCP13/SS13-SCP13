@@ -742,6 +742,24 @@
 		lying = 0
 		density = 1
 
+	// update SCP-106's vis_contents icon
+	if (isscp106)
+		var/mob/living/carbon/human/scp106/H = src 
+		H.fix_icons()
+		if (lying)
+			H.reset_vision_cone()
+		else 
+			H.update_vision_cone()
+
+	// update SCP-049's vis_contents icon
+	else if (isscp049)
+		var/mob/living/carbon/human/scp049/H = src 
+		H.fix_icons()
+		if (lying)
+			H.reset_vision_cone()
+		else 
+			H.update_vision_cone()
+
 	//Temporarily moved here from the various life() procs
 	//I'm fixing stuff incrementally so this will likely find a better home.
 	//It just makes sense for now. ~Carn
@@ -756,16 +774,6 @@
 				H.reset_vision_cone()
 			else 
 				H.update_vision_cone()
-
-		// update SCP-106's vis_contents icon
-		if (isscp106)
-			var/mob/living/carbon/human/scp106/H = src 
-			H.fix_icons()
-
-		// update SCP-049's vis_contents icon
-		else if (isscp049)
-			var/mob/living/carbon/human/scp049/H = src 
-			H.fix_icons()
 
 	return canmove
 
