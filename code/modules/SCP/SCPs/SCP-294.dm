@@ -55,9 +55,9 @@ GLOBAL_LIST_EMPTY(scp294_reagents)
 					var/pain = rand(1, 6)
 					for(i=1; i<=pain; i++)
 						M.adjustBruteLoss(5)
+
 	if(!victim)
 		product = find_reagent(input_reagent)
-
 
 	// use one use
 	if (product || victim)
@@ -65,7 +65,6 @@ GLOBAL_LIST_EMPTY(scp294_reagents)
 		if (!uses_left)
 			spawn(2000)
 				uses_left = initial(uses_left)
-
 
 	sleep(10)
 	if(product)
