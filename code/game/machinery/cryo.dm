@@ -37,33 +37,17 @@
 		beaker = null
 	. = ..()
 
-/obj/machinery/atmospherics/unary/cryo_cell/atmos_init()
-	..()
-	if(node) return
-	var/node_connect = dir
-	for(var/obj/machinery/atmospherics/target in get_step(src,node_connect))
-		if(target.initialize_directions & get_dir(target,src))
-			node = target
-			break
-
 /obj/machinery/atmospherics/unary/cryo_cell/Process()
 	..()
-	if(!node)
-		return
+
+	air_contents.temperature = 60
+	
 	if(!on)
 		return
 
 	if(occupant)
 		if(occupant.stat != 2)
 			process_occupant()
-
-	if(air_contents)
-		temperature_archived = air_contents.temperature
-		heat_gas_contents()
-		expel_gas()
-
-	if(abs(temperature_archived-air_contents.temperature) > 1)
-		network.update = 1
 
 	return 1
 
