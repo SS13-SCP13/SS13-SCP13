@@ -140,7 +140,7 @@ Works together with spawning an observer, noted above.
 
 		// teleop sometimes ends up pointing to ghosts that were supposed to be deleted, but weren't because of teleop still referencing them
 		if (!G.loc || G.gc_destroyed)
-			QDEL_NULL(G.teleop)
+			QDEL_NULL(G)
 
 		else if(G.admin_ghosted)
 			return
