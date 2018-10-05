@@ -23,11 +23,13 @@
 	cost = 10
 	containername = "\improper Blood pack crate"
 
+/*
 /decl/hierarchy/supply_pack/medical/blood
 	name = "Nanoblood crate"
 	contains = list(/obj/item/weapon/reagent_containers/ivbag/nanoblood = 4)
 	cost = 15
 	containername = "\improper Nanoblood crate"
+*/
 
 /decl/hierarchy/supply_pack/medical/bodybag
 	name = "Body bag crate"
