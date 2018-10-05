@@ -53,6 +53,8 @@
 
 #define ismachinery(A) istype(A, /obj/machinery)
 
+#define iscryopod(A) istype(A, /obj/machinery/cryopod)
+
 #define isghost(A) istype(A, /mob/observer/ghost)
 
 #define isobserver(A) istype(A, /mob/observer)

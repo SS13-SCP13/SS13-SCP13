@@ -308,7 +308,7 @@
 		if(world.time - time_entered < time_till_despawn)
 			return
 
-		if(!occupant.client && occupant.stat<2) //Occupant is living and has no client.
+		if(!occupant.client && occupant.stat != DEAD) //Occupant is living and has no client.
 			if(!control_computer)
 				if(!find_control_computer(urgent=1))
 					return
@@ -419,6 +419,10 @@
 
 	announce.autosay("[occupant.real_name], [role_alt_title], [on_store_message]", "[on_store_name]")
 	visible_message("<span class='notice'>\The [initial(name)] hums and hisses as it moves [occupant.real_name] into storage.</span>", 3)
+
+	// update GLOB.client2mob
+	if (GLOB.client2mob[occupant.ckey] == occupant)
+		GLOB.client2mob[occupant.ckey] = null
 
 	//This should guarantee that ghosts don't spawn.
 	occupant.ckey = null
