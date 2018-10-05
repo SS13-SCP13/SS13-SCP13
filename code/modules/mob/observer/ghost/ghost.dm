@@ -137,8 +137,17 @@ Works together with spawning an observer, noted above.
 	// Are we the body of an aghosted admin? If so, don't make a ghost.
 	if(teleop && istype(teleop, /mob/observer/ghost))
 		var/mob/observer/ghost/G = teleop
-		if(G.admin_ghosted)
+
+		// teleop sometimes ends up pointing to ghosts that were supposed to be deleted, but weren't because of teleop still referencing them
+		if (G.gc_destroyed)
+			teleop = null 
+
+		else if (!G.loc)
+			QDEL_NULL(teleop)
+
+		else if (G.admin_ghosted)
 			return
+
 	if(key)
 		hide_fullscreens()
 		var/mob/observer/ghost/ghost = new(src)	//Transfer safety to observer spawning proc.

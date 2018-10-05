@@ -75,10 +75,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 /mob/living/carbon/human/scp049/proc/update_stuff()
 	// stand_icon tends to come back after movement
 	fix_icons()
-	for (var/obj/sprite_helper/scp049/O in vis_contents)
-		O.dir = dir
-		break
-
+	
 /mob/living/carbon/human/scp049/proc/fix_icons()
 	icon = null
 	icon_state = null
@@ -91,8 +88,13 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 
 	// we're lying, turn right
 	var/obj/sprite_helper/scp049/SH = vis_contents[vis_contents.len]
-	if (lying)
+
+	if (lying || resting)
 		SH.icon = turn(icon('icons/mob/scp049.dmi'), 90)
+	else 
+		SH.icon = 'icons/mob/scp049.dmi'
+
+	SH.dir = dir
 
 /mob/living/carbon/human/scp049/get_pressure_weakness()
 	return 0
