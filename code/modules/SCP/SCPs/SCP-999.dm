@@ -7,6 +7,7 @@
 	classification = SAFE
 
 /mob/living/simple_animal/scp_999
+	name = "SCP-999"
 	desc = "A large, amorphous, gelatinous mass of translucent orange slime. It looks really happy."
 	icon = 'icons/SCP/scp-999.dmi'
 	icon_living = "SCP-999"
