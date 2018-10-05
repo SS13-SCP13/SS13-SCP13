@@ -2,6 +2,7 @@
 	name = "door"
 	icon = 'icons/obj/doors/material_doors.dmi'
 	icon_state = "metal"
+	autoclose = 1
 
 	var/material/material
 	var/icon_base
