@@ -63,7 +63,7 @@
 
 /obj/structure/closet/secure_closet/logistics/officer
 	name = "logistics officer's footlocker"
-	req_access = list(access_qm)
+	req_access = list(access_logofficer)
 	icon_state = "lolocked"
 	icon_closed = "loclosed"
 	icon_locked = "lolocked"
@@ -95,7 +95,7 @@
 */
 /obj/structure/closet/secure_closet/logistics/specialist
 	name = "logistics specialist's footlocker"
-	req_access = list(access_cargo)
+	req_access = list(access_logistics)
 	icon_state = "lslocked"
 	icon_closed = "lsclosed"
 	icon_locked = "lslocked"
