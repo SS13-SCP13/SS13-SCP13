@@ -159,3 +159,17 @@
 	id = access_commtower
 	desc = "Communications Tower"
 	region = ACCESS_REGION_COMMAND
+
+// LOGISTICS
+
+/var/const/access_logofficer = 800
+/datum/access/logofficer
+	id = access_logofficer
+	desc = "Logistics Officer's Office"
+	region = ACCESS_REGION_COMMAND
+
+/var/const/access_logistics = 801
+/datum/access/logistics
+	id = access_logistics
+	desc = "Logistics"
+	region = ACCESS_REGION_GENERAL
