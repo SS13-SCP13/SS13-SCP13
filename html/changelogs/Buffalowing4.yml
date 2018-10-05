@@ -5,3 +5,4 @@ changes:
   - bugfix: "Fixed some minor map problems"
   - bugfix: "Fixed a lore unfriendly announcement"
   - maptweak: "Redesigned the heads cafe"
+  - rscadd: "Added an escape mechanic on the surface level"
