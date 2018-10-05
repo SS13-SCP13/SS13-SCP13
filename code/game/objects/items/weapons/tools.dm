@@ -63,10 +63,10 @@
 /obj/item/weapon/screwdriver/Initialize()
 	switch(pick("red","blue","purple","brown","green","cyan","yellow"))
 		if ("red")
-			icon_state = "screwdriver2"
+			icon_state = "screwdriver1"
 			item_state = "screwdriver"
 		if ("blue")
-			icon_state = "screwdriver"
+			icon_state = "screwdriver2"
 			item_state = "screwdriver_blue"
 		if ("purple")
 			icon_state = "screwdriver3"
