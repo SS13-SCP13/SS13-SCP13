@@ -7,8 +7,6 @@
 	GLOB.living_mob_list_ -= src
 	GLOB.event_sources_count -= src
 
-
-
 	for (var/observer in all_virtual_listeners)
 		var/mob/observer/virtual/O = observer 
 		if (O.host == src)
