@@ -31,7 +31,7 @@
 	var/close_door_at = 0 //When to automatically close the door, if possible
 	var/list/connections = list("0", "0", "0", "0")
 	var/list/blend_objects = list(/obj/structure/wall_frame, /obj/structure/window, /obj/structure/grille) // Objects which to blend with
-
+	
 	//Multi-tile doors
 	dir = SOUTH
 	var/width = 1
@@ -149,7 +149,7 @@
 	if(density)
 		if(allowed(user))
 			open()
-		else
+		else 
 			do_animate("deny")
 	return
 
@@ -525,26 +525,3 @@
 
 /obj/machinery/door/morgue
 	icon = 'icons/obj/doors/doormorgue.dmi'
-
-/obj/machinery/cryopod/door/escape/
-	name = "\improper Desert"
-	time_till_despawn = 10 SECONDS
-	on_store_message = "has been detected departing the facility via the desert."
-	on_enter_occupant_message = "The desert sprawls out over the horizon, and the sun burns down on you from above."
-
-/obj/machinery/cryopod/door/escape/Bumped(var/atom/movable/AM)
-	if(!ishuman(AM))
-		return
-
-	var/mob/living/carbon/human/user = AM
-	var/mob/living/carbon/human/H = AM
-	var/choice = alert("Do you want to depart via the desert? Your character will leave the round.","Departure","Yes","No")
-	if(user && Adjacent(user) && choice == "Yes")
-		user.ghostize()
-
-		job_master.FreeRole(H.mind.assigned_role)
-
-		message_admins("\blue [key_name(AM)] has escaped via the desert")
-		log_admin("\blue [key_name(AM)] has escaped via the desert")
-
-		del(AM)
