@@ -438,7 +438,7 @@ var/list/name_to_material
 	flags = MATERIAL_BRITTLE
 	icon_colour = "#00e1ff"
 	opacity = 0.3
-	integrity = 50
+	integrity = 75
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
 	hardness = 50
@@ -539,7 +539,7 @@ var/list/name_to_material
 	flags = MATERIAL_BRITTLE
 	icon_colour = "#00e1ff"
 	opacity = 0.3
-	integrity = 100
+	integrity = 150
 	melting_point = T0C + 750
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
