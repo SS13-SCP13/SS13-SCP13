@@ -247,7 +247,9 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/o3
+		/datum/mil_rank/security/o3,
+		/datum/mil_rank/security/o4,
+		/datum/mil_rank/security/o5
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -611,9 +613,7 @@
 	alt_titles = list("Medical Director")
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/cmo
 	allowed_branches = list(/datum/mil_branch/security)
-	allowed_ranks = list(/datum/mil_rank/security/w1,
-	/datum/mil_rank/security/w2,
-	/datum/mil_rank/security/w3)
+	allowed_ranks = list(/datum/mil_rank/security/o3, /datum/mil_rank/security/o4)
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_keyauth)
 	minimal_access = list()
@@ -636,7 +636,9 @@
 	ideal_character_age = 30
 	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/chemist
 	allowed_branches = list(/datum/mil_branch/security)
-	allowed_ranks = list(/datum/mil_rank/security/e3)
+	allowed_ranks = list(
+		/datum/mil_rank/security/o1,
+		/datum/mil_rank/security/o2)
 
 	access = list(access_medicalgen, access_medicalchem)
 	minimal_access = list()
@@ -685,7 +687,8 @@
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e4)
+		/datum/mil_rank/security/o1,
+		/datum/mil_rank/security/o2)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(3,6), rand(7,10), rand(20,25))
@@ -708,9 +711,9 @@
 	supervisors = "the Chief Medical Officer"
 	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/virologist
 	allowed_branches = list(
-	/datum/mil_branch/security)
+	/datum/mil_branch/civilian)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e3)
+		/datum/mil_rank/civ/classb)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(3,6), rand(7,10), rand(20,25))
@@ -735,7 +738,8 @@
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e3)
+		/datum/mil_rank/security/o1,
+		/datum/mil_rank/security/o2)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(3,6), rand(7,10), rand(20,25))
@@ -760,7 +764,7 @@
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e4)
+		/datum/mil_rank/security/e3)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(3,6), rand(7,10), rand(20,25))

@@ -34,6 +34,7 @@ delete-after: True
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
   - rscadd: "Added blood bags to the medical vendors."
+  - rscadd: "New autoreply for those asking to be an SCP."
   - bugfix: "Fixed a bug where SCP-999 and SCP-012 were incorrectly named."
   - bugfix: "Fixed a bug where the CMO wouldn't spawn with a headset."
   - bugfix: "Fixed a bug where a Senior Scientist wouldn't spawn with a headset."
@@ -44,6 +45,13 @@ changes:
   - tweak: "Buff to regular windows. Their integrity is now 75, as opposed to 50."
   - tweak: "Buff to reinforced windows. Their integrity is now 150, as opposed to 100."
   - tweak: "Psychiatrist is now Class B, as opposed to Class A. This was an oversight from before."
+  - tweak: "Medical Doctor rank altered to Second Lieutenant."
+  - tweak: "EMT rank altered from Corporal to Specialist."
+  - tweak: "Surgeon rank altered from Corporal to Lieutenant"
+  - tweak: "Virologist rank altered to Civilian - Class B."
+  - tweak: "Chemist rank altered to Lieutant."
+  - tweak: "CMO is changed to Captain and Major."
+  - tweak: "Guard Commander now also allows Major and Lieutenant Colonel."
   - maptweak: "Removed blood bag storage. No longer necessary."
   - maptweak: "Removed surgical recovery room. It wasn't used and takes up space."
   - maptweak: "Removed access requirements on windoor in SCP-513."
