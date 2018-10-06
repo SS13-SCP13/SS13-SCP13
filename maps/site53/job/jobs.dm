@@ -615,7 +615,7 @@
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(/datum/mil_rank/security/o3, /datum/mil_rank/security/o4)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_keyauth)
+	access = list(access_medicalgen, access_medicalequip, access_medicalviro, access_medicalchem, access_s53cmo, access_keyauth, access_mtflvl1)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()

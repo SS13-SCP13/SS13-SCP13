@@ -338,8 +338,15 @@
 	name = "level two security keycard"
 	desc = "A light blue card. Seems almost as unimportant as the person itself."
 	icon_state = "securitylvl2"
-	item_state = "Sec_ID1"
+	item_state = "Sec_ID2"
 	job_access_type = /datum/job/medicaldoctor
+
+/obj/item/weapon/card/id/chiefmedicalofficer
+	name = "level five security keycard"
+	desc = "A dark purple keycard. Looks important."
+	icon_state = "securitylvl5"
+	item_state = "Sec_ID5"
+	job_access_type = /datum/job/cmo
 
 /obj/item/weapon/card/id/virologist
 	name = "level two security keycard"

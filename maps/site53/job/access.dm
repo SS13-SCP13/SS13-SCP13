@@ -219,3 +219,9 @@
 	id = access_medicalchem
 	desc = "Chemistry"
 	region = ACCESS_REGION_NONE
+
+/var/const/access_s53cmo = 934
+/datum/access/s53cmo
+	id = access_s53cmo
+	desc = "CMO"
+	region = ACCESS_REGION_COMMAND
