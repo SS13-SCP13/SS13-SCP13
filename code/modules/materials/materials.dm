@@ -392,7 +392,7 @@ var/list/name_to_material
 /material/plasteel
 	name = "plasteel"
 	stack_type = /obj/item/stack/material/plasteel
-	integrity = 400
+	integrity = 500
 	melting_point = 6000
 	icon_base = "solid"
 	icon_reinf = "reinf_over"
@@ -409,7 +409,7 @@ var/list/name_to_material
 	name = "titanium"
 	brute_armor = 10
 	burn_armor = 8
-	integrity = 200
+	integrity = 750
 	melting_point = 3000
 	stack_type = null
 	icon_base = "metal"
