@@ -627,7 +627,7 @@
 	title = "Chemist"
 	department = "Medical"
 	department_flag = MED
-
+	minimal_player_age = 3
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Chief Medical Officer"
@@ -681,6 +681,7 @@
 	total_positions = 3
 	spawn_positions = 3
 	ideal_character_age = 40
+	minimal_player_age = 3
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
 	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/medicaldoctor
@@ -706,6 +707,7 @@
 	selection_color = "#013d3b"
 	total_positions = 2
 	spawn_positions = 2
+	minimal_player_age = 3
 	ideal_character_age = 40
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
@@ -734,6 +736,7 @@
 	ideal_character_age = 40
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
+	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/surgeon
 	allowed_branches = list(
 	/datum/mil_branch/security)
