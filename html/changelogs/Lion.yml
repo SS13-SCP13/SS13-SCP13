@@ -45,7 +45,7 @@ changes:
   - tweak: "Buff to regular windows. Their integrity is now 75, as opposed to 50."
   - tweak: "Buff to reinforced windows. Their integrity is now 150, as opposed to 100."
   - tweak: "Psychiatrist is now Class B, as opposed to Class A. This was an oversight from before."
-  - tweak: "Medical Doctor rank altered to Second Lieutenant."
+  - tweak: "Medical Doctor rank altered to Second/First Lieutenant."
   - tweak: "EMT rank altered from Corporal to Specialist."
   - tweak: "Surgeon rank altered from Corporal to Lieutenant"
   - tweak: "Virologist rank altered to Civilian - Class B."
