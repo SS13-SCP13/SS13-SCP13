@@ -43,7 +43,8 @@
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/device/flash,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
-		/obj/item/clothing/mask/balaclava
+		/obj/item/clothing/mask/balaclava,
+		/obj/item/weapon/storage/box/bloodtypes
 	)
 
 /obj/structure/closet/secure_closet/mtf/commander
@@ -80,7 +81,8 @@
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
-		/obj/item/clothing/mask/balaclava
+		/obj/item/clothing/mask/balaclava,
+		/obj/item/weapon/storage/box/bloodtypes
 	)
 
 /obj/structure/closet/secure_closet/mtf/nco
@@ -117,7 +119,8 @@
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
 		/obj/item/clothing/accessory/holster/thigh,
-		/obj/item/clothing/mask/balaclava
+		/obj/item/clothing/mask/balaclava,
+		/obj/item/weapon/storage/box/bloodtypes
 	)
 
 /obj/structure/closet/secure_closet/mtf/co
@@ -154,7 +157,8 @@
 		/obj/item/device/flash,
 		/obj/item/clothing/gloves/tactical,
 		/obj/item/clothing/accessory/holster/thigh,
-		/obj/item/clothing/mask/balaclava
+		/obj/item/clothing/mask/balaclava,
+		/obj/item/weapon/storage/box/bloodtypes
 	)
 
 /obj/structure/closet/secure_closet/mtf/breachautomatics

@@ -35,6 +35,7 @@ delete-after: True
 changes: 
   - rscadd: "Added blood bags to the medical vendors."
   - rscadd: "New autoreply for those asking to be an SCP."
+  - rscadd: "Added boxes of bloodtype patches for security platecarriers in each security locker."
   - bugfix: "Fixed a bug where SCP-999 and SCP-012 were incorrectly named."
   - bugfix: "Fixed a bug where the CMO wouldn't spawn with a headset."
   - bugfix: "Fixed a bug where a Senior Scientist wouldn't spawn with a headset."
