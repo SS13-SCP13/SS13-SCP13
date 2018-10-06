@@ -41,6 +41,7 @@ changes:
   - bugfix: "Fixed a bug where a Senior Scientist wouldn't spawn with a headset."
   - bugfix: "Fixed bug with SCP-500 and SCP-113 not having access requirements. This makes traitor objectives much harder when centered around these objects."
   - bugfix: "Fixes an issue where engineers can't set access on an airlock circuit."
+  - tweak: "Added soft whitelist for medical jobs."
   - tweak: "New SCP-513 sprite. Now featuring sane size. Thanks to LucasChao."
   - tweak: "Makes walls stronger. Titanium walls can now take 750 damage, reinforced walls can take 500, and regular walls 150."
   - tweak: "Buff to regular windows. Their integrity is now 75, as opposed to 50."
