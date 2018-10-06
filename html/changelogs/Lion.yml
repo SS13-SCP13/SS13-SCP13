@@ -53,7 +53,7 @@ changes:
   - tweak: "Surgeon rank altered from Corporal to Lieutenant"
   - tweak: "Virologist rank altered to Civilian - Class B."
   - tweak: "Chemist rank altered to Lieutant."
-  - tweak: "CMO is changed to Captain and Major."
+  - tweak: "CMO rank is changed to Captain and Major."
   - tweak: "Guard Commander now also allows Major and Lieutenant Colonel."
   - maptweak: "Adds tape recorders to research area's."
   - maptweak: "Removed blood bag storage. No longer necessary."
