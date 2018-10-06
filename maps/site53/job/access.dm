@@ -172,4 +172,50 @@
 /datum/access/logistics
 	id = access_logistics
 	desc = "Logistics"
-	region = ACCESS_REGION_GENERAL
+	region = ACCESS_REGION_NONE
+
+// MISC
+
+/var/const/access_s53bar = 900
+/datum/access/bar
+	id = access_bar
+	desc = "Tram Hub Bar"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_s53kitchen = 901
+/datum/access/kitchen
+	id = access_kitchen
+	desc = "Tram Hub Kitchen"
+	region = ACCESS_REGION_NONE
+
+// MEDICAL
+
+/var/const/access_medicalgen = 930
+/datum/access/medicalgen
+	id = access_medicalgen
+	desc = "General Medical Access"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_medicalviro = 931
+/datum/access/medicalviro
+	id = access_medicalviro
+	desc = "Virology"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_medicalpsych = 932
+/datum/access/medicalpsych
+	id = access_medicalpsych
+	desc = "Psychiatry"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_medicalequip = 933
+/datum/access/medicalequip
+	id = access_medicalequip
+	desc = "Medical Equipment"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_medicalchem = 934
+/datum/access/medicalchem
+	id = access_medicalchem
+	desc = "Chemistry"
+	region = ACCESS_REGION_NONE

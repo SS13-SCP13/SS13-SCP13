@@ -638,7 +638,7 @@
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(/datum/mil_rank/security/e3)
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_medicalgen, access_medicalchem)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -657,17 +657,17 @@
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
 	alt_titles = list("Counselor")
-	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/psychiatrist
+	outfit_type = /obj/item/weapon/card/id/psychiatrist
 	allowed_branches = list(
 	/datum/mil_branch/civilian)
 	allowed_ranks = list(
-		/datum/mil_rank/civ/classa)
+		/datum/mil_rank/civ/classb)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(1,3), rand(3,5), rand(25,30))
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
-	access = list(access_mtflvl1)
+	access = list(access_medicalgen, access_medicalpsych)
 	minimal_access = list()
 
 /datum/job/medicaldoctor
@@ -692,7 +692,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_medicalgen, access_medicalequip)
 	minimal_access = list()
 
 /datum/job/virologist
@@ -717,7 +717,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_medicalgen, access_medicalequip, access_medicalviro)
 	minimal_access = list()
 
 /datum/job/surgeon
@@ -742,7 +742,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_medicalgen, access_medicalequip)
 	minimal_access = list()
 
 /datum/job/emt
@@ -767,7 +767,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(50,70), rand(5,10))
 
 
-	access = list(access_mtflvl1)
+	access = list(access_medicalgen, access_medicalequip)
 	minimal_access = list()
 
 

@@ -306,7 +306,7 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/blue
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/doctor
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null
@@ -316,7 +316,7 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/teal
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/virologist
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null
@@ -326,7 +326,7 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/green
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/doctor
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null
