@@ -38,7 +38,7 @@ changes:
   - bugfix: "Fixed a bug where SCP-999 and SCP-012 were incorrectly named."
   - bugfix: "Fixed a bug where the CMO wouldn't spawn with a headset."
   - bugfix: "Fixed a bug where a Senior Scientist wouldn't spawn with a headset."
-  - bugfix: "Fixed bug with SCP-500 and SCP-113 not having access requirements. This makes traitor objectives much more harder when centered around these objects."
+  - bugfix: "Fixed bug with SCP-500 and SCP-113 not having access requirements. This makes traitor objectives much harder when centered around these objects."
   - bugfix: "Fixes an issue where engineers can't set access on an airlock circuit."
   - tweak: "New SCP-513 sprite. Now featuring sane size. Thanks to LucasChao."
   - tweak: "Makes walls stronger. Titanium walls can now take 750 damage, reinforced walls can take 500, and regular walls 150."
