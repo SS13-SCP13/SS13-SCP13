@@ -268,6 +268,36 @@
 		reagents.add_reagent(/datum/reagent/sugar, 3)
 		bitesize = 2
 
+/obj/item/weapon/reagent_containers/food/snacks/lionbar
+	name = "lion bar"
+	desc = "Something of the old world. Smells like infinite power and fear."
+	icon_state = "lionbar"
+	trash = /obj/item/trash/lionbar
+	filling_color = "#7d5f46"
+	center_of_mass = "x=15;y=15"
+	nutriment_amt = 1
+	nutriment_desc = list("candy" = 1,"ultimate power" = 3,"fear" = 2)
+
+	New()
+		..()
+		reagents.add_reagent(/datum/reagent/sugar, 3)
+		bitesize = 3
+
+/obj/item/weapon/reagent_containers/food/snacks/lionbarlegacy
+	name = "old lion bar"
+	desc = "Something of the old world. Smells like infinite power and fear. The packaging is one of ancient standards, which makes this almost a collectible!"
+	icon_state = "lionbarlegacy"
+	trash = /obj/item/trash/lionbarlegacy
+	filling_color = "#7d5f46"
+	center_of_mass = "x=15;y=15"
+	nutriment_amt = 1
+	nutriment_desc = list("candy" = 1,"ultimate power" = 3,"fear" = 2,"stale chocolate" = 4)
+
+	New()
+		..()
+		reagents.add_reagent(/datum/reagent/sugar, 3)
+		bitesize = 3
+
 /obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar
 	name = "protein bar"
 	desc = "SwoleMAX brand protein bars, guaranteed to get you feeling perfectly overconfident."
