@@ -2,6 +2,14 @@
 * Deep Space Site 90 *
 *********************/
 
+// NTF
+
+/var/const/access_mtf = 299
+/datum/access/mtf
+	id = access_mtf
+	desc = "MTF"
+	region = ACCESS_TYPE_CENTCOM
+
 // MTF
 
 /var/const/access_mtflvl1 = 300
@@ -220,7 +228,7 @@
 	desc = "Chemistry"
 	region = ACCESS_REGION_NONE
 
-/var/const/access_s53cmo = 934
+/var/const/access_s53cmo = 935
 /datum/access/s53cmo
 	id = access_s53cmo
 	desc = "CMO"
