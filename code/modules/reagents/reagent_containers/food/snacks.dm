@@ -275,7 +275,7 @@
 	trash = /obj/item/trash/lionbar
 	filling_color = "#7d5f46"
 	center_of_mass = "x=15;y=15"
-	nutriment_amt = 1
+	nutriment_amt = 6
 	nutriment_desc = list("candy" = 1,"ultimate power" = 3,"fear" = 2)
 
 	New()
@@ -290,7 +290,7 @@
 	trash = /obj/item/trash/lionbarlegacy
 	filling_color = "#7d5f46"
 	center_of_mass = "x=15;y=15"
-	nutriment_amt = 1
+	nutriment_amt = 10
 	nutriment_desc = list("candy" = 1,"ultimate power" = 3,"fear" = 2,"stale chocolate" = 4)
 
 	New()
