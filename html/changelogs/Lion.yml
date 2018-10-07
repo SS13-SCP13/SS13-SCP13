@@ -43,6 +43,7 @@ changes:
   - bugfix: "Fixed bug with SCP-500 and SCP-113 not having access requirements. This makes traitor objectives much harder when centered around these objects."
   - bugfix: "Fixes an issue where engineers can't set access on an airlock circuit."
   - bugfix: "Fixes SCP-106 upper not aligning with lower."
+  - bugfix: "Added railings to central staircase."
   - tweak: "Added soft whitelist for medical jobs."
   - tweak: "New SCP-513 sprite. Now featuring sane size. Thanks to LucasChao."
   - tweak: "Makes walls stronger. Titanium walls can now take 750 damage, reinforced walls can take 500, and regular walls 150."
