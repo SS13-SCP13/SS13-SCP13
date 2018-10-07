@@ -189,3 +189,9 @@
 	set category = "Emotes"
 
 	emote("clearthroat",1)
+
+/mob/living/carbon/human/verb/snap()
+	set name = "Snap"
+	set category = "Emotes"
+
+	emote("snap",1)

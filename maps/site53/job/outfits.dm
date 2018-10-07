@@ -12,7 +12,6 @@
 	shoes = /obj/item/clothing/shoes/dress
 	suit = /obj/item/clothing/suit/storage/toggle/suit/black
 	id_type = /obj/item/weapon/card/id/adminlvl5
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/heads/captain
 	back = null
 
@@ -22,7 +21,6 @@
 	shoes = /obj/item/clothing/shoes/dress
 	suit = /obj/item/clothing/suit/storage/toggle/suit/black
 	id_type = /obj/item/weapon/card/id/adminlvl4
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/heads/hop
 	back = null
 
@@ -31,7 +29,6 @@
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/heads/commsofficer
 	back = null
 
@@ -40,7 +37,6 @@
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl3
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/headset_deckofficer
 	back = null
 
@@ -65,7 +61,6 @@
 	uniform = /obj/item/clothing/under/rank/security2
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/heads/cw
 	back = null
 
@@ -74,8 +69,8 @@
 	uniform = /obj/item/clothing/under/rank/security2
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl2
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/headset_sec
+	l_pocket = /obj/item/weapon/book/manual/scp/secsop
 	back = null
 
 // SECURITY OUTFITS
@@ -85,8 +80,9 @@
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl5
-	l_pocket = /obj/item/device/radio
+	r_pocket = /obj/item/weapon/book/manual/scp/secsop
 	l_ear = /obj/item/device/radio/headset/heads/cos
+	l_pocket = /obj/item/weapon/book/manual/scp/secsop
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
@@ -94,8 +90,8 @@
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/headset_com
+	l_pocket = /obj/item/weapon/book/manual/scp/secsop
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
@@ -103,8 +99,8 @@
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl3
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/headset_sec
+	l_pocket = /obj/item/weapon/book/manual/scp/secsop
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
@@ -112,8 +108,8 @@
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/combat/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl1
-	l_pocket = /obj/item/device/radio
 	l_ear = /obj/item/device/radio/headset/headset_sec
+	l_pocket = /obj/item/weapon/book/manual/scp/secsop
 	back = null
 
 // SCIENCE OUTFITS
@@ -124,9 +120,8 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl1
-	l_pocket = /obj/item/device/radio
 	gloves = /obj/item/clothing/gloves/latex
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/headset_sci
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/scientist
@@ -135,9 +130,9 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl2
-	l_pocket = /obj/item/device/radio
 	gloves = /obj/item/clothing/gloves/latex
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/headset_sci
+	l_pocket = /obj/item/weapon/book/manual/scp/scisop
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/seniorscientist
@@ -146,9 +141,9 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl4
-	l_pocket = /obj/item/device/radio
 	gloves = /obj/item/clothing/gloves/latex/nitrile
-	l_ear = null
+	l_pocket = /obj/item/weapon/book/manual/scp/scisop
+	l_ear = /obj/item/device/radio/headset/headset_sci
 	back = null
 
 /decl/hierarchy/outfit/job/site90/crew/science/researchdirector
@@ -157,9 +152,9 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/rd
 	shoes = /obj/item/clothing/shoes/laceup
 	id_type = /obj/item/weapon/card/id/sciencelvl5
-	l_pocket = /obj/item/device/radio
 	gloves = /obj/item/clothing/gloves/latex/nitrile
-	l_ear = null
+	l_ear = /obj/item/device/radio/headset/heads/rd
+	l_pocket = /obj/item/weapon/book/manual/scp/scisop
 	back = null
 
 
@@ -192,7 +187,7 @@
 	uniform = /obj/item/clothing/under/color/white
 	shoes = /obj/item/clothing/shoes/white
 	l_pocket = /obj/item/device/radio
-	id_type = /obj/item/weapon/card/id/sciencelvl1
+	id_type = /obj/item/weapon/card/id/chef
 	back = null
 	l_ear = null
 
@@ -201,7 +196,7 @@
 	uniform = /obj/item/clothing/under/suit_jacket/tan
 	shoes = /obj/item/clothing/shoes/laceup
 	l_pocket = /obj/item/device/radio
-	id_type = /obj/item/weapon/card/id/sciencelvl1
+	id_type = /obj/item/weapon/card/id/bartender
 	back = null
 	l_ear = null
 
@@ -311,7 +306,7 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/blue
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/doctor
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null
@@ -321,7 +316,7 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/teal
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/virologist
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null
@@ -331,7 +326,7 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/green
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/doctor
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null

@@ -19,7 +19,7 @@
 	icon_locked = "medical1"
 	icon_opened = "medicalopen"
 	icon_off = "medicaloff"
-	req_access = list(access_mtflvl1)
+	req_access = list(access_medicalchem)
 
 /obj/structure/closet/secure_closet/medical1/WillContain()
 	return list(
@@ -42,7 +42,7 @@
 	icon_locked = "medical1"
 	icon_opened = "medicalopen"
 	icon_off = "medicaloff"
-	req_access = list(access_mtflvl1)
+	req_access = list(access_medicalgen)
 
 /obj/structure/closet/secure_closet/medical2/WillContain()
 	return list(
@@ -52,7 +52,7 @@
 
 /obj/structure/closet/secure_closet/medical3
 	name = "medical doctor's locker"
-	req_access = list(access_mtflvl1)
+	req_access = list(access_medicalequip)
 	icon_state = "securemed1"
 	icon_closed = "securemed"
 	icon_locked = "securemed1"

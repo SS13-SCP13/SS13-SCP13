@@ -26,34 +26,6 @@
 /decl/security_level/default/site53/code_green/switching_down_to()
 	security_announcement_green.Announce("The situation has been resolved, and all personnel are to return to their regular duties.", "Attention! Alert level lowered to code green.")
 	notify_station()
-/*
-/decl/security_level/default/torchdept/code_violet
-	name = "code violet"
-
-	light_range = 3
-	light_power = 2
-	light_color_alarm = COLOR_VIOLET
-	light_color_status_display = COLOR_VIOLET
-
-	overlay_alarm = "alarm_violet"
-	overlay_status_display = "status_display_violet"
-
-	up_description = "A major medical emergency has developed. Medical personnel are required to report to their supervisor for orders, and non-medical personnel are required to obey all relevant instructions from medical staff."
-	down_description = "Code violet procedures are now in effect; Medical personnel are required to report to their supervisor for orders, and non-medical personnel are required to obey relevant instructions from medical staff."
-
-/decl/security_level/default/torchdept/code_orange
-	name = "code orange"
-
-	light_range = 3
-	light_power = 2
-	light_color_alarm = COLOR_ORANGE
-	light_color_status_display = COLOR_ORANGE
-	overlay_alarm = "alarm_orange"
-	overlay_status_display = "status_display_orange"
-
-	up_description = "A major engineering emergency has developed. Engineering personnel are required to report to their supervisor for orders, and non-engineering personnel are required to evacuate any affected areas and obey relevant instructions from engineering staff."
-	down_description = "Code orange procedures are now in effect; Engineering personnel are required to report to their supervisor for orders, and non-engineering personnel are required to evacuate any affected areas and obey relevant instructions from engineering staff."
-*/
 
 /decl/security_level/default/site53/code_yellow
 	name = "code yellow"
@@ -137,7 +109,7 @@
 	light_color_alarm = COLOR_RED
 	light_color_status_display = COLOR_NAVY_BLUE
 
-	overlay_alarm = "alarm_black"
+	overlay_alarm = "black_alarm"
 	overlay_status_display = "status_display_black"
 
 	crb = TRUE
@@ -160,8 +132,8 @@
 	light_color_alarm = COLOR_GRAY
 	light_color_status_display = COLOR_GRAY
 
-	overlay_alarm = "alarm_gray"
-	overlay_status_display = "status_display_gray"
+	overlay_alarm = "grey_alarm"
+	overlay_status_display = "status_display_grey"
 
 	var/static/datum/announcement/priority/security/security_announcement_gray = new(do_log = 0, do_newscast = 1, new_sound = sound())
 

@@ -79,6 +79,7 @@
 #define INIT_ORDER_NANOUI -18
 #define INIT_ORDER_TGUI -19
 #define INIT_ORDER_INACTIVITY -20
+#define INIT_ORDER_SETUP -21
 // SS runlevels
 
 #define RUNLEVEL_INIT 0

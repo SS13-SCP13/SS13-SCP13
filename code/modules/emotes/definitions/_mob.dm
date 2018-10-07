@@ -120,7 +120,8 @@
 		/decl/emote/visible/signal,
 		/decl/emote/visible/handshake,
 		/decl/emote/audible/clearthroat,
-		/decl/emote/audible/hem
+		/decl/emote/audible/hem,
+		/decl/emote/audible/snap
 	)
 
 /mob/living/silicon/robot

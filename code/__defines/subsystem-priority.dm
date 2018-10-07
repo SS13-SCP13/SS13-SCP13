@@ -33,3 +33,4 @@
 #define SS_PRIORITY_NANOUI		  5
 #define SS_PRIORITY_TGUI		  5
 #define SS_PRIORITY_INACTIVITY	  3
+#define SS_PRIORITY_SETUP		  1

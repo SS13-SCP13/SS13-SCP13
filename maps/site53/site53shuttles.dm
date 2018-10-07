@@ -302,3 +302,40 @@
 /obj/effect/shuttle_landmark/ert/deck1
 	name =  "Southwest of Fourth deck"
 	landmark_tag = "nav_ert_deck1"
+
+//Merc
+
+/datum/shuttle/autodock/multi/antag/mercenary
+	name = "Mercenary"
+	warmup_time = 0
+	destination_tags = list(
+		"nav_merc_deck1",
+		"nav_merc_dock",
+		"nav_merc_start",
+		)
+	shuttle_area = /area/syndicate_station/start
+	dock_target = "merc_shuttle"
+	current_location = "nav_merc_start"
+	landmark_transition = "nav_merc_transition"
+	announcer = "SEV Torch Sensor Array"
+	home_waypoint = "nav_merc_start"
+	arrival_message = "Attention, unknown vessel detected entering site proximity."
+	departure_message = "Attention, unknown vessel detected leaving site proximity."
+
+/obj/effect/shuttle_landmark/merc/start
+	name = "Mercenary Base"
+	landmark_tag = "nav_merc_start"
+	docking_controller = "merc_base"
+
+/obj/effect/shuttle_landmark/merc/internim
+	name = "In transit"
+	landmark_tag = "nav_merc_transition"
+
+/obj/effect/shuttle_landmark/merc/dock
+	name = "Docking Port"
+	landmark_tag = "nav_merc_dock"
+	docking_controller = "nuke_shuttle_dock_airlock"
+
+/obj/effect/shuttle_landmark/merc/deck1
+	name = "Site53"
+	landmark_tag = "nav_merc_deck1"

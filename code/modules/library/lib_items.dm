@@ -99,10 +99,10 @@
 
 	New()
 		..()
-		new /obj/item/weapon/book/manual/medical_cloning(src)
 		new /obj/item/weapon/book/manual/medical_diagnostics_manual(src)
 		new /obj/item/weapon/book/manual/medical_diagnostics_manual(src)
 		new /obj/item/weapon/book/manual/medical_diagnostics_manual(src)
+		new /obj/item/weapon/book/manual/scp/medsop(src)
 		update_icon()
 
 
@@ -118,6 +118,7 @@
 		new /obj/item/weapon/book/manual/atmospipes(src)
 		new /obj/item/weapon/book/manual/engineering_singularity_safety(src)
 		new /obj/item/weapon/book/manual/evaguide(src)
+		new /obj/item/weapon/book/manual/scp/engsop(src)
 		update_icon()
 
 /obj/structure/bookcase/manuals/research_and_development
@@ -126,6 +127,7 @@
 	New()
 		..()
 		new /obj/item/weapon/book/manual/research_and_development(src)
+		new /obj/item/weapon/book/manual/scp/scisop(src)
 		update_icon()
 
 

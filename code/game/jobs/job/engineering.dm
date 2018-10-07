@@ -33,6 +33,29 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 
+/datum/job/commeng
+	has_email = TRUE
+	selection_color = "#5b4d20"
+	title = "Communications Technician"
+	total_positions = 0
+	spawn_positions = 0
+	department_flag = ENG
+	supervisors = "the Communications Officer"
+	economic_modifier = 5
+	minimal_player_age = 7
+	ideal_character_age = 30
+	alt_titles = list(
+		"Communications Programmer"
+		)
+//	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+//	allowed_branches = list(
+//		/datum/mil_branch/security
+//	)
+//	allowed_ranks = list(
+//		/datum/mil_rank/security/e5,
+//		/datum/mil_rank/security/e6
+//	)
+
 /datum/job/seneng
 	title = "Senior Engineer"
 	total_positions = 4
@@ -119,8 +142,6 @@
 
 	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
-
-
 
 
 

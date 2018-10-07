@@ -112,7 +112,7 @@
 		new_player_panel_proc()
 
 	if(href_list["observe"])
-		if(!(initialization_stage&INITIALIZATION_COMPLETE))
+		if(!(Master.initialization_stage&INITIALIZATION_COMPLETE))
 			to_chat(src, "<span class='warning'>Please wait for server initialization to complete...</span>")
 			return
 

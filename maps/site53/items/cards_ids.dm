@@ -327,6 +327,42 @@
 	item_state = "Sec_ID1"
 	job_access_type = /datum/job/emt
 
+/obj/item/weapon/card/id/chemist
+	name = "level two security keycard"
+	desc = "A light blue card. Seems almost as unimportant as the person itself."
+	icon_state = "securitylvl2"
+	item_state = "Sec_ID2"
+	job_access_type = /datum/job/chemist
+
+/obj/item/weapon/card/id/doctor
+	name = "level two security keycard"
+	desc = "A light blue card. Seems almost as unimportant as the person itself."
+	icon_state = "securitylvl2"
+	item_state = "Sec_ID2"
+	job_access_type = /datum/job/medicaldoctor
+
+/obj/item/weapon/card/id/chiefmedicalofficer
+	name = "level five security keycard"
+	desc = "A dark purple keycard. Looks important."
+	icon_state = "securitylvl5"
+	item_state = "Sec_ID5"
+	job_access_type = /datum/job/cmo
+
+/obj/item/weapon/card/id/virologist
+	name = "level two security keycard"
+	desc = "A light blue card. Seems almost as unimportant as the person itself."
+	icon_state = "adminlvl2"
+	item_state = "Admin_ID"
+	job_access_type = /datum/job/virologist
+
+/obj/item/weapon/card/id/psychiatrist
+	name = "level three administration keycard"
+	desc = "A light blue card. Seems important."
+	icon_state = "adminlvl3"
+	item_state = "Admin_ID"
+	job_access_type = /datum/job/psychiatrist
+
+
 // ARCHIVE
 
 /obj/item/weapon/card/id/archivist
@@ -344,3 +380,19 @@
 	icon_state = "sciencelvl5"
 	item_state = "Science_ID5"
 	job_access_type = /datum/job/rd
+
+// MISC
+
+/obj/item/weapon/card/id/chef
+	name = "level five science keycard"
+	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	icon_state = "sciencelvl1"
+	item_state = "Science_ID1"
+	job_access_type = /datum/job/chef
+
+/obj/item/weapon/card/id/bartender
+	name = "level one science keycard"
+	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	icon_state = "sciencelvl1"
+	item_state = "Science_ID1"
+	job_access_type = /datum/job/bartender

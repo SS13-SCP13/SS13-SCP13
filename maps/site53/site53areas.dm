@@ -1,3 +1,12 @@
+/datum/map/site53
+
+	post_round_safe_areas = list (
+		/area/site53/tram/lcz,
+		/area/centcom,
+		/area/site53/surface/bunker,
+		/area/shuttle/escape_pod10/station
+		)
+
 /area/turbolift
 	name = "\improper Turbolift"
 	icon_state = "shuttle"
@@ -18,6 +27,14 @@
 	base_turf = /turf/simulated/open
 
 // SITE 53 ELEVATOR AREA'S
+
+/area/turbolift/site53/basement
+	name = "lift (basement)"
+	lift_floor_label = "Basement"
+	lift_floor_name = "Basement"
+	lift_announce_str = "Arriving at Basement: Server Farm, Communication Engineers."
+	requires_power = 0
+	dynamic_lighting = 1
 
 /area/turbolift/site53/surface
 	name = "lift (surface)"
@@ -64,6 +81,22 @@
 	lift_floor_label = "SCP-106 Observation"
 	lift_floor_name = "SCP-106 Observation"
 	lift_announce_str = "Arriving at SCP-106 Observation: Containment Observation."
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/turbolift/site53/logisticstorage
+	name = "lift (Logistics Storage)"
+	lift_floor_label = "Logistics Storage"
+	lift_floor_name = "Logistics Storage"
+	lift_announce_str = "Arriving at Logistics Storage: Secure Storage."
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/turbolift/site53/logistics
+	name = "lift (Logistics)"
+	lift_floor_label = "Logistics"
+	lift_floor_name = "Logistics"
+	lift_announce_str = "Arriving at Logistics: Locker Rooms, Lobby, Loading Docks."
 	requires_power = 0
 	dynamic_lighting = 1
 
@@ -629,6 +662,8 @@
 	name = "\improper SCP-049 Containment Chamber"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+	ambience = list('sound/ambience/hcz/049/Room049.ogg')
+	ambience_crb = list('sound/ambience/hcz/049/Room049.ogg')
 
 /area/site53/lhcz/hallway
 	name = "\improper Lower Heavy Containment Hallways"
@@ -851,4 +886,9 @@
 /area/site53/reswing/robotics
 	name = "\improper Robotics Laboratory"
 	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/logistics/logistics
+	name = "\improper Logistics"
+	icon_state = "quart"
 	area_flags = AREA_FLAG_RAD_SHIELDED
