@@ -380,3 +380,19 @@
 	icon_state = "sciencelvl5"
 	item_state = "Science_ID5"
 	job_access_type = /datum/job/rd
+
+// MISC
+
+/obj/item/weapon/card/id/chef
+	name = "level five science keycard"
+	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	icon_state = "sciencelvl1"
+	item_state = "Science_ID1"
+	job_access_type = /datum/job/chef
+
+/obj/item/weapon/card/id/bartender
+	name = "level one science keycard"
+	desc = "A light blue keycard. Haven't you seen a janitor with this before?"
+	icon_state = "sciencelvl1"
+	item_state = "Science_ID1"
+	job_access_type = /datum/job/bartender

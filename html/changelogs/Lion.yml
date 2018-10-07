@@ -57,6 +57,8 @@ changes:
   - tweak: "Chemist rank altered to Lieutant."
   - tweak: "CMO rank is changed to Captain and Major."
   - tweak: "Guard Commander now also allows Major and Lieutenant Colonel."
+  - tweak: "Access for bartender and chef capped. They will no longer have access to LCZ."
+  - maptweak: "Fixes oversight in D-Cell kitchen where there isn't any food processor."
   - maptweak: "Adds tape recorders to research area's."
   - maptweak: "Removed blood bag storage. No longer necessary."
   - maptweak: "Removed surgical recovery room. It wasn't used and takes up space."

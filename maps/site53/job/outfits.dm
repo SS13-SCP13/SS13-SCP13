@@ -187,7 +187,7 @@
 	uniform = /obj/item/clothing/under/color/white
 	shoes = /obj/item/clothing/shoes/white
 	l_pocket = /obj/item/device/radio
-	id_type = /obj/item/weapon/card/id/sciencelvl1
+	id_type = /obj/item/weapon/card/id/chef
 	back = null
 	l_ear = null
 
@@ -196,7 +196,7 @@
 	uniform = /obj/item/clothing/under/suit_jacket/tan
 	shoes = /obj/item/clothing/shoes/laceup
 	l_pocket = /obj/item/device/radio
-	id_type = /obj/item/weapon/card/id/sciencelvl1
+	id_type = /obj/item/weapon/card/id/bartender
 	back = null
 	l_ear = null
 
