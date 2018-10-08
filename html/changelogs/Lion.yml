@@ -67,6 +67,7 @@ changes:
   - maptweak: "Removed access requirements on windoor in SCP-513."
   - maptweak: "Aesthetically overhauled lower LCZ."
   - maptweak: "Changed access on tram hub bar, kitchen and hydroponics to the unique access for chef and bartender."
+  - maptweak: "Added radiocarbon spectrometer to Xenoarcheology."
   - maptweak: "Changed access requirements on SCP-173 to level 2 for Security and Science due to frequent mishaps that ruin the round."
   - maptweak: "Added a new disposal loop for artifacts and minerals. Yay, they now actually have use!"
   - maptweak: "Added new fire hydrant lockers added around LCZ."
