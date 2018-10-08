@@ -78,5 +78,6 @@ changes:
   - maptweak: "Added new fire hydrant lockers added around LCZ."
   - maptweak: "Altered Command area in the bunker to be slightly more secure against lesser threats."
   - maptweak: "Added an underground landing area for helicopters."
+  - maptweak: "Altered access requirements on Admin Canteen. I've just about had it with bartenders/chefs creating lavaburgers and killing people. If you still manage to do this without valid reason, expect a hefty ban."
   - experiment: "Medical access refactor. Please report any bugs."
   - experiment: "New hud overlay for Class D's when you're looking through security goggles."
