@@ -40,6 +40,7 @@ changes:
   - rscadd: "Added two new snack variants. Find out for yourself. ;) Sprites are thanked to DasFox."
   - rscadd: "Added a new mechanic where if a security locker is unlocked, it will display the name of the person who unlocked it. While the locker can be unlocked by others currently, it will allow for more personalized lockers."
   - rscadd: "New locker room benches, made by DasFox."
+  - rscadd: "New statue for the lobby. Courtesy of DasFox."
   - bugfix: "Fixed a bug where SCP-999 and SCP-012 were incorrectly named."
   - bugfix: "Fixed a bug where the CMO wouldn't spawn with a headset."
   - bugfix: "Fixed a bug where a Senior Scientist wouldn't spawn with a headset."
