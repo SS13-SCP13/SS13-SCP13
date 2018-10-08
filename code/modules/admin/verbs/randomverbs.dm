@@ -882,7 +882,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			for(var/obj/item/organ/V in M)
 				qdel(V)
 
-			var/obj/structure/closet/crate/secure/K = new /obj/structure/closet/crate/secure/(M.loc)
+			var/obj/structure/closet/crate/securecryo/K = new /obj/structure/closet/crate/secure/(M.loc)
 			K.name = (M.real_name + " - Equipment Crate")
 			K.health = 50
 			for(var/obj/item/W in M)

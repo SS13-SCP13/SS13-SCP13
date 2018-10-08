@@ -45,3 +45,30 @@
 
 /obj/structure/table/rack/dark
 	color = COLOR_GRAY40
+
+/obj/structure/table/rack/bog
+	name = "locker room table"
+	desc ="Must be the color."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "bograck"
+	can_plate = 0
+	can_reinforce = 0
+	flipped = -1
+
+/obj/structure/table/rack/lockerroomtablenorth
+	name = "locker room table"
+	desc = "A nice table that you could tie your shoes on or put your towels on."
+	icon = 'icons/obj/tables.dmi'
+	icon_state = "benchn"
+	can_plate = 0
+	can_reinforce = 0
+	flipped = -1
+
+/obj/structure/table/rack/lockerroomtableeast
+	name = "locker room table"
+	desc = "A nice table that you could tie your shoes on or put your towels on."
+	icon = 'icons/obj/tables.dmi'
+	icon_state = "benche"
+	can_plate = 0
+	can_reinforce = 0
+	flipped = -1
