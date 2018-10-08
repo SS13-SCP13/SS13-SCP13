@@ -55,3 +55,9 @@
 /obj/structure/table/holo_woodentable
 	icon_state = "holo_preview"
 	material = "holowood"
+
+/obj/structure/table/lockerroomtablenorth
+	icon_state = "benchn"
+
+/obj/structure/table/lockerroomtableeast
+	icon_state = "benche"
