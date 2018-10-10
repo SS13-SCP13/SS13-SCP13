@@ -392,7 +392,7 @@ var/list/name_to_material
 /material/plasteel
 	name = "plasteel"
 	stack_type = /obj/item/stack/material/plasteel
-	integrity = 400
+	integrity = 500
 	melting_point = 6000
 	icon_base = "solid"
 	icon_reinf = "reinf_over"
@@ -409,7 +409,7 @@ var/list/name_to_material
 	name = "titanium"
 	brute_armor = 10
 	burn_armor = 8
-	integrity = 200
+	integrity = 750
 	melting_point = 3000
 	stack_type = null
 	icon_base = "metal"
@@ -438,7 +438,7 @@ var/list/name_to_material
 	flags = MATERIAL_BRITTLE
 	icon_colour = "#00e1ff"
 	opacity = 0.3
-	integrity = 50
+	integrity = 75
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
 	hardness = 50
@@ -539,7 +539,7 @@ var/list/name_to_material
 	flags = MATERIAL_BRITTLE
 	icon_colour = "#00e1ff"
 	opacity = 0.3
-	integrity = 100
+	integrity = 150
 	melting_point = T0C + 750
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'

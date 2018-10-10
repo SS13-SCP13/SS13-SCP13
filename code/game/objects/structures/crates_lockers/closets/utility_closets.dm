@@ -250,6 +250,14 @@
 		/obj/random/firstaid,
 		/obj/random/medical/lite = 12)
 
+/*
+## SCP SUBTYPES
+*/
+
+/*
+## END SCP SUBTYPES
+*/
+
 /obj/structure/closet/shipping_wall
 	name = "shipping supplies closet"
 	desc = "It's a wall-mounted storage unit containing supplies for preparing shipments."

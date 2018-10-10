@@ -62,7 +62,9 @@
 		/datum/mil_rank/security/w5,
 		/datum/mil_rank/security/o1,
 		/datum/mil_rank/security/o2,
-		/datum/mil_rank/security/o3
+		/datum/mil_rank/security/o3,
+		/datum/mil_rank/security/o4,
+		/datum/mil_rank/security/o5
 	)
 
 //	assistant_job = "Private"

@@ -26,7 +26,7 @@
 			return
 
 //		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed", "Thanks", "Guilty", "L: Xeno Quickstart Guide", "L: Marine quickstart guide", "L: Current Map", "A: No plasma regen", "A: Devour as Xeno", "J: Job bans", "E: Event in progress", "R: Radios", "D: Joining disabled", "M: Macros")
-		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed","Thanks!", "A: GitHub Issue", "A: Becoming an SCP", "A: RUST Engine", "A: D-Class Riot", "A: D-Class Cells", "A: Directions/Lost", "A: Character setup", "A: Website and Discord information")
+		var/choice = input("Which autoresponse option do you want to send to the player?\n\n L - A webpage link.\n A - An answer to a common question.", "Autoresponse", "--CANCEL--") in list ("--CANCEL--", "IC Issue", "Being Handled", "Fixed","Thanks!", "A: GitHub Issue", "A: Requesting to be an SCP", "A: Becoming an SCP", "A: RUST Engine", "A: D-Class Riot", "A: D-Class Cells", "A: Directions/Lost", "A: Character setup", "A: Website and Discord information")
 
 
 		var/msgplayer
@@ -39,6 +39,8 @@
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. The issue is already fixed.</b>"
 			if("Thanks!")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. Have a SCP day!</b>"
+			if("A: Requesting to be an SCP")
+				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. Only under certain circumstances will an admin put you into an SCP. Examples of these circumstances are: Imminent Test or gross negligence in containment. Do not repeatedly ask to become an SCP, as this might get you a mute.</b>"
 			if("A: Becoming an SCP")
 				msgplayer = "\blue <b>NOTICE: <font color=red>[usr.key]</font> is autoresponding with <font color='#009900'>'[choice]'</font>. In order to become an SCP, the alert level should be above red, and you should be dead for at least 5 minutes.</b>"
 			if("A: GitHub Issue")

@@ -23,11 +23,13 @@
 	cost = 10
 	containername = "\improper Blood pack crate"
 
+
 /decl/hierarchy/supply_pack/medical/blood
 	name = "Nanoblood crate"
 	contains = list(/obj/item/weapon/reagent_containers/ivbag/nanoblood = 4)
 	cost = 15
 	containername = "\improper Nanoblood crate"
+
 
 /decl/hierarchy/supply_pack/medical/bodybag
 	name = "Body bag crate"
@@ -48,7 +50,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Medical surplus equipment"
-	access = access_medical
+	access = access_medicalgen
 
 /decl/hierarchy/supply_pack/medical/cmogear
 	name = "Chief medical officer equipment"
@@ -70,7 +72,7 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Chief medical officer equipment"
-	access = access_cmo
+	access = access_s53cmo
 
 /decl/hierarchy/supply_pack/medical/doctorgear
 	name = "Medical Doctor equipment"
@@ -91,7 +93,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Medical Doctor equipment"
-	access = access_medical_equip
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/chemistgear
 	name = "Chemist equipment"
@@ -112,7 +114,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Chemist equipment"
-	access = access_chemistry
+	access = access_medicalchem
 
 /decl/hierarchy/supply_pack/medical/paramedicgear
 	name = "Paramedic equipment"
@@ -138,7 +140,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Paramedic equipment"
-	access = access_medical_equip
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/psychiatristgear
 	name = "Psychiatrist equipment"
@@ -155,7 +157,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Psychiatrist equipment"
-	access = access_psychiatrist
+	access = access_medicalpsych
 
 /decl/hierarchy/supply_pack/medical/medicalscrubs
 	name = "Medical scrubs"
@@ -173,7 +175,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Medical scrubs crate"
-	access = access_medical_equip
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/autopsy
 	name = "Autopsy equipment"
@@ -188,7 +190,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Autopsy equipment crate"
-	access = access_morgue
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/medicaluniforms
 	name = "Medical uniforms"
@@ -212,7 +214,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Medical uniform crate"
-	access = access_medical_equip
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/medicalbiosuits
 	name = "Medical biohazard gear"
@@ -227,7 +229,7 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Medical biohazard equipment"
-	access = access_medical_equip
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/portablefreezers
 	name = "Portable freezers crate"
@@ -235,7 +237,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Portable freezers"
-	access = access_medical_equip
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/surgery
 	name = "Surgery crate"
@@ -253,7 +255,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Surgery crate"
-	access = access_medical
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/sterile
 	name = "Sterile equipment crate"
@@ -265,13 +267,3 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate
 	containername = "\improper Sterile equipment crate"
-
-/decl/hierarchy/supply_pack/medical/voidsuit
-	name = "Medical voidsuit"
-	contains = list(/obj/item/clothing/suit/space/void/medical/alt,
-					/obj/item/clothing/head/helmet/space/void/medical/alt,
-					/obj/item/clothing/shoes/magboots)
-	cost = 120
-	containername = "\improper Medical voidsuit crate"
-	containertype = /obj/structure/closet/crate/secure/large
-	access = access_medical_equip

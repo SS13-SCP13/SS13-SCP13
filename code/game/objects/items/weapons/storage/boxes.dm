@@ -486,6 +486,20 @@
 	desc = "A box full of engineering armbands. For use in emergencies when provisional engineering peronnel are needed."
 	startswith = list(/obj/item/clothing/accessory/armband/engine = 5)
 
+/obj/item/weapon/storage/box/bloodtypes
+	name = "box of bloodtype patches"
+	desc = "A box full of bloodtype patches for on plate carriers."
+	startswith = list(
+	/obj/item/clothing/accessory/armor/tag/oneg,
+	/obj/item/clothing/accessory/armor/tag/opos,
+	/obj/item/clothing/accessory/armor/tag/apos,
+	/obj/item/clothing/accessory/armor/tag/aneg,
+	/obj/item/clothing/accessory/armor/tag/bpos,
+	/obj/item/clothing/accessory/armor/tag/bneg,
+	/obj/item/clothing/accessory/armor/tag/abpos,
+	/obj/item/clothing/accessory/armor/tag/abneg
+	)
+
 /obj/item/weapon/storage/box/armband/med
 	name = "box of spare medical armbands"
 	desc = "A box full of medical armbands. For use in emergencies when provisional medical personnel are needed."

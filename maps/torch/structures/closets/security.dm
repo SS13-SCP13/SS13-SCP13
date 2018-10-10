@@ -28,7 +28,8 @@
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
-		/obj/item/clothing/mask/balaclava
+		/obj/item/clothing/mask/balaclava,
+		/obj/item/weapon/storage/box/bloodtypes
 	)
 
 /obj/structure/closet/secure_closet/mtf/commander
@@ -56,7 +57,8 @@
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
-		/obj/item/clothing/mask/balaclava
+		/obj/item/clothing/mask/balaclava,
+		/obj/item/weapon/storage/box/bloodtypes
 	)
 
 /obj/structure/closet/secure_closet/mtf/nco
@@ -84,7 +86,8 @@
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
-		/obj/item/clothing/mask/balaclava
+		/obj/item/clothing/mask/balaclava,
+		/obj/item/weapon/storage/box/bloodtypes
 	)
 
 /obj/structure/closet/secure_closet/mtf/co
@@ -112,5 +115,6 @@
 		/obj/item/ammo_magazine/mc9mm,
 		/obj/item/weapon/melee/classic_baton,
 		/obj/item/weapon/handcuffs,
-		/obj/item/clothing/mask/balaclava
+		/obj/item/clothing/mask/balaclava,
+		/obj/item/weapon/storage/box/bloodtypes
 	)

@@ -13,9 +13,9 @@ var/datum/antagonist/mercenary/mercs
 
 	hard_cap = 4
 	hard_cap_round = 8
-	initial_spawn_req = 4
-	initial_spawn_target = 6
-	min_player_age = 14
+	initial_spawn_req = 10
+	initial_spawn_target = 12
+	min_player_age = 7
 
 	faction = "mercenary"
 

@@ -84,6 +84,22 @@
 	requires_power = 0
 	dynamic_lighting = 1
 
+/area/turbolift/site53/logisticstorage
+	name = "lift (Logistics Storage)"
+	lift_floor_label = "Logistics Storage"
+	lift_floor_name = "Logistics Storage"
+	lift_announce_str = "Arriving at Logistics Storage: Secure Storage."
+	requires_power = 0
+	dynamic_lighting = 1
+
+/area/turbolift/site53/logistics
+	name = "lift (Logistics)"
+	lift_floor_label = "Logistics"
+	lift_floor_name = "Logistics"
+	lift_announce_str = "Arriving at Logistics: Locker Rooms, Lobby, Loading Docks."
+	requires_power = 0
+	dynamic_lighting = 1
+
 // SITE 53 TRAM AREA'S
 
 /area/site53/tram/engineering
@@ -870,4 +886,9 @@
 /area/site53/reswing/robotics
 	name = "\improper Robotics Laboratory"
 	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site53/logistics/logistics
+	name = "\improper Logistics"
+	icon_state = "quart"
 	area_flags = AREA_FLAG_RAD_SHIELDED

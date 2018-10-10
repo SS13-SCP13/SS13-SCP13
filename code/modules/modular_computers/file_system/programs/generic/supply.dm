@@ -27,7 +27,7 @@
 
 /datum/nano_module/supply/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1, state = GLOB.default_state)
 	var/list/data = host.initial_data()
-	var/is_admin = check_access(user, access_cargo)
+	var/is_admin = check_access(user, access_logistics)
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 	if(!category_names || !category_contents || current_security_level != security_state.current_security_level)
 		generate_categories()
