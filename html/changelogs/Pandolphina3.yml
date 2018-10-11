@@ -1,0 +1,5 @@
+author: Pandolphina
+delete-after: True
+
+changes: 
+  - rscdel: "Deletes lasers and energy guns, as well as teleporters/bluespace stuff from the Protolathe."
