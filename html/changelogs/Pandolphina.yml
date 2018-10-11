@@ -3,3 +3,8 @@ delete-after: True
 
 changes: 
   - rscadd: "Makes lunchboxes lore friendly, and swaps the Nanotrasen lunchbox for the Foundation one made by Das"
+  - rscadd: "Makes cargo crates work with access"
+  - rscadd: "Adds guard gear crate, SMG crate and pistol crate"
+  - rscdel: "Removes wizard/witch crates"
+
+
