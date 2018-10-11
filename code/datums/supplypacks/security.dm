@@ -12,8 +12,8 @@
 
 /decl/hierarchy/supply_pack/security/pistol
     name = "Pistol Crate"
-    contains = list(/obj/item/weapon/gun/projectile/pistol,
-        /obj/item/ammo_magazine/mc9mm = 4)
+    contains = list(/obj/item/weapon/gun/projectile/sec/sec,
+        /obj/item/ammo_magazine/c45m = 4)
 
     cost = 20
     containertype = /obj/structure/closet/crate/secure
@@ -32,7 +32,7 @@
 
 /decl/hierarchy/supply_pack/security/guard
     name = "Guard Crate"
-    contains = list(/obj/item/clothing/under/solgov/utility/fleet/combat/security,
+    contains = list(/obj/item/clothing/under/scp/utility/security,
         /obj/item/clothing/head/helmet/pcrc,
         /obj/item/clothing/accessory/armor/helmcover/navy,
         /obj/item/clothing/suit/armor/pcarrier,
@@ -43,10 +43,6 @@
         /obj/item/clothing/accessory/armor/tag/solgov/sec,
         /obj/item/weapon/storage/belt/security/tactical,
         /obj/item/clothing/accessory/storage/pouches,
-        /obj/item/weapon/gun/projectile/pistol,
-        /obj/item/ammo_magazine/mc9mm = 4,
-        /obj/item/weapon/gun/projectile/automatic/c20r,
-        /obj/item/ammo_magazine/a10mm = 4,
         /obj/item/weapon/melee/telebaton,
         /obj/item/weapon/handcuffs,
         /obj/item/clothing/gloves/tactical,
