@@ -62,13 +62,7 @@
 
 /decl/hierarchy/supply_pack/supply/minergear
     name = "Miner equipment"
-    contains = list(/obj/item/weapon/storage/backpack/industrial,
-                    /obj/item/weapon/storage/backpack/satchel_eng,
-                    /obj/item/device/radio/headset/headset_cargo,
-                    /obj/item/clothing/under/rank/miner,
-                    /obj/item/clothing/gloves/thick,
-                    /obj/item/clothing/shoes/black,
-                    /obj/item/device/analyzer,
+    contains = list(/obj/item/device/analyzer,
                     /obj/item/weapon/storage/ore,
                     /obj/item/device/flashlight/lantern,
                     /obj/item/weapon/shovel,
