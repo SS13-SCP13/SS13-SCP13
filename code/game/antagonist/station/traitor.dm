@@ -3,7 +3,7 @@ var/datum/antagonist/traitor/traitors
 // Inherits most of its vars from the base datum.
 /datum/antagonist/traitor
 	id = MODE_TRAITOR
-	protected_jobs = list(/datum/job/assistant, /datum/job/captain, /datum/job/cellguardlieutenant, /datum/job/hos, /datum/job/ltofficer, /datum/job/rd, /datum/job/o5rep)
+	protected_jobs = list(/datum/job/assistant, /datum/job/captain, /datum/job/hos, /datum/job/rd, /datum/job/o5rep)
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 
 /datum/antagonist/traitor/New()

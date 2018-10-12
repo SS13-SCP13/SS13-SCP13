@@ -479,7 +479,7 @@ ranks - ec
 	icon_state = "ecrank_o8"
 
 /************
-ranks - fleet
+ranks - SCP FOUNDATION / SITE RANKS
 ************/
 /obj/item/clothing/accessory/solgov/rank/fleet
 	name = "naval ranks"

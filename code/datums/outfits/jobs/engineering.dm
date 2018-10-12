@@ -15,14 +15,14 @@
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
 	l_ear = /obj/item/device/radio/headset/heads/ce
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl4
+//	id_type = /obj/item/weapon/card/id/seclvl4
 
 
 /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
 	name = OUTFIT_JOB_NAME("Junior Engineer")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/engineering
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl2
+//	id_type = /obj/item/weapon/card/id/seclvl2
 
 /*
 /decl/hierarchy/outfit/job/engineering/engineer

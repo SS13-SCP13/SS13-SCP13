@@ -31,18 +31,22 @@
 		/datum/mil_rank/security/e8,
 		/datum/mil_rank/security/e9,
 		/datum/mil_rank/security/e9_alt1,
-		/datum/mil_rank/security/e9_alt2,
 		/datum/mil_rank/security/w1,
 		/datum/mil_rank/security/w2,
 		/datum/mil_rank/security/w3,
 		/datum/mil_rank/security/w4,
 		/datum/mil_rank/security/w5,
+		/datum/mil_rank/security/w6,
 		/datum/mil_rank/security/o1,
 		/datum/mil_rank/security/o2,
 		/datum/mil_rank/security/o3,
 		/datum/mil_rank/security/o4,
 		/datum/mil_rank/security/o5,
-		/datum/mil_rank/security/o6
+		/datum/mil_rank/security/o6,
+		/datum/mil_rank/security/o7,
+		/datum/mil_rank/security/o8,
+		/datum/mil_rank/security/o9,
+		/datum/mil_rank/security/o10,
 	)
 
 	spawn_rank_types = list(
@@ -60,11 +64,13 @@
 		/datum/mil_rank/security/w3,
 		/datum/mil_rank/security/w4,
 		/datum/mil_rank/security/w5,
+		/datum/mil_rank/security/w6,
 		/datum/mil_rank/security/o1,
 		/datum/mil_rank/security/o2,
 		/datum/mil_rank/security/o3,
 		/datum/mil_rank/security/o4,
-		/datum/mil_rank/security/o5
+		/datum/mil_rank/security/o5,
+		/datum/mil_rank/security/o6
 	)
 
 //	assistant_job = "Private"
@@ -106,162 +112,173 @@
  */
 
 /datum/mil_rank/security/e1
-	name = "Private"
-	name_short = "PVT"
+	name = "Recruit"
+	name_short = "PSR"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 1
 
 /datum/mil_rank/security/e2
-	name = "Private First Class"
-	name_short = "PFC"
+	name = "Junior Protection Specialist"
+	name_short = "JPS"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e2, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 2
 
 /datum/mil_rank/security/e3
-	name = "Specialist"
-	name_short = "SPC"
+	name = "Protection Specialist"
+	name_short = "1PS"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e3, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 3
 
 /datum/mil_rank/security/e4
-	name = "Corporal"
-	name_short = "CPL"
+	name = "Senior Protection Specialist"
+	name_short = "SPS"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e4, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 4
 
 /datum/mil_rank/security/e5
-	name = "Sergeant"
-	name_short = "SGT"
+	name = "Master Protection Specialist"
+	name_short = "MPS"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e5, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 5
 
 /datum/mil_rank/security/e6
-	name = "Staff Sergeant"
-	name_short = "SSGT"
+	name = "Junior Protection Officer"
+	name_short = "JPO"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e6, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 6
 
 /datum/mil_rank/security/e7
-	name = "Sergeant First Class"
-	name_short = "SFC"
+	name = "Protection Officer"
+	name_short = "PO"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e7, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 7
 
 /datum/mil_rank/security/e8
-	name = "Master Sergeant"
-	name_short = "MSGT"
+	name = "Senior Protection Officer"
+	name_short = "SPO"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e8, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 8
 
 /datum/mil_rank/security/e9
-	name = "First Sergeant"
-	name_short = "1SGT"
+	name = "Master Protection Officer"
+	name_short = "MPO"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e9, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 9
 
 /datum/mil_rank/security/e9_alt1
-	name = "Sergeant Major"
-	name_short = "SGM"
+	name = "O5 Protection Official"
+	name_short = "O5PO"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e9_alt1, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 9
-
+/*
 /datum/mil_rank/security/e9_alt2
 	name = "Command Sergeant Major"
 	name_short = "CSM"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e9_alt2, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 9
-
+*/
 /datum/mil_rank/security/w1
-	name = "Warrant Officer 1"
-	name_short = "WO1"
+	name = "Technical Specialist"
+	name_short = "TS"
 	sort_order = -1
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/warrant)
 
 /datum/mil_rank/security/w2
-	name = "Chief Warrant Officer 2"
-	name_short = "CWO2"
+	name = "Containment Specialist 1"
+	name_short = "CS1"
 	sort_order = -2
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/warrant/w2)
 
 /datum/mil_rank/security/w3
-	name = "Chief Warrant Officer 3"
-	name_short = "CWO3"
+	name = "Containment Specialist 2"
+	name_short = "CS2"
 	sort_order = -3
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/warrant/w3)
 
 /datum/mil_rank/security/w4
-	name = "Chief Warrant Officer 4"
-	name_short = "CWO4"
+	name = "Containment Specialist 3"
+	name_short = "CS3"
 	sort_order = -4
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/warrant/w4)
 
 /datum/mil_rank/security/w5
-	name = "Chief Warrant Officer 5"
-	name_short = "CWO5"
+	name = "Site Specialist"
+	name_short = "SiS"
 	sort_order = -5
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/warrant/w5)
+
+/datum/mil_rank/security/w6
+	name = "O5 Site Specialist"
+	name_short = "O5SiS"
+	sort_order = -6
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/warrant/w6)
 
 /datum/mil_rank/security/o1
-	name = "Second Lieutenant"
-	name_short = "2LT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer, /obj/item/clothing/accessory/solgov/specialty/officer)
+	name = "Junior Lieutenant"
+	name_short = "JLT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/junofficer, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 11
 
 /datum/mil_rank/security/o2
-	name = "First Lieutenant"
-	name_short = "1LT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o2, /obj/item/clothing/accessory/solgov/specialty/officer)
+	name = "Senior Lieutenant"
+	name_short = "SLT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/junofficer/o2, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 12
 
 /datum/mil_rank/security/o3
-	name = "Captain"
-	name_short = "CPT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o3, /obj/item/clothing/accessory/solgov/specialty/officer)
+	name = "Site Lieutenant"
+	name_short = "SiLT"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 13
 
 /datum/mil_rank/security/o4
-	name = "Major"
-	name_short = "MAJ"
+	name = "Captain"
+	name_short = "CPT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o4, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 14
 
 /datum/mil_rank/security/o5
-	name = "Lieutenant Colonel"
-	name_short = "LTC"
+	name = "Commander"
+	name_short = "CMDR"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o5, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 15
 
 /datum/mil_rank/security/o6
-	name = "Colonel"
-	name_short = "COL"
+	name = "Site Commander"
+	name_short = "SiCMDR"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/o6, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 16
 
 /datum/mil_rank/security/o7
-	name = "Brigadier General"
-	name_short = "BG"
+	name = "Tertiary Division Leader"
+	name_short = "TDL"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 17
 
 /datum/mil_rank/security/o8
-	name = "Major General"
-	name_short = "MG"
+	name = "Secopndary Division Leader"
+	name_short = "SDL"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o8, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 18
 
 /datum/mil_rank/security/o9
-	name = "Lieutenant General"
-	name_short = "LTG"
+	name = "Primary Divsiion Leader"
+	name_short = "PDL"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o9, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 19
 
 /datum/mil_rank/security/o10
-	name = "General"
-	name_short = "GEN"
+	name = "O5 Strategic Specialist"
+	name_short = "O5StS"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o10, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 20
-
+/*
 /datum/mil_rank/security/o10_alt
 	name = "Division General"
 	name_short = "DG"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o10_alt, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 20
-
+*/
 /* AWAITING OVERHAUL
 /*
  *  EC

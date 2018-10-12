@@ -35,7 +35,7 @@
 
 /obj/structure/closet/secure_closet/mtf/enlisted/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/fleet/combat/security,
+		/obj/item/clothing/under/scp/utility/security,
 		/obj/item/clothing/head/helmet/pcrc,
 		/obj/item/clothing/accessory/armor/helmcover/navy,
 		/obj/item/clothing/suit/armor/pcarrier,
@@ -53,7 +53,7 @@
 		/obj/item/weapon/handcuffs,
 		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/clothing/accessory/storage/black_vest,
-		/obj/item/clothing/gloves/tactical,
+		/obj/item/clothing/gloves/tactical/scp,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/device/flash,
 		/obj/item/clothing/accessory/solgov/department/security/marine,
@@ -72,7 +72,7 @@
 
 /obj/structure/closet/secure_closet/mtf/commander/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/fleet/combat/security,
+		/obj/item/clothing/under/scp/utility/security/gc,
 		/obj/item/clothing/head/helmet/site53/guardcomm,
 		/obj/item/clothing/accessory/armor/helmcover/navy,
 		/obj/item/clothing/suit/armor/pcarrier,
@@ -89,7 +89,7 @@
 		/obj/item/ammo_magazine/a10mm = 4,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
-		/obj/item/clothing/gloves/tactical,
+		/obj/item/clothing/gloves/tactical/scp,
 		/obj/item/device/flash,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/clothing/accessory/holster/thigh,
@@ -110,7 +110,7 @@
 
 /obj/structure/closet/secure_closet/mtf/nco/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/fleet/combat/security,
+		/obj/item/clothing/under/scp/utility/security,
 		/obj/item/clothing/head/helmet/pcrc,
 		/obj/item/clothing/accessory/armor/helmcover/navy,
 		/obj/item/clothing/suit/armor/pcarrier,
@@ -127,7 +127,7 @@
 		/obj/item/ammo_magazine/a10mm = 4,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/weapon/handcuffs,
-		/obj/item/clothing/gloves/tactical,
+		/obj/item/clothing/gloves/tactical/scp,
 		/obj/item/device/flash,
 		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/clothing/accessory/storage/black_vest,
@@ -148,7 +148,7 @@
 
 /obj/structure/closet/secure_closet/mtf/co/WillContain()
 	return list(
-		/obj/item/clothing/under/solgov/utility/fleet/combat/security,
+		/obj/item/clothing/under/scp/utility/security/zc,
 		/obj/item/clothing/head/helmet/site53/zonecomm,
 		/obj/item/clothing/accessory/armor/helmcover/navy,
 		/obj/item/clothing/suit/armor/pcarrier,
@@ -169,7 +169,7 @@
 		/obj/item/weapon/handcuffs,
 		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/device/flash,
-		/obj/item/clothing/gloves/tactical,
+		/obj/item/clothing/gloves/tactical/scp,
 		/obj/item/clothing/accessory/holster/thigh,
 		/obj/item/clothing/mask/balaclava,
 		/obj/item/weapon/storage/box/bloodtypes
