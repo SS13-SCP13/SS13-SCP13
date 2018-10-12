@@ -82,4 +82,4 @@ changes:
   - experiment: "Medical access refactor. Please report any bugs."
   - experiment: "New hud overlay for Class D's when you're looking through security goggles."
   - experiment: "Full rework of the Security department."
-  - experiment: "Entirely new ranking structure. Job access has been restructured. We advice caution and going through it step by step to see what it unlocks."
+  - experiment: "Entirely new ranking structure. Job access has been restructured. We advice caution and going through it step by step to see what it unlocks, or pressing the job to see what rank is needed."
