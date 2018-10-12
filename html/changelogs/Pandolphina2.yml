@@ -1,5 +1,0 @@
-author: Pandolphina
-delete-after: True
-
-changes: 
-  - rscdel: "Removes laser and energy guns from the uplink, as well as teleporters"
