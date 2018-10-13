@@ -38,4 +38,5 @@ changes:
   - bugfix: "Fixed EMT not being able to access the LCZ tram."
   - bugfix: "Fixed LCZ Commander not being able to access their office."
   - bugfix: "Fixed Security spawning with the incorrect side arm."
+  - rscdel: "Removed xenobotany. It produced a lot of things that were unwanted."
   - tweak: "Added job duty fluff for EMT."
