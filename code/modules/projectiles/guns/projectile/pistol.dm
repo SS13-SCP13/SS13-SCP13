@@ -59,6 +59,19 @@
 	else
 		icon_state = "secgundark-e"
 
+/obj/item/weapon/gun/projectile/sec/sec
+	desc = "A SCPF Mk3 Tactical, reminiscent of a H&K USP. This weapon, patented and produced by the SCP Foundation, is the main service firearm for it's members. Chambered in .45 rounds."
+	name = "Mk3 Tactical"
+	icon_state = "usp"
+	accuracy = 0
+
+/obj/item/weapon/gun/projectile/sec/sec/update_icon()
+	..()
+	if(ammo_magazine && ammo_magazine.stored_ammo.len)
+		icon_state = "usp"
+	else
+		icon_state = "usp-e"
+
 /obj/item/weapon/gun/projectile/silenced
 	name = "silenced pistol"
 	desc = "A handgun with an integral silencer. Uses .45 rounds."

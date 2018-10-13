@@ -139,6 +139,16 @@
 	permeability_coefficient = 0.05
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0)
 
+/obj/item/clothing/gloves/tactical/scp
+	desc = "These grey tactical gloves are made from a durable synthetic, and have hardened knuckles."
+	name = "tactical gloves"
+	icon_state = "G_Gloves_IH"
+	item_state = "G_Gloves_OM"
+	force = 5
+	siemens_coefficient = 0.50
+	permeability_coefficient = 0.05
+	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0)
+
 /obj/item/clothing/gloves/guards
 	desc = "A pair of synthetic gloves and arm pads reinforced with armor plating."
 	name = "arm guards"

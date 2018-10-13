@@ -339,3 +339,24 @@
 /obj/effect/shuttle_landmark/merc/deck1
 	name = "Site53"
 	landmark_tag = "nav_merc_deck1"
+	base_area = /area/site53/surface/surface
+
+//
+
+/datum/shuttle/autodock/ferry/supply/drone
+	name = "Supply Drone"
+	location = 1
+	warmup_time = 10
+	shuttle_area = /area/supply/dock
+	waypoint_offsite = "nav_cargo_start"
+	waypoint_station = "nav_cargo_station"
+
+/obj/effect/shuttle_landmark/supply/centcom
+	name = "Offsite"
+	landmark_tag = "nav_cargo_start"
+
+/obj/effect/shuttle_landmark/supply/station
+	name = "Landing Pad"
+	landmark_tag = "nav_cargo_station"
+	base_area = /area/site53/logistics/logistics
+	base_turf = /turf/simulated/floor/plating

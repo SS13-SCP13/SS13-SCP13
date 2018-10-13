@@ -32,6 +32,75 @@
 	icon_state = "marinept"
 	worn_state = "marinept"
 
+// SCP Stuff
+
+/obj/item/clothing/under/scp/utility
+	desc = "A dark black uniform. This one seems to be without department insignia. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "utility uniform"
+	icon = 'maps/torch/icons/obj/solgov-under.dmi'
+	item_icons = list(slot_w_uniform_str = 'maps/torch/icons/mob/solgov-under.dmi')
+	icon_state = "scpuniform"
+	worn_state = "uniform"
+
+/obj/item/clothing/under/scp/utility/security
+	desc = "A dark black uniform. This one seems to be of the Security department. This uniform is issued to ranked personnel lower than Lieutenant. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "security uniform"
+	icon_state = "scpuniform"
+	worn_state = "uniform_s"
+
+/obj/item/clothing/under/scp/utility/security/zc
+	desc = "A dark black uniform. This one seems to be of the Security department. This uniform is issued to ranked personnel of Lieutenant. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "zone commander uniform"
+	icon_state = "scpuniform"
+	worn_state = "uniform_zc"
+
+/obj/item/clothing/under/scp/utility/security/gc
+	desc = "A dark black uniform. This one seems to be of the Security department. This uniform is issued to ranked personnel above Lieutenant. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "guard commander uniform"
+	icon_state = "scpuniform"
+	worn_state = "uniform_gc"
+
+/obj/item/clothing/under/scp/utility/medical
+	desc = "A dark black uniform. This one seems to be of the Medical department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "guard commander uniform"
+	icon_state = "scpuniform"
+	worn_state = "uniform_m"
+
+/obj/item/clothing/under/scp/utility/engineering
+	desc = "A dark black uniform. This one seems to be of the Engineering department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "guard commander uniform"
+	icon_state = "scpuniform"
+	worn_state = "uniform_e"
+
+/obj/item/clothing/under/scp/utility/logistics
+	desc = "A dark black uniform. This one seems to be of the Logistics department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "logistics specialist uniform"
+	icon_state = "scpuniform"
+	worn_state = "Uniform_LS"
+
+/obj/item/clothing/under/scp/utility/logistics/officer
+	desc = "A dark black uniform. This one seems to be of the Logistics department. This uniform is issued based on rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "logistics officer uniform"
+	icon_state = "scpuniform"
+	worn_state = "Uniform_LS"
+
+/obj/item/clothing/under/scp/utility/communications/tech
+	desc = "A dark black uniform. This one seems to be of the Communications department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "communications technician uniform"
+	icon_state = "scpuniform"
+	worn_state = "Uniform_CT"
+
+/obj/item/clothing/under/scp/utility/communications/officer
+	desc = "A dark black uniform. This one seems to be of the Communications department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "communications technician uniform"
+	icon_state = "communiform_m"
+	worn_state = "com_uniform_m"
+
+/obj/item/clothing/under/scp/utility/communications/officerfem
+	desc = "A dark black uniform. This one seems to be of the Communications department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "communications technician uniform"
+	icon_state = "communiform_f"
+	worn_state = "com_uniform_f"
 
 //Utility
 

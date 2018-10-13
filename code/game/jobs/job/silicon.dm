@@ -20,23 +20,3 @@
 
 /datum/job/ai/is_position_available()
 	return (empty_playable_ai_cores.len != 0)
-
-/datum/job/cyborg
-	title = "Cyborg"
-	department_flag = MSC
-
-	total_positions = 0
-	spawn_positions = 0
-	supervisors = "your laws and the AI"	//Nodrak
-	selection_color = "#254c25"
-	minimal_player_age = 7
-	alt_titles = list("Android", "Robot")
-	account_allowed = 0
-	economic_modifier = 0
-	loadout_allowed = FALSE
-	outfit_type = /decl/hierarchy/outfit/job/silicon/cyborg
-	hud_icon = "hudblank"
-
-/datum/job/cyborg/equip(var/mob/living/carbon/human/H)
-	if(!H)	return 0
-	return 1

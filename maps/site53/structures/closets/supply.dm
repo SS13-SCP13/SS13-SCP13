@@ -65,16 +65,16 @@
 	name = "logistics officer's footlocker"
 	req_access = list(access_logofficer)
 	icon_state = "lolocked"
-	icon_closed = "loclosed"
+	icon_closed = "lounlocked"
 	icon_locked = "lolocked"
 	icon_opened = "loopen"
 	icon_off = "looff"
-/*
+
 /obj/structure/closet/secure_closet/logistics/officer/WillContain()
 	return list(
-		/obj/item/device/radio/headset/headset_cargo,
+		/obj/item/clothing/under/scp/utility/logistics/officer,
+		/obj/item/device/radio/headset/headset_deckofficer,
 		/obj/item/clothing/gloves/thick,
-		/obj/item/weapon/cartridge/quartermaster,
 		/obj/item/clothing/glasses/meson,
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/clothing/suit/storage/hazardvest,
@@ -86,18 +86,16 @@
 		/obj/item/weapon/packageWrap,
 		/obj/item/device/flash,
 		/obj/item/device/megaphone,
-		/obj/item/device/holowarrant,
-		/obj/item/clothing/suit/armor/pcarrier/light/sol,
 		/obj/item/device/binoculars,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack = 75, /obj/item/weapon/storage/backpack/satchel/grey = 25)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/messenger = 75, /obj/item/weapon/storage/backpack/dufflebag = 25))
 	)
-*/
+
 /obj/structure/closet/secure_closet/logistics/specialist
 	name = "logistics specialist's footlocker"
 	req_access = list(access_logistics)
 	icon_state = "lslocked"
-	icon_closed = "lsclosed"
+	icon_closed = "lsunlocked"
 	icon_locked = "lslocked"
 	icon_opened = "lsopen"
 	icon_off = "lsoff"

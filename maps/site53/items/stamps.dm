@@ -27,7 +27,7 @@
 	icon_state = "stamp-intaff"
 
 /obj/item/weapon/stamp/deckoff
-	name = "deck officer's rubber stamp"
+	name = "logistics officer's rubber stamp"
 	icon_state = "stamp-qm"
 
 /obj/item/weapon/stamp/supply
