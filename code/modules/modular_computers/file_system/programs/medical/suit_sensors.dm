@@ -6,7 +6,7 @@
 	program_key_state = "med_key"
 	program_menu_icon = "heart"
 	extended_desc = "This program connects to life signs monitoring system to provide basic information on crew health."
-	required_access = access_mtflvl1
+	req_one_access = list(access_mtflvl1, access_medicalgen)
 	requires_ntnet = 1
 	network_destination = "crew lifesigns monitoring system"
 	size = 11
