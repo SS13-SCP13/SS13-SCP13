@@ -8,6 +8,9 @@
 	var/skipeyes = 0
 	var/skipface = 0
 
+	if(!isobserver(user))
+		user.visible_message("<span class='notice'><font size=1><i>[user] looks at [src].</i></font></span>")
+
 	//exosuits and helmets obscure our view and stuff.
 	if(wear_suit)
 		skipgloves = wear_suit.flags_inv & HIDEGLOVES
