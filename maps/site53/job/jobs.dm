@@ -829,7 +829,7 @@
 	allowed_ranks = list(
 		/datum/mil_rank/security/o1)
 
-	access = list(access_medicalgen, access_medicalchem)
+	access = list(access_medicalgen, access_medicalchem, access_medicalequip)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -858,7 +858,7 @@
 		H.add_stats(rand(1,3), rand(3,5), rand(25,30))
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
-	access = list(access_medicalgen, access_medicalpsych)
+	access = list(access_medicalgen, access_medicalpsych, access_medicalequip)
 	minimal_access = list()
 
 /datum/job/medicaldoctor
@@ -950,6 +950,7 @@
 	spawn_positions = 2
 	ideal_character_age = 40
 	economic_modifier = 5
+	duties = "<big><b>As the EMT it is your job to man the medical post near the Class D cell block, and treat any injuries there of the guards or Class D's. You only have limited supplies, so it's best to make them count."
 	supervisors = "the Chief Medical Officer"
 	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/emt
 	allowed_branches = list(
@@ -966,7 +967,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(50,70), rand(5,10))
 
 
-	access = list(access_medicalgen, access_medicalequip)
+	access = list(access_medicalgen, access_medicalequip, access_mtflvl1)
 	minimal_access = list()
 
 
