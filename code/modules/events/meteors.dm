@@ -50,9 +50,9 @@
 /datum/event/meteor_wave/end()
 	switch(severity)
 		if(EVENT_LEVEL_MAJOR)
-			command_announcement.Announce("The underground cave system has recuperated his structural integrity.", "[location_name()] Alert Sensors", zlevels = affecting_z)
+			command_announcement.Announce("The underground cave system has recuperated its structural integrity.", "[location_name()] Alert Sensors", zlevels = affecting_z)
 		else
-			command_announcement.Announce("The underground cave system has recuperated his structural integrity.", "[location_name()] Alert Sensors", zlevels = affecting_z)
+			command_announcement.Announce("The underground cave system has recuperated its structural integrity.", "[location_name()] Alert Sensors", zlevels = affecting_z)
 
 /datum/event/meteor_wave/proc/get_meteors()
 	switch(severity)
