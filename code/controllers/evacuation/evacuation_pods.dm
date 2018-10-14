@@ -3,7 +3,7 @@
 #define EVAC_OPT_CANCEL_ABANDON_SITE "cancel_abandon_site"
 #define EVAC_OPT_CANCEL_END_SHIFT "cancel_end_shift"
 
-// Apparently, emergency_evacuation --> "abandon ship" and !emergency_evacuation --> "bluespace jump"
+// Apparently, emergency_evacuation --> "abandon site" and !emergency_evacuation --> "shift end"
 // That stuff should be moved to the evacuation option datums but someone can do that later
 /datum/evacuation_controller/site
 	name = "evacuation controller"
