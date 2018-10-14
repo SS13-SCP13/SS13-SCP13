@@ -39,7 +39,7 @@
 	emergency_shuttle_called_message = "An emergency evacuation has been ordered for this facility. All authorized evacuees must proceed to the Tram Hub within %ETA% minutes and await the tram."
 	emergency_shuttle_recall_message = "The emergency evacuation has been cancelled. Return to your post."
 
-	evac_controller_type = /datum/evacuation_controller/starship
+	evac_controller_type = /datum/evacuation_controller/site
 
 	default_law_type = /datum/ai_laws/solgov
 	use_overmap = 0
