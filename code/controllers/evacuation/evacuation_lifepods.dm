@@ -20,9 +20,9 @@
 	if (is_on_cooldown())
 		return list()
 	if (is_idle())
-		return list(evacuation_options[EVAC_OPT_ABANDON_SHIP])
+		return list(evacuation_options[EVAC_OPT_ABANDON_SITE])
 	if (is_evacuating())
-		return list(evacuation_options[EVAC_OPT_CANCEL_ABANDON_SHIP])
+		return list(evacuation_options[EVAC_OPT_CANCEL_ABANDON_SITE])
 
 #undef EVAC_OPT_ABANDON_SITE
 #undef EVAC_OPT_CANCEL_ABANDON_SITE
