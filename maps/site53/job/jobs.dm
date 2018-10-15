@@ -1080,7 +1080,7 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_s53bar, access_s53kitchen, access_dclasskitchen)// Limited internal D-Block access e.g. when training D-Class or unlocking their crates
+	access = list(access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany)// Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 
 /datum/job/bartender
@@ -1106,7 +1106,7 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_s53bar, access_s53kitchen, access_dclasskitchen) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
+	access = list(access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 
 /datum/job/archivist
