@@ -36,4 +36,6 @@ changes:
   - rscadd: "Logistics, and the associated jobs, added."
   - maptweak: "Added an extra layer of security for the disposal loops in the Class D mining area. They require security level one, so if someone wants something delivered, they should get a guard."
   - maptweak: "Removed a redundant deep fryer and grill, and replaced it with a condimaster in D-Class Kitchen. Now also has a reagent grinder. Thanks to Nappist."
+  - maptweak: "Airlock braces and duct tape added to Engineering. Thanks to Pandolphina."
+  - maptweak: "Reduced the amount of webbing vests available in Engineering from 8 to 4 and also changed them to brown ones."
   - bugfix: "Fixed a bug where Senior EZ Agent and HCZ Zone Commander would spawn in opposite zones."
