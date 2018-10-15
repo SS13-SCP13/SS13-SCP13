@@ -102,7 +102,7 @@
 "bX" = (/obj/structure/railing/mapped{icon_state = "railing0"; dir = 8},/turf/simulated/floor/reinforced,/area/site53/surface/surface)
 "bY" = (/obj/structure/railing/mapped,/turf/simulated/floor/reinforced,/area/site53/surface/surface)
 "bZ" = (/obj/structure/railing/mapped{icon_state = "railing0"; dir = 4},/obj/structure/railing/mapped,/turf/simulated/floor/reinforced,/area/site53/surface/surface)
-"ca" = (/obj/machinery/door/airlock/security{locked = 1; name = "Communications Tower"; req_access = list(303)},/obj/item/taperoll/engineering/applied,/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
+"ca" = (/obj/machinery/door/airlock/security{locked = 0; name = "Communications Tower"; req_access = list(703)},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
 "cb" = (/turf/simulated/wall/r_wall,/area/site53/upper_surface/commstower)
 "cc" = (/turf/unsimulated/mask,/area/site53/upper_surface/commstower)
 "cd" = (/obj/effect/decal/medical_decals{icon_state = "triagedecalleft"; pixel_x = 10},/obj/machinery/vending/wallmed1{layer = 3.3; name = "Emergency NanoMed"; pixel_x = 0; pixel_y = 28},/obj/structure/closet/crate/bin{anchored = 1; name = "trash bin"},/turf/simulated/floor/tiled/monotile/white,/area/site53/medical/sleeper)

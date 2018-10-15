@@ -392,8 +392,6 @@
 	back = null
 
 
-
-
 // LOGISTICS OUTFITS
 
 /decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer

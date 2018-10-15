@@ -168,6 +168,50 @@
 	desc = "Communications Tower"
 	region = ACCESS_REGION_COMMAND
 
+// TELECOMMS CHANNELS - THESE DON'T GO ON DOORS
+
+/var/const/access_eng_comms = 730
+/datum/access/eng_comms
+	id = access_eng_comms
+	desc = "Engineering Comms"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_sci_comms = 731
+/datum/access/sci_comms
+	id = access_sci_comms
+	desc = "Research Comms"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_sec_comms = 732
+/datum/access/sec_comms
+	id = access_sec_comms
+	desc = "Security Comms"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_log_comms = 733
+/datum/access/log_comms
+	id = access_log_comms
+	desc = "Logistics Comms"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_civ_comms = 734
+/datum/access/civ_comms
+	id = access_civ_comms
+	desc = "Civilian Comms"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_med_comms = 735
+/datum/access/med_comms
+	id = access_med_comms
+	desc = "Medical Comms"
+	region = ACCESS_REGION_NONE
+
+/var/const/access_com_comms = 736
+/datum/access/com_comms
+	id = access_com_comms
+	desc = "Command Comms"
+	region = ACCESS_REGION_NONE
+
 // LOGISTICS
 
 /var/const/access_logofficer = 800
