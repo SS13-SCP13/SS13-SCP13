@@ -6,27 +6,9 @@
 	var/list/area/areas = list()		//List of areas to affect. Filled by start()
 
 	var/eventDept = "Security"			//Department name in announcement
-	var/list/areaName = list("Brig")	//Names of areas mentioned in AI and Engineering announcements
-	var/list/areaType = list(/area/security/prison, /area/security/brig)	//Area types to include.
+	var/list/areaName = list("D-Class Rehabilitation")	//Names of areas mentioned in AI and Engineering announcements
+	var/list/areaType = list(/area/site53/llcz/dclass)	//Area types to include.
 	var/list/areaNotType = list()		//Area types to specifically exclude.
-
-/datum/event/prison_break/virology
-	eventDept = "Medical"
-	areaName = list("Virology")
-	areaType = list(/area/medical/virology, /area/medical/virologyaccess)
-
-/datum/event/prison_break/xenobiology
-	eventDept = "Science"
-	areaName = list("Xenobiology")
-	areaType = list(/area/rnd/xenobiology)
-	areaNotType = list(/area/rnd/xenobiology/xenoflora, /area/rnd/xenobiology/xenoflora_storage)
-
-/datum/event/prison_break/station
-	eventDept = "Local"
-	areaName = list("Brig","Virology","Xenobiology")
-	areaType = list(/area/security/prison, /area/security/brig, /area/medical/virology, /area/medical/virologyaccess, /area/rnd/xenobiology)
-	areaNotType = list(/area/rnd/xenobiology/xenoflora, /area/rnd/xenobiology/xenoflora_storage)
-
 
 /datum/event/prison_break/setup()
 	announceWhen = rand(75, 105)
@@ -34,10 +16,9 @@
 
 	src.endWhen = src.releaseWhen+2
 
-
 /datum/event/prison_break/announce()
 	if(areas && areas.len > 0)
-		command_announcement.Announce("[pick("Gr3y.T1d3 virus","Malignant trojan")] detected in [location_name()] [(eventDept == "Security")? "imprisonment":"containment"] subroutines. Secure any compromised areas immediately. [location_name()] AI involvement is recommended.", "[eventDept] Alert", zlevels = affecting_z)
+		command_announcement.Announce("[location_name()] airlock contact sensors have been open too long. Secure any compromised areas immediately.", "[eventDept] Alert", zlevels = affecting_z)
 
 
 /datum/event/prison_break/start()
@@ -55,9 +36,8 @@
 			to_chat(A, "<span class='danger'>Malicious program detected in the [english_list(areaName)] lighting and airlock control systems by [my_department].</span>")
 
 	else
-		WRITE_LOG(world.log, "ERROR: Could not initate grey-tide. Unable to find suitable containment area.")
+		WRITE_LOG(world.log, "ERROR: Could not initate orange-tide. Unable to find suitable containment area.")
 		kill()
-
 
 /datum/event/prison_break/tick()
 	if(activeFor == releaseWhen)

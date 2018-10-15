@@ -15,7 +15,7 @@
 
 	default_law_type = /datum/ai_laws/corporate
 
-	evac_controller_type = /datum/evacuation_controller/lifepods
+	evac_controller_type = /datum/evacuation_controller/site
 	lobby_icon = 'maps/overmap_example/overmap_example_lobby.dmi'
 	lobby_screens = list("spess","aesthetic")
 

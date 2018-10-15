@@ -12,6 +12,8 @@
 	supervisors = "Foundation Personnel"
 	selection_color = "#E55700"
 	economic_modifier = 1
+	total_positions = 15
+	spawn_positions = 15
 	duties = "<big><b>As a Class D, your first and foremost task is to be tested upon. This is usually done by order of a Scientist.<br> As Class D you can request several available jobs to kill time at the appropriate area.<br> <span style = 'color:red'>REMEMBER!</span> Rioting as Class D has been prohibited without staff approval, under rule 15.<br>IMPORTANT! Do not try to break out of your cell at game start. You will break your only way out!</span>"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
@@ -1016,9 +1018,9 @@
 	title = "Logistics Officer"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 0
-	spawn_positions = 0
-	supervisors = "the Guard Commander"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Site Director"
 	selection_color = "#515151"
 	economic_modifier = 5
 	minimal_player_age = 7
@@ -1044,8 +1046,8 @@
 	title = "Logistics Specialist"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	selection_color = "B4802B"
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3

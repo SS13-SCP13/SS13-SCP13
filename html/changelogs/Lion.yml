@@ -1,0 +1,43 @@
+################################
+# Example Changelog File
+#
+# Note: This file, and files beginning with ".", and files that don't end in ".yml" will not be read. If you change this file, you will look really dumb.
+#
+# Your changelog will be merged with a master changelog. (New stuff added only, and only on the date entry for the day it was merged.)
+# When it is, any changes listed below will disappear.
+#
+# Valid Prefixes: 
+#   bugfix
+#   wip (For works in progress)
+#   tweak
+#   soundadd
+#   sounddel
+#   rscadd (general adding of nice things)
+#   rscdel (general deleting of nice things)
+#   imageadd
+#   imagedel
+#   maptweak
+#   spellcheck (typo fixes)
+#   experiment
+#################################
+
+# Your name.  
+author: TheLion1675
+
+# Optional: Remove this file after generating master changelog.  Useful for PR changelogs that won't get used again.
+delete-after: True
+
+# Any changes you've made.  See valid prefix list above.
+# INDENT WITH TWO SPACES.  NOT TABS.  SPACES.
+# SCREW THIS UP AND IT WON'T WORK.
+# Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
+# Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
+changes: 
+  - rscadd: "Logistics, and the associated jobs, added."
+  - maptweak: "Added an extra layer of security for the disposal loops in the Class D mining area. They require security level one, so if someone wants something delivered, they should get a guard."
+  - maptweak: "Removed a redundant deep fryer and grill, and replaced it with a condimaster in D-Class Kitchen. Now also has a reagent grinder. Thanks to Nappist."
+  - maptweak: "Airlock braces and duct tape added to Engineering. Thanks to Pandolphina."
+  - maptweak: "Reduced the amount of webbing vests available in Engineering from 8 to 4 and also changed them to brown ones."
+  - bugfix: "Fixed a bug where Senior EZ Agent and HCZ Zone Commander would spawn in opposite zones."
+  - bugfix: "Fixed an issue with trams not having gravity, often causing gibbing when landing on someone who was unable to move back."
+  - tweak: "Capped max Class D's to be 15."

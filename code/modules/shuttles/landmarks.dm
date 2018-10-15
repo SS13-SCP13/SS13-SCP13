@@ -54,6 +54,7 @@
 	for(var/area/A in shuttle.shuttle_area)
 		var/list/translation = get_turf_translation(get_turf(shuttle.current_location), get_turf(src), A.contents)
 		if(check_collision(translation))
+			log_and_message_admins("found a collision at shuttle destination.")
 			return FALSE
 	return TRUE
 
@@ -61,11 +62,14 @@
 	for(var/source in turf_translation)
 		var/turf/target = turf_translation[source]
 		if(!target)
+			log_and_message_admins("collision is happening because we hit the edge of the map.")
 			return TRUE //collides with edge of map
-		if(target.loc != base_area)
-			return TRUE //collides with another area
-		if(target.density)
-			return TRUE //dense turf
+		// if(target.loc != base_area)
+		// 	log_and_message_admins("collision is happening because we are overlapping with another area.")
+		// 	return TRUE //collides with another area
+		// if(target.density)
+		// 	log_and_message_admins("collision is happening because there is something dense here.")
+		// 	return TRUE //dense turf
 	return FALSE
 
 //Self-naming/numbering ones.

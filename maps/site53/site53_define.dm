@@ -30,12 +30,16 @@
 	map_admin_faxes = list("Foundation Central Office")
 
 	//These should probably be moved into the evac controller...
-	shuttle_docked_message = "Attention all hands: Jump preparation complete. The bluespace drive is now spooling up, secure all stations for departure. Time to jump: approximately %ETD%."
-	shuttle_leaving_dock = "Attention all hands: Jump initiated, exiting bluespace in %ETA%."
-	shuttle_called_message = "Attention all hands: Jump sequence initiated. Transit procedures are now in effect. Jump in %ETA%."
-	shuttle_recall_message = "Attention all hands: Jump sequence aborted, return to normal operating conditions."
+	shuttle_docked_message = "The outbound tram has arrived at the Tram Hub. It will depart in approximately %ETD%."
+	shuttle_leaving_dock = "The outbound tram for off-duty personnel is now departing, and will reach its first stop in %ETA%."
+	shuttle_called_message = "The work shift is now ending. The next outbound tram for off-duty personnel will arrive in %ETA%."
+	shuttle_recall_message = "The work shift has been extended. Please return to your post."
+	emergency_shuttle_docked_message = "The emergency tram has arrived at the Tram Hub. Evacuation is mandatory for all Foundation personnel. It will depart in %ETD%."
+	emergency_shuttle_leaving_dock = "The emergency tram is departing for Extraction Site 53-B and will arrive in %ETA%. Please cooperate with Responders upon arrival."
+	emergency_shuttle_called_message = "An emergency evacuation has been ordered for this facility. All authorized evacuees must proceed to the Tram Hub within %ETA% minutes and await the tram."
+	emergency_shuttle_recall_message = "The emergency evacuation has been cancelled. Return to your post."
 
-	evac_controller_type = /datum/evacuation_controller/starship
+	evac_controller_type = /datum/evacuation_controller/site
 
 	default_law_type = /datum/ai_laws/solgov
 	use_overmap = 0
