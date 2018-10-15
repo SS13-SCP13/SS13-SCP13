@@ -6,7 +6,7 @@
 // Apparently, emergency_evacuation --> "abandon site" and !emergency_evacuation --> "shift end"
 // That stuff should be moved to the evacuation option datums but someone can do that later
 /datum/evacuation_controller/site
-	name = "evacuation controller"
+	name = "site evacuation controller"
 
 	evac_prep_delay    = 5 MINUTES
 	evac_launch_delay  = 3 MINUTES
@@ -49,7 +49,6 @@
 
 /datum/evacuation_controller/site/finish_evacuation()
 	..()
-	if(!emergency_evacuation) // Shift Change
 
 /datum/evacuation_controller/site/available_evac_options()
 	if (is_on_cooldown())
