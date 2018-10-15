@@ -716,13 +716,13 @@
 	name = "service uniform"
 	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a stylish pair of trousers."
 	icon_state = "service_co_s"
-	on_rolled = list("rolled" = "service_co_r_s", "down" = "none")
+	rolled_sleeves = 0
 
 /obj/item/clothing/under/scp/foundation_service_f
 	name = "service skirt"
 	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a skirt."
 	icon_state = "fservice_co_s"
-	on_rolled = list("rolled" = "fservice_co_r_s", "down" = "none")
+	rolled_sleeves = 0
 
 /obj/item/clothing/under/scp/foundation_work
 	name = "work uniform"
