@@ -108,8 +108,8 @@
 	supervisors = "the Security Commander"
 	department = "Command"
 	department_flag = COM
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	duties = "<big><b>As the Communications Officer it is your job to maintain long-range communications, monitor the happenings on the Telecomms servers and assess situations by mere observation. Your job may entail being a dispatch center of the likes.<br>You should not ever leave your tower unless under specific circumstances."
 	minimal_player_age = 15
 	economic_modifier = 10
@@ -145,8 +145,8 @@
 	has_email = TRUE
 	selection_color = "#5b4d20"
 	title = "Communications Technician"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	duties = "<big><b>As a member of the Communications team it is your job to maintain long-range comms, monitor the happenings on the Telecomms servers and assess situations by mere observation. Your job may entail being a dispatch center of the likes.<br>You should not ever leave your tower unless under specific circumstances."
 	department_flag = ENG
 	supervisors = "the Communications Officer"
