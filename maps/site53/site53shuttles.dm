@@ -184,6 +184,7 @@
 	shuttle_area = list(/area/site53/tram/engineering)
 	waypoint_station = "nav_engineering_start"
 	waypoint_offsite = "nav_engineering_out"
+	base_area = /area/site53/engineering/primaryhallway
 
 /obj/effect/shuttle_landmark/engineering/start
 	name = "Tram Hub"
@@ -226,6 +227,7 @@
 	shuttle_area = list(/area/site53/tram/hcz)
 	waypoint_station = "nav_hcz_start"
 	waypoint_offsite = "nav_hcz_out"
+	base_area = /area/site53/uhcz/tramstation
 
 /obj/effect/shuttle_landmark/hcz/start
 	name = "Tram Hub"
@@ -243,6 +245,7 @@
 	shuttle_area = list(/area/site53/tram/lcz)
 	waypoint_station = "nav_lcz_start"
 	waypoint_offsite = "nav_lcz_out"
+	base_area = /area/site53/ulcz/tram
 
 /obj/effect/shuttle_landmark/lcz/start
 	name = "Tram Hub"
