@@ -323,3 +323,11 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	flash_protection = FLASH_PROTECTION_MAJOR
+
+// SCP uniform covers and hats
+
+/obj/item/clothing/head
+	name = "service cap"
+	desc = "A grey garrison cap, with the SCP Foundation logo in the interior. A purple insignia is on it's crest."
+	icon_state = "service_co_cap"
+	item_state = "service_co_cap_om"

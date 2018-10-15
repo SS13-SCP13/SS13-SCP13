@@ -710,4 +710,21 @@
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
 
+// Foundation service and work uniforms
 
+/obj/item/clothing/under/scp/foundation_service_m
+	name = "service uniform"
+	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a stylish pair of trousers."
+	icon_state = "service_co_s"
+	on_rolled = list("rolled" = "service_co_r_s", "down" = "none")
+
+/obj/item/clothing/under/scp/foundation_service_f
+	name = "service skirt"
+	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a skirt."
+	icon_state = "fservice_co_s"
+	on_rolled = list("rolled" = "fservice_co_r_s", "down" = "none")
+
+/obj/item/clothing/under/scp/foundation_work
+	name = "work uniform"
+	desc = "A dark gray work uniform marked clearly with the Foundation symbol."
+	icon_state = "Uniform_CT_s"

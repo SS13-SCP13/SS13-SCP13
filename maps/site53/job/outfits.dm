@@ -26,13 +26,23 @@
 
 /decl/hierarchy/outfit/job/site90/crew/command/commsofficer
 	name = OUTFIT_JOB_NAME("Communications Officer")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/scp/foundation_service_m
+	suit = /obj/item/clothing/suit/storage/foundation_coat
+	gloves = /obj/item/clothing/gloves/foundation_service
 	shoes = /obj/item/clothing/shoes/dutyboots
-//	id_type = /obj/item/weapon/card/id/seclvl4
+	id_type = /obj/item/weapon/card/id/adminlvl4
 	l_ear = /obj/item/device/radio/headset/heads/commsofficer
 	back = null
 
 // END OF COMMAND OUTFITS
+
+/decl/hierarchy/outfit/job/site90/crew/command/commstech
+	name = OUTFIT_JOB_NAME("Communications Technician")
+	uniform = /obj/item/clothing/under/scp/foundation_work
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_type = /obj/item/weapon/card/id/seclvl2
+	belt = /obj/item/weapon/storage/belt/utility/full
+	l_ear = /obj/item/device/radio/headset/commsdispatcher
 
 
 /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
