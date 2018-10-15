@@ -184,7 +184,6 @@
 	shuttle_area = list(/area/site53/tram/engineering)
 	waypoint_station = "nav_engineering_start"
 	waypoint_offsite = "nav_engineering_out"
-	base_area = /area/site53/engineering/primaryhallway
 
 /obj/effect/shuttle_landmark/engineering/start
 	name = "Tram Hub"
@@ -195,6 +194,7 @@
 	name = "Engineering Department"
 	landmark_tag = "nav_engineering_out"
 	base_turf = /turf/simulated/floor/reinforced
+	base_area = /area/site53/engineering/primaryhallway
 
 /obj/effect/shuttle_landmark/engineering/internim
 	name = "In transit"
@@ -227,7 +227,7 @@
 	shuttle_area = list(/area/site53/tram/hcz)
 	waypoint_station = "nav_hcz_start"
 	waypoint_offsite = "nav_hcz_out"
-	base_area = /area/site53/uhcz/tramstation
+
 
 /obj/effect/shuttle_landmark/hcz/start
 	name = "Tram Hub"
@@ -238,6 +238,7 @@
 	name = "Heavy Containment Zone"
 	landmark_tag = "nav_hcz_out"
 	base_turf = /turf/simulated/floor/reinforced
+	base_area = /area/site53/uhcz/tramstation
 
 /datum/shuttle/autodock/ferry/lcz
 	name = "Light Containment Tram"
@@ -245,7 +246,7 @@
 	shuttle_area = list(/area/site53/tram/lcz)
 	waypoint_station = "nav_lcz_start"
 	waypoint_offsite = "nav_lcz_out"
-	base_area = /area/site53/ulcz/tram
+
 
 /obj/effect/shuttle_landmark/lcz/start
 	name = "Tram Hub"
@@ -256,6 +257,7 @@
 	name = "Light Containment Zone"
 	landmark_tag = "nav_lcz_out"
 	base_turf = /turf/simulated/floor/reinforced
+	base_area = /area/site53/ulcz/tram
 
 /datum/shuttle/autodock/multi/antag/rescue
 	name = "Rescue"
