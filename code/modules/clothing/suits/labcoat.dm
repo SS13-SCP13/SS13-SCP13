@@ -114,3 +114,4 @@
 	icon_open = "labcoat_rd2_open"
 	icon_closed = "labcoat_rd2"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	
