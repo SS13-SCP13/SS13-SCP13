@@ -359,4 +359,4 @@
 	name = "Landing Pad"
 	landmark_tag = "nav_cargo_station"
 	base_area = /area/site53/logistics/logistics
-	base_turf = /turf/simulated/floor/plating
+	base_turf = /turf/simulated/floor/tiled/monotile
