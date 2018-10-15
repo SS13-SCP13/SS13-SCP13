@@ -40,3 +40,4 @@ changes:
   - maptweak: "Reduced the amount of webbing vests available in Engineering from 8 to 4 and also changed them to brown ones."
   - bugfix: "Fixed a bug where Senior EZ Agent and HCZ Zone Commander would spawn in opposite zones."
   - bugfix: "Fixed an issue with trams not having gravity, often causing gibbing when landing on someone who was unable to move back."
+  - tweak: "Capped max Class D's to be 15."

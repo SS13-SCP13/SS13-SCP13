@@ -12,6 +12,8 @@
 	supervisors = "Foundation Personnel"
 	selection_color = "#E55700"
 	economic_modifier = 1
+	total_positions = 15
+	spawn_positions = 15
 	duties = "<big><b>As a Class D, your first and foremost task is to be tested upon. This is usually done by order of a Scientist.<br> As Class D you can request several available jobs to kill time at the appropriate area.<br> <span style = 'color:red'>REMEMBER!</span> Rioting as Class D has been prohibited without staff approval, under rule 15.<br>IMPORTANT! Do not try to break out of your cell at game start. You will break your only way out!</span>"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
