@@ -978,9 +978,9 @@
 	title = "Logistics Officer"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 0
-	spawn_positions = 0
-	supervisors = "the Guard Commander"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Site Director"
 	selection_color = "#515151"
 	economic_modifier = 5
 	minimal_player_age = 7
@@ -1006,8 +1006,8 @@
 	title = "Logistics Specialist"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	selection_color = "B4802B"
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
