@@ -160,3 +160,14 @@
 	permeability_coefficient = 0.03
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 25, bomb = 30, bio = 0, rad = 0)
 
+/obj/item/clothing/gloves/rubber
+	desc = "Heavy black gloves designed to protect the wearer from hazards."
+	name = "rubber gloves"
+	icon_state = "rubber_gloves"
+	item_state = "rubber_gloves"
+	body_parts_covered = HANDS
+	w_class = ITEM_SIZE_NORMAL
+	siemens_coefficient = 0
+	permeability_coefficient = 0.05
+	germ_level = 0
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 90, rad = 90)

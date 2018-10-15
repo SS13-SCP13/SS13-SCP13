@@ -17,6 +17,7 @@
 	icon_state = "oxygen"
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 	starting_pressure = list("oxygen" = 6*ONE_ATMOSPHERE)
+	volume = 180
 
 /obj/item/weapon/tank/oxygen/yellow
 	desc = "A tank of oxygen. This one is yellow."
@@ -26,6 +27,15 @@
 	desc = "A tank of oxygen. This one is red."
 	icon_state = "oxygen_fr"
 
+/obj/item/weapon/tank/oxypack_hazmat
+	name = "hazmat oxypack."
+	desc = "A pack of oxygen. This one is special for hazmat suit."
+	w_class = ITEM_SIZE_HUGE
+	icon_state = "oxygenpack_hazmat"
+	item_state = "oxygenpack_hazmat"
+	starting_pressure = list("oxygen" = 6*ONE_ATMOSPHERE)
+	volume = 180
+
 /*
  * Anesthetic
  */
@@ -34,7 +44,7 @@
 	desc = "A tank with an N2O/O2 gas mix."
 	icon_state = "anesthetic"
 	item_state = "an_tank"
-	starting_pressure = list("oxygen" = 3*ONE_ATMOSPHERE*O2STANDARD, "sleeping_agent" = 3*ONE_ATMOSPHERE*N2STANDARD) 
+	starting_pressure = list("oxygen" = 3*ONE_ATMOSPHERE*O2STANDARD, "sleeping_agent" = 3*ONE_ATMOSPHERE*N2STANDARD)
 
 /*
  * Air
@@ -43,7 +53,7 @@
 	name = "air tank"
 	desc = "Mixed anyone?"
 	icon_state = "oxygen"
-	starting_pressure = list("oxygen" = 6*ONE_ATMOSPHERE*O2STANDARD, "nitrogen" = 6*ONE_ATMOSPHERE*N2STANDARD) 
+	starting_pressure = list("oxygen" = 6*ONE_ATMOSPHERE*O2STANDARD, "nitrogen" = 6*ONE_ATMOSPHERE*N2STANDARD)
 
 /*
  * Phoron
