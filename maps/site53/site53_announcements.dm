@@ -15,7 +15,8 @@
 	grid_restored_message = "Site power will be restored at this time"
 	grid_restored_sound = sound('sound/AI/announcer/poweron.ogg', volume = 150)
 
-	meteor_detected_sound = sound('sound/AI/torch/meteors.ogg', volume = 45)
+	meteor_detected_message = "Warning! The underground cave system is now under collapse,The facility may be hit by falling debris.."
+	meteor_detected_sound = sound('sound/AI/announcer/industrialalarm.ogg', volume = 45)
 
 	radiation_detected_message = "Radioactive object class SAFE containment breach detected. Please report to the medical bay if you feel strange."
 	radiation_detected_sound = sound('sound/AI/torch/radiation.ogg', volume = 45)
