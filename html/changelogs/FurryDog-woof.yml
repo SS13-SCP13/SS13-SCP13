@@ -33,4 +33,6 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - rscadd: "Added a log message that will appear for you and everyone who has you in their sight if you examine something"
+  - rscadd: "Added hazmat suits, rubber gloves for them and oxypack."
+  - rscadd: "Now oxygen tanks will start with full oxygen in it!"
+  - rscadd: "Added new gas mask."
