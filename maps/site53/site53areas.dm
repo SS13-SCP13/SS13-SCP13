@@ -362,7 +362,7 @@
 	turf_initializer = /decl/turf_initializer/maintenance
 
 /area/site53/lowertrams/escape
-	name = "\improper Escape Train Hub"
+	name = "\improper Departures Train Station"
 	icon_state = "centcom"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	requires_power = 0

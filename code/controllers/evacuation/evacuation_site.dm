@@ -25,23 +25,22 @@
 
 /datum/evacuation_controller/site/finish_preparing_evac()
 	. = ..()
-	// If this is abandoning the site, arm any ... pods? Helicopters?
-	if (emergency_evacuation)
-		for (var/datum/shuttle/autodock/ferry/escape_pod/pod in escape_pods)
-			if (pod.arming_controller)
-				pod.arming_controller.arm()
+	// Arm the tram regardless of evac type
+	for (var/datum/shuttle/autodock/ferry/escape_pod/pod in escape_pods)
+		if (pod.arming_controller)
+			pod.arming_controller.arm()
 
 /datum/evacuation_controller/site/launch_evacuation()
 
 	state = EVAC_IN_TRANSIT
 
+	for (var/datum/shuttle/autodock/ferry/escape_pod/pod in escape_pods) // Launch the tram regardless of evac type
+		if (!pod.arming_controller || pod.arming_controller.armed)
+			pod.move_time = (evac_transit_delay/10)
+			pod.launch(src)
+
 	if (emergency_evacuation)
 		// Abandon Site
-		for (var/datum/shuttle/autodock/ferry/escape_pod/pod in escape_pods) // Launch the pods!
-			if (!pod.arming_controller || pod.arming_controller.armed)
-				pod.move_time = (evac_transit_delay/10)
-				pod.launch(src)
-
 		priority_announcement.Announce(replacetext(replacetext(GLOB.using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[GLOB.using_map.dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
 	else
 		// Shift Change

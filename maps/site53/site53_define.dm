@@ -30,13 +30,13 @@
 	map_admin_faxes = list("Foundation Central Office")
 
 	//These should probably be moved into the evac controller...
-	shuttle_docked_message = "The outbound tram has arrived at the Tram Hub. It will depart in approximately %ETD%."
-	shuttle_leaving_dock = "The outbound tram for off-duty personnel is now departing, and will reach its first stop in %ETA%."
-	shuttle_called_message = "The work shift is now ending. The next outbound tram for off-duty personnel will arrive in %ETA%."
+	shuttle_docked_message = "The outbound train is now boarding at the Train Station. It will depart in approximately %ETD%."
+	shuttle_leaving_dock = "The outbound train for off-duty personnel is now departing, and will reach its first stop in %ETA%."
+	shuttle_called_message = "The work shift is now ending. The next outbound train for off-duty personnel will begin boarding in %ETA%."
 	shuttle_recall_message = "The work shift has been extended. Please return to your post."
-	emergency_shuttle_docked_message = "The emergency tram has arrived at the Tram Hub. Evacuation is mandatory for all Foundation personnel. It will depart in %ETD%."
-	emergency_shuttle_leaving_dock = "The emergency tram is departing for Extraction Site 53-B and will arrive in %ETA%. Please cooperate with Responders upon arrival."
-	emergency_shuttle_called_message = "An emergency evacuation has been ordered for this facility. All authorized evacuees must proceed to the Tram Hub within %ETA% minutes and await the tram."
+	emergency_shuttle_docked_message = "The emergency train is now boarding at the Train Station. Evacuation is mandatory for all Foundation personnel. It will depart in %ETD%."
+	emergency_shuttle_leaving_dock = "The emergency train is departing for Extraction Site 53-B and will arrive in %ETA%. Please cooperate with Responders upon arrival."
+	emergency_shuttle_called_message = "An emergency evacuation has been ordered for this facility. All authorized evacuees must proceed to the outbound Train Station within %ETA% minutes."
 	emergency_shuttle_recall_message = "The emergency evacuation has been cancelled. Return to your post."
 
 	evac_controller_type = /datum/evacuation_controller/site
