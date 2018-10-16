@@ -289,7 +289,7 @@
 "fC" = (/obj/effect/paint_stripe/yellow,/turf/simulated/wall/r_wall,/area/site53/uez/maintenance)
 "fD" = (/obj/effect/paint_stripe/green,/turf/simulated/wall,/area/site53/uez/ceoffice)
 "fE" = (/obj/item/modular_computer/console/preset/medical,/turf/simulated/floor/wood,/area/site53/uez/cmooffice)
-"fF" = (/obj/structure/table/steel_reinforced,/obj/machinery/button/remote/blast_door{id = "escape"; name = "Escape Train Blast Doors"; pixel_x = 0; pixel_y = 0},/obj/effect/floor_decal/industrial/warning/full,/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/maincontrolroom)
+"fF" = (/obj/structure/table/steel_reinforced,/obj/machinery/button/remote/blast_door{id = "escape"; name = "Train Station Blast Doors"; pixel_x = 0; pixel_y = 0},/obj/effect/floor_decal/industrial/warning/full,/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/maincontrolroom)
 "fG" = (/obj/machinery/light{dir = 1; icon_state = "tube1"; pixel_y = 0},/obj/structure/table/steel_reinforced,/obj/item/device/radio/intercom{frequency = 1017; name = "intercom (Trams)"; pixel_y = 32},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/maincontrolroom)
 "fH" = (/obj/structure/table/steel_reinforced,/obj/machinery/button/remote/blast_door{id = "surfbunk"; name = "Surface Bunker Blastdoors"; pixel_x = 0; pixel_y = 32; req_access = list(302)},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/maincontrolroom)
 "fI" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating,/area/site53/uez/maintenance)
