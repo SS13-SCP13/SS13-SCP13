@@ -217,6 +217,7 @@
 	shoes = /obj/item/clothing/shoes/workboots
 	l_ear = null
 	back = null
+	l_pocket = /obj/item/weapon/paper/dclass_orientation
 
 /decl/hierarchy/outfit/job/site90/crew/civ/classd/post_equip(var/mob/living/carbon/human/H)
 	..()
