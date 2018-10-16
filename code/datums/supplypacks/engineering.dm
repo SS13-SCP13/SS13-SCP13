@@ -71,6 +71,7 @@
 	cost = 10
 	containername = "\improper Solar Assembly crate"
 
+/*
 /decl/hierarchy/supply_pack/engineering/emitter
 	name = "Emitter crate"
 	contains = list(/obj/machinery/power/emitter = 2)
@@ -78,6 +79,7 @@
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "\improper Emitter crate"
 	access = access_engine_equip
+*/
 
 /decl/hierarchy/supply_pack/engineering/field_gen
 	name = "Field Generator crate"
@@ -87,6 +89,7 @@
 	containername = "\improper Field Generator crate"
 	access = access_ce
 
+/*
 /decl/hierarchy/supply_pack/engineering/sing_gen
 	name = "Singularity Generator crate"
 	contains = list(/obj/machinery/the_singularitygen)
@@ -116,6 +119,7 @@
 	containertype = /obj/structure/largecrate
 	containername = "\improper Particle Accelerator crate"
 	access = access_ce
+*/
 
 /decl/hierarchy/supply_pack/engineering/pacman_parts
 	name = "P.A.C.M.A.N. portable generator parts"
@@ -139,6 +143,7 @@
 	containertype = /obj/structure/closet/crate/secure
 	access = access_tech_storage
 
+/*
 /decl/hierarchy/supply_pack/engineering/teg
 	name = "Mark I Thermoelectric Generator"
 	contains = list(/obj/machinery/power/generator)
@@ -146,6 +151,7 @@
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "\improper Mk1 TEG crate"
 	access = access_engine_equip
+*/
 
 /decl/hierarchy/supply_pack/engineering/circulator
 	name = "Binary atmospheric circulator"
