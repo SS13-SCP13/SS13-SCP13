@@ -78,12 +78,8 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "\improper Emitter crate"
-<<<<<<< HEAD
 	access = access_engine_equip
 */
-=======
-	access = access_mtflvl3
->>>>>>> c07281888c254e9c6694b8de2d29b2088912e629
 
 /decl/hierarchy/supply_pack/engineering/field_gen
 	name = "Field Generator crate"
@@ -122,12 +118,8 @@
 	cost = 40
 	containertype = /obj/structure/largecrate
 	containername = "\improper Particle Accelerator crate"
-<<<<<<< HEAD
 	access = access_ce
 */
-=======
-	access = access_mtflvl3
->>>>>>> c07281888c254e9c6694b8de2d29b2088912e629
 
 /decl/hierarchy/supply_pack/engineering/pacman_parts
 	name = "P.A.C.M.A.N. portable generator parts"
@@ -158,12 +150,8 @@
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "\improper Mk1 TEG crate"
-<<<<<<< HEAD
 	access = access_engine_equip
 */
-=======
-	access = access_mtflvl3
->>>>>>> c07281888c254e9c6694b8de2d29b2088912e629
 
 /decl/hierarchy/supply_pack/engineering/circulator
 	name = "Binary atmospheric circulator"
