@@ -49,3 +49,50 @@
 		/obj/item/weapon/folder/blue,
 
 	)
+
+/obj/structure/closet/secure_closet/administration/commsofficer
+	name = "communications officer's locker"
+	req_access = list(access_adminlvl4)
+	icon_state = "commolocked"
+	icon_closed = "commounlocked"
+	icon_locked = "commolocked"
+	icon_opened = "commoopen"
+	icon_off = "commooff"
+
+/obj/structure/closet/secure_closet/administration/commsofficer/WillContain()
+	return list(
+		/obj/item/clothing/under/scp/foundation_service_m,
+		/obj/item/clothing/under/scp/foundation_service_f,
+		/obj/item/clothing/suit/storage/foundation_coat,
+		/obj/item/device/radio,
+		/obj/item/device/megaphone,
+		/obj/item/weapon/storage/box/headset,
+		/obj/item/clothing/gloves/foundation_service,
+		/obj/item/weapon/clipboard,
+		/obj/item/weapon/folder/blue,
+		/obj/item/weapon/storage/box/encryptionkeys,
+		/obj/item/clothing/shoes/dutyboots,
+		/obj/item/device/radio/headset/heads/commsofficer
+	)
+
+/obj/structure/closet/secure_closet/administration/commstech
+	name = "communications operator's locker"
+	req_access = list(access_adminlvl1)
+	icon_state = "commlocked"
+	icon_closed = "communlocked"
+	icon_locked = "commlocked"
+	icon_opened = "commopen"
+	icon_off = "commoff"
+
+/obj/structure/closet/secure_closet/administration/commstech/WillContain()
+	return list(
+		/obj/item/clothing/under/scp/foundation_service_m,
+		/obj/item/clothing/under/scp/foundation_service_f,
+		/obj/item/clothing/suit/storage/foundation_coat,
+		/obj/item/device/radio,
+		/obj/item/clothing/gloves/foundation_service,
+		/obj/item/weapon/clipboard,
+		/obj/item/weapon/folder/blue,
+		/obj/item/clothing/shoes/dutyboots,
+		/obj/item/device/radio/headset/commsdispatcher
+	)

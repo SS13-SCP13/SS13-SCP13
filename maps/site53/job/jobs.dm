@@ -107,7 +107,7 @@
 /datum/job/commsofficer
 	has_email = TRUE
 	title = "Communications Officer"
-	supervisors = "the Security Commander"
+	supervisors = "the Facility Director"
 	department = "Command"
 	department_flag = COM
 	total_positions = 0
@@ -136,10 +136,13 @@
 	access_med_comms,
 	access_eng_comms,
 	access_sec_comms,
-	access_mtflvl1,
-	access_mtflvl2,
-	access_mtflvl3,
-	access_mtflvl4
+	access_adminlvl4,
+	access_adminlvl3,
+	access_adminlvl2,
+	access_adminlvl1,
+	access_telecommsgen,
+	access_servers,
+	access_commtower
 	)
 	minimal_access = list()
 
@@ -159,7 +162,7 @@
 		"Communications Programmer",
 		"Communications Dispatcher"
 		)
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/commstech
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -179,9 +182,10 @@
 	access_med_comms,
 	access_eng_comms,
 	access_sec_comms,
-	access_mtflvl1, 
-	access_mtflvl2, 
-	access_mtflvl3)
+	access_adminlvl1,
+	access_telecommsgen,
+	access_servers,
+	access_commtower)
 /*
 ## END OF GENERIC COMMAND ##
 */

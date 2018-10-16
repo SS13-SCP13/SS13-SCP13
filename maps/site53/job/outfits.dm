@@ -40,7 +40,7 @@
 	name = OUTFIT_JOB_NAME("Communications Technician")
 	uniform = /obj/item/clothing/under/scp/foundation_work
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/seclvl2
+	id_type = /obj/item/weapon/card/id/adminlvl1
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_ear = /obj/item/device/radio/headset/commsdispatcher
 

@@ -153,7 +153,7 @@
 /var/const/access_telecommsgen = 701
 /datum/access/telecommsgen
 	id = access_telecommsgen
-	desc = "Surface Level Server Farm"
+	desc = "Communications General"
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_servers = 702
