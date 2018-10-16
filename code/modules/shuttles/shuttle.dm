@@ -121,13 +121,16 @@
 /datum/shuttle/proc/attempt_move(var/obj/effect/shuttle_landmark/destination)
 	if(current_location == destination)
 		return FALSE
+		log_and_message_admins("shuttle thinks current loc and dest are the same.")
 
 	if(!destination.is_valid(src))
 		return FALSE
+		log_and_message_admins("not a valid destination.")
 	testing("[src] moving to [destination]. Areas are [english_list(shuttle_area)]")
 	var/list/translation = list()
 	for(var/area/A in shuttle_area)
 		testing("Moving [A]")
+		log_and_message_admins("shuttle [A] is moving.")
 		translation += get_turf_translation(get_turf(current_location), get_turf(destination), A.contents)
 	shuttle_moved(destination, translation)
 	return TRUE

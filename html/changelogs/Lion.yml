@@ -22,7 +22,7 @@
 #################################
 
 # Your name.  
-author: FurryDog
+author: TheLion1675
 
 # Optional: Remove this file after generating master changelog.  Useful for PR changelogs that won't get used again.
 delete-after: True
@@ -33,7 +33,11 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - rscadd: "Added a log message that will appear for you and everyone who has you in their sight if you examine something"
-  - rscadd: "Added hazmat suits, rubber gloves for them and oxypack."
-  - rscadd: "Now oxygen tanks will start with full oxygen in it!"
-  - rscadd: "Added new gas mask."
+  - rscadd: "Logistics, and the associated jobs, added."
+  - maptweak: "Added an extra layer of security for the disposal loops in the Class D mining area. They require security level one, so if someone wants something delivered, they should get a guard."
+  - maptweak: "Removed a redundant deep fryer and grill, and replaced it with a condimaster in D-Class Kitchen. Now also has a reagent grinder. Thanks to Nappist."
+  - maptweak: "Airlock braces and duct tape added to Engineering. Thanks to Pandolphina."
+  - maptweak: "Reduced the amount of webbing vests available in Engineering from 8 to 4 and also changed them to brown ones."
+  - bugfix: "Fixed a bug where Senior EZ Agent and HCZ Zone Commander would spawn in opposite zones."
+  - bugfix: "Fixed an issue with trams not having gravity, often causing gibbing when landing on someone who was unable to move back."
+  - tweak: "Capped max Class D's to be 15."

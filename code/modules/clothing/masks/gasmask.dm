@@ -126,3 +126,8 @@
 	body_parts_covered = 0
 	species_restricted = list(SPECIES_VOX)
 	filtered_gases = list("phoron", "sleeping_agent", "oxygen")
+
+/obj/item/clothing/mask/gas/gasmask_alt
+	name = "open gas mask"
+	icon_state = "gasmask_alt"
+	item_state = "gasmask_alt"
