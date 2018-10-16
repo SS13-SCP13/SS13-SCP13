@@ -66,7 +66,7 @@
 	containername = "\improper Spare PDA crate"
 
 /decl/hierarchy/supply_pack/supply/minergear
-	name = "Shaft miner equipment"
+	name = "Mining leader equipment"
 	contains = list(/obj/item/weapon/storage/backpack/industrial,
 					/obj/item/weapon/storage/backpack/satchel_eng,
 					/obj/item/device/radio/headset/headset_cargo,
@@ -81,7 +81,18 @@
 					/obj/item/weapon/mining_scanner,
 					/obj/item/clothing/glasses/material,
 					/obj/item/clothing/glasses/meson)
+	cost = 40
+	containertype = /obj/structure/closet/crate/secure
+	containername = "\improper Mining expedition leader equipment"
+	access = access_logistics
+
+/decl/hierarchy/supply_pack/supply/minergear
+	name = "D-class miner equipment"
+	contains = list(/obj/item/device/analyzer,
+                    /obj/item/weapon/storage/ore,
+                    /obj/item/device/flashlight/lantern,
+                    /obj/item/weapon/shovel)
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
-	containername = "\improper Shaft miner equipment"
-	access = access_mining
+	containername = "\improper D Class miner equipment"
+	access = access_dclassmining
