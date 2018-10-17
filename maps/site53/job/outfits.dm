@@ -27,7 +27,6 @@
 /decl/hierarchy/outfit/job/site90/crew/command/commsofficer
 	name = OUTFIT_JOB_NAME("Communications Officer")
 	uniform = /obj/item/clothing/under/scp/utility/communications/officer
-	suit = /obj/item/clothing/suit/storage/foundation_coat
 	gloves = /obj/item/clothing/gloves/foundation_service
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/commslvl4

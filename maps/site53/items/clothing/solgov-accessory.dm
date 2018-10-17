@@ -731,4 +731,4 @@ ranks - marines
 	name = "service gloves"
 	desc = "A pair of dark grey Foundation gloves, with soft padding to make them comfortable to wear."
 	icon_state = "co_gloves"
-	item_state = "co_gloves_om"
+	item_state = "G_Gloves_OM"

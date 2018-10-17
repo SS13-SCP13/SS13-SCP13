@@ -76,19 +76,19 @@
 	desc = "A dark gray work uniform marked clearly with the Foundation symbol."
 	name = "logistics specialist uniform"
 	icon_state = "scpuniform"
-	worn_state = "Uniform_LS_s"
+	worn_state = "Uniform_LS"
 
 /obj/item/clothing/under/scp/utility/logistics/officer
 	desc = "A dark gray work uniform marked clearly with the Foundation symbol."
 	name = "logistics officer uniform"
 	icon_state = "scpuniform"
-	worn_state = "Uniform_LO_s"
+	worn_state = "Uniform_LO"
 
 /obj/item/clothing/under/scp/utility/communications/tech
 	desc = "A dark gray work uniform marked clearly with the Foundation symbol."
 	name = "communications technician uniform"
-	icon_state = "Uniform_CT_s"
-	worn_state = "Uniform_CT_s"
+	icon_state = "scpuniform"
+	worn_state = "Uniform_CT"
 
 // /obj/item/clothing/under/scp/foundation_service_m
 // 	name = "service uniform"
@@ -130,15 +130,14 @@
 /obj/item/clothing/under/scp/utility/communications/officer
 	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a stylish pair of trousers."
 	name = "communications officer uniform"
-	icon_state = "service_co"
-	worn_state = "service_co_s"
-	rolled_sleeves = 0
+	icon_state = "communiform_m"
+	worn_state = "com_uniform_m"
 
 /obj/item/clothing/under/scp/utility/communications/officerfem
 	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a skirt."
 	name = "communications officer uniform"
-	icon_state = "fservice_co"
-	worn_state = "fservice_co_s"
+	icon_state = "communiform_f"
+	worn_state = "com_uniform_f"
 	rolled_sleeves = 0
 
 //Utility

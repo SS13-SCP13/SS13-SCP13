@@ -1084,7 +1084,7 @@
 "uR" = (/obj/structure/sign/directions{icon_state = "direction"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/site53/logistics/logistics)
 "uS" = (/obj/structure/sign/directions,/obj/machinery/light/spot{icon_state = "tube1"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/site53/logistics/logistics)
 "uT" = (/obj/structure/sign/directions{icon_state = "direction"; dir = 8},/obj/machinery/light/spot{dir = 4},/turf/simulated/floor/tiled/monotile,/area/site53/logistics/logistics)
-"uU" = (/obj/machinery/door/airlock/security{locked = 1; name = "Communications Tower"; req_access = list(701)},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
+"uU" = (/obj/machinery/door/airlock/security{locked = 0; name = "Communications Tower"; req_access = list(701)},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
 "uV" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
 "uW" = (/obj/structure/sign/warning/moving_parts{pixel_y = -32},/turf/simulated/floor/tiled/monotile,/area/site53/logistics/logistics)
 "uX" = (/obj/machinery/conveyor{dir = 4; id = "cargotostorage"},/turf/simulated/floor/tiled/monotile,/area/site53/logistics/logistics)

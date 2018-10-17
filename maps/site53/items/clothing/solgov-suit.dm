@@ -229,6 +229,6 @@
 /obj/item/clothing/suit/storage/foundation_coat
 	name = "service coat"
 	desc = "A dark grey, light coat. It seems made to fit the Uniform that accompanies it. This one seems to have purple insignia on the biceps."
-	icon_state = "service_co_coat"
-	item_state = "service_co_coat_om"
+	icon_state = "blackservice"
+	item_state = "blackservice"
 	body_parts_covered = UPPER_TORSO|ARMS
