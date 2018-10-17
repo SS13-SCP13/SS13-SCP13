@@ -1,5 +1,5 @@
 /obj/item/weapon/gun/projectile/sec/MK
-	desc = "Similar in both appearance and use of the NT Mk58, the MK pistol is an cheap knock off that preys on the unsuspecting firearm buyers."
+	desc = "Similar in both appearance and use of theFoundationMk58, the MK pistol is an cheap knock off that preys on the unsuspecting firearm buyers."
 	jam_chance = 35
 
 /obj/item/weapon/gun/projectile/silenced/cheap

@@ -84,7 +84,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/new_gibson
 	name = "New Gibson"
-	description = "Heavily industrialised rocky planet containing the majority of the planet-bound resources in the system, New Gibson is torn by unrest and has very little wealth to call it's own except in the hands of the corporations who jostle with NT for control."
+	description = "Heavily industrialised rocky planet containing the majority of the planet-bound resources in the system, New Gibson is torn by unrest and has very little wealth to call it's own except in the hands of the corporations who jostle withFoundationfor control."
 	distance = 6.6
 	willing_to_buy = list()
 	willing_to_sell = list()
@@ -93,7 +93,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/luthien
 	name = "Luthien"
-	description = "A small colony established on a feral, untamed world (largely jungle). Savages and wild beasts attack the outpost regularly, although NT maintains tight military control."
+	description = "A small colony established on a feral, untamed world (largely jungle). Savages and wild beasts attack the outpost regularly, althoughFoundationmaintains tight military control."
 	distance = 8.9
 	willing_to_buy = list()
 	willing_to_sell = list()
@@ -102,7 +102,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/reade
 	name = "Reade"
-	description = "A cold, metal-deficient world, NT maintains large pastures in whatever available space in an attempt to salvage something from this profitless colony."
+	description = "A cold, metal-deficient world,Foundationmaintains large pastures in whatever available space in an attempt to salvage something from this profitless colony."
 	distance = 7.5
 	willing_to_buy = list()
 	willing_to_sell = list()

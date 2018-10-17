@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/energy/ionrifle
 	name = "ion rifle"
-	desc = "The NT Mk60 EW Halicon is a man portable anti-armor weapon designed to disable mechanical threats, produced by NT. Not the best of its type."
+	desc = "TheFoundationMk60 EW Halicon is a man portable anti-armor weapon designed to disable mechanical threats, produced by NT. Not the best of its type."
 	icon_state = "ionrifle"
 	item_state = "ionrifle"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
@@ -20,7 +20,7 @@
 
 /obj/item/weapon/gun/energy/ionrifle/small
 	name = "ion pistol"
-	desc = "The NT Mk72 EW Preston is a personal defense weapon designed to disable mechanical threats."
+	desc = "TheFoundationMk72 EW Preston is a personal defense weapon designed to disable mechanical threats."
 	icon_state = "ionpistol"
 	item_state = "ionpistol"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)

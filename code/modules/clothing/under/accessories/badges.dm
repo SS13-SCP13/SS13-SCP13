@@ -52,7 +52,7 @@
 	var/emagged //emag_act removes access requirements
 
 /obj/item/clothing/accessory/badge/holo/NT
-	name = "\improper NT holobadge"
+	name = "\improperFoundationholobadge"
 	desc = "This glowing red badge marks the holder as a member of Foundation corporate security."
 	color = "#b7310b" //brighter COLOR_NT_RED
 	badge_string = "Foundation Security"
@@ -107,7 +107,7 @@
 					  /obj/item/clothing/accessory/badge/holo/cord = 2)
 
 /obj/item/weapon/storage/box/holobadgeNT
-	name = "\improper NT holobadge box"
+	name = "\improperFoundationholobadge box"
 	desc = "A box containing Foundation security holobadges."
 	startswith = list(/obj/item/clothing/accessory/badge/holo/NT = 4,
 					  /obj/item/clothing/accessory/badge/holo/NT/cord = 2)
