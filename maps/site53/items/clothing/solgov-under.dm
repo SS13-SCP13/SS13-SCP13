@@ -76,31 +76,70 @@
 	desc = "A dark black uniform. This one seems to be of the Logistics department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
 	name = "logistics specialist uniform"
 	icon_state = "scpuniform"
-	worn_state = "Uniform_LS"
+	worn_state = "Uniform_LS_s"
 
 /obj/item/clothing/under/scp/utility/logistics/officer
 	desc = "A dark black uniform. This one seems to be of the Logistics department. This uniform is issued based on rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
 	name = "logistics officer uniform"
 	icon_state = "scpuniform"
-	worn_state = "Uniform_LS"
+	worn_state = "Uniform_LO_s"
 
 /obj/item/clothing/under/scp/utility/communications/tech
 	desc = "A dark black uniform. This one seems to be of the Communications department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
 	name = "communications technician uniform"
-	icon_state = "scpuniform"
-	worn_state = "Uniform_CT"
+	icon_state = "Uniform_CT_s"
+	worn_state = "Uniform_CT_s"
+
+// /obj/item/clothing/under/scp/foundation_service_m
+// 	name = "service uniform"
+// 	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a stylish pair of trousers."
+// 	item_state = "service_co"
+// 	icon_state = "service_co"
+// 	worn_state = "service_co"
+// 	rolled_sleeves = 0
+
+// /obj/item/clothing/under/scp/foundation_service_f
+// 	name = "service skirt"
+// 	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a skirt."
+// 	item_state = "fservice_co"
+// 	icon_state = "fservice_co"
+// 	worn_state = "fservice_co"
+// 	rolled_sleeves = 0
+
+// /obj/item/clothing/under/scp/foundation_work
+// 	name = "work uniform"
+// 	desc = "A dark gray work uniform marked clearly with the Foundation symbol."
+// 	item_state = "Uniform_CT_s"
+// 	icon_state = "Uniform_CT_s"
+// 	worn_state = "Uniform_CT_s"
+
+// /obj/item/clothing/under/scp/foundation_work_lo
+// 	name = "logistics officer's work uniform"
+// 	desc = "A dark gray work uniform marked clearly with the Foundation symbol."
+// 	icon_state = "Uniform_LO_s"
+// 	item_state = "Uniform_LO_s"
+// 	worn_state = "Uniform_LO_s"
+
+// /obj/item/clothing/under/scp/foundation_work_ls
+// 	name = "logistics specialist's work uniform"
+// 	desc = "A dark gray work uniform marked clearly with the Foundation symbol."
+// 	icon_state = "Uniform_LS_s"
+// 	item_state = "Uniform_LS_s"
+// 	worn_state = "Uniform_LS_s"
 
 /obj/item/clothing/under/scp/utility/communications/officer
-	desc = "A dark black uniform. This one seems to be of the Communications department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
-	name = "communications technician uniform"
-	icon_state = "communiform_m"
-	worn_state = "com_uniform_m"
+	desc = "A dark gray uniform. This one seems to be of the Communications department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "communications officer uniform"
+	icon_state = "service_co"
+	worn_state = "service_co_s"
+	rolled_sleeves = 0
 
 /obj/item/clothing/under/scp/utility/communications/officerfem
-	desc = "A dark black uniform. This one seems to be of the Communications department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
-	name = "communications technician uniform"
-	icon_state = "communiform_f"
-	worn_state = "com_uniform_f"
+	desc = "A dark gray uniform. This one seems to be of the Communications department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
+	name = "communications officer uniform"
+	icon_state = "fservice_co"
+	worn_state = "fservice_co_s"
+	rolled_sleeves = 0
 
 //Utility
 

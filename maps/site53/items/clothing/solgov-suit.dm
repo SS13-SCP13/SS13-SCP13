@@ -223,3 +223,12 @@
 	icon_state = "coatfl"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 20, bomb = 20, bio = 0, rad = 10)
 	valid_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA)
+
+// SCP
+
+/obj/item/clothing/suit/storage/foundation_coat
+	name = "service coat"
+	desc = "A dark grey, light coat. It seems made to fit the Uniform that accompanies it. This one seems to have purple insignia on the biceps."
+	icon_state = "service_co_coat"
+	item_state = "service_co_coat_om"
+	body_parts_covered = UPPER_TORSO|ARMS

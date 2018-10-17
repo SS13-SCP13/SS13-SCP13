@@ -171,11 +171,3 @@
 	permeability_coefficient = 0.05
 	germ_level = 0
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 90, rad = 90)
-
-// Foundation service
-
-/obj/item/clothing/gloves/foundation_service
-	name = "service gloves"
-	desc = "A pair of dark grey Foundation gloves, with soft padding to make them comfortable to wear."
-	icon_state = "co_gloves"
-	item_state = "co_gloves_om"

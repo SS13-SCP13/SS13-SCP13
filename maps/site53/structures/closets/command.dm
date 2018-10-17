@@ -30,8 +30,8 @@
 
 /obj/structure/closet/secure_closet/administration/commsofficer/WillContain()
 	return list(
-		/obj/item/clothing/under/scp/foundation_service_m,
-		/obj/item/clothing/under/scp/foundation_service_f,
+		/obj/item/clothing/under/scp/utility/communications/officerfem,
+		/obj/item/clothing/under/scp/utility/communications/officer,
 		/obj/item/clothing/suit/storage/foundation_coat,
 		/obj/item/device/radio,
 		/obj/item/device/megaphone,
@@ -55,8 +55,6 @@
 
 /obj/structure/closet/secure_closet/administration/commstech/WillContain()
 	return list(
-		/obj/item/clothing/under/scp/foundation_service_m,
-		/obj/item/clothing/under/scp/foundation_service_f,
 		/obj/item/clothing/suit/storage/foundation_coat,
 		/obj/item/device/radio,
 		/obj/item/clothing/gloves/foundation_service,
