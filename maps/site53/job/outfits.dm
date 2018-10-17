@@ -30,7 +30,7 @@
 	suit = /obj/item/clothing/suit/storage/foundation_coat
 	gloves = /obj/item/clothing/gloves/foundation_service
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/adminlvl4
+	id_type = /obj/item/weapon/card/id/commslvl4
 	l_ear = /obj/item/device/radio/headset/heads/commsofficer
 	back = null
 
@@ -40,7 +40,7 @@
 	name = OUTFIT_JOB_NAME("Communications Technician")
 	uniform = /obj/item/clothing/under/scp/foundation_work
 	shoes = /obj/item/clothing/shoes/dutyboots
-	id_type = /obj/item/weapon/card/id/adminlvl1
+	id_type = /obj/item/weapon/card/id/commslvl1
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_ear = /obj/item/device/radio/headset/commsdispatcher
 
@@ -406,7 +406,8 @@
 
 /decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer
 	name = OUTFIT_JOB_NAME("Logistics Officer")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/scp/foundation_work_lo
+	gloves = /obj/item/clothing/gloves/thick
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/logoff
 	l_ear = /obj/item/device/radio/headset/headset_deckofficer
@@ -414,7 +415,8 @@
 
 /decl/hierarchy/outfit/job/site90/crew/command/logisticspecialist
 	name = OUTFIT_JOB_NAME("Logistics Specialist")
-	uniform = /obj/item/clothing/under/scp/whiteuniform
+	uniform = /obj/item/clothing/under/scp/foundation_work_ls
+	gloves = /obj/item/clothing/gloves/thick
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/logspec
 	l_pocket = /obj/item/device/radio

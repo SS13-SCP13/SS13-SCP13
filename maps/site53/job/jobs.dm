@@ -107,12 +107,12 @@
 /datum/job/commsofficer
 	has_email = TRUE
 	title = "Communications Officer"
-	supervisors = "the Facility Director"
+	supervisors = "the Guard Commander"
 	department = "Command"
 	department_flag = COM
 	total_positions = 1
 	spawn_positions = 1
-	duties = "<big><b>As the Communications Officer it is your job to maintain long-range communications, monitor the happenings on the Telecomms servers and assess situations by mere observation. Your job may entail being a dispatch center of the likes.<br>You should not ever leave your tower unless under specific circumstances."
+	duties = "<big><b>As the Communications Officer it is your job to monitor the radio, help coordinate departments, and dispatch help where it is needed. Keep sensitive communications off the Common channel.<br>You should not ever leave your tower unless under specific circumstances."
 	minimal_player_age = 15
 	economic_modifier = 10
 	ideal_character_age = 45
