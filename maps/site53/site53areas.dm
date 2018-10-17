@@ -1,10 +1,9 @@
 /datum/map/site53
 
 	post_round_safe_areas = list (
-		/area/site53/tram/lcz,
 		/area/centcom,
 		/area/site53/surface/bunker,
-		/area/shuttle/escape_pod10/station
+		/area/shuttle/escape_pod7/station
 		)
 
 /area/turbolift
