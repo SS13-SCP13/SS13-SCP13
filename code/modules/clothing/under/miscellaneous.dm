@@ -717,7 +717,6 @@
 	desc = "A light grey uniform. It appears to be a Class B Service Dress uniform, however refitted and recolored to match the Foundation. This one appears to have a stylish pair of trousers."
 	icon_state = "service_co"
 	item_state = "service_co_s"
-	item_state = 
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/scp/foundation_service_f
