@@ -87,8 +87,8 @@
 	..()
 	var/jackets = list()
 	jackets += /obj/item/clothing/suit/storage/toggle/bomber
-	jackets += /obj/item/clothing/suit/storage/leather_jacket/nanotrasen
-	jackets += /obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen
+	jackets += /obj/item/clothing/suit/storage/leather_jacket/foundation
+	jackets += /obj/item/clothing/suit/storage/toggle/brown_jacket/foundation
 	jackets += /obj/item/clothing/suit/storage/leather_jacket
 	jackets += /obj/item/clothing/suit/storage/toggle/brown_jacket
 	jackets += /obj/item/clothing/suit/storage/mbill

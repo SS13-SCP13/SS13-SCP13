@@ -1,7 +1,7 @@
 /* DEPRECATED AND UNUSED!
 
 /obj/structure/closet/secure_closet/liaison
-	name = "\improper NanoTrasen liaison's locker"
+	name = "\improper Foundation liaison's locker"
 	req_access = list(access_liaison)
 	icon_state = "nanottwo1"
 	icon_closed = "nanottwo"
@@ -78,7 +78,7 @@
 
 /obj/structure/closet/secure_closet/crew/research
 	name = "research equipment locker"
-	req_access = list(access_nanotrasen)
+	req_access = list(access_foundation)
 	icon_state = "nanot1"
 	icon_closed = "nanot"
 	icon_locked = "nanot1"

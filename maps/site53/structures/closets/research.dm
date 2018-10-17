@@ -61,7 +61,7 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
 		/obj/item/weapon/cartridge/signal/science,
-		/obj/item/device/radio/headset/torchnanotrasen,
+		/obj/item/device/radio/headset/torchfoundation,
 		/obj/item/clothing/mask/gas,
 		/obj/item/weapon/clipboard,
 		/obj/item/weapon/folder,
@@ -95,7 +95,7 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
 		/obj/item/weapon/cartridge/signal/science,
-		/obj/item/device/radio/headset/torchnanotrasen,
+		/obj/item/device/radio/headset/torchfoundation,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/weapon/clipboard,
@@ -122,7 +122,7 @@
 
 /obj/structure/closet/secure_closet/prospector/WillContain()
 	return list(
-		/obj/item/device/radio/headset/torchnanotrasen,
+		/obj/item/device/radio/headset/torchfoundation,
 		/obj/item/clothing/under/rank/miner,
 		/obj/item/clothing/accessory/storage/webbing,
 		/obj/item/clothing/gloves/thick,
@@ -156,7 +156,7 @@
 		/obj/item/clothing/head/soft/sec/corp/guard,
 		/obj/item/clothing/head/beret/guard,
 		/obj/item/clothing/accessory/armband/whitered,
-		/obj/item/device/radio/headset/torchnanotrasen,
+		/obj/item/device/radio/headset/torchfoundation,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/weapon/clipboard,
 		/obj/item/weapon/folder,

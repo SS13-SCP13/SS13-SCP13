@@ -59,7 +59,7 @@
 					message = pick("Luxury watches for Blowout sale prices!",\
 					"Watches, Jewelry & Accessories, Bags & Wallets !",\
 					"Deposit T100 and get T300 totally free!",\
-					" 100K NT.|WOWGOLD õnly T89            <HOT>",\
+					" 100K NT.|WOWGOLD ï¿½nly T89            <HOT>",\
 					"We have been filed with a complaint from one of your customers in respect of their business relations with you.",\
 					"We kindly ask you to open the COMPLAINT REPORT (attached) to reply on this complaint..")
 				if(4)
@@ -80,7 +80,7 @@
 				if(6)
 					sender = pick("[company_name] Morale Divison","Feeling Lonely?","Bored?","www.wetskrell.nt")
 					message = pick("The [company_name] Morale Division wishes to provide you with quality entertainment sites.",\
-					"WetSkrell.nt is a xenophillic website endorsed by NT for the use of male crewmembers among it's many stations and outposts.",\
+					"WetSkrell.nt is a xenophillic website endorsed byFoundationfor the use of male crewmembers among it's many stations and outposts.",\
 					"Wetskrell.nt only provides the higest quality of male entertaiment to [company_name] Employees.",\
 					"Simply enter your [company_name] Bank account system number and pin. With three easy steps this service could be yours!")
 				if(7)

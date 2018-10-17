@@ -62,7 +62,7 @@
 	item_state = "gy_suit"
 	worn_state = "vice"
 
-//This set of uniforms looks fairly fancy and is generally used for high-ranking NT personnel from what I've seen, so lets give them appropriate ranks.
+//This set of uniforms looks fairly fancy and is generally used for high-rankingFoundationpersonnel from what I've seen, so lets give them appropriate ranks.
 /obj/item/clothing/under/rank/centcom
 	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Captain.\"."
 	name = "\improper Officer's Dress Uniform"

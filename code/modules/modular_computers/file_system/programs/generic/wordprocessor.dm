@@ -95,8 +95,8 @@
 		\[grid\] - \[/grid\] : Table without visible borders, for layouts.
 		\[row\] - New table row.
 		\[cell\] - New table cell.
-		\[logo\] - Inserts NT logo image.
-		\[bluelogo\] - Inserts blue NT logo image.
+		\[logo\] - InsertsFoundationlogo image.
+		\[bluelogo\] - Inserts blueFoundationlogo image.
 		\[solcrest\] - Inserts SCG crest image.
 		\[terraseal\] - Inserts TCC seal"}
 

@@ -117,9 +117,9 @@
 	alive_icon = "ai-mono"
 	alive_light = "#585858"
 
-/datum/ai_icon/nanotrasen
-	name = "Nanotrasen"
-	alive_icon = "ai-nanotrasen"
+/datum/ai_icon/foundation
+	name = "Foundation"
+	alive_icon = "ai-foundation"
 	alive_light = "#000029"
 
 /datum/ai_icon/rainbow

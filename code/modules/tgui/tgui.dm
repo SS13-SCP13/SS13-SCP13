@@ -24,7 +24,7 @@
 	  "can_close" = TRUE,
 	  "auto_format" = FALSE
 	)
-	var/style = "nanotrasen" // The style to be used for this UI.
+	var/style = "foundation" // The style to be used for this UI.
 	var/interface // The interface (template) to be used for this UI.
 	var/autoupdate = TRUE // Update the UI every MC tick.
 	var/initialized = FALSE // If the UI has been initialized yet.

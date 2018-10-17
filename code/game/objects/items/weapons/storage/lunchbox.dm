@@ -47,7 +47,7 @@
 
 /obj/item/weapon/storage/lunchbox/nt
 	name = "Foundation brand lunchbox"
-	icon_state = "lunchbox_nanotrasen"
+	icon_state = "lunchbox_foundation"
 	item_state = "toolbox_blue"
 	desc = "A little lunchbox. This one is branded with the Foundation logo!"
 

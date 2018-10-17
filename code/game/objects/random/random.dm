@@ -545,7 +545,7 @@ obj/random/closet/spawn_choices()
 
 /obj/random/soap/spawn_choices()
 	return list(/obj/item/weapon/soap = 4,
-				/obj/item/weapon/soap/nanotrasen = 3,
+				/obj/item/weapon/soap/foundation = 3,
 				/obj/item/weapon/soap/deluxe = 3,
 				/obj/item/weapon/soap/syndie = 1,
 				/obj/item/weapon/soap/gold = 1,

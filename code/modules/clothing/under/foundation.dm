@@ -1,4 +1,4 @@
-//TORCH NanoTrasen Uniforms - DO NOT ADD NEW UNIFORMS TO UNIFORM.DMI - TORCH NANOTRASEN UNIFORMS GO IN NANOTRASEN.DMI
+//TORCH Foundation Uniforms - DO NOT ADD NEW UNIFORMS TO UNIFORM.DMI - TORCH NANOTRASEN UNIFORMS GO IN NANOTRASEN.DMI
 
 /obj/item/clothing/under/rank/guard
 	desc = "A durable uniform worn by Foundation corporate security."
@@ -8,9 +8,9 @@
 	worn_state = "ntguard"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/nanotrasen.dmi')
+	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/foundation.dmi')
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/nanotrasen.dmi',
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/foundation.dmi',
 		)
 
 /obj/item/clothing/under/rank/scientist
@@ -21,10 +21,10 @@
 	worn_state = "ntsmock"
 	permeability_coefficient = 0.50
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 0)
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/nanotrasen.dmi')
+	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/foundation.dmi')
 	starting_accessories = list(/obj/item/clothing/accessory/nt_tunic)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/nanotrasen.dmi',
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/foundation.dmi',
 		)
 
 /obj/item/clothing/under/rank/scientist/executive
@@ -41,9 +41,9 @@
 	item_state = "lb_suit"
 	worn_state = "ntwork"
 	armor = list(melee = 5, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 5, rad = 0)
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/nanotrasen.dmi')
+	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/foundation.dmi')
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/nanotrasen.dmi',
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/foundation.dmi',
 		)
 
 /obj/item/clothing/under/rank/ntpilot
@@ -52,9 +52,9 @@
 	icon_state = "ntpilot"
 	item_state = "r_suit"
 	worn_state = "ntpilot"
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/nanotrasen.dmi')
+	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/foundation.dmi')
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/nanotrasen.dmi',
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/foundation.dmi',
 		)
 
 /obj/item/clothing/under/suit_jacket/nt
@@ -63,8 +63,8 @@
 	icon_state = "ntsuit"
 	item_state = "bl_suit"
 	worn_state = "ntsuit"
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/nanotrasen.dmi')
-	starting_accessories = list(/obj/item/clothing/accessory/toggleable/nanotrasen_jacket, /obj/item/clothing/accessory/nt)
+	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/foundation.dmi')
+	starting_accessories = list(/obj/item/clothing/accessory/toggleable/foundation_jacket, /obj/item/clothing/accessory/nt)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/nanotrasen.dmi',
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/foundation.dmi',
 		)

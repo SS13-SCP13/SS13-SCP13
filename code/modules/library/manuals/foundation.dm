@@ -1,9 +1,9 @@
 /obj/item/weapon/book/manual/nt_regs
-	name = "NanoTrasen Regulations"
-	desc = "A set of corporate guidelines for employees of NanoTrasen."
+	name = "Foundation Regulations"
+	desc = "A set of corporate guidelines for employees of Foundation."
 	icon_state = "booknanoregs"
-	author = "NanoTrasen"
-	title = "NanoTrasen Regulations"
+	author = "Foundation"
+	title = "Foundation Regulations"
 
 /obj/item/weapon/book/manual/nt_regs/New()
 	..()

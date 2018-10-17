@@ -4,7 +4,7 @@ var/list/dreams = list(
 	"voices from all around","deep space","a doctor","the engine","a traitor","an ally","darkness",
 	"light","a scientist","a monkey","a catastrophe","a loved one","a gun","warmth","freezing","the sun",
 	"a hat","a ruined station","a planet","phoron","air","the medical bay","the bridge","blinking lights",
-	"a blue light","an abandoned laboratory","NanoTrasen", "pirates", "mercenaries","blood","healing","power","respect",
+	"a blue light","an abandoned laboratory","Foundation", "pirates", "mercenaries","blood","healing","power","respect",
 	"riches","space","a crash","happiness","pride","a fall","water","flames","ice","melons","flying","the eggs","money",
 	"the chief engineer","the research director","the chief medical officer",
 	"a station engineer","the janitor","the atmospheric technician",
@@ -14,7 +14,7 @@ var/list/dreams = list(
 	"an unathi","a tajaran","the ai core","a beaker of strange liquid","the supermatter", "a creature built completely of stolen flesh",
 	"a GAS", "a IPC", "a Dionaea", "a being made of light", "the commanding officer", "the executive officer", "the chief of security", "the corporate liason",
 	"the representative", "the senior advisor", "the bridge officer", "the senior engineer", "the physician", "the corpsman", "the counselor",
-	"the medical contractor", "the security contractor", "the stowaway", "an old friend", "the prospector", "the NT pilot", "the passenger", "the chief of security",
+	"the medical contractor", "the security contractor", "the stowaway", "an old friend", "the prospector", "theFoundationpilot", "the passenger", "the chief of security",
 	"the master at arms", "the forensic technician", "the brig officer", "the tower", "the man with no face", "a field of flowers", "an old home", "the merc",
 	"a surgery table", "a needle", "a blade", "an ocean", "right behind you", "standing above you", "someone near by", "a place forgotten", "the exodus",
 	)

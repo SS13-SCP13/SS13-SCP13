@@ -68,7 +68,7 @@
 /obj/item/weapon/folder/nt/rd
 
 /obj/item/weapon/folder/envelope/blanks
-	desc = "A thick envelope. The Nanotrasen logo is stamped in the corner, along with 'CONFIDENTIAL'."
+	desc = "A thick envelope. The Foundation logo is stamped in the corner, along with 'CONFIDENTIAL'."
 
 /obj/item/weapon/folder/envelope/blanks/Initialize()
 	. = ..()
@@ -157,7 +157,7 @@
 	This is a small addendum to the usual operating procedures. Unlike the rest of SOP, this is not left to the Commanding Officer's discretion and is mandatory. As unconventional as this is, we felt it is essential for smooth operation of this mission.<br>
 	Procedure can be initiated only by transmission from SCG Expeditionary Command via secure channel. The sender may not introduce themselves, but you shouldn't have trouble confirming the transmission source, I believe.<br>
 	The signal to initiate the procedure are codewords 'GOOD NIGHT WORLD' used in this order as one phrase. You do not need to send acknowledgement.
-	<li>Information about this expedition's findings is to be treated as secret and vital to SCG's national security, and is protected under codeword UMBRA. Only SCG government employees, NT personnel and Skrell citizens aboard the SEV Torch are allowed access to this information on a need-to-know basis.</li>
+	<li>Information about this expedition's findings is to be treated as secret and vital to SCG's national security, and is protected under codeword UMBRA. Only SCG government employees,Foundationpersonnel and Skrell citizens aboard the SEV Torch are allowed access to this information on a need-to-know basis.</li>
 	<li>The secrecy of this information is to be applied retroactively. Any non-cleared personnel who were exposed to such information are to be secured and transferred to DIA on arrival at home port.</li>
 	<li>Any devices capable of transmitting data on interstellar range are to be confiscated from private possession.</li>
 	<li>Disregard any systems remaining in your flight plan and set course for Sol, Neptune orbit. You will be contacted upon your arrival. Do not make stops in ports on the way unless absolutely necessary.</li>

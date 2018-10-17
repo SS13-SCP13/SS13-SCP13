@@ -92,11 +92,11 @@
 	icon_state = "p08b"
 
 /datum/detective_gun_skin/mk_standard
-	name = "\improper NT Mk. 58"
+	name = "\improperFoundationMk. 58"
 	icon_state = "secguncomp"
 
 /datum/detective_gun_skin/mk_custom
-	name = "\improper NT Mk. 58 Custom"
+	name = "\improperFoundationMk. 58 Custom"
 	icon_state = "secgundark"
 
 /datum/detective_gun_skin/usp

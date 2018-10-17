@@ -60,7 +60,7 @@ var/datum/antagonist/rogue_ai/malf
 			return 0
 
 		A.setup_for_malf()
-		A.laws = new /datum/ai_laws/nanotrasen/malfunction
+		A.laws = new /datum/ai_laws/foundation/malfunction
 
 
 		var/mob/living/silicon/ai/malf = player.current
