@@ -151,9 +151,9 @@
 	desc = "Lucky suit jacket."
 	icon_state = "checkered_jacket"
 
-/obj/item/clothing/accessory/toggleable/nanotrasen_jacket
-	name = "\improper NanoTrasen suit jacket"
-	desc = "A jacket that NanoTrasen has its executives wear."
+/obj/item/clothing/accessory/toggleable/foundation_jacket
+	name = "\improper Foundation suit jacket"
+	desc = "A jacket that Foundation has its executives wear."
 	icon_state = "nt_jacket"
 
 /obj/item/clothing/accessory/toggleable/hawaii

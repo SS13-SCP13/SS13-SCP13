@@ -106,9 +106,9 @@
 	..()
 	desc = "Across the balloon is printed: \"[desc]\""
 
-/obj/item/toy/balloon/nanotrasen
+/obj/item/toy/balloon/foundation
 	name = "\improper 'motivational' balloon"
-	desc = "Man, I love NanoTrasen soooo much. I use only NT products. You have NO idea."
+	desc = "Man, I love Foundation soooo much. I use only NT products. You have NO idea."
 	icon_state = "ntballoon"
 	item_state = "ntballoon"
 

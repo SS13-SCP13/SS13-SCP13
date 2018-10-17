@@ -68,7 +68,7 @@
 /obj/item/weapon/folder/nt/rd
 
 /obj/item/weapon/folder/envelope/blanks
-	desc = "A thick envelope. The Nanotrasen logo is stamped in the corner, along with 'CONFIDENTIAL'."
+	desc = "A thick envelope. The Foundation logo is stamped in the corner, along with 'CONFIDENTIAL'."
 
 /obj/item/weapon/folder/envelope/blanks/Initialize()
 	. = ..()

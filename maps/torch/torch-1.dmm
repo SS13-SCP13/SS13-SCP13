@@ -9876,7 +9876,7 @@
 	icon_state = "intact"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	display_name = "Aft Dock (NanoTrasen)";
+	display_name = "Aft Dock (Foundation)";
 	frequency = 1380;
 	id_tag = "petrov_shuttle_dock_airlock";
 	pixel_x = 24;

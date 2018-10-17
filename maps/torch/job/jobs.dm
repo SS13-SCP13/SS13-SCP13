@@ -110,7 +110,7 @@
 
 /datum/job/rd
 	title = "Research Director"
-	supervisors = "NanoTrasen and the Commanding Officer"
+	supervisors = "Foundation and the Commanding Officer"
 	economic_modifier = 20
 	minimal_player_age = 14
 	ideal_character_age = 60
@@ -120,7 +120,7 @@
 
 	access = list(access_tox, access_tox_storage, access_emergency_storage, access_teleporter, access_heads, access_rd,
 						access_research, access_mining, access_mining_office, access_mining_station, access_xenobiology,
-						access_RC_announce, access_keycard_auth, access_xenoarch, access_nanotrasen, access_sec_guard,
+						access_RC_announce, access_keycard_auth, access_xenoarch, access_foundation, access_sec_guard,
 						access_expedition_shuttle, access_guppy, access_hangar, access_petrov, access_petrov_helm, access_guppy_helm)
 	minimal_access = list()
 
@@ -241,19 +241,19 @@
 	)
 
 /datum/job/liaison
-	title = "NanoTrasen Liaison"
+	title = "Foundation Liaison"
 	department = "Support"
 	department_flag = SPT
 
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "NanoTrasen and Corporate Regulations"
+	supervisors = "Foundation and Corporate Regulations"
 	selection_color = "#2f2f7f"
 	economic_modifier = 15
 	minimal_player_age = 10
 	alt_titles = list(
-		"NanoTrasen Representative",
-		"NanoTrasen Executive"
+		"Foundation Representative",
+		"Foundation Executive"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/research/cl
 	allowed_branches = list(/datum/mil_branch/civilian)
@@ -261,7 +261,7 @@
 
 	access = list(access_liaison, access_tox, access_tox_storage, access_heads, access_research,
 						access_mining, access_mining_office, access_mining_station, access_xenobiology,
-						access_xenoarch, access_nanotrasen, access_sec_guard,
+						access_xenoarch, access_foundation, access_sec_guard,
 						access_hangar, access_petrov, access_petrov_helm)
 
 /datum/job/representative
@@ -956,18 +956,18 @@
 	allowed_ranks = list(/datum/mil_rank/civ/nt)
 
 	access = list(access_tox, access_tox_storage, access_research, access_mining, access_mining_office,
-						access_mining_station, access_xenobiology, access_xenoarch, access_nanotrasen,
+						access_mining_station, access_xenobiology, access_xenoarch, access_foundation,
 						access_expedition_shuttle, access_guppy, access_hangar, access_petrov, access_petrov_helm, access_guppy_helm)
 
 /datum/job/nt_pilot
-	title = "NanoTrasen Pilot"
+	title = "Foundation Pilot"
 	supervisors = "the Research Director"
 	department = "Science"
 	department_flag = SCI
 
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Research Director and NanoTrasen Personnel"
+	supervisors = "the Research Director and Foundation Personnel"
 	selection_color = "#633d63"
 	economic_modifier = 10
 	minimal_player_age = 5
@@ -977,7 +977,7 @@
 	allowed_ranks = list(/datum/mil_rank/civ/nt)
 
 	access = list(access_research, access_mining_office,
-						access_mining_station, access_nanotrasen, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy,
+						access_mining_station, access_foundation, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy,
 						access_hangar, access_petrov, access_petrov_helm, access_guppy_helm, access_mining)
 /datum/job/scientist
 	title = "Scientist"
@@ -1001,7 +1001,7 @@
 
 	access = list(access_tox, access_tox_storage, access_research, access_petrov, access_petrov_helm,
 						access_mining_office, access_mining_station, access_xenobiology, access_guppy_helm,
-						access_xenoarch, access_nanotrasen, access_expedition_shuttle, access_guppy, access_hangar)
+						access_xenoarch, access_foundation, access_expedition_shuttle, access_guppy, access_hangar)
 	minimal_access = list()
 
 
@@ -1024,7 +1024,7 @@
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/nt)
 
-	access = list(access_research, access_mining, access_mining_office, access_mining_station, access_nanotrasen,
+	access = list(access_research, access_mining, access_mining_office, access_mining_station, access_foundation,
 						access_expedition_shuttle, access_guppy, access_hangar, access_petrov, access_guppy_helm)
 	minimal_access = list()
 
@@ -1036,7 +1036,7 @@
 
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Research Director and NanoTrasen Personnel"
+	supervisors = "the Research Director and Foundation Personnel"
 	selection_color = "#633d63"
 	economic_modifier = 6
 	minimal_player_age = 3
@@ -1046,7 +1046,7 @@
 	allowed_ranks = list(/datum/mil_rank/civ/nt, /datum/mil_rank/civ/contractor)
 
 	access = list(access_tox, access_tox_storage,access_research, access_mining, access_mining_office, access_mining_station, access_xenobiology,
-						access_xenoarch, access_nanotrasen, access_sec_guard, access_hangar, access_petrov, access_expedition_shuttle, access_guppy)
+						access_xenoarch, access_foundation, access_sec_guard, access_hangar, access_petrov, access_expedition_shuttle, access_guppy)
 
 
 /datum/job/scientist_assistant
@@ -1056,7 +1056,7 @@
 
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the Research Director and NanoTrasen Personnel"
+	supervisors = "the Research Director and Foundation Personnel"
 	selection_color = "#633d63"
 	economic_modifier = 3
 	ideal_character_age = 30
@@ -1072,7 +1072,7 @@
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/nt)
 
-	access = list(access_research, access_mining_office, access_nanotrasen, access_petrov, access_expedition_shuttle, access_guppy, access_hangar)
+	access = list(access_research, access_mining_office, access_foundation, access_petrov, access_expedition_shuttle, access_guppy, access_hangar)
 
 
 /datum/job/assistant

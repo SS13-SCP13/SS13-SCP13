@@ -22,6 +22,6 @@
 	pitch_toggle = 0
 
 /mob/living/silicon/robot/combat/nt
-	laws = /datum/ai_laws/nanotrasen_aggressive
+	laws = /datum/ai_laws/foundation_aggressive
 	idcard = /obj/item/weapon/card/id/centcom/ERT
 	silicon_radio = /obj/item/device/radio/borg/ert

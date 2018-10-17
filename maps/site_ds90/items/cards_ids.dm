@@ -133,7 +133,7 @@
 /obj/item/weapon/card/id/torch/crew/explorer
 	job_access_type = /datum/job/explorer
 
-//NanoTrasen and Passengers
+//Foundation and Passengers
 
 /obj/item/weapon/card/id/torch/passenger
 	desc = "A card issued to passengers and off-duty personnel aboard the SEV Torch."
@@ -141,7 +141,7 @@
 	job_access_type = /datum/job/assistant
 
 /obj/item/weapon/card/id/torch/passenger/research
-	desc = "A card issued to NanoTrasen personnel aboard the SEV Torch."
+	desc = "A card issued to Foundation personnel aboard the SEV Torch."
 	icon_state = "corporate"
 	job_access_type = /datum/job/scientist_assistant
 

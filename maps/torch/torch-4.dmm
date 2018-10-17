@@ -4415,7 +4415,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/head/aux)
 "ajY" = (
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/foundation,
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/head/aux)

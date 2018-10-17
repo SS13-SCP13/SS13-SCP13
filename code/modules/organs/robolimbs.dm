@@ -88,10 +88,10 @@ var/datum/robolimb/basic_robolimb
 	can_eat = null
 	unavailable_at_fab = 1
 
-/datum/robolimb/nanotrasen
-	company = "NanoTrasen"
+/datum/robolimb/foundation
+	company = "Foundation"
 	desc = "This limb is made from a cheap polymer."
-	icon = 'icons/mob/human_races/cyberlimbs/nanotrasen/nanotrasen_main.dmi'
+	icon = 'icons/mob/human_races/cyberlimbs/foundation/foundation_main.dmi'
 	unavailable_at_fab = 1
 
 /datum/robolimb/wardtakahashi

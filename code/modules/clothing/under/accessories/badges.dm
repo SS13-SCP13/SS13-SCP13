@@ -53,9 +53,9 @@
 
 /obj/item/clothing/accessory/badge/holo/NT
 	name = "\improper NT holobadge"
-	desc = "This glowing red badge marks the holder as a member of NanoTrasen corporate security."
+	desc = "This glowing red badge marks the holder as a member of Foundation corporate security."
 	color = "#b7310b" //brighter COLOR_NT_RED
-	badge_string = "NanoTrasen Security"
+	badge_string = "Foundation Security"
 	badge_access = access_research
 
 /obj/item/clothing/accessory/badge/holo/cord
@@ -108,7 +108,7 @@
 
 /obj/item/weapon/storage/box/holobadgeNT
 	name = "\improper NT holobadge box"
-	desc = "A box containing NanoTrasen security holobadges."
+	desc = "A box containing Foundation security holobadges."
 	startswith = list(/obj/item/clothing/accessory/badge/holo/NT = 4,
 					  /obj/item/clothing/accessory/badge/holo/NT/cord = 2)
 
@@ -130,11 +130,11 @@
 	icon_state = "intelbadge"
 	badge_string = "Office of Interstellar Intelligence"
 
-/obj/item/clothing/accessory/badge/nanotrasen
-	name = "\improper NanoTrasen badge"
-	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a NanoTrasen corporate executive."
+/obj/item/clothing/accessory/badge/foundation
+	name = "\improper Foundation badge"
+	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a Foundation corporate executive."
 	icon_state = "ntbadge"
-	badge_string = "NanoTrasen Corporate"
+	badge_string = "Foundation Corporate"
 
 /obj/item/clothing/accessory/badge/marshal
 	name = "colonial marshal's badge"

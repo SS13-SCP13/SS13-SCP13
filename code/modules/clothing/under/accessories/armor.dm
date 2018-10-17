@@ -297,8 +297,8 @@
 	icon_state = "helmcover_tan"
 
 /obj/item/clothing/accessory/armor/helmcover/nt
-	name = "\improper NanoTrasen helmet cover"
-	desc = "A fabric cover for armored helmets. This one has NanoTrasen's colors."
+	name = "\improper Foundation helmet cover"
+	desc = "A fabric cover for armored helmets. This one has Foundation's colors."
 	icon_state = "helmcover_nt"
 
 /obj/item/clothing/accessory/armor/helmcover/pcrc

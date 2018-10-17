@@ -416,7 +416,7 @@
 	name_short = null
 
 /datum/mil_rank/civ/nt
-	name = "NanoTrasen Employee"
+	name = "Foundation Employee"
 
 /datum/mil_rank/civ/contractor
 	name = "Contractor"
