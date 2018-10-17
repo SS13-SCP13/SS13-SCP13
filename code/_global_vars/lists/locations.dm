@@ -8,6 +8,7 @@ GLOBAL_LIST_EMPTY(latejoin_gateway)
 GLOBAL_LIST_EMPTY(latejoin_cryo)
 GLOBAL_LIST_EMPTY(latejoin_cyborg)
 GLOBAL_LIST_EMPTY(latejoin_dclass)
+GLOBAL_LIST_EMPTY(latejoin_comms)
 GLOBAL_LIST_EMPTY(latejoin_lcz)
 GLOBAL_LIST_EMPTY(latejoin_security)
 

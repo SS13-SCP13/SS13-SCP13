@@ -1107,7 +1107,7 @@
 "vo" = (/obj/item/modular_computer/console/preset/supply{icon_state = "console"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/site53/logistics/logistics)
 "vp" = (/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
 "vq" = (/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
-"vr" = (/obj/machinery/light{dir = 4; icon_state = "tube1"; pixel_x = 0},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
+"vr" = (/obj/effect/landmark{name = "JoinLateComms"},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
 "vs" = (/obj/machinery/light,/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
 "vt" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_x = -12; pixel_y = 0},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)
 "vu" = (/obj/machinery/power/apc{icon_state = "apc0"; dir = 4},/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/site53/upper_surface/commstower)

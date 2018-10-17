@@ -57,6 +57,10 @@
 			GLOB.latejoin_dclass += loc
 			delete_me = 1
 			return
+		if("JoinLateComms")
+			GLOB.latejoin_comms += loc
+			delete_me = 1
+			return
 		if("JoinLatelcz")
 			GLOB.latejoin_lcz += loc
 			delete_me = 1
