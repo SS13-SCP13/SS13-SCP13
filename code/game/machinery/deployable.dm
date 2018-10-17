@@ -271,7 +271,7 @@ for reference:
 
 /obj/structure/lionstatue
 	name = "Lion statue"
-	desc = "A magnificent statue. It makes you want to thank the holy lord for all you see."
+	desc = "A magnificent statue of a Lion. It looks proud."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "lion"
 	anchored = 1.0

@@ -270,13 +270,13 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/lionbar
 	name = "lion bar"
-	desc = "Something of the old world. Smells like infinite power and fear."
+	desc = "Something of the old world. Weren't they discontinued in 2020?"
 	icon_state = "lionbar"
 	trash = /obj/item/trash/lionbar
 	filling_color = "#7d5f46"
 	center_of_mass = "x=15;y=15"
-	nutriment_amt = 6
-	nutriment_desc = list("candy" = 1,"ultimate power" = 3,"fear" = 2)
+	nutriment_amt = 5
+	nutriment_desc = list("candy" = 1,"stale chocolate" = 4)
 
 	New()
 		..()
@@ -285,13 +285,13 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/lionbarlegacy
 	name = "old lion bar"
-	desc = "Something of the old world. Smells like infinite power and fear. The packaging is one of ancient standards, which makes this almost a collectible!"
+	desc = "Something of the old world. Weren't they discontinued in 2020? The packaging is one of ancient standards, which makes this almost a collectible!"
 	icon_state = "lionbarlegacy"
 	trash = /obj/item/trash/lionbarlegacy
 	filling_color = "#7d5f46"
 	center_of_mass = "x=15;y=15"
-	nutriment_amt = 10
-	nutriment_desc = list("candy" = 1,"ultimate power" = 3,"fear" = 2,"stale chocolate" = 4)
+	nutriment_amt = 5
+	nutriment_desc = list("candy" = 1,"stale chocolate" = 4)
 
 	New()
 		..()
