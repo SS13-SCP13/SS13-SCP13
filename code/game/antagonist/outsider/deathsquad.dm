@@ -2,9 +2,9 @@ var/datum/antagonist/deathsquad/deathsquad
 
 /datum/antagonist/deathsquad
 	id = MODE_DEATHSQUAD
-	role_text = "Death Commando"
-	role_text_plural = "Death Commandos"
-	welcome_text = "You work in the service of corporate Asset Protection, answering directly to the Board of Directors."
+	role_text = "MTF Hammer Down - Nu-7 Agent"
+	role_text_plural = "MTF Hammer Down - Nu-7 Agents"
+	welcome_text = "You are tasked with responding to incidents involving loss of communication with major Foundation facilities under circumstances wherein a site-wide breach, enemy compromise, or other similarly catastrophic event is suspected. You answer directly to the O5 Council."
 	landmark_id = "Commando"
 	flags = ANTAG_OVERRIDE_JOB | ANTAG_OVERRIDE_MOB | ANTAG_HAS_NUKE | ANTAG_HAS_LEADER | ANTAG_RANDOM_EXCEPTED
 	default_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
@@ -48,10 +48,9 @@ var/datum/antagonist/deathsquad/deathsquad
 	player.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/revolver/mateba(player), slot_belt)
 	player.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/pulse_rifle(player), slot_r_hand)
 	player.equip_to_slot_or_del(new /obj/item/weapon/rig/ert/assetprotection(player), slot_back)
-	player.equip_to_slot_or_del(new /obj/item/weapon/melee/energy/sword(player), slot_l_hand)
 	player.implant_loyalty(player)
 
-	var/obj/item/weapon/card/id/id = create_id("Asset Protection", player)
+	var/obj/item/weapon/card/id/id = create_id("MTF Hammer Down", player)
 	if(id)
 		id.access |= get_all_station_access()
 		id.icon_state = "centcom"
@@ -63,9 +62,9 @@ var/datum/antagonist/deathsquad/deathsquad
 
 	var/syndicate_commando_rank
 	if(leader && player == leader)
-		syndicate_commando_rank = pick("Corporal", "Sergeant", "Staff Sergeant", "Sergeant 1st Class", "Master Sergeant", "Sergeant Major")
+		syndicate_commando_rank = pick("Nu-7 Col.", "Nu-7 Maj.", "Nu-7 Capt.")
 	else
-		syndicate_commando_rank = pick("Lieutenant", "Captain", "Major")
+		syndicate_commando_rank = pick("Nu-7 Sgt.", "Nu-7 Cpl.")
 
 	var/syndicate_commando_name = pick(GLOB.last_names)
 
