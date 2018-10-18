@@ -153,7 +153,7 @@
 
 /obj/item/projectile/bullet/pistol/medium/smg/hollowpoint
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
-	damage = 52 //10mm hollowpoint
+	damage = 46 //10mm hollowpoint
 	armor_penetration = 8
 	agony = 35
 
