@@ -87,8 +87,9 @@ var/datum/evacuation_controller/evacuation_controller
 
 	if(emergency_evacuation)
 		for(var/area in GLOB.areas)
+			var/area/A = area
+			A.set_emergency_lighting(1)
 			if(istype(area, /area/hallway))
-				var/area/A = area
 				A.readyalert()
 		if(!skip_announce)
 			GLOB.using_map.emergency_shuttle_called_announcement()
@@ -116,8 +117,9 @@ var/datum/evacuation_controller/evacuation_controller
 	if(emergency_evacuation)
 		evac_recalled.Announce(GLOB.using_map.emergency_shuttle_recall_message)
 		for(var/area in GLOB.areas)
+			var/area/A = area
+			A.set_emergency_lighting(0)
 			if(istype(area, /area/hallway))
-				var/area/A = area
 				A.readyreset()
 		emergency_evacuation = 0
 	else
