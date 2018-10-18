@@ -41,6 +41,10 @@
 			new /mob/living/simple_animal/scp_999 (loc)
 			delete_me = 1
 			return
+		if("scp420j")
+			GLOB.possible_420j += loc
+			delete_me = 1
+			return
 		if("JoinLate")
 			GLOB.latejoin += loc
 			delete_me = 1
