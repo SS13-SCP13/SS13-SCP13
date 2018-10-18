@@ -1221,9 +1221,9 @@
 
 
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky
-	name = "Scaredy's Private Reserve Beef Jerky"
+	name = "Containment Jerky"
 	icon_state = "sosjerky"
-	desc = "Beef jerky made from the finest space cows."
+	desc = "To prepare for any situation, Containment Jerky! Looks like dog food."
 	trash = /obj/item/trash/sosjerky
 	filling_color = "#631212"
 	center_of_mass = "x=15;y=9"
@@ -1234,9 +1234,9 @@
 		bitesize = 2
 
 /obj/item/weapon/reagent_containers/food/snacks/no_raisin
-	name = "4no Raisins"
+	name = "Foundation Brand Raisins"
 	icon_state = "4no_raisins"
-	desc = "Best raisins in the universe. Not sure why."
+	desc = "A pack of raisins, with the Foundation symbol. Not nearly as good as the original."
 	trash = /obj/item/trash/raisins
 	filling_color = "#343834"
 	center_of_mass = "x=15;y=4"
@@ -1244,7 +1244,7 @@
 	nutriment_amt = 6
 
 /obj/item/weapon/reagent_containers/food/snacks/spacetwinkie
-	name = "Space Twinkie"
+	name = "Twinkie"
 	icon_state = "space_twinkie"
 	desc = "Guaranteed to survive longer then you will."
 	filling_color = "#ffe591"
@@ -1256,9 +1256,9 @@
 		bitesize = 2
 
 /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers
-	name = "Cheesie Honkers"
+	name = "Super Cheesie Potates Brand Chips"
 	icon_state = "cheesie_honkers"
-	desc = "Bite sized cheesie snacks that will honk all over your mouth."
+	desc = "Bite sized cheesie snacks, for an affordable price."
 	trash = /obj/item/trash/cheesie
 	filling_color = "#ffa305"
 	center_of_mass = "x=15;y=9"

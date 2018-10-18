@@ -1,0 +1,5 @@
+author: Pandolphina
+delete-after: True
+
+changes: 
+  - tweak: Changes snack names to SCP Variants, and changes some small fluff in the tools code.
