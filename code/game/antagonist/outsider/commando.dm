@@ -3,9 +3,9 @@ var/datum/antagonist/deathsquad/mercenary/commandos
 /datum/antagonist/deathsquad/mercenary
 	id = MODE_COMMANDO
 	landmark_id = "Syndicate-Commando"
-	role_text = "Syndicate Commando"
-	role_text_plural = "Commandos"
-	welcome_text = "You are in the employ of a criminal syndicate hostile to corporate interests."
+	role_text = "Chaos Commando"
+	role_text_plural = "Chaos Commandos"
+	welcome_text = "You are in the employ of the Chaos Insurgency, hostile to Foundation interests."
 	id_type = /obj/item/weapon/card/id/centcom/ERT
 	flags = ANTAG_RANDOM_EXCEPTED
 
@@ -30,8 +30,7 @@ var/datum/antagonist/deathsquad/mercenary/commandos
 	player.equip_to_slot_or_del(new /obj/item/ammo_magazine/box/c45(player), slot_in_backpack)
 	player.equip_to_slot_or_del(new /obj/item/weapon/rig/merc(player), slot_back)
 	player.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/pulse_rifle(player), slot_r_hand)
-	player.equip_to_slot_or_del(new /obj/item/weapon/melee/energy/sword(player), slot_l_hand)
 
-	create_id("Commando", player)
+	create_id("Chaos Commando", player)
 	create_radio(SYND_FREQ, player)
 	return 1
