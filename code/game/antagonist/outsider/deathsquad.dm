@@ -2,8 +2,8 @@ var/datum/antagonist/deathsquad/deathsquad
 
 /datum/antagonist/deathsquad
 	id = MODE_DEATHSQUAD
-	role_text = "MTF Hammer Down - Nu-7 Agent"
-	role_text_plural = "MTF Hammer Down - Nu-7 Agents"
+	role_text = "AMTF Hammer Down - Nu-7 Agent"
+	role_text_plural = "AMTF Hammer Down - Nu-7 Agents"
 	welcome_text = "You are tasked with responding to incidents involving loss of communication with major Foundation facilities under circumstances wherein a site-wide breach, enemy compromise, or other similarly catastrophic event is suspected. You answer directly to the O5 Council."
 	landmark_id = "Commando"
 	flags = ANTAG_OVERRIDE_JOB | ANTAG_OVERRIDE_MOB | ANTAG_HAS_NUKE | ANTAG_HAS_LEADER | ANTAG_RANDOM_EXCEPTED
@@ -40,7 +40,7 @@ var/datum/antagonist/deathsquad/deathsquad
 	player.equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(player), slot_shoes)
 	player.equip_to_slot_or_del(new /obj/item/clothing/glasses/thermal(player), slot_glasses)
 	player.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat(player), slot_wear_mask)
-	if (player.mind == leader)
+	if (player.mind == leader) // Congrats, you're the Nuclear Weapons Specialist
 		player.equip_to_slot_or_del(new /obj/item/weapon/pinpointer(player), slot_l_store)
 		player.equip_to_slot_or_del(new /obj/item/weapon/disk/nuclear(player), slot_r_store)
 	else
@@ -50,7 +50,7 @@ var/datum/antagonist/deathsquad/deathsquad
 	player.equip_to_slot_or_del(new /obj/item/weapon/rig/ert/assetprotection(player), slot_back)
 	player.implant_loyalty(player)
 
-	var/obj/item/weapon/card/id/id = create_id("MTF Hammer Down", player)
+	var/obj/item/weapon/card/id/id = create_id("AMTF Hammer Down", player)
 	if(id)
 		id.access |= get_all_station_access()
 		id.icon_state = "centcom"
@@ -62,7 +62,7 @@ var/datum/antagonist/deathsquad/deathsquad
 
 	var/syndicate_commando_rank
 	if(leader && player == leader)
-		syndicate_commando_rank = pick("Nu-7 Col.", "Nu-7 Maj.", "Nu-7 Capt.")
+		syndicate_commando_rank = pick("Nu-7 Col.", "Nu-7 Maj.", "Nu-7 Capt.", "Nu-7 NWS")
 	else
 		syndicate_commando_rank = pick("Nu-7 Sgt.", "Nu-7 Cpl.")
 
