@@ -38,12 +38,24 @@
 	desc = "The headset of the chief box pusher."
 	icon_state = "cargo_headset"
 	item_state = "headset"
-	ks2type = /obj/item/device/encryptionkey/headset_deckofficer
+	ks2type = /obj/item/device/encryptionkey/heads/qm
 
 /obj/item/weapon/storage/box/headset/torchxo
 	name = "box of spare executive officer headsets"
 	desc = "A box full of executive officer headsets."
 	startswith = list(/obj/item/device/radio/headset/heads/torchxo = 7)
+
+/obj/item/weapon/storage/box/encryptionkeys
+	name = "box of spare encryption keys"
+	desc = "A box full of spare encryption keys."
+	startswith = list(
+		/obj/item/device/encryptionkey/headset_sci = 4,
+		/obj/item/device/encryptionkey/headset_med = 4,
+		/obj/item/device/encryptionkey/headset_cargo = 4,
+		/obj/item/device/encryptionkey/headset_service = 4,
+		/obj/item/device/encryptionkey/headset_eng = 4,
+		/obj/item/device/encryptionkey/headset_sec = 4
+	)
 
 /obj/item/device/radio/headset/bridgeofficer
 	name = "bridge officer's headset"

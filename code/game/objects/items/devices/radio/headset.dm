@@ -169,7 +169,7 @@
 	ks2type = /obj/item/device/encryptionkey/heads/rd
 
 /obj/item/device/radio/headset/heads/hos
-	name = "head of security's headset"
+	name = "security commander's headset"
 	desc = "The headset of the man who protects your worthless lives."
 	icon_state = "com_headset"
 	item_state = "headset"
@@ -185,9 +185,16 @@
 /obj/item/device/radio/headset/heads/commsofficer
 	name = "communication officer's headset"
 	desc = "The headset of the creepy guy behind the consoles."
-	icon_state = "com_headset"
+	icon_state = "comm_headset"
 	item_state = "headset"
-	ks2type = /obj/item/device/encryptionkey/heads/hos
+	ks2type = /obj/item/device/encryptionkey/heads/comms_admin
+
+/obj/item/device/radio/headset/commsdispatcher
+	name = "communication dispatcher's headset"
+	desc = "The headset of the calm voice of certainty."
+	icon_state = "comm_headset"
+	item_state = "headset"
+	ks2type = /obj/item/device/encryptionkey/heads/comms_dispatcher
 
 /obj/item/device/radio/headset/heads/ce
 	name = "chief engineer's headset"
@@ -210,16 +217,23 @@
 	item_state = "headset"
 	ks2type = /obj/item/device/encryptionkey/heads/hop
 
+/obj/item/device/radio/headset/heads/headset_deckofficer
+	name = "logistics officer's headset"
+	desc = "The headset of the best box pusher of all."
+	icon_state = "com_headset"
+	item_state = "headset"
+	ks2type = /obj/item/device/encryptionkey/heads/qm
+
 /obj/item/device/radio/headset/headset_cargo
-	name = "supply radio headset"
+	name = "logistics technician's headset"
 	desc = "A headset used by the box pushers."
 	icon_state = "cargo_headset"
 	item_state = "headset"
 	ks2type = /obj/item/device/encryptionkey/headset_cargo
 
 /obj/item/device/radio/headset/headset_service
-	name = "service radio headset"
-	desc = "Headset used by the service staff, tasked with keeping everyone full, happy and clean."
+	name = "civilian radio headset"
+	desc = "Headset used by the civilian staff, tasked with keeping everyone full, happy and clean."
 	icon_state = "srv_headset"
 	item_state = "headset"
 	ks2type = /obj/item/device/encryptionkey/headset_service

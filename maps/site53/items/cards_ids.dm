@@ -391,6 +391,22 @@
 	item_state = "Admin_ID"
 	job_access_type = /datum/job/captain
 
+// COMMS CARDS
+
+/obj/item/weapon/card/id/commslvl1
+	name = "level one administration keycard"
+	desc = "A black keycard. A black keycard. Looks like the person wearing this won't give it up easy."
+	job_access_type = /datum/job/commeng
+	icon_state = "adminlvl1"
+	item_state = "Admin_ID"
+
+/obj/item/weapon/card/id/commslvl4
+	name = "level four administration keycard"
+	desc = "A black keycard. A black keycard. Looks like the person wearing this won't give it up easy."
+	job_access_type = /datum/job/commsofficer
+	icon_state = "adminlvl4"
+	item_state = "Admin_ID"
+
 // MEDICAL CARDS
 
 /obj/item/weapon/card/id/emt

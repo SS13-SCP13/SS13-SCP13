@@ -532,3 +532,12 @@
 	name = "unathi suit"
 	desc = "A Unathi suit made out of rubber."
 	icon_state = "lizsuit"
+
+// Service
+
+/obj/item/clothing/suit/storage/foundation_coat
+	name = "service coat"
+	desc = "A dark grey, light coat. It seems made to fit the Uniform that accompanies it. This one seems to have purple insignia on the biceps."
+	icon_state = "service_co_coat"
+	item_state = "service_co_coat_om"
+	body_parts_covered = UPPER_TORSO|ARMS

@@ -725,3 +725,10 @@ ranks - marines
 	name = "ranks (O-10 commandant of the Marine Corps)"
 	desc = "Insignia denoting the rank of Commandant of the Marine Corps."
 
+// Gloves
+
+/obj/item/clothing/gloves/foundation_service
+	name = "service gloves"
+	desc = "A pair of dark grey Foundation gloves, with soft padding to make them comfortable to wear."
+	icon_state = "co_gloves"
+	item_state = "G_Gloves_OM"

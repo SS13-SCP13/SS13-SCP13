@@ -335,3 +335,9 @@
 	icon = 'maps/torch/icons/obj/solgov-head.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/solgov-head.dmi')
 	starting_accessories = null
+
+/obj/item/clothing/head/solgov/service/site53
+	name = "service cap"
+	desc = "A grey garrison cap, with the SCP Foundation logo in the interior. A purple insignia is on it's crest."
+	icon_state = "service_co_cap"
+	item_state = "service_co_cap_om"

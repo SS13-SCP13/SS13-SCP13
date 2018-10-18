@@ -1,0 +1,10 @@
+author: Rhicora
+delete-after: True
+changes: 
+  - rscadd: "Added distinct access for all comms channels, allowing IDs to be set up with custom comms access."
+  - rscadd: "Added back the Comms Officer and the Comms Technician, currently 0 slots."
+  - tweak: "Uncordoned the Communications Tower."
+  - tweak: "Gave Comms personnel lots of channels but little physical access."
+  - tweak: "SD no longer gets department channels, that is for the Tower or department head to coordinate."
+  - bugfix: "Shortwaves will now work on departmental channels in our new access system."
+  - bugfix: "Traitor roles will use their protected jobs list - SD, RD, etc. will stop going rogue."
