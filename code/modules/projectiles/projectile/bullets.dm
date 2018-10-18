@@ -147,15 +147,15 @@
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
 	damage = 1.5 //10mm rubber
 	armor_penetration = 12
-	agony = 57
+	agony = 35
 	embed = 0
 	sharp = 0
 
 /obj/item/projectile/bullet/pistol/medium/smg/hollowpoint
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
-	damage = 46 //10mm hollowpoint
+	damage = 24 //10mm hollowpoint
 	armor_penetration = 8
-	agony = 35
+	agony = 25
 
 /obj/item/projectile/bullet/pistol/medium/smg/ap
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
