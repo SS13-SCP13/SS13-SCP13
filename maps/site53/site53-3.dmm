@@ -631,7 +631,7 @@
 "mg" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/glass/civilian{name = "Tram Hub"},/turf/simulated/floor/tiled/monofloor{icon_state = "steel_monofloor"; dir = 8},/area/site53/surface/tramhubhallwayentry)
 "mh" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/glass/civilian{name = "Tram Hub"},/turf/simulated/floor/tiled/monofloor{icon_state = "steel_monofloor"; dir = 4},/area/site53/surface/tramhubhallwayentry)
 "mi" = (/obj/structure/bed/chair,/turf/simulated/floor/tiled/monotile,/area/site53/surface/tramhubhallwayentry)
-"mj" = (/obj/structure/closet/crate/bin{anchored = 1; name = "trash bin"},/turf/simulated/floor/tiled/monotile,/area/site53/surface/tramhubhallwayentry)
+"mj" = (/obj/structure/closet/crate/bin{anchored = 1; name = "trash bin"},/obj/effect/landmark{name = "scp420j"},/turf/simulated/floor/tiled/monotile,/area/site53/surface/tramhubhallwayentry)
 "mk" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_x = -12; pixel_y = 0},/obj/effect/floor_decal/corner/red/border{icon_state = "bordercolor"; dir = 8},/turf/simulated/floor/tiled/monotile,/area/site53/entrancezone/hallway)
 "ml" = (/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 1},/turf/simulated/floor/tiled/monotile,/area/site53/surface/tramhubhallwayentry)
 "mm" = (/obj/machinery/light,/obj/structure/bed/chair{icon_state = "chair_preview"; dir = 1},/turf/simulated/floor/tiled/monotile,/area/site53/surface/tramhubhallwayentry)
