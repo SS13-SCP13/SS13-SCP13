@@ -106,3 +106,12 @@
 	icon_closed = "labcoat_xy"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 20, rad = 0)
 	species_restricted = list(SPECIES_IPC)
+
+/obj/item/clothing/suit/storage/toggle/labcoat/rd2
+	name = "scientist labcoat"
+	desc = "A full-body labcoat. It has a small Foundation logo on the front."
+	icon_state = "labcoat_rd2_open"
+	icon_open = "labcoat_rd2_open"
+	icon_closed = "labcoat_rd2"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	

@@ -222,10 +222,14 @@
 			dismantle_verb = "slicing"
 			cut_delay *= 0.5
 		else if(istype(W,/obj/item/weapon/pickaxe))
-			var/obj/item/weapon/pickaxe/P = W
-			dismantle_verb = P.drill_verb
-			dismantle_sound = P.drill_sound
-			cut_delay -= P.digspeed
+			if (material.integrity < 500)
+				var/obj/item/weapon/pickaxe/P = W
+				dismantle_verb = P.drill_verb
+				dismantle_sound = P.drill_sound
+				cut_delay -= P.digspeed
+			else 
+				to_chat(usr, "<span class='notice'>You can't penetrate this material.</span>")
+				return
 
 		if(dismantle_verb)
 

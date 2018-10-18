@@ -24,7 +24,7 @@ var/datum/antagonist/loyalists/loyalists
 	faction_verb = /mob/living/proc/convert_to_loyalist
 	faction_indicator = "hudloyalist"
 	faction_invisible = 1
-	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg)
+	blacklisted_jobs = list(/datum/job/ai)
 
 	faction = "loyalist"
 

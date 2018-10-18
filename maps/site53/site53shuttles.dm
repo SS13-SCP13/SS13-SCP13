@@ -194,6 +194,7 @@
 	name = "Engineering Department"
 	landmark_tag = "nav_engineering_out"
 	base_turf = /turf/simulated/floor/reinforced
+	base_area = /area/site53/engineering/primaryhallway
 
 /obj/effect/shuttle_landmark/engineering/internim
 	name = "In transit"
@@ -227,6 +228,7 @@
 	waypoint_station = "nav_hcz_start"
 	waypoint_offsite = "nav_hcz_out"
 
+
 /obj/effect/shuttle_landmark/hcz/start
 	name = "Tram Hub"
 	landmark_tag = "nav_hcz_start"
@@ -236,6 +238,7 @@
 	name = "Heavy Containment Zone"
 	landmark_tag = "nav_hcz_out"
 	base_turf = /turf/simulated/floor/reinforced
+	base_area = /area/site53/uhcz/tramstation
 
 /datum/shuttle/autodock/ferry/lcz
 	name = "Light Containment Tram"
@@ -243,6 +246,7 @@
 	shuttle_area = list(/area/site53/tram/lcz)
 	waypoint_station = "nav_lcz_start"
 	waypoint_offsite = "nav_lcz_out"
+
 
 /obj/effect/shuttle_landmark/lcz/start
 	name = "Tram Hub"
@@ -253,6 +257,7 @@
 	name = "Light Containment Zone"
 	landmark_tag = "nav_lcz_out"
 	base_turf = /turf/simulated/floor/reinforced
+	base_area = /area/site53/ulcz/tram
 
 /datum/shuttle/autodock/multi/antag/rescue
 	name = "Rescue"
@@ -339,3 +344,24 @@
 /obj/effect/shuttle_landmark/merc/deck1
 	name = "Site53"
 	landmark_tag = "nav_merc_deck1"
+	base_area = /area/site53/surface/surface
+
+//
+
+/datum/shuttle/autodock/ferry/supply/drone
+	name = "Supply Drone"
+	location = 1
+	warmup_time = 10
+	shuttle_area = /area/supply/dock
+	waypoint_offsite = "nav_cargo_start"
+	waypoint_station = "nav_cargo_station"
+
+/obj/effect/shuttle_landmark/supply/centcom
+	name = "Offsite"
+	landmark_tag = "nav_cargo_start"
+
+/obj/effect/shuttle_landmark/supply/station
+	name = "Landing Pad"
+	landmark_tag = "nav_cargo_station"
+	base_area = /area/site53/logistics/logistics
+	base_turf = /turf/simulated/floor/tiled/monotile

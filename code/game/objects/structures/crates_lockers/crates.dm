@@ -91,6 +91,36 @@ obj/structure/closet/crate
 	else
 		overlays += greenlight
 
+/obj/structure/closet/crate/securecryo
+	desc = "A secure crate."
+	name = "Secure crate"
+	icon_state = "securecrate"
+	icon_opened = "securecrateopen"
+	icon_closed = "securecrate"
+	var/redlight = "securecrater"
+	var/greenlight = "securecrateg"
+	var/sparks = "securecratesparks"
+	var/emag = "securecrateemag"
+
+	setup = CLOSET_HAS_LOCK
+	locked = TRUE
+
+/obj/structure/closet/crate/securecryo/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/structure/closet/crate/securecryo/update_icon()
+	..()
+	if(broken)
+		overlays += emag
+	else if(locked)
+		overlays += redlight
+	else
+		overlays += greenlight
+
+	storage_capacity = 999 * MOB_LARGE
+	storage_types = CLOSET_STORAGE_ITEMS|CLOSET_STORAGE_STRUCTURES
+
 /obj/structure/closet/crate/plastic
 	name = "plastic crate"
 	desc = "A rectangular plastic crate."

@@ -152,7 +152,7 @@
 		/obj/item/weapon/storage/ore,
 		/obj/item/device/flashlight/lantern,
 		/obj/item/weapon/shovel,
-		/obj/item/weapon/pickaxe,
+		/obj/item/weapon/pickaxe/silver,
 		/obj/item/clothing/glasses/meson,
 		/obj/item/device/measuring_tape,
 		/obj/item/weapon/storage/bag/fossils,

@@ -7,7 +7,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Virus sample crate"
-	access = access_cmo
+	access = access_medicalviro
 
 /decl/hierarchy/supply_pack/science/coolanttank
 	name = "Coolant tank crate"
@@ -24,7 +24,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper APLU \"Ripley\" Circuit Crate"
-	access = access_robotics
+	access = access_sciencelvl2
 
 /decl/hierarchy/supply_pack/science/mecha_odysseus
 	name = "Circuit Crate (\"Odysseus\")"
@@ -33,7 +33,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper \"Odysseus\" Circuit Crate"
-	access = access_robotics
+	access = access_sciencelvl2
 
 /decl/hierarchy/supply_pack/science/phoron
 	name = "Phoron assembly crate"
@@ -44,4 +44,4 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/phoron
 	containername = "\improper Phoron assembly crate"
-	access = access_tox_storage
+	access = access_sciencelvl3

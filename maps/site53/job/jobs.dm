@@ -12,7 +12,9 @@
 	supervisors = "Foundation Personnel"
 	selection_color = "#E55700"
 	economic_modifier = 1
-	duties = "<big><b>As a Class D, your first and foremost task is to be tested upon. This is usually done by order of a Scientist.<br> As Class D you can request several available jobs to kill time at the appropriate area.<br> <span style = 'color:red'>REMEMBER!</span> Rioting as Class D has been prohibited without staff approval, under rule 15.<br>IMPORTANT! Do not try to break out of your cell at game start. You will break your only way out!</span>"
+	total_positions = 15
+	spawn_positions = 15
+	duties = "<big><b>As a Class D Foundation Employee, you are most likely a former convict who faced a life sentence or the death penalty. You are extremely grateful to have been offered the chance to participate in the Foundation's rapid rehabilitation program, at a facility which aims to release you into the free world in just 30 days.<br> Find a way to show you're ready to re-integrate into society: work in mining, botany, the kitchens, or volunteer yourself as a participant in scientific studies.<br> <span style = 'color:red'>REMEMBER!</span> Rioting as Class D has been prohibited without staff approval, under rule 15. <br>IMPORTANT! Do not try to break out of your cell at game start. You will break your only way out!</span>"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
@@ -114,11 +116,8 @@
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/commsofficer
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(
-	/datum/mil_rank/security/w1,
-	/datum/mil_rank/security/w2,
-	/datum/mil_rank/security/w3,
-	/datum/mil_rank/security/w4,
-	/datum/mil_rank/security/w5
+	/datum/mil_rank/security/w5,
+	/datum/mil_rank/security/w6
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -148,14 +147,13 @@
 	alt_titles = list(
 		"Communications Programmer"
 		)
-//	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
-//	allowed_branches = list(
-//		/datum/mil_branch/security
-//	)
-//	allowed_ranks = list(
-//		/datum/mil_rank/security/e5,
-//		/datum/mil_rank/security/e6
-//	)
+	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/w1
+	)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
@@ -167,7 +165,7 @@
 */
 
 // CELLS
-
+/* CANDIDATE FOR REMOVAL
 /datum/job/cellguardlieutenant
 	has_email = TRUE
 	title = "Cell Warden"
@@ -230,19 +228,19 @@
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
 	minimal_access = list()
-
+*/
 // SECURITY
 /datum/job/hos
 	has_email = TRUE
 	title = "Guard Commander"
 	supervisors = "The Facility Director"
-	department = "Security"
+	department = "Command"
 	department_flag = SEC|COM
 	duties = "<big><b>As the Guard Commander, you have direct say over the Security department. You're not assigned to any zone, but instead should jump in where necessary or requested. You are to speak with your Zone Commanders oftenly, and assign new guards to the right zone, or where it's needed mostly.</span>"
 	economic_modifier = 8
 	minimal_player_age = 15
 	ideal_character_age = 55
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
+//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -258,26 +256,58 @@
 
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4, access_keyauth)
 	minimal_access = list()
+//##
+//ZONE COMMANDERS
+//##
 
-/datum/job/ltofficer
+// COMMENT FOR LATER THIS WEEK, OUTFITS NEED TO BE RE-CODED. ~Lion. 09-10-18
+
+/datum/job/ltofficerlcz
 	has_email = TRUE
-	title = "Zone Commander"
-	department = "Security"
+	title = "LCZ Zone Commander"
+	department = "Light Containment Personnel"
 	department_flag = SEC
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the Guard Commander"
-	duties = "<big><b>As the Zone Commander, you're the right hand of the Guard Commander, and in charge of a specific zone. In this zone, you have full command of the guards stationed there in every situation, except Code Red or higher. You should ask the Guard Commander which zone you're assigned to, if you joined later in the round. You won't have command over the Cell Guards or Warden.</span>"
+	duties = "<big><b>As the Zone Commander, you're the right hand of the Guard Commander, and in charge of a specific zone. In this zone, you have full command of the guards stationed there in every situation, except Code Red or higher. You also carry the responsibility of guarding the D-Cells. You should not leave your zone under usual SoP</span>"
 	economic_modifier = 4
 	minimal_player_age = 10
 	ideal_character_age = 45
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficer
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficerlcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/o1,
+		/datum/mil_rank/security/o1
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
+		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	minimal_access = list()
+
+/datum/job/ltofficerhcz
+	has_email = TRUE
+	title = "HCZ Zone Commander"
+	department = "Heavy Containment Personnel"
+	department_flag = SEC
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Guard Commander"
+	duties = "<big><b>As the Zone Commander, you're the right hand of the Guard Commander, and in charge of a specific zone. In this zone, you have full command of the guards stationed there in every situation, except Code Red or higher. You should not leave your zone under usual SoP</span>"
+	economic_modifier = 4
+	minimal_player_age = 10
+	ideal_character_age = 45
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficerhcz
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
 		/datum/mil_rank/security/o2
 	)
 	equip(var/mob/living/carbon/human/H)
@@ -288,20 +318,83 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 
-/datum/job/ncoofficer
+/datum/job/ltofficerez
 	has_email = TRUE
-	title = "Guard"
-	department = "Security"
+	title = "EZ Senior Agent"
+	department = "Entrance Personnel"
 	department_flag = SEC
-	total_positions = 6
-	spawn_positions = 6
-	duties = "<big><b>As the Guard you have more access than a Junior Guard, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the O5 Council"
+	duties = "<big><b>As the Entrance Zone Senior Agent, you and your team work independently from the guard commander and regular security structure. In this zone, you are tasked with the protection of administrative personnel, together with the agents stationed here. You should not leave your zone under usual SoP, or allow administration to go without protection detail into the facility.</span>"
+	economic_modifier = 4
+	minimal_player_age = 10
+	ideal_character_age = 45
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficerez
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/w5
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
+		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4)
+	minimal_access = list()
+
+//##
+// OFFICERS
+//##
+
+/datum/job/ncoofficerlcz
+	has_email = TRUE
+	title = "LCZ Guard"
+	department = "Light Containment Personnel"
+	department_flag = SEC
+	total_positions = 4
+	spawn_positions = 4
+	duties = "<big><b>As the Guard you have more access than a Junior Guard, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. You also have the duty of guarding the D-Class Cell Blocks. You should not leave your zone under usual SoP."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
 	minimal_player_age = 5
-	ideal_character_age = 30
+	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficer
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficerlcz
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e2,
+		/datum/mil_rank/security/e3,
+		/datum/mil_rank/security/e4,
+		/datum/mil_rank/security/e5
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
+		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_mtflvl1, access_mtflvl2, access_sciencelvl1, access_sciencelvl2)
+	minimal_access = list()
+
+/datum/job/ncoofficerhcz
+	has_email = TRUE
+	title = "HCZ Guard"
+	department = "Heavy Containment Personnel"
+	department_flag = SEC
+	total_positions = 3
+	spawn_positions = 3
+	duties = "<big><b>As the Guard you have more access than a Junior Guard, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. You also have the duty of guarding the D-Class Cell Blocks. You should not leave your zone under usual SoP."
+	supervisors = "the Guard/Zone Commander"
+	economic_modifier = 4
+	minimal_player_age = 5
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficerhcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -318,20 +411,53 @@
 	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
-/datum/job/enlistedofficer
+/datum/job/ncoofficerez
 	has_email = TRUE
-	title = "Junior Guard"
-	department = "Security"
+	title = "EZ Agent"
+	department = "Entrance Zone Personnel"
 	department_flag = SEC
-	total_positions = 8
-	spawn_positions = 8
-	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. If you joined post-round start, you should ask the Guard Commander where to go immediately."
+	total_positions = 2
+	spawn_positions = 2
+	duties = "<big><b>As the Agent you have more access than a Junior Agent, but do not control them. You are to guard tests and SCP's in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. You also have the duty of guarding the D-Class Cell Blocks. You should not leave your zone under usual SoP."
+	supervisors = "the Senior Agent"
+	economic_modifier = 4
+	minimal_player_age = 5
+	ideal_character_age = 30
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficerez
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
+		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_adminlvl1, access_adminlvl2, access_adminlvl3)
+	minimal_access = list()
+
+//##
+//JUNIOR OFFICER
+//##
+
+/datum/job/enlistedofficerlcz
+	has_email = TRUE
+	title = "LCZ Junior Guard"
+	department = "Light Containment Personnel"
+	department_flag = SEC
+	total_positions = 10
+	spawn_positions = 10
+	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. You also have the duty of guarding the D-Class Cell Blocks. You should not leave your zone under usual SoP."
 	supervisors = "the Guard/Zone Commander"
 	economic_modifier = 4
-	minimal_player_age = 0
+//	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficer
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficerlcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -345,6 +471,64 @@
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(access_mtflvl1, access_sciencelvl1)
+	minimal_access = list()
+
+/datum/job/enlistedofficerhcz
+	has_email = TRUE
+	title = "HCZ Junior Guard"
+	department = "Heavy Containment Personnel"
+	department_flag = SEC
+	total_positions = 2
+	spawn_positions = 2
+	duties = "<big><b>As the Junior Guard you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. You should not leave your zone under usual SoP."
+	supervisors = "the Guard/Zone Commander"
+	economic_modifier = 4
+//	minimal_player_age = 0
+	ideal_character_age = 25
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficerhcz
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e3,
+		/datum/mil_rank/security/e4
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
+		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	minimal_access = list()
+
+/datum/job/enlistedofficerez
+	has_email = TRUE
+	title = "EZ Junior Agent"
+	department = "Entrance Personnel"
+	department_flag = SEC
+	total_positions = 2
+	spawn_positions = 2
+	duties = "<big><b>As the Junior Agent you have minimal access. You are to guard tests, SCP's and provide support in the zone you spawned in. If in doubt, ask your Zone or Guard Commander. You should not leave your zone under usual SoP."
+	supervisors = "the Senior Agent"
+	economic_modifier = 4
+	minimal_player_age = 0
+	ideal_character_age = 27
+	alt_titles = null
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficerez
+	allowed_branches = list(
+		/datum/mil_branch/security
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/security/e4,
+		/datum/mil_rank/security/e5
+	)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
+		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list(access_mtflvl1, access_mtflvl2, access_adminlvl1, access_adminlvl2)
 	minimal_access = list()
 
 // SCIENCE
@@ -475,7 +659,8 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e4
+		/datum/mil_rank/security/e1,
+		/datum/mil_rank/security/e2
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -506,8 +691,9 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e5,
-		/datum/mil_rank/security/e6
+		/datum/mil_rank/security/e3,
+		/datum/mil_rank/security/e4,
+		/datum/mil_rank/security/e5
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -538,9 +724,9 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
+		/datum/mil_rank/security/e6,
 		/datum/mil_rank/security/e7,
-		/datum/mil_rank/security/e8,
-		/datum/mil_rank/security/e9
+		/datum/mil_rank/security/e8
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -565,11 +751,10 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/security/w1,
+		/datum/mil_rank/security/e9,
 		/datum/mil_rank/security/w2,
 		/datum/mil_rank/security/w3,
-		/datum/mil_rank/security/w4,
-		/datum/mil_rank/security/w5
+		/datum/mil_rank/security/w4
 	)
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -592,13 +777,16 @@
 	minimal_player_age = 15
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
 	allowed_branches = list(/datum/mil_branch/security)
-	allowed_ranks = list(/datum/mil_rank/security/o1, /datum/mil_rank/security/o2)
+	allowed_ranks = list(
+	/datum/mil_rank/security/o2,
+	/datum/mil_rank/security/o3
+	)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(80,100)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_keyauth)
+	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4, access_keyauth)
 	minimal_access = list()
 
 // MEDICAL JOBS.
@@ -613,7 +801,11 @@
 	alt_titles = list("Medical Director")
 	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/cmo
 	allowed_branches = list(/datum/mil_branch/security)
-	allowed_ranks = list(/datum/mil_rank/security/o3, /datum/mil_rank/security/o4)
+	allowed_ranks = list(
+	/datum/mil_rank/security/o3,
+	/datum/mil_rank/security/o4,
+	/datum/mil_rank/security/o5
+	)
 
 	access = list(access_medicalgen, access_medicalequip, access_medicalviro, access_medicalchem, access_s53cmo, access_keyauth, access_mtflvl1)
 	minimal_access = list()
@@ -637,10 +829,9 @@
 	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/chemist
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(
-		/datum/mil_rank/security/o1,
-		/datum/mil_rank/security/o2)
+		/datum/mil_rank/security/o1)
 
-	access = list(access_medicalgen, access_medicalchem)
+	access = list(access_medicalgen, access_medicalchem, access_medicalequip)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -669,7 +860,7 @@
 		H.add_stats(rand(1,3), rand(3,5), rand(25,30))
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
-	access = list(access_medicalgen, access_medicalpsych)
+	access = list(access_medicalgen, access_medicalpsych, access_medicalequip)
 	minimal_access = list()
 
 /datum/job/medicaldoctor
@@ -741,7 +932,6 @@
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
-		/datum/mil_rank/security/o1,
 		/datum/mil_rank/security/o2)
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -762,19 +952,24 @@
 	spawn_positions = 2
 	ideal_character_age = 40
 	economic_modifier = 5
+	duties = "<big><b>As the EMT it is your job to man the medical post near the Class D cell block, and treat any injuries there of the guards or Class D's. You only have limited supplies, so it's best to make them count."
 	supervisors = "the Chief Medical Officer"
 	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/emt
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
-		/datum/mil_rank/security/e3)
+		/datum/mil_rank/security/e2,
+		/datum/mil_rank/security/e3,
+		/datum/mil_rank/security/e4,
+		/datum/mil_rank/security/e5
+		)
 	equip(var/mob/living/carbon/human/H)
 		..()
 		H.add_stats(rand(3,6), rand(7,10), rand(20,25))
 		H.add_skills(rand(10,25), rand(10,25), rand(50,70), rand(5,10))
 
 
-	access = list(access_medicalgen, access_medicalequip)
+	access = list(access_medicalgen, access_medicalequip, access_mtflvl1)
 	minimal_access = list()
 
 
@@ -785,9 +980,9 @@
 	title = "Logistics Officer"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 0
-	spawn_positions = 0
-	supervisors = "the Security Commander"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Site Director"
 	selection_color = "#515151"
 	economic_modifier = 5
 	minimal_player_age = 7
@@ -797,11 +992,14 @@
 		/datum/mil_branch/security,
 	)
 	allowed_ranks = list(
+		/datum/mil_rank/security/e7,
+		/datum/mil_rank/security/e8,
+		/datum/mil_rank/security/e9,
 		/datum/mil_rank/security/w1
 
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
+	access = list(access_logofficer, access_logistics)
 	minimal_access = list()
 
 
@@ -810,8 +1008,8 @@
 	title = "Logistics Specialist"
 	department = "Logistics"
 	department_flag = SUP
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	selection_color = "B4802B"
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
@@ -821,10 +1019,15 @@
 		/datum/mil_branch/security
 	)
 	allowed_ranks = list(
-	/datum/mil_rank/security/e3
+	/datum/mil_rank/security/e1,
+	/datum/mil_rank/security/e2,
+	/datum/mil_rank/security/e3,
+	/datum/mil_rank/security/e4,
+	/datum/mil_rank/security/e5,
+	/datum/mil_rank/security/e6
 	)
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_logistics)
 	minimal_access = list()
 
 // MISC JOBS
@@ -847,7 +1050,7 @@
 	/datum/mil_rank/civ/classd
 	)
 
-	access = list(access_sciencelvl1)
+	access = list(access_sciencelvl1, access_dclassjanitorial) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -877,7 +1080,7 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_s53bar, access_s53kitchen)
+	access = list(access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany)// Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 
 /datum/job/bartender
@@ -903,7 +1106,7 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_s53bar, access_s53kitchen)
+	access = list(access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 
 /datum/job/archivist

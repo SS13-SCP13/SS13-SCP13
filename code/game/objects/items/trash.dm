@@ -11,6 +11,14 @@
 	name = "\improper 4no raisins"
 	icon_state = "4no_raisins"
 
+/obj/item/trash/lionbar
+	name = "\improper lion bar"
+	icon_state = "lionbar"
+
+/obj/item/trash/lionbarlegacy
+	name = "\improper old lion bar"
+	icon_state = "lionbarlegacy"
+
 /obj/item/trash/candy
 	name = "candy"
 	icon_state = "candy"
