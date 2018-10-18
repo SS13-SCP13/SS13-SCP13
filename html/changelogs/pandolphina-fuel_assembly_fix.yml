@@ -1,0 +1,5 @@
+author: Pandolphina
+delete-after: True
+
+changes: 
+  - tweak: Renames assembly crate to fuel assembly crate, renames Phoron Tank to Fuel Tank

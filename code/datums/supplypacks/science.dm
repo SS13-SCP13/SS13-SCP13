@@ -17,12 +17,12 @@
 	containername = "\improper coolant tank crate"
 
 /decl/hierarchy/supply_pack/science/phoron
-	name = "Assembly crate"
+	name = "Fuel assembly crate"
 	contains = list(/obj/item/weapon/tank/phoron = 3,
 					/obj/item/device/assembly/igniter = 3,
 					/obj/item/device/assembly/prox_sensor = 3,
 					/obj/item/device/assembly/timer = 3)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/phoron
-	containername = "\improper Assembly crate"
+	containername = "\improper Fuel assembly crate"
 	access = access_sciencelvl3
