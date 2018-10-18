@@ -13,6 +13,7 @@
 #define LIGHTING_POWER_FACTOR 5		//5W per luminosity * range
 
 
+#define LIGHTMODE_EMERGENCY_BRIGHT "emergency_lighting_bright"
 #define LIGHTMODE_EMERGENCY "emergency_lighting"
 #define LIGHTMODE_READY "ready"
 
@@ -148,6 +149,7 @@
 
 	var/on = 0					// 1 if on, 0 if off
 	var/flickering = 0
+	var/defective = 0
 	var/light_type = /obj/item/weapon/light/tube		// the type of light item
 	var/construct_type = /obj/machinery/light_construct
 
@@ -190,6 +192,8 @@
 		lightbulb = new light_type(src)
 		if(prob(lightbulb.broken_chance))
 			broken(1)
+		if(prob(lightbulb.defective_chance))
+			cause_defect()
 
 	on = powered()
 	update_icon(0)
@@ -276,11 +280,11 @@
 
 /obj/machinery/light/proc/set_emergency_lighting(var/enable)
 	if(enable)
-		if(LIGHTMODE_EMERGENCY in lightbulb.lighting_modes)
-			set_mode(LIGHTMODE_EMERGENCY)
+		if(LIGHTMODE_EMERGENCY_BRIGHT in lightbulb.lighting_modes)
+			set_mode(LIGHTMODE_EMERGENCY_BRIGHT)
 			power_channel = ENVIRON
 	else
-		if(current_mode == LIGHTMODE_EMERGENCY)
+		if(current_mode == LIGHTMODE_EMERGENCY_BRIGHT)
 			set_mode(null)
 			power_channel = initial(power_channel)
 
@@ -489,6 +493,22 @@
 	on = 1
 	update_icon()
 
+/obj/machinery/light/proc/cause_defect()
+	// Defective lights flicker randomly, there's a small chance this will be called on any given light
+	if(!src)
+		return
+
+	src.defective = 1
+	while (src.defective == 1)
+		if(!src)
+			break
+		src.flicker(rand(1,5))
+		sleep(rand(10,300)) // Don't constantly flicker, wait a bit
+
+
+/obj/machinery/light/proc/fix_defect()
+	src.defective = 0
+
 // explosion effect
 // destroy the whole light fixture or just shatter it
 
@@ -544,6 +564,7 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
 	var/rigged = 0		// true if rigged to explode
 	var/broken_chance = 2
+	var/defective_chance = 3
 
 	var/brightness_range = 2 //how much light it gives off
 	var/brightness_power = 1
@@ -552,7 +573,7 @@
 	var/sound_on
 
 /obj/item/weapon/light/tube
-	name = "light tube"
+	name = "incandescent light tube"
 	desc = "A replacement light tube."
 	icon_state = "ltube"
 	base_state = "ltube"
@@ -560,21 +581,36 @@
 	matter = list("glass" = 100)
 
 	brightness_range = 7	// luminosity when on, also used in power calculation
-	brightness_power = 6
-	brightness_color = "#fffee0"
+	brightness_power = 5
+	brightness_color = "#f9e8a9" // White: fffee0
 	lighting_modes = list(
 		LIGHTMODE_EMERGENCY = list(l_range = 4, l_power = 1, l_color = "#da0205"),
+		LIGHTMODE_EMERGENCY_BRIGHT = list(l_range = 5, l_power = 3, l_color = "#ea492c")
 		)
 	sound_on = 'sound/machines/lightson.ogg'
 
+
+/obj/item/weapon/light/tube/old
+	defective_chance = 50
+
+/obj/item/weapon/light/tube/defective
+	defective_chance = 100
+
 /obj/item/weapon/light/tube/large
 	w_class = ITEM_SIZE_SMALL
-	name = "large light tube"
+	name = "large incandescent light tube"
 	brightness_range = 9
-	brightness_power = 6
+	brightness_power = 5
+
+/obj/item/weapon/light/tube/large/fluorescent
+	w_class = ITEM_SIZE_SMALL
+	name = "fluorescent light tube"
+	brightness_range = 9
+	brightness_power = 4
+	brightness_color = "#fffee0"
 
 /obj/item/weapon/light/bulb
-	name = "light bulb"
+	name = "incandescent light bulb"
 	desc = "A replacement light bulb."
 	icon_state = "lbulb"
 	base_state = "lbulb"
@@ -583,10 +619,11 @@
 	matter = list("glass" = 100)
 
 	brightness_range = 4
-	brightness_power = 4
+	brightness_power = 3
 	brightness_color = "#a0a080"
 	lighting_modes = list(
 		LIGHTMODE_EMERGENCY = list(l_range = 3, l_power = 1, l_color = "#da0205"),
+		LIGHTMODE_EMERGENCY_BRIGHT = list(l_range = 4, l_power = 3, l_color = "#ea492c")
 		)
 
 /obj/item/weapon/light/bulb/red
@@ -597,7 +634,8 @@
 	brightness_range = 5
 	brightness_power = 2
 	lighting_modes = list(
-		LIGHTMODE_READY = list(l_range = 5, l_power = 1, l_color = "#00ff00"),
+		LIGHTMODE_READY = list(l_range = 5, l_power = 1, l_color = "#00ff00"),,
+		LIGHTMODE_EMERGENCY_BRIGHT = list(l_range = 5, l_power = 2, l_color = "#ea492c")
 		)
 
 /obj/item/weapon/light/throw_impact(atom/hit_atom)
