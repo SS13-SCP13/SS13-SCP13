@@ -83,6 +83,13 @@
 	caliber = "10mm"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium/smg
 
+/obj/item/ammo_casing/rub10mm
+	desc = "A rubber 10mm bullet casing."
+	caliber = "10mm"
+	projectile_type = /obj/item/projectile/bullet/pistol/medium/smg/rubber
+	icon_state = "10mm-hollowpoint"
+	spent_icon = "r-casing-spent"
+
 /obj/item/ammo_casing/ap10mm
 	desc = "A armor piercing 10mm bullet casing."
 	caliber = "10mm"
