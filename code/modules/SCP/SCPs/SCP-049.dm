@@ -152,7 +152,7 @@ GLOBAL_LIST_EMPTY(scp049_1s)
 
 	if (!(target in orange(1, src)))
 		// moves slightly faster than humans
-		walk_to(src, target, 1, 0.9+config.run_speed)
+		walk_to(src, target, 1, -0.1+config.run_speed)
 		return TRUE
 
 	walk(src, null)
