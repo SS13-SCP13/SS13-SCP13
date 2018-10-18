@@ -27,11 +27,12 @@
 	uniform = /obj/item/clothing/under/scp/whiteuniform
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl4
-	l_pocket = /obj/item/device/radio
+	l_ear = /obj/item/device/radio/headset/heads/commsofficer
 
 /decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer
 	name = OUTFIT_JOB_NAME("Logistics Officer")
 	uniform = /obj/item/clothing/under/scp/whiteuniform
+	suit = /obj/item/clothing/suit/storage/foundation_coat
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/weapon/card/id/seclvl3
 	l_pocket = /obj/item/device/radio

@@ -63,6 +63,29 @@ GLOBAL_VAR(spawntypes)
 	..()
 	turfs = GLOB.latejoin_cryo
 
+/datum/spawnpoint/comms
+	display_name = "Comms Tower"
+	msg = "has started a shift in the Comms Tower"
+	restrict_job = list("Communications Officer", "Communications Technician")
+	disallow_job = list(
+	"Class D",
+	"Cell Guard",
+	"Chief Engineer",
+	"Senior Engineer",
+	"Containment Engineer",
+	"Junior Engineer",
+	"Engineer",
+	"Chief Medical Officer",
+	"Surgeon",
+	"Virologist",
+	"Medical Doctor",
+	"Chemist"
+	)
+
+/datum/spawnpoint/comms/New()
+	..()
+	turfs = GLOB.latejoin_comms
+
 /datum/spawnpoint/dclass
 	display_name = "D-Cells"
 	msg = "has been delivered to the Class D Area"

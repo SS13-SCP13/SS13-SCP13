@@ -36,7 +36,7 @@
 	shuttle_recall_message = "The work shift has been extended. Please return to your post."
 	emergency_shuttle_docked_message = "The emergency train is now boarding at the Train Station. Evacuation is mandatory for all Foundation personnel. It will depart in %ETD%."
 	emergency_shuttle_leaving_dock = "The emergency train is departing for Extraction Site 53-B and will arrive in %ETA%. Please cooperate with Responders upon arrival."
-	emergency_shuttle_called_message = "An emergency evacuation has been ordered for this facility. All authorized evacuees must proceed to the outbound Train Station within %ETA% minutes."
+	emergency_shuttle_called_message = "An emergency evacuation has been ordered for this facility. All authorized evacuees must proceed to the outbound Train Station within %ETA%."
 	emergency_shuttle_recall_message = "The emergency evacuation has been cancelled. Return to your post."
 
 	evac_controller_type = /datum/evacuation_controller/site

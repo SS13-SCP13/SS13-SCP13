@@ -143,16 +143,24 @@
 	armor_penetration = 20
 	agony = 31
 
+/obj/item/projectile/bullet/pistol/medium/smg/rubber
+	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
+	damage = 1.5 //10mm rubber
+	armor_penetration = 12
+	agony = 35
+	embed = 0
+	sharp = 0
+
 /obj/item/projectile/bullet/pistol/medium/smg/hollowpoint
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
-	damage = 34 //10mm hollowpoint
-	armor_penetration = 12
+	damage = 24 //10mm hollowpoint
+	armor_penetration = 8
 	agony = 25
 
 /obj/item/projectile/bullet/pistol/medium/smg/ap
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
 	damage = 26 //10mm AP
-	armor_penetration = 24
+	armor_penetration = 25
 	agony = 21
 
 /obj/item/projectile/bullet/pistol/medium/smg/silver

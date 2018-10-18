@@ -709,5 +709,3 @@
 	has_sensor = 0
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
-
-

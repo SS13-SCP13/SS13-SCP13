@@ -58,6 +58,7 @@
 		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
 
 	access = list(
+	access_com_comms, // SD and HoP do not want to hear all the details, either meet your Commander in person or talk to the Tower
 	access_adminlvl5,
 	access_adminlvl4,
 	access_adminlvl3,
@@ -91,6 +92,8 @@
 
 
 	access = list(
+	access_com_comms,
+	access_civ_comms,
 	access_adminlvl4,
 	access_adminlvl3,
 	access_adminlvl2,
@@ -104,12 +107,12 @@
 /datum/job/commsofficer
 	has_email = TRUE
 	title = "Communications Officer"
-	supervisors = "the Security Commander"
+	supervisors = "the Guard Commander"
 	department = "Command"
 	department_flag = COM
-	total_positions = 0
-	spawn_positions = 0
-	duties = "<big><b>As the Communications Officer it is your job to maintain long-range communications, monitor the happenings on the Telecomms servers and assess situations by mere observation. Your job may entail being a dispatch center of the likes.<br>You should not ever leave your tower unless under specific circumstances."
+	total_positions = 1
+	spawn_positions = 1
+	duties = "<big><b>As the Communications Officer it is your job to monitor the radio, help coordinate departments, and dispatch help where it is needed. Keep sensitive communications off the Common channel.<br>You should not ever leave your tower unless under specific circumstances."
 	minimal_player_age = 15
 	economic_modifier = 10
 	ideal_character_age = 45
@@ -126,10 +129,20 @@
 
 
 	access = list(
-	access_mtflvl1,
-	access_mtflvl2,
-	access_mtflvl3,
-	access_mtflvl4
+	access_com_comms,
+	access_sci_comms,
+	access_civ_comms,
+	access_log_comms,
+	access_med_comms,
+	access_eng_comms,
+	access_sec_comms,
+	access_adminlvl4,
+	access_adminlvl3,
+	access_adminlvl2,
+	access_adminlvl1,
+	access_telecommsgen,
+	access_servers,
+	access_commtower
 	)
 	minimal_access = list()
 
@@ -137,17 +150,19 @@
 	has_email = TRUE
 	selection_color = "#5b4d20"
 	title = "Communications Technician"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
+	duties = "<big><b>As a member of the Communications team it is your job to maintain long-range comms, monitor the happenings on the Telecomms servers and assess situations by mere observation. Your job may entail being a dispatch center of the likes.<br>You should not ever leave your tower unless under specific circumstances."
 	department_flag = ENG
 	supervisors = "the Communications Officer"
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 30
 	alt_titles = list(
-		"Communications Programmer"
+		"Communications Programmer",
+		"Communications Dispatcher"
 		)
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/commstech
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -159,7 +174,18 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(50,60)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
+	access = list(
+	access_com_comms,
+	access_sci_comms,
+	access_civ_comms,
+	access_log_comms,
+	access_med_comms,
+	access_eng_comms,
+	access_sec_comms,
+	access_adminlvl1,
+	access_telecommsgen,
+	access_servers,
+	access_commtower)
 /*
 ## END OF GENERIC COMMAND ##
 */
@@ -254,7 +280,20 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(90,100), rand(90,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl5, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4, access_keyauth)
+	access = list(
+		access_com_comms,
+		access_sec_comms,
+		access_mtflvl1, 
+		access_mtflvl2, 
+		access_mtflvl3, 
+		access_mtflvl4, 
+		access_mtflvl5, 
+		access_sciencelvl1, 
+		access_sciencelvl2, 
+		access_sciencelvl3, 
+		access_sciencelvl4, 
+		access_keyauth
+	)
 	minimal_access = list()
 //##
 //ZONE COMMANDERS
@@ -287,7 +326,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
 /datum/job/ltofficerhcz
@@ -315,7 +354,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 
 /datum/job/ltofficerez
@@ -343,7 +382,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4)
 	minimal_access = list()
 
 //##
@@ -378,7 +417,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_sciencelvl1, access_sciencelvl2)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_sciencelvl1, access_sciencelvl2)
 	minimal_access = list()
 
 /datum/job/ncoofficerhcz
@@ -408,7 +447,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
 /datum/job/ncoofficerez
@@ -437,7 +476,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_adminlvl1, access_adminlvl2, access_adminlvl3)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_adminlvl1, access_adminlvl2, access_adminlvl3)
 	minimal_access = list()
 
 //##
@@ -470,7 +509,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_sciencelvl1)
+	access = list(access_sec_comms, access_mtflvl1, access_sciencelvl1)
 	minimal_access = list()
 
 /datum/job/enlistedofficerhcz
@@ -499,7 +538,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
 
 /datum/job/enlistedofficerez
@@ -528,7 +567,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_adminlvl1, access_adminlvl2)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_adminlvl1, access_adminlvl2)
 	minimal_access = list()
 
 // SCIENCE
@@ -555,7 +594,7 @@
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
-	access = list(access_sciencelvl1)
+	access = list(access_sci_comms, access_sciencelvl1)
 	minimal_access = list()
 
 /datum/job/scientist
@@ -580,7 +619,7 @@
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
-	access = list(access_sciencelvl1, access_sciencelvl2)
+	access = list(access_sci_comms, access_sciencelvl1, access_sciencelvl2)
 	minimal_access = list()
 
 /datum/job/seniorscientist
@@ -605,7 +644,7 @@
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
-	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list(access_sci_comms, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 
 /datum/job/rd
@@ -626,7 +665,10 @@
 		H.add_stats(rand(3,5), rand(3,5), rand(45,60)) // Str, Dex, Int.
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sciencelvl5,
+	access = list(
+	access_com_comms, 
+	access_sci_comms, 
+	access_sciencelvl5,
 	access_sciencelvl4,
 	access_sciencelvl3,
 	access_sciencelvl2,
@@ -667,7 +709,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(30,50)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2)
+	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 
 /datum/job/eng
@@ -700,7 +742,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(50,60)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3)
+	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3)
 	minimal_access = list()
 
 /datum/job/seneng
@@ -733,7 +775,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(60,70)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
 	minimal_access = list()
 
 /datum/job/conteng
@@ -761,7 +803,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(60,80)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
 	minimal_access = list()
 
 
@@ -786,7 +828,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(80,100)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4, access_keyauth)
+	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4, access_keyauth)
 	minimal_access = list()
 
 // MEDICAL JOBS.
@@ -807,7 +849,7 @@
 	/datum/mil_rank/security/o5
 	)
 
-	access = list(access_medicalgen, access_medicalequip, access_medicalviro, access_medicalchem, access_s53cmo, access_keyauth, access_mtflvl1)
+	access = list(access_com_comms, access_med_comms, access_medicalgen, access_medicalequip, access_medicalviro, access_medicalchem, access_s53cmo, access_keyauth, access_mtflvl1)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -831,7 +873,7 @@
 	allowed_ranks = list(
 		/datum/mil_rank/security/o1)
 
-	access = list(access_medicalgen, access_medicalchem, access_medicalequip)
+	access = list(access_med_comms, access_medicalgen, access_medicalchem, access_medicalequip)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -860,7 +902,7 @@
 		H.add_stats(rand(1,3), rand(3,5), rand(25,30))
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
-	access = list(access_medicalgen, access_medicalpsych, access_medicalequip)
+	access = list(access_med_comms, access_medicalgen, access_medicalpsych, access_medicalequip)
 	minimal_access = list()
 
 /datum/job/medicaldoctor
@@ -887,7 +929,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_medicalgen, access_medicalequip)
+	access = list(access_med_comms, access_medicalgen, access_medicalequip)
 	minimal_access = list()
 
 /datum/job/virologist
@@ -913,7 +955,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_medicalgen, access_medicalequip, access_medicalviro)
+	access = list(access_med_comms, access_medicalgen, access_medicalequip, access_medicalviro)
 	minimal_access = list()
 
 /datum/job/surgeon
@@ -939,7 +981,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_medicalgen, access_medicalequip)
+	access = list(access_med_comms, access_medicalgen, access_medicalequip)
 	minimal_access = list()
 
 /datum/job/emt
@@ -969,7 +1011,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(50,70), rand(5,10))
 
 
-	access = list(access_medicalgen, access_medicalequip, access_mtflvl1)
+	access = list(access_med_comms, access_medicalgen, access_medicalequip, access_mtflvl1)
 	minimal_access = list()
 
 
@@ -999,7 +1041,7 @@
 
 	)
 
-	access = list(access_logofficer, access_logistics)
+	access = list(access_log_comms, access_logofficer, access_logistics)
 	minimal_access = list()
 
 
@@ -1027,7 +1069,7 @@
 	/datum/mil_rank/security/e6
 	)
 
-	access = list(access_logistics)
+	access = list(access_log_comms, access_logistics)
 	minimal_access = list()
 
 // MISC JOBS
@@ -1050,7 +1092,7 @@
 	/datum/mil_rank/civ/classd
 	)
 
-	access = list(access_sciencelvl1, access_dclassjanitorial) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
+	access = list(access_civ_comms, access_sciencelvl1, access_dclassjanitorial) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -1079,8 +1121,7 @@
 		..()
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
-
-	access = list(access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany)// Limited internal D-Block access e.g. when training D-Class or unlocking their crates
+	access = list(access_civ_comms, access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany)// Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 
 /datum/job/bartender
@@ -1105,8 +1146,7 @@
 		..()
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
-
-	access = list(access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
+	access = list(access_civ_comms, access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 
 /datum/job/archivist
@@ -1135,7 +1175,7 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_archive)
+	access = list(access_civ_comms, access_archive)
 	minimal_access = list()
 
 /datum/job/o5rep
@@ -1164,5 +1204,5 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4, access_adminlvl5)
+	access = list(access_com_comms, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4, access_adminlvl5)
 	minimal_access = list()
