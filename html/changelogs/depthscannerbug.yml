@@ -1,0 +1,5 @@
+author: Memeopolis
+delete-after: True
+
+changes: 
+  - bugfix: "Made depth scanners update in real time."
