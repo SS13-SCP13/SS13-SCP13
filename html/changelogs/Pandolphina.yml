@@ -1,8 +1,0 @@
-author: Pandolphina
-delete-after: True
-
-changes: 
-  - rscadd: "Makes cargo crates work with access"
-  - rscadd: "Adds guard gear crate, SMG crate and pistol crate"
-  - rscdel: "Removes wizard/witch crates"
-  - tweak: "Removes Exosuit circuit crates, and spacesuits from emergency crate"
