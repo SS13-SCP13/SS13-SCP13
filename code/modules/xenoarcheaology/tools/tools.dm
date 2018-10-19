@@ -171,6 +171,13 @@
 
 			to_chat(user, "<span class='notice'>\icon[src] [src] pings [pick("madly","wildly","excitedly","crazily")]!</span>")
 
+	update_interaction_window(user)
+
+/obj/item/device/depth_scanner/proc/update_interaction_window(var/mob/living/user)
+	set waitfor = FALSE
+	if (winexists(user, "depth_scanner") != "" && winget(user, "depth_scanner", "is-visible") == "true")
+		interact(user)
+
 /obj/item/device/depth_scanner/attack_self(var/mob/living/user)
 	interact(user)
 
