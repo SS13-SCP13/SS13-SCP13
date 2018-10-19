@@ -142,6 +142,9 @@
 		else if(jitteriness >= 100)
 			msg += "<span class='warning'>[T.He] [T.is] twitching ever so slightly.</span>\n"
 
+	if (scp173_killed)
+		msg += "<span class='danger'>[T.His] neck is bent in an awkward angle.</span>\n"
+
 	//Disfigured face
 	if(!skipface) //Disfigurement only matters for the head currently.
 		var/obj/item/organ/external/head/E = get_organ(BP_HEAD)
