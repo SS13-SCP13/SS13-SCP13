@@ -1,0 +1,5 @@
+author: Memeopolis
+delete-after: True
+
+changes: 
+  - bugfix: "People who were admin-cryoed no longer show up in the Crew Manifest."
