@@ -314,6 +314,12 @@
 	base_name = "cup"
 	base_icon = "coffeecup"
 
+	/obj/item/weapon/reagent_containers/food/drinks/coffeecup/SCP
+		name = "Foundation coffee cup"
+		desc = "A white coffee cup with the foundation symbol emblazoned on the back."
+		icon_state = "coffeecup_SCP"
+		base_name = "SCP cup"
+
 /obj/item/weapon/reagent_containers/food/drinks/coffeecup/black
 	name = "black coffee cup"
 	desc = "A sleek black coffee cup."
