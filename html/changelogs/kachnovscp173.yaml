@@ -1,0 +1,6 @@
+author: Memeopolis
+delete-after: True
+
+changes: 
+  - bugfix: "People killed by SCP-173 no longer have a pulse."
+  - tweak: "Added a fluff message to people killed by SCP-173."

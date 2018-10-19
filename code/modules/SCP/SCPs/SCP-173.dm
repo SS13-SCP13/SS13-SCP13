@@ -81,6 +81,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 		visible_message("<span class='danger'>[src] snaps [H]'s neck!</span>")
 		playsound(loc, pick('sound/scp/spook/NeckSnap1.ogg', 'sound/scp/spook/NeckSnap3.ogg'), 50, 1)
 		H.death()
+		H.scp173_killed = TRUE
 
 /mob/living/scp_173/Life()
 	. = ..()
@@ -139,6 +140,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 			visible_message("<span class='danger'>[src] snaps [target]'s neck!</span>")
 			playsound(loc, pick('sound/scp/spook/NeckSnap1.ogg', 'sound/scp/spook/NeckSnap3.ogg'), 50, 1)
 			target.death()
+			target.scp173_killed = TRUE
 			last_snap = world.time
 
 /mob/living/scp_173/can_ventcrawl()
@@ -154,3 +156,9 @@ GLOBAL_LIST_EMPTY(scp173s)
 		last_player_shit = world.time
 		var/feces = pick(/obj/effect/decal/cleanable/blood, /obj/effect/decal/cleanable/blood/gibs, /obj/effect/decal/cleanable/mucus)
 		new feces(loc)
+
+// humans 
+/mob/living/carbon/human/set_stat(_new)
+	..(_new)
+	if (stat != DEAD)
+		scp173_killed = FALSE
