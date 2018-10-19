@@ -1,3 +1,4 @@
+GLOBAL_LIST_EMPTY(mob2crew_record)
 GLOBAL_LIST_EMPTY(all_crew_records)
 GLOBAL_LIST_INIT(blood_types, list("A-", "A+", "B-", "B+", "AB-", "AB+", "O-", "O+"))
 GLOBAL_LIST_INIT(physical_statuses, list("Active", "Disabled", "SSD", "Deceased"))
@@ -88,6 +89,7 @@ GLOBAL_VAR_INIT(arrest_security_status, "Arrest")
 	var/datum/computer_file/crew_record/CR = new/datum/computer_file/crew_record()
 	GLOB.all_crew_records.Add(CR)
 	CR.load_from_mob(H)
+	GLOB.mob2crew_record[H] = CR
 	return CR
 
 // Gets crew records filtered by set of positions
