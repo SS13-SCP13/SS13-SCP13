@@ -1099,7 +1099,7 @@ window "mainwindow"
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-maximized = true
-		icon = 'icons\\ss13_64.png'
+		icon = 'icons\\scp_64x64.png'
 		macro = "macro"
 		menu = "menu"
 	elem "asset_cache_browser"
