@@ -288,6 +288,8 @@ var/last_message_id = 0
 
 /proc/post_status(var/command, var/data1, var/data2)
 
+	if (!radio_controller) return
+	
 	var/datum/radio_frequency/frequency = radio_controller.return_frequency(1435)
 
 	if(!frequency) return
