@@ -124,3 +124,6 @@
 	var/pre_scp049_real_name = ""
 	var/pre_scp049_species = "Human"
 	var/pestilence = FALSE
+
+	// SCP-173
+	var/scp173_killed = FALSE
