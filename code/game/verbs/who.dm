@@ -8,7 +8,8 @@
 	var/list/Lines = list()
 
 	if(check_rights(R_INVESTIGATE, 0))
-		for(var/client/C in GLOB.clients)
+		for(var/client in GLOB.clients)
+			var/client/C = client
 			var/entry = "\t[C.key]"
 			if(!C.mob) //If mob is null, print error and skip rest of info for client.
 				entry += " - <font color='red'><i>HAS NO MOB</i></font>"
@@ -61,79 +62,80 @@
 
 //New SEXY Staffwho verb
 /client/verb/staffwho()
-    set category = "Admin"
-    set name = "StaffWho"
-    var/adminwho = ""
-    var/modwho = ""
-    var/mentwho = ""
-    var/devwho = ""
-    var/admin_count = 0
-    var/mod_count = 0
-    var/ment_count = 0
-    var/dev_count = 0
+	set category = "Admin"
+	set name = "StaffWho"
+	var/adminwho = ""
+	var/modwho = ""
+	var/mentwho = ""
+	var/devwho = ""
+	var/admin_count = 0
+	var/mod_count = 0
+	var/ment_count = 0
+	var/dev_count = 0
 
-    for(var/client/X in GLOB.admins)
-        if(X.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
-            continue
+	for(var/client in GLOB.admins)
+		var/client/C = client
+		if(C.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
+			continue
 
-        var/extra = ""
-        if(holder)
-            if(X.is_stealthed())
-                extra += " (Stealthed)"
-            if(isobserver(X.mob))
-                extra += " - Observing"
-            else if(istype(X.mob,/mob/new_player))
-                extra += " - Lobby"
-            else
-                extra += " - Playing"
-            if(X.is_afk())
-                extra += " (AFK)"
+		var/extra = ""
+		if(holder)
+			if(C.is_stealthed())
+				extra += " (Stealthed)"
+			if(isobserver(C.mob))
+				extra += " - Observing"
+			else if(istype(C.mob,/mob/new_player))
+				extra += " - Lobby"
+			else
+				extra += " - Playing"
+			if(C.is_afk())
+				extra += " (AFK)"
 
-        if(R_ADMIN & X.holder.rights)
-            adminwho += "\t[X] is a <b>[X.holder.rank]</b>[extra]\n"
-            admin_count++
-        else if (R_MOD & X.holder.rights)
-            modwho += "\t[X] is a <i>[X.holder.rank]</i>[extra]\n"
-            mod_count++
-        else if (R_MENTOR & X.holder.rights)
-            mentwho += "\t[X] is a [X.holder.rank][extra]\n"
-            ment_count++
-        else if (R_DEBUG & X.holder.rights)
-            devwho += "\t[X] is a [X.holder.rank][extra]\n"
-            dev_count++
+		if(R_ADMIN & C.holder.rights)
+			adminwho += "\t[C] is a <b>[C.holder.rank]</b>[extra]\n"
+			admin_count++
+		else if (R_MOD & C.holder.rights)
+			modwho += "\t[C] is a <i>[C.holder.rank]</i>[extra]\n"
+			mod_count++
+		else if (R_MENTOR & C.holder.rights)
+			mentwho += "\t[C] is a [C.holder.rank][extra]\n"
+			ment_count++
+		else if (R_DEBUG & C.holder.rights)
+			devwho += "\t[C] is a [C.holder.rank][extra]\n"
+			dev_count++
 
-    // TODO should be consistent between <br> and \n - one or the other, not both
-    to_chat(src, "<b><big>Online staff:</big></b>")
-    to_chat(src, "<b>Current Admins ([admin_count]):</b><br>[adminwho]<br>")
-    to_chat(src, "<b>Current Moderators ([mod_count]):</b><br>[modwho]<br>")
-    to_chat(src, "<b>Current Mentors ([ment_count]):</b><br>[mentwho]<br>")
-    to_chat(src, "<b>Current Developers ([dev_count]):</b><br>[devwho]<br>")
+	to_chat(src, "<b><big>Online staff:</big></b>")
+	to_chat(src, "<b>Current Admins ([admin_count]):</b><br>[adminwho]<br>")
+	to_chat(src, "<b>Current Moderators ([mod_count]):</b><br>[modwho]<br>")
+	to_chat(src, "<b>Current Mentors ([ment_count]):</b><br>[mentwho]<br>")
+	to_chat(src, "<b>Current Developers ([dev_count]):</b><br>[devwho]<br>")
 
 /client/verb/donatorwho()
-    set category = "Admin"
-    set name = "DonatorWho"
-    var/donators = ""
-    var/donator_count = 0
-    for(var/client/X in GLOB.donators)
-        if(X.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
-            continue
-        var/extra = ""
-        if(holder)
-            if(X.is_stealthed())
-                extra += " (Stealthed)"
-            if(isobserver(X.mob))
-                extra += " - Observing"
-            else if(istype(X.mob,/mob/new_player))
-                extra += " - Lobby"
-            else
-                extra += " - Playing"
-            if(X.is_afk())
-                extra += " (AFK)"
-        if(X.donator_holder && X.donator_holder.flags)
-            donators += "\t[X]</b>[extra]\n"
-            donator_count++
-    to_chat(src, "<b><big>Online Donators ([donator_count]):</big></b>")
-    to_chat(src, donators)
+	set category = "Admin"
+	set name = "DonatorWho"
+	var/donators = ""
+	var/donator_count = 0
+	for(var/client in GLOB.donators)
+		var/client/C = client
+		if(C.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
+			continue
+		var/extra = ""
+		if(holder)
+			if(C.is_stealthed())
+				extra += " (Stealthed)"
+			if(isobserver(C.mob))
+				extra += " - Observing"
+			else if(istype(C.mob,/mob/new_player))
+				extra += " - Lobby"
+			else
+				extra += " - Playing"
+			if(C.is_afk())
+				extra += " (AFK)"
+		if(C.donator_holder && C.donator_holder.flags)
+			donators += "\t[C]</b>[extra]\n"
+			donator_count++
+	to_chat(src, "<b><big>Online Donators ([donator_count]):</big></b>")
+	to_chat(src, donators)
 
 /* OLD STUFF.
 /client/verb/staffwho()
