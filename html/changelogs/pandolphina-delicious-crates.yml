@@ -1,7 +1,0 @@
-author: Pandolphina + Rhicora
-delete-after: True
-
-changes: 
-  - rscadd: "Makes cargo crates work with access"
-  - rscadd: "Adds guard gear crate, SMG crate and pistol crate"
-  - rscdel: "Removes wizard/witch crates"

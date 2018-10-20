@@ -10,6 +10,7 @@ GLOBAL_LIST_EMPTY(areas)
 	var/holomap_color
 	var/engine_area = FALSE
 	var/ambience_crb = null
+	var/list/vents = list()
 
 /area/New()
 	icon_state = ""
@@ -37,8 +38,8 @@ GLOBAL_LIST_EMPTY(areas)
 		power_environ = 0
 	power_change()		// all machines set to current power level, also updates lighting icon
 
-/area/proc/get_contents()
-	return contents
+	for (var/obj/machinery/atmospherics/unary/vent_pump/vent in contents)
+		vents += vent
 
 /area/proc/get_cameras()
 	var/list/cameras = list()
@@ -250,9 +251,13 @@ GLOBAL_LIST_EMPTY(areas)
 		M.set_emergency_lighting(enable)
 
 
-var/list/mob/living/forced_ambiance_list = new
 
 /area/Entered(A)
+
+	if (isvent(A))
+		vents += A
+		return 
+
 	if(!istype(A,/mob/living))	return
 
 	var/mob/living/L = A
@@ -270,48 +275,56 @@ var/list/mob/living/forced_ambiance_list = new
 	L.lastarea = newarea
 	play_ambience(L)
 
+/area/Exited(A)
+	if (isvent(A))
+		vents -= A
+
+GLOBAL_LIST_EMPTY(forced_ambience)
 /area/proc/play_ambience(var/mob/living/L)
 	// Ambience goes down here -- make sure to list each area seperately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
 	if(!(L && L.get_preference_value(/datum/client_preference/play_ambiance) == GLOB.PREF_YES))	return
 
 
 	// If we previously were in an area with force-played ambiance, stop it.
-	if(L in forced_ambiance_list)
+	if(GLOB.forced_ambience[L])
 		sound_to(L, sound(null, channel = 1))
-		forced_ambiance_list -= L
+		GLOB.forced_ambience[L] = FALSE
 
 	var/turf/T = get_turf(L)
-	var/hum = 0
+	var/hum = FALSE
+
 	if(!L.ear_deaf && !always_unpowered && power_environ)
-		for(var/obj/machinery/atmospherics/unary/vent_pump/vent in src)
-			if(vent.can_pump())
-				hum = 1
+		for(var/vent in vents)
+			var/obj/machinery/atmospherics/unary/vent_pump/V = vent
+			if(V.can_pump())
+				hum = TRUE
 				break
 
 	if(hum)
 		if(!L.client.ambience_playing)
-			L.client.ambience_playing = 1
-			L.playsound_local(T,sound('sound/ambience/vents.ogg', repeat = 1, wait = 0, volume = 20, channel = 2))
+			L.client.ambience_playing = TRUE
+			L.playsound_local(T,sound('sound/ambience/vents.ogg', repeat = TRUE, wait = 0, volume = 20, channel = 2))
 	else
 		if(L.client.ambience_playing)
-			L.client.ambience_playing = 0
+			L.client.ambience_playing = FALSE
 			sound_to(L, sound(null, channel = 2))
 
 	var/playambience = null
 
-	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
+	// static so we only retrieve this once
+	var/static/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 	if (security_state.current_security_level.crb)
 		if (islist(ambience_crb))
 			playambience = pick(ambience_crb)
 		else if (!isnull(ambience_crb))
 			playambience = ambience_crb
 
-	if (!playambience && ambience.len)
+	if (!playambience && length(ambience))
 		playambience = pick(ambience)
 
 	if(forced_ambience)
-		if(forced_ambience.len)
-			forced_ambiance_list |= L
+		if(length(forced_ambience))
+			GLOB.forced_ambience[L] = TRUE
 			L.playsound_local(T,sound(pick(forced_ambience), repeat = 1, wait = 0, volume = 25, channel = 1))
 		else
 			sound_to(L, sound(null, channel = 1))

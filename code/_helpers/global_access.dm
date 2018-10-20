@@ -425,8 +425,6 @@
 			return global.fluidtrack_cache;
 		if("follow_repository")
 			return global.follow_repository;
-		if("forced_ambiance_list")
-			return global.forced_ambiance_list;
 		if("fruit_icon_cache")
 			return global.fruit_icon_cache;
 		if("fuel_injectors")
@@ -1452,8 +1450,6 @@
 			global.fluidtrack_cache=newval;
 		if("follow_repository")
 			global.follow_repository=newval;
-		if("forced_ambiance_list")
-			global.forced_ambiance_list=newval;
 		if("fruit_icon_cache")
 			global.fruit_icon_cache=newval;
 		if("fuel_injectors")
@@ -2269,7 +2265,6 @@
 	"flora_list",
 	"fluidtrack_cache",
 	"follow_repository",
-	"forced_ambiance_list",
 	"fruit_icon_cache",
 	"fuel_injectors",
 	"fusion_cores",
