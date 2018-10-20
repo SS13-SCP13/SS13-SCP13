@@ -28,28 +28,26 @@ SUBSYSTEM_DEF(atoms)
 	initialized = INITIALIZATION_INNEW_MAPLOAD
 
 	LAZYINITLIST(late_loaders)
+	LAZYINITLIST(created_atoms)
 
 	var/count
 	var/list/mapload_arg = list(TRUE)
 	if(atoms)
-		created_atoms = list()
 		count = atoms.len
 		for(var/I in atoms)
 			var/atom/A = I
 			if(!A.initialized)
-				if(InitAtom(I, mapload_arg))
-					atoms -= I
+				InitAtom(I, mapload_arg)
 				CHECK_TICK
 	else
 		count = 0
-		for(var/atom in world)
-			var/atom/A = atom
+		for(var/atom/A in world)
 			if(!A.initialized)
 				InitAtom(A, mapload_arg)
 				++count
 				CHECK_TICK
 
-	report_progress("Initialized [count] atom\s")
+	report_progress("Initialized [count] atoms")
 
 	initialized = INITIALIZATION_INNEW_REGULAR
 
@@ -57,12 +55,8 @@ SUBSYSTEM_DEF(atoms)
 		for(var/I in late_loaders)
 			var/atom/A = I
 			A.LateInitialize(arglist(mapload_arg))
-		report_progress("Late initialized [late_loaders.len] atom\s")
+		report_progress("Late initialized [late_loaders.len] atoms")
 		late_loaders.Cut()
-
-	if(atoms)
-		. = created_atoms + atoms
-		created_atoms = null
 
 /datum/controller/subsystem/atoms/proc/InitAtom(atom/A, list/arguments)
 	var/the_type = A.type
