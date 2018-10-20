@@ -8,7 +8,8 @@
 	var/list/Lines = list()
 
 	if(check_rights(R_INVESTIGATE, 0))
-		for(var/client/C in GLOB.clients)
+		for(var/client in GLOB.clients)
+			var/client/C = client
 			var/entry = "\t[C.key]"
 			if(!C.mob) //If mob is null, print error and skip rest of info for client.
 				entry += " - <font color='red'><i>HAS NO MOB</i></font>"
@@ -72,34 +73,35 @@
     var/ment_count = 0
     var/dev_count = 0
 
-    for(var/client/X in GLOB.admins)
-        if(X.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
+    for(var/client in GLOB.admins)
+    	var/client/C = client
+        if(C.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
             continue
 
         var/extra = ""
         if(holder)
-            if(X.is_stealthed())
+            if(C.is_stealthed())
                 extra += " (Stealthed)"
-            if(isobserver(X.mob))
+            if(isobserver(C.mob))
                 extra += " - Observing"
-            else if(istype(X.mob,/mob/new_player))
+            else if(istype(C.mob,/mob/new_player))
                 extra += " - Lobby"
             else
                 extra += " - Playing"
-            if(X.is_afk())
+            if(C.is_afk())
                 extra += " (AFK)"
 
-        if(R_ADMIN & X.holder.rights)
-            adminwho += "\t[X] is a <b>[X.holder.rank]</b>[extra]\n"
+        if(R_ADMIN & C.holder.rights)
+            adminwho += "\t[C] is a <b>[C.holder.rank]</b>[extra]\n"
             admin_count++
-        else if (R_MOD & X.holder.rights)
-            modwho += "\t[X] is a <i>[X.holder.rank]</i>[extra]\n"
+        else if (R_MOD & C.holder.rights)
+            modwho += "\t[C] is a <i>[C.holder.rank]</i>[extra]\n"
             mod_count++
-        else if (R_MENTOR & X.holder.rights)
-            mentwho += "\t[X] is a [X.holder.rank][extra]\n"
+        else if (R_MENTOR & C.holder.rights)
+            mentwho += "\t[C] is a [C.holder.rank][extra]\n"
             ment_count++
-        else if (R_DEBUG & X.holder.rights)
-            devwho += "\t[X] is a [X.holder.rank][extra]\n"
+        else if (R_DEBUG & C.holder.rights)
+            devwho += "\t[C] is a [C.holder.rank][extra]\n"
             dev_count++
 
     // TODO should be consistent between <br> and \n - one or the other, not both
@@ -114,23 +116,24 @@
     set name = "DonatorWho"
     var/donators = ""
     var/donator_count = 0
-    for(var/client/X in GLOB.donators)
-        if(X.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
+    for(var/client in GLOB.donators)
+    	var/client/C = client
+        if(C.is_stealthed() && !check_rights(R_MOD|R_ADMIN, 0, src)) // Normal players and mentors can't see stealthmins
             continue
         var/extra = ""
         if(holder)
-            if(X.is_stealthed())
+            if(C.is_stealthed())
                 extra += " (Stealthed)"
-            if(isobserver(X.mob))
+            if(isobserver(C.mob))
                 extra += " - Observing"
-            else if(istype(X.mob,/mob/new_player))
+            else if(istype(C.mob,/mob/new_player))
                 extra += " - Lobby"
             else
                 extra += " - Playing"
-            if(X.is_afk())
+            if(C.is_afk())
                 extra += " (AFK)"
-        if(X.donator_holder && X.donator_holder.flags)
-            donators += "\t[X]</b>[extra]\n"
+        if(C.donator_holder && C.donator_holder.flags)
+            donators += "\t[C]</b>[extra]\n"
             donator_count++
     to_chat(src, "<b><big>Online Donators ([donator_count]):</big></b>")
     to_chat(src, donators)
