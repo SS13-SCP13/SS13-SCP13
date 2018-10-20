@@ -204,13 +204,15 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	verbs -= /mob/living/carbon/human/scp106/proc/go_back
 	verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 
-#define PHASE_TIME 30
+#define PHASE_TIME (2 SECONDS)
 /mob/living/carbon/human/scp106/var/phase_cooldown = -1
 /mob/living/carbon/human/scp106/proc/phase_through_airlock()
 	set name = "Phase Through Object"
 	set category = "SCP"
 	set desc = "Phase through an object in front of you."
+
 	if (world.time < phase_cooldown)
+		to_chat(src, "<span class = 'warning'>You can't phase again yet.</span>")
 		return
 
 	for (var/obj/O in get_step(src, dir))
@@ -218,10 +220,17 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		if (!isstructure(O) && !ismachinery(O))
 			continue
 
-		for (var/obj/machinery/shieldwall/SW in get_turf(O))
-			return 
+		for (var/obj/OO in get_turf(O))
+			if (OO.density && OO != O)
+				return
 
-		phase_cooldown = world.time + (PHASE_TIME + 5)
+		var/turf/target = get_step(O, dir)
+		if (target.density)
+			return
+
+		visible_message("<span class = 'danger'>[src] starts to phase through \the [O].</span>")
+
+		phase_cooldown = world.time + PHASE_TIME + 5
 
 		var/initial_loc = loc
 		var/atom/sprite = null
@@ -252,6 +261,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		if (do_after(src, PHASE_TIME, O))
 			forceMove(get_step(src, dir))
 			forceMove(get_step(src, dir))
+			visible_message("<span class = 'danger'>[src] phases through \the [O].</span>")
 
 		__fixsprite__
 
