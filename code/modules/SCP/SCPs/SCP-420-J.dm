@@ -26,7 +26,7 @@ GLOBAL_LIST_EMPTY(possible_420j)
 		reagents.add_reagent(/datum/reagent/nicotine, 10)
 
 /hook/roundstart/proc/spawn420()
-	var/turf/T = pick(GLOB.possible_420j)
-	if(!T || !istype(T))
+	var/T = pick(GLOB.possible_420j)
+	if(!T || !istype(T, /atom))
 		return
 	new /obj/item/clothing/mask/smokable/cigarette/scp_420_j(T)
