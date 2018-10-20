@@ -139,6 +139,11 @@
 	return 1
 
 /mob/living/carbon/human/breathe()
+
+	// humans no longer need to breathe unless they're in space
+	if (istype(get_turf(src), /turf/simulated))
+		return
+
 	var/species_organ = species.breathing_organ
 
 	if(species_organ)
