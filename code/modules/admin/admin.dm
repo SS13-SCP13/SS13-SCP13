@@ -830,6 +830,9 @@ var/global/floorIsLava = 0
 	if(!ticker)
 		alert("Unable to start the game as it is not set up.")
 		return
+	if (!(Master.initialization_stage & INITIALIZATION_COMPLETE))
+		alert("The game cannot start yet.")
+		return
 	if(ticker.current_state == GAME_STATE_PREGAME && !(Master.initialization_stage & INITIALIZATION_NOW))
 		log_admin("[usr.key] has started the game.")
 		message_admins("<font color='blue'>[usr.key] has started the game.</font>")
