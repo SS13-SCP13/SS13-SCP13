@@ -89,7 +89,8 @@ if(current_step == this_step || (check_resumed && !resumed)) {\
 // rebuild all power networks from scratch - only called at world creation or by the admin verb
 // The above is a lie. Turbolifts also call this proc.
 /datum/controller/subsystem/machines/proc/makepowernets()
-	for(var/datum/powernet/PN in powernets)
+	for(var/powernet in powernets)
+		var/datum/powernet/PN = powernet
 		qdel(PN)
 	powernets.Cut()
 	setup_powernets_for_cables(global.cable_list)

@@ -8,15 +8,18 @@ SUBSYSTEM_DEF(ticker)
 	var/lastTickerTime
 
 /datum/controller/subsystem/ticker/Initialize()
+	
+	set waitfor = FALSE
 
 	lastTickerTime = world.timeofday
 
 	if(!ticker)
 		ticker = new
 
-	spawn(0)
-		if(ticker)
-			ticker.pregame()
+	sleep(world.tick_lag)
+	
+	if (ticker)
+		ticker.pregame()
 
 /datum/controller/subsystem/ticker/fire()
 	var/currentTime = world.timeofday
