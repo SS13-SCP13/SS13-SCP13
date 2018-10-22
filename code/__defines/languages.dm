@@ -8,6 +8,7 @@
 #define LANGUAGE_SKRELLIAN "Skrellian"
 #define LANGUAGE_ROOTLOCAL "Local Rootspeak"
 #define LANGUAGE_ROOTGLOBAL "Global Rootspeak"
+#define LANGUAGE_EYEPOD "Eyepod"
 #define LANGUAGE_LUNAR "Selenian"
 #define LANGUAGE_GUTTER "Gutter"
 #define LANGUAGE_CULT "Cult"
