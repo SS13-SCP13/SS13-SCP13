@@ -6,14 +6,21 @@
 	appearance_flags = 0
 	anchored = 1
 	var/cult = 0
+	var/toolate = 0
 
 /obj/structure/sign/double/barsign/proc/get_valid_states(initial=1)
 	. = icon_states(icon)
 	. -= "on"
 	. -= "narsiebistro"
+	. -= "toolate"
 	. -= "empty"
 	if(initial)
 		. -= "Off"
+
+/obj/structure/sign/double/barsign/scp_078
+    name = "SCP-078"
+	icon_state = "toolate"
+	toolate = 1
 
 /obj/structure/sign/double/barsign/examine(mob/user)
 	. = ..()
@@ -22,6 +29,8 @@
 			to_chat(user, "It appears to be switched off.")
 		if("narsiebistro")
 			to_chat(user, "It shows a picture of a large black and red being. Spooky!")
+		if("toolate")
+			to_chat(user, "The moments you regret the most come flooding back, all at once. You can't look away.")
 		if("on", "empty")
 			to_chat(user, "The lights are on, but there's no picture.")
 		else
@@ -32,7 +41,7 @@
 	icon_state = pick(get_valid_states())
 
 /obj/structure/sign/double/barsign/attackby(obj/item/I, mob/user)
-	if(cult)
+	if(cult || toolate)
 		return ..()
 
 	var/obj/item/weapon/card/id/card = I.GetIdCard()
