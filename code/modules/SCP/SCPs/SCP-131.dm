@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(scp131s)
+
 /datum/scp/SCP_131
 	name = "SCP-131"
 	designation = "131"
@@ -32,6 +34,7 @@
 	emote_see = list("whirrs around", "swivels in place")
 	var/turns_since_scan = 0
 	var/mob/movement_target
+	var/mob/study_target
 	var/mob/flee_target
 	var/mob/living/carbon/human/friend
 	var/befriend_job = null
@@ -49,6 +52,9 @@
 	// icon_dead = "SCP-131B_d"
 
 /mob/living/simple_animal/scp_131/New()
+	..()
+	add_language(LANGUAGE_EYEPOD, 1)
+	GLOB.scp131s += src
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
 
@@ -66,6 +72,10 @@
 /mob/living/simple_animal/scp_131/death()
 	. = ..()
 	update_icon()
+
+/mob/living/simple_animal/scp131/Destroy()
+	GLOB.scp131s -= src
+	..()
 
 /mob/living/simple_animal/scp_131/verb/bond_with()
 	set name = "Bond With"
@@ -91,14 +101,14 @@
 	return
 
 /mob/living/simple_animal/scp_131/proc/handle_movement_target()
+	var/follow_dist = 5
 	if (friend)
-		var/follow_dist = 5
 		if (friend.stat >= DEAD || friend.is_asystole()) //danger
 			follow_dist = 1
 		else if (friend.stat || friend.health <= 50) //danger or just sleeping
 			follow_dist = 3
-		var/near_dist = max(follow_dist - 2, 1)
 		var/current_dist = get_dist(src, friend)
+		var/near_dist = max(follow_dist - 2, 1)
 
 		if (movement_target != friend)
 			if (current_dist > follow_dist && !istype(movement_target, /mob/living) && (friend in oview(src)))
@@ -111,25 +121,37 @@
 				movement_target = friend
 				walk_to(src, movement_target, near_dist, 4)
 
-		//already following and close enough, stop
-		else if (current_dist <= near_dist)
-			walk_to(src,0)
-			movement_target = null
-			stop_automated_movement = 0
+			//already following and close enough, stop
+			else if (current_dist <= near_dist)
+				walk_to(src,0)
+				movement_target = null
+				stop_automated_movement = 0
 
 	if (!friend || movement_target != friend)
 		//if our target is neither inside a turf or inside a human(???), stop
-		if((movement_target) && !(isturf(movement_target.loc) || ishuman(movement_target.loc) ))
+		// if((movement_target) && !(isturf(movement_target.loc) || ishuman(movement_target.loc) ))
+
+		if ((movement_target) && (get_dist(src, movement_target) < 2))
+			set_dir(get_dir(src, movement_target))
+			study_target = movement_target
 			movement_target = null
 			stop_automated_movement = 0
+
 		//if we have no target or our current one is out of sight/too far away
-		if( !movement_target || !(movement_target.loc in oview(src, 4)) )
+		if(!study_target && ( !movement_target || !(movement_target.loc in oview(src, 4))))
 			movement_target = null
 			stop_automated_movement = 0
 			for(var/mob/living/subject in oview(src)) //search for a new target to study
 				if(isturf(subject.loc) && !subject.stat)
 					movement_target = subject
 					break
+
+		if(study_target)
+			if (get_dist(src, study_target) < 5)
+				set_dir(get_dir(src, study_target))
+				if(prob(25)) 
+					visible_emote(pick("looks inquisitively at [study_target].","studies [study_target].","observes [study_target]."))
+					if(prob(50)) study_target = null
 
 		if(movement_target)
 			stop_automated_movement = 1
@@ -142,7 +164,8 @@
 		stop_automated_movement = 0
 
 	if (flee_target)
-		if(prob(25)) say("Eeeeee!")
+		if(prob(10)) say("Eeeeee!")
+		else if(prob(10)) visible_emote(pick("flees from [flee_target].","anxiously avoids [flee_target].","cowers from [flee_target]."))
 		stop_automated_movement = 1
 		walk_away(src, flee_target, 7, 2)
 
@@ -158,7 +181,7 @@
 
 /mob/living/simple_animal/scp_131/attack_hand(mob/living/carbon/human/M as mob)
 	. = ..()
-	if(M.a_intent == I_HURT)
+	if(M.a_intent == I_HURT || M.a_intent == I_DISARM)
 		set_flee_target(M)
 
 /mob/living/simple_animal/scp_131/ex_act()
@@ -180,6 +203,7 @@
 	for(var/mob/living/subject in oview(src,5))
 		if (subject.SCP)
 			if(prob(15)) // get curious!
+				set_dir(get_dir(src, subject))
 				visible_emote(pick("turns its curious eye towards [subject].","studies [subject].","gazes at [subject] in fascination."))
 
 	turns_since_scan++
@@ -205,7 +229,7 @@
 				visible_emote(pick("whirrs around [friend]'s legs.",
 								   "rolls around near [friend].",
 								   "stares briefly up at [friend].",
-								   "seems to follow [friend]'s gaze'."))
+								   "seems to follow [friend]'s gaze."))
 	else if (friend.health <= 50)
 		if (prob(10))
 			var/verb = pick("jabbers", "babbles")
