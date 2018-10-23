@@ -22,14 +22,14 @@ GLOBAL_LIST_EMPTY(scp999s)
 	var/attached_mode = HUGGING
 	var/list/last_healing = list()
 
-/mob/living/simple_animal/scp999/examine(mob/user)
+/mob/living/simple_animal/scp_999/examine(mob/user)
 	user << "<b><span class = 'success'><big>SCP-999</big></span></b> - [desc]"
 
-/mob/living/simple_animal/scp999/New()
+/mob/living/simple_animal/scp_999/New()
 	..()
 	GLOB.scp999s += src
 	
-/mob/living/simple_animal/scp999/Destroy()
+/mob/living/simple_animal/scp_999/Destroy()
 	GLOB.scp999s -= src
 	..()
 

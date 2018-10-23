@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(scp131s)
 	density = 0	
 	universal_speak = 0
 	universal_understand = 1
-	mob_size = MOB_SMALL
+	mob_size = MOB_MEDIUM
 	can_pull_size = ITEM_SIZE_TINY
 	turns_per_move = 5
 	see_in_dark = 6
