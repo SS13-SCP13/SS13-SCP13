@@ -179,6 +179,12 @@
 	icon_state = "Dpacket"
 	startswith = list(/obj/item/clothing/mask/smokable/cigarette/dromedaryco = 6)
 
+/obj/item/weapon/storage/fancy/cigarettes/bluelady
+	name = "pack of SCP-013s"
+	desc = "A packet of six Blue Lady cigarettes. The SCP logo is stamped on the paper."
+	icon_state = "Bpacket"
+	startswith = list(/obj/item/clothing/mask/smokable/cigarette/bluelady = 6)
+
 /obj/item/weapon/storage/fancy/cigarettes/killthroat
 	name = "pack of Acme Co. cigarettes"
 	desc = "A packet of six Acme Company cigarettes. For those who somehow want to obtain the record for the most amount of cancerous tumors."
