@@ -209,7 +209,7 @@
 			if (H.job == "Surgeon")	
 				solace_possibilities += list(
 					"He would have died on the table anyway.",
-					"You didn't have enough time to remove the bullet.",
+					"You didn't have enough time to remove the bullets.",
 					"Some of them don't deserve surgery."
 				)
 			if (H.job == "Janitor")
@@ -242,7 +242,10 @@
 				"If you let yourself see tomorrow, you will only hurt them again.",
 				"When you finally end it all, the guilt will end too.",
 				"You know what you have to do to redeem yourself.",
-				"You'll never harm anyone again, once you're gone."
+				"You'll never harm anyone again, once you're gone.",
+				"Nobody will miss you. They barely even know your name.",
+				"It's better for everyone if you get rid of yourself.",
+				"Everyone will be better off when you end it all."
 			)
 		var/solace = pick(solace_possibilities)
 		var/fullstop = findtext(info,". ")

@@ -29,7 +29,7 @@
 	toolate_on = 0
 
 /obj/structure/sign/double/barsign/scp_078/Process()
-	for (var/mob/living/carbon/human/H in range(7, src))
+	for (var/mob/living/carbon/human/H in get_mobs_or_objects_in_view(7, src, 1, 0))
 		if(H.SCP)
 			continue
 		if(is_blind(H) || H.eye_blind > 0)
