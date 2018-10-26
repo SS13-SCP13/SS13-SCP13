@@ -28,22 +28,6 @@
 	toolate = 1
 	toolate_on = 0
 
-/obj/structure/sign/double/barsign/scp_078/Process()
-	for (var/mob/living/carbon/human/H in get_mobs_or_objects_in_view(7, src, 1, 0))
-		if(H.SCP)
-			continue
-		if(is_blind(H) || H.eye_blind > 0)
-			continue
-		if(H.stat != CONSCIOUS)
-			continue
-		if(InCone(H, H.dir) && toolate_on == 1)
-			to_chat(H, "You feel a sense of unease as you look at the pink neon sign...")
-			spawn(300)
-				if(InCone(H, H.dir) && toolate_on == 1)
-					to_chat(H, "You tear your gaze away from the sign, left with rare peace of mind.")
-					if(H.dies_young == 0)
-						H.dies_young = 1
-
 /obj/structure/sign/double/barsign/examine(mob/user)
 	. = ..()
 	switch(icon_state)
@@ -56,6 +40,10 @@
 			to_chat(user, "It shows a picture of a large black and red being. Spooky!")
 		if("toolate")
 			to_chat(user, "The moments you regret the most come flooding back, all at once. Try as you might, you can't look away.")
+			spawn(300)
+				to_chat(user, "You tear your gaze away from the sign, left with unlikely peace of mind.")
+				if(user.dies_young == 0)
+					user.dies_young = 1
 		if("on", "empty")
 			to_chat(user, "The lights are on, but there's no picture.")
 		else
