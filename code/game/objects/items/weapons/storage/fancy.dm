@@ -182,7 +182,7 @@
 /obj/item/weapon/storage/fancy/cigarettes/bluelady
 	name = "pack of SCP-013s"
 	desc = "A packet of six Blue Lady cigarettes. The SCP logo is stamped on the paper."
-	icon_state = "Bpacket"
+	icon_state = "BLpacket"
 	startswith = list(/obj/item/clothing/mask/smokable/cigarette/bluelady = 6)
 
 /obj/item/weapon/storage/fancy/cigarettes/killthroat
