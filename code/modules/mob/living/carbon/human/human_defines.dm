@@ -127,3 +127,6 @@
 
 	// SCP-173
 	var/scp173_killed = FALSE
+
+	// SCP-078
+	var/dies_young = 0
