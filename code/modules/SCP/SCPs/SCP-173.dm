@@ -48,6 +48,12 @@ GLOBAL_LIST_EMPTY(scp173s)
 	return // lol you can't talk
 
 /mob/living/scp_173/proc/IsBeingWatched()
+	// Am I being watched by eye pals?
+	for (var/mob/living/M in view(src, 7))
+		if ((istype(M, /mob/living/simple_animal/scp_131)) && (InCone(M, M.dir)))
+			return TRUE
+
+	// Am I being watched by anyone else?
 	for(var/mob/living/carbon/human/H in view(src, 7))
 		if(H.SCP)
 			continue
