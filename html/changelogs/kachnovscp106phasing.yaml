@@ -1,5 +1,0 @@
-author: Memeopolis
-delete-after: True
-
-changes: 
-  - bugfix: "Fixed an exploit with SCP-106's Phase Through Object ability."
