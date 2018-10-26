@@ -246,14 +246,14 @@
 			)
 		var/solace = pick(solace_possibilities)
 		var/fullstop = findtext(info,". ")
-		while(prob(90))
-			var/nextFullstop = findtext(info,". ", fullstop)
+		while(prob(30))
+			var/nextFullstop = findtext(info,". ", fullstop + 1)
 			if (nextFullstop > fullstop)
 				fullstop = nextFullstop
 
 		if(fullstop)
 			var/start_text = copytext(info, 1, fullstop + 2)
-			var/end_text = copytext(info, fullstop + 2, 0)
+			var/end_text = copytext(info, fullstop + 1, 0)
 			content = start_text + solace + end_text
 
 	// End of SCP-078's horrible messages.
