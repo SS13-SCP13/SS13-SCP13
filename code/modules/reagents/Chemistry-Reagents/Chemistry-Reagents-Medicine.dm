@@ -622,6 +622,15 @@
 	name = "Terrible Tobacco"
 	taste_description = "acrid smoke"
 
+/datum/reagent/tobacco/bluelady
+	name = "Blue Lady Tobacco"
+	taste_description = "the memories of a forgotten time"
+
+/datum/reagent/tobacco/bluelady/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
+		data = world.time
+		to_chat(M, pick("<span class='notice'>You are the Lady in Blue.</span>","<span class='notice'>You remember looking in the mirror.</span>","<span class='notice'>You remember the way the blinds cast shadows on the table.</span>","<span class='notice'>You recall the way the record skipped, just a little every turn.</span>","<span class='notice'>You feel the urge to sketch yourself, before the memories slip away.</span>","<span class='notice'>A bad memory. Several days without a bump, that first time you needed more.</span>","<span class='notice'>Faces in the crowd, looking at you, but you don't recognize any of them.</span>","<span class='notice'>The spotlight flashes over your face, briefly blinding you.</span>","<span class='notice'>You can smell the rain outside the window.</span>","<span class='notice'>The squeal of cab tires, turning the corner in the city.</span>","<span class='notice'>The lights of the city at night. You were alive.</span>","<span class='notice'>For a split second, your name is on the tip of your tongue. Then it's gone.</span>"))
+
 /datum/reagent/tobacco/liquid
 	name = "Nicotine Solution"
 	description = "A diluted nicotine solution."

@@ -55,14 +55,27 @@
 	spawn(210)
 		user.visible_message("<span class='notice'>\The [user] starts to scream and writhe in pain as their bone structure reforms.</span>")
 	spawn(300)
-		if(user.gender == FEMALE) //swap genders
-			user.gender = MALE
+		if(H.is_blue_lady)
+			if(user.gender == MALE)
+				user.gender = FEMALE
+				to_chat(user, "<span class='notice'>A vast sense of relief washes over you, as you feel your body reshape itself to be more like hers again.</span>")
+			else if(H.pre_scp013_gender == MALE && H.blue_lady_transitioned == 0)
+				H.blue_lady_transitioned = 1
+				to_chat(user, "<span class='notice'>At last, you feel truly at home in your own body. You have become that wistful lady in blue.</span>")
+			else
+				user.gender = MALE
+				to_chat(user, "<span class='warning'>There's something you can't see, and it feels unbearably wrong. It's all wrong. You weren't ... she wasn't ... a man.</span>")
+				spawn(500)
+					to_chat(user, "<span class='warning'>You have the terrifying feeling that you're inhabiting the wrong body. You have to find a way to reverse whatever you just did!</span>")
 		else
-			user.gender = FEMALE
-		if(ishuman(user))
-			H.reset_hair()
-			H.update_dna()
-			H.update_body()
+			if(user.gender == FEMALE)
+				user.gender = MALE
+			else
+				user.gender = FEMALE
+	spawn(310)
+		H.reset_hair()
+		H.update_dna()
+		H.update_body()
 	spawn(350)
 		to_chat(user, "<span class='warning'>The burning begins to fade, and you feel your hand relax it's grip on the [I.name].</span>")
 	spawn(360)
