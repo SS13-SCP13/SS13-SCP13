@@ -255,6 +255,18 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
+/area/site53/ulcz/generalpurpose
+	name = "\improper General Purpose Testing Laboratory"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
+
+/area/site53/ulcz/scp078
+	name = "\improper SCP-078"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
+
 /area/site53/ulcz/scp173
 	name = "\improper SCP-173"
 	icon_state = "research"
@@ -281,6 +293,18 @@
 
 /area/site53/llcz/scp012
 	name = "\improper SCP-012"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
+
+/area/site53/llcz/scp013
+	name = "\improper SCP-013"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
+
+/area/site53/llcz/scp131
+	name = "\improper SCP-131"
 	icon_state = "research"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED

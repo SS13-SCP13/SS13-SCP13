@@ -505,3 +505,11 @@
 	item_state = "tajblind_meson"
 	off_state = "tajblind_meson"
 	body_parts_covered = EYES
+
+/obj/item/clothing/glasses/hazel
+	name = "Hazel Glasses"
+	desc = "Glasses. With a box-ish frame, and hazel-ish color. On the inside of a frame, there is what appears to be writing unreadable from a distance. "
+	icon_state = "hazel_glasses"
+	item_state = "hazel_glasses"
+	darkness_view = -1
+	flash_protection = FLASH_PROTECTION_MODERATE

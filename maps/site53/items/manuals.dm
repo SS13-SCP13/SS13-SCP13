@@ -283,6 +283,29 @@
 
 // SAFE
 
+/obj/item/weapon/paper/scp/safe/scp013
+	name = "SCP-013"
+	info = {"
+	<tt><center><b><font color='green'>SAFE: SCP-013</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+<br>
+<b>Item #:</b> SCP-013<br>
+
+<b>Object Class:</b> Safe<br>
+
+<b>Special Containment Procedures:</b> SCP-013 are to be kept in a Secure Storage Vault at Site-66. Exposed subjects are to be monitored for differences between their symptoms. Exposed subjects are to be interviewed daily, and any changes in perception are to be logged.<br>
+
+<b>Description:</b> SCP-013 is the collective designation of 242 cigarettes which display similar anomalies. The most common external detail between instances is the presence of the words “Blue Lady” hand-written on each cigarette in blue ink.
+Subjects who consume the contents of SCP-013 through inhalation will begin to perceive themselves as a specific unidentified woman. Subjects have described the woman to be aged between 25 and 35 years old, standing approximately 1.6 metres tall with an estimated weight of between 50 and 55 kg. Additional recurring details include cropped dark hair, blue eyes, and bright blue lipstick.
+Immediately after consuming an instance of SCP-013, subjects will gradually begin to perceive reflections of themselves as having the features of the woman, and will gradually perceive their bodies changing to reflect her appearance over the course of the following weeks. All changes are entirely mental; the subject’s body does not change outwardly, only their perception of themselves. These alterations are permanent, and cannot be reversed.
+SCP-013 was discovered after the suicide of an Ian Miles, packed in a large cardboard crate in his apartment. A cursory search of the apartment uncovered several hundred sketches of a figure strongly resembling the one perceived while under 013's effect. Miles' body had been found sitting at a desk, dead of a massive overdose and draped over a handwritten note, transcribed below.
+During the investigation of Miles' apartment, one civilian investigator became affected by 013's effect. An embedded Agent soon contacted the nearest Site; the subject, the artifact, and related evidence were extracted and contained.
+Currently, two hundred seventeen instances of SCP-013 cigarettes are contained at Bio-Site 66; twenty-five SCP-013 cigarettes are contained at Research Sector-09, pending future research into similar anomalous effects.
+"}
+
+
 /obj/item/weapon/paper/scp/safe/scp113
 	name = "SCP-113"
 	info = {"
@@ -325,6 +348,28 @@ Previously exposed subjects may undergo SCP-113's effects again by re-initiating
 <br>
 Failure rate can be affected by subjects not coming into contact with SCP-113 for a lengthy period of time, which varies by subject; patterns are under research. Under normal circumstances, transformation failure rate increases exponentially upon multiple exposures. Subjects who survive rapid, repeated exposure are eventually transformed -DATA EXPUNGED- Further anomalous elements continue to appear as exposure count increases.
 
+
+"}
+
+/obj/item/weapon/paper/scp/safe/scp131
+	name = "SCP-131"
+	info = {"
+	<tt><center><b><font color='green'>SAFE: SCP-131</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+<br>
+<b>Item #:</b> SCP-131<br>
+
+<b>Object Class:</b> Safe<br>
+
+<b>Special Containment Procedures:</b> No special safety procedures are to be taken with SCP-131-A and SCP-131-B. They are free to travel about Site-19 so long as they do not attempt to enter any restricted areas or attempt to leave the facility. Casual contact with the subjects is permitted, but it is recommended that such contact be kept to a minimum to prevent the creatures from forming an attachment to personnel. Hourly tabs are to be kept on subjects at all times; failure to account for their presence at these times constitutes a level one lock down situation. Any report of abuse or mistreatment of the subjects will result in harsh reprimand.<br>
+
+<b>Description:</b> SCP-131-A and SCP-131-B (affectionately nicknamed the "Eye Pods" by personnel) are a pair of teardrop-shaped creatures roughly 30 cm (1 ft) in height, with a single blue eye in the middle of their bodies. SCP-131-A is burnt orange in color while SCP-131-B is mustard yellow. At the base of each creature is a wheel-like protrusion which allows for locomotion, suggesting that the creatures may be biomechanical in origin. The subjects can move surprisingly fast, covering over 60 m (200 ft) in a matter of seconds. The subjects, however, lack a braking system, which has led to some rather spectacular, if not overly amusing, mishaps involving the creatures. The subjects have also shown the ability to climb sheer surfaces, and have gotten lost in the air vents on more than one occasion.
+The subjects seem to have the intelligence of common house cats and are insatiably curious. Most of the time they simply roll around the facility, observing personnel at work and catching peeks at other Safe class SCPs. The subjects seem to be able to communicate with each other via an untranslatable high-pitched babbling. The subjects have never been observed to blink, even in laboratories when the subjects have been videotaped for over 18 consecutive hours.
+The subjects seem to respond well to any affection given to them and will quickly bond to the giver of said affection, much in the same way a puppy bonds with a human being. They will follow anyone or anything they've made a bond with anywhere, even into normally restricted areas. Although curious, the subjects can sense danger in their general vicinity, and if the object of their bond begins to approach something they register as dangerous (e.g., Euclid or Keter class objects) they will swarm around their bonded companion's feet (or appropriate extremities) while babbling in a panicked tone, as if to warn them. Because of the daily dangers faced by Site-19 staff in dealing with Euclid and Keter class objects, it is recommended that staff avoid making attempts to bond with the subjects, as it can pose a distraction during delicate operations and experiments and may pose a danger to the subjects themselves (see Addendum 131-1). If the subjects are ignored by their bonded target long enough, they will eventually lose interest and return to their normal activities.
+It should be noted that the subjects require no real care or maintenance from the site staff. They do not eat, leave droppings, or even sleep. It would seem that the only sustenance they require is visual stimulation (although this requires further study to verify).
+Subjects SCP-131-A and SCP-131-B were found in a cornfield outside ¦¦¦¦¦¦¦¦¦¦¦¦ in the year 19¦¦. They were promptly transported to Site-19 via -DATA EXPUNGED- and were then downgraded to Safe class and given free reign across the site once it became clear they were not broadcasting what they saw to any hostile foreign powers.
 
 "}
 
@@ -444,6 +489,25 @@ SCP-049 is capable of speech in a variety of languages, though tends to prefer E
 SCP-049 will become hostile with individuals it sees as being affected by the Pestilence, often having to be restrained should it encounter such. If left unchecked, SCP-049 will generally attempt to kill any such individual; SCP-049 is capable of causing all biological functions of an organism to cease through direct skin contact. How this occurs is currently unknown, and autopsies of SCP-049's victims have invariably been inconclusive. SCP-049 has expressed frustration or remorse after these killings, indicating that they have done little to kill "The Pestilence", though will usually seek to then perform a crude surgery on the corpse using the implements contained within a black doctor's bag it carries on its person at all times3. While these surgeries are not always "successful", they often result in the creation of instances of SCP-049-2.
 
 SCP-049-2 instances are reanimated corpses that have been operated on by SCP-049. These instances do not seem to retain any of their prior memories or mental functions, having only basic motor skills and response mechanisms. While these instances are generally inactive, moving very little and in a generally ambulatory fashion, they can become extremely aggressive if provoked, or if directed to by SCP-049. SCP-049-2 instances express active biological functions, though these are vastly different from currently understood human physiology. Despite these alterations, SCP-049 often remarks that the subjects have been "cured".
+"}
+
+/obj/item/weapon/paper/scp/euclid/scp078
+	name = "SCP-078"
+	info = {"
+	<tt><center><b><font color='orange'>EUCLID: SCP-078</font></b>
+	<h3>FOUNDATION RESEARCH DIVISION</h3>
+	</center>
+<br>
+<b>Item #:</b> SCP-078
+<br>
+<b>Object Class:</b> Euclid
+<br>
+<b>Special Containment Procedures:</b> SCP-078 is to be left hanging on the wall of its containment cell and physically unplugged. The sole outlet in the room should be controlled by a switch, which must be left in the off position at all times unless SCP-078 is undergoing testing. Personnel who enter the containment room should familiarize themselves with the position of the switch so that they can locate it with their eyes closed in the event that SCP-078 is accidentally turned on.
+<br>
+<b>Description:</b> SCP-078 is a pink neon sign approximately one and a half meters long that displays the phrase "TOO LATE TO DIE YOUNG." It was initially recovered in the town of ¦¦¦¦¦¦¦¦, ¦¦¦¦¦¦¦¦, after standard Foundation data mining protocols recorded an abnormally high death rate due to starvation or other forms of self-neglect.
+While powered off, SCP-078 has no abnormal properties and may be observed without effect. Viewing SCP-078 for less than ten seconds while it is powered on has no effect, nor does indirect observation. Subjects who cannot understand SCP-078 due to a lack of ability to comprehend written English are also unaffected. However, any subject that views SCP-078 for longer than ten seconds will, when viewing any handwritten piece of writing, occasionally perceive extra sentences. These sentences are not written in the subject's own style or in that of the surrounding text, but consist of a random style that differs from note to note (see Addendum 078-01), and always are phrased as if to assuage the subject's guilt on some matter or decision they feel guilty about. For example, a D-class personnel who was convicted of murdering his wife in a heated argument read the sentence "She deserved it for not doing what you said" in his handwritten journal, while Dr. ¦¦¦¦¦¦, who left his family to work for the Foundation and was accidentally exposed, found the sentence "Your work will save humanity." in his notes on SCP-¦¦¦.
+At first, the effect is beneficial, with affected subjects reporting greater peace of mind after exposure to SCP-078. However, the sentences shift from emphasizing the positive consequences of actions to deemphasizing the negative ones on a timescale of one week; Dr. ¦¦¦¦¦¦, two days later, found the sentence "They never loved you anyway." in his personal journal. Moreover, the writing will start giving justifications for acts the subject has never felt guilt over, or which the subject has already rationalized. The subject will then start reconsidering his justifications for those actions, as well as attempting to justify any further actions that they take. The need for rationalization increases as time goes on, and they will start vocalizing their thought processes, and by the end of one week, any task the subject performs more trivial than the basics of survival will induce a bout of neurosis as the subject attempts to rationalize why they did not instead take some other action. By the end of two weeks, the subject is unable to eat food: after the first bite, they will spend the next hour justifying why they ate that specific part of the meal first. Death due to malnutrition follows unless the subject is fed intravenously. ¦ D-class personnel who have reached this stage, as well as ¦ researchers who were accidentally exposed, are kept alive for purposes of study and to see if a cure can be found.
+The sole exception to SCP-078's effect is SCP-078 itself: any subject who views SCP-078 a second time will see it displaying increasingly more guilt-inducing messages as duration since their first exposure increases. All subjects who have viewed it a week after initial exposure have attempted suicide.
 "}
 
 /obj/item/weapon/paper/scp/euclid/scp096

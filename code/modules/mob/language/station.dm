@@ -9,6 +9,17 @@
 	flags = RESTRICTED
 	syllables = list("hs","zt","kr","st","sh")
 
+/datum/language/eyepod
+	name = LANGUAGE_EYEPOD
+	desc = "A complex language known instinctively by Eyepods, 'spoken' by emitting modulated radio waves. This version uses high frequency waves for quick communication at short ranges."
+	speech_verb = "babbles"
+	ask_verb = "babbles curiously"
+	exclaim_verb = "babbles excitedly"
+	colour = "soghun"
+	key = "y"
+	flags = RESTRICTED
+	syllables = list("bi","ki","di","ti","ri","li","si","ki","mi","ni","chi","ee","ii","qi")
+
 /datum/language/diona/get_random_name()
 	var/new_name = "[pick(list("To Sleep Beneath","Wind Over","Embrace of","Dreams of","Witnessing","To Walk Beneath","Approaching the"))]"
 	new_name += " [pick(list("the Void","the Sky","Encroaching Night","Planetsong","Starsong","the Wandering Star","the Empty Day","Daybreak","Nightfall","the Rain"))]"

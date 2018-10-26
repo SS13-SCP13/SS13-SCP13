@@ -61,7 +61,7 @@ var/list/event_last_fired = list()
 	possibleEvents[/datum/event/infestation] = 100 + 100 * active_with_role["Janitor"]
 
 	possibleEvents[/datum/event/communications_blackout] = 50 + 25 * active_with_role["AI"] + active_with_role["Scientist"] * 25
-	possibleEvents[/datum/event/ionstorm] = active_with_role["AI"] * 25 + active_with_role["Cyborg"] * 25 + active_with_role["Engineer"] * 10 + active_with_role["Scientist"] * 5
+	// possibleEvents[/datum/event/ionstorm] = active_with_role["AI"] * 25 + active_with_role["Cyborg"] * 25 + active_with_role["Engineer"] * 10 + active_with_role["Scientist"] * 5
 	possibleEvents[/datum/event/grid_check] = 25 + 10 * active_with_role["Engineer"]
 	possibleEvents[/datum/event/electrical_storm] = 15 * active_with_role["Janitor"] + 5 * active_with_role["Engineer"]
 	possibleEvents[/datum/event/wallrot] = 30 * active_with_role["Engineer"] + 50 * active_with_role["Gardener"]
@@ -75,7 +75,7 @@ var/list/event_last_fired = list()
 		possibleEvents[/datum/event/radiation_storm] = active_with_role["Medical"] * 10
 		possibleEvents[/datum/event/spontaneous_appendicitis] = active_with_role["Medical"] * 10
 
-	possibleEvents[/datum/event/prison_break] = active_with_role["Security"] * 50
+	possibleEvents[/datum/event/prison_break] = active_with_role["Security"] * 25
 	if(active_with_role["Security"] > 0)
 		if(!sent_spiders_to_station)
 			possibleEvents[/datum/event/spider_infestation] = max(active_with_role["Security"], 5) + 5

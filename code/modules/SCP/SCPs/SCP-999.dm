@@ -1,5 +1,6 @@
 #define HUGGING 1
 #define IMMOBILIZING 2
+GLOBAL_LIST_EMPTY(scp999s)
 
 /datum/scp/SCP_999
 	name = "SCP-999"
@@ -21,8 +22,16 @@
 	var/attached_mode = HUGGING
 	var/list/last_healing = list()
 
-/mob/living/simple_animal/scp999/examine(mob/user)
+/mob/living/simple_animal/scp_999/examine(mob/user)
 	user << "<b><span class = 'success'><big>SCP-999</big></span></b> - [desc]"
+
+/mob/living/simple_animal/scp_999/New()
+	..()
+	GLOB.scp999s += src
+	
+/mob/living/simple_animal/scp_999/Destroy()
+	GLOB.scp999s -= src
+	..()
 
 /mob/living/simple_animal/scp_999/update_icon()
 	if(stat != DEAD && resting)

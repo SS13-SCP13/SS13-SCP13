@@ -142,7 +142,11 @@
 	access_adminlvl1,
 	access_telecommsgen,
 	access_servers,
-	access_commtower
+	access_commtower,
+	access_sciencelvl1,
+	access_sciencelvl3,
+	access_mtflvl1
+
 	)
 	minimal_access = list()
 
@@ -283,15 +287,15 @@
 	access = list(
 		access_com_comms,
 		access_sec_comms,
-		access_mtflvl1, 
-		access_mtflvl2, 
-		access_mtflvl3, 
-		access_mtflvl4, 
-		access_mtflvl5, 
-		access_sciencelvl1, 
-		access_sciencelvl2, 
-		access_sciencelvl3, 
-		access_sciencelvl4, 
+		access_mtflvl1,
+		access_mtflvl2,
+		access_mtflvl3,
+		access_mtflvl4,
+		access_mtflvl5,
+		access_sciencelvl1,
+		access_sciencelvl2,
+		access_sciencelvl3,
+		access_sciencelvl4,
 		access_keyauth
 	)
 	minimal_access = list()
@@ -382,7 +386,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4, access_sciencelvl1)
 	minimal_access = list()
 
 //##
@@ -476,7 +480,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_adminlvl1, access_adminlvl2, access_adminlvl3)
+	access = list(access_sciencelvl1, access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_adminlvl1, access_adminlvl2, access_adminlvl3)
 	minimal_access = list()
 
 //##
@@ -567,7 +571,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_adminlvl1, access_adminlvl2)
+	access = list(access_sciencelvl1, access_sec_comms, access_mtflvl1, access_mtflvl2, access_adminlvl1, access_adminlvl2)
 	minimal_access = list()
 
 // SCIENCE
@@ -666,8 +670,8 @@
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(
-	access_com_comms, 
-	access_sci_comms, 
+	access_com_comms,
+	access_sci_comms,
 	access_sciencelvl5,
 	access_sciencelvl4,
 	access_sciencelvl3,

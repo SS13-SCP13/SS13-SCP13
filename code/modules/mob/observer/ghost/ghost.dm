@@ -328,7 +328,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/ghost/verb/become_scp()
 	set category = "Ghost"
-	set name = "Become SCP"
+	set name = "Become Euclid/Keter SCP"
 	set desc = "Take control of a clientless SCP."
 
 	if (world.time - timeofdeath >= 5 MINUTES)
@@ -349,7 +349,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 					scps += M
 			// add new humanoid SCPs here or they won't be playable - Kachnov
 			if (scps.len)
-				var/mob/living/scp = input(src, "Which SCP do you want to take control of?") as null|anything in scps
+				var/mob/living/scp = input(src, "Which Euclid/Keter SCP do you want to take control of?") as null|anything in scps
 				if (scp && !scp.client)
 					scp.do_possession(src)
 					if (ishuman(scp))
@@ -389,11 +389,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 				else
 					src << "<span class = 'danger'>This SCP has already been taken by someone else.</span>"
 			else
-				src << "<span class = 'danger'>There are no available SCPs.</span>"
+				src << "<span class = 'danger'>There are no available Euclid/Keter SCPs.</span>"
 		else
-			src << "<span class = 'danger'>You cannot take control of a SCP until the security level is Red, Delta, or Black.</span>"
+			src << "<span class = 'danger'>You cannot take control of a Euclid/Keter SCP until the security level is Red, Delta, or Black.</span>"
 	else
-		src << "<span class = 'danger'>You cannot spawn as a SCP for [round(((5 MINUTES) - (world.time - timeofdeath))/600)] more minutes.</span>"
+		src << "<span class = 'danger'>You cannot spawn as a Euclid/Keter SCP for [round(((5 MINUTES) - (world.time - timeofdeath))/600)] more minutes.</span>"
 
 
 /mob/observer/ghost/proc/ghost_to_turf(var/turf/target_turf)
@@ -497,6 +497,44 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		host.ckey = src.ckey
 		host.status_flags |= NO_ANTAG
 		to_chat(host, "<span class='info'>You are now a mouse. Try to avoid interaction with players, and do not give hints away that you are more than a simple rodent.</span>")
+
+/mob/observer/ghost/verb/become_safe()
+	set name = "Become Safe SCP"
+	set category = "Ghost"
+
+	// if(config.disable_player_safe_scps)
+	// 	to_chat(src, "<span class='warning'>Spawning as adorable Safe SCPs is currently disabled.</span>")
+	// 	return
+
+	if(!MayRespawn(1, ANIMAL_SPAWN_DELAY))
+		return
+
+	//find a viable Safe class candidate
+	var/list/scps = list()
+	for (var/scp131 in GLOB.scp131s)
+		var/mob/M = scp131
+		if (!M.client)
+			scps += M
+	for (var/scp529 in GLOB.scp529s)
+		var/mob/M = scp529
+		if (!M.client)
+			scps += M
+	for (var/scp999 in GLOB.scp999s)
+		var/mob/M = scp999
+		if (!M.client)
+			scps += M
+	if (scps.len)
+		var/mob/living/scp = input(src, "Which Safe SCP do you want to take control of?") as null|anything in scps
+		if (scp && !scp.client)
+			scp.do_possession(src)
+			announce_ghost_joinleave(src, 0, "They are now a Safe SCP.")
+			if(src)
+				to_chat(src, "<span class='info'>You are now a Safe SCP. Be sure to read your relevant SCP page and roleplay accordingly!</span>")
+		else 
+			to_chat(src, "<span class='warning'>Someone has already taken control of this SCP.</span>")
+	else
+		to_chat(src, "<span class='warning'>All playable Safe SCPs are currently being played.</span>")
+	
 /mob/observer/ghost/verb/view_manfiest()
 	set name = "Show Crew Manifest"
 	set category = "Ghost"
