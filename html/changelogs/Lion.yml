@@ -38,3 +38,4 @@ changes:
   - bugfix: "Fixes an empty security crate in logistics."
   - rscadd: "Added documentation for SCP-078, 013 and 131."
   - maptweak: "Mapped in SCP-078, 013 and 131."
+  - maptweak: "Mapped in a general purpose testing laboratory for Safe SCP's. It's located opposite of Josie's chamber."
