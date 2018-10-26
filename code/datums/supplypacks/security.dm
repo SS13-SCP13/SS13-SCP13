@@ -1,6 +1,6 @@
-/decl/hierarchy/supply_pack/security
+/*/decl/hierarchy/supply_pack/security
 	name = "Security"
-
+*/
 /decl/hierarchy/supply_pack/security/specialops
 	name = "Special Ops supplies"
 	contains = list(/obj/item/weapon/storage/box/emps,
