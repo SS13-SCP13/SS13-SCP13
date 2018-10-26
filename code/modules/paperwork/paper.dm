@@ -93,19 +93,27 @@
 		var/mob/living/silicon/ai/AI = user
 		can_read = get_dist(src, AI.camera) < 2
 	var/content = info
+	var/mob/living/carbon/human/H = user
 
 	// SCP-078: Too Late To Die Young
-	if(user.dies_young > 0)
+	var/datum/job/J
+	if (H.mind.assigned_job)
+		J = H.mind.assigned_job
+	else
+		J.title = "Unknown"
+		J.department = "Unknown"
+		J.department_flag = "Unknown"
+
+	if(H.dies_young > 0)
 		if(prob(50))
-			user.dies_young += 1
-		var/solace_job = user.job.title
-		var/solace_dept = user.job.department
-		var/solace_deptflag = user.job.department_flag
+			H.dies_young += 1
+		var/solace_jobtitle = J.title
+		var/solace_deptflag = J.department_flag
 		var/solace_possibilities = list(
 			"It hurt them, but they deserved it.",
 			"You cannot be blamed for what you did."
 		)
-		if (solace_job == "Class D")
+		if (solace_jobtitle == "Class D")
 			solace_possibilities += list(
 				"Nobody blames you for your crimes.",
 				"You needn't feel ashamed of what brought you here.",
@@ -146,26 +154,26 @@
 				"Memory is a small price to pay for comfort.",
 				"You're not responsible for anything that happens here. It's just a job."
 			)
-		if (solace_job == "Janitor")
+		if (solace_jobtitle == "Janitor")
 			solace_possibilities += list(
 				"No one here has cleaner hands than you."
 			)
-		if (solace_job == "Cook")
+		if (solace_jobtitle == "Cook")
 			solace_possibilities += list(
 				"You aren't to blame. You just serve the food."
 			)
-		if (solace_job == "Bartender")
+		if (solace_jobtitle == "Bartender")
 			solace_possibilities += list(
 				"You aren't to blame. You just pour the drinks."
 			)
-		if (dies_young > 4)
+		if (H.dies_young > 4)
 			solace_possibilities += list(
 				"There is no shame in this life you have lived.",
 				"Your life was spent well, if this is how it ends.",
 				"Even if you die today, you will do no more wrong.",
 				"Your life was not wasted, in the end."
 			)
-		if (dies_young > 7)
+		if (H.dies_young > 7)
 			solace_possibilities = list(
 				"If you let yourself see tomorrow, you will only hurt them again.",
 				"When you finally end it all, the guilt will end too.",
@@ -175,13 +183,13 @@
 		var/solace = pick(solace_possibilities)
 		var/fullstop = findtext(info,". ")
 		while(prob(90))
-			nextFullstop = findtext(info,". ", fullstop)
+			var/nextFullstop = findtext(info,". ", fullstop)
 			if (nextFullstop > fullstop)
 				fullstop = nextFullstop
 
 		if(fullstop)
-			var/start_text = copytext(info, 1, first_fullstop)
-			var/end_text = copytext(info, first_fullstop, 0)
+			var/start_text = copytext(info, 1, fullstop)
+			var/end_text = copytext(info, fullstop, 0)
 			content = start_text + solace + end_text
 
 	// End of SCP-078's horrible messages.
