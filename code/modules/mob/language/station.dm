@@ -13,8 +13,8 @@
 	name = LANGUAGE_EYEPOD
 	desc = "A complex language known instinctively by Eyepods, 'spoken' by emitting modulated radio waves. This version uses high frequency waves for quick communication at short ranges."
 	speech_verb = "babbles"
-	ask_verb = "babbles"
-	exclaim_verb = "babbles"
+	ask_verb = "babbles curiously"
+	exclaim_verb = "babbles excitedly"
 	colour = "soghun"
 	key = "y"
 	flags = RESTRICTED
