@@ -34,3 +34,4 @@ delete-after: True
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
   - bugfix: "Fixes an issue where Communications Officers cannot make use of camera networks."
+  - bugfix: "Fixes an issue where EZ Agents could not access the research wing."
