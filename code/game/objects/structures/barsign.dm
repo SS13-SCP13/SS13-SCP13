@@ -41,7 +41,7 @@
 		if("toolate")
 			to_chat(user, "The moments you regret the most come flooding back, all at once. Try as you might, you can't look away.")
 			spawn(300)
-				to_chat(user, "You tear your gaze away from the sign, left with unlikely peace of mind.")
+				to_chat(user, "You begin to think about how to forgive yourself, and make peace with the past.")
 				if(user.dies_young == 0)
 					user.dies_young = 1
 		if("on", "empty")
