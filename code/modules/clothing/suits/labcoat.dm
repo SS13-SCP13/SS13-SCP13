@@ -118,7 +118,7 @@
 // Donator labcoats
 /obj/item/clothing/suit/storage/toggle/labcoat/flip
 	name = "Alper Flip's labcoat"
-	desc = "A full-body labcoat. It has a small Foundation logo on the front. The name 'Alper Flip' is sewn into the collar."
+	desc = "A labcoat with a small Foundation logo on the front. The name 'Alper Flip' is sewn into the collar."
 	icon_state = "flip_labcoat_open"
 	icon_open = "flip_labcoat_open"
 	icon_closed = "flip_labcoat_closed"
@@ -126,7 +126,7 @@
 	
 /obj/item/clothing/suit/storage/toggle/labcoat/cmoalt/fields
 	name = "Dr. Fields' labcoat"
-	desc = "A full-body labcoat. It has a small Foundation logo on the front. The name 'Fields' is sewn in on the left-hand side."
+	desc = "A labcoat with a small Foundation logo on the front and a golden outline. The name 'Dr. Matthew Fields' is sewn in on the left-hand side."
 	icon_state = "fields_labcoat_open"
 	icon_open = "fields_labcoat_open"
 	icon_closed = "fields_labcoat_closed"
