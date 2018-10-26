@@ -1,6 +1,6 @@
-/decl/hierarchy/supply_pack/security
+/*/decl/hierarchy/supply_pack/security
 	name = "Security"
-
+*/
 /decl/hierarchy/supply_pack/security/lightarmorsol
 	name = "Armor - SCG light"
 	contains = list(/obj/item/clothing/suit/armor/pcarrier/light/sol = 4,
