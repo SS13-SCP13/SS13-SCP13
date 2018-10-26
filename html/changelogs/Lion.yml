@@ -1,4 +1,4 @@
-################################
+################################=-
 # Example Changelog File
 #
 # Note: This file, and files beginning with ".", and files that don't end in ".yml" will not be read. If you change this file, you will look really dumb.
@@ -35,3 +35,4 @@ delete-after: True
 changes: 
   - bugfix: "Fixes an issue where Communications Officers cannot make use of camera networks."
   - bugfix: "Fixes an issue where EZ Agents could not access the research wing."
+  - bugfix: "Fixes an empty security crate in logistics."
