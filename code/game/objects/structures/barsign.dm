@@ -20,7 +20,6 @@
 
 /obj/structure/sign/double/barsign/scp_078
 	name = "SCP-078"
-	desc = "You can barely make out the words 'Too Late To Die Young' on this unpowered neon sign."
 	description_info = "If your ID has science access, you may swipe it on this sign to alter its display."
 	icon = 'icons/obj/barsigns.dmi'
 	icon_state = "Off"
@@ -30,8 +29,7 @@
 	toolate_on = 0
 
 /obj/structure/sign/double/barsign/scp_078/Process()
-	var/list/our_view = view(7, src)
-	for (var/mob/living/carbon/human/H in our_view)
+	for (var/mob/living/carbon/human/H in range(7, src))
 		if(H.SCP)
 			continue
 		if(is_blind(H) || H.eye_blind > 0)
@@ -78,13 +76,13 @@
 		if(toolate == 1)
 			if(access_sciencelvl1 in card.GetAccess())
 				if(toolate_on)
+					toolate_on = 0
+					icon_state = "Off"
+					to_chat(user, "<span class='notice'>You swipe your card to switch the neon sign off.</span>")
+				else
 					toolate_on = 1
 					icon_state = "toolate"
 					to_chat(user, "<span class='notice'>You swipe your card, and the neon sign flickers to life.</span>")
-				else
-					toolate_on = 0
-					icon_state = "off"
-					to_chat(user, "<span class='notice'>You swipe your card to switch the neon sign off.</span>")
 			else
 				to_chat(user, "<span class='warning'>The power supply flashes a red light - access denied.</span>")
 			return
