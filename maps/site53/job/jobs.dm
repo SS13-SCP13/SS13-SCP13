@@ -83,8 +83,7 @@
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = l
-	list(/datum/mil_rank/civ/classa)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
 	alt_titles = list("Personnel Director")
 	equip(var/mob/living/carbon/human/H)
 		..()
