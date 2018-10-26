@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(scp529s)
+
 /mob/living/simple_animal/cat/fluff/SCP529
 	SCP = /datum/scp/SCP_529
 	name = "SCP-529"
