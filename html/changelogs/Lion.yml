@@ -36,3 +36,5 @@ changes:
   - bugfix: "Fixes an issue where Communications Officers cannot make use of camera networks."
   - bugfix: "Fixes an issue where EZ Agents could not access the research wing."
   - bugfix: "Fixes an empty security crate in logistics."
+  - rscadd: "Added documentation for SCP-078, 013 and 131."
+  - maptweak: "Mapped in SCP-078, 013 and 131."

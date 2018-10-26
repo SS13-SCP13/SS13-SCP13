@@ -255,6 +255,12 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
+/area/site53/ulcz/scp078
+	name = "\improper SCP-078"
+	icon_state = "research"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
+
 /area/site53/ulcz/scp173
 	name = "\improper SCP-173"
 	icon_state = "research"
