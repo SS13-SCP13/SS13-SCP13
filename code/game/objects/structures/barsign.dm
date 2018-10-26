@@ -42,8 +42,10 @@
 			to_chat(user, "The moments you regret the most come flooding back, all at once. Try as you might, you can't look away.")
 			spawn(300)
 				to_chat(user, "You begin to think about how to forgive yourself, and make peace with the past.")
-				if(user.dies_young == 0)
-					user.dies_young = 1
+				if(ishuman(user))
+					var/mob/living/carbon/human/H = user
+					if(H.dies_young == 0)
+						H.dies_young = 1
 		if("on", "empty")
 			to_chat(user, "The lights are on, but there's no picture.")
 		else
