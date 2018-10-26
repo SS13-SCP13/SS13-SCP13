@@ -83,7 +83,8 @@
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/headofhr
 	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/classa)
+	allowed_ranks = l
+	list(/datum/mil_rank/civ/classa)
 	alt_titles = list("Personnel Director")
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -142,7 +143,11 @@
 	access_adminlvl1,
 	access_telecommsgen,
 	access_servers,
-	access_commtower
+	access_commtower,
+	access_sciencelvl1,
+	access_sciencelvl3,
+	access_mtflvl1
+
 	)
 	minimal_access = list()
 
@@ -283,15 +288,15 @@
 	access = list(
 		access_com_comms,
 		access_sec_comms,
-		access_mtflvl1, 
-		access_mtflvl2, 
-		access_mtflvl3, 
-		access_mtflvl4, 
-		access_mtflvl5, 
-		access_sciencelvl1, 
-		access_sciencelvl2, 
-		access_sciencelvl3, 
-		access_sciencelvl4, 
+		access_mtflvl1,
+		access_mtflvl2,
+		access_mtflvl3,
+		access_mtflvl4,
+		access_mtflvl5,
+		access_sciencelvl1,
+		access_sciencelvl2,
+		access_sciencelvl3,
+		access_sciencelvl4,
 		access_keyauth
 	)
 	minimal_access = list()
@@ -666,8 +671,8 @@
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list(
-	access_com_comms, 
-	access_sci_comms, 
+	access_com_comms,
+	access_sci_comms,
 	access_sciencelvl5,
 	access_sciencelvl4,
 	access_sciencelvl3,
