@@ -1,0 +1,12 @@
+author: Rhicora
+delete-after: True
+changes: 
+  - rscadd: "Added SCP-078."
+  - rscadd: "Added SCP-013."
+  - rscadd: "Added SCP-131. Made A and B playable in Safe mode."
+  - tweak: "Separated Safe SCP ghost spawner from the Euclid/Keter one."
+  - tweak: "Made SCP-999 playable in Safe mode."
+  - tweak: "Made SCP-529 playable in Safe mode."
+  - tweak: "Edited the frequency of some events, removed some more bad ones."
+  - tweak: "Reduced the speed of some SCPs, but not quite to human speed."
+  - rscadd: "Added custom labcoats and glasses for some Patrons."
