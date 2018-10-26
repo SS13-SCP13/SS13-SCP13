@@ -119,23 +119,23 @@
 /obj/item/clothing/suit/storage/toggle/labcoat/flip
 	name = "Alper Flip's labcoat"
 	desc = "A full-body labcoat. It has a small Foundation logo on the front. The name 'Alper Flip' is sewn into the collar."
-	icon_state = "Labcoat Table O"
-	icon_open = "Labcoat Table O"
-	icon_closed = "Labcoat Table C"
+	icon_state = "flip_labcoat_open"
+	icon_open = "flip_labcoat_open"
+	icon_closed = "flip_labcoat_closed"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	
 /obj/item/clothing/suit/storage/toggle/labcoat/cmoalt/fields
 	name = "Dr. Fields' labcoat"
 	desc = "A full-body labcoat. It has a small Foundation logo on the front. The name 'Fields' is sewn in on the left-hand side."
-	icon_state = "Dr. Fields' Labcoat Open"
-	icon_open = "Dr. Fields' Labcoat Open"
-	icon_closed = "Dr. Fields' Labcoat"
+	icon_state = "fields_labcoat_open"
+	icon_open = "fields_labcoat_open"
+	icon_closed = "fields_labcoat_closed"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	
 /obj/item/clothing/suit/storage/toggle/labcoat/poehl
 	name = "Dr. Poehl's labcoat"
 	desc = "This dark custom labcoat has blue crosses on either sleeve, and the name tag on the left side front says 'Dr. Poehl'. You can see a few coffee stains on the front. There's a silver Walkman peeking out from one of the front pockets."
-	icon_state = "Fishii Labcoat Open"
-	icon_open = "Fishii Labcoat Open"
-	icon_closed = "Fishii Labcoat"
+	icon_state = "poehl_labcoat_open"
+	icon_open = "poehl_labcoat_open"
+	icon_closed = "poehl_labcoat_closed"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
