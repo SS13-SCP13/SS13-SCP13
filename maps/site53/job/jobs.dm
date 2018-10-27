@@ -270,7 +270,7 @@
 	economic_modifier = 8
 	minimal_player_age = 15
 	ideal_character_age = 55
-//	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
+	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
