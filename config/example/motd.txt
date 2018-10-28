@@ -3,3 +3,4 @@
 -<i>This server is running <a href="https://scp13.site">SCP13's</a> modification of the <a href="http://ss13.eu/">/tg/station13</a> SS13 code.</i>
 <br><br>
 <strong>Bugtracker:</strong> <a href="https://github.com/SS13-SCP13/SS13-SCP13/issues">for posting of bugs and issues.</a>
+<strong>Visit us at <a href="https://scp13.site">our website.</a>
