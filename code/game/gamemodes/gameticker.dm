@@ -36,6 +36,7 @@ var/global/datum/controller/gameticker/ticker
 	var/looking_for_antags = 0
 
 /datum/controller/gameticker/proc/pregame()
+	set waitfor = FALSE
 	do
 		if(!gamemode_voted)
 			pregame_timeleft = 180
