@@ -51,7 +51,6 @@ var/global/datum/controller/gameticker/ticker
 			else
 				master_mode = "extended"
 
-		to_world("<b>Trying to start [master_mode]...</b>")
 		to_world("<B><FONT color='blue'>Welcome to the pre-game lobby!</FONT></B>")
 		to_world("Please, setup your character and select ready. Game will start in [pregame_timeleft] seconds")
 
@@ -72,6 +71,7 @@ var/global/datum/controller/gameticker/ticker
 			if(pregame_timeleft <= 0 || ((Master.initialization_stage & INITIALIZATION_NOW_AND_COMPLETE) == INITIALIZATION_NOW_AND_COMPLETE))
 				current_state = GAME_STATE_SETTING_UP
 				Master.SetRunLevel(RUNLEVEL_SETUP)
+				to_world("<b>Trying to start [master_mode]...</b>")
 
 	while (!setup())
 
@@ -88,8 +88,8 @@ var/global/datum/controller/gameticker/ticker
 		if(!runnable_modes.len)
 			current_state = GAME_STATE_PREGAME
 			Master.SetRunLevel(RUNLEVEL_LOBBY)
+			Master.initialization_stage &= ~INITIALIZATION_NOW
 			to_world("<B>Unable to choose playable game mode.</B> Reverting to pre-game lobby.")
-
 			return 0
 		if(secret_force_mode != "secret")
 			src.mode = config.pick_mode(secret_force_mode)
@@ -104,8 +104,8 @@ var/global/datum/controller/gameticker/ticker
 	if(!src.mode)
 		current_state = GAME_STATE_PREGAME
 		Master.SetRunLevel(RUNLEVEL_LOBBY)
+		Master.initialization_stage &= ~INITIALIZATION_NOW
 		to_world("<span class='danger'>Serious error in mode setup!</span> Reverting to pre-game lobby.")
-
 		return 0
 
 	job_master.ResetOccupations()
@@ -116,9 +116,9 @@ var/global/datum/controller/gameticker/ticker
 	var/t = src.mode.startRequirements()
 	if(t)
 		to_world("<B>Unable to start [mode.name].</B> [t] Reverting to pre-game lobby.")
-
 		current_state = GAME_STATE_PREGAME
 		Master.SetRunLevel(RUNLEVEL_LOBBY)
+		Master.initialization_stage &= ~INITIALIZATION_NOW
 		mode.fail_setup()
 		mode = null
 		job_master.ResetOccupations()
