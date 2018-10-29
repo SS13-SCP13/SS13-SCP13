@@ -26,9 +26,6 @@ SUBSYSTEM_DEF(minimap)
 	var/list/extra_minimaps = list()
 	var/list/station_holomaps = list()
 
-/datum/controller/subsystem/minimap/New()
-	NEW_SS_GLOBAL(SSminimap)
-
 /datum/controller/subsystem/minimap/Initialize()
 	holo_minimaps.len = world.maxz
 	for (var/z in 1 to world.maxz)

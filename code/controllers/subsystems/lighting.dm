@@ -22,8 +22,6 @@ SUBSYSTEM_DEF(lighting)
 	var/total_lighting_overlays = 0
 
 /datum/controller/subsystem/lighting/Initialize() 
-
-	set waitfor = FALSE 
 	create_all_lighting_overlays()
 	lighting_overlays_initialised = TRUE 
 	fire()

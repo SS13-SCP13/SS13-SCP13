@@ -119,6 +119,7 @@ var/global/list/map_count = list()
 				map[current_cell] = WALL_CHAR
 			else
 				map[current_cell] = FLOOR_CHAR
+			CHECK_TICK
 
 /datum/random_map/proc/clear_map()
 	for(var/x = 1, x <= limit_x, x++)

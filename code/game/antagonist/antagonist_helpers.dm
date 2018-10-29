@@ -3,7 +3,7 @@
 		return 0
 
 	var/datum/job/J = job_master ? job_master.GetJob(player.assigned_role) : null
-	if(isnull(J) || is_type_in_list(J,blacklisted_jobs))
+	if(J && is_type_in_list(J,blacklisted_jobs))
 		return 0
 
 	if(!ignore_role)

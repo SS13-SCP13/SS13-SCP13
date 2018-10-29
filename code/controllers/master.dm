@@ -159,12 +159,12 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 // Please don't stuff random bullshit here,
 // 	Make a subsystem, give it the SS_NO_FIRE flag, and do your work in it's Initialize()
 /datum/controller/master/Initialize(delay, init_sss)
-	set waitfor = 0
+	set waitfor = FALSE
 
 	if(delay)
 		sleep(delay)
 
-	if(init_sss)
+	if(init_sss || isnull(subsystems) || !length(subsystems))
 		init_subtypes(/datum/controller/subsystem, subsystems)
 
 	report_progress("Initializing subsystems...")
@@ -180,7 +180,10 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	for (var/datum/controller/subsystem/SS in subsystems)
 		if (SS.flags & SS_NO_INIT)
 			continue
-		SS.Initialize(REALTIMEOFDAY)
+		try
+			SS.Initialize(REALTIMEOFDAY)
+		catch(var/exception/E)
+			pass(E)
 		CHECK_TICK
 	current_ticklimit = TICK_LIMIT_RUNNING
 	var/time = (REALTIMEOFDAY - start_timeofday) / 10
