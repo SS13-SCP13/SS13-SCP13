@@ -239,6 +239,9 @@ GLOBAL_LIST_EMPTY(client2mob)
 
 	if(holder)
 		src.control_freak = 0 //Devs need 0 for profiler access
+
+	return TRUE
+
 	//////////////
 	//DISCONNECT//
 	//////////////

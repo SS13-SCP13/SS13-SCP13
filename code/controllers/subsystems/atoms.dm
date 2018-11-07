@@ -41,7 +41,8 @@ SUBSYSTEM_DEF(atoms)
 				CHECK_TICK
 	else
 		count = 0
-		for(var/atom/A in world)
+		for(var/atom in world)
+			var/atom/A = atom
 			if(!A.initialized)
 				InitAtom(A, mapload_arg)
 				++count
@@ -80,13 +81,9 @@ SUBSYSTEM_DEF(atoms)
 				if(arguments[1])	//mapload
 					late_loaders += A
 				else
-					A.LateInitialize(arglist(arguments))
+					A.LateInitialize()
 			if(INITIALIZE_HINT_QDEL)
-				// this seemingly helps avoid hard deletes
-				if (ismovable(A))
-					var/atom/movable/AM = A 
-					AM.forceMove(null)
-				qdel_after(A, 30 SECONDS)
+				qdel(A)
 				qdeleted = TRUE
 			else
 				BadInitializeCalls[the_type] |= BAD_INIT_NO_HINT

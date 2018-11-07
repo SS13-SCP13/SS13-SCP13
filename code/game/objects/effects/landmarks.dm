@@ -319,7 +319,8 @@
 		min_y = max(src.y, min_y)
 		max_y = min(src.y + generation_height, max_y)
 
-	new /datum/random_map/automata/cave_system(seed, min_x, min_y, src.z, max_x, max_y)
-	new /datum/random_map/noise/ore(seed, min_x, min_y, src.z, max_x, max_y)
-
-	GLOB.using_map.refresh_mining_turfs(src.z)
+	// don't hold up SSatoms
+	spawn(0)
+		new /datum/random_map/automata/cave_system(seed, min_x, min_y, src.z, max_x, max_y)
+		new /datum/random_map/noise/ore(seed, min_x, min_y, src.z, max_x, max_y)
+		GLOB.using_map.refresh_mining_turfs(src.z)
