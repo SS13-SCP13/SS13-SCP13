@@ -39,7 +39,6 @@ GLOBAL_LIST_EMPTY(areas)
 	power_change()		// all machines set to current power level, also updates lighting icon
 	get_vents()
 
-// don't wait on this in initialization
 /area/proc/get_vents()
 	for (var/obj/machinery/atmospherics/unary/vent_pump/vent in contents)
 		vents += vent
