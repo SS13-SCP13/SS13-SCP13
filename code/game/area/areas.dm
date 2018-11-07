@@ -41,7 +41,6 @@ GLOBAL_LIST_EMPTY(areas)
 
 // don't wait on this in initialization
 /area/proc/get_vents()
-	set waitfor = FALSE
 	for (var/obj/machinery/atmospherics/unary/vent_pump/vent in contents)
 		vents += vent
 
