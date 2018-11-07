@@ -288,7 +288,11 @@ SUBSYSTEM_DEF(garbage)
 
 	if(!istype(D))
 		crash_with("qdel() can only handle /datum (sub)types, was passed: [log_info_line(D)]")
-		del(D)
+
+		// nothing else that isn't a /datum should need to be hard-deleted
+		if (islist(D))
+			del(D)
+
 		return
 
 

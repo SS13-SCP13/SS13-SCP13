@@ -19,7 +19,7 @@ var/const/EXTRA_COST_FACTOR = 1.25
 			recipe.resources = list()
 			for(var/material in I.matter)
 				recipe.resources[material] = I.matter[material] * EXTRA_COST_FACTOR
-		qdel(I)
+		//qdel(I) // this tends to runtime, and it's not needed
 
 /datum/autolathe/recipe
 	var/name = "object"
