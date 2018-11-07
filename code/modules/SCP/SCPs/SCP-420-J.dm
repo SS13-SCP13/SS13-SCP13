@@ -30,3 +30,4 @@ GLOBAL_LIST_EMPTY(possible_420j)
 	if(!T || !istype(T, /atom))
 		return
 	new /obj/item/clothing/mask/smokable/cigarette/scp_420_j(T)
+	return TRUE // so the hook doesn't "fail" - Kachnov
