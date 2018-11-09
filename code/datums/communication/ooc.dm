@@ -43,10 +43,10 @@
 	var/tagdesc = "OOC:"
 	var/name = "<strong>[C.key]:</strong>"
 	if(ooc_style == "everyone")
-		if(d_holder.flags & D_TAG)
+		if(d_holder && (d_holder.flags & D_TAG))
 			tagname = "donator"
 			tagdesc = "DONATOR:"
-		if(d_holder.flags & D_OOCCOLOUR)
+		if(d_holder && (d_holder.flags & D_OOCCOLOUR))
 			name = "<font color='[ooc_color]'>[name]</font>"
 
 
