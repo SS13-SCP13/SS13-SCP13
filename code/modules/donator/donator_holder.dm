@@ -15,4 +15,3 @@
 		if(flgs & D_DOOC)
 			client.verbs -= /client/proc/dooc
 		flags &= ~flgs
-

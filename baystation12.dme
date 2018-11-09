@@ -1387,7 +1387,6 @@
 #include "code\modules\detectivework\tools\swabs.dm"
 #include "code\modules\detectivework\tools\uvlight.dm"
 #include "code\modules\DMAPI\tgs\includes.dm"
-#include "code\modules\donator\client.dm"
 #include "code\modules\donator\donator_holder.dm"
 #include "code\modules\donator\donator_ooc.dm"
 #include "code\modules\donator\load_donators.dm"
