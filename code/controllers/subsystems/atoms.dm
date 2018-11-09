@@ -16,6 +16,8 @@ SUBSYSTEM_DEF(atoms)
 
 	var/list/BadInitializeCalls = list()
 
+	var/last_atom = null
+
 /datum/controller/subsystem/atoms/Initialize(timeofday)
 	initialized = INITIALIZATION_INNEW_MAPLOAD
 	InitializeAtoms()
@@ -37,6 +39,7 @@ SUBSYSTEM_DEF(atoms)
 		for(var/I in atoms)
 			var/atom/A = I
 			if(!A.initialized)
+				last_atom = A.type
 				InitAtom(I, mapload_arg)
 				CHECK_TICK
 	else
@@ -44,6 +47,7 @@ SUBSYSTEM_DEF(atoms)
 		for(var/atom in world)
 			var/atom/A = atom
 			if(!A.initialized)
+				last_atom = A.type
 				InitAtom(A, mapload_arg)
 				++count
 				CHECK_TICK

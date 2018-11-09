@@ -23,6 +23,10 @@
 	..()
 
 /obj/turbolift_map_holder/Initialize()
+
+	// this wouldn't stop crashing SSatoms so now its disabled, fuck you - Kachnov
+	set waitfor = FALSE
+
 	. = ..()
 	// Create our system controller.
 	var/datum/turbolift/lift = new()
@@ -163,6 +167,8 @@
 				if(tx >= ux && tx <= ex && ty >= uy && ty <= ey)
 					floor_turfs += checking
 
+				CHECK_TICK
+
 		// Place exterior doors.
 		for(var/tx = door_x1 to door_x2)
 			for(var/ty = door_y1 to door_y2)
@@ -184,6 +190,8 @@
 					else
 						cfloor.doors += newdoor
 						newdoor.floor = cfloor
+
+				CHECK_TICK
 
 		// Place exterior control panel.
 		var/turf/placing = locate(ext_panel_x, ext_panel_y, cz)
@@ -216,6 +224,8 @@
 		var/area/A = locate(area_path)
 		cfloor.set_area_ref("\ref[A]")
 		az++
+
+		CHECK_TICK
 
 	// Place lift panel.
 	var/turf/T = locate(int_panel_x, int_panel_y, uz)
