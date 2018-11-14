@@ -35,3 +35,6 @@ delete-after: True
 changes: 
   - spellcheck: "Fixed Medical and Engineering uniforms to be named guard commander uniform, despite having a different sprite."
   - bugfix: "Fixed Chief Engineer being set as Misc under the crew roster."
+  - bugfix: "Fixed a bug with CMO not being able to access their fax machine."
+  - tweak: "Altered EZ Agent access to add basic access to Medical."
+  - tweak: "Altered access for Medical Doctors, Surgeons and the CMO."

@@ -386,7 +386,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4, access_sciencelvl1)
+	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4, access_sciencelvl1, access_medicalgen)
 	minimal_access = list()
 
 //##
@@ -480,7 +480,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sciencelvl1, access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_adminlvl1, access_adminlvl2, access_adminlvl3)
+	access = list(access_sciencelvl1, access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_medicalgen)
 	minimal_access = list()
 
 //##
@@ -571,7 +571,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sciencelvl1, access_sec_comms, access_mtflvl1, access_mtflvl2, access_adminlvl1, access_adminlvl2)
+	access = list(access_sciencelvl1, access_sec_comms, access_mtflvl1, access_mtflvl2, access_adminlvl1, access_adminlvl2, access_medicalgen)
 	minimal_access = list()
 
 // SCIENCE
@@ -853,7 +853,7 @@
 	/datum/mil_rank/security/o5
 	)
 
-	access = list(access_com_comms, access_med_comms, access_medicalgen, access_medicalequip, access_medicalviro, access_medicalchem, access_s53cmo, access_keyauth, access_mtflvl1)
+	access = list(access_com_comms, access_med_comms, access_medicalgen, access_medicalequip, access_medicalviro, access_medicalchem, access_s53cmo, access_keyauth, access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -933,7 +933,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_med_comms, access_medicalgen, access_medicalequip)
+	access = list(access_med_comms, access_medicalgen, access_medicalequip, access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 
 /datum/job/virologist
@@ -985,7 +985,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_med_comms, access_medicalgen, access_medicalequip)
+	access = list(access_med_comms, access_medicalgen, access_medicalequip, access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
 
 /datum/job/emt
