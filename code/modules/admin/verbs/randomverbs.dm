@@ -897,7 +897,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			message_admins("\blue [key_name_admin(usr)] has admin cryoed [key_name(M)]")
 			log_admin("[key_name(usr)] admin cryoed [key_name(M)]")
 
-			// remove the mob from crew records 
+			// remove the mob from crew records
 			if (GLOB.mob2crew_record[M])
 				GLOB.all_crew_records -= GLOB.mob2crew_record[M]
 

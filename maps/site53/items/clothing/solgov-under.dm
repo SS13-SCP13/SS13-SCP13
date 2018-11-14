@@ -62,13 +62,13 @@
 
 /obj/item/clothing/under/scp/utility/medical
 	desc = "A dark black uniform. This one seems to be of the Medical department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
-	name = "guard commander uniform"
+	name = "medical uniform"
 	icon_state = "scpuniform"
 	worn_state = "uniform_m"
 
 /obj/item/clothing/under/scp/utility/engineering
 	desc = "A dark black uniform. This one seems to be of the Engineering department. This uniform is issued regardless of rank. On the back, in silver lettering, are the words 'SCP FOUNDATION'."
-	name = "guard commander uniform"
+	name = "engineering uniform"
 	icon_state = "scpuniform"
 	worn_state = "uniform_e"
 

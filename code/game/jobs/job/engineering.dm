@@ -2,6 +2,7 @@
 	title = "Chief Engineer"
 	supervisors = "the Security Commander and Facility Director"
 	selection_color = "#5b4d20"
+	department_flag = ENG|COM
 	economic_modifier = 9
 	ideal_character_age = 40
 	minimal_player_age = 21
