@@ -38,3 +38,4 @@ changes:
   - bugfix: "Fixed a bug with CMO not being able to access their fax machine."
   - tweak: "Altered EZ Agent access to add basic access to Medical."
   - tweak: "Altered access for Medical Doctors, Surgeons and the CMO."
+  - maptweak: "New version of the Pocket Dimension, with thanks to DoctorOctopus for providing the base."
