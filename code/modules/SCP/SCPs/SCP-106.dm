@@ -326,7 +326,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	if (!istype(L) || isscp106(L))
 		return ..(L)
 	if (prob(50))
-		L.adjustBrainLoss(500)
+		L.adjustBrainLoss(1000)
 	else
 		visible_message("<span class = 'danger'>[L] is warped away!</span>")
 		L.forceMove(pick(GLOB.scp106_floors))
@@ -344,7 +344,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		return ..(L)
 	// 15% chance of instant death
 	else if (prob(15))
-		L.adjustBrainLoss(500)
+		L.adjustBrainLoss(1000)
 	// 15% chance of getting back to the station
 	else if (prob(15))
 		visible_message("<span class = 'danger'>[L] is warped away!</span>")
