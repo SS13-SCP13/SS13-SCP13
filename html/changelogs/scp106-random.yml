@@ -7,5 +7,5 @@ delete-after: True
 changes: 
   - tweak: "Changed how the PD exits work. All of them now have a 15% chance of instant death, a 15% chance of sending you back to the station, and a 70% chance of sending you back to the PD."
   - rscadd: "Bodies in the PD now decay after 5 minutes."
-  - bugfix: "Fixed SCP-106 moving victims who are already in the PD."
+  - bugfix: "Fixed SCP-106 teleporting victims who are already in the PD."
   - tweak: "Nerfed SCP-106's grab ability whilst in the PD."
