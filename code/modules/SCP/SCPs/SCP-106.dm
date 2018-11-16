@@ -119,7 +119,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 				var/client/C = client
 				if (ishuman(C.mob))
 					var/mob/living/human/H = human 
-					if (H.stat == CONSCIOUS && H.client && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
+					if (H.stat == CONSCIOUS && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
 						H.client.dir = turn(NORTH, pick(-90, -180, -270))
 					else
 						H.client.dir = NORTH
