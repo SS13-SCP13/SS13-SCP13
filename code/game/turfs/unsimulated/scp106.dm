@@ -25,14 +25,20 @@ GLOBAL_LIST_EMPTY(scp106_floors)
 			L.adjustToxLoss(-50)
 			L.adjustCloneLoss(-50)
 		else
-			if (iscarbon(L))
-				var/mob/living/carbon/C = L
-				for (var/organ in shuffle(C.organs))
-					var/obj/item/organ/I = organ
-					if (I.scp106_vulnerable && !(I.status & ORGAN_DEAD) && prob(10))
-						I.scp106_affected = TRUE
-						break
-			L.adjustFireLoss(3)
+			if (L.stat != DEAD)
+				if (iscarbon(L))
+					var/mob/living/carbon/C = L
+					for (var/organ in shuffle(C.organs))
+						var/obj/item/organ/I = organ
+						if (I.scp106_vulnerable && !(I.status & ORGAN_DEAD) && prob(10))
+							I.scp106_affected = TRUE
+							break
+				L.adjustFireLoss(3)
+			else if (ishuman(L))
+				var/mob/living/carbon/human/H = L
+				if (++H.pocket_dimension_decay >= 300) // 5 minutes
+					new /obj/effect/decal/cleanable/molten_item(src)
+					qdel(H)
 
 // walls
 /turf/unsimulated/wall/scp106

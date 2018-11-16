@@ -49,6 +49,12 @@
 	icon = 'icons/turf/flooring/grass.dmi'
 	icon_state = "grass0"
 	initial_flooring = /decl/flooring/grass
+/turf/simulated/floor/grass/New()
+	..()
+	GLOB.simulated_turfs_scp106 += src
+/turf/simulated/floor/grass/Destroy()
+	GLOB.simulated_turfs_scp106 -= src
+	return ..()
 
 /turf/simulated/floor/diona
 	name = "biomass"
@@ -206,11 +212,23 @@
 	icon = 'icons/turf/flooring/techfloor.dmi'
 	icon_state = "techfloor_gray"
 	initial_flooring = /decl/flooring/tiling/tech
+/turf/simulated/floor/tiled/techfloor/New()
+	..()
+	GLOB.simulated_turfs_scp106 += src
+/turf/simulated/floor/tiled/techfloor/Destroy()
+	GLOB.simulated_turfs_scp106 -= src
+	return ..()
 
 /turf/simulated/floor/tiled/monotile
 	name = "floor"
 	icon_state = "steel_monotile"
 	initial_flooring = /decl/flooring/tiling/mono
+/turf/simulated/floor/tiled/monotile/New()
+	..()
+	GLOB.simulated_turfs_scp106 += src
+/turf/simulated/floor/tiled/monotile/Destroy()
+	GLOB.simulated_turfs_scp106 -= src
+	return ..()
 
 /turf/simulated/floor/tiled/monotile/white
 	name = "floor"
@@ -221,6 +239,12 @@
 	name = "floor"
 	icon_state = "steel_grid"
 	initial_flooring = /decl/flooring/tiling/new_tile/steel_grid
+/turf/simulated/floor/tiled/steel_grid/New()
+	..()
+	GLOB.simulated_turfs_scp106 += src
+/turf/simulated/floor/tiled/steel_grid/Destroy()
+	GLOB.simulated_turfs_scp106 -= src
+	return ..()
 
 /turf/simulated/floor/tiled/steel_ridged
 	name = "floor"
@@ -248,15 +272,6 @@
 	initial_flooring = /decl/flooring/tiling/tech/grid
 
 
-
-/turf/simulated/floor/tiled/dark/New()
-	..()
-	GLOB.simulated_turfs_scp106 += src
-
-/turf/simulated/floor/tiled/dark/Destroy()
-	GLOB.simulated_turfs_scp106 -= src
-	return ..()
-
 /turf/simulated/floor/tiled/dark/airless
 	initial_gas = null
 
@@ -264,11 +279,9 @@
 	name = "white floor"
 	icon_state = "white"
 	initial_flooring = /decl/flooring/tiling/white
-
 /turf/simulated/floor/tiled/white/New()
 	..()
 	GLOB.simulated_turfs_scp106 += src
-
 /turf/simulated/floor/tiled/white/Destroy()
 	GLOB.simulated_turfs_scp106 -= src
 	return ..()
@@ -359,6 +372,12 @@
 	icon = 'icons/turf/flooring/linoleum.dmi'
 	icon_state = "lino"
 	initial_flooring = /decl/flooring/linoleum
+/turf/simulated/floor/lino/New()
+	..()
+	GLOB.simulated_turfs_scp106 += src
+/turf/simulated/floor/lino/Destroy()
+	GLOB.simulated_turfs_scp106 -= src
+	return ..()
 
 //ATMOS PREMADES
 /turf/simulated/floor/reinforced/airless

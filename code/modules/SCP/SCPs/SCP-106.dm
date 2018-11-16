@@ -8,6 +8,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	var/last_x = -1
 	var/last_y = -1
 	var/last_z = -1
+	var/confusing = FALSE
 
 /mob/living/carbon/human/scp106/examine(mob/user)
 	user << "<b><span class = 'keter'><big>SCP-106</big></span></b> - [desc]"
@@ -38,6 +39,8 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	verbs += /mob/living/carbon/human/scp106/proc/phase_through_airlock
 	if (!(loc in GLOB.scp106_floors))
 		verbs += /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
+
+	verbs += /mob/living/carbon/human/scp106/proc/confuse_victims
 
 	set_species("SCP-106")
 	GLOB.scp106s += src
@@ -106,6 +109,29 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	visible_message("<span class = 'danger'>[L] is warped away!</span>")
 	L.forceMove(pick(GLOB.scp106_floors))
 
+/mob/living/carbon/human/scp106/Life()
+	. = ..()
+
+	// update confusing stuff
+	if (stat == CONSCIOUS)
+		if (confusing)
+			for (var/client in GLOB.clients)
+				var/client/C = client
+				if (ishuman(C.mob) && !isscp106(C.mob))
+					var/mob/living/carbon/human/H = C.mob 
+					if (H.stat == CONSCIOUS && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
+						C.dir = turn(NORTH, pick(-90, -180, -270))
+					else
+						C.dir = NORTH
+				else 
+					C.dir = NORTH
+	else 
+		if (confusing)
+			confusing = FALSE
+			for (var/client in GLOB.clients)
+				var/client/C = client
+				C.dir = NORTH
+
 // NPC stuff
 /mob/living/carbon/human/scp106/proc/getTarget()
 
@@ -171,13 +197,19 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	if (!G)
 		visible_message("<span class = 'danger'><i>[name] reaches towards [target]!</i></danger>")
 		G = make_grab(src, target)
-		if (G)
-			G.upgrade(TRUE)
+
+		if (!(loc in GLOB.scp106_floors))
+			if (G)
+				G.upgrade(TRUE)
+		else
+			if (G)
+				G.locked = TRUE
+		
 		target.Weaken(1)
 		// NPC stuff
 		if (!client)
 			spawn (20)
-				if (G)
+				if (G && !G.locked)
 					G.last_upgrade = -1
 					G.upgrade(FALSE)
 
@@ -289,6 +321,13 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 		verbs += /mob/living/carbon/human/scp106/proc/go_back
 
+/mob/living/carbon/human/scp106/proc/confuse_victims()
+	set name = "Confuse Victims"
+	set category = "SCP"
+	set desc = "Confuse your victims by making them see upside-down."
+	confusing = !confusing
+	to_chat(src, "You are [confusing ? "now confusing" : "no longer confusing"] your victims.")
+
 /mob/living/carbon/human/scp106/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/damage_flags = 0, var/obj/used_weapon = null, var/obj/item/organ/external/given_organ = null)
 	. = ..(damage, damagetype, def_zone, blocked, damage_flags, used_weapon, given_organ)
 	if (getBruteLoss() + getFireLoss() + getToxLoss() + getCloneLoss() >= 200)
@@ -297,7 +336,6 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 			forceMove(pick(GLOB.scp106_floors))
 			verbs -= /mob/living/carbon/human/scp106/proc/enter_pocket_dimension
 			verbs += /mob/living/carbon/human/scp106/proc/go_back
-
 
 // special objects
 /obj/scp106_exit
@@ -326,8 +364,31 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	if (!istype(L) || isscp106(L))
 		return ..(L)
 	if (prob(50))
-		L.adjustBrainLoss(500)
+		L.adjustBrainLoss(1000)
 	else
+		visible_message("<span class = 'danger'>[L] is warped away!</span>")
+		L.forceMove(pick(GLOB.scp106_floors))
+
+/obj/scp106_random
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x2"
+	anchored = 1.0
+	unacidable = 1
+	simulated = 0
+	invisibility = 100
+
+/obj/scp106_random/Crossed(var/mob/living/L)
+	if (!istype(L) || isscp106(L))
+		return ..(L)
+	// 15% chance of instant death
+	else if (prob(15))
+		L.adjustBrainLoss(1000)
+	// 15% chance of getting back to the station
+	else if (prob(15))
+		visible_message("<span class = 'danger'>[L] is warped away!</span>")
+		L.forceMove(pick(GLOB.simulated_turfs_scp106))
+	// 70% chance of going somewhere in the PD
+	else if (prob(70))
 		visible_message("<span class = 'danger'>[L] is warped away!</span>")
 		L.forceMove(pick(GLOB.scp106_floors))
 
