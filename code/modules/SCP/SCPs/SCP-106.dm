@@ -331,6 +331,29 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		visible_message("<span class = 'danger'>[L] is warped away!</span>")
 		L.forceMove(pick(GLOB.scp106_floors))
 
+/obj/scp106_random
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x2"
+	anchored = 1.0
+	unacidable = 1
+	simulated = 0
+	invisibility = 100
+
+/obj/scp106_random/Crossed(var/mob/living/L)
+	if (!istype(L) || isscp106(L))
+		return ..(L)
+	// 15% chance of instant death
+	else if (prob(15))
+		L.adjustBrainLoss(500)
+	// 15% chance of getting back to the station
+	else if (prob(15))
+		visible_message("<span class = 'danger'>[L] is warped away!</span>")
+		L.forceMove(pick(GLOB.simulated_turfs_scp106))
+	// 70% chance of going somewhere in the PD
+	else if (prob(70))
+		visible_message("<span class = 'danger'>[L] is warped away!</span>")
+		L.forceMove(pick(GLOB.scp106_floors))
+
 // the femur breaker
 /obj/structure/femur_breaker
 	icon = 'icons/obj/femurbreaker.dmi'

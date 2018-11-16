@@ -1,0 +1,8 @@
+# Your name.  
+author: Memeopolis
+
+# Optional: Remove this file after generating master changelog.  Useful for PR changelogs that won't get used again.
+delete-after: True
+
+changes: 
+  - tweak: "Changed how the PD exits work. All of them now have a 15% chance of instant death, a 15% chance of sending you back to the station, and a 70% chance of sending you back to the PD."
