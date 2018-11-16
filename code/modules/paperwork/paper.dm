@@ -93,11 +93,10 @@
 		var/mob/living/silicon/ai/AI = user
 		can_read = get_dist(src, AI.camera) < 2
 	var/content = info
-	var/mob/living/carbon/human/H = user
-
+	
 	// SCP-078: Too Late To Die Young
-
-	if(H.dies_young > 0)
+	var/mob/living/carbon/human/H = user
+	if(istype(H) && H.dies_young > 0)
 		if(prob(50))
 			H.dies_young += 1
 		var/solace_possibilities = list(
