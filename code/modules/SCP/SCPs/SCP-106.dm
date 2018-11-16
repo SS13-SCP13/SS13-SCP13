@@ -118,13 +118,13 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 			for (var/client in GLOB.clients)
 				var/client/C = client
 				if (ishuman(C.mob))
-					var/mob/living/human/H = human 
+					var/mob/living/carbon/human/H = C.mob 
 					if (H.stat == CONSCIOUS && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
-						H.client.dir = turn(NORTH, pick(-90, -180, -270))
+						C.dir = turn(NORTH, pick(-90, -180, -270))
 					else
-						H.client.dir = NORTH
+						C.dir = NORTH
 				else 
-					H.client.dir = NORTH
+					C.dir = NORTH
 	else 
 		if (confusing)
 			confusing = FALSE
@@ -199,7 +199,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		G = make_grab(src, target)
 		if (G)
 			G.upgrade(TRUE)
-		if (loc in GLOB.scp106_turfs)
+		if (loc in GLOB.scp106_floors)
 			G.locked = TRUE
 		target.Weaken(1)
 		// NPC stuff
