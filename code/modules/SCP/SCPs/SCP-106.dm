@@ -111,21 +111,26 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /mob/living/carbon/human/scp106/Life()
 	. = ..()
+
+	// update confusing stuff
 	if (stat == CONSCIOUS)
 		if (confusing)
-			for (var/human in GLOB.human_mob_list)
-				var/mob/living/human/H = human 
-				if (H.client && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
-					H.client.dir = turn(NORTH, pick(-90, -180, -270))
-				else
+			for (var/client in GLOB.clients)
+				var/client/C = client
+				if (ishuman(C.mob))
+					var/mob/living/human/H = human 
+					if (H.stat == CONSCIOUS && H.client && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
+						H.client.dir = turn(NORTH, pick(-90, -180, -270))
+					else
+						H.client.dir = NORTH
+				else 
 					H.client.dir = NORTH
 	else 
 		if (confusing)
 			confusing = FALSE
-			for (var/human in GLOB.human_mob_list)
-				var/mob/living/human/H = human 
-				if (H.client && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
-					H.client.dir = NORTH
+			for (var/client in GLOB.clients)
+				var/client/C = client
+				C.dir = NORTH
 
 // NPC stuff
 /mob/living/carbon/human/scp106/proc/getTarget()
