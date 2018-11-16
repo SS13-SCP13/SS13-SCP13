@@ -197,10 +197,14 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 	if (!G)
 		visible_message("<span class = 'danger'><i>[name] reaches towards [target]!</i></danger>")
 		G = make_grab(src, target)
-		if (G)
-			G.upgrade(TRUE)
-		if (loc in GLOB.scp106_floors)
-			G.locked = TRUE
+
+		if (!(loc in GLOB.scp106_floors))
+			if (G)
+				G.upgrade(TRUE)
+		else
+			if (G)
+				G.locked = TRUE
+		
 		target.Weaken(1)
 		// NPC stuff
 		if (!client)
