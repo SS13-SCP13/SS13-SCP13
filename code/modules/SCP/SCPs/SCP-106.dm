@@ -115,7 +115,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		if (confusing)
 			for (var/human in GLOB.human_mob_list)
 				var/mob/living/human/H = human 
-				if (H.client && get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src))
+				if (H.client && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
 					H.client.dir = turn(NORTH, pick(-90, -180, -270))
 				else
 					H.client.dir = NORTH
@@ -124,7 +124,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 			confusing = FALSE
 			for (var/human in GLOB.human_mob_list)
 				var/mob/living/human/H = human 
-				if (H.client && get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src))
+				if (H.client && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
 					H.client.dir = NORTH
 
 // NPC stuff
