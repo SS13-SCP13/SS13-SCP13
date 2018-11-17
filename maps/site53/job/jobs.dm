@@ -896,7 +896,7 @@
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
 	alt_titles = list("Counselor")
-	outfit_type = /obj/item/weapon/card/id/psychiatrist
+	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/psychiatrist
 	allowed_branches = list(
 	/datum/mil_branch/civilian)
 	allowed_ranks = list(
