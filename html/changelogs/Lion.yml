@@ -36,3 +36,4 @@ changes:
   - bugfix: "Fixes an issue where some walls have empty space underneath them."
   - bugfix: "Fixed an issue where psychiatrists wouldn't spawn with their equipment."
   - maptweak: "Added a new bunker button just outside, with security, admin and science level 1, so 049 can't open it, but makes it easier accessible."
+  - maptweak: "Fixes a lot of missing lights on the D-Block and LLCZ."
