@@ -82,10 +82,10 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 	// we're lying, turn right
 	var/obj/scp106_sprite_helper = vis_contents[vis_contents.len]
-	
+
 	if (lying || resting)
 		scp106_sprite_helper.icon = turn(icon('icons/mob/scp106.dmi'), 90)
-	else 
+	else
 		scp106_sprite_helper.icon = 'icons/mob/scp106.dmi'
 
 	scp106_sprite_helper.dir = dir
@@ -118,14 +118,14 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 			for (var/client in GLOB.clients)
 				var/client/C = client
 				if (ishuman(C.mob) && !isscp106(C.mob))
-					var/mob/living/carbon/human/H = C.mob 
+					var/mob/living/carbon/human/H = C.mob
 					if (H.stat == CONSCIOUS && (get_area(H) == get_area(GLOB.scp106_floors[1]) == get_area(src)))
 						C.dir = turn(NORTH, pick(-90, -180, -270))
 					else
 						C.dir = NORTH
-				else 
+				else
 					C.dir = NORTH
-	else 
+	else
 		if (confusing)
 			confusing = FALSE
 			for (var/client in GLOB.clients)
@@ -182,7 +182,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 	if (!(target in orange(1, src)))
 		// moves slightly faster than humans
-		walk_to(src, target, 1, 0.2+config.run_speed)
+		walk_to(src, target, 1, 0+config.run_speed)
 		return TRUE
 
 	walk(src, null)
@@ -204,7 +204,7 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 		else
 			if (G)
 				G.locked = TRUE
-		
+
 		target.Weaken(1)
 		// NPC stuff
 		if (!client)
