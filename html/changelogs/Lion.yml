@@ -34,4 +34,5 @@ delete-after: True
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
   - rscdel: "Removed hacked supply beacons from traitor uplinks due to design philosophy not linking with it."
+  - rscdel: "Removes zombie powder from Traitor uplink as a possibility when selecting random toxin."
   - tweak: "Changed GoI Operative to C.I. Operative."
