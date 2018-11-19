@@ -35,4 +35,6 @@ delete-after: True
 changes: 
   - rscdel: "Removed hacked supply beacons from traitor uplinks due to design philosophy not linking with it."
   - rscdel: "Removes zombie powder from Traitor uplink as a possibility when selecting random toxin."
+  - rscdel: "Removes toxin damage from the energy crossbow."
+  - spellcheck: "Tweaked description of energy crossbow to match new features."
   - tweak: "Changed GoI Operative to C.I. Operative."
