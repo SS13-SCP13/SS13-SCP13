@@ -42,4 +42,5 @@ changes:
   - tweak: "Added Sanitation Technician to the alternative title list for Janitor."
   - tweak: "Removed Pharmacist as an alt title for Chemist."
   - tweak: "Removed Communications Dispatcher alt title from Communication Technicians."
+  - tweak: "Removes movement penalty to all types of guard armor."
   - iconadd: "New hud icons for Security. If a job has been forgotten, or does not show up, report it on the GitHub please."
