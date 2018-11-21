@@ -3,8 +3,8 @@
 /////////////
 // WARNING: DO NOT ADD INTEGER VALUES ABOVE 20 FOR ANY STAT OR SKILL OTHER THAN INTELLIGENCE, MEDICAL AND ENGINEERING. - LION
 
-/datum/map/site_ds90
-/datum/map/site_ds90/setup_map()
+/datum/map/site_site19
+/datum/map/site_site19/setup_map()
 
 /datum/job/assistant
 	title = "Class D"
@@ -17,7 +17,7 @@
 	duties = "<big><b>As a Class D Foundation Employee, you are most likely a former convict who faced a life sentence or the death penalty. You are extremely grateful to have been offered the chance to participate in the Foundation's rapid rehabilitation program, at a facility which aims to release you into the free world in just 30 days.<br> Find a way to show you're ready to re-integrate into society: work in mining, botany, the kitchens, or volunteer yourself as a participant in scientific studies.<br> <span style = 'color:red'>REMEMBER!</span> Rioting as Class D has been prohibited without staff approval, under rule 15. <br>IMPORTANT! Do not try to break out of your cell at game start. You will break your only way out!</span>"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/classd
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/civ/classd
 	allowed_ranks = list(/datum/mil_rank/civ/classd)
 	var/static/list/used_numbers = list()
 
@@ -49,7 +49,7 @@
 	minimal_player_age = 20
 	economic_modifier = 15
 	ideal_character_age = 50
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/facilitydir
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/facilitydir
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classa)
 	equip(var/mob/living/carbon/human/H)
@@ -57,15 +57,7 @@
 		H.add_stats(rand(7,10), rand(7,10), rand(12,16))
 		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
 
-	access = list(
-	access_com_comms, // SD and HoP do not want to hear all the details, either meet your Commander in person or talk to the Tower
-	access_adminlvl5,
-	access_adminlvl4,
-	access_adminlvl3,
-	access_adminlvl2,
-	access_adminlvl1,
-	access_keyauth
-	)
+	access = list()
 	minimal_access = list()
 
 
@@ -81,7 +73,7 @@
 	minimal_player_age = 15
 	economic_modifier = 10
 	ideal_character_age = 45
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/headofhr
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/headofhr
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classa)
 	alt_titles = list("Personnel Director")
@@ -91,15 +83,7 @@
 		H.add_skills(rand(25,40), rand(25,40), rand(45,65), rand(40,60))
 
 
-	access = list(
-	access_com_comms,
-	access_civ_comms,
-	access_adminlvl4,
-	access_adminlvl3,
-	access_adminlvl2,
-	access_adminlvl1,
-	access_keyauth
-	)
+	access = list()
 	minimal_access = list()
 
 // COMMUNICATIONS
@@ -116,7 +100,7 @@
 	minimal_player_age = 15
 	economic_modifier = 10
 	ideal_character_age = 45
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/commsofficer
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/commsofficer
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(
 	/datum/mil_rank/security/w5,
@@ -128,26 +112,7 @@
 		H.add_skills(rand(25,40), rand(25,40), rand(45,65), rand(40,60))
 
 
-	access = list(
-	access_com_comms,
-	access_sci_comms,
-	access_civ_comms,
-	access_log_comms,
-	access_med_comms,
-	access_eng_comms,
-	access_sec_comms,
-	access_adminlvl4,
-	access_adminlvl3,
-	access_adminlvl2,
-	access_adminlvl1,
-	access_telecommsgen,
-	access_servers,
-	access_commtower,
-	access_sciencelvl1,
-	access_sciencelvl3,
-	access_mtflvl1
-
-	)
+	access = list()
 	minimal_access = list()
 
 /datum/job/commeng
@@ -163,10 +128,9 @@
 	minimal_player_age = 7
 	ideal_character_age = 30
 	alt_titles = list(
-		"Communications Programmer",
-		"Communications Dispatcher"
+		"Communications Programmer"
 		)
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/commstech
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/commstech
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -178,18 +142,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(50,60)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(
-	access_com_comms,
-	access_sci_comms,
-	access_civ_comms,
-	access_log_comms,
-	access_med_comms,
-	access_eng_comms,
-	access_sec_comms,
-	access_adminlvl1,
-	access_telecommsgen,
-	access_servers,
-	access_commtower)
+	access = list()
 /*
 ## END OF GENERIC COMMAND ##
 */
@@ -205,7 +158,7 @@
 	economic_modifier = 8
 	minimal_player_age = 15
 	ideal_character_age = 55
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/cos
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/cos
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -219,20 +172,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(90,100), rand(90,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(
-		access_com_comms,
-		access_sec_comms,
-		access_mtflvl1,
-		access_mtflvl2,
-		access_mtflvl3,
-		access_mtflvl4,
-		access_mtflvl5,
-		access_sciencelvl1,
-		access_sciencelvl2,
-		access_sciencelvl3,
-		access_sciencelvl4,
-		access_keyauth
-	)
+	access = list()
 	minimal_access = list()
 //##
 //ZONE COMMANDERS
@@ -253,7 +193,7 @@
 	minimal_player_age = 10
 	ideal_character_age = 45
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficerlcz
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/ltofficerlcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -265,7 +205,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	access = list()
 	minimal_access = list()
 
 /datum/job/ltofficerhcz
@@ -281,7 +221,7 @@
 	minimal_player_age = 10
 	ideal_character_age = 45
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficerhcz
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/ltofficerhcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -293,7 +233,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list()
 	minimal_access = list()
 
 /datum/job/ltofficerez
@@ -309,7 +249,7 @@
 	minimal_player_age = 10
 	ideal_character_age = 45
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ltofficerez
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/ltofficerez
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -321,7 +261,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(80,100), rand(80,100), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4, access_sciencelvl1, access_medicalgen)
+	access = list()
 	minimal_access = list()
 
 //##
@@ -341,7 +281,7 @@
 	minimal_player_age = 5
 	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficerlcz
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/ncoofficerlcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -356,7 +296,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_sciencelvl1, access_sciencelvl2)
+	access = list()
 	minimal_access = list()
 
 /datum/job/ncoofficerhcz
@@ -372,7 +312,7 @@
 	minimal_player_age = 5
 	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficerhcz
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/ncoofficerhcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -386,7 +326,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	access = list()
 	minimal_access = list()
 
 /datum/job/ncoofficerez
@@ -402,7 +342,7 @@
 	minimal_player_age = 5
 	ideal_character_age = 30
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/ncoofficerez
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/ncoofficerez
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -415,7 +355,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sciencelvl1, access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_medicalgen)
+	access = list()
 	minimal_access = list()
 
 //##
@@ -435,7 +375,7 @@
 //	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficerlcz
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/enlistedofficerlcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -448,7 +388,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_sciencelvl1)
+	access = list()
 	minimal_access = list()
 
 /datum/job/enlistedofficerhcz
@@ -464,7 +404,7 @@
 //	minimal_player_age = 0
 	ideal_character_age = 25
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficerhcz
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/enlistedofficerhcz
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -477,7 +417,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sec_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
+	access = list()
 	minimal_access = list()
 
 /datum/job/enlistedofficerez
@@ -493,7 +433,7 @@
 	minimal_player_age = 0
 	ideal_character_age = 27
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/enlistedofficerez
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/security/enlistedofficerez
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -506,7 +446,7 @@
 		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
 		H.add_skills(rand(50,80), rand(50,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_sciencelvl1, access_sec_comms, access_mtflvl1, access_mtflvl2, access_adminlvl1, access_adminlvl2, access_medicalgen)
+	access = list()
 	minimal_access = list()
 
 // SCIENCE
@@ -524,7 +464,7 @@
 	minimal_player_age = 0
 	ideal_character_age = 22
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/juniorscientist
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/science/juniorscientist
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 	equip(var/mob/living/carbon/human/H)
@@ -533,7 +473,7 @@
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
-	access = list(access_sci_comms, access_sciencelvl1)
+	access = list()
 	minimal_access = list()
 
 /datum/job/scientist
@@ -549,7 +489,7 @@
 	minimal_player_age = 5
 	ideal_character_age = 22
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/scientist
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/science/scientist
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classc)
 	equip(var/mob/living/carbon/human/H)
@@ -558,7 +498,7 @@
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
-	access = list(access_sci_comms, access_sciencelvl1, access_sciencelvl2)
+	access = list()
 	minimal_access = list()
 
 /datum/job/seniorscientist
@@ -574,7 +514,7 @@
 	minimal_player_age = 10
 	ideal_character_age = 22
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/seniorscientist
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/science/seniorscientist
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classb)
 	equip(var/mob/living/carbon/human/H)
@@ -583,7 +523,7 @@
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 
-	access = list(access_sci_comms, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list()
 	minimal_access = list()
 
 /datum/job/rd
@@ -596,7 +536,7 @@
 	minimal_player_age = 15
 	ideal_character_age = 60
 	spawn_positions = 6
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/science/researchdirector
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/science/researchdirector
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/classa)
 	equip(var/mob/living/carbon/human/H)
@@ -604,15 +544,7 @@
 		H.add_stats(rand(3,5), rand(3,5), rand(45,60)) // Str, Dex, Int.
 		H.add_skills(rand(0,25), rand(0,10), rand(50,70), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(
-	access_com_comms,
-	access_sci_comms,
-	access_sciencelvl5,
-	access_sciencelvl4,
-	access_sciencelvl3,
-	access_sciencelvl2,
-	access_sciencelvl1,
-	access_keyauth)
+	access = list()
 	minimal_access = list()
 
 
@@ -635,7 +567,7 @@
 		"Junior Damage Control Technician",
 		"Junior Electrician"
 		)
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/engineering/juneng
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -648,7 +580,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(30,50)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2)
+	access = list()
 	minimal_access = list()
 
 /datum/job/eng
@@ -667,7 +599,7 @@
 		"Damage Control Technician",
 		"Electrician"
 		)
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/juneng
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/engineering/juneng
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -681,7 +613,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(50,60)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3)
+	access = list()
 	minimal_access = list()
 
 /datum/job/seneng
@@ -700,7 +632,7 @@
 		"Senior Damage Control Technician",
 		"Senior Electrician"
 		)
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/seneng
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/engineering/seneng
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -714,7 +646,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(60,70)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4)
+	access = list()
 	minimal_access = list()
 
 /datum/job/conteng
@@ -727,7 +659,7 @@
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 30
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/engineering/conteng
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/engineering/conteng
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -742,7 +674,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(60,80)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4)
+	access = list()
 	minimal_access = list()
 
 
@@ -756,7 +688,7 @@
 	economic_modifier = 9
 	ideal_character_age = 40
 	minimal_player_age = 15
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/chief_engineer
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/chief_engineer
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(
 	/datum/mil_rank/security/o2,
@@ -767,7 +699,7 @@
 		H.add_stats(rand(5,7), rand(5,7), rand(20,25)) // Str, Dex, Int.
 		H.add_skills(rand(25,30), rand(25,30), rand(5,10), rand(80,100)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_eng_comms, access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_mtflvl4, access_sciencelvl1, access_sciencelvl2, access_sciencelvl3, access_sciencelvl4, access_keyauth)
+	access = list()
 	minimal_access = list()
 
 // MEDICAL JOBS.
@@ -780,7 +712,7 @@
 	minimal_player_age = 15
 	ideal_character_age = 48
 	alt_titles = list("Medical Director")
-	outfit_type = /decl/hierarchy/outfit/job/ds90/crew/command/cmo
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/cmo
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(
 	/datum/mil_rank/security/o3,
@@ -788,7 +720,7 @@
 	/datum/mil_rank/security/o5
 	)
 
-	access = list(access_com_comms, access_med_comms, access_medicalgen, access_medicalequip, access_medicalviro, access_medicalchem, access_s53cmo, access_keyauth, access_mtflvl1, access_mtflvl2)
+	access = list()
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -807,12 +739,12 @@
 	selection_color = "#013d3b"
 	economic_modifier = 4
 	ideal_character_age = 30
-	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/chemist
+	outfit_type = /decl/hierarchy/outfit/job/site19/medical/chemist
 	allowed_branches = list(/datum/mil_branch/security)
 	allowed_ranks = list(
 		/datum/mil_rank/security/o1)
 
-	access = list(access_med_comms, access_medicalgen, access_medicalchem, access_medicalequip)
+	access = list()
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -831,7 +763,7 @@
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
 	alt_titles = list("Counselor")
-	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/psychiatrist
+	outfit_type = /decl/hierarchy/outfit/job/site19/medical/psychiatrist
 	allowed_branches = list(
 	/datum/mil_branch/civilian)
 	allowed_ranks = list(
@@ -841,7 +773,7 @@
 		H.add_stats(rand(1,3), rand(3,5), rand(25,30))
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
-	access = list(access_med_comms, access_medicalgen, access_medicalpsych, access_medicalequip)
+	access = list()
 	minimal_access = list()
 
 /datum/job/medicaldoctor
@@ -856,7 +788,7 @@
 	minimal_player_age = 3
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
-	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/medicaldoctor
+	outfit_type = /decl/hierarchy/outfit/job/site19/medical/medicaldoctor
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
@@ -868,7 +800,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_med_comms, access_medicalgen, access_medicalequip, access_mtflvl1, access_mtflvl2)
+	access = list()
 	minimal_access = list()
 
 /datum/job/virologist
@@ -883,7 +815,7 @@
 	ideal_character_age = 40
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
-	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/virologist
+	outfit_type = /decl/hierarchy/outfit/job/site19/medical/virologist
 	allowed_branches = list(
 	/datum/mil_branch/civilian)
 	allowed_ranks = list(
@@ -894,7 +826,7 @@
 		H.add_skills(rand(10,25), rand(10,25), rand(70,90), rand(5,10))
 
 
-	access = list(access_med_comms, access_medicalgen, access_medicalequip, access_medicalviro)
+	access = list()
 	minimal_access = list()
 
 /datum/job/surgeon
@@ -909,7 +841,7 @@
 	economic_modifier = 5
 	supervisors = "the Chief Medical Officer"
 	minimal_player_age = 3
-	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/surgeon
+	outfit_type = /decl/hierarchy/outfit/job/site19/medical/surgeon
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
@@ -935,7 +867,7 @@
 	economic_modifier = 5
 	duties = "<big><b>As the EMT it is your job to man the medical post near the Class D cell block, and treat any injuries there of the guards or Class D's. You only have limited supplies, so it's best to make them count."
 	supervisors = "the Chief Medical Officer"
-	outfit_type = /decl/hierarchy/outfit/job/ds90/medical/emt
+	outfit_type = /decl/hierarchy/outfit/job/site19/medical/emt
 	allowed_branches = list(
 	/datum/mil_branch/security)
 	allowed_ranks = list(
@@ -968,7 +900,7 @@
 	economic_modifier = 5
 	minimal_player_age = 7
 	ideal_character_age = 35
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/logisticsofficer
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/logisticsofficer
 	allowed_branches = list(
 		/datum/mil_branch/security,
 	)
@@ -995,7 +927,7 @@
 	supervisors = "the Logistics Officer"
 	minimal_player_age = 3
 	ideal_character_age = 24
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/command/logisticspecialist
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/logisticspecialist
 	allowed_branches = list(
 		/datum/mil_branch/security
 	)
@@ -1023,7 +955,7 @@
 	supervisors = "the Head of Personnel"
 	ideal_character_age = 24
 	alt_titles = list("Interior caretaker", "Sanitation Technician")
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/janitor
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/civ/janitor
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
@@ -1031,7 +963,7 @@
 	/datum/mil_rank/civ/classd
 	)
 
-	access = list(access_civ_comms, access_sciencelvl1, access_dclassjanitorial) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
+	access = list()
 	minimal_access = list()
 	equip(var/mob/living/carbon/human/H)
 		..()
@@ -1049,7 +981,7 @@
 	selection_color = "#515151"
 	ideal_character_age = 24
 	alt_titles = list("Cook")
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/chef
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/civ/chef
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
@@ -1060,7 +992,7 @@
 		..()
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
-	access = list(access_civ_comms, access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany)// Limited internal D-Block access e.g. when training D-Class or unlocking their crates
+	access = list()
 	minimal_access = list()
 
 /datum/job/bartender
@@ -1074,7 +1006,7 @@
 	selection_color = "#515151"
 	ideal_character_age = 24
 	alt_titles = list("Waiter")
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/bartender
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/civ/bartender
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
@@ -1085,7 +1017,7 @@
 		..()
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
-	access = list(access_civ_comms, access_s53bar, access_s53kitchen, access_dclasskitchen, access_dclassbotany) // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
+	access = list() // Limited internal D-Block access e.g. when training D-Class or unlocking their crates
 	minimal_access = list()
 
 /datum/job/archivist
@@ -1102,7 +1034,7 @@
 	minimal_player_age = 5
 	ideal_character_age = 30
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/archivist
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/civ/archivist
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
@@ -1131,7 +1063,7 @@
 	minimal_player_age = 9
 	ideal_character_age = 30
 	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/o5rep
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/civ/o5rep
 	allowed_branches = list(
 		/datum/mil_branch/civilian
 	)
@@ -1143,5 +1075,5 @@
 		H.add_stats(rand(1,3), rand(0,3), rand(5,10)) // Str, Dex, Int.
 		H.add_skills(rand(5,10), rand(5,10), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
-	access = list(access_com_comms, access_adminlvl1, access_adminlvl2, access_adminlvl3, access_adminlvl4, access_adminlvl5)
+	access = list()
 	minimal_access = list()
