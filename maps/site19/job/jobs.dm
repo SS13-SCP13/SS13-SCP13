@@ -194,71 +194,6 @@
 ## END OF GENERIC COMMAND ##
 */
 
-// CELLS
-/* CANDIDATE FOR REMOVAL
-/datum/job/cellguardlieutenant
-	has_email = TRUE
-	title = "Cell Warden"
-	department = "Security"
-	department_flag = SEC
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Security Commander"
-	economic_modifier = 4
-	alt_titles = null
-	duties = "<big><b>As the Cell Warden, it is your job to coordinate the cell guards, prevent riots and breakouts. <br>It's also important to note that if you're an asshole or intentionally trying to be one, Class D's are more likely to riot.<br> If a Class D is requested for testing it is not your, or the Cell Guard's job to deliver them to the tests. Hand them over to one of the zone guards, instead.</span>"
-	minimal_player_age = 7
-	ideal_character_age = 30
-	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/cellguardlieutenant
-
-	allowed_branches = list(
-		/datum/mil_branch/security
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/security/o1,
-		/datum/mil_rank/security/o2
-	)
-
-
-	access = list(access_mtflvl1, access_mtflvl2, access_mtflvl3, access_mtflvl4, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
-	minimal_access = list()
-	equip(var/mob/living/carbon/human/H)
-		..()
-		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
-		H.add_skills(rand(70,90), rand(70,90), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
-
-
-/datum/job/brigofficer
-	has_email = TRUE
-	title = "Cell Guard"
-	department = "Security"
-	department_flag = SEC
-	total_positions = 7
-	spawn_positions = 7
-	supervisors = "the Cell Warden"
-	duties = "<big><b>As the Cell Guard, it is your job to prevent riots and breakouts. <br>It's also important to note that if you're an asshole or intentionally trying to be one, Class D's are more likely to riot.<br> If a Class D is requested for testing it is not your, or the Cell Guard's job to deliver them to the tests. Hand them over to one of the zone guards, instead.</span>"
-	economic_modifier = 4
-	alt_titles = null
-	minimal_player_age = 5
-	ideal_character_age = 23
-	alt_titles = null
-	outfit_type = /decl/hierarchy/outfit/job/site90/crew/security/brigofficer
-	allowed_branches = list(
-		/datum/mil_branch/security
-	)
-	allowed_ranks = list(
-	/datum/mil_rank/security/e7,
-	/datum/mil_rank/security/e8
-
-	)
-	equip(var/mob/living/carbon/human/H)
-		..()
-		H.add_stats(rand(10), rand(10), rand(15,20)) // Str, Dex, Int.
-		H.add_skills(rand(60,80), rand(60,80), rand(15,30), rand(5,10)) // Melee, Ranged, Medical, Engineering.
-	access = list(access_mtflvl1, access_mtflvl2, access_dclassjanitorial, access_dclassmining, access_dclasskitchen, access_dclassbotany)
-	minimal_access = list()
-*/
 // SECURITY
 /datum/job/hos
 	has_email = TRUE
@@ -696,7 +631,7 @@
 	ideal_character_age = 30
 	alt_titles = list(
 		"Junior Maintenance Technician",
-		"Junior Engine Technician",
+		"Junior Reactor Technician",
 		"Junior Damage Control Technician",
 		"Junior Electrician"
 		)
@@ -728,7 +663,7 @@
 	ideal_character_age = 30
 	alt_titles = list(
 		"Maintenance Technician",
-		"Engine Technician",
+		"Reactor Technician",
 		"Damage Control Technician",
 		"Electrician"
 		)
@@ -761,7 +696,7 @@
 	ideal_character_age = 30
 	alt_titles = list(
 		"Senior Maintenance Technician",
-		"Senior Engine Technician",
+		"Reactor Engine Technician",
 		"Senior Damage Control Technician",
 		"Senior Electrician"
 		)
@@ -1087,7 +1022,7 @@
 	spawn_positions = 2
 	supervisors = "the Head of Personnel"
 	ideal_character_age = 24
-	alt_titles = list("Interior caretaker")
+	alt_titles = list("Interior caretaker", "Sanitation Technician")
 	outfit_type = /decl/hierarchy/outfit/job/site90/crew/civ/janitor
 	allowed_branches = list(
 		/datum/mil_branch/civilian

@@ -1,23 +1,23 @@
-/datum/map/site53
-	name = "Site 53"
-	full_name = "Foundation Site 53"
-	path = "site53"
+/datum/map/site19
+	name = "Site 19"
+	full_name = "Containment Site 19"
+	path = "site19"
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 
 	lobby_icon = 'icons/lobby.dmi'
 
-	station_levels = list(1,2,3,4)
-	contact_levels = list(1,2,3,4)
-	player_levels = list(1,2,3,4)
-	admin_levels = list(5,6,7)
+	station_levels = list(1,2,3,4,5)
+	contact_levels = list(1,2,3,4,5)
+	player_levels = list(1,2,3,4,5)
+	admin_levels = list(6,7)
 	empty_levels = list()
 	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1)
 	overmap_size = 35
 	overmap_event_areas = 0
 	usable_email_tlds = list("site53.foundation", "security.site53.foundation", "science.site53.foundation", "utility.site53.foundation")
 
-	allowed_spawns = list("Cryogenic Storage", "D-Cells", "Light Containment Zone", "Security Base")
-	default_spawn = "Cryogenic Storage"
+//	allowed_spawns = list("Cryogenic Storage", "D-Cells", "Light Containment Zone", "Security Base") DO THIS LATER ~LION
+//	default_spawn = "Cryogenic Storage"
 
 	station_name  = "Foundation Site 53"
 	station_short = "Site 53"
@@ -46,7 +46,7 @@
 	num_exoplanets = 0
 	planet_size = list(129,129)
 
-	away_site_budget = 3
+	away_site_budget = 0
 
 	id_hud_icons = 'maps/site53/icons/assignment_hud.dmi'
 	lobby_screens = list("title","title2")

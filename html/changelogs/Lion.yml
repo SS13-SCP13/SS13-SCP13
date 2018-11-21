@@ -38,3 +38,5 @@ changes:
   - rscdel: "Removes toxin damage from the energy crossbow."
   - spellcheck: "Tweaked description of energy crossbow to match new features."
   - tweak: "Changed GoI Operative to C.I. Operative."
+  - tweak: "Added Sanitation Technician to the alternative title list for Janitor."
+  - iconadd: "New hud icons for Security. If a job has been forgotten, or does not show up, report it on the GitHub please."
