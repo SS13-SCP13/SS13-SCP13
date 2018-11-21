@@ -39,4 +39,5 @@ changes:
   - spellcheck: "Tweaked description of energy crossbow to match new features."
   - tweak: "Changed GoI Operative to C.I. Operative."
   - tweak: "Added Sanitation Technician to the alternative title list for Janitor."
+  - tweak: "Removed Pharmacist as an alt title for Chemist."
   - iconadd: "New hud icons for Security. If a job has been forgotten, or does not show up, report it on the GitHub please."
