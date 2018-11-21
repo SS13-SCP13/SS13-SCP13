@@ -1,20 +1,16 @@
 #if !defined(using_map_DATUM)
 
-	#include "site53_announcements.dm"
-	#include "site53areas.dm"
+	#include "site19_announcements.dm"
+	#include "site19_areas.dm"
 	#include "../torch/torch_areas.dm"
-//	#include "torch_elevator.dm"
-	#include "site53elevators.dm"
-//	#include "torch_holodecks.dm"
-//	#include "torch_overmap.dm"
-	#include "site53_presets.dm"
-//	#include "torch_ranks.dm"
-	#include "site_53_ranks.dm"
-	#include "site53shuttles.dm"
+	#include "site19_elevators.dm"
+	#include "site19_presets.dm"
+	#include "site_19_ranks.dm"
+	#include "site19_shuttles.dm"
 //	#include "torch_unit_testing.dm"
 //	#include "torch_antagonism.dm"
 //	#include "torch_npcs.dm"
-	#include "site53_securitystate.dm"
+	#include "site19_securitystate.dm"
 
 //	#include "datums/uniforms.dm"
 //	#include "datums/uniforms_expedition.dm"
@@ -44,10 +40,10 @@
 	#include "job/jobs.dm"
 	#include "job/outfits.dm"
 
-//	#include "structures/closets.dm"
+	#include "structures/closets.dm"
 	#include "structures/signs.dm"
 	#include "structures/closets/command.dm"
-//	#include "structures/closets/engineering.dm"
+	#include "structures/closets/engineering.dm"
 	#include "structures/closets/medical.dm"
 	#include "structures/closets/misc.dm"
 	#include "structures/closets/research.dm"
@@ -67,36 +63,12 @@
 	#include "loadout/loadout_xeno.dm"*/
 //	#include "loadout/~defines.dm"
 
-	#include "site53-1.dmm"
-	#include "site53-2.dmm"
-	#include "site53-3.dmm"
-	#include "site53-4.dmm"
-	#include "site53-5.dmm"
-//	#include "site53-7.dmm"
-	#include "site53-8.dmm"
-	#include "site53-9.dmm"
-//	#include "torch-3.dmm"
-//	#include "torch-4.dmm"
-//	#include "torch-5.dmm"
-//	#include "torch-6.dmm"
-//	#include "torch-7.dmm"
-/*	#include "../away/empty.dmm"
-	#include "../away/mining/mining.dm"
-	#include "../away/derelict/derelict.dm"
-	#include "../away/bearcat/bearcat.dm"
-	#include "../away/lost_supply_base/lost_supply_base.dm"
-	#include "../away/marooned/marooned.dm"
-	#include "../away/smugglers/smugglers.dm"
-	#include "../away/magshield/magshield.dm"
-	#include "../away/casino/casino.dm"
-	#include "../away/yacht/yacht.dm"
-	#include "../away/blueriver/blueriver.dm"
-	#include "../away/slavers/slavers_base.dm"
-	#include "../away/hydro/hydro.dm"
-	#include "../away/mobius_rift/mobius_rift.dm"
-	#include "../away/icarus/icarus.dm"
-	#include "../away/errant_pisces/errant_pisces.dm"
-	#include "../away/lar_maria/lar_maria.dm"*/
+	#include "site19-1.dmm"
+	#include "site19-2.dmm"
+	#include "site19-3.dmm"
+	#include "site19-4.dmm"
+	#include "site19-5.dmm"
+	#include "site19-7.dmm"
 
 	#include "../../code/modules/lobby_music/Perdition.dm"
 	#include "../../code/modules/lobby_music/hie.dm"
@@ -106,10 +78,10 @@
 	#include "../../code/modules/lobby_music/days.dm"
 
 
-	#define using_map_DATUM /datum/map/site53
+	#define using_map_DATUM /datum/map/site19
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn A map has already been included, ignoring Site 53
+	#warn A map has already been included, ignoring Site 19
 
 #endif

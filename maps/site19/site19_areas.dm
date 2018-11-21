@@ -1,4 +1,4 @@
-/datum/map/site53
+/datum/map/site19
 
 	post_round_safe_areas = list (
 		/area/centcom,
