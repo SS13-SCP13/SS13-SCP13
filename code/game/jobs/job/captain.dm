@@ -50,6 +50,9 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	access = list()
 	minimal_access = list()
 
+/datum/job/siteinspect/get_access()
+	return get_all_station_access()
+
 
 /*
 /datum/job/hop
