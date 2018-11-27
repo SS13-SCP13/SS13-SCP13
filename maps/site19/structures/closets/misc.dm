@@ -115,7 +115,7 @@
 
 */
 // D-CLASS JANITORIAL
-
+/*
 /obj/structure/closet/djcloset
 	name = "custodial closet"
 	desc = "It's a storage unit for janitorial clothes and gear."
@@ -159,3 +159,5 @@
 		/obj/item/device/ano_scanner,
 		/obj/item/device/depth_scanner,
 		/obj/item/weapon/storage/excavation)
+
+*/

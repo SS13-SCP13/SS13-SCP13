@@ -5,19 +5,19 @@
 	desc = "An identification card issued to personnel aboard the SEV Torch."
 	icon_state = "id"
 	item_state = "card-id"
-	job_access_type = /datum/job/assistant
+//	job_access_type = /datum/job/assistant
 
 /obj/item/weapon/card/id/torch/silver
 	desc = "A silver identification card belonging to heads of staff."
 	icon_state = "silver"
 	item_state = "silver_id"
-	job_access_type = /datum/job/hop
+//	job_access_type = /datum/job/hop
 
 /obj/item/weapon/card/id/torch/gold
 	desc = "A golden identification card belonging to the Commanding Officer."
 	icon_state = "gold"
 	item_state = "gold_id"
-	job_access_type = /datum/job/captain
+//	job_access_type = /datum/job/captain
 
 /obj/item/weapon/card/id/torch/captains_spare
 	name = "commanding officer's spare ID"
@@ -200,7 +200,7 @@
 	desc = "A golden identification card belonging to the Commanding Officer."
 	icon_state = "gold"
 	item_state = "gold_id"
-	job_access_type = /datum/job/captain
+	job_access_type = /datum/job/sitedirect
 /*
 ***************
 ***SCP CARDS***
@@ -223,21 +223,21 @@
 	desc = "A dark purple keycard. Looks important. The person wearing it, not at all."
 	icon_state = "securitylvl2"
 	item_state = "Sec_ID2"
-	job_access_type = /datum/job/juneng
+//	job_access_type = /datum/job/juneng
 
 /obj/item/weapon/card/id/seclvl3
 	name = "level three security keycard"
 	desc = "A dark blue keycard. Looks important. The person wearing it not so much."
 	icon_state = "securitylvl3"
 	item_state = "Sec_ID3"
-	job_access_type = /datum/job/eng
+//	job_access_type = /datum/job/eng
 
 /obj/item/weapon/card/id/seclvl4
 	name = "level four security keycard"
 	desc = "A teal keycard. Looks cool."
 	icon_state = "securitylvl4"
 	item_state = "Sec_ID4"
-	job_access_type = /datum/job/seneng
+//	job_access_type = /datum/job/seneng
 
 
 
@@ -352,6 +352,14 @@
 	icon_state = "adminlvl5"
 	item_state = "Admin_ID"
 //	job_access_type = /datum/job/captain
+
+/obj/item/weapon/card/id/sitedirect
+	name = "site director's keycard"
+	desc = "A black keycard. Looks like the person wearing this won't give it up easy."
+	icon_state = "adminlvl5"
+	item_state = "Admin_ID"
+	job_access_type = /datum/job/sitedirect
+
 
 // COMMS CARDS
 

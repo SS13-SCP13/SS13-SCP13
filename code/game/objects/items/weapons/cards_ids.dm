@@ -232,14 +232,14 @@ var/const/NO_EMAG_ACT = -50
 	desc = "A silver card which shows honour and dedication."
 	icon_state = "silver"
 	item_state = "silver_id"
-	job_access_type = /datum/job/hop
+//	job_access_type = /datum/job/hop
 
 /obj/item/weapon/card/id/gold
 	name = "identification card"
 	desc = "A golden card which shows power and might."
 	icon_state = "gold"
 	item_state = "gold_id"
-	job_access_type = /datum/job/captain
+//	job_access_type = /datum/job/captain
 
 /obj/item/weapon/card/id/syndicate_command
 	name = "syndicate ID card"
@@ -314,13 +314,13 @@ var/const/NO_EMAG_ACT = -50
 //	job_access_type = /datum/job/doctor
 
 /obj/item/weapon/card/id/medical/chemist
-	job_access_type = /datum/job/chemist
+//	job_access_type = /datum/job/chemist
 
 /obj/item/weapon/card/id/medical/geneticist
 //	job_access_type = /datum/job/geneticist
 
 /obj/item/weapon/card/id/medical/psychiatrist
-	job_access_type = /datum/job/psychiatrist
+//	job_access_type = /datum/job/psychiatrist
 
 /obj/item/weapon/card/id/medical/paramedic
 //	job_access_type = /datum/job/Paramedic
@@ -329,7 +329,7 @@ var/const/NO_EMAG_ACT = -50
 	name = "identification card"
 	desc = "A card which represents care and compassion."
 	icon_state = "medGold"
-	job_access_type = /datum/job/cmo
+//	job_access_type = /datum/job/cmo
 /*
 /obj/item/weapon/card/id/security
 	name = "identification card"
@@ -347,7 +347,7 @@ var/const/NO_EMAG_ACT = -50
 	name = "identification card"
 	desc = "A card which represents honor and protection."
 	icon_state = "secGold"
-	job_access_type = /datum/job/hos
+//	job_access_type = /datum/job/hos
 
 /obj/item/weapon/card/id/engineering
 	name = "identification card"
@@ -362,13 +362,13 @@ var/const/NO_EMAG_ACT = -50
 	name = "identification card"
 	desc = "A card which represents creativity and ingenuity."
 	icon_state = "engGold"
-	job_access_type = /datum/job/chief_engineer
+//	job_access_type = /datum/job/chief_engineer
 
 /obj/item/weapon/card/id/science
 	name = "identification card"
 	desc = "A card issued to science staff."
 	icon_state = "sci"
-	job_access_type = /datum/job/scientist
+//	job_access_type = /datum/job/scientist
 
 /obj/item/weapon/card/id/science/xenobiologist
 //	job_access_type = /datum/job/xenobiologist
@@ -380,7 +380,7 @@ var/const/NO_EMAG_ACT = -50
 	name = "identification card"
 	desc = "A card which represents knowledge and reasoning."
 	icon_state = "sciGold"
-	job_access_type = /datum/job/rd
+//	job_access_type = /datum/job/rd
 
 /obj/item/weapon/card/id/cargo
 	name = "identification card"

@@ -11,7 +11,7 @@
 	program_menu_icon = "flag"
 	nanomodule_path = /datum/nano_module/program/comm
 	extended_desc = "Used to command and control. Can relay long-range communications. This program can not be run on tablet computers."
-	req_one_access = list(access_adminlvl4, access_mtflvl4, access_sciencelvl5)
+	req_one_access = list(access_command)
 	requires_ntnet = 1
 	size = 12
 	usage_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP
@@ -289,7 +289,7 @@ var/last_message_id = 0
 /proc/post_status(var/command, var/data1, var/data2)
 
 	if (!radio_controller) return
-	
+
 	var/datum/radio_frequency/frequency = radio_controller.return_frequency(1435)
 
 	if(!frequency) return

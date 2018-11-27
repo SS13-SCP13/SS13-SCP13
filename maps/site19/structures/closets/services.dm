@@ -1,7 +1,7 @@
 /*
  * Torch Service
  */
-
+/*
 /obj/structure/closet/chefcloset_torch
 	name = "chef's closet"
 	desc = "It's a storage unit for foodservice equipment."
@@ -93,3 +93,4 @@
 		/obj/item/clothing/shoes/laceup
 	)
 
+*/

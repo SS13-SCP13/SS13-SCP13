@@ -50,7 +50,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Medical surplus equipment"
-	access = access_medicalgen
+	access = access_medicalequip
 
 /decl/hierarchy/supply_pack/medical/cmogear
 	name = "Chief medical officer equipment"
@@ -72,7 +72,7 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Chief medical officer equipment"
-	access = access_s53cmo
+	access = access_cmo
 
 /decl/hierarchy/supply_pack/medical/doctorgear
 	name = "Medical Doctor equipment"
@@ -114,7 +114,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Chemist equipment"
-	access = access_medicalchem
+	access = access_chemistry
 
 /decl/hierarchy/supply_pack/medical/paramedicgear
 	name = "Paramedic equipment"
@@ -157,7 +157,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Psychiatrist equipment"
-	access = access_medicalpsych
+	access = access_psychiatry
 
 /decl/hierarchy/supply_pack/medical/medicalscrubs
 	name = "Medical scrubs"

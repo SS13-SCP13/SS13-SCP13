@@ -7,7 +7,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Virus sample crate"
-	access = access_medicalviro
+	access = access_virology
 
 /decl/hierarchy/supply_pack/science/coolanttank
 	name = "Coolant tank crate"
@@ -25,4 +25,4 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/phoron
 	containername = "\improper Fuel assembly crate"
-	access = access_sciencelvl3
+	access = access_scilvl3

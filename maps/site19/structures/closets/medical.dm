@@ -1,7 +1,7 @@
 /*
  * Torch Medical
  */
-
+/*
 /obj/structure/closet/secure_closet/site53/cmo
 	name = "chief medical officer's locker"
 	req_access = list(access_s53cmo)
@@ -37,7 +37,7 @@
 		/obj/item/clothing/under/rank/medical/scrubs/navyblue
 	)
 
-/*
+
 /obj/structure/closet/secure_closet/medical_torchsenior
 	name = "physician's locker"
 	req_access = list(access_senmed)

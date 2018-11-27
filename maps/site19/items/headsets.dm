@@ -1,4 +1,4 @@
-/obj/item/device/radio/headset/torchnanotrasen
+/*/obj/item/device/radio/headset/torchnanotrasen
 	name = "nanotrasen headset"
 	desc = "A headset for corporate drones."
 	icon_state = "nt_headset"
@@ -84,3 +84,10 @@
 	icon_state = "eng_headset"
 	item_state = "headset"
 	ks2type = /obj/item/device/encryptionkey/headset_torchroboticist
+*/
+/obj/item/device/radio/headset/heads/sitedirect
+	name = "site director's headset"
+	desc = "The headset of the big kahuna."
+	icon_state = "com_headset"
+	item_state = "headset"
+	ks2type = /obj/item/device/encryptionkey/heads/sitedirect

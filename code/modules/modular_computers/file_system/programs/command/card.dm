@@ -6,7 +6,7 @@
 	program_key_state = "id_key"
 	program_menu_icon = "key"
 	extended_desc = "Program for programming personnel ID cards."
-	req_one_access = list(access_adminlvl4, access_mtflvl2)
+	req_one_access = list(access_sitedirect)
 	requires_ntnet = 0
 	size = 8
 

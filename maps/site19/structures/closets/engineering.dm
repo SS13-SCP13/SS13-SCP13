@@ -1,10 +1,10 @@
 /*
  * Torch Engineering
  */
-
+/*
 /obj/structure/closet/secure_closet/engineering_chief_torch
 	name = "chief engineer's locker"
-	req_access = list(access_ce)
+//	req_access = list(access_ce)
 	icon_state = "securece1"
 	icon_closed = "securece"
 	icon_locked = "securece1"
@@ -146,3 +146,4 @@
 		/obj/item/taperoll/atmos,
 		/obj/item/device/analyzer
 	)
+*/

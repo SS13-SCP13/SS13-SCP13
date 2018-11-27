@@ -73,7 +73,7 @@
 	icon_state = "apc0"
 	anchored = 1
 	use_power = 0
-	req_access = list(access_mtflvl2)
+	req_access = list(access_engineering)
 	clicksound = "switch"
 	var/area/area
 	var/areastring = null
@@ -199,7 +199,7 @@
 	wires = null
 	qdel(terminal)
 	terminal = null
-	
+
 	if(cell)
 		cell.forceMove(loc)
 		cell = null

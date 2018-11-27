@@ -1,7 +1,7 @@
 /*
  * Torch Science
  */
-
+/*
 /obj/structure/closet/secure_closet/RD_torch
 	name = "research director's locker"
 //	req_access = list(access_rd)
@@ -223,3 +223,5 @@
 		/obj/item/clothing/mask/gas,
 		/obj/item/weapon/clipboard
 	)
+
+*/

@@ -33,13 +33,13 @@
 	id = access_forensics_lockers
 	desc = "Forensics"
 	region = ACCESS_REGION_NONE
-
+/*
 /var/const/access_medical = 5
 /datum/access/medical
 	id = access_medical
 	desc = "Medical"
 	region = ACCESS_REGION_NONE
-
+*/
 /var/const/access_morgue = 6
 /datum/access/morgue
 	id = access_morgue
@@ -147,13 +147,13 @@
 	id = access_tech_storage
 	desc = "Technical Storage"
 	region = ACCESS_REGION_ENGINEERING
-
+/*
 /var/const/access_atmospherics = 24
 /datum/access/atmospherics
 	id = access_atmospherics
 	desc = "Atmospherics"
 	region = ACCESS_REGION_ENGINEERING
-
+*/
 /var/const/access_bar = 25
 /datum/access/bar
 	id = access_bar
@@ -183,13 +183,13 @@
 	id = access_robotics
 	desc = "Robotics"
 	region = ACCESS_REGION_NONE
-
+/*
 /var/const/access_rd = 30
 /datum/access/rd
 	id = access_rd
 	desc = "Research Director"
 	region = ACCESS_REGION_NONE
-
+*/
 /var/const/access_cargo = 31
 /datum/access/cargo
 	id = access_cargo
@@ -201,13 +201,13 @@
 	id = access_construction
 	desc = "Construction Areas"
 	region = ACCESS_REGION_ENGINEERING
-
+/*
 /var/const/access_chemistry = 33
 /datum/access/chemistry
 	id = access_chemistry
 	desc = "Chemistry Lab"
 	region = ACCESS_REGION_NONE
-
+*/
 /var/const/access_cargo_bot = 34
 /datum/access/cargo_bot
 	id = access_cargo_bot
@@ -237,7 +237,7 @@
 	id = access_lawyer
 	desc = "Internal Affairs"
 	region = ACCESS_REGION_NONE
-
+/*
 /var/const/access_virology = 39
 /datum/access/virology
 	id = access_virology
@@ -255,7 +255,7 @@
 	id = access_qm
 	desc = "Quartermaster"
 	region = ACCESS_REGION_NONE
-
+*/
 /var/const/access_network = 42
 /datum/access/network
 	id = access_network
@@ -317,13 +317,13 @@
 	id = access_xenobiology
 	desc = "Xenobiology Lab"
 	region = ACCESS_REGION_NONE
-
+/*
 /var/const/access_ce = 56
 /datum/access/ce
 	id = access_ce
 	desc = "Chief Engineer"
 	region = ACCESS_REGION_ENGINEERING
-
+*/
 /var/const/access_hop = 57
 /datum/access/hop
 	id = access_hop

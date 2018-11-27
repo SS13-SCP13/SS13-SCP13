@@ -167,7 +167,7 @@
 
 /obj/item/weapon/rig/ce/equipped
 
-	req_access = list(access_mtflvl4)
+	req_access = list(access_ce)
 
 	initial_modules = list(
 		/obj/item/rig_module/ai_container,

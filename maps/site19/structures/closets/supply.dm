@@ -1,7 +1,7 @@
 /*
  * Torch Supply
  */
-
+/*
 /obj/structure/closet/secure_closet/decktech
 	name = "deck technician's locker"
 	req_access = list(access_cargo)
@@ -99,7 +99,7 @@
 	icon_locked = "lslocked"
 	icon_opened = "lsopen"
 	icon_off = "lsoff"
-/*
+
 /obj/structure/closet/secure_closet/logistics/specialist/WillContain()
 	return list(
 		/obj/item/device/radio/headset/headset_cargo,

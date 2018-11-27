@@ -40,8 +40,8 @@
 		ID.update_name()
 
 // ALL OF THESE JOBS NEED TO BE REWORKED.
-/*
-/datum/job/captain
+
+/datum/job/sitedirect
 	has_email = TRUE
 	title = "Site Director"
 	supervisors = "the SCP Foundation and O5 Council"
@@ -54,13 +54,13 @@
 	allowed_ranks = list(/datum/mil_rank/civ/classa)
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(7,10), rand(7,10), rand(12,16))
-		H.add_skills(rand(25,40), rand(25,40), rand(65,85), rand(50,70))
+		H.add_stats(rand(1,5), rand(1,5), rand(30,35)) // Str, Dex, Int.
+		H.add_skills(rand(10,20), rand(10,30), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
 
 	access = list()
 	minimal_access = list()
 
-
+/*
 /datum/job/hop
 	has_email = TRUE
 	title = "Head of Personnel"

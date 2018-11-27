@@ -17,7 +17,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Light armor crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/pistol
 	name = "Pistol Crate"
@@ -25,7 +25,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Pistol Crate"
-	access = access_mtflvl2
+	access = access_seclvl2
 
  /decl/hierarchy/supply_pack/security/smg
 	name = "SMG Crate"
@@ -33,7 +33,7 @@
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper SMG Crate"
-	access = access_mtflvl4
+	access = access_seclvl4
 
  /decl/hierarchy/supply_pack/security/guard
 	name = "Full Guard Crate"
@@ -60,9 +60,9 @@
 		/obj/item/weapon/storage/box/bloodtypes
 	)
 	cost = 30
-	containertype = /obj/structure/closet/secure_closet/mtf/nco
+	containertype = /obj/structure/closet/secure_closet/sec/nco
 	containername = "\improper Guard Gear Crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/tacticalarmor
 	name = "Armor - Tactical"
@@ -77,7 +77,7 @@
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Tactical armor crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/riotarmor
 	name = "Armor - Riot gear"
@@ -89,7 +89,7 @@
 	cost = 80
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Riot armor crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/ballisticarmor
 	name = "Armor - Ballistic"
@@ -98,7 +98,7 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Ballistic suit crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/weapons
 	name = "Junior Guard Weapons"
@@ -109,7 +109,7 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper Weapons crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/shotgun
 	name = "Weapons - Shotgun"
@@ -117,7 +117,7 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper Shotgun crate"
-	access = access_mtflvl4
+	access = access_seclvl4
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /decl/hierarchy/supply_pack/security/flashbang
@@ -126,7 +126,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper Flashbang crate"
-	access = access_mtflvl3
+	access = access_seclvl1
 
 /decl/hierarchy/supply_pack/security/teargas
 	name = "Weapons - Tear gas grenades"
@@ -134,7 +134,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper Tear gas grenades crate"
-	access = access_mtflvl2
+	access = access_seclvl2
 
 /decl/hierarchy/supply_pack/security/pistolammo
 	name = "Ammunition - .45 magazines"
@@ -142,7 +142,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper .45 ammunition crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /decl/hierarchy/supply_pack/security/pistolammorubber
@@ -151,7 +151,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper .45 rubber ammunition crate"
-	access = access_mtflvl1
+	access = access_seclvl1
 
 /decl/hierarchy/supply_pack/security/pistolammopractice
 	name = "Ammunition - .45 practice"
@@ -159,7 +159,7 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper .45 practice ammunition crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/shotgunammo
 	name = "Ammunition - Lethal shells"
@@ -168,7 +168,7 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper Lethal shotgun shells crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /decl/hierarchy/supply_pack/security/shotgunbeanbag
@@ -177,7 +177,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper Beanbag shotgun shells crate"
-	access = access_mtflvl1
+	access = access_seclvl1
 
 /decl/hierarchy/supply_pack/security/pdwammo
 	name = "Ammunition - 9mm top mounted"
@@ -185,7 +185,7 @@
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper 9mm ammunition crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 	security_level = SUPPLY_SECURITY_HIGH
 
 /decl/hierarchy/supply_pack/security/pdwammorubber
@@ -194,7 +194,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper 9mm rubber ammunition crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/pdwammopractice
 	name = "Ammunition - 9mm top mounted practice"
@@ -202,7 +202,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper 9mm practice ammunition crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/bullpupammo
 	name = "Ammunition - 7.62"
@@ -210,7 +210,7 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper 7.62 ammunition crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 	security_level = SUPPLY_SECURITY_HIGH
 
 /decl/hierarchy/supply_pack/security/bullpupammopractice
@@ -219,7 +219,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "\improper 7.62 practice ammunition crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/forensics //Not access-restricted so PIs can use it.
 	name = "Forensics - Auxiliary tools"
@@ -249,7 +249,7 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Forensic equipment crate"
-	access = access_mtflvl3
+	access = access_seclvl3
 
 /decl/hierarchy/supply_pack/security/securitybarriers
 	name = "Misc - Barrier crate"
@@ -257,7 +257,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "\improper Security barrier crate"
-	access = access_mtflvl1
+	access = access_seclvl1
 
 /decl/hierarchy/supply_pack/security/securitybarriers
 	name = "Misc - Wall shield Generators"
@@ -265,7 +265,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "\improper wall shield generators crate"
-	access = access_mtflvl1
+	access = access_seclvl1
 
 /decl/hierarchy/supply_pack/security/securitybiosuit
 	name = "Misc - Security biohazard gear"
@@ -277,4 +277,4 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Security biohazard gear crate"
-	access = access_mtflvl3
+	access = access_seclvl3

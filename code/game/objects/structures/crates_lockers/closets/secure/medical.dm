@@ -19,7 +19,7 @@
 	icon_locked = "medical1"
 	icon_opened = "medicalopen"
 	icon_off = "medicaloff"
-	req_access = list(access_medicalchem)
+	req_access = list(access_medicalequip)
 
 /obj/structure/closet/secure_closet/medical1/WillContain()
 	return list(
@@ -42,7 +42,7 @@
 	icon_locked = "medical1"
 	icon_opened = "medicalopen"
 	icon_off = "medicaloff"
-	req_access = list(access_medicalgen)
+	req_access = list(access_medicalequip)
 
 /obj/structure/closet/secure_closet/medical2/WillContain()
 	return list(
@@ -140,7 +140,7 @@
 	icon_locked = "medical1"
 	icon_opened = "medicalopen"
 	icon_off = "medicaloff"
-	req_access = list(access_mtflvl2)
+	req_access = list(access_chemistry)
 
 /obj/structure/closet/secure_closet/chemical/WillContain()
 	return list(

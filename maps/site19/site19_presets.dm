@@ -8,7 +8,7 @@ var/const/NETWORK_106			= "SCP-106 CCTV Network"
 var/const/NETWORK_173			= "SCP-173 CCTV Network"
 var/const/NETWORK_012			= "SCP-012 CCTV Network"
 var/const/NETWORK_895			= "SCP-895 CCTV Network (CAUTION!)"
-
+/*
 /datum/map/site53/get_network_access(var/network)
 	switch(network)
 		if(NETWORK_ENGINE)
@@ -82,7 +82,7 @@ var/const/NETWORK_895			= "SCP-895 CCTV Network (CAUTION!)"
 
 /obj/machinery/camera/network/scp895
 	network = list(NETWORK_895)
-
+*/
 // Substation SMES
 /obj/machinery/power/smes/buildable/preset/ds90/substation/configure_and_install_coils()
 	component_parts += new /obj/item/weapon/smes_coil(src)
@@ -130,8 +130,8 @@ var/const/NETWORK_895			= "SCP-895 CCTV Network (CAUTION!)"
 	_input_on = TRUE
 	_output_on = TRUE
 	_fully_charged = TRUE
-
+/*
 /datum/map/proc/get_shared_network_access(var/network)
 	switch(network)
 		if(NETWORK_ENGINE)
-			return access_mtflvl1
+			return access_mtflvl1*/

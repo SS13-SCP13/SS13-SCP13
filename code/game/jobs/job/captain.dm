@@ -1,6 +1,6 @@
 var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
-/*
-/datum/job/captain
+
+/datum/job/sitedirect
 	title = "Captain"
 	department = "Command"
 	head_position = 1
@@ -19,14 +19,14 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	ideal_character_age = 70 // Old geezer captains ftw
 	outfit_type = /decl/hierarchy/outfit/job/captain
 
-/datum/job/captain/equip(var/mob/living/carbon/human/H)
+/datum/job/sitedirect/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(src)
 
-/datum/job/captain/get_access()
+/datum/job/sitedirect/get_access()
 	return get_all_station_access()
-
+/*
 /datum/job/hop
 	title = "Head of Personnel"
 	head_position = 1

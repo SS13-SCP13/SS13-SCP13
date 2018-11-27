@@ -2,7 +2,7 @@
  * Torch Exploration
  */
 
-
+/*
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder's locker"
 	req_access = list(access_pathfinder)
@@ -74,3 +74,4 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag, /obj/item/weapon/storage/backpack/messenger)),
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/glowstick/random))
 	)
+*/

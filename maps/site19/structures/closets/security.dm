@@ -1,18 +1,12 @@
 /*
- * Site 53 Security
+ * Site 19 Security
  */
 
 // MTF LOCKERS
 
-/*
- * Torch Security
- */
-
-// MTF LOCKERS
-
-/obj/structure/closet/secure_closet/mtf
+/obj/structure/closet/secure_closet/sec
 	name = "MTF Locker - NO USE, ONLY FOR CODE."
-	req_access = list(access_mtflvl1)
+	req_access = list(access_seclvl1)
 	icon_state = "enlistedlocked"
 	icon_closed = "enlistedunlocked"
 	icon_locked = "enlistedlocked"
@@ -20,20 +14,20 @@
 	icon_off = "enlistedoff"
 	var/registered_name = null
 
-/obj/structure/closet/secure_closet/mtf/WillContain()
+/obj/structure/closet/secure_closet/sec/WillContain()
 	return list(
 	)
 
-/obj/structure/closet/secure_closet/mtf/enlisted
+/obj/structure/closet/secure_closet/sec/junior
 	name = "Junior Guard's Locker"
-	req_access = list(access_mtflvl1)
+	req_access = list(access_seclvl1)
 	icon_state = "enlistedlocked"
 	icon_closed = "enlistedunlocked"
 	icon_locked = "enlistedlocked"
 	icon_opened = "enlistedopen"
 	icon_off = "enlistedoff"
 
-/obj/structure/closet/secure_closet/mtf/enlisted/WillContain()
+/obj/structure/closet/secure_closet/sec/junior/WillContain()
 	return list(
 		/obj/item/clothing/under/scp/utility/security,
 		/obj/item/clothing/head/helmet/pcrc,
@@ -61,16 +55,16 @@
 		/obj/item/weapon/storage/box/bloodtypes
 	)
 
-/obj/structure/closet/secure_closet/mtf/commander
+/obj/structure/closet/secure_closet/sec/commander
 	name = "Guard Commander Locker"
-	req_access = list(access_mtflvl5)
+	req_access = list(access_seclvl5)
 	icon_state = "cmlocked"
 	icon_closed = "cmunlocked"
 	icon_locked = "cmlocked"
 	icon_opened = "cmopen"
 	icon_off = "cmoff"
 
-/obj/structure/closet/secure_closet/mtf/commander/WillContain()
+/obj/structure/closet/secure_closet/sec/commander/WillContain()
 	return list(
 		/obj/item/clothing/under/scp/utility/security/gc,
 		/obj/item/clothing/head/helmet/site53/guardcomm,
@@ -99,16 +93,16 @@
 		/obj/item/weapon/storage/box/bloodtypes
 	)
 
-/obj/structure/closet/secure_closet/mtf/nco
+/obj/structure/closet/secure_closet/sec/nco
 	name = "Guard's Locker"
-	req_access = list(access_mtflvl3)
+	req_access = list(access_seclvl3)
 	icon_state = "nlocked"
 	icon_closed = "nunlocked"
 	icon_locked = "nlocked"
 	icon_opened = "nopen"
 	icon_off = "noff"
 
-/obj/structure/closet/secure_closet/mtf/nco/WillContain()
+/obj/structure/closet/secure_closet/sec/nco/WillContain()
 	return list(
 		/obj/item/clothing/under/scp/utility/security,
 		/obj/item/clothing/head/helmet/pcrc,
@@ -137,16 +131,16 @@
 		/obj/item/weapon/storage/box/bloodtypes
 	)
 
-/obj/structure/closet/secure_closet/mtf/co
+/obj/structure/closet/secure_closet/sec/co
 	name = "Zone Commander's Locker"
-	req_access = list(access_mtflvl4)
+	req_access = list(access_seclvl4)
 	icon_state = "colocked"
 	icon_closed = "counlocked"
 	icon_locked = "colocked"
 	icon_opened = "coopen"
 	icon_off = "cooff"
 
-/obj/structure/closet/secure_closet/mtf/co/WillContain()
+/obj/structure/closet/secure_closet/sec/co/WillContain()
 	return list(
 		/obj/item/clothing/under/scp/utility/security/zc,
 		/obj/item/clothing/head/helmet/site53/zonecomm,
@@ -174,10 +168,10 @@
 		/obj/item/clothing/mask/balaclava,
 		/obj/item/weapon/storage/box/bloodtypes
 	)
-
-/obj/structure/closet/secure_closet/mtf/breachautomatics
+/*
+/obj/structure/closet/secure_closet/sec/breachautomatics
 	name = "automatic weapons locker"
-	req_access = list(access_mtflvl2)
+	req_access = list(access_seclvl2)
 	icon_state = "sec1"
 	icon_closed = "sec"
 	icon_locked = "sec1"
@@ -193,16 +187,16 @@
 	)
 
 
-/obj/structure/closet/secure_closet/mtf/breachshotguns
+/obj/structure/closet/secure_closet/sec/breachshotguns
 	name = "tactical shotgun locker"
-	req_access = list(access_mtflvl2)
+	req_access = list(access_seclvl2)
 	icon_state = "sec1"
 	icon_closed = "sec"
 	icon_locked = "sec1"
 	icon_opened = "secopen"
 	icon_off = "secoff"
 
-/obj/structure/closet/secure_closet/mtf/breachshotguns/WillContain()
+/obj/structure/closet/secure_closet/sec/breachshotguns/WillContain()
 	return list(
 		/obj/item/weapon/gun/projectile/shotgun/tactical,
 		/obj/item/weapon/gun/projectile/shotgun/tactical,
@@ -210,8 +204,8 @@
 		/obj/item/weapon/storage/box/mtf/empammo = 6,
 		/obj/item/weapon/storage/box/mtf/pelletammo = 6
 	)
-
-/obj/structure/closet/secure_closet/mtf/attackby(var/obj/item/weapon/W, var/mob/user)
+*/ /*
+/obj/structure/closet/secure_closet/sec/attackby(var/obj/item/weapon/W, var/mob/user)
 	if (src.opened)
 		..()
 	else if(W.GetIdCard())
@@ -229,7 +223,7 @@
 	else
 		..()
 
-/obj/structure/closet/secure_closet/mtf/CanToggleLock(var/mob/user, var/obj/item/weapon/card/id/id_card)
+/obj/structure/closet/secure_closet/sec/CanToggleLock(var/mob/user, var/obj/item/weapon/card/id/id_card)
 	return ..() || (istype(id_card) && id_card.registered_name && (!registered_name || (registered_name == id_card.registered_name)))
 
 /obj/structure/closet/secure_closet/mtf/verb/reset()
@@ -253,3 +247,5 @@
 			src.registered_name = null
 			src.SetName(initial(name))
 			src.desc = initial(desc)
+
+*/

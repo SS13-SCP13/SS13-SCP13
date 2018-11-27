@@ -7,7 +7,7 @@
 	extended_desc = "This program monitors the local Foundation network, provides access to logging systems, and allows for configuration changes"
 	size = 12
 	requires_ntnet = 1
-	required_access = access_mtflvl3
+	required_access = access_comms
 	available_on_ntnet = 1
 	nanomodule_path = /datum/nano_module/computer_ntnetmonitor/
 

@@ -7,16 +7,16 @@
 
 // SCP COMMAND OUTFITS
 
-/*
+
 /decl/hierarchy/outfit/job/site19/crew/command/facilitydir
 	name = OUTFIT_JOB_NAME("Facility Director")
 	uniform = /obj/item/clothing/under/scp/suittie
 	shoes = /obj/item/clothing/shoes/dress
 	suit = /obj/item/clothing/suit/storage/toggle/suit/black
-	id_type = /obj/item/weapon/card/id/adminlvl5
-	l_ear = /obj/item/device/radio/headset/heads/captain
+	id_type = /obj/item/weapon/card/id/sitedirect
+	l_ear = /obj/item/device/radio/headset/heads/sitedirect
 	back = null
-
+/*
 /decl/hierarchy/outfit/job/site19/crew/command/headofhr
 	name = OUTFIT_JOB_NAME("Head of Human Resources")
 	uniform = /obj/item/clothing/under/scp/suittie
