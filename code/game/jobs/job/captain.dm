@@ -1,5 +1,5 @@
 var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
-
+/*
 /datum/job/captain
 	title = "Captain"
 	department = "Command"
@@ -145,3 +145,5 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 	access = list(access_sciencelvl1, access_sciencelvl2, access_sciencelvl3)
 	minimal_access = list()
+
+*/

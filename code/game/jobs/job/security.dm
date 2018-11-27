@@ -1,4 +1,4 @@
-/datum/job/hos
+/*/datum/job/hos
 	title = "Head of Security"
 	head_position = 1
 	department = "Security"
@@ -295,3 +295,4 @@
 
 	access = list(access_mtflvl1, access_sciencelvl1)
 	minimal_access = list()
+*/

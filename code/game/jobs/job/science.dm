@@ -1,4 +1,4 @@
-/datum/job/rd
+/*/datum/job/rd
 	title = "Research Director"
 	head_position = 1
 	department = "Science"
@@ -21,7 +21,7 @@
 	minimal_player_age = 14
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
-/*
+
 /datum/job/scientist
 	title = "Scientist"
 	department = "Science"
@@ -69,7 +69,7 @@
 	alt_titles = list("Biomechanical Engineer","Mechatronic Engineer")
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
-*/
+
 // SCP JOBS
 
 /datum/job/seniorscientist
@@ -132,3 +132,4 @@
 	access = list(access_sciencelvl1)
 	minimal_access = list()
 
+*/

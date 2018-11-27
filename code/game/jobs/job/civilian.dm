@@ -125,7 +125,7 @@
 	. = ..()
 	if(.)
 		H.implant_loyalty(H)
-*/
+
 
 /datum/job/janitor
 	title = "Janitor"
@@ -199,3 +199,4 @@
 
 	access = list(access_sciencelvl1)
 	minimal_access = list()
+*/

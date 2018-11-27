@@ -39,8 +39,8 @@
 		ID.registered_name = "D-[used_numbers[used_numbers.len]]"
 		ID.update_name()
 
-
-
+// ALL OF THESE JOBS NEED TO BE REWORKED.
+/*
 /datum/job/captain
 	has_email = TRUE
 	title = "Site Director"
@@ -1077,3 +1077,4 @@
 
 	access = list()
 	minimal_access = list()
+*/

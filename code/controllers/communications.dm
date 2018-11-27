@@ -128,7 +128,7 @@ var/const/SEC_I_FREQ = 1475
 var/list/radiochannels = list(
 	"Public"		= PUB_FREQ,
 	"Science"		= SCI_FREQ,
-	"Command"		= COMM_FREQ,
+	"Administration"		= COMM_FREQ,
 	"Medical"		= MED_FREQ,
 	"Engineering"	= ENG_FREQ,
 	"Security" 		= SEC_FREQ,
@@ -137,7 +137,7 @@ var/list/radiochannels = list(
 	"Insurgency" 	= SYND_FREQ,
 	"Raider"		= RAID_FREQ,
 	"Exploration"	= EXP_FREQ,
-	"Supply" 		= SUP_FREQ,
+	"Logistics" 		= SUP_FREQ,
 	"Civilian" 		= SRV_FREQ,
 	"Encrypted"		= AI_FREQ,
 	"Entertainment" = ENT_FREQ,
@@ -179,8 +179,8 @@ var/list/DEPT_FREQS = list(AI_FREQ, COMM_FREQ, ENG_FREQ, MED_FREQ, SEC_FREQ, SCI
 		return "sciradio"
 	if(frequency == MED_FREQ)
 		return "medradio"
-	if(frequency == EXP_FREQ) // exploration
-		return "EXPradio"
+//	if(frequency == EXP_FREQ) // exploration
+//		return "EXPradio"
 	if(frequency == SUP_FREQ) // cargo
 		return "supradio"
 	if(frequency == SRV_FREQ) // service

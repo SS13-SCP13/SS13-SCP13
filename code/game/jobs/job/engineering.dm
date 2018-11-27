@@ -1,4 +1,4 @@
-/datum/job/chief_engineer
+/*/datum/job/chief_engineer
 	title = "Chief Engineer"
 	supervisors = "the Security Commander and Facility Director"
 	selection_color = "#5b4d20"
@@ -147,7 +147,7 @@
 
 
 
-/*
+
 /datum/job/engineer
 	title = "Engineer"
 	department = "Engineering"

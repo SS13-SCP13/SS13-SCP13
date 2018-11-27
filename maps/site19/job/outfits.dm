@@ -6,6 +6,8 @@
 
 
 // SCP COMMAND OUTFITS
+
+/*
 /decl/hierarchy/outfit/job/site19/crew/command/facilitydir
 	name = OUTFIT_JOB_NAME("Facility Director")
 	uniform = /obj/item/clothing/under/scp/suittie
@@ -199,7 +201,7 @@
 
 
 // MISC OUTFITS
-
+*/
 /decl/hierarchy/outfit/job/site19/crew/civ/classd
 	name = OUTFIT_JOB_NAME("Class D")
 	uniform = /obj/item/clothing/under/scp/dclass
@@ -213,7 +215,7 @@
 	if(prob(15))
 		var/path = pick(/obj/item/weapon/material/kitchen/utensil/knife/boot, /obj/item/weapon/wrench, /obj/item/weapon/screwdriver)
 		H.equip_to_slot_or_del(new path (H), slot_l_store)
-
+/*
 /decl/hierarchy/outfit/job/site19/crew/civ/janitor
 	name = OUTFIT_JOB_NAME("Janitor")
 	uniform = /obj/item/clothing/under/rank/janitor
@@ -396,3 +398,4 @@
 	l_pocket = /obj/item/device/radio
 	l_ear = null
 	back = null
+*/

@@ -247,7 +247,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	return list(
 		num2text(PUB_FREQ)   = list(),
 		num2text(AI_FREQ)    = list(access_synth),
-		num2text(ENT_FREQ)   = list(),
+		// num2text(ENT_FREQ)   = list(), // Entertainment is a ruse. No entertainment with my SCP's. :^) ~Lion
 		num2text(ERT_FREQ)   = list(access_cent_specops),
 		num2text(COMM_FREQ)  = list(access_com_comms),
 		num2text(ENG_FREQ)   = list(access_eng_comms),

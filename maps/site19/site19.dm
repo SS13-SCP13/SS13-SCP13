@@ -2,20 +2,21 @@
 
 	#include "site19_announcements.dm"
 	#include "site19_areas.dm"
-	#include "../torch/torch_areas.dm"
+	#include "../torch/torch_areas.dm" // These area's are included for standard area's or copying them off. Pre-alpha testing only, should then be disabled to prevent a lot of things being compiled for no reason.
 	#include "site19_elevators.dm"
 	#include "site19_presets.dm"
-	#include "site_19_ranks.dm"
+	#include "site19_ranks.dm"
 	#include "site19_shuttles.dm"
+	#include "site19_antagonism.dm"
 //	#include "torch_unit_testing.dm"
 //	#include "torch_antagonism.dm"
 //	#include "torch_npcs.dm"
 	#include "site19_securitystate.dm"
 
-//	#include "datums/uniforms.dm"
+//	#include "datums/uniforms.dm" // Uniform vendor items. We don't use this.
 //	#include "datums/uniforms_expedition.dm"
 //	#include "datums/uniforms_fleet.dm"
-//	#include "datums/supplypacks/security.dm"
+//	#include "datums/supplypacks/security.dm" // Supplypacks. These can be reconfigured to map-specific supply packs for cargo.
 //	#include "datums/supplypacks/science.dm"
 
 	#include "items/cards_ids.dm"

@@ -1,4 +1,4 @@
-/datum/job/cmo
+/*/datum/job/cmo
 	title = "Chief Medical Officer"
 	head_position = 1
 	department = "Medical"
@@ -20,7 +20,7 @@
 	minimal_player_age = 14
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/medical/cmo
-/*
+
 /datum/job/doctor
 	title = "Medical Doctor"
 	department = "Medical"
@@ -40,7 +40,7 @@
 		"Nurse" = /decl/hierarchy/outfit/job/medical/doctor/nurse,
 		"Virologist" = /decl/hierarchy/outfit/job/medical/doctor/virologist)
 	outfit_type = /decl/hierarchy/outfit/job/medical/doctor
-*/
+
 //Chemist is a medical job damnit	//YEAH FUCK YOU SCIENCE	-Pete	//Guys, behave -Erro
 /datum/job/chemist
 	title = "Chemist"
@@ -87,7 +87,7 @@
 	minimal_access = list(access_medical, access_medical_equip, access_psychiatrist)
 	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist)
 	outfit_type = /decl/hierarchy/outfit/job/medical/psychiatrist
-/*
+
 /datum/job/Paramedic
 	title = "Paramedic"
 	department = "Medical"
@@ -103,7 +103,7 @@
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks)
 	alt_titles = list("Emergency Medical Technician" = /decl/hierarchy/outfit/job/medical/paramedic/emt)
 	outfit_type = /decl/hierarchy/outfit/job/medical/paramedic
-*/
+
 /datum/job/medicaldoctor
 	title = "Medical Doctor"
 	department = "Medical"
@@ -185,3 +185,4 @@
 
 	access = list(access_mtflvl1, access_mtflvl2)
 	minimal_access = list()
+*/
