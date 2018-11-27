@@ -26,6 +26,31 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 /datum/job/sitedirect/get_access()
 	return get_all_station_access()
+
+/datum/job/siteinspect
+	has_email = TRUE
+	department_flag = COM
+	title = "Site Inspector"
+	selection_color = "#1d1d4f"
+	supervisors = "the SCP Foundation and O5 Council"
+	duties = "<big><b>As the Site Inspector, your only job is to inspect the construction on this site so far. Please report any failures or oversights to your supervisor!"
+	minimal_player_age = 20
+	economic_modifier = 15
+	ideal_character_age = 50
+	total_positions = -1
+	spawn_positions = -1
+	outfit_type = /decl/hierarchy/outfit/job/site19/crew/command/facilitydir
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/classa)
+	equip(var/mob/living/carbon/human/H)
+		..()
+		H.add_stats(rand(1,5), rand(1,5), rand(30,35)) // Str, Dex, Int.
+		H.add_skills(rand(10,20), rand(10,30), rand(5,10), rand(5,10)) // Melee, Ranged, Medical, Engineering.
+
+	access = list()
+	minimal_access = list()
+
+
 /*
 /datum/job/hop
 	title = "Head of Personnel"
