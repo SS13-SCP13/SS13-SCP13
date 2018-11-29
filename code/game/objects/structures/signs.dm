@@ -386,27 +386,35 @@
 	name = "\improper Exam Room"
 	icon_state = "examroom"
 
-/obj/structure/sign/directions/site53/mcr
+/obj/structure/sign/directions/scp/mcr
 	name = "\improper Main Control Room"
 	icon_state = "mcr"
 
-/obj/structure/sign/directions/site53/ez
+/obj/structure/sign/directions/scp/ez
 	name = "\improper Entrance Zone"
 	icon_state = "ez"
 
-/obj/structure/sign/directions/site53/bunker
+/obj/structure/sign/directions/scp/bunker
 	name = "\improper Secure Bunker"
 	icon_state = "bunker"
 
-/obj/structure/sign/directions/site53/hcz
+/obj/structure/sign/directions/scp/hcz
 	name = "\improper Heavy Containment Zone"
 	icon_state = "hcz"
 
-/obj/structure/sign/directions/site53/lcz
+/obj/structure/sign/directions/scp/lcz
 	name = "\improper Light Containment Zone"
 	icon_state = "lcz"
 
-/obj/structure/sign/directions/site53/adm
+/obj/structure/sign/directions/scp/gatea
+	name = "\improper Gate A"
+	icon_state = "gatea"
+
+/obj/structure/sign/directions/scp/gateb
+	name = "\improper Gate B"
+	icon_state = "gateb"
+
+/obj/structure/sign/directions/scp/adm
 	name = "\improper Administration"
 	icon_state = "direction_adm"
 

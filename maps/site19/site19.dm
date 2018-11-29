@@ -69,6 +69,7 @@
 	#include "site19-3.dmm"
 	#include "site19-4.dmm"
 	#include "site19-5.dmm"
+	#include "site19-6.dmm"
 	#include "site19-7.dmm"
 
 	#include "../../code/modules/lobby_music/Perdition.dm"

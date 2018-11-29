@@ -6,12 +6,12 @@
 
 	lobby_icon = 'icons/lobby.dmi'
 
-	station_levels = list(1,2,3,4,5)
-	contact_levels = list(1,2,3,4,5)
-	player_levels = list(1,2,3,4,5)
-	admin_levels = list(6,7)
+	station_levels = list(1,2,3,4,5,6,7)
+	contact_levels = list(1,2,3,4,5,6,7)
+	player_levels = list(1,2,3,4,5,6,7)
+	admin_levels = list()
 	empty_levels = list()
-	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1)
+	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1, "5"=1, "6"=1, "7"=1)
 	overmap_size = 35
 	overmap_event_areas = 0
 	usable_email_tlds = list("site53.foundation", "security.site53.foundation", "science.site53.foundation", "utility.site53.foundation")

@@ -223,6 +223,9 @@ var/list/floor_decals = list()
 /obj/effect/floor_decal/corner/green/border
 	icon_state = "bordercolor"
 
+/obj/effect/floor_decal/corner/green/roadborder
+	icon_state = "roadborder"
+
 /obj/effect/floor_decal/corner/green/half
 	icon_state = "bordercolorhalf"
 

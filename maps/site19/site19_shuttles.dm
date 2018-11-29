@@ -344,7 +344,7 @@
 /obj/effect/shuttle_landmark/merc/deck1
 	name = "Site53"
 	landmark_tag = "nav_merc_deck1"
-	base_area = /area/site53/surface/surface
+	base_area = /area/site19/surface/surface
 
 //
 

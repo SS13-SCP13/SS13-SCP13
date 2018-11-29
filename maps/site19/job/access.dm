@@ -179,6 +179,12 @@
 	desc = "Atmospherics"
 	region = ACCESS_REGION_ENGINEERING
 
+/var/const/access_maintenance = 352
+/datum/access/maintenance
+	id = access_maintenance
+	desc = "Maintenance"
+	region = ACCESS_REGION_ENGINEERING
+
 /*######################
 #########MEDICAL########
 ######################*/

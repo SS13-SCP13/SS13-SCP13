@@ -132,9 +132,9 @@
 
 // SITE 53 SURFACE AREA'S
 
-/area/site53/surface/surface
+/area/site19/surface/surface
 	name = "Surface"
-	requires_power = 0
+	requires_power = 1
 	dynamic_lighting = 0
 
 /area/site53/surface/cryogenicsprimary
