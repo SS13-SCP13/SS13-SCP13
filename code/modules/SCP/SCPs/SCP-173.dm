@@ -185,7 +185,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 			underlays = list(dropping)
 			overlays = list(src) // fuck me
 			visible_message("<span class = \"good\">[user] puts SCP-173 in the cage.</span>")
-			name = "SCP-173's Cage"
+			name = "SCP-173 Cage"
 	else if (isliving(dropping))
 		to_chat(user, "<span class = \"warning\">\The [dropping] won't fit in the cage.</span>")
 
