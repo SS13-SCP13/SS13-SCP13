@@ -158,7 +158,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 /mob/living/scp_173/verb/get_schwifty() // plz don't kill me for the reference
 	set name = "Shit On Floor"
 	set category = "SCP"
-	if(world.time >= last_player_shit + 600)
+	if(!isobj(loc) && world.time >= (last_player_shit + 600))
 		last_player_shit = world.time
 		var/feces = pick(/obj/effect/decal/cleanable/blood, /obj/effect/decal/cleanable/blood/gibs, /obj/effect/decal/cleanable/mucus)
 		new feces(loc)
@@ -168,3 +168,43 @@ GLOBAL_LIST_EMPTY(scp173s)
 	..(_new)
 	if (stat != DEAD)
 		scp173_killed = FALSE
+
+// the cage
+/obj/structure/scp173_cage
+	icon = 'icons/SCP/cage.dmi'
+	icon_state = "1"
+	layer = MOB_LAYER + 0.01
+	name = "Empty SCP-173 Cage"
+
+/obj/structure/scp173_cage/MouseDrop_T(atom/movable/dropping, mob/user)
+	if (isscp173(dropping))
+		visible_message("<span class = \"danger\">[user] starts to put SCP-173 into the cage.</span>")
+		var/oloc = loc
+		if (do_mob(user, dropping, 5 SECONDS) && loc == oloc) // shitty but there's no good alternative
+			dropping.forceMove(src)
+			underlays = list(dropping)
+			overlays = list(src) // fuck me
+			visible_message("<span class = \"good\">[user] puts SCP-173 in the cage.</span>")
+			name = "SCP-173's Cage"
+	else if (isliving(dropping))
+		to_chat(user, "<span class = \"warning\">\The [dropping] won't fit in the cage.</span>")
+
+/obj/structure/scp173_cage/attack_hand(mob/living/carbon/human/H)
+	if (locate(/mob/living/scp_173) in contents)
+		visible_message("<span class = \"danger\">[H] releases SCP-173 from the cage.</span>")
+
+		var/mob/living/scp_173/S = contents[1]
+		S.forceMove(get_step(src, dir))
+
+		// move to a nice spot if our current one is too full
+		for (var/dir in list(NORTH, EAST, SOUTH, WEST))
+			if (S.loc.density || (locate(/mob/living) in (S.loc.contents-S)))
+				S.forceMove(get_step(src, dir))
+			else
+				break
+
+		underlays.Cut()
+		overlays.Cut()
+		name = initial(name)
+	else
+		visible_message("<span class = \"warning\">The cage is empty; there's nothing to take out.</span>")
