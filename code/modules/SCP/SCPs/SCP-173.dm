@@ -198,7 +198,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 
 		// move to a nice spot if our current one is too full
 		for (var/dir in list(NORTH, EAST, SOUTH, WEST))
-			if (S.loc.density || (locate(/mob/living) in (S.loc.contents-S)))
+			if (S.loc.density || (locate(/mob/living) in (S.loc.contents-S)) || (locate(/obj/structure) in (S.loc.contents-S)))
 				S.forceMove(get_step(src, dir))
 			else
 				break
