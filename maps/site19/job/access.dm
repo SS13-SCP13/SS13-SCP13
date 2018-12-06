@@ -99,19 +99,7 @@
 	desc = "Security level five"
 	region = ACCESS_REGION_SECURITY
 
-/var/const/access_hcz = 255
-/datum/access/hcz
-	id = access_hcz
-	desc = "Basic Heavy Containment Zone Access"
-	region = ACCESS_REGION_SECURITY
-
-/var/const/access_lcz = 256
-/datum/access/lcz
-	id = access_lcz
-	desc = "Basic Light Containment Zone Access"
-	region = ACCESS_REGION_SECURITY
-
-/var/const/access_qm = 257
+/var/const/access_qm = 255
 /datum/access/qm
 	id = access_qm
 	desc = "Quarter Master"
@@ -155,6 +143,18 @@
 /datum/access/scilvl5
 	id = access_scilvl5
 	desc = "Science level one"
+	region = ACCESS_REGION_RESEARCH
+
+/var/const/access_hcz = 305
+/datum/access/hcz
+	id = access_hcz
+	desc = "Basic Heavy Containment Zone Access"
+	region = ACCESS_REGION_RESEARCH
+
+/var/const/access_lcz = 306
+/datum/access/lcz
+	id = access_lcz
+	desc = "Basic Light Containment Zone Access"
 	region = ACCESS_REGION_RESEARCH
 
 /*######################
@@ -268,6 +268,10 @@
 	id = access_commtech
 	desc = "Communications Technician"
 	region = ACCESS_REGION_ENGINEERING
+
+/*######################
+#########MEDICAL########
+######################*/
 
 /*######################
 ########CIVILIAN########
