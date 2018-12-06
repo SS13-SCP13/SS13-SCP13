@@ -83,6 +83,8 @@
 
 #define isscp999(A) istype(A, /mob/living/simple_animal/scp_999)
 
+#define isscp131(A) istype(A, /mob/living/simple_animal/scp_131)
+
 #define isunderwear(A) istype(A, /obj/item/underwear)
 
 #define isvirtualmob(A) istype(A, /mob/observer/virtual)
