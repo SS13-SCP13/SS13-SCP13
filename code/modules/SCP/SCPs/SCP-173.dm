@@ -158,7 +158,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 /mob/living/scp_173/verb/get_schwifty() // plz don't kill me for the reference
 	set name = "Shit On Floor"
 	set category = "SCP"
-	if(!isobj(loc) && world.time >= (last_player_shit + 600))
+	if(!isobj(loc) && world.time >= (last_player_shit + (1 MINUTE)))
 		last_player_shit = world.time
 		var/feces = pick(/obj/effect/decal/cleanable/blood, /obj/effect/decal/cleanable/blood/gibs, /obj/effect/decal/cleanable/mucus)
 		new feces(loc)
@@ -173,7 +173,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 /obj/structure/scp173_cage
 	icon = 'icons/SCP/cage.dmi'
 	icon_state = "1"
-	layer = MOB_LAYER + 0.01
+	layer = MOB_LAYER + 0.05
 	name = "Empty SCP-173 Cage"
 
 /obj/structure/scp173_cage/MouseDrop_T(atom/movable/dropping, mob/user)
@@ -183,7 +183,6 @@ GLOBAL_LIST_EMPTY(scp173s)
 		if (do_mob(user, dropping, 5 SECONDS) && loc == oloc) // shitty but there's no good alternative
 			dropping.forceMove(src)
 			underlays = list(dropping)
-			overlays = list(src) // fuck me
 			visible_message("<span class = \"good\">[user] puts SCP-173 in the cage.</span>")
 			name = "SCP-173 Cage"
 	else if (isliving(dropping))
@@ -204,7 +203,6 @@ GLOBAL_LIST_EMPTY(scp173s)
 				break
 
 		underlays.Cut()
-		overlays.Cut()
 		name = initial(name)
 	else
 		visible_message("<span class = \"warning\">The cage is empty; there's nothing to take out.</span>")
