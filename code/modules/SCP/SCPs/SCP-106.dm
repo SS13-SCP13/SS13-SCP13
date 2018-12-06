@@ -452,37 +452,43 @@ GLOBAL_LIST_EMPTY(scp106_spawnpoints)
 
 /obj/structure/femur_breaker/proc/activate()
 	set waitfor = FALSE
-	for (var/mob/living/carbon/human/H in get_turf(src))
-		playsound(src, 'sound/scp/machinery/femur_breaker.ogg', 100)
-		sleep(2.8 SECONDS)
-		for (var/obj/item/organ/external/leg/L in H.organs)
-			if (!(L.status & BROKEN))
-				L.fracture()
-				if (spent_mobs[H])
-					return
-				sleep(10 SECONDS)
-				for (var/scp106 in GLOB.scp106s)
-					var/atom/movable/A = scp106
-					A.forceMove(GLOB.scp106_spawnpoints[1])
-					break
-				sleep(40 SECONDS)
-				for (var/scp106 in GLOB.scp106s)
-					var/atom/movable/A = scp106
-					if (get_area(A) != get_area(GLOB.scp106_spawnpoints[1]))
-						if (!(A.loc in GLOB.scp106_floors))
-							return // failed
-				sleep(30 SECONDS)
-				var/active_shield_generators = 0
-				for (var/obj/machinery/shieldwallgen/G in get_area(GLOB.scp106_spawnpoints[1]))
-					if (G.active)
-						++active_shield_generators
 
-				if (active_shield_generators < 4)
-					return // failed
+	var/mob/living/carbon/human/H = buckled_mob
 
-				world << sound('sound/scp/machinery/femur_breaker_success.ogg')
-				spent_mobs[H] = TRUE
+	// because monkeys are humans
+	if (istype(H.species, /datum/species/monkey))
+		return
+
+	world << sound('sound/scp/machinery/femur_breaker.ogg')
+	sleep(2.8 SECONDS)
+
+	for (var/obj/item/organ/external/leg/L in H.organs)
+		if (!(L.status & BROKEN))
+			L.fracture()
+			if (spent_mobs[H])
 				return
+			sleep(10 SECONDS)
+			for (var/scp106 in GLOB.scp106s)
+				var/atom/movable/A = scp106
+				A.forceMove(GLOB.scp106_spawnpoints[1])
+			sleep(40 SECONDS)
+			for (var/scp106 in GLOB.scp106s)
+				var/atom/movable/A = scp106
+				if (get_area(A) != get_area(GLOB.scp106_spawnpoints[1]))
+					if (!(A.loc in GLOB.scp106_floors))
+						return // failed
+			sleep(30 SECONDS)
+			var/active_shield_generators = 0
+			for (var/obj/machinery/shieldwallgen/G in get_area(GLOB.scp106_spawnpoints[1]))
+				if (G.active)
+					++active_shield_generators
+
+			if (active_shield_generators < 4)
+				return // failed
+
+			world << sound('sound/scp/machinery/femur_breaker_success.ogg')
+			spent_mobs[H] = TRUE
+			return
 
 /obj/machinery/button/femur_breaker
 	name = "Femur Breaker Button"
