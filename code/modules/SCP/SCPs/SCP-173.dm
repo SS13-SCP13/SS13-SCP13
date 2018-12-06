@@ -175,6 +175,7 @@ GLOBAL_LIST_EMPTY(scp173s)
 	icon_state = "1"
 	layer = MOB_LAYER + 0.05
 	name = "Empty SCP-173 Cage"
+	density = TRUE
 
 /obj/structure/scp173_cage/MouseDrop_T(atom/movable/dropping, mob/user)
 	if (isscp173(dropping))
