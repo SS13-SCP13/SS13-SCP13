@@ -18,6 +18,8 @@
 	var/attacking = 0
 	var/target_zone
 
+	var/locked = FALSE
+
 	w_class = ITEM_SIZE_NO_CONTAINER
 /*
 	This section is for overrides of existing procs.
@@ -161,6 +163,10 @@
 		to_chat(assailant, "<span class='danger'>It's too soon to upgrade.</span>")
 		return
 
+	if (locked)
+		to_chat(assailant, "<span class='danger'>You can't upgrade further than this.</span>")
+		return
+
 	var/datum/grab/upgrab = current_grab.upgrade(src)
 	if(upgrab)
 		current_grab = upgrab
@@ -169,7 +175,7 @@
 		update_icons()
 		current_grab.enter_as_up(src)
 
-		if (!bypass_cooldown && isscp106(loc) && !(loc.loc in GLOB.scp106_floors))
+		if (!bypass_cooldown && isscp106(loc) && !(loc.loc in GLOB.scp106_floors) && !(affecting.loc in GLOB.scp106_floors))
 			var/mob/living/carbon/human/scp106/H = loc
 			affecting.forceMove(pick(GLOB.scp106_floors))
 			H.set_last_xyz()

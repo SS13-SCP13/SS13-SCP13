@@ -138,3 +138,6 @@
 
 	// SCP-078
 	var/dies_young = 0
+
+	// SCP-106
+	var/pocket_dimension_decay = 0

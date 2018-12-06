@@ -33,8 +33,14 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - spellcheck: "Fixed Medical and Engineering uniforms to be named guard commander uniform, despite having a different sprite."
-  - bugfix: "Fixed Chief Engineer being set as Misc under the crew roster."
-  - bugfix: "Fixed a bug with CMO not being able to access their fax machine."
-  - tweak: "Altered EZ Agent access to add basic access to Medical."
-  - tweak: "Altered access for Medical Doctors, Surgeons and the CMO."
+  - rscdel: "Removed hacked supply beacons from traitor uplinks due to design philosophy not linking with it."
+  - rscdel: "Removes zombie powder from Traitor uplink as a possibility when selecting random toxin."
+  - rscdel: "Removes toxin damage from the energy crossbow."
+  - rscadd: "Adds headsets to the medical department."
+  - spellcheck: "Tweaked description of energy crossbow to match new features."
+  - tweak: "Changed GoI Operative to C.I. Operative."
+  - tweak: "Added Sanitation Technician to the alternative title list for Janitor."
+  - tweak: "Removed Pharmacist as an alt title for Chemist."
+  - tweak: "Removed Communications Dispatcher alt title from Communication Technicians."
+  - tweak: "Removes movement penalty to all types of guard armor."
+  - iconadd: "New hud icons for Security. If a job has been forgotten, or does not show up, report it on the GitHub please."

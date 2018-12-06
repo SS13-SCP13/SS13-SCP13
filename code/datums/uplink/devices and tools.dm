@@ -83,12 +83,12 @@
     name = "Hacked AI Upload Module"
     item_cost = 52
     path = /obj/item/weapon/aiModule/syndicate
-
+/*
 /datum/uplink_item/item/tools/supply_beacon
     name = "Hacked Supply Beacon (DANGER!)"
     item_cost = 52
     path = /obj/item/supply_beacon
-
+*/
 /datum/uplink_item/item/tools/camera_mask
     name = "Camera MIU"
     item_cost = 60
