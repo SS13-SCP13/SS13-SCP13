@@ -26,7 +26,8 @@
 
 /obj/machinery/computer/fusion_core_control/attack_hand(mob/user)
 	add_fingerprint(user)
-	interact(user)
+	if (!isobserver(user) || user.client.holder)
+		interact(user)
 
 /obj/machinery/computer/fusion_core_control/interact(mob/user)
 
