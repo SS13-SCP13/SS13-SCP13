@@ -888,6 +888,42 @@ var/list/floor_decals = list()
 	name = "L16"
 	icon_state = "L16"
 
+/obj/effect/floor_decal/scp13/s1
+	name = "s1"
+	icon_state = "0,2"
+
+/obj/effect/floor_decal/scp13/s2
+	name = "s2"
+	icon_state = "1,2"
+
+/obj/effect/floor_decal/scp13/s3
+	name = "s3"
+	icon_state = "2,2"
+
+/obj/effect/floor_decal/scp13/s4
+	name = "s4"
+	icon_state = "0,1"
+
+/obj/effect/floor_decal/scp13/s5
+	name = "s5"
+	icon_state = "1,1"
+
+/obj/effect/floor_decal/scp13/s6
+	name = "s6"
+	icon_state = "2,1"
+
+/obj/effect/floor_decal/scp13/s7
+	name = "s7"
+	icon_state = "0,0"
+
+/obj/effect/floor_decal/scp13/s8
+	name = "s8"
+	icon_state = "1,0"
+
+/obj/effect/floor_decal/scp13/s9
+	name = "s9"
+	icon_state = "2,0"
+
 /obj/effect/floor_decal/sign
 	name = "floor sign"
 	icon_state = "white_1"
