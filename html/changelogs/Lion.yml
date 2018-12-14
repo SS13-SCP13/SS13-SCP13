@@ -37,6 +37,8 @@ changes:
   - rscdel: "Removes zombie powder from Traitor uplink as a possibility when selecting random toxin."
   - rscdel: "Removes toxin damage from the energy crossbow."
   - rscadd: "Adds headsets to the medical department."
+  - rscdel: "Removed SCP File cabinets and related documentation."
+  - rscdel: "Removed Lion statues from the game code."
   - spellcheck: "Tweaked description of energy crossbow to match new features."
   - tweak: "Changed GoI Operative to C.I. Operative."
   - tweak: "Added Sanitation Technician to the alternative title list for Janitor."
@@ -44,3 +46,4 @@ changes:
   - tweak: "Removed Communications Dispatcher alt title from Communication Technicians."
   - tweak: "Removes movement penalty to all types of guard armor."
   - iconadd: "New hud icons for Security. If a job has been forgotten, or does not show up, report it on the GitHub please."
+  - iconadd: "Switched out old wall decals for newer decals, with thanks to Bay."
