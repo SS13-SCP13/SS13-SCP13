@@ -268,14 +268,3 @@ for reference:
 		s.start()
 		visible_message("<span class='warning'>BZZzZZzZZzZT</span>")
 		return 1
-
-/obj/structure/lionstatue
-	name = "Lion statue"
-	desc = "A magnificent statue of a Lion. It looks proud."
-	icon = 'icons/obj/structures.dmi'
-	icon_state = "lion"
-	anchored = 1.0
-	density = 1
-	var/health = 99999
-	var/maxhealth = 99999
-	var/material/material
