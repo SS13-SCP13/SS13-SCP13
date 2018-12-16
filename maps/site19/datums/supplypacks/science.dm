@@ -1,4 +1,4 @@
-/decl/hierarchy/supply_pack/science/voidsuit
+/*/decl/hierarchy/supply_pack/science/voidsuit
 	name = "Excavation voidsuit"
 	contains = list(/obj/item/clothing/suit/space/void/excavation,
 					/obj/item/clothing/head/helmet/space/void/excavation,
@@ -37,3 +37,4 @@
 	containername = "\improper Exploration voidsuit crate"
 	containertype = /obj/structure/closet/crate/secure/large
 	access = access_explorer
+*/

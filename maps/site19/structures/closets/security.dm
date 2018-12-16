@@ -4,7 +4,7 @@
 
 // MTF LOCKERS
 
-/obj/structure/closet/secure_closet/sec
+/obj/structure/closet/secure_closet/scp/sec
 	name = "MTF Locker - NO USE, ONLY FOR CODE."
 	req_access = list(access_seclvl1)
 	icon_state = "enlistedlocked"
@@ -14,11 +14,11 @@
 	icon_off = "enlistedoff"
 	var/registered_name = null
 
-/obj/structure/closet/secure_closet/sec/WillContain()
+/obj/structure/closet/secure_closet/scp/sec/WillContain()
 	return list(
 	)
 
-/obj/structure/closet/secure_closet/sec/junior
+/obj/structure/closet/secure_closet/scp/sec/junior
 	name = "Junior Guard's Locker"
 	req_access = list(access_seclvl1)
 	icon_state = "enlistedlocked"
@@ -27,7 +27,7 @@
 	icon_opened = "enlistedopen"
 	icon_off = "enlistedoff"
 
-/obj/structure/closet/secure_closet/sec/junior/WillContain()
+/obj/structure/closet/secure_closet/scp/sec/junior/WillContain()
 	return list(
 		/obj/item/clothing/under/scp/utility/security,
 		/obj/item/clothing/head/helmet/pcrc,
@@ -55,7 +55,7 @@
 		/obj/item/weapon/storage/box/bloodtypes
 	)
 
-/obj/structure/closet/secure_closet/sec/commander
+/obj/structure/closet/secure_closet/scp/sec/gc
 	name = "Guard Commander Locker"
 	req_access = list(access_seclvl5)
 	icon_state = "cmlocked"
@@ -64,7 +64,7 @@
 	icon_opened = "cmopen"
 	icon_off = "cmoff"
 
-/obj/structure/closet/secure_closet/sec/commander/WillContain()
+/obj/structure/closet/secure_closet/scp/sec/gc/WillContain()
 	return list(
 		/obj/item/clothing/under/scp/utility/security/gc,
 		/obj/item/clothing/head/helmet/site53/guardcomm,
@@ -93,7 +93,7 @@
 		/obj/item/weapon/storage/box/bloodtypes
 	)
 
-/obj/structure/closet/secure_closet/sec/nco
+/obj/structure/closet/secure_closet/scp/sec/guard
 	name = "Guard's Locker"
 	req_access = list(access_seclvl3)
 	icon_state = "nlocked"
@@ -102,7 +102,7 @@
 	icon_opened = "nopen"
 	icon_off = "noff"
 
-/obj/structure/closet/secure_closet/sec/nco/WillContain()
+/obj/structure/closet/secure_closet/scp/sec/guard/WillContain()
 	return list(
 		/obj/item/clothing/under/scp/utility/security,
 		/obj/item/clothing/head/helmet/pcrc,
@@ -131,7 +131,7 @@
 		/obj/item/weapon/storage/box/bloodtypes
 	)
 
-/obj/structure/closet/secure_closet/sec/co
+/obj/structure/closet/secure_closet/scp/sec/zc
 	name = "Zone Commander's Locker"
 	req_access = list(access_seclvl4)
 	icon_state = "colocked"
@@ -140,7 +140,7 @@
 	icon_opened = "coopen"
 	icon_off = "cooff"
 
-/obj/structure/closet/secure_closet/sec/co/WillContain()
+/obj/structure/closet/secure_closet/scp/sec/zc/WillContain()
 	return list(
 		/obj/item/clothing/under/scp/utility/security/zc,
 		/obj/item/clothing/head/helmet/site53/zonecomm,
