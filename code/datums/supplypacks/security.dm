@@ -60,7 +60,7 @@
 		/obj/item/weapon/storage/box/bloodtypes
 	)
 	cost = 30
-	containertype = /obj/structure/closet/secure_closet/sec/nco
+	containertype = /obj/structure/closet/secure_closet/scp/sec/guard
 	containername = "\improper Guard Gear Crate"
 	access = access_seclvl3
 
