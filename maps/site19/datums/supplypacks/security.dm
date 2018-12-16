@@ -1,6 +1,6 @@
 /*/decl/hierarchy/supply_pack/security
 	name = "Security"
-*/
+*/ /*
 /decl/hierarchy/supply_pack/security/lightarmorsol
 	name = "Armor - SCG light"
 	contains = list(/obj/item/clothing/suit/armor/pcarrier/light/sol = 4,
@@ -169,3 +169,5 @@
 	containername = "\improper .44 magnum ammunition crate"
 	access = access_heads
 	security_level = SUPPLY_SECURITY_ELEVATED
+
+*/

@@ -8,7 +8,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "\improper Monkey crate"
-
+/*
 /decl/hierarchy/supply_pack/hydroponics/farwa
 	name = "Farwa crate"
 	contains = list (/obj/item/weapon/storage/box/monkeycubes/farwacubes)
@@ -29,7 +29,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "\improper Stok crate"
-
+*/
 /decl/hierarchy/supply_pack/hydroponics/corgi
 	name = "Corgi crate"
 	contains = list()

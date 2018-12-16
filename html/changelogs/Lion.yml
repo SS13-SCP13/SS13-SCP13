@@ -36,6 +36,7 @@ changes:
   - rscdel: "Removed hacked supply beacons from traitor uplinks due to design philosophy not linking with it."
   - rscdel: "Removes zombie powder from Traitor uplink as a possibility when selecting random toxin."
   - rscdel: "Removes toxin damage from the energy crossbow."
+  - rscdel: "Removes Neara, Stok and Farwa crates."
   - rscadd: "Adds headsets to the medical department."
   - rscdel: "Removed SCP File cabinets and related documentation."
   - rscdel: "Removed Lion statues from the game code."
