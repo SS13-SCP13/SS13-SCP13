@@ -46,5 +46,6 @@ changes:
   - tweak: "Removed Pharmacist as an alt title for Chemist."
   - tweak: "Removed Communications Dispatcher alt title from Communication Technicians."
   - tweak: "Removes movement penalty to all types of guard armor."
+  - tweak: "Added all channels available to Site Director's headset."
   - iconadd: "New hud icons for Security. If a job has been forgotten, or does not show up, report it on the GitHub please."
   - iconadd: "Switched out old wall decals for newer decals, with thanks to Bay."
