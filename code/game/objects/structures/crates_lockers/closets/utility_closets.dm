@@ -200,7 +200,7 @@
  * Hydrant
  */
 /obj/structure/closet/hydrant //wall mounted fire closet
-	name = "fire-safety closet"
+	name = "fire-safety storage unit"
 	desc = "It's a storage unit for fire-fighting supplies."
 	icon_state = "hydrant"
 	icon_closed = "hydrant"
