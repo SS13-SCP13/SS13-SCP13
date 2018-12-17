@@ -159,13 +159,13 @@
 	id = access_bar
 	desc = "Bar"
 	region = ACCESS_REGION_NONE
-
+/*
 /var/const/access_janitor = 26
 /datum/access/janitor
 	id = access_janitor
 	desc = "Custodial Closet"
 	region = ACCESS_REGION_NONE
-
+*/
 /var/const/access_crematorium = 27
 /datum/access/crematorium
 	id = access_crematorium

@@ -289,6 +289,12 @@
 	desc = "Civilian Comms"
 	region = ACCESS_REGION_NONE
 
+/var/const/access_janitor = 550
+/datum/access/janitor
+	id = access_janitor
+	desc = "Janitorial Access"
+	region = ACCESS_REGION_GENERAL
+
 /*######################
 ########D-CLASS$########
 ######################*/
