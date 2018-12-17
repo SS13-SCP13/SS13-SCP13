@@ -1,3 +1,32 @@
+/* SOUND ENVIRONMENTS
+#define GENERIC 0
+#define PADDED_CELL 1
+#define ROOM 2
+#define BATHROOM 3
+#define LIVINGROOM 4
+#define STONEROOM 5
+#define AUDITORIUM 6
+#define CONCERT_HALL 7
+#define CAVE 8
+#define ARENA 9
+#define HANGAR 10
+#define CARPETED_HALLWAY 11
+#define HALLWAY 12
+#define STONE_CORRIDOR 13
+#define ALLEY 14
+#define FOREST 15
+#define CITY 16
+#define MOUNTAINS 17
+#define QUARRY 18
+#define PLAIN 19
+#define PARKING_LOT 20
+#define SEWER_PIPE 21
+#define UNDERWATER 22
+#define DRUGGED 23
+#define DIZZY 24
+#define PSYCHOTIC 25
+*/
+
 /datum/map/site19
 
 	post_round_safe_areas = list (
@@ -915,3 +944,32 @@
 	name = "\improper Logistics"
 	icon_state = "quart"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/site19/administration/adminlobby
+	name = "\improper Administrative Lobby"
+	icon_state = "bridge"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = LARGE_ENCLOSED
+	ambience = list(
+	'sound/ambience/ez/admincent/Ambient2.ogg',
+	'sound/ambience/ez/admincent/Ambient6.ogg',
+	'sound/ambience/ez/admincent/ventilation.ogg',
+	'sound/ambience/ez/admincent/EntranceZone.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/ez/admincent/crb/Announc.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter1.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter2.ogg',
+	'sound/ambience/ez/admincent/crb/alarm.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion3.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion15.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion19.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion21.ogg',
+	'sound/ambience/ez/admincent/crb/EmilyScream.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient2.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient6.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient3.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient8.ogg',
+	'sound/ambience/ez/admincent/crb/ventilation.ogg',
+	'sound/ambience/ez/admincent/crb/EntranceZone.ogg'
+	)
