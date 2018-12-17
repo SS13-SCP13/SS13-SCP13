@@ -189,6 +189,6 @@ var/global/maint_all_access = 0
 	to_world("<font color='red'>The maintenance access requirement has been readded on all maintenance airlocks.</font>")
 
 /obj/machinery/door/airlock/allowed(mob/M)
-	if(maint_all_access && src.check_access_list(list(access_maint_tunnels)))
+	if(maint_all_access && src.check_access_list(list(access_maintenance)))
 		return 1
 	return ..(M)
