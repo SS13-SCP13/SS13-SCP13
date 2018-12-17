@@ -59,6 +59,12 @@
 	desc = "Research Director's Office"
 	region = ACCESS_REGION_COMMAND
 
+/var/const/access_o5rep = 206
+/datum/access/o5rep
+	id = access_o5rep
+	desc = "O5 Representative's Office"
+	region = ACCESS_REGION_COMMAND
+
 /*######################
 ########SECURITY########
 ######################*/
