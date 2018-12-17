@@ -141,3 +141,38 @@
 		/obj/item/clothing/mask/surgical = 2
 	)
 */
+
+/obj/structure/closet/secure_closet/scp/medical/cmo
+	name = "chief medical officer's locker"
+	req_access = list(access_cmo)
+	icon_state = "cmosecure1"
+	icon_closed = "cmosecure"
+	icon_locked = "cmosecure1"
+	icon_opened = "cmosecureopen"
+	icon_off = "cmosecureoff"
+
+/obj/structure/closet/secure_closet/scp/medical/cmo/WillContain()
+	return list(
+		/obj/item/clothing/suit/bio_suit/cmo,
+		/obj/item/clothing/head/bio_hood/cmo,
+		/obj/item/clothing/shoes/white,
+		/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
+		/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
+		/obj/item/device/flash,
+		/obj/item/device/megaphone,
+		/obj/item/weapon/reagent_containers/hypospray/vial,
+		/obj/item/weapon/storage/fancy/vials,
+		/obj/item/device/healthanalyzer,
+		/obj/item/clothing/accessory/stethoscope,
+		/obj/item/device/flashlight/pen,
+		/obj/item/weapon/storage/belt/medical/emt,
+		/obj/item/weapon/defibrillator/loaded,
+		/obj/item/clothing/glasses/hud/health,
+		/obj/item/weapon/storage/firstaid/adv,
+		/obj/item/weapon/storage/box/armband/med,
+		/obj/item/weapon/gun/projectile/pistol,
+		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/clothing/accessory/holster/thigh,
+		/obj/item/clothing/under/rank/medical/scrubs/navyblue
+	)

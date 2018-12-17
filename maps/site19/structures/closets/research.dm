@@ -182,10 +182,10 @@
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel_sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/sec, /obj/item/weapon/storage/backpack/messenger/sec))
 	)
-
-/obj/structure/closet/secure_closet/scpscience/directorofscience
+*/
+/obj/structure/closet/secure_closet/scp/science/resdir
 	name = "Research Director's Locker"
-	req_access = list(access_sciencelvl5)
+	req_access = list(access_rd)
 	icon_state = "dslocked"
 	icon_closed = "dsunlocked"
 	icon_locked = "dslocked"
@@ -203,7 +203,7 @@
 	)
 
 
-
+/*
 /obj/structure/closet/secure_closet/scientist
 	name = "scientist's locker"
 	req_one_access = list(access_tox,access_tox_storage)

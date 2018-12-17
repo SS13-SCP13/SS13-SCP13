@@ -147,3 +147,38 @@
 		/obj/item/device/analyzer
 	)
 */
+
+/obj/structure/closet/secure_closet/scp/engineering/engineering_chief
+	name = "chief engineer's locker"
+	req_access = list(access_ce)
+	icon_state = "securece1"
+	icon_closed = "securece"
+	icon_locked = "securece1"
+	icon_opened = "secureceopen"
+	icon_off = "secureceoff"
+
+/obj/structure/closet/secure_closet/scp/engineering/engineering_chief/WillContain()
+	return list(
+		new/datum/atom_creator/weighted(list(/obj/item/clothing/accessory/storage/brown_vest = 70, /obj/item/clothing/accessory/storage/webbing = 30)),
+		new/datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/industrial, /obj/item/weapon/storage/backpack/satchel_eng)),
+		new/datum/atom_creator/simple(/obj/item/weapon/storage/backpack/dufflebag/eng, 50),
+		/obj/item/blueprints,
+		/obj/item/clothing/under/scp/utility/engineering,
+		/obj/item/clothing/head/hardhat/white,
+		/obj/item/clothing/head/welding,
+		/obj/item/clothing/gloves/insulated,
+		/obj/item/clothing/shoes/brown,
+		/obj/item/clothing/shoes/dutyboots,
+		/obj/item/device/radio/headset/heads/ce,
+		/obj/item/weapon/storage/toolbox/mechanical,
+		/obj/item/clothing/suit/storage/hazardvest,
+		/obj/item/clothing/mask/gas,
+		/obj/item/device/multitool,
+		/obj/item/device/flash,
+		/obj/item/weapon/gun/projectile/pistol,
+		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/ammo_magazine/mc9mm,
+		/obj/item/clothing/accessory/holster/thigh,
+		/obj/item/taperoll/engineering,
+		/obj/item/weapon/crowbar/brace_jack
+	)
