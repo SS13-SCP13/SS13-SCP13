@@ -29,12 +29,11 @@
 
 /decl/security_level/default/site19/code_yellow
 	name = "code yellow"
-	icon = 'icons/misc/security_state.dmi'
 
 	light_range = 3
 	light_power = 2
-	light_color_alarm = COLOR_BLUE
-	light_color_status_display = COLOR_BLUE
+	light_color_alarm = COLOR_YELLOW
+	light_color_status_display = COLOR_YELLOW
 	overlay_alarm = "alarm_yellow"
 	overlay_status_display = "status_display_yellow"
 
@@ -57,7 +56,6 @@
 
 /decl/security_level/default/site19/code_orange
 	name = "code orange"
-	icon = 'icons/misc/security_state.dmi'
 
 	light_range = 4
 	light_power = 2
