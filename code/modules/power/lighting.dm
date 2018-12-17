@@ -587,7 +587,7 @@
 		LIGHTMODE_EMERGENCY = list(l_range = 4, l_power = 1, l_color = "#da0205"),
 		LIGHTMODE_EMERGENCY_BRIGHT = list(l_range = 5, l_power = 3, l_color = "#ea492c")
 		)
-	sound_on = 'sound/machines/lightson.ogg'
+	sound_on = ('sound/machines/Light1.ogg')
 
 
 /obj/item/weapon/light/tube/old
