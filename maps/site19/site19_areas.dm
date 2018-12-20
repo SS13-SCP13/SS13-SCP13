@@ -945,6 +945,10 @@
 	icon_state = "quart"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+//####
+//SITE 19 ADMINISTRATION
+//####
+
 /area/site19/administration/adminlobby
 	name = "\improper Administrative Lobby"
 	icon_state = "bridge"
@@ -973,3 +977,191 @@
 	'sound/ambience/ez/admincent/crb/ventilation.ogg',
 	'sound/ambience/ez/admincent/crb/EntranceZone.ogg'
 	)
+
+/area/site19/administration/sdo
+	name = "\improper Site Director's Office"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = MEDIUM_SOFTFLOOR
+	ambience = list(
+	'sound/ambience/ez/admincent/Ambient2.ogg',
+	'sound/ambience/ez/admincent/Ambient6.ogg',
+	'sound/ambience/ez/admincent/ventilation.ogg',
+	'sound/ambience/ez/admincent/EntranceZone.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/ez/admincent/crb/Announc.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter1.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter2.ogg',
+	'sound/ambience/ez/admincent/crb/alarm.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion3.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion15.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion19.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion21.ogg',
+	'sound/ambience/ez/admincent/crb/EmilyScream.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient2.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient6.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient3.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient8.ogg',
+	'sound/ambience/ez/admincent/crb/ventilation.ogg',
+	'sound/ambience/ez/admincent/crb/EntranceZone.ogg'
+	)
+
+/area/site19/administration/cmoo
+	name = "\improper Chief Medical Officer's Office"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = MEDIUM_SOFTFLOOR
+	ambience = list(
+	'sound/ambience/ez/admincent/Ambient2.ogg',
+	'sound/ambience/ez/admincent/Ambient6.ogg',
+	'sound/ambience/ez/admincent/ventilation.ogg',
+	'sound/ambience/ez/admincent/EntranceZone.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/ez/admincent/crb/Announc.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter1.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter2.ogg',
+	'sound/ambience/ez/admincent/crb/alarm.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion3.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion15.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion19.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion21.ogg',
+	'sound/ambience/ez/admincent/crb/EmilyScream.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient2.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient6.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient3.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient8.ogg',
+	'sound/ambience/ez/admincent/crb/ventilation.ogg',
+	'sound/ambience/ez/admincent/crb/EntranceZone.ogg'
+	)
+
+/area/site19/administration/ceo
+	name = "\improper Chief Engineer's Office"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = MEDIUM_SOFTFLOOR
+	ambience = list(
+	'sound/ambience/ez/admincent/Ambient2.ogg',
+	'sound/ambience/ez/admincent/Ambient6.ogg',
+	'sound/ambience/ez/admincent/ventilation.ogg',
+	'sound/ambience/ez/admincent/EntranceZone.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/ez/admincent/crb/Announc.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter1.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter2.ogg',
+	'sound/ambience/ez/admincent/crb/alarm.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion3.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion15.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion19.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion21.ogg',
+	'sound/ambience/ez/admincent/crb/EmilyScream.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient2.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient6.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient3.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient8.ogg',
+	'sound/ambience/ez/admincent/crb/ventilation.ogg',
+	'sound/ambience/ez/admincent/crb/EntranceZone.ogg'
+	)
+
+/area/site19/administration/rso
+	name = "\improper Research Supervisor's Office"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = MEDIUM_SOFTFLOOR
+	ambience = list(
+	'sound/ambience/ez/admincent/Ambient2.ogg',
+	'sound/ambience/ez/admincent/Ambient6.ogg',
+	'sound/ambience/ez/admincent/ventilation.ogg',
+	'sound/ambience/ez/admincent/EntranceZone.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/ez/admincent/crb/Announc.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter1.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter2.ogg',
+	'sound/ambience/ez/admincent/crb/alarm.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion3.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion15.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion19.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion21.ogg',
+	'sound/ambience/ez/admincent/crb/EmilyScream.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient2.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient6.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient3.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient8.ogg',
+	'sound/ambience/ez/admincent/crb/ventilation.ogg',
+	'sound/ambience/ez/admincent/crb/EntranceZone.ogg'
+	)
+
+/area/site19/administration/gco
+	name = "\improper Guard Commander's Office"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = MEDIUM_SOFTFLOOR
+	ambience = list(
+	'sound/ambience/ez/admincent/Ambient2.ogg',
+	'sound/ambience/ez/admincent/Ambient6.ogg',
+	'sound/ambience/ez/admincent/ventilation.ogg',
+	'sound/ambience/ez/admincent/EntranceZone.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/ez/admincent/crb/Announc.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter1.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter2.ogg',
+	'sound/ambience/ez/admincent/crb/alarm.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion3.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion15.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion19.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion21.ogg',
+	'sound/ambience/ez/admincent/crb/EmilyScream.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient2.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient6.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient3.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient8.ogg',
+	'sound/ambience/ez/admincent/crb/ventilation.ogg',
+	'sound/ambience/ez/admincent/crb/EntranceZone.ogg'
+	)
+
+/area/site19/administration/o5o
+	name = "\improper O5 Representative's Office"
+	icon_state = "head_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = MEDIUM_SOFTFLOOR
+	ambience = list(
+	'sound/ambience/ez/admincent/Ambient2.ogg',
+	'sound/ambience/ez/admincent/Ambient6.ogg',
+	'sound/ambience/ez/admincent/ventilation.ogg',
+	'sound/ambience/ez/admincent/EntranceZone.ogg'
+	)
+	ambience_crb = list(
+	'sound/ambience/ez/admincent/crb/Announc.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter1.ogg',
+	'sound/ambience/ez/admincent/crb/AnnouncAfter2.ogg',
+	'sound/ambience/ez/admincent/crb/alarm.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion3.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion15.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion19.ogg',
+	'sound/ambience/ez/admincent/crb/Commotion21.ogg',
+	'sound/ambience/ez/admincent/crb/EmilyScream.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient2.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient6.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient3.ogg',
+	'sound/ambience/ez/admincent/crb/Ambient8.ogg',
+	'sound/ambience/ez/admincent/crb/ventilation.ogg',
+	'sound/ambience/ez/admincent/crb/EntranceZone.ogg'
+	)
+
+/area/site19/administration/adminmaint
+	name = "\improper Administration Maintenance"
+	icon_state = "maintcentral"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
+
+/area/site19/administration/adminjanitorial
+	name = "\improper Administration Janitorial Closet"
+	icon_state = "janitor"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
+	turf_initializer = /decl/turf_initializer/maintenance
