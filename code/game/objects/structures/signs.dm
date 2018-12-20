@@ -355,7 +355,7 @@
 	icon_state = "direction_sci"
 
 /obj/structure/sign/directions/engineering
-	name = "\improper Engineering Bay"
+	name = "\improper Engineering Department"
 	icon_state = "direction_eng"
 
 /obj/structure/sign/directions/security
@@ -397,6 +397,14 @@
 /obj/structure/sign/directions/scp/bunker
 	name = "\improper Secure Bunker"
 	icon_state = "bunker"
+
+/obj/structure/sign/directions/scp/logistics
+	name = "\improper Logistics"
+	icon_state = "direction_logistics"
+
+/obj/structure/sign/directions/scp/qm
+	name = "\improper Security Quartermaster"
+	icon_state = "direction_qm"
 
 /obj/structure/sign/directions/scp/hcz
 	name = "\improper Heavy Containment Zone"
