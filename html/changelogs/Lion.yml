@@ -55,6 +55,7 @@ changes:
   - tweak: "Removes movement penalty to all types of guard armor."
   - tweak: "Added all channels available to Site Director's headset."
   - tweak: "Made a start towards more fitting round-end credit titles and names."
+  - tweak: "Renamed Research Director to Research Supervisor."
   - iconadd: "New hud icons for Security. If a job has been forgotten, or does not show up, report it on the GitHub please."
   - iconadd: "Switched out old wall decals for newer decals, with thanks to Bay."
   - soundadd: "New sounds for lights turning on."
