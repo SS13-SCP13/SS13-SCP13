@@ -485,7 +485,7 @@
 	department_flag = SCI
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Research Director and anyone in a higher position than you"
+	supervisors = "the Research Supervisor and anyone in a higher position than you"
 	economic_modifier = 4
 	alt_titles = list("Xenobiologist Associate", "Xenoarcheologist Associate")
 	minimal_player_age = 0
@@ -510,7 +510,7 @@
 	department_flag = SCI
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Research Director and anyone in a higher position than you"
+	supervisors = "the Research Supervisor and anyone in a higher position than you"
 	economic_modifier = 4
 	alt_titles = list("Xenobiologist", "Xenoarcheologist")
 	minimal_player_age = 5
@@ -535,7 +535,7 @@
 	department_flag = SCI
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Research Director and anyone in a higher position than you"
+	supervisors = "the Research Supervisor"
 	economic_modifier = 4
 	alt_titles = list("Senior Xenobiologist", "Senior Xenoarcheologist")
 	minimal_player_age = 10
@@ -555,7 +555,7 @@
 
 /datum/job/rd
 	has_email = TRUE
-	title = "Research Director"
+	title = "Research Supervisor"
 	supervisors = "Facility Director and the Head of Human Resources"
 	total_positions = 1
 	spawn_positions = 1
