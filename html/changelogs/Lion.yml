@@ -58,4 +58,5 @@ changes:
   - iconadd: "New hud icons for Security. If a job has been forgotten, or does not show up, report it on the GitHub please."
   - iconadd: "Switched out old wall decals for newer decals, with thanks to Bay."
   - soundadd: "New sounds for lights turning on."
+  - soundadd: "One extra lobby track."
   - soundadd: "New music track for round-end credits."
