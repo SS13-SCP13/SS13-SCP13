@@ -37,6 +37,18 @@ GLOBAL_VAR(spawntypes)
 	. = ..()
 #endif
 
+/datum/spawnpoint/ezcryogenics
+	display_name = "Entrance Zone Cryogenics Storage and Revival Facility"
+	msg = "has woken up in the Entrance Zone"
+	disallow_job = list(
+	"Class D"
+	)
+
+
+/datum/spawnpoint/ezcryogenics/New()
+	..()
+	turfs = GLOB.latejoin_ezcryogenics
+
 /datum/spawnpoint/arrivals
 	display_name = "Arrivals Shuttle"
 	msg = "has arrived on the station"
@@ -62,7 +74,7 @@ GLOBAL_VAR(spawntypes)
 /datum/spawnpoint/cryo/New()
 	..()
 	turfs = GLOB.latejoin_cryo
-
+/*
 /datum/spawnpoint/comms
 	display_name = "Comms Tower"
 	msg = "has started a shift in the Comms Tower"
@@ -129,7 +141,7 @@ GLOBAL_VAR(spawntypes)
 /datum/spawnpoint/security/New()
 	..()
 	turfs = GLOB.latejoin_security
-
+*/
 
 /datum/spawnpoint/cyborg
 	display_name = "Cyborg Storage"
