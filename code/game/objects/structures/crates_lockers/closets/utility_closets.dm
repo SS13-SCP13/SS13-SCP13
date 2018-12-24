@@ -254,6 +254,30 @@
 ## SCP SUBTYPES
 */
 
+/obj/structure/closet/medical_wall/defib //wall mounted medical closet
+	name = "defibrillator closet"
+	desc = "It's a wall-mounted storage unit for defibrillators."
+	icon_state = "medical_wall_defib"
+	icon_closed = "medical_wall_defib"
+	icon_opened = "medical_wall_first_aid_open"
+	anchored = 1
+	density = 0
+	wall_mounted = 1
+	storage_types = CLOSET_STORAGE_ITEMS
+	setup = 0
+
+/obj/structure/closet/medical_wall/defib/update_icon()
+	if(!opened)
+		icon_state = icon_closed
+	else
+		icon_state = icon_opened
+
+/obj/structure/closet/medical_wall/defib/filled
+
+/obj/structure/closet/medical_wall/defib/filled/WillContain()
+	return list(
+		/obj/item/weapon/defibrillator/loaded)
+
 /*
 ## END SCP SUBTYPES
 */
