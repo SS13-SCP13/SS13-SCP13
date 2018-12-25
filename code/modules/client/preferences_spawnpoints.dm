@@ -44,7 +44,6 @@ GLOBAL_VAR(spawntypes)
 	"Class D"
 	)
 
-
 /datum/spawnpoint/ezcryogenics/New()
 	..()
 	turfs = GLOB.latejoin_ezcryogenics
