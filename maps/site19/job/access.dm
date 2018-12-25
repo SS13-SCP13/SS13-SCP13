@@ -32,7 +32,7 @@
 /var/const/access_sitedirect = 201
 /datum/access/sitedirect
 	id = access_sitedirect
-	desc = "Site Director's Office"
+	desc = "Site Director"
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_cmo = 202
@@ -44,25 +44,31 @@
 /var/const/access_ce = 203
 /datum/access/ce
 	id = access_ce
-	desc = "Chief Engineer's Office"
+	desc = "Chief Engineer"
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_gc = 204
 /datum/access/gc
 	id = access_gc
-	desc = "Guard Commander's Office"
+	desc = "Guard Commander"
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_rd = 205
 /datum/access/rd
 	id = access_rd
-	desc = "Research Director's Office"
+	desc = "Research Director"
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_o5rep = 206
 /datum/access/o5rep
 	id = access_o5rep
-	desc = "O5 Representative's Office"
+	desc = "O5 Representative's"
+	region = ACCESS_REGION_COMMAND
+
+/var/const/access_idcards = 207
+/datum/access/idcards
+	id = access_idcards
+	desc = "ID Card Modification"
 	region = ACCESS_REGION_COMMAND
 
 /*######################
@@ -253,31 +259,27 @@
 	desc = "Logistics Officer"
 	region = ACCESS_REGION_SUPPLY
 
-/*######################
-#####COMMUNICATIONS#####
-######################*/
+/*##########################
+######MAIN CONTROL ROOM#####
+##########################*/
 
-/var/const/access_comms = 500
-/datum/access/comms
-	id = access_comms
-	desc = "Communications"
+/var/const/access_mcr = 500
+/datum/access/mcr
+	id = access_mcr
+	desc = "Main Control Room"
 	region = ACCESS_REGION_COMMAND
 
-/var/const/access_commoff = 501
-/datum/access/commoff
-	id = access_commoff
-	desc = "Communications Officer"
+/var/const/access_mcroff = 501
+/datum/access/mcroff
+	id = access_mcroff
+	desc = "MCR Officer"
 	region = ACCESS_REGION_COMMAND
 
-/var/const/access_commtech = 502
-/datum/access/commtech
-	id = access_commtech
-	desc = "Communications Technician"
+/var/const/access_mcrcomms = 502
+/datum/access/mcrcomms
+	id = access_mcrcomms
+	desc = "MCR Communications"
 	region = ACCESS_REGION_ENGINEERING
-
-/*######################
-#########MEDICAL########
-######################*/
 
 /*######################
 ########CIVILIAN########
