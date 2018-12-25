@@ -42,11 +42,11 @@
 
 // AI Integrity
 
-/obj/item/modular_computer/console/preset/research/install_default_hardware()
+/obj/item/modular_computer/console/preset/research/ainteg/install_default_hardware()
 	..()
 	ai_slot = new/obj/item/weapon/computer_hardware/ai_slot(src)
 
-/obj/item/modular_computer/console/preset/research/install_default_programs()
+/obj/item/modular_computer/console/preset/research/ainteg/install_default_programs()
 	..()
 	hard_drive.store_file(new/datum/computer_file/program/aidiag())
 
