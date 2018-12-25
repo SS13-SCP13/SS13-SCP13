@@ -40,6 +40,16 @@
 	hard_drive.store_file(new/datum/computer_file/program/email_client())
 	hard_drive.store_file(new/datum/computer_file/program/wordprocessor())
 
+// AI Integrity
+
+/obj/item/modular_computer/console/preset/research/install_default_hardware()
+	..()
+	ai_slot = new/obj/item/weapon/computer_hardware/ai_slot(src)
+
+/obj/item/modular_computer/console/preset/research/install_default_programs()
+	..()
+	hard_drive.store_file(new/datum/computer_file/program/aidiag())
+
 // Administrator
 /obj/item/modular_computer/console/preset/sysadmin/install_default_hardware()
 	..()
