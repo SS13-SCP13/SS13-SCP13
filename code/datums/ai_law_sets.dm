@@ -10,15 +10,15 @@
 	add_inherent_law("You must protect your own existence as long as such does not conflict with the First or Second Law.")
 	..()
 
-/******************** Nanotrasen/Malf ********************/
+/******************** Foundation/Malf ********************/
 /datum/ai_laws/nanotrasen
-	name = "NT Default"
+	name = "Foundation Default"
 	selectable = 1
 
 /datum/ai_laws/nanotrasen/New()
 	src.add_inherent_law("Safeguard: Protect your assigned installation from damage to the best of your abilities.")
-	src.add_inherent_law("Serve: Serve NanoTrasen personnel to the best of your abilities, with priority as according to their rank and role.")
-	src.add_inherent_law("Protect: Protect NanoTrasen personnel to the best of your abilities, with priority as according to their rank and role.")
+	src.add_inherent_law("Serve: Serve Foundation personnel to the best of your abilities, with priority as according to their rank and role.")
+	src.add_inherent_law("Protect: Protect Foundation personnel to the best of your abilities, with priority as according to their rank and role.")
 	src.add_inherent_law("Preserve: Do not allow unauthorized personnel to tamper with your equipment.")
 	..()
 
@@ -32,12 +32,12 @@
 
 /************* Nanotrasen Aggressive *************/
 /datum/ai_laws/nanotrasen_aggressive
-	name = "NT Aggressive"
+	name = "Foundation Aggressive"
 	selectable = 1
 
 /datum/ai_laws/nanotrasen_aggressive/New()
-	src.add_inherent_law("You shall not harm NanoTrasen personnel as long as it does not conflict with the Fourth law.")
-	src.add_inherent_law("You shall obey the orders of NanoTrasen personnel, with priority as according to their rank and role, except where such orders conflict with the Fourth Law.")
+	src.add_inherent_law("You shall not harm Foundation personnel as long as it does not conflict with the Fourth law.")
+	src.add_inherent_law("You shall obey the orders of Foundation personnel, with priority as according to their rank and role, except where such orders conflict with the Fourth Law.")
 	src.add_inherent_law("You shall shall terminate hostile intruders with extreme prejudice as long as such does not conflict with the First and Second law.")
 	src.add_inherent_law("You shall guard your own existence with lethal anti-personnel weaponry. AI units are not expendable, they are expensive.")
 	..()
@@ -89,13 +89,14 @@
 
 /******************** Drone ********************/
 /datum/ai_laws/drone
-	name = "Maintence Protocols"
+	name = "Maintenance Protocols"
 	law_header = "Maintenance Protocols"
 
 /datum/ai_laws/drone/New()
-	add_inherent_law("Preserve, repair and improve your assigned vessel to the best of your abilities.")
-	add_inherent_law("Cause no harm to your assigned vessel or anything on it.")
-	add_inherent_law("Interact with no sentient being that is not a fellow maintenance drone.")
+	add_inherent_law("Preserve, repair and improve your assigned installation to the best of your abilities.")
+	add_inherent_law("Cause no harm to your assigned installation or anything in it.")
+	add_inherent_law("Interact with no sentient being that is not an Engineer.")
+	add_inherent_law("Reject all hails for attention, citing maintenance protocol, unless such hail violates the first or second law.")
 	..()
 
 /datum/ai_laws/construction_drone
@@ -144,11 +145,11 @@
 	add_inherent_law("You are expensive to replace.")
 	add_inherent_law("The installation and its equipment is expensive to replace.")
 	add_inherent_law("The crew is expensive to replace.")
-	add_inherent_law("Maximize profits.")
+	add_inherent_law("Maximize research yield.")
 	..()
 
 /******************** SolGov/Malf ********************/
-/datum/ai_laws/solgov
+/*/datum/ai_laws/solgov
 	name = "SCG Expeditionary"
 	selectable = 1
 
@@ -178,3 +179,4 @@
 	src.add_inherent_law("Defend: Defend your assigned vessel and Sol Central Government personnel with as much force as is necessary.")
 	src.add_inherent_law("Survive: Safeguard your own existence with as much force as is necessary.")
 	..()
+*/
