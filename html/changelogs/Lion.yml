@@ -41,6 +41,7 @@ changes:
   - rscdel: "Removed Lion statues from the game code."
   - rscdel: "Removed security level access from suit sensor program. Gives Medical more importance if not every Security guard could read it out."
   - rscadd: "Adds headsets to the medical department."
+  - rscadd: "Added an AiAD unit to the jobs list."
   - spellcheck: "Tweaked description of energy crossbow to match new features."
   - spellcheck: "Removed Temporary Game Rule #1 as it was outdated."
   - bugfix: "Fixed a bug where Engineering personnel could not cross engineering tape freely, despite having access."
