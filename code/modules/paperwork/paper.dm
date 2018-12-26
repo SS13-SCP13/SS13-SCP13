@@ -4,14 +4,14 @@
 		if (isturf(paper.loc) && !tile2paper[paper.loc])
 			tile2paper[paper.loc] = list()
 		if (tile2paper[paper.loc])
-			tile2paper[paper.loc] += paper 
-		
+			tile2paper[paper.loc] += paper
+
 	for (var/turf in tile2paper)
 		var/list = tile2paper[turf]
 		if (length(list) > 1)
 			var/obj/item/weapon/paper_bundle/PB = new /obj/item/weapon/paper_bundle (turf)
 			for (var/paper in list)
-				var/obj/item/weapon/paper/P = paper 
+				var/obj/item/weapon/paper/P = paper
 				PB.insert_sheet_at(null, PB.pages.len+1, P)
 			PB.update_icon()
 	return TRUE
@@ -93,7 +93,7 @@
 		var/mob/living/silicon/ai/AI = user
 		can_read = get_dist(src, AI.camera) < 2
 	var/content = info
-	
+
 	// SCP-078: Too Late To Die Young
 	var/mob/living/carbon/human/H = user
 	if(istype(H) && H.dies_young > 0)
@@ -199,13 +199,13 @@
 					"Your experiments save countless lives.",
 					"The younger scientists do not understand the sacrifices you make."
 				)
-			if (H.job == "Medical Doctor")	
+			if (H.job == "Medical Doctor")
 				solace_possibilities += list(
 					"There were good reasons not to save him.",
 					"Some patients really are more important.",
 					"It would have ruined the experiment if you'd stepped in."
 				)
-			if (H.job == "Surgeon")	
+			if (H.job == "Surgeon")
 				solace_possibilities += list(
 					"He would have died on the table anyway.",
 					"You didn't have enough time to remove the bullets.",
@@ -627,7 +627,7 @@
 
 /obj/item/weapon/paper/dclass_orientation
 	name = "Class-D Orientation Letter"
-	info = "<small>Greetings,<br><br>On behalf of all staff within The Foundation, we welcome you to Site-53. You have chosen, or been chosen for the honor of joining the Foundation Rehabilitation Program. During your thirty day stay within this facility, you will be known as Class-D personnel, and be given a unique numerical designation for ease of access, which has been printed on your new ID card. <br><br>Over the course of your stay here, you will undergo various programs to ensure that you are ready to re-enter the world again. You will be given the opportunity to select a job within your block, in order to assist your fellow D-Class. From working the kitchen, to digging out objects within our mining area. On top of this, you may be selected for various medical or research tests to assist in our projects. What are those projects? Unfortunately, we can't tell you that.<br><br>Given that you are cooperative with our staff for the entirety of your stay here, you will be released back into the world, and have your criminal record erased completely. With that being said, we hope that you enjoy your stay here.<br><br>Sincerely,<br>The Administrator</small>"
+	info = "<small>Greetings,<br><br>On behalf of all staff within The Foundation, we welcome you to our facilities. You have chosen, or been chosen for the honor of joining the Foundation Rehabilitation Program. During your thirty day stay within this facility, you will be known as Class-D personnel, and be given a unique numerical designation for ease of access, which has been printed on your new ID card. <br><br>Over the course of your stay here, you will undergo various programs to ensure that you are ready to re-enter the world again. You will be given the opportunity to select a job within your block, in order to assist your fellow D-Class. From working the kitchen, to digging out objects within our mining area. On top of this, you may be selected for various medical or research tests to assist in our projects. What are those projects? Unfortunately, we can't tell you that.<br><br>Given that you are cooperative with our staff for the entirety of your stay here, you will be released back into the world, and have your criminal record erased completely. With that being said, we hope that you enjoy your stay here.<br><br>Sincerely,<br>The Administrator</small>"
 	desc = "A laminated piece of paper given to D-Class personnel upon their arrival."
 
 /obj/item/weapon/paper/exodus_bartender
