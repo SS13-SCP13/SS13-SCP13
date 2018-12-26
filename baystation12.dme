@@ -2554,6 +2554,7 @@
 #include "maps\random_ruins\exoplanet_ruins\exoplanet_ruins.dm"
 #include "maps\random_ruins\exoplanet_ruins\monoliths\monoliths.dm"
 #include "maps\random_ruins\space_ruins\space_ruins.dm"
+#include "maps\site19\machinery\tesla.dm"
 #include "maps\site53\site53.dm"
 #include "maps\site53\site53_define.dm"
 #include "maps\~mapsystem\map_preferences.dm"

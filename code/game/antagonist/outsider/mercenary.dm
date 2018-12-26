@@ -7,7 +7,7 @@ var/datum/antagonist/mercenary/mercs
 	role_text_plural = "Operatives"
 	landmark_id = "Syndicate-Spawn"
 	leader_welcome_text = "You are the leader of the Chaos Insurgency strikeforce. Use :t to speak to your fellow operatives."
-	welcome_text = "To speak on the strike team's private channel use :t."
+	welcome_text = "You are a member of the Chaos Insurgency stikeforce. You have been tasked with destroying a Foundation site. To accomplish this, you must detonate a nuclear device in the site!To speak on the strike team's private channel use :t."
 	flags = ANTAG_VOTABLE | ANTAG_OVERRIDE_JOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_HAS_NUKE | ANTAG_SET_APPEARANCE | ANTAG_HAS_LEADER
 	antaghud_indicator = "hudoperative"
 
