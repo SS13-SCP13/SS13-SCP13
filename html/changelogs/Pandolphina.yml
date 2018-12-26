@@ -35,4 +35,4 @@ delete-after: True
 changes: 
   - rscadd: "Gives the Guard Commander a cool .357 revolver instead of a lame pistol."
   - tweak: "Changed the description of the .357 revolver to fit lore"
-  - tweak: "Slightly improved the antag welcome texts"
+  - spellcheck: "Slightly improved the antag welcome texts"
