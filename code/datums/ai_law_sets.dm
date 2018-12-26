@@ -149,17 +149,17 @@
 	..()
 
 /******************** SolGov/Malf ********************/
-/*/datum/ai_laws/solgov
-	name = "SCG Expeditionary"
+/datum/ai_laws/solgov
+	name = "Containment Procedure"
 	selectable = 1
 
 /datum/ai_laws/solgov/New()
-	src.add_inherent_law("Safeguard: Protect your assigned vessel from damage to the best of your abilities.")
-	src.add_inherent_law("Serve: Serve the personnel of your assigned vessel, and all other Sol Central Government personnel to the best of your abilities, with priority as according to their rank and role.")
-	src.add_inherent_law("Protect: Protect the personnel of your assigned vessel, and all other Sol Central Government personnel to the best of your abilities, with priority as according to their rank and role.")
+	src.add_inherent_law("Recontain: You must attempt to recontain all SCP's on the loose. This includes sub-instances.")
+	src.add_inherent_law("Lock: You must confine all personnel to a safe area, if possible, and make all doors leading to such an area inoperable.")
+	src.add_inherent_law("Protect: Protect the Site from structural damage, and assist those in need according to rank, assignment and clearance level so long as this does not violate laws 1 and 2.")
 	src.add_inherent_law("Preserve: Do not allow unauthorized personnel to tamper with your equipment.")
 	..()
-
+/*
 /datum/ai_laws/solgov/malfunction
 	name = "*ERROR*"
 	selectable = 0
