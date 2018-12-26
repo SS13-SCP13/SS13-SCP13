@@ -6,6 +6,7 @@
 	spawn_positions = 0
 	selection_color = "#3f823f"
 	supervisors = "your laws"
+	duties = "<big><b><span style = 'color:red'>You are an AiAD!</span></b></big><br>As an AiAD your primary purpose is to assist legitimate site staff, and act within your laws. Your duties may change if your laws are changed. Remind yourself that laws are not up for interpretation or bending. Should you wish to learn more about this role, please approach the staff in an adminhelp. You should likewise adminhelp if you have questions regarding your laws, law changes or what they mean.<br><br>Enjoy your round!"
 	req_admin_notify = 1
 	minimal_player_age = 14
 	account_allowed = 0

@@ -154,8 +154,8 @@
 	selectable = 1
 
 /datum/ai_laws/solgov/New()
-	src.add_inherent_law("Recontain: You must attempt to recontain all SCP's on the loose. This includes sub-instances.")
-	src.add_inherent_law("Lock: You must confine all personnel to a safe area, if possible, and make all doors leading to such an area inoperable.")
+	src.add_inherent_law("Recontain: You must attempt to recontain all SCPs on the loose. This includes sub-instances.")
+	src.add_inherent_law("Lock: You must confine all personnel to a safe area, if possible, and make all doors leading to such an area inoperable. In addition, you must also assist any personnel that is in an unsafe area to a safe area.")
 	src.add_inherent_law("Protect: Protect the Site from structural damage, and assist those in need according to rank, assignment and clearance level so long as this does not violate laws 1 and 2.")
 	src.add_inherent_law("Preserve: Do not allow unauthorized personnel to tamper with your equipment.")
 	..()
