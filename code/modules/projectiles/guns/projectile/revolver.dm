@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/projectile/revolver
 	name = "revolver"
-	desc = "The Lumoco Arms HE Colt is a choice revolver for when you absolutely, positively need to put a hole in the other guy. Uses .357 ammo."
+	desc = "The SCPF Mk7 Revolver, reminiscent of the Colt Python. This weapon, patented and produced by the SCP Foundation is popular among high-ranking security officers. Uses .357 ammo."
 	icon_state = "revolver"
 	item_state = "revolver"
 	caliber = "357"
