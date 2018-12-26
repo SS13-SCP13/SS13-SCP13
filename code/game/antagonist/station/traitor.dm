@@ -7,6 +7,7 @@ var/datum/antagonist/traitor/traitors
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	role_text = "CI Operative"
 	role_text_plural = "CI Operatives"
+	welcome_text = "You are a CI Operative! You have infiltrated a Foundation site and have been tasked with completing a set of objectives!"
 
 /datum/antagonist/traitor/New()
 	..()
